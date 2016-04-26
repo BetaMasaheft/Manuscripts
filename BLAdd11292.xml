@@ -38,15 +38,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <msContents>
                         <summary>
-                            I) Dāwit “Psalter” (fols. 1-118)
+                            I) Dāwit “Psalter” (fols. 1-113)
                             I-1) Mazmura Dāwit “Psalms of David” (fols. 1-94)
                             I-2) Maḫāləya nabiyāt “The Canticles of the Prophets” (fols. 94-106v)
                             I-3) Maḫāləya maḫāləy “Song of Songs” (fols. 107-113)
-                            I-4) Wəddāse Māryām “The Praise of Mary” (?) (fols. 113-118) Carmen in Maria Vergine laudes, Amharice
+                            II) Wəddāse Māryām “The Praise of Mary” (?) (fols. 113-118) Carmen in Maria Vergine laudes, in Amharic
                         </summary>
                         
                        <msItem xml:id="ms_i1">
-                           <locus from="1" to="118"/>
+                           <locus from="1" to="113"/>
                            <title type="Complete" corresp="LIT2701Dawit"/>
                            
                            <msItem xml:id="ms_i1.1">
@@ -138,12 +138,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <title type="Incomplete" corresp="LIT2362Songof">Maḫāləya maḫāləy “Song of Songs”</title>
                                 <note/>
                             </msItem>
-                            <msItem xml:id="ms_i1.4">
-                                <locus from="113" to="118"/>
-                                <title type="Incomplete" corresp="....">Carmen in Maria Vergine laudes</title>
-                                <note/>
-                                <incipit xml:lang="amh">ማነኽ፡ ድንግልን፡ የምትወድ። በፍቅርዋም፡ ልብኽ፡ የሚነድ። አድምጸኝ፡ ግሯን፡ ስነገር፡ ትስማኝ። አወይ።።</incipit>
-                            </msItem>
+                           <msItem xml:id="ms_i2">
+                               <locus from="113" to="118"/>
+                               <title type="Incomplete" corresp="....">Carmen in Maria Vergine laudes</title>
+                               <!-- Please add a work ID for the Carmen -->
+                               <note>Added in a later hand. It consists of 43 stanzas.</note>
+                               <incipit xml:lang="amh">ማነኽ፡ ድንግልን፡ የምትወድ። በፍቅርዋም፡ ልብኽ፡ የሚነድ። አድምጸኝ፡ ግሯን፡ ስነገር፡ ትስማኝ። አወይ።።</incipit>
+                           </msItem>
                        </msItem>
                     </msContents>
                     
@@ -158,12 +159,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <measure unit="leaf">118</measure>
                                     <measure unit="leaf" type="blank"/>
                                     <measure unit="quire"/>
-                                    <dimensions type="outer" unit="mm">
-                                        <p>formae 12ae minoris</p>
-                                        <!--Element "p" not allowed here  -->
+                                    <dimensions type="outer" unit="mm" precision="low">
                                         <height/>
                                         <width/>
                                     </dimensions>
+                                    <p>formae 12ae minoris</p>
+                                    <!-- Element "p" not allowed here -->
                                 </extent>
                                 <foliation>The leaves have been numbered by a later hand</foliation>
                                 <condition key="deficient">The Ms. shows traces of extensive use. The Ms. is damaged by water. </condition>
@@ -173,12 +174,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic">
+                            <handNote script="Ethiopic" xml:id="h1" corresp="#ms_i1">
                                 <ab type="script">Written in a fine and careful handwriting.</ab>
-                                <seg type="ink"/>
-                                <date></date>
-                                <desc></desc>
-                                <ab type="rubrication"/>
+                                <locus from="1" to="113"/>
+                            </handNote>
+                                <handNote script="Ethiopic" xml:id="h2" corresp="#ms_i2">
+                                    <locus from="113" to="118"/>
                             </handNote>
                         </handDesc>
                         
@@ -212,10 +213,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </source>
                             </recordHist>
                         </adminInfo>
-                        <listBibl type="editions">
-                            <bibl> <ptr/></bibl>
-                            <!-- Please add an edition -->
-                        </listBibl>
                     </additional>
                 </msDesc>
             </sourceDesc>
@@ -233,12 +230,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </particDesc>
             <textClass>
                 <keywords>
-                    <term key="Bible"/>
+                    <term key="Old Testament"/>
                 </keywords>
             </textClass>
             <langUsage>
-                <language ident="gez" corresp="Lan05">Gəˁəz</language>
-               <!-- Amharic too! -->
+                <language ident="gez" corresp="ms_i1">Gəˁəz</language>
+                <language ident="am" corresp="ms_i2">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
