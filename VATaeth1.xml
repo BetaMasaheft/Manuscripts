@@ -51,7 +51,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               I-5) Gospel of John (fols. 79r-98v)
               - Bəsrāta Yoḥannǝs "Gospel of John" (fols. 79r-98v)
               II) Maṣḥafa saʿātāt, "Book of the hours" (fols. 99r-110r)
-              III) Maṣḥafa Qǝddāse, "Missal" (fols. 110v-125r)
+              III) Maṣḥafa qǝddāse, "Missal" (fols. 110v-125r)
+              - Śǝrʿāta qǝddāse "Ordinary of the Mass" (fols. 110v-118v)
+              - Anaphora of Our Lord Jesus Christ (fols. 119r-120r)
+              - Anaphora of Our Lady by St. Cyriacus of Behnesa (fols. 121v-124v)
               IV) Prayers (fols. 125r-144v)
               V) Hymns in honour of the Virgin Mary (fols. 144v-146v)
               VI) Sinodos (fols. 147r-198)
@@ -127,6 +130,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </msItem>
             
             <msItem xml:id="ms_i2">
+              <locus from="99r" to="110r"/>
+              <title type="Complete" corresp="LIT1961Mashaf"/>
+            </msItem>
+            
+            <msItem xml:id="ms_i3">
+              <locus from="110v" to="125"/>
+              <title type="Incomplete" corresp="LIT1960Mashaf"/>
+            </msItem>
+            <msItem xml:id="ms_i3.1">
+              <locus from="110v" to="118v"/>
+              <title type="" corresp="LIT2347serata">Śǝrʿāta qǝddāse "Ordinary of the Mass"</title>
+            </msItem>
+            <msItem xml:id="ms_i3.2">
+              <locus from="119r" to="120r"/>
+              <title type="Incomplete" corresp="LIT1100Anapho">Anaphora of Our Lord Jesus Christ</title>
+            </msItem>
+            <msItem xml:id="ms_i3.3">
+              <locus from="121v" to="124v"/>
+              <title type="Incomplete" corresp="LIT1099Anapho" evidence="conjecture">Anaphora of Our Lady by St. Cyriacus of Behnesa</title>
+            </msItem>
+            
+            <msItem xml:id="ms_i9">
               <locus target="#00"/>
               <rubric/>
               <incipit> </incipit>
@@ -276,9 +301,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
   </teiHeader>
   <text>
     <body>
-      <ab/>
+      <div type="bibliography">
+        <listBibl type="relations">
+          <bibl/>
+          <relation name="saws:isDirectCopyOf" active="#ms_i1" passive="Petrus1548Test"/>
+          <relation name="saws:isDirectCopyOf" active="#ms_i3" passive="Petrus1548Test"/>
+        </listBibl>
+      </div>
     </body>
   </text>
-</TEI>
-
 </TEI>
