@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESbgy001" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESbgy001"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0161GolʿaDäbräBǝrhanYoḥannǝs"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0161BGY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>BGY-001</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">139.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">4.0</measure> blank, in
-                                                <measure unit="quire">22.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">139.0</measure> folios, of which <measure unit="leaf" type="blank">4.0</measure> blank, in <measure unit="quire">22.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">29.5</height>
                               <width unit="cm">23.0</width>
@@ -129,7 +133,7 @@ Tears carefully amended on fols. 28, 72, 105. &#xD;
 The parchment of some fols. (e.g., 18, 105, 113, 127) is translucent, which somewhat affects legibility of the text.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="29">
                            <dimensions unit="mm">
                               <height>195</height>
                               <width>195</width>
@@ -142,59 +146,60 @@ The parchment of some fols. (e.g., 18, 105, 113, 127) is translucent, which some
                               <dim type="left">15</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 53r.&#xD;
-The size of the margins significantly differs (esp. bottom and upper).</ab>
+                           <note anchored="true">All data are for fol. 53r.&#xD;
+The size of the margins significantly differs (esp. bottom and upper).</note>
                            <ab type="ruling" part="N">the number of lines varies, e.g. 27 in fol 8vc, 30 on fol. 130 etc.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling and pricking are executed not regularly. The scribe frequently disregards the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 On fol. 123, two additional horizontal lines were not used by the scribe (on fol. 123vc, words bä-wäld are written on the upper line and half-erased).</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre, by a poorly trained hand</ab>
                         <seg type="ink" part="N">Black; red (dark vermilion).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Early 19th century</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰላ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (fols. 9rc, 11va, 90rc, 94rb, 123rb)</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 137rb: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 137rb: ዝንቱ፡ መጽሐፈ፡ ስንክሳር፡ ዘወሀቦ፡ ደጅ፡ አዝማች፡ ሐጐስ፡ ከመ ይኩኖ፡ መርሃ፡ ለመንግሥተ፡ ሰማይ፡ ምስለ፡ አቡሁ፡ ወእሙ፡ ወደቂቁ፡ ለቅዱስ፡ ዮሐንስ፡ ጐልአ፡ ኦአበውየ፡ ካህናት፡ ኢትርስኡኒ፡ በጊዜ፡ ጸለይክሙ፡ ወቆምክሙ፡ በስመ፡ ጥምቀትየ፡ ዘመንፈስ፡ ቅዱስ፡ እንዘ፡ ትብሉ፡ አቡነ፡ ዘበሰማያት።</q>
+                           <locus/>Fol. 137rb: Donation note.<q xml:lang="gez">Fol. 137rb: ዝንቱ፡ መጽሐፈ፡ ስንክሳር፡ ዘወሀቦ፡ ደጅ፡ አዝማች፡ ሐጐስ፡ ከመ ይኩኖ፡ መርሃ፡ ለመንግሥተ፡ ሰማይ፡ ምስለ፡ አቡሁ፡ ወእሙ፡ ወደቂቁ፡ ለቅዱስ፡ ዮሐንስ፡ ጐልአ፡ ኦአበውየ፡ ካህናት፡ ኢትርስኡኒ፡ በጊዜ፡ ጸለይክሙ፡ ወቆምክሙ፡ በስመ፡ ጥምቀትየ፡ ዘመንፈስ፡ ቅዱስ፡ እንዘ፡ ትብሉ፡ አቡነ፡ ዘበሰማያት።</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the main hand.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 137vab፡ Record concerning a litigation about the land division between a priest and a nobleman (ḉäwa).</locus>
-                           <q xml:lang="gez">Fol. 137vab፡ ጐልዓ፡ ጨዋ፡ እና፡ ካህን፡ በመሬት፡ ተጣልቶው፡ ሲታረቁ፦ ሸማግሌያቸው፡ ብላታ፡ ደስታ፡ ቤት፡ ማርያ፦ ግራዝማች፡ ባህታ፡ አፈ፡ መምህር፡ ገብርሄት፦ ናቸው፦ ካህናት፡ በሲሶ፡ ቁሙ፦ አትንጠቁ፦ ጨዋ፡ በ፪እጅ፡ ይቁሙ፡ አይንጠቁ፦ ነው፦ ግና፡ በዓትክልት፡ ሲሶ፡ ፪እጅ፡ አትባባሉ፦ ከካህን፡ የቆየ፡ ጥንት፡ ከካህን፡ ይቁም፦ ከጨዋ፡ የቆየ፡ ጥንት፡ ከጨዋ፡ ይቁም፦ በዚህ፡ ነው፡ እንዳይጠለም፡ በወንጌል፡ በመስቀል፦ በሽማግሌ፦ መሃላ፡ አለዋቸው፦ የካህን፡ ዋስ፡ ቄስ፡ ወልደ፡ ማርያም፡ ዘወልዲ፦ የጨዋ፡ ዋስ፡ አቶ፡ ገብረ፡ መድህን፡ አባ፡ ገበር፡ የጐይታ፡ አቶ፡ ሃይሉ፡ ልጅ፦ ግን፡ በእንግዳ፡ የመጣ፡ በንጀራ፡ ካህናት፡ ከጨዋ፡ ቤት፡ ይውሰዱ፡ እንጀራ፡ እንጂ፡ ከካህናት፡ ቤት፡ እንግዳ፡ አይግባ፡ ሌላ፡ አይበሉዋቸው፦ የቤተ፡ ክርስቲያን፡ ኩዳድ፡ ተካህናት፡ ይውጣ፡ በሽማግሌ፡ ታይቶ </q>
+                           <locus/>Fol. 137vab፡ Record concerning a litigation about the land division between a priest and a nobleman (ḉäwa).<q xml:lang="gez">Fol. 137vab፡ ጐልዓ፡ ጨዋ፡ እና፡ ካህን፡ በመሬት፡ ተጣልቶው፡ ሲታረቁ፦ ሸማግሌያቸው፡ ብላታ፡ ደስታ፡ ቤት፡ ማርያ፦ ግራዝማች፡ ባህታ፡ አፈ፡ መምህር፡ ገብርሄት፦ ናቸው፦ ካህናት፡ በሲሶ፡ ቁሙ፦ አትንጠቁ፦ ጨዋ፡ በ፪እጅ፡ ይቁሙ፡ አይንጠቁ፦ ነው፦ ግና፡ በዓትክልት፡ ሲሶ፡ ፪እጅ፡ አትባባሉ፦ ከካህን፡ የቆየ፡ ጥንት፡ ከካህን፡ ይቁም፦ ከጨዋ፡ የቆየ፡ ጥንት፡ ከጨዋ፡ ይቁም፦ በዚህ፡ ነው፡ እንዳይጠለም፡ በወንጌል፡ በመስቀል፦ በሽማግሌ፦ መሃላ፡ አለዋቸው፦ የካህን፡ ዋስ፡ ቄስ፡ ወልደ፡ ማርያም፡ ዘወልዲ፦ የጨዋ፡ ዋስ፡ አቶ፡ ገብረ፡ መድህን፡ አባ፡ ገበር፡ የጐይታ፡ አቶ፡ ሃይሉ፡ ልጅ፦ ግን፡ በእንግዳ፡ የመጣ፡ በንጀራ፡ ካህናት፡ ከጨዋ፡ ቤት፡ ይውሰዱ፡ እንጀራ፡ እንጂ፡ ከካህናት፡ ቤት፡ እንግዳ፡ አይግባ፡ ሌላ፡ አይበሉዋቸው፦ የቤተ፡ ክርስቲያን፡ ኩዳድ፡ ተካህናት፡ ይውጣ፡ በሽማግሌ፡ ታይቶ </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Amharic. The lines occupy both columns a and b. Written in a secondary hand similar to the main hand.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 137vс-138ra፡ Record concerning a litigation about land division.</locus>
-                           <q xml:lang="gez">Fol. 137vс-138ra፡ በምንሊክ፡ መንግሥት፦ በራስ፡ ሰብሓት፡ መሳፍንት፦ በ፲፮ቀን፡ ሰኔ፡ በ፲፱፻፭ዓመተ፡ ምህረት፦ በዘመነ፡ ማቴዎስ፡ ወንጌላዊ፦ ማህበርና፡ አቶ፡ ገብሪሐንስ፡ ሶታራረቁ፡ ሽማግሎች፡ ብላታ፡ ደስታ፡ ግራዝማች፡ ባህታ፦ ፊታውራ፡ ብሩ፦ ብጅሮንድ፡ ወልደ፡ ሥላሴ፡ ሸቃ፡ ገብረዝጊ፡ ዘውዴ፦ እርቃቸው፦ የማህበር፡ ነገረ፡ ፈጆች፡ ቄስ፡ ገብረ፡ መድህን፡ ቄስ፡ መዝገቦ፡ ቄስ፡ ወልደ፡ ሚካኤል፦ በገባር፡ ነገረ፡ ፈጅ፡ አቶ፡ ገብሪሐንስ፦ ማይ፡ መላጸ፦ የካህሳ፡ እርሻ፦ ለገባር፡ ትመለስ፦ የቄስ፡ ወልደ፡ ህይወት፡ ደጅ፡ አፍ፦ እርሻ፦ ለካህሳ፡ ትሁን፦ ለውጣዋ፡ የቄስ፡ ወልደ፡ ሥላሴ፡ ደጅ፡ አፍ፡ እርሻ፡ ሽማግሎች፡ በተከሉት፡ ለካህን፡ ትሁን፦ ዳግም፦ የዳሮ፡ ሩብ፦ ያቶ፡ እቡይ፡ እርሻ፡ ሩብ፦ ለካህን፡ ይሁን፦ ፦ የሃኔታ፡ መሸሻ፦ ደጅ፡ አፍ፦ ሽማግሎች፡ በተከሉት፡ ጐድፍ፦ የልጅ፡ ግዳይ፡ ደጅ፡ አፍ፡ ለገባር፡ ይሁን፦ በዚህ፡ እርቅ፡ የማህበር፡ ዋስ፡ ባሻይ፡ ውብነህ፦ ቤት፡ ማርያ፦ ያቶ ገብሪሐንስ፡ ዋስ፡ ተኵሉ፡ ፍሱሕ፦ ናቸው፦ </q>
+                           <locus/>Fol. 137vс-138ra፡ Record concerning a litigation about land division.<q xml:lang="gez">Fol. 137vс-138ra፡ በምንሊክ፡ መንግሥት፦ በራስ፡ ሰብሓት፡ መሳፍንት፦ በ፲፮ቀን፡ ሰኔ፡ በ፲፱፻፭ዓመተ፡ ምህረት፦ በዘመነ፡ ማቴዎስ፡ ወንጌላዊ፦ ማህበርና፡ አቶ፡ ገብሪሐንስ፡ ሶታራረቁ፡ ሽማግሎች፡ ብላታ፡ ደስታ፡ ግራዝማች፡ ባህታ፦ ፊታውራ፡ ብሩ፦ ብጅሮንድ፡ ወልደ፡ ሥላሴ፡ ሸቃ፡ ገብረዝጊ፡ ዘውዴ፦ እርቃቸው፦ የማህበር፡ ነገረ፡ ፈጆች፡ ቄስ፡ ገብረ፡ መድህን፡ ቄስ፡ መዝገቦ፡ ቄስ፡ ወልደ፡ ሚካኤል፦ በገባር፡ ነገረ፡ ፈጅ፡ አቶ፡ ገብሪሐንስ፦ ማይ፡ መላጸ፦ የካህሳ፡ እርሻ፦ ለገባር፡ ትመለስ፦ የቄስ፡ ወልደ፡ ህይወት፡ ደጅ፡ አፍ፦ እርሻ፦ ለካህሳ፡ ትሁን፦ ለውጣዋ፡ የቄስ፡ ወልደ፡ ሥላሴ፡ ደጅ፡ አፍ፡ እርሻ፡ ሽማግሎች፡ በተከሉት፡ ለካህን፡ ትሁን፦ ዳግም፦ የዳሮ፡ ሩብ፦ ያቶ፡ እቡይ፡ እርሻ፡ ሩብ፦ ለካህን፡ ይሁን፦ ፦ የሃኔታ፡ መሸሻ፦ ደጅ፡ አፍ፦ ሽማግሎች፡ በተከሉት፡ ጐድፍ፦ የልጅ፡ ግዳይ፡ ደጅ፡ አፍ፡ ለገባር፡ ይሁን፦ በዚህ፡ እርቅ፡ የማህበር፡ ዋስ፡ ባሻይ፡ ውብነህ፦ ቤት፡ ማርያ፦ ያቶ ገብሪሐንስ፡ ዋስ፡ ተኵሉ፡ ፍሱሕ፦ ናቸው፦ </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in Amharic, dated to 16 Säne 1905 year of mercy (= 23 June 1913 A.D.). The initial lines are written on the upper margin. Written in a secondary hand similar to the main hand.
                         </item>
                         <item xml:id="e1">- Internal number of the ecclesiastic library has been crudely written on fol. 1r: ስ. No 3-2 24-8-93&#xD;
 - Erasure marked with a dash above, and a letter written interlineally: fols. 14rc.&#xD;
@@ -222,7 +227,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0161GolʿaDäbräBǝrhanYoḥannǝs" instant="false" full="yes">Golʿa Däbrä Bǝrhan Yoḥannǝs/ BGY</placeName>
+                        <placeName corresp="INS0161BGY" instant="false" full="yes">Golʿa Däbrä Bǝrhan Yoḥannǝs/ BGY</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1830" instant="false">Däǧǧazmač Ḥagwäs, mentioned as the donor in Additio 1, most probably a son of däǧǧazmač Säbagadis (d. 1831, together with his father in the battle of May ʾƎslamay).</origDate>
                   </origin>
@@ -264,10 +269,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -289,7 +290,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-21" status="draft">registered</change>
          <change who="MB" when="2014-11-03T21:35:29.988Z" status="draft">created</change>
          <change who="EG" when="2015-01-09T12:20:37.271Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

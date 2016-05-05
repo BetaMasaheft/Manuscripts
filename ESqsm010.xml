@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqsm010" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqsm010"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0049QärsäbärMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0049QSM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QSM-010</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ A few lines (alternating with black lines) and a group of lines on the incipit p
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">147.0</measure> folios,
-                                                in
-                                                <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">147.0</measure> folios, in <measure unit="quire">19.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">20.5</height>
                               <width unit="cm">17.5</width>
@@ -111,7 +115,7 @@ Some fols. are probably missing between quires IX and X.&#xD;
 On fols. 1r and 147v part of the text is illegible.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="16">
                            <dimensions unit="mm">
                               <height>125</height>
                               <width>130</width>
@@ -124,28 +128,33 @@ On fols. 1r and 147v part of the text is illegible.</condition>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 2r.</ab>
+                           <note anchored="true">All data for fol. 2r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are mostly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are not visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible (s. fol. 40r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, regular</ab>
                         <seg type="ink" part="N">Black; red. On fols. 69-89ra, the ink is less dark than elsewhere.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 17th-early 18th century</date>
+                        <list type="abbreviations">
+                           <item>ይ፡ሕ፡ (or ይሕ፡) for ይቤ፡ ሕዝብ፡</item>
+                           <item>ይ፡ካ፡ (or ይካ፡) for ይቤ፡ ካህን፡</item>
+                           <item>ይ፡ዲ፡ (or ይዲ፡) for ይቤ፡ ዲያቆን፡</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">quires I-XIV, XVI-XIX (?).</handNote>
                      <handNote xml:id="h3" script="Ethiopic">quire XV (?).</handNote>
@@ -153,10 +162,9 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 115v: Ownership note.</locus>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>Fol. 115v: Ownership note.<q xml:lang="gez">Fol. 115v: ዛቲ፡ መጽሐፍ፡ ዘቅዱስ፡ ሚካኤል፡ ቀር[ነ]፡ ሰበር፡ ዘተሣየጣ፡ በወርቁ፡ ወልደ፡ ድንግል፡ [ወብእሲቱ፡ ወለተ፡ ሕይወት፡ ወቀይሰ፡ ገበዝ፡ አቡነ፡] ድምጸ፡ ሚካኤል፡ ወጳጳስነ፡ አቡነ፡ [ሰላ]ማ፡ ዘሰረቃ፡ ወዘፈሐቃ፡ ውጉዝ፡ {ይኩን}፡ በአፈ፡ ጴጥሮስ፡ [n.l.] አሜን።</q>
+                           <q xml:lang="en">Fol. 115v: This is a book of the church of St. Michael of Qär[nä]säbär which was bought by Wäldä Dǝngǝl with his own money [and his wife Wälättä Ḥǝywät, and qäyǝsä gäbäz …] Dǝmḍä Mikaˀe[l and by our bi]shop ˀabunä [Säla]ma. He who steals [this book] or erases [its text] {shall be} excommunicated by the word of Peter … Amen.</q>
+                           Written in red ink, partly unreadable; the note mentions the donors and ʾabunä Sälama (in tenure 1841-67).
                         </item>
                         <item xml:id="e1">- Tämälläs-sign, in the shape of two perpendicular lines, indicating the place where the ommisions, written in the margin, in the main hand and in a secondary hand, belong: fols. 42vb l.16, 69vb l.2, 83va l.8, 93ra l.1, 97va l.11, 101ra l.1, 130rb l.8. &#xD;
 - Omitted letters, words, lines or passages are written  interlineally or in the margins, in the main hand and in a secondary hand: fols. 7r, 8r, 10vb, 11v, 12v, 13r, 13v, 19rb, 63r, 77rab, 80vb, 88r, 99v, 106r, 106v, 107ra, 116r, 117va, 121va, 127ra, 133ra, 134v, 135ra, 137r, 137v, 139ra, 140rb, 145rb, 145v. &#xD;
@@ -179,7 +187,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0049QärsäbärMikaʾel" instant="false" full="yes">Qärsäbär Mikaʾel / QSM</placeName>
+                        <placeName corresp="INS0049QSM" instant="false" full="yes">Qärsäbär Mikaʾel / QSM</placeName>
                      </origPlace>
                      <origDate notBefore="1689" notAfter="1716" instant="false">Patriarch of Alexandria Yoḥannǝs and Metropolitan ʾabba Marqos are mentioned on fol. 123rb, most probably John XVI (1676–1718) and Marqos IV (1689-1716, cp. EAE III, 791) are meant. Besides, the hierarchs which held the offices in the same time were John XIV (1573–89) and Marqos II (1576-82/88, cp. EAE III, 790).</origDate>
                   </origin>
@@ -221,10 +229,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -245,7 +249,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-17" status="draft">registered</change>
          <change who="IF" when="2010-11-30T10:48:25.010Z" status="draft">created</change>
          <change who="EG" when="2014-11-06T07:38:29.010Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

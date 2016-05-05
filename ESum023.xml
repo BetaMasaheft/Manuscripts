@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESum023" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESum023"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0017ʿUraQirqos"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0017UQ"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>UM-023</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">114.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">3.0</measure> blank, in
-                                                <measure unit="quire">13.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">114.0</measure> folios, of which <measure unit="leaf" type="blank">3.0</measure> blank, in <measure unit="quire">13.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">21.7</height>
                               <width unit="cm">17.3</width>
@@ -88,7 +92,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <condition key="good">The textblock was possibly crudely trimmed in the upper part.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="21">
                            <dimensions unit="mm">
                               <height>163</height>
                               <width>146</width>
@@ -101,24 +105,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <dim type="left">15</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 5r.</ab>
+                           <note anchored="true">All data for fol. 5r.</note>
                            <ab type="ruling" part="N">average number; actual numbers range from 20 to 24</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are mostly not visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are mostly not visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/A (s. fol. 44r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
-                        <date instant="false">19th century.</date>
+                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes">Wäldä Muse</persName>ʾabunä Wäldä Muse is mentioned as the scribe in Additio 2.<date instant="false">19th century.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ (or ካ) for ይቤ፡ ካህን፡</item>
+                           <item>ይዲ፡ (or ዲ) for ይቤ፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ (or ሕ) for ይቤ፡ ሕዝብ፡</item>
+                           <item>ዕማ for ዕማሬ፡</item>
+                           <item>
+                              <abbr>ቅ፡ ቅ፡ ቅ፡</abbr> for <expan instant="false">ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ </expan> (e.g., fol. 42ra l.10-11, in black).</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -128,22 +140,50 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 1va: Donation note. </div>
+                           <q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 1va: ዝቅዳሴ፡ ዘቂርቆስ፡ ሃራ፡ ዘተሰየጦ፡ ወልደ፡ ሥላሴ፡ ከሙት፡ ኵነኒ፡ መድኀኒተ፡ ነፍሴ፡ ኢትሕድጉኒ፡ ሥላሴ፡ ለዘላለም፡ ሥላሴ። ዘሰረቃ፡ ወዘፈሐቃ፡ ውጉዘ፡ ለይኩን፡ ለዓለመ፡ ዓለም።</div>
+                           </q>
+                           <q xml:lang="en">
+                              <div style="text-align: justify; line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 1va:  This missal of Qirqos Hara was purchased by Wäldä Śǝllase (so that it might be) salvation for my soul from condemnation to death. Don’t abandon me the Trinity forever the Trinity. May be condemned forever whoever steals it and erases it.</div>
+                           </q>
+                           
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 1va-vb: Donation note.</div>
                            <q xml:lang="gez">Fol. 1va-b: ዝመጽሐፍ፡ ዘወልደ፡ ሥላሴ፡ ዘወሀቦ፡ ለቅዱስ፡ ቂርቆስ፡ ወዘአጽሐፎ፡ አቡነ፡ ገብረ፡ ማርያም፡ ከመ፡ ይኩኖሙ፡ መርሃ፡ ለመንግሥተ፡ ሰማያት። ወአቡሁ፡ ወልደ፡ ሳሙኤል፡ ገብረ፡ ዋህድ፡ ዘርዓ፡ ጽዮን፡ ወእሙ፡ ወለተ፡ ጊዮርጊስ፡ ወለተ፡ ጽዮን፡ እምነ፡ ጽዮን፡ ወለተ፡ ኤልሳቤጥ፡ አመተ፡ ሚካኤል፡ ዘተጽሕፈት፡ በዘመነ፡ ንጉሥነ፡ ዮሐንስ፡ ወጳጳስነ፡ አትናቴዎስ፡ ወቄስ፡ ገበዝ፡ ወልደ፡ ኪሮስ፡ ወባሕር፡ ነጋሲ፡ ተወልደ ᎓ መድኅን᎓ ወእኁሁ᎓ ወልደ᎓ ክርስቶስ᎓ ወአቡሆሙ᎓ ገብረ᎓ አደንያስ᎓ ወጸሐፊሃ᎓ አቡነ᎓ ወልደ᎓ ሙሴ።</q>
                            <q xml:lang="en">Fol. 1va-b: Let this book of Wäldä Śǝllase which he donated to the Saint Qirqos [Church] and which commissioned ˀabunä Gäbrä Maryam become a guide to the Kingdom of Heaven. And (for) his father Wäldä Samuˀel Gäbrä Wahǝd Zärˁa Ṣǝyon and his mother Wälättä Giyorgis, Wälättä Ṣǝyon, ˀƎmmǝnä Ṣǝyon, Wälättä ˀElsabeṭ, ˀAmätä Mikaˀel. It was written in the time of our king Yoḥannǝs and our metropolitan ˀAtnatewos and qesä gäbäz Wäldä Kiros and baḥr nägasi Täwäldä Mädḫǝn and his brother Wäldä Krǝstos and their father Gäbrä Adänyas and the scribe (is) Wäldä Muse.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 113rb ls.9-21: Donation note.</div>
+                           <q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 113rb ls.9-21: ዝቅዳሴ፡ ዘቂርቆስ፡ ሃራ፡ ዘወሀቦ፡ ወልደ፡ ሥላሴ፡ ወዘአጽሐፍዋ፡ አቡነ፡ ገብረ፡ ማርያም፡ ወጸሐፊሃ፡ አቡነ፡ ወልደ፡ ሙሴ፡ ዋጋ ፱ ብር᎓ ነው…</div> 
+                           </q>
+                           <q xml:lang="en">Fol. 113rb ls.9-21: This missal of Qirqos Hara which donated Wäldä Śǝllase and which commissioned ˀabunä Gäbrä Maryam and wrote ˀabunä Wäldä Muse costs 9 bǝrr...</q>
+                           The information about the price is in Amharic (9 Bǝrr).
+The note indicates the names of the donor, the scribe, the commissioner (the same as in Additio 1 and 2) and the price for which the Ms. was purchased by the donor.
                         </item>
                         <item xml:id="e1">- Notes in the upper margin: fols. 35r, 36r, 90v.&#xD;
 - Notes in pen, within the main text field: fols. 101v, 102r.&#xD;
@@ -167,7 +207,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0017ʿUraQirqos" instant="false" full="yes">ʿUra Qirqos / UQ</placeName>
+                        <placeName corresp="INS0017UQ" instant="false" full="yes">ʿUra Qirqos / UQ</placeName>
                      </origPlace>
                      <origDate notBefore="1872" notAfter="1876" instant="false">Metropolitan ʾAtnatewos (in tenure 1869-76) mentioned in Additio 1 and on fol. 21rb.&#xD;
 Patriarch Demetrius II (Dibä Ṭǝros) (1862-70) mentioned also on fol. 21rb. &#xD;
@@ -211,8 +251,7 @@ King Yoḥannǝs IV (r. 1872-89) mentioned in Additio 2.</origDate>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
+                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes">Wäldä Muse</persName>
                </person>
                <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
@@ -235,7 +274,7 @@ King Yoḥannǝs IV (r. 1872-89) mentioned in Additio 2.</origDate>
          <change who="DN" when="2010-04-28" status="draft">registered</change>
          <change who="IF" when="2011-02-06T15:47:36.171Z" status="draft">created</change>
          <change who="SH" when="2014-06-02T17:35:47.518Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

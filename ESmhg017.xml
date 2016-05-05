@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmhg017" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmhg017"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0144ḤarennätGäbäzäytiQǝddǝstMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0144MHG"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MHG-017</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">132.0</measure> folios,
-                                                in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">132.0</measure> folios, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">17.0</height>
                               <width unit="cm">15.5</width>
@@ -119,7 +123,7 @@ Hole amended on fol. 91.&#xD;
 Some leaves are falling apart the ruled lines and are repaired with stitches: fols. 6, 7, 8, 9, 11, 12, 26, 42, 53, 70.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="19">
                            <dimensions unit="mm">
                               <height>120</height>
                               <width>120</width>
@@ -132,28 +136,34 @@ Some leaves are falling apart the ruled lines and are repaired with stitches: fo
                               <dim type="left">10</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 5r.</ab>
+                           <note anchored="true">All data are for fol. 5r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Careful</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">18th century.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>በእ፡ for በእንተ፡</item>
+                           <item>ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                      <handNote xml:id="h3" script="Ethiopic">fols. 5ra-119vb </handNote>
@@ -162,22 +172,19 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00">Fols. 4va: Short prayer or antiphone (unidentified).</locus>
-                           <q xml:lang="gez">Fol. 4va: በእሁድ፡ ሰንበት፡ ወበ፱፡ በዓላት፡ በ ፮ ። ሃሌ፡ ሉያ፡ ሃሌ፡ ሉያ</q>
+                           <locus/>Fols. 4va: Short prayer or antiphone (unidentified).<q xml:lang="gez">Fol. 4va: በእሁድ፡ ሰንበት፡ ወበ፱፡ በዓላት፡ በ ፮ ። ሃሌ፡ ሉያ፡ ሃሌ፡ ሉያ</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00">Fols. 127rb-128vb: Traditional commentary in Gǝˁǝz (?).</locus>
-                           <q xml:lang="gez">Fol. 127rb: ለ፬ ዘይቤ፡ ልባዌ፡ አንብቦ፡ ዝማሬ፡...</q>
+                           <locus/>Fols. 127rb-128vb: Traditional commentary in Gǝˁǝz (?).<q xml:lang="gez">Fol. 127rb: ለ፬ ዘይቤ፡ ልባዌ፡ አንብቦ፡ ዝማሬ፡...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in a careful hand; a few passages have been washed out.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00">Fols.129va-130ra: Daily prayers and litanies.</locus>
-                           <q xml:lang="gez">Fol.122vb: ወካዕበ፡ ናስተበቍዕ፡ ዘኵሎ፡ ይእኅይ፡ እግዚአብሔር፡ ለእግዚእ፡…</q>
+                           <locus/>Fols.129va-130ra: Daily prayers and litanies.<q xml:lang="gez">Fol.122vb: ወካዕበ፡ ናስተበቍዕ፡ ዘኵሎ፡ ይእኅይ፡ እግዚአብሔር፡ ለእግዚእ፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="e1">- Omitted passages have been written in small script in the margins of many fols.: e.g., fols. 8r, 19r, 59r, 71r, 72r, 72v, 75r, 75v, 76v, 77r, 78v, 80r.&#xD;
 - Crude notes: fols. 1r, 1v, 2r, 3r, 3v, 4r, 12r, 18v, 19r, 64v, 130r, 130va, 131r, 131v.&#xD;
@@ -201,7 +208,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0144ḤarennätGäbäzäytiQǝddǝstMaryam" instant="false" full="yes">Ḥarennät Gäbäzäyti Qǝddǝst Maryam / MHG</placeName>
+                        <placeName corresp="INS0144MHG" instant="false" full="yes">Ḥarennät Gäbäzäyti Qǝddǝst Maryam / MHG</placeName>
                      </origPlace>
                      <origDate notBefore="1700" notAfter="1800" instant="false">18th century.</origDate>
                   </origin>
@@ -243,10 +250,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -267,7 +270,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-20" status="draft">registered</change>
          <change who="DE" when="2013-11-05T13:22:38.614Z" status="draft">created</change>
          <change who="MK" when="2014-09-15T16:35:47.010Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

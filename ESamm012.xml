@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESamm012" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESamm012"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0064ʿAddigratMädḫaneʿAläm"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0064AMM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AMM-012</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The incipit parts of most of the constituent texts are written alternately in re
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">132.0</measure> folios,
-                                                in
-                                                <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">132.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">27.5</height>
                               <width unit="cm">21.0</width>
@@ -116,7 +120,7 @@ The incipit parts of most of the constituent texts are written alternately in re
                         <condition key="good">Some leaves are heavily stained with dirt or rumpled. The lower inner edges of fols. 31 and 32 have been mended with patches of parchment sewn on to them.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="20">
                            <dimensions unit="mm">
                               <height>202</height>
                               <width>157</width>
@@ -129,28 +133,35 @@ The incipit parts of most of the constituent texts are written alternately in re
                               <dim type="left">12</dim>
                               <dim type="intercolumn">8</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 129r.</ab>
+                           <note anchored="true">All data are for fol. 129r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A-1A1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible (s. fol. 80r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible (s. fol. 70r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Regular, fluent</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Early 20th century</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>
+                              <abbr>ቡራ፡</abbr> for <expan instant="false">ቡራኬ፡ </expan> (occasionally)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -162,10 +173,9 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 132rc: Donation note.</locus>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>Fol. 132rc: Donation note.<q xml:lang="gez">Fol. 132rc: ዝመጽሐፍ፡ ዘሹም፡ አጋሜ፡ ካሳ፡ ዘወሀቦ፡ ለመድኃኔ፡ ዓለም፡ አድግራት፡ ወስመ፡ ጥምቀቱ፡ ወልደ፡ አረጋዊ፡ ከመ፡ ይኩኖ፡ መርሀ፡ ለመንግሥተ፡ ሰማያት። ዘሠረቆ፡ ወዘፈሐቆ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ወበቃለ፡ መምሕርነ፡ ኪዳነ፡ ማርያም።</q>
+                           <q xml:lang="en">Fol. 132rc: This is a book of šum ˀAgame Kasa whose baptismal name is Wäldä ˀArägawi, who has donated it to the (church of) Mädḫane ˁAläm ˀAddǝgrat so that it might be for him a guide to the Kingdom of Heaven. He who stole it or erased (its text) shall be excommunicated by the authority of Peter and Paul and by the word of our mämhǝr Kidanä Maryam.</q>
+                           he note is written in the main hand. Šum ʾAgame Kasa (a son of ras Sǝbḥat) is also mentioned in Additiones to Mss. AMM-008, AMQ-011, BGY-006, MKL-005, MKL-006. He was governor of ʾAgame in 1914-18, 1941-48. Cp. HAGOS GEBRE YOHANNES, “Political History of Tigray: Rivalry for power (1910-1935)”, PhD thesis, Addis Abäba University, 2003, 46.
                         </item>
                         <item xml:id="e1">- The title of the work, ቅዳሤ፡, has been crudely inscribed in green ink on the front cover.&#xD;
 - Tämälläs-signs, in the shape of two perpendicular lines, indicating the place where the omissions written in the margins, in the main hand, belong: fols. 3vb l.2, 4rc l.15, 8rb l.9, 13va l.11, 41rc l.15, 42va l.19, 66ra l.4, 70rc l.12, 84vc l.2, 86va l.16, 95vc l.1, 102ra l.12, 104vb l.20, 105vc l.12, 112ra l.2, 114vc l.15, 117va l.13, 119va l.10, 126ra l.12.&#xD;
@@ -192,7 +202,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0064ʿAddigratMädḫaneʿAläm" instant="false" full="yes">ʿAddigrat Mädḫane ʿAläm / AMM</placeName>
+                        <placeName corresp="INS0064AMM" instant="false" full="yes">ʿAddigrat Mädḫane ʿAläm / AMM</placeName>
                      </origPlace>
                      <origDate notBefore="1914" notAfter="1918" instant="false">Additio 1 mentions šum ʾAgame Kasa as the donor of the Ms. Šum ʾAgame Kasa was governor of ʾAgame in 1914-18, 1941-48. The absence of the name of the reigning monarch in the Ms. suggests that it was written during the earlier of the two terms of office.</origDate>
                   </origin>
@@ -234,10 +244,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -258,7 +264,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-20" status="draft">registered</change>
          <change who="IF" when="2013-07-21T08:21:50.746Z" status="draft">created</change>
          <change who="IF" when="2014-12-14T08:41:03.179Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

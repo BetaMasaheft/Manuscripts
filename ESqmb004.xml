@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqmb004" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqmb004"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0133BÃ¤lÃ¤saQÇ&#x9d;ddusMikaË&#x80;el"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0133QMB"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QMB-004</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -46,9 +52,7 @@ On the incipit page of Text I (fol. 3r) and of Anaphoras (fols. 35r, 48r, 51r, 5
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">115.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">2.0</measure> blank, in
-                                                <measure unit="quire">13.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">115.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">13.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">25.5</height>
                               <width unit="cm">21.5</width>
@@ -113,7 +117,7 @@ A bifolio has been cut in the middle of quire A.</item>
                         <condition key="deficient">Many folios are heavily stained with dirt, many portions of the text are poorly legible.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="21">
                            <dimensions unit="mm">
                               <height>190</height>
                               <width>165</width>
@@ -126,28 +130,49 @@ A bifolio has been cut in the middle of quire A.</item>
                               <dim type="left">13</dim>
                               <dim type="intercolumn">8</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 4r.</ab>
+                           <note anchored="true">All data are for fol. 4r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible (s. fol. 59r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are not visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Late 19th – early 20th cent.</ab>
                         <seg type="ink" part="N">Black, pink, red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Mediocre, irregular.</date>
+                        <list type="abbreviations">
+                           <item>(ይ)ካ፡ for ይበል፡ ካህን፡</item>
+                           <item>(ይ)ዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>
+                              <abbr>እግ፡ ዘኵ፡</abbr> for <expan instant="false">እግዚእ፡ ዘኵሉ፡ </expan> (s. fol. 7rb)</item>
+                           <item>
+                              <abbr>እ፡ አም፡</abbr> for <expan instant="false">እግዚአብሔር፡ አምላክነ፡ </expan> (s. fol. 10ra)</item>
+                           <item>
+                              <abbr>በእ፡ ሰላ፡ እወ፡ እግ፡ ንስ፡ ወና፡</abbr> for <expan instant="false">በእንተ፡ ሰላም፡ እወ፡ እግዚኦ፡ ንስእለከ፡ ወናስተበቍዓከ፡ </expan> (s. fol. 14va)</item>
+                           <item>
+                              <abbr>ቡ፡</abbr> for <expan instant="false">ቡራኬ፡ </expan> (s. fol. 57rb)</item>
+                           <item>
+                              <abbr>ተ(ዘ)፡ ሥ(ጋ)፡ እን፡ ነ(ሣ)፡</abbr> for <expan instant="false">ተዘከር፡ ሥጋ፡ እንተ፡ ነሣእከ፡ </expan> (s. fol. 71va)</item>
+                           <item>
+                              <abbr>እ፡ ከ፡ ው፡ ሥ፡</abbr> for <expan instant="false">እምከመ፡ ውእቱ፡ ሥጋ፡ </expan> (s. fol. 71va)</item>
+                           <item>
+                              <abbr>ቅዱስ፡ ቅ፡ ቅ፡</abbr> for <expan instant="false">ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ </expan> (s. fol. 87ra)</item>
+                           <item>
+                              <abbr>ውስ፡ ጽባ፡</abbr> for <expan instant="false">ውሰተ፡ ጽባሕ፡ ነጽሩ፡ </expan> (s. fol. 92ra)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -163,22 +188,19 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 2va: List of the Ethiopic Anaphoras.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 2va: List of the Ethiopic Anaphoras.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Crudely written in red ink. Some of the Anaphoras are named either according to their incipits or according to the liturgical occasions on which they are celebrated. The number and sequence of the Anaphoras in the list do not coincide with their number and sequence in the Ms. A Tǝgrǝñña form (ናይ፡) is used in the name of the last Anaphora.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 2vb: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 2vb: ዝመፅሀፍ፡ ዘመደ፡ ማርያም፡ ዘወሀበት፡ ለሚካኤል፡ በለሳ፡ ከመ፡ ይኩና፡ መርህ፡ ለመንግስተ፡ ሰማያት</q>
+                           <locus/>Fol. 2vb: Donation note.<q xml:lang="gez">Fol. 2vb: ዝመፅሀፍ፡ ዘመደ፡ ማርያም፡ ዘወሀበት፡ ለሚካኤል፡ በለሳ፡ ከመ፡ ይኩና፡ መርህ፡ ለመንግስተ፡ ሰማያት</q>
                            <q xml:lang="en">Fol. 2vb: This is a book (of) Zämädä Maryam who donated it to (the church of) St. Michael Bäläsa so that it might be for her a guide to the Kingdom of Heaven.</q>
-                           <p part="N"/>
+                           Crudely written in red ink in the same hand as Additio 1.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 115rb: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 115rb: ዝመጽሃፍ፡ ዘገብረ፡ መድኅን፡ ወዘመደ፡ ማርያም፡ ዘተሳየጡ፡ በን&lt;ዋ&gt;ዮሙ። ዘወብዎ [sic]፡ ለሚካኤል፡</q>
+                           <locus/>Fol. 115rb: Donation note.<q xml:lang="gez">Fol. 115rb: ዝመጽሃፍ፡ ዘገብረ፡ መድኅን፡ ወዘመደ፡ ማርያም፡ ዘተሳየጡ፡ በን&lt;ዋ&gt;ዮሙ። ዘወብዎ [sic]፡ ለሚካኤል፡</q>
                            <q xml:lang="en">Fol. 115rb: This is a book of Gäbrä Mädḫǝn and Zämädä Maryam who acquired it for their own money, who donated it to (the church of St.) Michael.</q>
-                           <p part="N"/>
+                           Crudely written.
                         </item>
                         <item xml:id="e1">- Beginning of a recent purchase note, crudely written on fol. 2r: ዝመጽሐፈ፡ ቅዳሴ፡ ዘቅዱስ፡ ሚካኤል፡ ዘተሳየጥዎ፡ በ፶ብር፡ “This is a Missal of (the church of) St. Michael, which was bought for 50 Bǝrr”. Crude notes in green ink (possibly a continuation of the purchase note) are added beside. Both texts are written upside down.&#xD;
 - A piece of parchment is sewn to fol. 3 (in the upper part) containing on both sides the expected text. The following folios (fols. 4-10) have triangular pieces of parchment sewn to their inner upper edges, containing the needed text. The reason for the replacement of parchment is unclear.&#xD;
@@ -200,7 +222,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0133BÃ¤lÃ¤saQÇ&#x9d;ddusMikaË&#x80;el" instant="false" full="yes">BÃ¤lÃ¤sa QÇ&#x9d;ddus MikaË&#x80;el  / QMB</placeName>
+                        <placeName corresp="INS0133QMB" instant="false" full="yes">BÃ¤lÃ¤sa QÇ&#x9d;ddus MikaË&#x80;el  / QMB</placeName>
                      </origPlace>
                      <origDate notBefore="1889" notAfter="1913" instant="false">On fol. 14ra, King Mǝnilǝk II (r. 1889-1913)is mentioned.</origDate>
                   </origin>
@@ -242,10 +264,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -266,7 +284,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-13" status="draft">registered</change>
          <change who="IF" when="2012-08-16T06:26:22.746Z" status="draft">created</change>
          <change who="SA" when="2014-09-09T15:07:40.860Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

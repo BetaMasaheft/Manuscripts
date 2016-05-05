@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESakm008" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESakm008"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0103ʾAmbäsätKidanäMǝḥrät"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0103AKM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AKM-008</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">125.0</measure> folios,
-                                                in
-                                                <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">125.0</measure> folios, in <measure unit="quire">15.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">21.5</height>
                               <width unit="cm">20.5</width>
@@ -114,7 +118,7 @@ The Ms. has been resewn with a recent thread.&#xD;
 Holes repaired on fols. 16, 30, 76, 84, 85, 96, 99.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="19">
                            <dimensions unit="mm">
                               <height>150</height>
                               <width>165</width>
@@ -127,32 +131,46 @@ Holes repaired on fols. 16, 30, 76, 84, 85, 96, 99.</condition>
                               <dim type="left">14</dim>
                               <dim type="intercolumn">16</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 3r.</ab>
+                           <note anchored="true">All data for fol. 3r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 The upper ruled line was not used by the scribe on fols. 1r, 121r.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Hand a: fine and careful; hand b: mediocre</ab>
                         <seg type="ink" part="N">Black, red (vivid red [hand a], strong red [hand b])</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">18th century (?)</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ፍ፡</abbr> for <expan instant="false">ፍቱሐ፡ ረስዮ፡ </expan> (e.g., fols. 12ra, 14vb, 15ra)</item>
+                           <item>
+                              <abbr>ይ፡ ካ፡</abbr> for <expan instant="false">ይበል፡ ካሕን፡ </expan> (e.g., fols. 13va, 16rb, 62va)</item>
+                           <item>
+                              <abbr>ይ፡ ዲ፡</abbr> for <expan instant="false">ይበል፡ ዲያቆን፡ </expan> (e.g., fols. 13va, 16rb, 62vb)</item>
+                           <item>
+                              <abbr>ይ፡ ሕ፡</abbr> for <expan instant="false">ይበል፡ ሕዝብ፡ </expan> (e.g., fols. 24vb, 25ra, 63rb)</item>
+                           <item>
+                              <abbr>አ፡</abbr> for <expan instant="false">አሜን፡ </expan> (fols. 100vb, 101ra, 102ra)</item>
+                           <item>
+                              <abbr>ን፤ እ፤ አ፤ ል፤</abbr> for <expan instant="false">ንስዕለከ፡ እግዚኦ፡ አበ፡ ልዑላን፡ </expan> (fols. 113ra, 113va)</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">fols. 2ra-112vb; 121ra-122rb; round shapes, broadly spaced letters.</handNote>
                      <handNote xml:id="h3" script="Ethiopic">fols. 112vb-120rb; 122va-125rb; angular letter shapes, hairlines, bifurcated extremities.</handNote>
@@ -160,10 +178,10 @@ The upper ruled line was not used by the scribe on fols. 1r, 121r.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 125v: Ownership note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 125v: Ownership note.<q xml:lang="gez">Fol. 125v: ዛቲ፡ መጽሐፈ፡ ግንዘት፡ <b>&lt;...&gt;</b>
+                              <b> </b>ወርቀ፡ ቤተ፡ ክርስቲያን፡ ዘአቡነ፡ ሊባኖስ፡ ወቀይሰ፡ ገበዝሂ፡ ቀሲስ፡ ወልደ፡ ክርስቶስ፡ ወመኰንንሂ፡ ወልደ፡ አምላክ፡ … </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note mentions the church of ʾbunä Libanos as the owner of the Ms. Besides, the names of qäysä gäbäz Wäldä Krǝstos and mäkwännǝn ‘ruler’ Wäldä ʾAmlak are mentioned.
                         </item>
                         <item xml:id="e1">- Corrections written interlineally: fols. 8ra, 49ra, 79va, 100ra, 117va, 118rb, 119rb.&#xD;
 - The word እገሌ, “so-and-so” and some other words in the section of Antiphons are marked by thin lines above and below throughout the Ms.&#xD;
@@ -187,7 +205,7 @@ Remains of the leather cover on the inner sides of both boards.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0103ʾAmbäsätKidanäMǝḥrät" instant="false" full="yes">ʾAmbäsät Kidanä Mǝḥrät  / AKM</placeName>
+                        <placeName corresp="INS0103AKM" instant="false" full="yes">ʾAmbäsät Kidanä Mǝḥrät  / AKM</placeName>
                      </origPlace>
                      <origDate notBefore="1700" notAfter="1800" instant="false">The name of King ʾIyasu (?) has been mentioned in one instance on fol. 49va, but erased.</origDate>
                   </origin>
@@ -229,10 +247,6 @@ Remains of the leather cover on the inner sides of both boards.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -253,7 +267,7 @@ Remains of the leather cover on the inner sides of both boards.</decoNote>
          <change who="DN" when="2010-11-20" status="draft">registered</change>
          <change who="AA" when="2013-09-12T18:12:28.450Z" status="draft">created</change>
          <change who="DN" when="2014-11-25T10:04:57.771Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

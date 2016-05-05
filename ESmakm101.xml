@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmakm101" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmakm101"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0174MayË&#x80;AnbÃ¤saKidanÃ¤MÇ&#x9d;á¸¥rÃ¤t"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0174MAKM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MAKM-101</idno>
                   <altIdentifier>
                      <idno>C4-IV-60 (fol. 89r)</idno>
@@ -49,9 +55,7 @@ Some terms and words, like ḥatäta (e.g. fols. 1rv, 3rv, 4rv), täśäṭwo (e
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">134.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">2.0</measure> blank, in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">134.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">19.0</height>
                               <width unit="cm">14.0</width>
@@ -116,7 +120,7 @@ Fol. 133 is damaged by insects.&#xD;
 Tear carefully amended on fol. 60.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="1" writtenLines="21">
                            <dimensions unit="mm">
                               <height>135</height>
                               <width>100</width>
@@ -129,32 +133,50 @@ Tear carefully amended on fol. 60.</condition>
                               <dim type="left">10</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 2r</ab>
+                           <note anchored="true">All data for fol. 2r</note>
                            <ab type="ruling" part="N"/>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine and regular, in a trained hand.</ab>
                         <seg type="ink" part="N">Black, red (vivid crimson)</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">19th century.</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>- ተሠ / ተሠጥ</abbr> for <expan instant="false">ተሠጥዎ </expan> (e.g. fols. 3v, 90r, 93r, 105r).</item>
+                           <item>
+                              <abbr>- ሐተ</abbr> for <expan instant="false">ሐተታ </expan> (e.g. fols. 90v, 93v).</item>
+                           <item>
+                              <abbr>- ለዓ: ዓለ: አ</abbr> for <expan instant="false">ለዓለመ: ዓለም: አሜን </expan> (e.g. fol.69r).</item>
+                           <item>
+                              <abbr>- ይተ / ይተረ / ይተረጐ</abbr> for <expan instant="false">ይተረጐም </expan> (e.g. fols. 129, 130, 131).</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 132v: Note on types and qualities of precious stones.</div>
                            <q xml:lang="gez">Fol. 132v: እጽሕፍ: ነገረ: አዕናቍ: ቀይሐን: ወኅብረ: ደም: ወጸዓዳን: ወሐመልሚላን: ወኅብረ: ስሞሙሂ: ጳዝዮን: … </q>
                            <q xml:lang="en">Fol. 132v: I write the account of precious stones: red ones, those like blood, white ones, green ones, and there common name is Ṗazəyon …</q>
-                           <p part="N"/>
+                           The note is written in the same hand as Additio 2.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 132v: Note on symbolic interpretation of Biblical peoples as different animals. </div>
+                           <q xml:lang="gez">Fol. 132v: ምሳሌ: አሕዛብ: አናብስት: ባቢሎን: አናምርት: ሚዶን: ድብ: ፋርስ: አዝዕብት: ግብጽ: አክልብት: ኢሎፍሊ: … </q>
+                           <q xml:lang="en">Fol. 132v: Symbolic interpretation of peoples: Babylon (is like) Lion, <i>Midon </i>(is like) tigers, Persia (is like) bear, Egypt (is like) hyenas, Philistines (<i>ˀIlofli</i>) (are like) dogs …  </q>
+                           The note is written in the same hand as Additio 1.
                         </item>
                         <item xml:id="e1">- The title of Text I is crudely written on the front board with yellow paint.&#xD;
 - Corrections written interlineally: fols. 7v, 8r, 28v, 29r, 53r.&#xD;
@@ -177,7 +199,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0174MayË&#x80;AnbÃ¤saKidanÃ¤MÇ&#x9d;á¸¥rÃ¤t" instant="false" full="yes">May Ë&#x80;AnbÃ¤sa KidanÃ¤ MÇ&#x9d;á¸¥rÃ¤t / MAKM</placeName>
+                        <placeName corresp="INS0174MAKM" instant="false" full="yes">May Ë&#x80;AnbÃ¤sa KidanÃ¤ MÇ&#x9d;á¸¥rÃ¤t / MAKM</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900" instant="false">19th cent. (?)</origDate>
                   </origin>
@@ -219,10 +241,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -244,7 +262,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-11-05" status="draft">registered</change>
          <change who="AA" when="2012-08-30T16:10:15.023Z" status="draft">created</change>
          <change who="DN" when="2015-07-01T12:42:40.104Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

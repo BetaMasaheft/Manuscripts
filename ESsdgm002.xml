@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESsdgm002" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESsdgm002"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0204ṢäbälaDäbräGännätMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0204SDGM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>SDGM-002</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">232.0</measure> folios,
-                                                in
-                                                <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">232.0</measure> folios, in <measure unit="quire">23.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">35.3</height>
                               <width unit="cm">29.5</width>
@@ -160,7 +164,7 @@ Fol. 42 is half the size of the other fols.&#xD;
 Holes or tears amended, e.g., on fols. 3, 17, 26, 38, 72, 97, 109.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="31">
                            <dimensions unit="mm">
                               <height>243</height>
                               <width>232</width>
@@ -173,28 +177,32 @@ Holes or tears amended, e.g., on fols. 3, 17, 26, 38, 72, 97, 109.</condition>
                               <dim type="left">20</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data from fol. 53r.</ab>
+                           <note anchored="true">All data from fol. 53r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N"/>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">19th century (?)</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰ፡ / ሰላ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (e.g., fols. 98vc, 101vc, 102vb, 103rac)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -213,7 +221,7 @@ The bottom line is written above the ruling.</ab>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0204ṢäbälaDäbräGännätMaryam" instant="false" full="yes">Ṣäbäla Däbrä Gännät Maryam / SDGM</placeName>
+                        <placeName corresp="INS0204SDGM" instant="false" full="yes">Ṣäbäla Däbrä Gännät Maryam / SDGM</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900" instant="false">19th cent. (?)</origDate>
                   </origin>
@@ -255,10 +263,6 @@ The bottom line is written above the ruling.</ab>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -279,7 +283,7 @@ The bottom line is written above the ruling.</ab>
          <change who="DN" when="2011-12-08" status="draft">registered</change>
          <change who="VR" when="2015-05-13T09:34:52.034Z" status="draft">created</change>
          <change who="MV" when="2015-05-28T12:19:14.107Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

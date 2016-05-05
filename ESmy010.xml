@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmy010" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmy010"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0039DäbräMaʿṣo"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0039MY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MY-010</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The text on fol. 5r is written alternately in red and black lines.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">129.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">6.5</measure> blank, in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">129.0</measure> folios, of which <measure unit="leaf" type="blank">6.5</measure> blank, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">30.0</height>
                               <width unit="cm">23.5</width>
@@ -117,7 +121,7 @@ Decorated quire marks. Quires VI and VII are both numbered as ፯.</item>
                         <condition key="good"/>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="25">
                            <dimensions unit="mm">
                               <height>210</height>
                               <width>185</width>
@@ -130,28 +134,35 @@ Decorated quire marks. Quires VI and VII are both numbered as ፯.</item>
                               <dim type="left">15</dim>
                               <dim type="intercolumn">12</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 6r.</ab>
+                           <note anchored="true">All data are for fol. 6r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible (s. fol. 99r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible (s. fol. 94r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, regular.</ab>
                         <seg type="ink" part="N">Black; red; rosy (names of donors).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 19th - beginning of the 20th cent.</date>
+                        <list type="abbreviations">
+                           <item>ይ፡ ካ፡ for ይቤ፡ ካህን፡</item>
+                           <item>ይ፡ ዲ፡ for ይቤ፡ ዲያቆን፡</item>
+                           <item>ወ(ይ)፡ ሕ(ዝ)፡ for ወይቤ፡ ሕዝብ፡</item>
+                           <item>ሃ፡ ሃ፡ ሃ፡ (or ሃሌ፡ ሃ፡ ሃ፡) for threefold ሃሌ፡ ሉያ፡</item>
+                           <item>ፍ(ቱ)፡ ወ፡ ረ፡ for ፍቱሐ፡ ወንጹሐ፡ ረስዮ፡</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -160,10 +171,18 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div part="N" org="uniform" sample="complete">Fol. 127r: Purchase note.</div>
+                           <q xml:lang="gez">
+                              <div part="N" org="uniform" sample="complete">Fol. 127r: ፲፱፻፴፮፡ ዓ፡ ም፡ ዝመጽሐፍ፡ ዘደብረ፡ ማእጾ፡ ዘተሣየቱ፡ በንዋዮሙ፡ በ፸፪፡ ብር፡ ሰያጢ፡ ፸፪፡ ብር፡ ደረሰኝ፡ ወስጄ፡ አሎ፡ ቄስ፡ አብርሃ፡ ጥበበ፡ ሥላሴ፡ አደአሮ፡ ቆቋህያ፡ ዳኛ፡ መምሬ፡ ገብረ፡ መድኅን፡ አዲ፡ ቀያህቶ፡ አማኝ፡ ባሻይ፡ ገብረ፡ ሚካኤል፡ ወለ[sic]፡ ማርያም፡ አለቃ፡ ግደደ፡ ኪዳኑ፡ መምሬ፡ገብረ፡ ወልደ፡ ሚካኤል፡ መድኅን፡ ኃይለ፡ ሥላሴ፡ይሙት፡</div> 
+                              <div style="line-height: normal; margin-bottom: 0pt"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Around the left fingerprint: ፊርማየ፡ ቄስ፡ አብርሃ፡ ፊርማየ፡ ምስ፡</div> 
+                              <div part="N" org="uniform" sample="complete">Around the right fingerprint: ፊርማየ፡ ቄስ፡ ወልደ፡ ወሚካኤል[sic]፡</div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note written in a mixture of Gǝʿǝz and Amharic. The purchase of the book took place in 1937 A.D. (= 1943/44 A.D.).
                         </item>
                         <item xml:id="e1">- Fols. 34v, 45v-46r, 64v-65r, 111r, 120v, 123v, 126r: Names of donors partially deleted, the names of Wälättä Mäsqäl, Wälättä Gäbrǝʾel, Gäbrä Ḥǝywät and ʾabunä Gäbrä Maryam clearly visible in several instances.&#xD;
 - Fols. 97vb, l.19 – 98vb, l.22: text written in (finer) compressed script, by the same hand.</item>
@@ -186,7 +205,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0039DäbräMaʿṣo" instant="false" full="yes">Däbrä Maʿṣo / MY</placeName>
+                        <placeName corresp="INS0039MY" instant="false" full="yes">Däbrä Maʿṣo / MY</placeName>
                      </origPlace>
                      <origDate notBefore="1880" notAfter="1920" instant="false">Late 19th - beginning of the 20th cent.</origDate>
                   </origin>
@@ -228,10 +247,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -253,7 +268,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-10" status="draft">registered</change>
          <change who="IF" when="2011-03-23T09:37:43.234Z" status="draft">created</change>
          <change who="EG" when="2014-06-05T11:15:16.893Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

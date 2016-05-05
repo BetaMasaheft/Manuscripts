@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESakm021" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESakm021"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0103ʾAmbäsätKidanäMǝḥrät"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0103AKM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AKM-021</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">34.0</measure> folios,
-                                                in
-                                                <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">34.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">12.5</height>
                               <width unit="cm">10.0</width>
@@ -77,7 +81,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <condition key="good">The bottom margins of some fols. are stained with water.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="1" writtenLines="14">
                            <dimensions unit="mm">
                               <height>85</height>
                               <width>67</width>
@@ -90,21 +94,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <dim type="left">14</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">all data for fol. 4r.</ab>
+                           <note anchored="true">all data for fol. 4r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
+                        </layout>
+                        <layout>
                            <ab type="punctuation" part="N">
                               <list>
                                  <item xml:id="div1">Hand a: fols. 3r-27r; characterized by big broadly spaced letters; the hand writing is upright or slightly left-sloping.</item>
@@ -119,8 +125,11 @@ Hand b: fols. 27v-34r; characterized by smaller, round letter.</item>
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Hand a: mediocre, irregular.   Hand b: mediocre, irregular.</ab>
                         <seg type="ink" part="N">Black, red (strong red).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
-                        <date instant="false">19th century</date>
+                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes">Ṣägga zä-ʾAb and Gäbrä Ṣadǝq</persName>Ṣägga zä-ʾAb and Gäbrä Ṣadǝq are simultaneously mentioned as scribes in the supplication formula (fol. 34r).<date instant="false">19th century</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰላ᎓</abbr> for <expan instant="false">ሰላም᎓ </expan> (e.g., fols. 3r, 4r, 5r).</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">fols. 3r-27r.</handNote>
                      <handNote xml:id="h3" script="Ethiopic">fols. 27v-34r.</handNote>
@@ -128,16 +137,15 @@ Hand b: fols. 27v-34r; characterized by smaller, round letter.</item>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 1r: Record on the arrival of Gäbrä Mädhǝn [and] Gäbrä Maryam.</locus>
-                           <q xml:lang="gez">Fol. 1r: ገብረ᎓ መድህን᎓ ገብረ᎓ ማርያም᎓ በታህሳ[ስ]᎓ ፲ቀን᎓ በሰላም᎓ ደርሰዋል᎓ ለቄስ᎓ ብርሐነ᎓ [vac] ቄስ᎓ ገብረ᎓ መድን᎓ </q>
+                           <locus/>Fol. 1r: Record on the arrival of Gäbrä Mädhǝn [and] Gäbrä Maryam.<q xml:lang="gez">Fol. 1r: ገብረ᎓ መድህን᎓ ገብረ᎓ ማርያም᎓ በታህሳ[ስ]᎓ ፲ቀን᎓ በሰላም᎓ ደርሰዋል᎓ ለቄስ᎓ ብርሐነ᎓ [vac] ቄስ᎓ ገብረ᎓ መድን᎓ </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           crude note in Amharic.
+The note mentions the safe arrival of Gäbrä Mädhǝn [and] Gäbrä Maryam on 19 December.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 34r: Purchase note.</locus>
-                           <q xml:lang="gez">Fol. 34r: ዝንቱ᎓ መጽሐ[ፍ]᎓ ዘተሣየጦ᎓ በሁለት᎓ ብር᎓ ዘኢትዮጵያ᎓ ሃለቃ᎓ ይሕደጎ᎓ ሐደራ᎓᎓ ወንድማሞቼ᎓ በሁለት᎓ ብር᎓ እንድ᎓ ትገዙ᎓ ዝንቱ᎓ ብራና᎓ ዘይከውን᎓ ለትውልደ᎓</q>
+                           <locus/>Fol. 34r: Purchase note.<q xml:lang="gez">Fol. 34r: ዝንቱ᎓ መጽሐ[ፍ]᎓ ዘተሣየጦ᎓ በሁለት᎓ ብር᎓ ዘኢትዮጵያ᎓ ሃለቃ᎓ ይሕደጎ᎓ ሐደራ᎓᎓ ወንድማሞቼ᎓ በሁለት᎓ ብር᎓ እንድ᎓ ትገዙ᎓ ዝንቱ᎓ ብራና᎓ ዘይከውን᎓ ለትውልደ᎓</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note mentions haläqa Yǝḥdägwä Ḥadära as the buyer of the codex for 2 Ethiopian Birr.
                         </item>
                         <item xml:id="e1">- Immediate correction marked by thin lines above and below the word: fol. 10r&#xD;
 - Corrections written interlineally: fols. 10v, 11r, 14v, 15r, 15v, 23v.&#xD;
@@ -162,7 +170,7 @@ Three sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0103ʾAmbäsätKidanäMǝḥrät" instant="false" full="yes">ʾAmbäsät Kidanä Mǝḥrät  / AKM</placeName>
+                        <placeName corresp="INS0103AKM" instant="false" full="yes">ʾAmbäsät Kidanä Mǝḥrät  / AKM</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900" instant="false"/>
                   </origin>
@@ -204,8 +212,7 @@ Three sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
+                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes">Ṣägga zä-ʾAb and Gäbrä Ṣadǝq</persName>
                </person>
                <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
@@ -228,7 +235,7 @@ Three sewing stations.</decoNote>
          <change who="DN" when="2010-12-11" status="draft">registered</change>
          <change who="AA" when="2013-05-02T16:55:25.575Z" status="draft">created</change>
          <change who="AA" when="2014-06-16T09:33:20.110Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

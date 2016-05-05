@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESbgy010" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESbgy010"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0161GolʿaDäbräBǝrhanYoḥannǝs"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0161BGY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>BGY-010</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">162.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">1.0</measure> blank, in
-                                                <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">162.0</measure> folios, of which <measure unit="leaf" type="blank">1.0</measure> blank, in <measure unit="quire">23.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">35.0</height>
                               <width unit="cm">28.0</width>
@@ -89,7 +93,7 @@ Tears are carefully amended on fols. 44, 47, 68, 99, 113, 118, 126, 130, 131, 13
 Two thirds of fol. 71 have been cut off.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="39">
                            <dimensions unit="mm">
                               <height>248</height>
                               <width>230</width>
@@ -102,43 +106,45 @@ Two thirds of fol. 71 have been cut off.</condition>
                               <dim type="left">17</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 75r.</ab>
+                           <note anchored="true">All data for fol. 75r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre</ab>
                         <seg type="ink" part="N">Black; red (brilliant vermilion)</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Mid-18 to mid-19 cent. (?)</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰላ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (fols. 18ra, 34rb, 34vc, 57va etc.)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 26vc: Zä-ˀaqräbku maḫletä… “The song I am offering…” (concluding prayer).</locus>
-                           <q xml:lang="gez">Fol. 26vc: ዘአቅረብኩ᎓ ማኅሌተ᎓ ተዘኪርየ᎓ አዕላፈ። እምእለ᎓ ተጸምዱከ᎓ ዘልፈ። ለለይትነበብ᎓ ተወከፍ᎓ ዘንዴትየ᎓ መጽሐፈ። እንተ᎓ ረሰይከ᎓ እግዚኦ᎓ ጸሪቀ᎓ መበለት᎓ ውኩፈ። እምእለ᎓ አብዑ᎓ ብዑላን᎓ [እምብዕሎሙ᎓] ዘተርፈ። ነቢያት᎓ ቅዱሳን᎓ ወሐዋርያት᎓ ሰባክያን። ሰማዕት᎓ ወጻድቃን᎓ ወመላእክት᎓ ትጉሃን። ደናግል᎓ ዓዲ᎓ ወመነኮሳት᎓ ኄራን᎓ ባርኮ᎓ ባርኩ᎓ ጉባኤ᎓ ዛቲ᎓ መካን። እስከ᎓ አረጋዊ᎓ ልሒቅ᎓ ወንዑስ᎓ ሕፃን። ለዘጸሐፎ᎓ በክርታስ᎓ ወለዘአጽሐፎ᎓ እንዘ᎓ ይደርስ። ለዘአንበቦ᎓ ወለዘተርጐሞ᎓ በልሳን᎓ ሐዲስ። ወለዘሰምዓ᎓ ቃሎ᎓ በዕዝነ᎓ መንፈስ። በጸሎተ᎓ እሙ᎓ ማርያም᎓ ዓራቂተ᎓ ኵሉ᎓ እምባዕስ። ኅቡረ᎓ ይምሐረነ᎓ ኢየሱስ᎓ ክርስቶስ። </q>
+                           <locus/>Fol. 26vc: Zä-ˀaqräbku maḫletä… “The song I am offering…” (concluding prayer).<q xml:lang="gez">Fol. 26vc: ዘአቅረብኩ᎓ ማኅሌተ᎓ ተዘኪርየ᎓ አዕላፈ። እምእለ᎓ ተጸምዱከ᎓ ዘልፈ። ለለይትነበብ᎓ ተወከፍ᎓ ዘንዴትየ᎓ መጽሐፈ። እንተ᎓ ረሰይከ᎓ እግዚኦ᎓ ጸሪቀ᎓ መበለት᎓ ውኩፈ። እምእለ᎓ አብዑ᎓ ብዑላን᎓ [እምብዕሎሙ᎓] ዘተርፈ። ነቢያት᎓ ቅዱሳን᎓ ወሐዋርያት᎓ ሰባክያን። ሰማዕት᎓ ወጻድቃን᎓ ወመላእክት᎓ ትጉሃን። ደናግል᎓ ዓዲ᎓ ወመነኮሳት᎓ ኄራን᎓ ባርኮ᎓ ባርኩ᎓ ጉባኤ᎓ ዛቲ᎓ መካን። እስከ᎓ አረጋዊ᎓ ልሒቅ᎓ ወንዑስ᎓ ሕፃን። ለዘጸሐፎ᎓ በክርታስ᎓ ወለዘአጽሐፎ᎓ እንዘ᎓ ይደርስ። ለዘአንበቦ᎓ ወለዘተርጐሞ᎓ በልሳን᎓ ሐዲስ። ወለዘሰምዓ᎓ ቃሎ᎓ በዕዝነ᎓ መንፈስ። በጸሎተ᎓ እሙ᎓ ማርያም᎓ ዓራቂተ᎓ ኵሉ᎓ እምባዕስ። ኅቡረ᎓ ይምሐረነ᎓ ኢየሱስ᎓ ክርስቶስ። </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a careful secondary hand.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 162r: Beginning of a record concerning a litigation about land division between the community and ˀato Gäbriḥannəs. </locus>
-                           <q xml:lang="gez">Fol. 162r: የማህበርና፦ ያቶ፡ ገብሪሐንስ፦ እርቅ፦</q>
+                           <locus/>Fol. 162r: Beginning of a record concerning a litigation about land division between the community and ˀato Gäbriḥannəs. <q xml:lang="gez">Fol. 162r: የማህበርና፦ ያቶ፡ ገብሪሐንስ፦ እርቅ፦</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in Amharic; robably the same as in Additio 3 of Ms. BGY-001 (fols. 137vс-138ra)
                         </item>
                         <item xml:id="e1">- Internal number of the ecclesiastic library has been crudely written on fol. 1r: ስን No 3-1 24-8-93.&#xD;
 - Tämälläs-signs in the shape of two perpendicular lines with loops at the ends of each line, indicating the place where the passages rewritten in the upper margins belong: fols. 4r, 4v, 5r, 5v, 6v.&#xD;
@@ -167,7 +173,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0161GolʿaDäbräBǝrhanYoḥannǝs" instant="false" full="yes">Golʿa Däbrä Bǝrhan Yoḥannǝs/ BGY</placeName>
+                        <placeName corresp="INS0161BGY" instant="false" full="yes">Golʿa Däbrä Bǝrhan Yoḥannǝs/ BGY</placeName>
                      </origPlace>
                      <origDate notBefore="1750" notAfter="1850" instant="false"/>
                   </origin>
@@ -209,10 +215,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -233,7 +235,7 @@ Two pairs of sewing stations.</decoNote>
       <revisionDesc status="draft">
          <change who="MB" when="2014-11-07T22:50:35.351Z" status="draft">created</change>
          <change who="DN" when="2015-01-28T17:01:10.254Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

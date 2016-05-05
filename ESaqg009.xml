@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESaqg009" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESaqg009"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0097ʿAddiQolqwalGiyorgis"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0097AQG"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AQG-009</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The text on fol. 3r is written alternately in red and black lines.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">134.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">4.5</measure> blank, in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">134.0</measure> folios, of which <measure unit="leaf" type="blank">4.5</measure> blank, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">33.0</height>
                               <width unit="cm">26.5</width>
@@ -118,7 +122,7 @@ Bifolio 39r-40v has been torn off quire V.</item>
                         <condition key="good">Some leaves at the end are worn and dirty.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="26">
                            <dimensions unit="mm">
                               <height>230</height>
                               <width>195</width>
@@ -131,27 +135,27 @@ Bifolio 39r-40v has been torn off quire V.</item>
                               <dim type="left">13</dim>
                               <dim type="intercolumn">20</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data fol. 101r.</ab>
+                           <note anchored="true">All data fol. 101r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are mostly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible (s. fol. 51r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible (s.fol. 66r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre but careful</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Early 19th century</date>
                      </handNote>
                   </handDesc>
@@ -161,16 +165,24 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 130rb: Purchase note.</locus>
-                           <q xml:lang="gez">ወጳጳስሂ፡ አቡነ፡ ቄርሎስ፡ ወአስበ፡ መጽሐፍ፡ ፲ወ፫፡ ዝንቱ፡ መጽሐፍ፡ ኢይፃእ፡ ኀበ፡ ካልእ፡ ሀገር፡ ዘእንበለ፡ ፩አላባ፡ ውዝዝ [sic]፡ ውእቱ።</q>
-                           <q xml:lang="en">The Metropolitan is ˀabunä Qerəllos. The payment for the book is 13 (Bərr). This book may not be taken out to another place except wrapped in a wripping; this is forbidden.</q>
-                           <p part="N"/>
+                           <locus/>Fol. 130rb: Purchase note.<q xml:lang="gez">
+                              <div style="line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">
+                                 <font size="2">Fol. 130rb: </font>ዝንቱ፡ መጽሐፍ፡ ዘተጽሕፈ፡ በዘመነ፡ ደጃዝማት[sic]፡ ሱባጋድስ፡ ዘተሣየጦ፡ ቄሰ፡ ገበዝ፡ ክፍለ፡ ጊዮርጊስ፡ በንዋየ፡ ቤተ፡ ክርስቲያን፡ ወስመ፡ ሀገርሂ፡ አድ፡ ቈልቋል፡ ወስዩመ፡ ሀገርሂ፡ ዘሱ፡ ሐለቃ፡ ክፍለ፡ ጊዮርጊስ፡ ወልደ፡ ሥላሴ፡ ወለዝንቱ፡ መጽሐፍ፡ ዘሠረቆ፡ ወዘፈሐቆ፡ ወዘተአገሎ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዘ፡ ለይኩን።</div> ወጳጳስሂ፡ አቡነ፡ ቄርሎስ፡ ወአስበ፡ መጽሐፍ፡ ፲ወ፫፡ ዝንቱ፡ መጽሐፍ፡ ኢይፃእ፡ ኀበ፡ ካልእ፡ ሀገር፡ ዘእንበለ፡ ፩አላባ፡ ውዝዝ [sic]፡ ውእቱ።</q>
+                           <q xml:lang="en">
+                              <div style="line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">[Fol. 130rb]: This book, which was written at the time of däğğazmač Subagadəs, was bought by qesä gäbäz Kəflä Giyorgis with the money of the church; and the name of the village is ˀAdd Q<sup>w</sup>älq<sup>w</sup>al. The śəyyum of the village is the same ḥaläqa Kəflä Giyorgis Wäldä Śəllase. He who stole this book or he who deleted (its text) or he who took it away it shall be excommunicated by the authority of Peter and Paul.</div> The Metropolitan is ˀabunä Qerəllos. The payment for the book is 13 (Bərr). This book may not be taken out to another place except wrapped in a wripping; this is forbidden.</q>
+                           
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 130rb: Note prohibiting to take the book out without textile secondary cover (?).</locus>
-                           <q xml:lang="gez">ኢይጻእ፡ ዝንቱ፡ መጽሐፍ፡ ዘእንበለ፡ ፩ልብስ፡ ውጉዝ፡ ውእቱ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ኢትርስዑኒ፡ ማኅበር፡ ዘደብረ፡ ብርሃን፡ ጊዮርጊስ።</q>
+                           <locus/>Fol. 130rb: Note prohibiting to take the book out without textile secondary cover (?).<q xml:lang="gez">
+                              <font size="2">Fol. 130rb: </font>ኢይጻእ፡ ዝንቱ፡ መጽሐፍ፡ ዘእንበለ፡ ፩ልብስ፡ ውጉዝ፡ ውእቱ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ኢትርስዑኒ፡ ማኅበር፡ ዘደብረ፡ ብርሃን፡ ጊዮርጊስ።</q>
                            <q xml:lang="en">[Fol. 130rb]: This book may not be taken out except (wrapped in) a vestment; this is forbidden by the authority of Peter and Paul. Do not forget me, the community of Däbrä Bərhan Giyorgis.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="e1">- Fol. 2v. Exercise in writing: the Trinitarian doxology (incomplete).&#xD;
 - Fol. 8v, in the upper margin. Crude note.&#xD;
@@ -195,7 +207,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0097ʿAddiQolqwalGiyorgis" instant="false" full="yes">ʿAddi Qolqwal Giyorgis / AQG</placeName>
+                        <placeName corresp="INS0097AQG" instant="false" full="yes">ʿAddi Qolqwal Giyorgis / AQG</placeName>
                      </origPlace>
                      <origDate notBefore="1822" notAfter="1828" instant="false">According to the Addition 1, the Ms. was written in the time of däğğazmač Säbagadis Wäldu (the ruler of Tǝgray in 1822-31), and ʾabunä Qerǝllos (the Metropolitan of Ethiopia in 1816-1828).</origDate>
                   </origin>
@@ -237,10 +249,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -261,7 +269,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-18" status="draft">registered</change>
          <change who="IF" when="2011-06-06T14:48:53.411Z" status="draft">created</change>
          <change who="EG" when="2014-06-30T08:23:41.479Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

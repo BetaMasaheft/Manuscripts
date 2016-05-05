@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESbgy008" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESbgy008"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0161GolʿaDäbräBǝrhanYoḥannǝs"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0161BGY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>BGY-008</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">254.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">1.0</measure> blank, in
-                                                <measure unit="quire">28.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">254.0</measure> folios, of which <measure unit="leaf" type="blank">1.0</measure> blank, in <measure unit="quire">28.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">30.0</height>
                               <width unit="cm">24.0</width>
@@ -140,7 +144,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <condition key="good">Fol. 110 was slightly torn (apparently before the text was written) and stitched up.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="29">
                            <dimensions unit="mm">
                               <height>206</height>
                               <width>192</width>
@@ -153,37 +157,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <dim type="left">16</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 117r.</ab>
+                           <note anchored="true">All data are for fol. 117r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre</ab>
                         <seg type="ink" part="N">black; red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">First half of the 19th century</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>አሜ፡</abbr> for <expan instant="false">አሜን፡ </expan> (fols. 6ra, 9rb, 12rc)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00">Fols. 253va-254r: Inventory of the books and holy utensils.</locus>
-                           <q xml:lang="gez">Fols. 253va-254r: ፫ወንጌል፡ ፫ቅዳሴ፡ ፬ ተአምረ፡ ኢየሱስ፡ ተአምረ፡ ማርያ[ም]፡ ፪ድርሳነ፡ ምድኃኒ፡ ድር[ሳ]ነ፡ ዮሐንስ፡ ድርሳነ፡ ሩፋኤል፡ ድር[ሳ]ነ፡ አቡነ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ ፪የዓመት፡ ምሉእ፡ ስንክሳር፡ ፍትሃ፡ ነገስት፡ ግብረ፡ ሕማማ[ት]፡ ዝማሬ፡ አመት፡ መዝሙ[ረ]፡ ዓመት፡ ፪ግንዘት፡ መጽሐፈ፡ መነኮሳት፡ ፪ዳዊት፡ መጽሐፈ፡ ተክሊል፡ ሐዲሳት፡ ጸሎተ፡ እጣን፡ ስብሐተ፡ ነግህ፡ ተአምረ፡ ኢየሱ[ስ]ና፡ ተአምረ፡ ዮሐንስ፡ ቍጽል፡ ፍትሐት፡ ዘወልድ፡፡ ድሙሩ፡ ፴፩፡ መጻሕፍት፡ መስቀል፡ ብር አንድ፡ ትልቅ፡ ትንሽ፡ አንድ፡ ፪መስቀል፡ ነሐሲ፡ ፬ቃለ፡ አዋዲ፡ ፫ጻሕል፡ ፪ጽዋዕ ፡ ምንጻፍ፡ ፫ስየዳ፡ ፩ግብረ፡ መርፍእ፡ ፫ምንጻፍ፡ ትሩበሊ፡ ፬ፍራስ፡ ፪ድባብ፡ ፩ወርቅ፡ ጽላል፡ ፯ጽላል፡ ፪ካባ፡ ላ[ን]ቃ፡ ፬ካባ፡ ከፈይና፡ ቀምስ፡ ፪፡ ፪መርገፍ፡ ፫ጃኖ፡ ፩ሰንደቅ፡ የሔነን፡ የዮሓንስ፡ ጐልዓ፡ ገንዘብ፡ ነው፡ ዘሰረቆ፡ ወዘፈሐቆ፡ በቃለ፡ ጴጥሮስ ወጳውሎስ፡ ውጉዝ፡ ለይኵን፡፡</q>
+                           <locus/>Fols. 253va-254r: Inventory of the books and holy utensils.<q xml:lang="gez">Fols. 253va-254r: ፫ወንጌል፡ ፫ቅዳሴ፡ ፬ ተአምረ፡ ኢየሱስ፡ ተአምረ፡ ማርያ[ም]፡ ፪ድርሳነ፡ ምድኃኒ፡ ድር[ሳ]ነ፡ ዮሐንስ፡ ድርሳነ፡ ሩፋኤል፡ ድር[ሳ]ነ፡ አቡነ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ ፪የዓመት፡ ምሉእ፡ ስንክሳር፡ ፍትሃ፡ ነገስት፡ ግብረ፡ ሕማማ[ት]፡ ዝማሬ፡ አመት፡ መዝሙ[ረ]፡ ዓመት፡ ፪ግንዘት፡ መጽሐፈ፡ መነኮሳት፡ ፪ዳዊት፡ መጽሐፈ፡ ተክሊል፡ ሐዲሳት፡ ጸሎተ፡ እጣን፡ ስብሐተ፡ ነግህ፡ ተአምረ፡ ኢየሱ[ስ]ና፡ ተአምረ፡ ዮሐንስ፡ ቍጽል፡ ፍትሐት፡ ዘወልድ፡፡ ድሙሩ፡ ፴፩፡ መጻሕፍት፡ መስቀል፡ ብር አንድ፡ ትልቅ፡ ትንሽ፡ አንድ፡ ፪መስቀል፡ ነሐሲ፡ ፬ቃለ፡ አዋዲ፡ ፫ጻሕል፡ ፪ጽዋዕ ፡ ምንጻፍ፡ ፫ስየዳ፡ ፩ግብረ፡ መርፍእ፡ ፫ምንጻፍ፡ ትሩበሊ፡ ፬ፍራስ፡ ፪ድባብ፡ ፩ወርቅ፡ ጽላል፡ ፯ጽላል፡ ፪ካባ፡ ላ[ን]ቃ፡ ፬ካባ፡ ከፈይና፡ ቀምስ፡ ፪፡ ፪መርገፍ፡ ፫ጃኖ፡ ፩ሰንደቅ፡ የሔነን፡ የዮሓንስ፡ ጐልዓ፡ ገንዘብ፡ ነው፡ ዘሰረቆ፡ ወዘፈሐቆ፡ በቃለ፡ ጴጥሮስ ወጳውሎስ፡ ውጉዝ፡ ለይኵን፡፡</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written partly in Amharic.
                         </item>
                         <item xml:id="e1">- Internal number of the ecclesiastic library has been crudely written on fol. 1r: ስ No 3-3 24-8-93&#xD;
 - Stamp of the library, partly unreadable: fol. 2r &#xD;
@@ -212,7 +219,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0161GolʿaDäbräBǝrhanYoḥannǝs" instant="false" full="yes">Golʿa Däbrä Bǝrhan Yoḥannǝs/ BGY</placeName>
+                        <placeName corresp="INS0161BGY" instant="false" full="yes">Golʿa Däbrä Bǝrhan Yoḥannǝs/ BGY</placeName>
                      </origPlace>
                      <origDate notBefore="1770" notAfter="1831" instant="false">Late 18th-century - 1831(?). Zä-Mänfäs Qǝddus is baptismal name of däǧǧazmač Säbagadis (1770-1831). The name Säbagadǝs (sic!) is explicitly written on fol. 117vc.</origDate>
                   </origin>
@@ -255,10 +262,6 @@ On fols. 46vc and 109ra, the partly erased name of the original donor can be rec
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -280,7 +283,7 @@ On fols. 46vc and 109ra, the partly erased name of the original donor can be rec
          <change who="DN" when="2011-05-21" status="draft">registered</change>
          <change who="MB" when="2014-10-24T20:51:11.062Z" status="draft">created</change>
          <change who="MB" when="2015-04-08T14:25:09.099Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

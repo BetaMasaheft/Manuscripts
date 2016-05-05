@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESdmd002" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESdmd002"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0129DǝblaYoḥannǝsMäṭmǝq"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0129DMD"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>DMD-002</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -40,7 +46,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   </msItem>
                   <msItem xml:id="coloph1" defective="false">
                      <colophon>
-                        <locus target="226vc">Fol. 226vc</locus>The colophon is only partly readable, since the passages containing the names have been erased.</colophon>
+                        <locus target="226vc">Fol. 226vc</locus>Fol. 226vc:<foreign xml:lang="en">Fol. 226vc:</foreign>
+                        <note anchored="true">The colophon is only partly readable, since the passages containing the names have been erased.</note>
+                     </colophon>
                   </msItem>
                </msContents>
                <physDesc>
@@ -49,9 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">228.0</measure> folios,
-                                                in
-                                                <measure unit="quire">24.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">228.0</measure> folios, in <measure unit="quire">24.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">36.0</height>
                               <width unit="cm">31.0</width>
@@ -164,7 +170,7 @@ Fol. 220 is damaged by rodents, with minor loss of text.&#xD;
 Traces of one stitch repair on fols. 4, 5, 6, 7, 8 (?).</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="32">
                            <dimensions unit="mm">
                               <height>260</height>
                               <width>240</width>
@@ -177,27 +183,27 @@ Traces of one stitch repair on fols. 4, 5, 6, 7, 8 (?).</condition>
                               <dim type="left">27</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 115r.</ab>
+                           <note anchored="true">All data for fol. 115r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1E-1E-1E1E-1E1E/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre but careful, but upright and perpendicular.</ab>
                         <seg type="ink" part="N">Black, red (vermillion).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 17th cent.</date>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
@@ -205,76 +211,86 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 31vab: ˀArke-poem (for St. Mercury of Rome?).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 31vab: ˀArke-poem (for St. Mercury of Rome?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written in the same hand).
+Rhymed ʾarke-poem of five lines ending in –a.
+A horse is mentioned, among other elements from St. Mercury of Rome’s commemorative notice on Ḫǝdar 25.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 64va-c: Commemorative notice for St. Mercury (Märqorewos of Rome).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 64va-c: Commemorative notice for St. Mercury (Märqorewos of Rome).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Mentioning elements from St. Mercury's (of Rome) commemorative notice on Ḫǝdar 25.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 65ra-c: ˀArke-poem for Gäbrä ˀIyäsus.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 65ra-c: ˀArke-poem for Gäbrä ˀIyäsus.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –tǝ.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#">Fol. 92va: ˀArke-poem for St. Mercury (Märqorewos of Rome).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 92va: ˀArke-poem for St. Mercury (Märqorewos of Rome).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –lo.
+Mentioning elements from St. Mercury's (of Rome) commemorative notice on Ḫǝdar 25.
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00" n="#">Fol. 93vab: ˀArke-poem on how Gäbrä ˀIyäsus was killed by Yulyanos.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 93vab: ˀArke-poem on how Gäbrä ˀIyäsus was killed by Yulyanos.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –zǝ.
                         </item>
                         <item xml:id="a6">
-                           <locus target="#00" n="#">Fol. 95va-c: ˀArke-poem for St. Mercury (Märqorewos of Rome).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 95va-c: ˀArke-poem for St. Mercury (Märqorewos of Rome).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –sǝ.
+Mentioning elements from St. Mercury's (of Rome) commemorative notice on Ḫǝdar 25.
                         </item>
                         <item xml:id="a7">
-                           <locus target="#00" n="#">Fol. 96ra-c: ˀArke-poem.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 96ra-c: ˀArke-poem.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –re.
+Mentioning St. Mercury (of Rome), Dawit, Yaʿǝqob, and elements from St. Mercury's commemorative notice on Ḫǝdar 25
                         </item>
                         <item xml:id="a8">
-                           <locus target="#00" n="#">Fol. 136va-c: ˀArke-poem for Gäbrä ˀIyäsus.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 136va-c: ˀArke-poem for Gäbrä ˀIyäsus.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in upper margin, in a secondary hand.
+Rhymed ʾarke-poem with five strophes ending in –kǝ.
+Mentioning Gäbrä ʾIyäsus and the angel Rufaʾel.
                         </item>
                         <item xml:id="a9">
-                           <locus target="#00" n="#">Fol. 137ra-c: ˀArke-poem (for several Saints?).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 137ra-c: ˀArke-poem (for several Saints?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –rä.
+Mentioning the black horse (of St. Mercury), Gäbrä ʾIyäsus, ʾElyas and Niqodemos.
                         </item>
                         <item xml:id="a10">
-                           <locus target="#00">Fol.181va-182rc: ˀArke-poem for St. Mercury (Märqorewos of Rome).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol.181va-182rc: ˀArke-poem for St. Mercury (Märqorewos of Rome).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in upper margin, in a secondary hand (Additiones 1-11 written in the same hand).
+Rhymed ʾarke-poem of five lines ending in –nä
+Mentioning elements from St. Mercury's (of Rome) commemorative notice on Ḫǝdar 25.
                         </item>
                         <item xml:id="a11">
-                           <locus target="#00" n="#">Fol. 221vc-222rb: ˀArke-poem for Gäbrä ˀIyäsus.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 221vc-222rb: ˀArke-poem for Gäbrä ˀIyäsus.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in upper margin, in a secondary hand (Additiones 1-11 written by the same hand).
+Rhymed ʾarke-poem of five lines ending in –bǝ.
+Mentioning Gäbrä ʾIyäsus.
                         </item>
                         <item xml:id="a12">
-                           <locus target="#00" n="#">Fol. 226vb-c: Ownership note.</locus>
-                           <q xml:lang="gez">Fol. 226vb-c: ዝስንክሳር፡ ዘታቦተ፡ ቅዱስ፡ ዮሓንስ፡ መጥምቅ፡ ዘድብላ፡ ዘአጥረይዎ፡ በንዋዮሙ፡ አቡነ፡ ወልደ፡ ሚካኤል፡ ወለ[...]ዱ፡ አቡነ፡ ተክለ፡ [ሃይማ]ኖት፡ ከመ፡ ይከ[226vc]ኖሙ፡ መርህ፡ ለመንግሥተ፡ ሰማያት፡ ወመሳፍንተነ፡ ራስ፡ ሰብሐት፡ …</q>
+                           <locus/>Fol. 226vb-c: Ownership note.<q xml:lang="gez">Fol. 226vb-c: ዝስንክሳር፡ ዘታቦተ፡ ቅዱስ፡ ዮሓንስ፡ መጥምቅ፡ ዘድብላ፡ ዘአጥረይዎ፡ በንዋዮሙ፡ አቡነ፡ ወልደ፡ ሚካኤል፡ ወለ[...]ዱ፡ አቡነ፡ ተክለ፡ [ሃይማ]ኖት፡ ከመ፡ ይከ[226vc]ኖሙ፡ መርህ፡ ለመንግሥተ፡ ሰማያት፡ ወመሳፍንተነ፡ ራስ፡ ሰብሐት፡ …</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is partly illegible. It is written over the decoration marks of the original scribe, and an older ownership note. The note was probably written by the same scribe who introduced the donor’s names throughout the Ms.
+
+The Ms. was bought by the priests ʾabunä Wäldä Mikaʾel and ʾabunä Täklä Haymanot (possibly his son, cp. DMD-009) who donated it to the church of Yoḥannǝs Mäṭmǝq of Dǝbla. 
+Ras Sǝbḥat (ʾArägawi, governor of Tǝgray with the title of ras in the years 1892-95 and 1908-14) is also mentioned
                         </item>
                         <item xml:id="e1">- Parts of notes, written in red ink at the end of the monthly readings have been erased. Only the words ዝመጽሐፍ፡ (ስንክሳር) are left: fols. 38rc, 69vc, 144vc, 226vb&#xD;
 - Doodle in pen: fol. 64v&#xD;
@@ -300,7 +316,7 @@ Short parchment guards are inserted in the centre fold of some quires (fols. 84-
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0129DǝblaYoḥannǝsMäṭmǝq" instant="false" full="yes">Dǝbla Yoḥannǝs Mäṭmǝq / DMD</placeName>
+                        <placeName corresp="INS0129DMD" instant="false" full="yes">Dǝbla Yoḥannǝs Mäṭmǝq / DMD</placeName>
                      </origPlace>
                      <origDate notBefore="1690" notAfter="1706" instant="false">The name of King ʾIyasu I (r. 1682-1706) is mentioned throughout the Ms. The name of the original donor, Tälawe Krǝstos, is known in connection with King ʾIyasu I. &#xD;
 Additio 12 mentions ras Sǝbḥat (ʾArägawi, governor of Tǝgray in the years 1892-95 and 1908-14).</origDate>
@@ -346,10 +362,6 @@ The same names are indicated in Ms. DMD-009; some of the names are found in Ms. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -370,7 +382,7 @@ The same names are indicated in Ms. DMD-009; some of the names are found in Ms. 
          <change who="DN" when="2010-12-09" status="draft">registered</change>
          <change who="SD" when="2013-08-16T13:56:14.614Z" status="draft">created</change>
          <change who="MV" when="2015-01-28T15:58:41.194Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

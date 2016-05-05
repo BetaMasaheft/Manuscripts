@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESdma004" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESdma004"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0099ʾAḥzäraMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0099DMA"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>DMA-004</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -46,9 +52,7 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">137.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">2.0</measure> blank, in
-                                                <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">137.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">19.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">32.5</height>
                               <width unit="cm">26.0</width>
@@ -101,7 +105,7 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                         <condition key="good"/>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="22">
                            <dimensions unit="mm">
                               <height>228</height>
                               <width>211</width>
@@ -114,43 +118,46 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                               <dim type="left">10</dim>
                               <dim type="intercolumn">18</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 7r.</ab>
+                           <note anchored="true">All data for fol. 7r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible (s. fol. 5r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible (s. fol. 62r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre; similar to KTM-004 (cp. also SSB-004)</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Second half of the 19th century (?).</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ምዕ(ራ)፡</abbr> for <expan instant="false">ምዕራፍ፡ </expan> (e. g., fols. 51rb, 70rb).</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 111vb, l.2. Blessing for the persons mentioned.</locus>
-                           <q xml:lang="gez">Fol. 111vb, l.2: ወከማሁ፡ ይባርኮ፡ እግዚአብሔር፡ ለገብሩ፡ አቡነ፡ አስተአ፡ ድንግል፡ ወአቡሁ፡ አቡነ፡ አሥራተ</q>
+                           <locus/>Fol. 111vb, l.2. Blessing for the persons mentioned.<q xml:lang="gez">Fol. 111vb, l.2: ወከማሁ፡ ይባርኮ፡ እግዚአብሔር፡ ለገብሩ፡ አቡነ፡ አስተአ፡ ድንግል፡ ወአቡሁ፡ አቡነ፡ አሥራተ</q>
                            <q xml:lang="en">Fol. 111vb: And likewise may God bless His servant ˀabunä ˀAstäˀa Dəngəl and his father ˀabunä ˀAśratä …</q>
-                           <p part="N"/>
+                           Written as continuation and part of the preceding Gospel text.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 137ra-rb. Record concerning a reconciliation agreement and punishment for its transgressors (?).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 137ra-rb. Record concerning a reconciliation agreement and punishment for its transgressors (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in difficult language, a mixture of Amharic and Gǝʿǝz. The reconciliation took place on Mäskäräm 21, 1889 E.C. (September 30, 1896 A.D.). The note was written down on Ṭǝqǝmt 1 (October 10).
+The note mentions ras Mängäša (Yoḥannǝs, d. 1906 A.D.), governor of Tǝgray in 1889-1906, as well as a number of geographical locations, including Mǝʾsar Gwǝhila and ʿAddiqäḥarsi.
                         </item>
                         <item xml:id="e1">- Fol. 2r. Note: መጽሐፈ፡ ሕንኪ፡ አለሽ፡ በወርሐ፡ መጋቢት፡ ተጽሕፈት፨&#xD;
 - Fols. 78r, 78v, 79r, 79v, etc. Marginal notes repeating chapter titles.&#xD;
@@ -174,7 +181,7 @@ The bottom line is written above the ruling.</ab>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0099ʾAḥzäraMaryam" instant="false" full="yes">ʾAḥzära  Maryam /DMA</placeName>
+                        <placeName corresp="INS0099DMA" instant="false" full="yes">ʾAḥzära  Maryam /DMA</placeName>
                      </origPlace>
                      <origDate notBefore="1850" notAfter="1900" instant="false">Second half of the 19th cent. (?)</origDate>
                   </origin>
@@ -216,10 +223,6 @@ The bottom line is written above the ruling.</ab>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -241,7 +244,7 @@ The bottom line is written above the ruling.</ab>
          <change who="DN" when="2010-11-24" status="draft">registered</change>
          <change who="IF" when="2011-08-09T08:44:35.969Z" status="draft">created</change>
          <change who="MV" when="2015-05-04T07:40:00.885Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

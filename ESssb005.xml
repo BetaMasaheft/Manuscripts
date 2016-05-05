@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESssb005" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESssb005"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0111Betá¸¤awaryat"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0111SSB"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>SSB-005</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The text on fol. 5r is written alternately in red and black lines. On fol. 69va-
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">136.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">4.5</measure> blank, in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">136.0</measure> folios, of which <measure unit="leaf" type="blank">4.5</measure> blank, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">29.5</height>
                               <width unit="cm">23.0</width>
@@ -120,7 +124,7 @@ The text on fol. 5r is written alternately in red and black lines. On fol. 69va-
 Circular patch of parchment has been sewn on to the verso side to fill a hole in the leaf. On both sides the patch contains the text expected in these places: fol. 65vb.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="21">
                            <dimensions unit="mm">
                               <height>235</height>
                               <width>190</width>
@@ -133,28 +137,39 @@ Circular patch of parchment has been sewn on to the verso side to fill a hole in
                               <dim type="left">18</dim>
                               <dim type="intercolumn">15</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 6r.</ab>
+                           <note anchored="true">All data are for fol. 6r.</note>
                            <ab type="ruling" part="N">32 in fols. 129-134</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible (s. fol. 8r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible (s. fol. 82r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, fluent, regular, by trained hand.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Early 20th cent.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይዲ፡ or ዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ or ሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>ቡ፡ or ቡራ፡ for ቡራኬ፡</item>
+                           <item>እ፡ for እማሬ፡</item>
+                           <item>
+                              <abbr>አብ፡ ወወል፡ ወመ፡</abbr> for <expan instant="false">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ </expan> (s. fol. 69va-vb)</item>
+                           <item>
+                              <abbr>አ፡ አ፡ አ፡</abbr> for <expan instant="false">አሜን፡ አሜን፡ አሜን፡ </expan> (s. fol. 119rb)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -182,10 +197,14 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 135v: Extensive note concerning administrative matters and income of the Bet Ḥawaryat church.<q xml:lang="gez">
+                              <div style="margin: 0cm 0cm 10pt; text-align: justify; line-height: normal;"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 135v: ፩፱፻፳፰ዓመተ፡ ምሕረት፡ በዘመነ፡ ንጉሥነ፡ ኃይለ፡ ሥላሴ፡ በዘመነ፡ ዮሐንስ፡ ወንጌላዊ፡ በዘመነ፡ ጳጳስነ፡ አባ፡ ይስሐቅ፡ የቤት፡ ሐዋርያት፡ ትክል፡ ሲተከል፡ የቤት፡ ሐዋርያት፡ ሰበካ፡ ጉዕጉና፡ ምዕጉማ፡ ሣሱስን፡ ዓዲገዲዓ፡ ማይ፡ ሐሞ፡ ቤት፡ ሐዋርያት፡ ቀርበው፡ ወደው፡ የማኅበር፡ ሕግ፡ የቤተ፡ ክርስቲያን፡ ሲተከል፡ ጨዋና፡ ካህን፡ የቤት፡ ሐዋርያት፡ ተሸክፎ፡ ለቤተ፡ ክርስቲያን፡ ይኈናል፡ ያለው፡ ከካህን፡ ተቋጣሪ፡ ይግባ፡ ብለዋል፡ የቤተ፡ ክርስቲያን፡ አበልም፡ በገበዝና፡ በተቋጣሪ፡ ተሰብስቦ፡ ለንዋየ፡ ቅድሳት፡ ለቤተ፡ ክርስቲያን፡ ሊሆን፡ ከእጅ፡ መንሻ፡ ከመዋችና፡ ከቈራቢ፡ የመጣ፡ ብርና፡ ከእህል፡ ገበዝ፡ ዓሥራቱ፡ ሊበላ፡ ተዚህ፡ የቀረ፡ ለቤተ፡ ክርስቲያን፡ ሊሆን፡ የቤተ፡ ክርስቲያን፡ ተዝካርም፡ ሁለት፡ እጅ፡ በጨዋ፡ ሲሶ፡ በካህን፡ ሊሆን፡ የማታ፡ የቤት (sic)፡ ክርስቲያን፡ ወጥ፡ ገበዝ፡ ሊሠራ፡ ግብዝናውም፡ የሐምሌ፡ ሥላሴ፡ እንደጥንቱ፡ በዕፃ፡ ሊዛወር፡ ይህ፡ እንዳይነቀል፡ ውጉዝ፡ በሥልጣነ፡ ጳውሎስ፡ ወጴጥሮስ፡ ገበዙ፡ ቄስ፡ አስፍሐ፡ በ፬ቀን፡ መሥከረም፡ ተጻፈ፡ ገበዝም፡ በተቋጣሪ፡ ዋስ፡ ሊቈጥር፡ የቤተ፡ ክርስቲያን፡ ገንዘብ፡ እንዳያጠፋ፡</div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In Amharic. Dated to Mäskäräm 4, 1928 A.M. (= Sunday, September 15, 1935 A.D.). The note lists several place names, e. g., Mǝʿguma, ʿAddigädiʿa, May Ḥam(m)o. Crude note in Amharic is added below.
                         </item>
                         <item xml:id="e1">- Texts IV-VII are written in smaller script.&#xD;
 Unfinished crude note (beginning of a letter?); poorly legible: fol. 2r.  &#xD;
@@ -209,7 +228,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0111Betá¸¤awaryat" instant="false" full="yes">Bet á¸¤awaryat / SSB</placeName>
+                        <placeName corresp="INS0111SSB" instant="false" full="yes">Bet á¸¤awaryat / SSB</placeName>
                      </origPlace>
                      <origDate notBefore="1930" notAfter="1935" instant="false">Fols. 19rb, 46rb, etc.: Ḫaylä Śǝllase is mentioned as the reigning Emperor. Ḫaylä Śǝllase was Emperor of Ethiopia in 1930-74. Additio 1 is dated to Mäskäräm 4, 1928 A.M. (= Sunday, September 15, 1935 A.D.).</origDate>
                   </origin>
@@ -251,10 +270,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -276,7 +291,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-29" status="draft">registered</change>
          <change who="IF" when="2012-08-15T05:16:35.249Z" status="draft">created</change>
          <change who="MK" when="2014-09-09T09:03:10.714Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

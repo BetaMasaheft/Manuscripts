@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESagm010" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESagm010"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0093ʾAgamyoQǝddusMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0093AGM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AGM-010</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">107.0</measure> folios,
-                                                in
-                                                <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">107.0</measure> folios, in <measure unit="quire">15.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">14.5</height>
                               <width unit="cm">10.5</width>
@@ -111,7 +115,7 @@ Fols. 57 and 60 are mutilated.&#xD;
 Several leaves are attached with overcasting (fol. 79 is sewn to fol. 78; fols. 86, 87 are sewn to fol. 85).</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="12">
                            <dimensions unit="mm">
                               <height>90</height>
                               <width>75</width>
@@ -124,93 +128,141 @@ Several leaves are attached with overcasting (fol. 79 is sewn to fol. 78; fols. 
                               <dim type="left">13</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 7r.&#xD;
+                           <note anchored="true">All data for fol. 7r.&#xD;
 &#xD;
-The dimensions for fols. 5 and 6 are 6.2 x 7.3.</ab>
+The dimensions for fols. 5 and 6 are 6.2 x 7.3.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1E-1E-1E1E/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Good, sometimes uneven and irregular.</ab>
                         <seg type="ink" part="N">Black; red (light brilliant vermillion, faded).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">19th century (?)</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>– ሰላ፡</abbr> for <expan instant="false">ሰላም፡ ለከ </expan> (fols. 5v, 107v)</item>
+                           <item>
+                              <abbr>– በ: ሰ:</abbr> for <expan instant="false">በዝንቱ፡ ሰምየ፡ </expan> (fol. 17rab)</item>
+                           <item>
+                              <abbr>– ሀበ፡ እግ፡ በኃ፡ ዝ(ን)፡ አስ፡ ሃይ፡ ርት፡ ወጸ፡ ቅዱ፡</abbr> for <expan instant="false">ሀበነ፡ እግዚኦ፡ በኃይለ፡ ዝንቱ፡ አስማቲከ፡ ሃይማኖተ፡ ርትዕት፡ ወጸሎተ፡ ቅዱስ፡ </expan> (fols. 24vb-30ra)</item>
+                           <item>
+                              <abbr>– አድ፡ እግ፡ አም፡ በኃ፡ ዝ(ን)፡ አስ፡</abbr> for <expan instant="false">አድኀነነ፡ እግዚኦ፡ አምላክነ፡ በኃይለ፡ ዝንቱ፡ አስማቲከ፡ </expan> (fols. 45ra-48rb)</item>
+                           <item>
+                              <abbr>– አመ፡</abbr> for <expan instant="false">አምህለከ፡ </expan> (fols. 80vb-84rb)</item>
+                           <item>
+                              <abbr>– እ፡</abbr> for <expan instant="false">እመሂ፡ </expan> (fols. 90ra-90vb)</item>
+                           <item>
+                              <abbr>– መ(ህ)፡</abbr> for <expan instant="false">መህልኩ፡ </expan> (fols. 94ra-96va)</item>
+                           <item>
+                              <abbr>– መ፡ ው፡ ዝ፡</abbr> for <expan instant="false">መኑ፡ ውእቱ፡ ዝንቱ፡ </expan> (fols. 101rb-102ra)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 1r: Unidentified prayer.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 1r: Unidentified prayer.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in a secondary hand; the text is abraded and hardly legible.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00">Fols. 1v-2r: Protective prayer.</locus>
-                           <q xml:lang="gez">Fol. 1v: በእድጋድ፡ ወሰለለሎነ፡ ዑራኤል፡ ሰዱያልስ፡ ሰሰንያልስ፡ ተማምዖዶሙ፡ መድፍን፡ ድፍን፡ ልበሙ፡ ወእድልም፡ አዕይንቲሆሙ፡ አድከም፡ ኃይሎሙ፡...</q>
+                           <locus/>Fols. 1v-2r: Protective prayer.<q xml:lang="gez">Fol. 1v: በእድጋድ፡ ወሰለለሎነ፡ ዑራኤል፡ ሰዱያልስ፡ ሰሰንያልስ፡ ተማምዖዶሙ፡ መድፍን፡ ድፍን፡ ልበሙ፡ ወእድልም፡ አዕይንቲሆሙ፡ አድከም፡ ኃይሎሙ፡...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Partly illegible, written in a crude hand, similar but not the same as that of Additio 1.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00">Fols. 2v-3r: Calendaric note containing feast days of the Evangelists and disciples.</locus>
-                           <q xml:lang="gez">Fols. 2v: ሠረቀ፡ መስከረም፡ አመ፡ ፩በርተሎሜዎስ፡ ሐዋርያ። ሠረቀ፡ ጥቅምት፡ አመ፡ ፩ወሰኑዩ፡ ማቴዎስ፡ ሐዋርያ። አመ፡ ፳ወ፪ሉቃስ፡ ወንጌላዊ፡ ሠረቀ፡ ኅዳር፡ አመ፡ ፲ወ፰ፊልጶስ፡ ሐዋርያ።...</q>
+                           <locus/>Fols. 2v-3r: Calendaric note containing feast days of the Evangelists and disciples.<q xml:lang="gez">Fols. 2v: ሠረቀ፡ መስከረም፡ አመ፡ ፩በርተሎሜዎስ፡ ሐዋርያ። ሠረቀ፡ ጥቅምት፡ አመ፡ ፩ወሰኑዩ፡ ማቴዎስ፡ ሐዋርያ። አመ፡ ፳ወ፪ሉቃስ፡ ወንጌላዊ፡ ሠረቀ፡ ኅዳር፡ አመ፡ ፲ወ፰ፊልጶስ፡ ሐዋርያ።...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in black ink, in a secondary hand (neat, rounded, upright or slightly left-sloping letters).
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00">Fols. 3r-3v: Protective prayer (containing ˀasmat?).</locus>
-                           <q xml:lang="gez">Fol. 3r: በቃለ፡ እግዚአብሕር፡ አብ፡ ቆሔት፡ ወልድ፡ ቆሔት፡ መንፈስ፡ ቅዱስ፡ ቆሔት፡ እንዘ፡ ፫፡ ፩ወእንዘ፡ ፩፫ቱ፡ ጺዱመ፡ ልጋመ፡ እሳት፡ አውላልኤል፡ ኀብዕ፡ መለኮት፡ በዝንቱ፡ አስማቲከ...</q>
+                           <locus/>Fols. 3r-3v: Protective prayer (containing ˀasmat?).<q xml:lang="gez">Fol. 3r: በቃለ፡ እግዚአብሕር፡ አብ፡ ቆሔት፡ ወልድ፡ ቆሔት፡ መንፈስ፡ ቅዱስ፡ ቆሔት፡ እንዘ፡ ፫፡ ፩ወእንዘ፡ ፩፫ቱ፡ ጺዱመ፡ ልጋመ፡ እሳት፡ አውላልኤል፡ ኀብዕ፡ መለኮት፡ በዝንቱ፡ አስማቲከ...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the same hand as Additio 3.
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fols. 3v-4r: Prayer for women against the pain of childbirth.</div>
                            <q xml:lang="gez">Fol. 3v: በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ። ጸሎተ፡ ምሕረት፡ መላእክት፡ ወሰማዕት፡ ወጳጳሳት፡ ወቀሳውስት፡ ወሰዲያቆናተ፡ ዘጸለዩ፡ ዘንተ፡ ጸሎተ፡ ብእንተ፡ ዕፁባት፡ አንስት፡ ...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the same hand as Additio 3.
+The prayer invokes the angel Rufaʾel to protect women from pain during labour. It might be the same prayer as in Ms. EMML no. 4730 (fol. 47a).
                         </item>
                         <item xml:id="a6">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 4r: Protective prayer (containing ˀasmat?).</div>
                            <q xml:lang="gez">Fol. 4r: በስመ፡ አብ፡ በል፡ ግርሙያል፡ ሽርሙያል፡ አናንያል፡ አዘርያል፡ ተንሥአ፡ ማሰያስ፡ ወሲላሶ፡ እንዘ፡ ይቁረጥም፡ እደ፡ ወእግረ፡ ወኵሉ፡ አባለ፡ ሥጋሁ፡ ለገብርከ፡ ዓምደ፡ ሚካል[sic]፡ ዘዮናስ፡ ዘዮናስ፡ ዘዮናስ፡ እንዘ፡ደቁረጥም፡ እደ፡ ወእግረ፡ ወነፋሱ፡ ለገብርከ፡ ዓምደ፡ ሚካኤል፡</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a secondary hand in black and red ink.
+Prayer with ʾasmat for ʿAmdä Mikaʾel, the owner of the Ms.
                         </item>
                         <item xml:id="a7">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 4v: Salutation for Fanuˀel.</div>
                            <q xml:lang="gez">Fol. 4v: ሰላ፡ ለከ፡ ሰዳደ፡ አጋንንት፡ ፋኑኤል፡ ለእግዚአብሔር፡ እምጽርሑ፡ ከመ፡ ኤይስክዩ፡ ሰብአ፡ እለ፡ ይኔሁ፡ ለጌጋይ፡ዘዘኢአሁ።...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in black and red ink, in the same hand as Additio 3. Cp. ChRep p. 193 (no.49). The abbreviation ሰላ፡ for ሰላም፡ is used.
                         </item>
                         <item xml:id="a8">
-                           <locus target="#00" n="#">Fol. 5v-6r: Fragment of an unidentified text.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 5v-6r: Fragment of an unidentified text.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The fols. seem to be taken from another, older, Ms. The hand shows older features. The name Täklä Haymanot is given, probably the donor?
                         </item>
                         <item xml:id="a9">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 106vb: Ownership note(?).</div>
+                           <q xml:lang="gez">
+                              <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 106vb: ዝመጽሐፍ፡ ዘ[l.n.]ካኤል፡ እደ [l.n.]ገብረ፡ [l.n.]ወእሙ፡ ወለተ፡ ራሔል፡ ለ [l.n.]ለመ፡ ዓለም</div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note, partly illegible, is crudely written by at least two different hands.
+From the pieces that are legible we assume, that the book belongs to ʾAmdä Mikaʾel, and that his father’s name is Gäbrä [l.n.] and his mother’s name is Wälättä Rahel.
                         </item>
                         <item xml:id="a10">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 107v: Sälam lä-Fanuˀel.</div>
+                           <q xml:lang="gez">
+                              <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 107v: ሰላ፡ ሰላም፡ ነሀብ፡ ለለጌሠሙ፡ ስብሐተ፡ ፋኑኤል፡ ...</div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in black and red ink, in the same hand as Additio 3. The prayer is partly illegible.
+It might be the continuation of Additio 7.
+The abbreviation ሰላ፡ for ሰላም፡ is used.
                         </item>
                         <item xml:id="e1">- Wäldä ʾAnanya is written in red in a supplication formula over an erasue, on fol. 50rb.&#xD;
 - Ethiopic numerals are crudely written in pencil in the upper margins at the beginnings of quires (starting at quire IX): fols. 63r, 71r, 79, 95.&#xD;
@@ -233,7 +285,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0093ʾAgamyoQǝddusMikaʾel" instant="false" full="yes">ʾAgamyo Qǝddus Mikaʾel / AGM</placeName>
+                        <placeName corresp="INS0093AGM" instant="false" full="yes">ʾAgamyo Qǝddus Mikaʾel / AGM</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900" instant="false">19th century (?).&#xD;
 Quire I is possibly of earlier age (?).</origDate>
@@ -276,10 +328,6 @@ Quire I is possibly of earlier age (?).</origDate>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -302,7 +350,7 @@ Quire I is possibly of earlier age (?).</origDate>
          <change who="DN" when="2010-10-17" status="draft">registered</change>
          <change who="SD" when="2013-05-13T10:54:14.688Z" status="draft">created</change>
          <change who="MV" when="2015-04-09T14:37:31.869Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

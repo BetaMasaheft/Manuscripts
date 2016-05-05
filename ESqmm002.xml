@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqmm002" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqmm002"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0178QÓ&#x99;ddusMikaË&#x80;elMÃ¤rgaá¸¥Ó&#x99;ya"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0178QMM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QMM-002</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The text on fol. 3r is written alternately in red and black lines.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">99.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">4.0</measure> blank, in
-                                                <measure unit="quire">16.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">99.0</measure> folios, of which <measure unit="leaf" type="blank">4.0</measure> blank, in <measure unit="quire">16.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">17.5</width>
@@ -122,7 +126,7 @@ Fol. 51 has been cut along the outer edge.&#xD;
 Holes or tears carefully amended on fols. 1, 23, 48.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="19">
                            <dimensions unit="mm">
                               <height>140</height>
                               <width>130</width>
@@ -135,30 +139,51 @@ Holes or tears carefully amended on fols. 1, 23, 48.</condition>
                               <dim type="left">15</dim>
                               <dim type="intercolumn">11</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 4r.</ab>
+                           <note anchored="true">All data are for fol. 4r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible (s. fol. 55r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible (s. fol. 81r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are mostly visible (s. fols. 24v-25r, 48v-49r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N"/>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">First half of the 18th cent.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>ቡ፡ for ቡራኬ፡</item>
+                           <item>ጸሎ፡ for ጸሎት፡</item>
+                           <item>
+                              <abbr>በእ፡</abbr> for <expan instant="false">በእንተ፡ </expan> (s. fol. 28rb)</item>
+                           <item>
+                              <abbr>ና(ስ)፡ ከ(መ)፡ እግ(ዚ)፡</abbr> for <expan instant="false">ናስተበቍዕ፡ ከመ፡ እግዚአብሔር፡ </expan> (s. fol. 28rb)</item>
+                           <item>
+                              <abbr>ቅ፡ ቅ፡ ቅ፡</abbr> for <expan instant="false">ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ </expan> (s. fol. 35rb)</item>
+                           <item>
+                              <abbr>ሐዳፌ፡ ነ፡</abbr> for <expan instant="false">ሐዳፌ፡ ነፍስ፡ </expan> (s. fol. 44ra)</item>
+                           <item>
+                              <abbr>ጸሎተ፡ ፈት፡</abbr> for <expan instant="false">ጸሎተ፡ ፈትቶ፡ </expan> (s. fol. 65va)</item>
+                           <item>
+                              <abbr>ተ(ዘ)፡ ሥ፡ እ፡ ነ፡ እ፡ ድን፡</abbr> for <expan instant="false">ተዘከር፡ ሥጋ፡ እንተ፡ ነሣእከ፡ እምቅድስት፡ ድንግል፡ </expan> (s. fol. 72ra)</item>
+                           <item>
+                              <abbr>ከ(መ)፡ ው(እ)፡ሥ፡</abbr> for <expan instant="false">ከመ፡ ውእቱ፡ ሥጋ፡ </expan> (s. fol. 72ra)</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">fols. 3ra-15va l.12.</handNote>
                      <handNote xml:id="h3" script="Ethiopic">fols. 15va l.13-16rb l.17; 19ra-51vb.</handNote>
@@ -181,10 +206,9 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 2v: Reader’s note.</locus>
-                           <q xml:lang="gez">Fol. 2v: መምሕር፡ ኪዳኑ፡ ምነው፡ ደከምህ፡ ቶሎ፡ ቶሎ፡ ተምሀር፡ ሸዋ፡ ልሄድነይ፡</q>
+                           <locus/>Fol. 2v: Reader’s note.<q xml:lang="gez">Fol. 2v: መምሕር፡ ኪዳኑ፡ ምነው፡ ደከምህ፡ ቶሎ፡ ቶሎ፡ ተምሀር፡ ሸዋ፡ ልሄድነይ፡</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In Amharic. Probably addressed by a reader of the Ms. to himself.
                         </item>
                         <item xml:id="e1">- Writing exercise (written upside down): fol. 2v&#xD;
 - Crude notes: fols. 7v, 8r, 77v, 78r, 84v, 97r.</item>
@@ -205,7 +229,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0178QÓ&#x99;ddusMikaË&#x80;elMÃ¤rgaá¸¥Ó&#x99;ya" instant="false" full="yes">QÓ&#x99;ddus MikaË&#x80;el  MÃ¤rgaá¸¥Ó&#x99;ya / QMM</placeName>
+                        <placeName corresp="INS0178QMM" instant="false" full="yes">QÓ&#x99;ddus MikaË&#x80;el  MÃ¤rgaá¸¥Ó&#x99;ya / QMM</placeName>
                      </origPlace>
                      <origDate notBefore="1730" notAfter="1735" instant="false">ʾIyasu is mentioned as the reigning king (e.g., fols. 11ra, 15ra). &#xD;
 Ṗeṭros is mentioned as the Patriarch and Krǝstodolu as the Metropolitan (fol. 52vb). &#xD;
@@ -250,10 +274,6 @@ The name of Peter VI (Patriarch of Alexandria in 1718-26) is mentioned in the Ms
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -275,7 +295,7 @@ The name of Peter VI (Patriarch of Alexandria in 1718-26) is mentioned in the Ms
          <change who="DN" when="2010-12-08" status="draft">registered</change>
          <change who="IF" when="2012-08-19T18:54:05.548Z" status="draft">created</change>
          <change who="SH" when="2014-09-08T15:53:50.025Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESthmr007" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESthmr007"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0194MayRazaTäkläHaymanot"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0194THMR"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>THMR-007</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The incipit parts of many of the constituent texts are written alternately in re
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">142.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">13.0</measure> blank, in
-                                                <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">142.0</measure> folios, of which <measure unit="leaf" type="blank">13.0</measure> blank, in <measure unit="quire">15.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">23.2</height>
                               <width unit="cm">17.2</width>
@@ -124,7 +128,7 @@ All the quires except quires A and I are numbered, but the numbers of most of th
                         <condition key="good">Many leaves are heavily stained with dirt.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="20">
                            <dimensions unit="mm">
                               <height>167</height>
                               <width>130</width>
@@ -137,28 +141,46 @@ All the quires except quires A and I are numbered, but the numbers of most of th
                               <dim type="left">8</dim>
                               <dim type="intercolumn">7</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 131r.</ab>
+                           <note anchored="true">All data are for fol. 131r.</note>
                            <ab type="ruling" part="N">31 in text IV</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Careful, regular, by well-trained hand.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">18th century.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>እማ፡ for እማሬ፡</item>
+                           <item>ቅዱ፡ ቅ፡ ቅ፡ for ቅዱስ፡ ቅዱስ፡ ቅዱስ፡</item>
+                           <item>አ፡ አ፡ አ፡ for አሜን፡ አሜን፡ አሜን፡</item>
+                           <item>ና፡ ከ፡ እ፡ for ናስተበቍዕ፡ ከመ፡ እግዚአብሔር፡</item>
+                           <item>ቅ፡ ቅ፡ እ፡ ጸ፡ ፍ፡ ም፡ ሰ፡ ወ፡ ቅ፡ ስ፡ for ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ እግዚአብሔር፡ ጸባዖት፡ ፍጹም፡ ምሉእ፡ ሰማያተ፡ ወምድረ፡ ቅድሳተ፡ ስብሐቲከ፡</item>
+                           <item>እግዚ፡ ም፡ ኵ፡ for እግዚአብሔር፡ ምስለ፡ ኵልክሙ፡</item>
+                           <item>ም፡ መ፡ for ምስለ፡ መንፈስከ፡</item>
+                           <item>አልዕ፡ for አልዕሉ፡ አልባቢክሙ፡</item>
+                           <item>ብነ፡ ኀ፡ እግ፡ አም፡ for ብነ፡ ኀበ፡ እግዚአብሔር፡ አምላክነ፡</item>
+                           <item>አእኵ፡ ለአ፡ for አእኵትዎ፡ ለአምላክነ፡</item>
+                           <item>ርቱ፡ ይደ፡ for ርቱዕ፡ ይደሉ፡</item>
+                           <item>ጸሎ፡ ወንጌ፡ for ጸሎተ፡ ወንጌል፡</item>
+                           <item>አንብ፡ እድ፡ for አንብሮ፡ እድ፡</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -180,16 +202,14 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"> Fol. 59vb: Scribe’s note on completing the writing.</locus>
-                           <q xml:lang="gez"> Fol. 59vb: ተፈጸመ፡ ሥርዓተ፡ ቅዳሴ፡ በሥምረተ፡ እግዚአብሔር፡ ልዑል፡ ወበማርያም፡ ድንግል፨ ወጣኔ፡ ዓለማት፡ ወፈጻሜ፡ አዝማናት፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን፨</q>
+                           <locus/> Fol. 59vb: Scribe’s note on completing the writing.<q xml:lang="gez"> Fol. 59vb: ተፈጸመ፡ ሥርዓተ፡ ቅዳሴ፡ በሥምረተ፡ እግዚአብሔር፡ ልዑል፡ ወበማርያም፡ ድንግል፨ ወጣኔ፡ ዓለማት፡ ወፈጻሜ፡ አዝማናት፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን፨</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In rhymed form.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"> Fol. 133ra: Scribe’s note on completing the writing.</locus>
-                           <q xml:lang="gez"> Fol. 133ra: ተፈጸመ፡ ፲ወ፬ቅዳሴ፡ በሰላመ፡ እግዚአብሔር፡ አብ፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን፨</q>
+                           <locus/> Fol. 133ra: Scribe’s note on completing the writing.<q xml:lang="gez"> Fol. 133ra: ተፈጸመ፡ ፲ወ፬ቅዳሴ፡ በሰላመ፡ እግዚአብሔር፡ አብ፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን፨</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="e1">- Crude notes (some of them apparently writing exercises): fols. 1r, 1v, 3v, 140v, 141v, 142v.&#xD;
 - Crude notes (some of them apparently captions to drawings): fols. 2v, 3r.&#xD;
@@ -214,7 +234,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0194MayRazaTäkläHaymanot" instant="false" full="yes">May Raza Täklä Haymanot / THMR</placeName>
+                        <placeName corresp="INS0194THMR" instant="false" full="yes">May Raza Täklä Haymanot / THMR</placeName>
                      </origPlace>
                      <origDate notBefore="1700" notAfter="1800" instant="false"/>
                   </origin>
@@ -256,10 +276,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -280,7 +296,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-12-01" status="draft">registered</change>
          <change who="DN" when="2015-05-19T17:45:36.532Z" status="draft">created</change>
          <change who="IF" when="2015-07-02T20:13:14.890Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmy013" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmy013"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0039DäbräMaʿṣo"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0039MY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MY-013</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">70.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">0.0</measure> blank, in
-                                                <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">70.0</measure> folios, of which <measure unit="leaf" type="blank">0.0</measure> blank, in <measure unit="quire">9.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">18.5</height>
                               <width unit="cm">17.0</width>
@@ -83,7 +87,7 @@ Quire I numbered both at the beginning and at the end. Quire II mistakenly numbe
 The threads of the binding are broken.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="20">
                            <dimensions unit="mm">
                               <height>120</height>
                               <width>125</width>
@@ -96,30 +100,39 @@ The threads of the binding are broken.</condition>
                               <dim type="left">12</dim>
                               <dim type="intercolumn">12</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 5.</ab>
+                           <note anchored="true">All data for fol. 5.</note>
                            <ab type="ruling" part="N">average number</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are mostly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are mostly visible (s. fol. 31r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible (s. fol. 25r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are partly visible (s. fol. 5r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Early 18th century.</date>
+                        <list type="abbreviations">
+                           <item>ሃሌ፡ or ሃሌሉ፡ for ሃሌ፡ ሉያ፡</item>
+                           <item>
+                              <abbr>ፍ፡</abbr> for <expan instant="false">ፍቱሐ፡ </expan> (e.g., fols. 45v, 46r)</item>
+                           <item>
+                              <abbr>ይካ፡</abbr> for <expan instant="false">ይብል፡ ካህን፡ </expan> (e.g., fol. 57va, l.8)</item>
+                           <item>
+                              <abbr>ይዲ፡</abbr> for <expan instant="false">ይብል፡ ዲያቆን፡ </expan> (e.g., fol. 58va, l.15).</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
@@ -137,7 +150,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0039DäbräMaʿṣo" instant="false" full="yes">Däbrä Maʿṣo / MY</placeName>
+                        <placeName corresp="INS0039MY" instant="false" full="yes">Däbrä Maʿṣo / MY</placeName>
                      </origPlace>
                      <origDate notBefore="1716" notAfter="1721" instant="false">Dawit mentioned as the reigning monarch on fol. 58ra, l.6; probably, King Dawit III (r. 1716-21) is meant.</origDate>
                   </origin>
@@ -179,10 +192,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -203,7 +212,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-10" status="draft">registered</change>
          <change who="IF" when="2011-02-16T15:10:32.455Z" status="draft">created</change>
          <change who="DN" when="2015-05-15T17:25:16.367Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

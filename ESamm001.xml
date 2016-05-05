@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESamm001" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESamm001"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0064ʿAddigratMädḫaneʿAläm"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0064AMM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AMM-001</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">203.0</measure> folios,
-                                                in
-                                                <measure unit="quire">24.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">203.0</measure> folios, in <measure unit="quire">24.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">34.0</height>
                               <width unit="cm">30.0</width>
@@ -144,7 +148,7 @@ The original leather cover is missing; remains of turn-ins and textile inlays ar
 Holes are amended on fols. 17, 84, 92, 94, 95, 172, 201.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="21">
                            <dimensions unit="mm">
                               <height>237</height>
                               <width>228</width>
@@ -157,31 +161,31 @@ Holes are amended on fols. 17, 84, 92, 94, 95, 172, 201.</condition>
                               <dim type="left">20</dim>
                               <dim type="intercolumn">19</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 16r.</ab>
+                           <note anchored="true">All data for fol. 16r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 The bottom ruled line is not used on fols. 104-108r, 140, 145, 177-178.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" subtype="patter" part="N">
 The ruling pattern is different for the canon tables and the introduction.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Mid 18th century to early 19th century</date>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
@@ -195,58 +199,75 @@ The ruling pattern is different for the canon tables and the introduction.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 5vb: Transaction note. </div>
+                           <q xml:lang="gez">Fol. 5vb: በ፲፱፻፳፫፡ አመተ፡ ምህረት፡ ፬ቀን፡ ጥር፡ ባህርነጋሽ፡ ተስፋ፡ ማርያም፡ ሲገዙ፡ ወይዘሮ፡ አረጋች፡ ሲሰጩ፡ ፲፭፡ ብር፡ የነበሩ፡ እማኞች…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Amharic and is dated to 1923 A.M. (= 1930 A.D.). It deals with a purchase transaction between bahr nägaš Täsfa Maryam and wäyzäro ʾAräggačč. Also, it mentions the names of the witnesses.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 67ra: Donation note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 67ra: Donation note.<q xml:lang="gez">Fol. 67ra: ዝመጽሐፍ፡ ዘመድኃኒ፡ ዓለም፡ አዲግራት፡ ዘወሀቦ፡ ዳግማዊ፡ ዘመንፈስ፡ ቅዱስ፡ ወምስለ፡ ብእሲቱ፡ ዓመተ፡ ድንግል፡ ከመ፡ ይኵኖሙ፡ መርሃ፡ በመንግሥተ፡ ሰማያት፡ ኦአንትሙ፡ ካህናት፡ ወዲያቆናት፡ ኢትርስዑነ፡ በጽሎትክሙ፡ ወበስዕለትክሙ፡ ተማኅፀነ፡ ንሕነ፡ ዘመንፈስ፡ ቅዱስ፡ ዓመተ፡ ድንግል፡</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note states that the Ms. was donated by Dagǝmawi Zä-Mänfäs Qǝddus and his wife ʾAmätä Dǝngǝl. 
+The note is written in the same hand as the donation note in Ms. AMM-004 (s. Additio 3) and has a similar content. Also, the same hand has added the names of the donors into the supplication formulas in the headings of Texts I-2 to I-5 and, most probably, into the donation note in Ms. AMM-005.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 102rb: Donation note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 102rb: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in the same hand as Additiones 2, 4 and 9, and has a similar content.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#">Fol. 162va: Donation note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 162va: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in the same hand as Additiones 2, 3 and 9, and has a similar content.
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00" n="#">Fol. 162vb: Donation note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 162vb: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note has a similar content to Additiones 2-4 and 9.
                         </item>
                         <item xml:id="a6">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 163r: Extensive historiographic note on events that took place at ˁAddigrat Mädḫane ˁAläm. <q xml:lang="gez">Fol. 163ra:  በ፲፻ወበ: ፱፻፺[sic]፡ ዓመተ፡ ምህረት፡ ለደጃዝማ፡ ሐጐስ፡ መድኃኔአለም፡ አእምሮ፡ በገለጠለትው፡ ጊዜ፡ አጋሜን፡ አደለድለው፡ በገዙ፡ በ፫፡ ዓመት፡ በዘመነ፡ ማቴዎስ፡ ህዳር፡ በባተ፡ በ፫፡ ቀን፡ መድኃኔአለም፡ አድግራት፡ ን፡ ጀምሩ፡ ታቦት፡ አምጥተው…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Amharic; its dating is unclear. It reports on the visit which däğğazmač Ḥagwäs paid to the church of Mädḫane ʿAläm in ʿAddigrat. It mentions that he brought the tabot, appointed clerics, donated lands to the church etc.
                         </item>
                         <item xml:id="a7">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 163rb: Note on donating a piece of land. </div>
+                           <q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 163rb:  ፲፱፻፴፱: ዓመተ፡ ምሕረት፡ የካቲት፡ ፲፡ ስድስት፡ ቀን፡ እኔ፡ መረሰ፡ ምራጭ፡ ተሥጋየ፡ ነፍሴ፡ ይሻለኝ፡ ብየ፡ አይደኪእታ፡ እምትባል፡ እርሻ፡ የዘማርያም፡ ድርሻየ፡ ለመድኃኔ፡ ዓለም፡ አዲግራት፡ ሰጥት፡ አሎህ… </div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Amharic and dates back to 1939 A.M. (= 1947 A.D.). According to it, Märäsä (?) Mǝraḉ donated a piece of an arable land called ʾAydäkiʾǝta to the church of Mädḫane ʿAläm in ʿAddigrat.
                         </item>
                         <item xml:id="a8">
-                           <locus target="#00" n="#">Fol. 203ra: Note on bequething the property.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 203ra: Note on bequething the property.<q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 203ra: እመቴ፡ አብርሃ፡ ሲናገሩ፡ ርስቴና፡ ቤቴ፡ ነፍሴ፡ በሐለቃ፡ ገብረ፡ ማርያም፡ ይያዘኝ፡ ብየ፡ ከበት[sic]፡ ነፍሴ፡ ና፡ ከገበዞች፡ ፊት፡ አማኝ...</div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Amharic and is dated to 1911 A.M. (= 1918/19 A.D.).  According to it, ʾAbrǝha bequeathed his property to haläqa Gäbrä Maryam. Also, the names of the witnesses are mentioned.
                         </item>
                         <item xml:id="a9">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 203vb: Donation note.</div>
                            <q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in the same hand as Additiones 2-4 and has a similar content.
                         </item>
                         <item xml:id="e1">- Two notes have been erased: fol. 202va-vb .&#xD;
 - Pen trial: fol. 1r.&#xD;
@@ -270,7 +291,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0064ʿAddigratMädḫaneʿAläm" instant="false" full="yes">ʿAddigrat Mädḫane ʿAläm / AMM</placeName>
+                        <placeName corresp="INS0064AMM" instant="false" full="yes">ʿAddigrat Mädḫane ʿAläm / AMM</placeName>
                      </origPlace>
                      <origDate notBefore="1750" notAfter="1831" instant="false">Mid 18th cent.-early 19th cent.&#xD;
 Dagǝmawi Zä-Mänfäs Qǝddus might be identified with the second son of däğğazmač Säbagadis (1770-1831), Ḫagos (d. 1831). The identification is based on Additiones 1 and 2 in Ms. FBM-002.</origDate>
@@ -313,10 +334,6 @@ Dagǝmawi Zä-Mänfäs Qǝddus might be identified with the second son of däğ�
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -338,7 +355,7 @@ Dagǝmawi Zä-Mänfäs Qǝddus might be identified with the second son of däğ�
          <change who="DN" when="2010-05-20" status="draft">registered</change>
          <change who="SA" when="2011-02-10T09:12:32.780Z" status="draft">created</change>
          <change who="MV" when="2015-04-30T13:56:18.301Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

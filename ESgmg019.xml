@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESgmg019" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESgmg019"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0115GÃ¤naá¸¥tiQÓ&#x99;ddÓ&#x99;stMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0115GMG"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>GMG-019</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">67.0</measure> folios,
-                                                in
-                                                <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">67.0</measure> folios, in <measure unit="quire">10.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">15.0</height>
                               <width unit="cm">11.0</width>
@@ -92,7 +96,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <condition key="good">The sewing is damaged.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="11">
                            <dimensions unit="mm">
                               <height>90</height>
                               <width>80</width>
@@ -105,30 +109,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <dim type="left">8</dim>
                               <dim type="intercolumn">9</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">all data for fol. 5r</ab>
+                           <note anchored="true">all data for fol. 5r</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine</ab>
-                        <seg type="ink" part="N">Black, red (vivid red).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
-                        <date instant="false">19th century.</date>
+                        <seg type="ink" part="N">Black, red (vivid red).</seg>The scribe is probably the same as the one of Ms. NSM-016.<date instant="false">19th century.</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰላ</abbr> for <expan instant="false">ሰላም </expan> (e.g., fols. 7rb, 9rb, 28vb)</item>
+                           <item>
+                              <abbr>አ/አም᎓ ኦወ᎓ ወፍ᎓</abbr> for <expan instant="false">አምህለከ᎓ ኦወልድየ᎓ ወፍቁርየ᎓ </expan> (e.g., fols. 42rb, 42vb, 43ra)</item>
+                           <item>
+                              <abbr>መ/መሐ</abbr> for <expan instant="false">መሐልኩ </expan> (e.g., fols. 58vb, 59ra, 60rb)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -137,10 +148,9 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 67va: Ownership note.</locus>
-                           <q xml:lang="gez">Fol. 67va: ዝመጽሐፍ᎓ የማርያም᎓ ገናህት᎓ ዘሰረቃ᎓ ወዘፈሐቃ᎓ ውጉዘ᎓ ለይኩን᎓ በስልጣነ … </q>
+                           <locus/>Fol. 67va: Ownership note.<q xml:lang="gez">Fol. 67va: ዝመጽሐፍ᎓ የማርያም᎓ ገናህት᎓ ዘሰረቃ᎓ ወዘፈሐቃ᎓ ውጉዘ᎓ ለይኩን᎓ በስልጣነ … </q>
                            <q xml:lang="en">Fol. 67va: This book is of Maryam Gänaht, may the one who stole it and erased it, be excommunicated by the authority of … </q>
-                           <p part="N"/>
+                           In Gǝʿǝz and Amharic.
                         </item>
                         <item xml:id="e1">- Interlinear corrections: fols, 13vb, 15va.&#xD;
 - Spaces for rubrication left unfilled: fols. 11ra, 16va, 19va, 28rb.&#xD;
@@ -164,7 +174,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0115GÃ¤naá¸¥tiQÓ&#x99;ddÓ&#x99;stMaryam" instant="false" full="yes">GÃ¤naá¸¥ti QÓ&#x99;ddÓ&#x99;st Maryam / GMG</placeName>
+                        <placeName corresp="INS0115GMG" instant="false" full="yes">GÃ¤naá¸¥ti QÓ&#x99;ddÓ&#x99;st Maryam / GMG</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900" instant="false"/>
                   </origin>
@@ -206,10 +216,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -231,7 +237,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-27" status="draft">registered</change>
          <change who="AA" when="2013-03-20T18:10:18.050Z" status="draft">created</change>
          <change who="MV" when="2015-03-23T11:03:18.925Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

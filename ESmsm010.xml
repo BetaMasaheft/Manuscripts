@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmsm010" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmsm010"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0050MänäbäytiṢəyonMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0050MSM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MSM-010</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ Incipits of some of the texts (e. g., fols. 1ra-rb, 106vb) are written alternate
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">177.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">2.0</measure> blank, in
-                                                <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">177.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">23.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">19.8</height>
                               <width unit="cm">18.2</width>
@@ -137,7 +141,7 @@ Several text fragments have been misplaced: text from fol. 39vb is continued on 
 Fol. 46 is rumpled and has a hole. Fols. 66 and 67 are torn, part of the text on these folios is lost.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="15">
                            <dimensions unit="mm">
                               <height>135</height>
                               <width>135</width>
@@ -150,19 +154,21 @@ Fol. 46 is rumpled and has a hole. Fols. 66 and 67 are torn, part of the text on
                               <dim type="left">15</dim>
                               <dim type="intercolumn">15</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">fols. 1ra-175vb (texts I-IV). All data are for fol. 170r.</ab>
+                           <note anchored="true">fols. 1ra-175vb (texts I-IV). All data are for fol. 170r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
+                        </layout>
+                        <layout columns="2" writtenLines="19">
                            <dimensions unit="mm">
                               <height>140</height>
                               <width>136</width>
@@ -175,18 +181,24 @@ The bottom line is written above the ruling.</ab>
                               <dim type="left">12</dim>
                               <dim type="intercolumn">11</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">fol. 176ra-vb (text V). All data are for fol. 176r.</ab>
+                           <note anchored="true">fol. 176ra-vb (text V). All data are for fol. 176r.</note>
                            <ab type="ruling" part="N">average number; actual numbers vary from 18 to 20</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are not visible.</ab>
+                           <ab type="pricking" part="N">Pricking and ruling are not visible.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Hand a: mediocre but careful. Hand b: mediocre but careful.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false"/>
+                        <list type="abbreviations">
+                           <item>(ይ)ካ፡ for ይበል፡ ካህን፡</item>
+                           <item>(ይ)ዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>(ይ)ሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>ቅ(ዱስ)፡ ቅ፡ ቅ፡ for ቅዱስ፡ ቅዱስ፡ ቅዱስ፡</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">fols. 1ra-172va</handNote>
                      <handNote xml:id="h3" script="Ethiopic">fols. 173ra-176vb</handNote>
@@ -197,28 +209,24 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"> Fol. 7vb: Ownership note.</locus>
-                           <q xml:lang="gez"> Fol. 7vb: ዝመጽሐፍ፡ ዘወልደ፡ ኢየሱ፡ ዘወሀቦ፡ ለወልዱ፡ አትናቴዎስ፡ ወለእሙ፡ </q>
+                           <locus/> Fol. 7vb: Ownership note.<q xml:lang="gez"> Fol. 7vb: ዝመጽሐፍ፡ ዘወልደ፡ ኢየሱ፡ ዘወሀቦ፡ ለወልዱ፡ አትናቴዎስ፡ ወለእሙ፡  ወለተ፡ ማርያም።</q>
                            <q xml:lang="en"> Fol. 7vb: This book belongs to Wäldä ˀIyäsu(s) who has given it to his son ˀAtnatewos and to his mother Wälättä Maryam.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"> Fol. 23v: Note on grain donations to the church.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/> Fol. 23v: Note on grain donations to the church.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In Amharic. The note mentions ras Wäldä Śǝllase.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"> Fol. 25vb: Note on grain donations to the church.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/> Fol. 25vb: Note on grain donations to the church.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In Amharic. Incomplete. The note mentions ras Wäräňňa and nǝguś Yoḥannǝs.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#"> Fol. 172vb: Supplication for the owner of the Ms. and for his relatives.</locus>
-                           <q xml:lang="gez"> Fol. 172vb: በረከቶሙ፡ ለአበዊነ፡ ሐዋርያት፡ የሀሉ፡ ምስለ፡ ፍቁሮሙ፡ ወልደ፡ ኢየሱስ፡ ወለወልዱ፡ አትናቴዎስ፡ ወለእሙ፡ ወለተ፡ ማርያም። ዘአንበብክዋ፡ ለዛቲ፡መጽሐፍ፡ ኢትርስኡነ፡ አቡነ፡ ዘበሰማያት።</q>
+                           <locus/> Fol. 172vb: Supplication for the owner of the Ms. and for his relatives.<q xml:lang="gez"> Fol. 172vb: በረከቶሙ፡ ለአበዊነ፡ ሐዋርያት፡ የሀሉ፡ ምስለ፡ ፍቁሮሙ፡ ወልደ፡ ኢየሱስ፡ ወለወልዱ፡ አትናቴዎስ፡ ወለእሙ፡ ወለተ፡ ማርያም። ዘአንበብክዋ፡ ለዛቲ፡መጽሐፍ፡ ኢትርስኡነ፡ አቡነ፡ ዘበሰማያት።</q>
                            <q xml:lang="en"> Fol. 172vb: May the blessing of our fathers the Apostles be with their beloved Wäldä ˀIyäsus, and with his son ˀAtnatewos, and with his mother Wälättä Maryam. You who read this book, do not forget us; (recite for us) the Paternoster.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="e1">- Two apparently recent marginal notes: ዘደብረ ጽዮን ቅድስት ማርያም መጽሓፈ ቅዳሴ and ደብረ ጽዮን ቅድስት ማርያም ቤተ ክርስቲያን ዘብሄረ ነቢያት።: fol. 1r.&#xD;
 - Crude drawings of crosses in the margins: fols. 17r, 28v, 40r, 69r, 87r, 88r,&#xD;
@@ -247,7 +255,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0050MänäbäytiṢəyonMaryam" instant="false" full="yes">Mänäbäyti Ṣəyon Maryam/ MSM</placeName>
+                        <placeName corresp="INS0050MSM" instant="false" full="yes">Mänäbäyti Ṣәyon Maryam/ MSM</placeName>
                      </origPlace>
                      <origDate notBefore="1650" notAfter="1750" instant="false">Mid-17th to mid-18th century (?).</origDate>
                   </origin>
@@ -289,10 +297,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -314,7 +318,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-08" status="draft">registered</change>
          <change who="DN" when="2014-12-20T19:04:49.083Z" status="draft">created</change>
          <change who="DN" when="2015-02-20T12:51:22.602Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

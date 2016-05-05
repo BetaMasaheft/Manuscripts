@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqma005" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqma005"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0175ʾAbrǝqoMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0175QMA"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QMA-005</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">110.0</measure> folios,
-                                                in
-                                                <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">110.0</measure> folios, in <measure unit="quire">12.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">12.0</height>
                               <width unit="cm">5.5</width>
@@ -109,7 +113,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 Two printed devotional pictures of foreign (French?) origin (the other side of the second shows the announcement of death of Louis-Casimir Faye, deseased in Paris, 11 October 1898).</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="1" writtenLines="22">
                            <dimensions unit="mm">
                               <height>80</height>
                               <width>35</width>
@@ -122,28 +126,38 @@ Two printed devotional pictures of foreign (French?) origin (the other side of t
                               <dim type="left">5</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 8r.</ab>
+                           <note anchored="true">All data for fol. 8r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Regular</ab>
                         <seg type="ink" part="N">Black, red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">19th cent.</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ይ፡ ካ፡</abbr> for <expan instant="false">ይቤ: ካህን </expan> (fols. 3v, 4v, 6v, 10r)</item>
+                           <item>
+                              <abbr>ይ: ሕ</abbr> for <expan instant="false">ይቤ፡ ሕዝብ </expan> (fols. 3v, 4v, 6v, 10r, 17v)</item>
+                           <item>
+                              <abbr>ይ፡ ዲ፡</abbr> for <expan instant="false">ይቤ፡ ዲያቆን </expan> (fols. 17v)</item>
+                           <item>
+                              <abbr>ና፡ ከ፡ እ፡</abbr> for <expan instant="false">ናስተባቍዕ፡ ከመ፡ እግዚአብሔር። </expan> (fols. 11v, 12r, 12v, 13r, 13v, 14r, 14v)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -152,52 +166,81 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 1v-2r: Recipe against leprosy.</div>
                            <q xml:lang="gez">Fol. 1v: ቆለቈል፡ በሸኮኮ፡ ኩስ፡ ለዊሶ፡ በጥቶ፡ ይዱል፡ በ፫ቀን፡ ይቀረፍ፡ የዝብ፡ ምርኩዝ፡ ብሳና፡ ቅርፍታቸው፡ አለ፡ ወሐ፡ ቀጥቅጠሕ፡ ፫ቀን፡ አድርቆ፡ ደቁሰ፡ በጓት፡ ወይ፡ በጠላ፡ ይጠጣ፡ የደዌ፡ ሥጋ፡ ነው።…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the same crude hand as Additio 8, in Amharic. 
+Recipe how to prepare a medicine against leprosy (yägäwe śǝga 'sickness of the skin').
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 2v: Protective prayer against wild animals and evil people. </locus>
-                           <q xml:lang="gez">Fol. 2v: ዡራዡር። በሰመ፡ አብ፡ በል፡ የሊይ፡ ዡራማ፡ ዓመተ፡ ዡራዡር፡ ጨቆራን፡ አሌ፡ ለክሙ፡ በወራባ፡ በወራጋ፡…</q>
+                           <locus/>Fol. 2v: Protective prayer against wild animals and evil people. <q xml:lang="gez">Fol. 2v: ዡራዡር። በሰመ፡ አብ፡ በል፡ የሊይ፡ ዡራማ፡ ዓመተ፡ ዡራዡር፡ ጨቆራን፡ አሌ፡ ለክሙ፡ በወራባ፡ በወራጋ፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a crude hand.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 48r-49v: Excerpt from Mälkəˁa śəllase (ChRep 191, no. 20).</div>
                            <q xml:lang="gez">Fol. 48r: ሰላም፡ ለእኅቲክሙ፡ እለ፡ እሕዛ[sic]፡ አለመ። ደሕራዊያን፡ ሥላሴ፡ እለ፡ ነበርክሙ፡ ቅድመ፡ ውሰተ፡ ልየ፡ አዝንሙ፡… </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a crude hand. The text starts with strophe 28 of the Mälkǝʿa śǝllase (ChRep 191, no. 20).
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 49v: Excerpt from Säˁatat zä-lelit (?).</div>
                            <q xml:lang="gez">Fol. 49v: እሴብሕ፡ ጸጋኪ፡ እግዚእትየ፡ ማርያም፡ እድ፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a crude hand.
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 49v: Excerpt from Mälkəˁa Iyäsus (?).</div>
                            <q xml:lang="gez">Fol. 49v: በሰመ፡ አብ፡ ወወልድ፡ ኢየሱስ፡ ክርስቶስ። ጥኡመ፡ ሰሞ፡ …</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a crude hand.
                         </item>
                         <item xml:id="a6">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 107v-108v: ˀAsmat-prayer.</div>
                            <q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The text is hardly legible due to faded ink.
                         </item>
                         <item xml:id="a7">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 110r-10v: ˀAsmat-prayer</div>
                            <q xml:lang="gez">Fol. 110r: አሻቢ፡ አሸብሻቢ፡ ሳለ፡ በሕይውቱ፡ ቢሞት። ለበክቱ፡ እስኪፈረፍር፡ አእጽምቱ፡ ኢትልክፍ፡ ወኢታስለክፍ፡ ኢትንስክ፡ ወኢታሰነስክ፡ አለህ፡ ቃለ፡ አብ፡ ወውልድ፡ ወመንፈስ፡ ቅዱስ…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a crude hand in Amharic.
                         </item>
                         <item xml:id="a8">
-                           <locus target="#00" n="#"/>
+                           <locus/>
+                           <div style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:&#xA;justify;line-height:normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 110v: ˀAsmat-prayer to help deliver the placenta without problems.</div>
                            <q xml:lang="gez">Fol. 110v: በስመ፡ አብ፡ ወውልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ በስመ፡ አብ፡ ኲርኲርያኖስ፡ በስመ፡ ወልድ፡ ፍልፍልያኖስ፡ በስመ፡ መንፈስ፡ ቅዱስ፡ ሜልዮስ፡ በዝንቱ፡ ስምከ፡ ወበዝንቱ፡ አስማቲከ፡ እንግዲኅ፡ ልጅ፡ ውረድ፡ ይበለከ፡ አብ፡ ወውልድ፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the same hand as Additio 1.
+ʾAsmat-prayer to deliver the placenta (ǝngǝdiḫ lǝğ "afterbirth") without problems.
                         </item>
                         <item xml:id="e1">- Crude notes and pen trials throughout the Ms.&#xD;
 - Pen trail: Fol. 1r: ሊተ፡ ተማኅፅኖ፡ ተማኅፀንኩ፡ በእግዚአብሔር፡ አብ፡ ብሁተ፡ ሥልጣን። ተማኅፀንኩ፡ በ[sic].&#xD;
@@ -224,7 +267,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0175ʾAbrǝqoMaryam" instant="false" full="yes">ʾAbrǝqo Maryam / QMA</placeName>
+                        <placeName corresp="INS0175QMA" instant="false" full="yes">ʾAbrǝqo Maryam / QMA</placeName>
                      </origPlace>
                      <origDate notBefore="1841" notAfter="1861" instant="false">On fol. 12, Metropolitan ʾabunä Sälama (tenure 1841-68) and Patriarch Qerǝllos (Cyril IV, tenure 1854-61?) are mentioned.</origDate>
                   </origin>
@@ -266,10 +309,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -292,7 +331,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-18" status="draft">registered</change>
          <change who="SD" when="2014-08-28T08:42:29.240Z" status="draft">created</change>
          <change who="DN" when="2015-12-21T13:09:49.521Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

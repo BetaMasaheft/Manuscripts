@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESgkm022" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESgkm022"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0108MÃ¤á¸µodË&#x81;Ã¤DÃ¤brÃ¤GÃ¤nnÃ¤tKidanÃ¤MÇ&#x9d;á¸¥rÃ¤t"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0108GKM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>GKM-022</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">145.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">0.0</measure> blank, in
-                                                <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">145.0</measure> folios, of which <measure unit="leaf" type="blank">0.0</measure> blank, in <measure unit="quire">15.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">16.0</height>
                               <width unit="cm">14.0</width>
@@ -125,7 +129,7 @@ Fols. 82-83, 104-109 and 136-144 apparently contain the same text. The sequence 
 Many leaves are heavily stained with dirt and damaged by humidity, some have holes with losses of text.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="13">
                            <dimensions unit="mm">
                               <height>105</height>
                               <width>105</width>
@@ -138,37 +142,43 @@ Many leaves are heavily stained with dirt and damaged by humidity, some have hol
                               <dim type="left">10</dim>
                               <dim type="intercolumn">9</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 2r.</ab>
+                           <note anchored="true">All data are for fol. 2r.</note>
                            <ab type="ruling" part="N">average number; actual numbers vary from 12 to 15</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible (s. fol. 13r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are not visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Careful, by trained hand.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Mid-17th cent.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>
+                              <abbr>አብ፡ ወ፡ ወመ፡ ቅ፡</abbr> for <expan instant="false">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ </expan> (s. fol. 37r-v)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 60v: Ownership note.</locus>
-                           <q xml:lang="gez">Fol. 60v: ዝመጽሐፍ፡ ዘፊቶውራሪ [sic፡ አባይ። ወብእሲቱ፡ ወለተ፡ ሚካኤል። ወም{ስ}ለ፡ አቡሁ፡ ገብረ፡ እግዚአብሔ [sic፡ ወምስለ፡ እሙ፡ ወለተ፡ ሥላሴ፡ ወምስለ፡ ደቂቍ፡ ወልደ፡ ሠላሴ፡ ወለተ፡ ዓቢየ፡ እግዚእ። ወለተ፡ ተክለ፡ ሃይማኖት፡ ከመ፡ ይኩኖሙ፡ መድኃኒተ፡ ነፍሶሙ፡ ለዓለመ፡ ዓለመ፡ ዓለም፡ አሜን።</q>
+                           <locus/>Fol. 60v: Ownership note.<q xml:lang="gez">Fol. 60v: ዝመጽሐፍ፡ ዘፊቶውራሪ [sic<font face="Nyala">]</font>፡ አባይ። ወብእሲቱ፡ ወለተ፡ ሚካኤል። ወም{ስ}ለ፡ አቡሁ፡ ገብረ፡ እግዚአብሔ [sic<font face="Nyala">]</font>፡ ወምስለ፡ እሙ፡ ወለተ፡ ሥላሴ፡ ወምስለ፡ ደቂቍ፡ ወልደ፡ ሠላሴ፡ ወለተ፡ ዓቢየ፡ እግዚእ። ወለተ፡ ተክለ፡ ሃይማኖት፡ ከመ፡ ይኩኖሙ፡ መድኃኒተ፡ ነፍሶሙ፡ ለዓለመ፡ ዓለመ፡ ዓለም፡ አሜን።</q>
                            <q xml:lang="en">Fol. 60v: This book is of fitawrari ˀAbbay, and his wife Wälättä Mikaˀel, with his father Gäbrä ˀƎgziˀabǝḥe[r] and with his mother Wälättä Śǝllase, and with his children Wäldä Śǝllase, Wälättä ˁAbiyä ˀƎgziˀ, Wälättä Täklä Haymanot, so that it may be for them the salvation of their souls, for ever and ever. Amen.</q>
-                           <p part="N"/>
+                           Written in red ink, apparently in the same hand as the donors’ names in the supplication formulas.
                         </item>
                         <item xml:id="e1">- Crude marginal notes: fols. 14r, 36r, 40v, 44r, 61r, 69v, 70r, 73v, 74r, 74v, 75v, 77v, 129r.&#xD;
 - Crude note, words ሰራዊተ፡ መላእክት፡ and መንፈሰ፡ ፅዮን፡ are discernible: fol. 60rb.</item>
@@ -186,7 +196,7 @@ The bottom line is written above the ruling.</ab>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0108MÃ¤á¸µodË&#x81;Ã¤DÃ¤brÃ¤GÃ¤nnÃ¤tKidanÃ¤MÇ&#x9d;á¸¥rÃ¤t" instant="false" full="yes">MÃ¤á¸µodË&#x81;Ã¤ DÃ¤brÃ¤ GÃ¤nnÃ¤t KidanÃ¤ MÇ&#x9d;á¸¥rÃ¤t  / GKM</placeName>
+                        <placeName corresp="INS0108GKM" instant="false" full="yes">MÃ¤á¸µodË&#x81;Ã¤ DÃ¤brÃ¤ GÃ¤nnÃ¤t KidanÃ¤ MÇ&#x9d;á¸¥rÃ¤t  / GKM</placeName>
                      </origPlace>
                      <origDate notBefore="1632" notAfter="1667" instant="false">On fol. 105vb, ls.15-16, King (Fasi)lädäs (r. 1632-67) is mentioned (the beginning of the name is illegible and the name is not rubricated), and s. also fol. 142ra.</origDate>
                   </origin>
@@ -228,10 +238,6 @@ The bottom line is written above the ruling.</ab>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -252,7 +258,7 @@ The bottom line is written above the ruling.</ab>
          <change who="DN" when="2010-12-04" status="draft">registered</change>
          <change who="IF" when="2012-07-04T07:45:44.023Z" status="draft">created</change>
          <change who="SA" when="2014-08-20T09:10:59.679Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESsm015" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESsm015"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0053SäbäyaMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0053SM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>SM-015</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">143.0</measure> folios,
-                                                in
-                                                <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">143.0</measure> folios, in <measure unit="quire">23.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">33.5</height>
                               <width unit="cm">26.5</width>
@@ -134,7 +138,7 @@ A piece of lacking parchment has been attached by means of leather stitches onto
 Holes are amended on fols. 6, 14, 25, 43, 45, 49, 54, 59, 62, 94, 95, 98, 121, 122, 130.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="30">
                            <dimensions unit="mm">
                               <height>250</height>
                               <width>220</width>
@@ -147,21 +151,23 @@ Holes are amended on fols. 6, 14, 25, 43, 45, 49, 54, 59, 62, 94, 95, 98, 121, 1
                               <dim type="left">10</dim>
                               <dim type="intercolumn">13</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 4r.</ab>
+                           <note anchored="true">All data for fol. 4r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written below the ruling on fols. 20, 26, 30, 31, 51, 59-63, 75, 139.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 The bottom ruled lined is not used on fols. 55, 57, 59-61v, 91-93, 99, 130r.</ab>
+                        </layout>
+                        <layout>
                            <ab type="coronis" part="N">
                               <locus target="#3r "/>
                            </ab>
@@ -172,8 +178,10 @@ The bottom ruled lined is not used on fols. 55, 57, 59-61v, 91-93, 99, 130r.</ab
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre</ab>
                         <seg type="ink" part="N">Black, vermilion</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">19th century (?)</date>
+                        <list type="abbreviations">
+                           <item>ምዕ፡, ምዕራ፡ for ምዕራፍ፡</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -185,10 +193,14 @@ The bottom ruled lined is not used on fols. 55, 57, 59-61v, 91-93, 99, 130r.</ab
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 40r: Note on commissioning the writing. </locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 40r: Note on commissioning the writing. <q xml:lang="gez">
+                              <div style="text-align: left;"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 40v: በዘበኖሙ፡ ዘአጽሐፍዋ፡ ለዘቲ፡ መጽሐፍ፡ አቡዩ፡ ተስፋ፡ ሚካኤል፡ ወአቡየ፡ ቀሲሰ፡ ወልደ፡ ጋብር፡ ይኩኖሙ፡ ዓሰቦ፡ በመንግሥተ፡ ሰማያት፡ ለዓለመ፡ ዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።  </div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in the main hand, in red. It mentions as the commissioners priest (qäsis) Täsfa Mikaʾel and priest Wäldä Gabǝr.
                         </item>
                         <item xml:id="e1">- An unfinished note on the land possession dated to 1919 year of mercy (= 1926/27 A.D.): fol. 2r.&#xD;
 - Lacuna: fol. 102vb.&#xD;
@@ -214,7 +226,7 @@ Turn-ins are laced with a cord.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0053SäbäyaMaryam" instant="false" full="yes">Säbäya Maryam /SM</placeName>
+                        <placeName corresp="INS0053SM" instant="false" full="yes">Säbäya Maryam /SM</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900" instant="false">19th cent. (?)</origDate>
                   </origin>
@@ -256,10 +268,6 @@ Turn-ins are laced with a cord.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -280,7 +288,7 @@ Turn-ins are laced with a cord.</decoNote>
          <change who="DN" when="2010-05-14" status="draft">registered</change>
          <change who="SA" when="2011-02-24T15:34:56.931Z" status="draft">created</change>
          <change who="EG" when="2015-02-20T15:17:36.481Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

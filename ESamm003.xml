@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESamm003" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESamm003"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0064ʿAddigratMädḫaneʿAläm"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0064AMM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AMM-003</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">105.0</measure> folios,
-                                                in
-                                                <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">105.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">23.5</height>
                               <width unit="cm">17.5</width>
@@ -106,7 +110,7 @@ The spine cover, inlays and patched doublure on the inner side of the back board
 The sewing has been crudely repaired.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="23">
                            <dimensions unit="mm">
                               <height>165</height>
                               <width>150</width>
@@ -119,28 +123,46 @@ The sewing has been crudely repaired.</condition>
                               <dim type="left">13</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 78r.</ab>
+                           <note anchored="true">All data for fol. 78r.</note>
                            <ab type="ruling" part="N">average number</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are mostly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are occasionally visible (s. fol. 11r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are mostly visible (s. fol. 100v).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is normally written above, occasionally below the ruling (s. fol. 6v).</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre but careful</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 19th – early 20th centuries</date>
+                        <list type="abbreviations">
+                           <item>ይሕ፡ for ይቤ፡ ሕዝብ፡</item>
+                           <item>ይካ፡ for ይቤ፡ ካህን፡</item>
+                           <item>ይዲ፡ for ይቤ፡ ዲያቆን፡</item>
+                           <item>ጸል፡ for ጸልዩ፡</item>
+                           <item>
+                              <abbr>ተሣ፡</abbr> for <expan instant="false">ተሣሀለነ፡ </expan> (s. fol. 7vb, l.7)</item>
+                           <item>
+                              <abbr>ይርከበነ፡ ሣ፡ እ፡</abbr> for <expan instant="false">ይርከበነ፡ ሣህልከ፡ እግዚኦ፡ </expan> (s. fol. 7vb, l.7)</item>
+                           <item>
+                              <abbr>ዘ፡ ይ፡ እ፡ አም፡</abbr> for <expan instant="false">ዘኲሎ፡ ይእኅዝ፡ እግዚአብሔር፡ አምላክነ፡ </expan> (s. fol. 7vb, l.15)</item>
+                           <item>
+                              <abbr>እግ፡ ዘ፡ ት፡ ንስ፡ ወና።</abbr> for <expan instant="false">እግዚአብሔር፡ ዘኲሎ፡ ትእኅዝ፡ ንስእለከ፡ ወናስተበቍዐከ፡ </expan> (s. fol. 7rb, l.22)</item>
+                           <item>
+                              <abbr>ፍሬ፡ ም፡</abbr> for <expan instant="false">ፍሬ፡ ምድር፡ </expan> (s. fol. 7va, l.14)</item>
+                           <item>
+                              <abbr>እግ፡ አም፡</abbr> for <expan instant="false">እግዚአብሔር፡ አምላክነ፡ </expan> (s. fol. 12rb, ls.9-10)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
@@ -159,7 +181,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0064ʿAddigratMädḫaneʿAläm" instant="false" full="yes">ʿAddigrat Mädḫane ʿAläm / AMM</placeName>
+                        <placeName corresp="INS0064AMM" instant="false" full="yes">ʿAddigrat Mädḫane ʿAläm / AMM</placeName>
                      </origPlace>
                      <origDate notBefore="1889" notAfter="1913" instant="false">King Mǝnilǝk II (r. 1889-1913) is mentioned in the supplications for the reigning monarch on fol. 7vb ls.12, 17 and on fol. 12va ls.22-23.</origDate>
                   </origin>
@@ -201,10 +223,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -225,7 +243,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-20" status="draft">registered</change>
          <change who="IF" when="2011-02-15T11:37:12.243Z" status="draft">created</change>
          <change who="MK" when="2014-03-25T12:27:56.325Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

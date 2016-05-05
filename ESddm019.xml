@@ -1,10 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESddm019" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESddm019"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
-            <title>Mäftəḥe śəray “Undoing of Charms”</title>
+            <title>Mäftәḥe śәray “Undoing of Charms”</title>
             <editor key="DN"/>
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0157DänderaDäbräMəḥrätMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0157DDM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>DDM-019</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">49.0</measure> folios,
-                                                in
-                                                <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">49.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">10.5</height>
                               <width unit="cm">7.5</width>
@@ -83,7 +87,7 @@ The structure of quire VI cannot be established with certainty, because fol. 43 
                         <condition key="intact">A few pages are stained with dirt.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="1" writtenLines="12">
                            <dimensions unit="mm">
                               <height>75</height>
                               <width>53</width>
@@ -96,28 +100,34 @@ The structure of quire VI cannot be established with certainty, because fol. 43 
                               <dim type="left">5</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 6r.</ab>
+                           <note anchored="true">All data for fol. 6r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Irregular</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">20th century</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰላ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (e.g., fols. 13r, 38v, 39r)</item>
+                           <item>
+                              <abbr>ለገ(ብ)፡</abbr> for <expan instant="false">ለገብርከ፡ </expan> (e.g., fols. 10v, 11v, 12r)</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                   </handDesc>
@@ -127,10 +137,9 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 49v: Ownership note</locus>
-                           <q xml:lang="gez">Fol. 49v: ዝተሐዳስትሉ 24/12/96 ዓ/ም እዚ መፅሐፍ መፍትሄ፡ ስራይ ናይ ቀሺ ብርሃነ ተስፍይ ገብረትንሳኤ</q>
+                           <locus/>Fol. 49v: Ownership note<q xml:lang="gez">Fol. 49v: ዝተሐዳስትሉ 24/12/96 ዓ/ም እዚ መፅሐፍ መፍትሄ፡ ስራይ ናይ ቀሺ ብርሃነ ተስፍይ ገብረትንሳኤ</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a crude secondary hand with red and blue ballpoint pen on cardboard, in Tǝgrǝñña. It states that the book belongs to qäšši Bǝrhanä Täsfǝy Gäbrä Tǝnśaʾe. The date 24/12/96 A.M. (= 2003/04 A.D.) is mentioned.
                         </item>
                         <item xml:id="e1">- Erasures: fols. 31v, 36r.&#xD;
 - Omitted words or letters written interlineally: fols. 13v, 21r.&#xD;
@@ -156,7 +165,7 @@ Before the first and after the last quire a page of cardboard has been inserted.
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0157DänderaDäbräMəḥrätMikaʾel" instant="false" full="yes">Dändera Däbrä Məḥrät Mikaʾel / DDM</placeName>
+                        <placeName corresp="INS0157DDM" instant="false" full="yes">Dändera Däbrä Mәḥrät Mikaʾel / DDM</placeName>
                      </origPlace>
                      <origDate notBefore="1939" notAfter="1956" instant="false">King Ḫaylä Śǝllase (r. 1930-1974) and Bishop ʾabba Yoḥannǝs (tenure 1939-56) are mentioned on fol. 15r.</origDate>
                   </origin>
@@ -198,10 +207,6 @@ Before the first and after the last quire a page of cardboard has been inserted.
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -217,14 +222,14 @@ Before the first and after the last quire a page of cardboard has been inserted.
             <language ident="en">Inglese</language>
             <language ident="it">Italiano</language>
             <language ident="gez" xml:id="Lan05">Gəˁəz</language>
-            <language ident="other" xml:id="Lan00">-other</language>
+            <language>Tǝgrǝñña</language>
          </langUsage>
       </profileDesc>
       <revisionDesc status="draft">
          <change who="DN" when="2011-05-18" status="draft">registered</change>
          <change who="VR" when="2015-03-11T15:08:55.962Z" status="draft">created</change>
          <change who="VR" when="2015-04-13T15:53:45.858Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

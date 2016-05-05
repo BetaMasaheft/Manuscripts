@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmy002" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmy002"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0039DäbräMaʿṣoQəddusYoḥannəs"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0039MY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MY-002</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">149.0</measure> folios,
-                                                in
-                                                <measure unit="quire">39.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">149.0</measure> folios, in <measure unit="quire">39.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">30.0</height>
                               <width unit="cm">22.0</width>
@@ -116,7 +120,7 @@ The structure of the quires is hardly discernible because of the condition of th
                         <condition key="good">The Ms. has been rebound; the threads of the sewing are broken; the original sewing is missing. The original order of the fols. is disturbed; the parts of the manuscript were probably put together in wrong order (perhaps as the result of repair). Fol. 126 should be between fols. 144 and 145. Many fols. are held together by stitch repairs, someitimes so tightly that the structure of the quires cannot be discerned.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="29">
                            <dimensions unit="mm">
                               <height>220</height>
                               <width>140</width>
@@ -129,19 +133,21 @@ The structure of the quires is hardly discernible because of the condition of th
                               <dim type="left">10</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 4r (inner margin for fol. 9r)</ab>
+                           <note anchored="true">All data for fol. 4r (inner margin for fol. 9r)</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are partly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible (partly round, mostly slits).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written below the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
+                        </layout>
+                        <layout>
                            <ab type="CruxAnsata" part="N">
                               <locus target=""/>
                            </ab>
@@ -151,9 +157,7 @@ The bottom line is written above the ruling.</ab>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, careful</ab>
-                        <seg type="ink" part="N">Black; red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
-                        <date instant="false">Late 14th - 15th century square script</date>
+                        <seg type="ink" part="N">Black; red</seg>The same scribe wrote Mss. MY-001 and MY-008.<date instant="false">Late 14th - 15th century square script</date>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                      <handNote xml:id="h3" script="Ethiopic">s. fols. 22ra, 44ra, 100vb, 111ra, 138ra etc.</handNote>
@@ -161,34 +165,32 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 2r (upper margin): Ownership note.</locus>
-                           <q xml:lang="gez">Fol. 2r: ዝንቱ፡ መጽሐፍ፡ ዘደብረ፡ ማእጾ፡ ዘሰረቆ፡ ውጉዝ፡ ለይኩን፡ </q>
+                           <locus/>Fol. 2r (upper margin): Ownership note.<q xml:lang="gez">Fol. 2r: ዝንቱ፡ መጽሐፍ፡ ዘደብረ፡ ማእጾ፡ ዘሰረቆ፡ ውጉዝ፡ ለይኩን፡ </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the hand of the 17th-cent. Zäbanä Krǝstos (cp. Ms. MY-008).
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 147v: Unidentified prayer (?).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 147v: Unidentified prayer (?).<q xml:lang="gez">
+                              <div part="N" org="uniform" sample="complete">Fol. 147ra: አንፍጽ ። ለሙሴ፡ ነቢይ፡ በበሕር፡ ረደኢሁ፡ ይእዜኒ፡ ርድአነ፡ ከማሁ። በ፫ዘወርቅ፡ ለህም። ስብኮ፡ አመ፡ ገብረ፡ አሮን፡ ዘምሐኮ፡ መኀበርነ፡ ዮምባርኮ። በ፫መድኀኔ፡ ሕዝብ፡ በግብጽ፡ እምግብረ፡ ግንፋል፡ እምነደእት፡ ሶበ፡ ግዕሩ፡ እስረኤል፡ ምህለነ፡ ፈደ፫በሣህል። በ፫አመሐሙ፡ ሕዝብ፡ ሰአልዶ፡ ብርዕ፡ ግንፋለ፡ ወጥብዓተ፡ በገቢር፡ መድኀኒሆሙ፡ ኀብአነ፡ እምነከር። በ፫በቀለ፡ መጥቅዕ፡ ሰማዐ፡ መዋኢ፡ ለኢያሱ። ምህለነ፡ ዘይም፡ ኣንሶሰው።። [fol. 47rb] ፫ለናአድ፡ መሰፍን፡ ረደኢሁ፡ አመ፡  ኤግሎም፡ ምህለነ፡ ቀድሰ፡ ዘዮም። በ፫በረቦራ፡ ሕብር፡ ውእቱ፡ አመ፡ ሲሰራ፡ ረዲኢሃ፡ ለበ[ያ]፡ ምህለነ፡ ዘዮም፡ ሰመራ፨ በ፫ለጌድዮን፡ ጸባኢ፡ በቃለ፡ ቀርን፡ ኣድኀነነ፡ ይእዜ፡ እምዕልዋን፡ በ፫፳አህጉር ፡ ጸበኤ ።</div> 
+                              <div part="N" org="uniform" sample="complete"/> 
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in an old hand, but different from that of the main text, with many mistakes or orthographical deviations, hardly understandable. The beginning is missing, the end has been washed out.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 147v: Mälkəˀa Maryam "Image of Mary", incomplete.</locus>
-                           <q xml:lang="gez">Fol. 147v: ሰላም፡ ለኪ፡ መንበረ፡ {ጽሐይ}፡ ሰማይ፡ ዘከዋክብት፡...</q>
+                           <locus/>Fol. 147v: Mälkəˀa Maryam "Image of Mary", incomplete.<q xml:lang="gez">Fol. 147v: ሰላም፡ ለኪ፡ መንበረ፡ {ጽሐይ}፡ ሰማይ፡ ዘከዋክብት፡...</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           ChRep 196, no. 92.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#">Fol. 147ra: Short record concerning tributes for Däbrä Maˁṣo Yoḥannəs.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 147ra: Short record concerning tributes for Däbrä Maˁṣo Yoḥannәs.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in an old, very crude hand, hardly understandable. Some words have been washed out.
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00" n="#">Fol. 148v: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 148v: በአኰቴተ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ዘወሀብኩ፡ ዛቲ፡ መጽሐፍ፡ አነ፡ ዓቀቤ፡ ሰዐት፡ ተሰብከ፡ መድኅን፡ ለደብረ፡ ማዕጾ፡ ለዮሐንስ፡ ዘወሃብኩ፡ አፈወርቅ፡ ወጳው[ሎ]ስ፡ ወማዐጠንት፡ ወወሱተይ። ሶበ፡ ተለቀሕኩ፡ ግምዛሁ፡ ለዮሓንስ፡ ፉሎተ፡ ብእሲትየ፡ ዘፈደይኩ፡ አነ፡ ተሰብከ፡ መድኅን፡ ነሥየ፡ እዘ፡ ዐቃቤ፡ ሰዓት፡ ወሥዩምሂ፡ አቡሁ፡ ሀሎ፡ እግዚአብሔር፡ ወበዓልቴቱሂ፡ አስምዑ፡ ወንጉሥሂ፡ ዳዊት፡ ወልደ፡ ሴፋርዓድ፡ ወመኰንንሂ፡ አሮኒምስ፡ ወማእከል፡ በሕርሂ፡ ዘአማኑኤል፡ ዘሄደ፡ ወዘተአገለ፡ ዘሤጠ፡ ወዘ፡ ተሠየጠ፡ ዘለቀሐ፡ ወዘተለቀሐ፡ ለዛቲ፡ መጽሐፍ፡ ውጉዘ፡ ይኩን፡ እመሂ፡ ቀሲስ፡ ወእመሂ፡ ሥዩም፡ ወእመሂ፡ ዘኮነ፡ ከዊኖ፡ በአፈ፡ ዐሠርቱ፡ ወኀምስቱ፡ ነቢያት፡ ወበአፈ፡ ዓሠርቱ፡ ወክልኤቱ፡ ሐዋርያት፡ ወበአፈ፡ ሰብዓ፡ ወክልኤቱ፡ አርድእት፡ ወበአፈ፡ ሠለስቱ፡ ምእት፡ ዓሠርቱ፡ ወሰማንቱ፡ ርቱዓነ፡ ሃይማኖት፡ በአፈ፡ አብ፡ ወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፉሀ፡ ለእግዚእትነ፡ ማርያም፡ ውጉዘ፡ ለይኩን፡ ወለእመ፡ ቦዘሐከከ፡ ውጉዘ፡ ይኩን፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
+                           <locus/>Fol. 148v: Donation note.<q xml:lang="gez">Fol. 148v: በአኰቴተ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ዘወሀብኩ፡ ዛቲ፡ መጽሐፍ፡ አነ፡ ዓቀቤ፡ ሰዐት፡ ተሰብከ፡ መድኅን፡ ለደብረ፡ ማዕጾ፡ ለዮሐንስ፡ ዘወሃብኩ፡ አፈወርቅ፡ ወጳው[ሎ]ስ፡ ወማዐጠንት፡ ወወሱተይ። ሶበ፡ ተለቀሕኩ፡ ግምዛሁ፡ ለዮሓንስ፡ ፉሎተ፡ ብእሲትየ፡ ዘፈደይኩ፡ አነ፡ ተሰብከ፡ መድኅን፡ ነሥየ፡ እዘ፡ ዐቃቤ፡ ሰዓት፡ ወሥዩምሂ፡ አቡሁ፡ ሀሎ፡ እግዚአብሔር፡ ወበዓልቴቱሂ፡ አስምዑ፡ ወንጉሥሂ፡ ዳዊት፡ ወልደ፡ ሴፋርዓድ፡ ወመኰንንሂ፡ አሮኒምስ፡ ወማእከል፡ በሕርሂ፡ ዘአማኑኤል፡ ዘሄደ፡ ወዘተአገለ፡ ዘሤጠ፡ ወዘ፡ ተሠየጠ፡ ዘለቀሐ፡ ወዘተለቀሐ፡ ለዛቲ፡ መጽሐፍ፡ ውጉዘ፡ ይኩን፡ እመሂ፡ ቀሲስ፡ ወእመሂ፡ ሥዩም፡ ወእመሂ፡ ዘኮነ፡ ከዊኖ፡ በአፈ፡ ዐሠርቱ፡ ወኀምስቱ፡ ነቢያት፡ ወበአፈ፡ ዓሠርቱ፡ ወክልኤቱ፡ ሐዋርያት፡ ወበአፈ፡ ሰብዓ፡ ወክልኤቱ፡ አርድእት፡ ወበአፈ፡ ሠለስቱ፡ ምእት፡ ዓሠርቱ፡ ወሰማንቱ፡ ርቱዓነ፡ ሃይማኖት፡ በአፈ፡ አብ፡ ወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፉሀ፡ ለእግዚእትነ፡ ማርያም፡ ውጉዘ፡ ለይኩን፡ ወለእመ፡ ቦዘሐከከ፡ ውጉዘ፡ ይኩን፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
                            <q xml:lang="en">Fol. 148v: In praise of the Father and the Son and the Holy Spirit. The one who donated this book is I, ˁaqabe säˁat Täsäbkä Mädḫən. To Yoḥannəs, to Däbrä Maˁṣo what I donated is Chrisostomos and Paul (?) and censers and wäsutäy. When I borrowed the treasures (gəmza) of Yoḥannəs, I paid back with falot (?) of my wife, having taken (it), while I, Täsäbkä Mädḫən, am the ˁaqabe säˁat; and the śəyyum is his father Hallo ˀƎgziˀabəḥer, and his wife is ˀAsməˁu, and the king is Dawit a son of Sefarˁad, and mäkʷännən is ˀAron, and maˀkäl baḥr is Zä-ˀAmanuˀel. Anyone who plundered and robbed, who sold and bought, who lent and who borrowed this book shall be cursed, be it a priest or a śəyyum, be it who it may be, by the mouth of fifteen prophets and by the mouth of twelve apostles and by the mouth of seventy two disciples and by the mouth of three hundred eighteen orthodox (fathers), by the mouth of Father and Son and Holy Spirit and by the mouth of our Lady Mary shall be cursed, and if someone scrapes (it), shall be cursed for ever and ever. Amen.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="e1">- Fol. 1r-v: Luke 6:36-7:7, a fragment of an old (pre-1350) Four Gospels manuscript. &#xD;
 - Crude writing excercises (?): fols. 2v-3r, 24r &#xD;
@@ -211,7 +213,7 @@ Two sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0039DäbräMaʿṣoQəddusYoḥannəs" instant="false" full="yes">Däbrä Maʿṣo Qəddus Yoḥannəs / MY</placeName>
+                        <placeName corresp="INS0039MY" instant="false" full="yes">Däbrä Maʿṣo Qәddus Yoḥannәs / MY</placeName>
                      </origPlace>
                      <origDate notBefore="1382" notAfter="1412" instant="false">According to Additio 6, the Ms. was donated in the time of King Dawit II (r. ca. 1382-1412), mäkʷännǝn Aron, and maʾkäl baḥr Zä-ʾAmanuʾel.&#xD;
 Fol. 1 originates from an older (pre-1350?) Four Gospels book.</origDate>
@@ -256,10 +258,6 @@ Fol. 1 originates from an older (pre-1350?) Four Gospels book.</origDate>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -280,7 +278,7 @@ Fol. 1 originates from an older (pre-1350?) Four Gospels book.</origDate>
          <change who="DN" when="2010-05-02" status="draft">registered</change>
          <change who="DN" when="2013-05-01T11:22:11.266Z" status="draft">created</change>
          <change who="DN" when="2015-05-16T18:04:01.109Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

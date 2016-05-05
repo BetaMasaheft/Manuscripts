@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqsm015" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqsm015"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0049QärsäbärMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0049QSM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QSM-015</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">125.0</measure> folios,
-                                                in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">125.0</measure> folios, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">28.0</height>
                               <width unit="cm">21.5</width>
@@ -114,7 +118,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 Some fols. are worn and dirty.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="23">
                            <dimensions unit="mm">
                               <height>190</height>
                               <width>170</width>
@@ -127,28 +131,33 @@ Some fols. are worn and dirty.</condition>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">13</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 4r.</ab>
+                           <note anchored="true">All data for fol. 4r.</note>
                            <ab type="ruling" part="N">on average; 22-23.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible (s. fol. 57r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible (s. fol. 59r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Poor</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">20th century</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይቤ፡ ካህን፡</item>
+                           <item>ይዲ፡ for ይቤ፡ ዲያቆን፡</item>
+                           <item>ይሕ፡ for ይቤ፡ ሕዝብ፡</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -170,16 +179,14 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 123rb: Donation note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 123rb: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note mentions that the Ms. has been donated to Qärsäbär Mikaʾel in 1966 A.M. (= 1973/74 A.D.) by wäyzäro Bǝrritu.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 123v: Purchase note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 123v: Purchase note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Hardly readable. The note mentions that wäyzäro Bǝrritu paid for the Ms. 110 Birr, in 1966 A.M. (= 1973/74 A.D.).
                         </item>
                         <item xml:id="e1">- Fol. 2v: Table of contents precedes the texts, with the titles of the texts and their ordinal numbers (the pages are not indicated). In the table of contents the Anaphoras go first, followed by Śǝrʿatä qǝddase, while in the Ms. itself the order is vice versa.&#xD;
 - Fols. 4r, 13v, 14r, 17v, 20v, 22v, 35r, 60r, 61r, 80r, 85r, 104v: Notes in the upper margin.&#xD;
@@ -204,7 +211,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0049QärsäbärMikaʾel" instant="false" full="yes">Qärsäbär Mikaʾel / QSM</placeName>
+                        <placeName corresp="INS0049QSM" instant="false" full="yes">Qärsäbär Mikaʾel / QSM</placeName>
                      </origPlace>
                      <origDate notBefore="1950" notAfter="1973" instant="false">Second half of the 20th cent. The Ms. has been paid and then donated to Qärsäbär Mikaʾel in 1966 A.M. (= 1973/74 A.D.) (s. Additiones 1-2). The dates 1965 A.M. (= 1972/73 A.D.) and 1973 are written after the text of the Nicene Creed on fol. 60r) in European numerals.</origDate>
                   </origin>
@@ -246,10 +253,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -270,7 +273,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-17" status="draft">registered</change>
          <change who="IF" when="2010-11-13T12:35:57.931Z" status="draft">created</change>
          <change who="MK" when="2014-07-24T13:17:31.161Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

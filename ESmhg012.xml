@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmhg012" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmhg012"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0144ḤarennätGäbäzäytiQǝddǝstMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0144MHG"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MHG-012</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ Two lines on the incipit column of Text I-2, alternating with black lines; two i
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">98.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">7.0</measure> blank, in
-                                                <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">98.0</measure> folios, of which <measure unit="leaf" type="blank">7.0</measure> blank, in <measure unit="quire">14.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">28.5</height>
                               <width unit="cm">22.5</width>
@@ -108,7 +112,7 @@ Fol. 13 has been enlarged by sewing a piece of parchment onto it.&#xD;
 Tears amended on many leaves: e g., fols. 7, 8, 52, 68, 75, 91.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="24">
                            <dimensions unit="mm">
                               <height>197</height>
                               <width>186</width>
@@ -121,36 +125,84 @@ Tears amended on many leaves: e g., fols. 7, 8, 52, 68, 75, 91.</condition>
                               <dim type="left">14</dim>
                               <dim type="intercolumn">14</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 8r.</ab>
+                           <note anchored="true">All data for fol. 8r.</note>
                            <ab type="ruling" part="N">25-26 on fol. 4v.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The scribe disregarded the ruling line on fol. 71va, ls. 1-4.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The ruling on fol. 1 has been done crudely.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 Fol. 97 is partly unruled.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine.</ab>
                         <seg type="ink" part="N">Black, red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Second half of the 19th century (?).</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ማ፡</abbr> for <expan instant="false">ማርያም፡ </expan> (fol. 4va-b)</item>
+                           <item>
+                              <abbr>ማር፡</abbr> for <expan instant="false">ማርያም፡ </expan> (fol. 4va-b, 23ra)</item>
+                           <item>
+                              <abbr>አ፡</abbr> for <expan instant="false">አሜን፡ </expan> (e.g., fol. 8vb, 27ra, 39rb, 45vb, 71ra, 85va, 94ra)</item>
+                           <item>
+                              <abbr>አሜ፡</abbr> for <expan instant="false">አሜን፡ </expan> (fol. 60rb)</item>
+                           <item>
+                              <abbr>ለ፡ አ</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 53ra, 59ra, 69rb)</item>
+                           <item>
+                              <abbr>ለ፡ ዓ፡ አ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (e.g., fols. 11rb, 37rb, 78ra, 88vb)</item>
+                           <item>
+                              <abbr>ለ፡ ዓ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fol. 88va)</item>
+                           <item>
+                              <abbr>ለአ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fol. 22ra)</item>
+                           <item>
+                              <abbr>ለዓ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 70rb, 83ra)</item>
+                           <item>
+                              <abbr>ለዓ፡ አ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fol. 87va)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓ፡ አ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 91ra, 94va)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓለ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 83va, 85ra, 86rb)</item>
+                           <item>
+                              <abbr>ለዓ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (e.g., fols. 63rb, 70rb, 77rb)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (e.g., fols. 7rb, 14vb, 35rb, 49rb, 82rb, 89va)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓለ፡ አ፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 74va, 76vb, 82vb)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓለ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (e.g., fols. 26ra, 50va, 62rb, 72va, 79va, 81vb)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓለም፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (e.g., fols. 9rb, 56ra, 67va, 76rb, 80rb, 89rb)</item>
+                           <item>
+                              <abbr>ለዓለ፡ ዓ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 47ra, 63vb, 66ra)</item>
+                           <item>
+                              <abbr>ለዓለ፡ ዓለ፡ አ</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fol. 53ra)</item>
+                           <item>
+                              <abbr>ለዓለ፡ ዓለ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 57ra, 71rb)</item>
+                           <item>
+                              <abbr>ለዓለ፡ ዓለም፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fol.84ra)</item>
+                           <item>
+                              <abbr>ለዓለመ፡ ዓ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (fols. 23va, 65ra)</item>
+                           <item>
+                              <abbr>ምስ፡ አሜን፡</abbr> for <expan instant="false">ምስሌነ፡ አሜን፡ </expan> (fol. 42va).</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -159,22 +211,19 @@ Fol. 97 is partly unruled.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00"> Fol. 2va-b: ˀƎsäggəd lä-mäläkotəkä zä-fäṭärkä ṣəlmätä… “I worship Thy Godhead that created the darkness…” (cp. ChRep no. 335).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/> Fol. 2va-b: ˀƎsäggəd lä-mäläkotəkä zä-fäṭärkä ṣəlmätä… “I worship Thy Godhead that created the darkness…” (cp. ChRep no. 335).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is possibly written in the main hand. Each daily reading is separated by a chain of red and black dots.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00"> Fols. 3ra-vb: Hymns.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/> Fols. 3ra-vb: Hymns.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is possibly written in the main hand and contains the following hymns: ʾO-ʾǝgzǝʾtǝyä qǝddǝst dǝngǝl bä-kǝlʾe Maryam wäladitä [ʾamlak] ʾǝmmu lä-ʾǝgziʾǝnä ʾiyäsus Krǝstos kähali… “O my Lady, Holy Two-fold Virgin Mary, Godbearing, Mother of our Lord Jesus Christ the Almighty…” (cp. ChRep no. 373); Sälam läki Maryam ʾǝmmä nädd wä-ʾǝmmä wahǝd ʾǝmmä nǝṣuḥ wä-ʾǝmmä mäśiḥ… “Salutation to you, Mary, Mother of the flame and Mother of the unique One, Mother of the pure One and Mother of the Messiah”.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00"> Fols. 3vb l.16-4ra: Calendaric note.</locus>
-                           <q xml:lang="gez"> Fol. 3vb ls. 16-21: በስ[መ፡] አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ንዌጥን፡ በረድኤተ፡ እግዚአብሔር፡ ባሕረ፡ ሐሳብ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ዓለም፡ ከተፈጠረ፡ ዘመን፡ ቢቈጠር፡ ፯ሺህ፡ ከ፭፻ከ፭፡ ዘመን፡ ሆነ፡ ይሏል፡ ዓቢይ፡ ቀመር፡ ለመወቅ፡ …</q>
+                           <locus/> Fols. 3vb l.16-4ra: Calendaric note. <q xml:lang="gez"> Fol. 3vb ls. 16-21: በስ[መ፡] አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ንዌጥን፡ በረድኤተ፡ እግዚአብሔር፡ ባሕረ፡ ሐሳብ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ዓለም፡ ከተፈጠረ፡ ዘመን፡ ቢቈጠር፡ ፯ሺህ፡ ከ፭፻ከ፭፡ ዘመን፡ ሆነ፡ ይሏል፡ ዓቢይ፡ ቀመር፡ ለመወቅ፡ …</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Gǝʿǝz and Amharic and indicates the computation of the time since the creation of the world. The second part on fol. 4ra has been erased.
                         </item>
                         <item xml:id="e1">- The scribe reduced the size of his handwriting to accommodate the end of the line: fols. 6va, 18vb, 26rb.&#xD;
 - The scribe used compressed script: fols. 2rb.&#xD;
@@ -204,7 +253,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0144ḤarennätGäbäzäytiQǝddǝstMaryam" instant="false" full="yes">Ḥarennät Gäbäzäyti Qǝddǝst Maryam / MHG</placeName>
+                        <placeName corresp="INS0144MHG" instant="false" full="yes">Ḥarennät Gäbäzäyti Qǝddǝst Maryam / MHG</placeName>
                      </origPlace>
                      <origDate notBefore="1850" notAfter="1900" instant="false">Second half of the 19th cent. (?)</origDate>
                   </origin>
@@ -246,10 +295,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -272,7 +317,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-20" status="draft">registered</change>
          <change who="MV" when="2015-02-27T14:12:08.405Z" status="draft">created</change>
          <change who="DN" when="2015-04-27T08:46:59.588Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

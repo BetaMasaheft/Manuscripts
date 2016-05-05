@@ -1,10 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESamq003" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESamq003"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
-            <title>Mäṣḥafä gəbrä ḥǝmamat “Book of the Rite of the Holy Week”</title>
+            <title>Mäṣḥafä gәbrä ḥǝmamat “Book of the Rite of the Holy Week”</title>
             <editor key="DN"/>
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0065Ë&#x81;AddigratQirqos"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0065AMQ"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AMQ-003</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">209.0</measure> folios,
-                                                in
-                                                <measure unit="quire">28.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">209.0</measure> folios, in <measure unit="quire">28.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">40.0</height>
                               <width unit="cm">35.0</width>
@@ -147,7 +151,7 @@ Cuts repaired on fols. 16, 50, 53, 176.&#xD;
 A square piece of parchment has been cut in the bottom margin of fol. 82.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="29">
                            <dimensions unit="mm">
                               <height>255</height>
                               <width>260</width>
@@ -160,56 +164,83 @@ A square piece of parchment has been cut in the bottom margin of fol. 82.</condi
                               <dim type="left">25</dim>
                               <dim type="intercolumn">15</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 3r.</ab>
+                           <note anchored="true">All data are for fol. 3r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, regular.</ab>
                         <seg type="ink" part="N">Black, red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">First half of the 19th century gwǝlḥ script.</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ምል᎓/ ምልጠ᎓</abbr> for <expan instant="false">ምልጠን᎓ </expan> (only in Additio 4)</item>
+                           <item>
+                              <abbr>ለዓ᎓</abbr> for <expan instant="false">ለዓለም᎓ </expan> (only in Additio 4)</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 206rb: Ownership note.</locus>
-                           <q xml:lang="gez">Fol. 206rb: ዝመጽሐፍ᎓ ዘአድ᎓ ግራት᎓ ዘመቅደሰ᎓ ቂርቆስ᎓ ወእሙ። ኢየሉጣ᎓ ዘሰረቆ᎓ ወዘፈሐቆ᎓ ውጉዘ᎓ ይኩን᎓ በሥልጣነ᎓ ጴጥሮስ᎓ ወጳውሎስ። ዘተሣየጠ᎓ በነዋዩ᎓ ደጅ᎓ አዝማች᎓ ካሣ᎓ ዘውእቱ᎓ ተስፋ᎓ ማርያም᎓ ከመ᎓ ተኵኖ᎓ መድኃኒተ᎓ ሥጋ᎓ ወነፍስ᎓ በመንግሥተ᎓ ሰማይ᎓ ሐዳስ። ምስለ᎓ አቡሁ᎓ ዘመንፈስ᎓ ቅዱስ᎓ ወእሙ᎓ አቅሊስያ። ለዓለመ᎓ አለም᎓ አሜን።</q>
+                           <locus/>Fol. 206rb: Ownership note.<q xml:lang="gez">Fol. 206rb: ዝመጽሐፍ᎓ ዘአድ᎓ ግራት᎓ ዘመቅደሰ᎓ ቂርቆስ᎓ ወእሙ። ኢየሉጣ᎓ ዘሰረቆ᎓ ወዘፈሐቆ᎓ ውጉዘ᎓ ይኩን᎓ በሥልጣነ᎓ ጴጥሮስ᎓ ወጳውሎስ። ዘተሣየጠ᎓ በነዋዩ᎓ ደጅ᎓ አዝማች᎓ ካሣ᎓ ዘውእቱ᎓ ተስፋ᎓ ማርያም᎓ ከመ᎓ ተኵኖ᎓ መድኃኒተ᎓ ሥጋ᎓ ወነፍስ᎓ በመንግሥተ᎓ ሰማይ᎓ ሐዳስ። ምስለ᎓ አቡሁ᎓ ዘመንፈስ᎓ ቅዱስ᎓ ወእሙ᎓ አቅሊስያ። ለዓለመ᎓ አለም᎓ አሜን።</q>
                            <q xml:lang="en">Fol. 206rb:This (is) the book of ˀAdd Grat of the church of Cyricus and his mother Julitta. May the one who stole and who erased (it's text) be excommunicated by the authority of Peter and Paul. The one who bought it with his money (is) däğğazmač Kasa who is Täsfa Maryam, so that it might be for him the salvation of (his) body and soul in the new Kingdom of Heaven along with his father Zä-Mänfäs Qǝddus and his mother ˀAqlisya, forever and ever. Amen.</q>
-                           <p part="N"/>
+                           The note is written by the same hand which added the name Täsfa Maryam in the supplication formulas throughout the Ms. Written half in black, half in red ink. The note dates the time of däğğazmač Sǝba Gadis (1770-1831), father of däğğazmač Kasa, whose baptismal name is Zä-Mänfäs Qǝddus.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 206vab: Excerpt from a liturgical text (?).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 206vab: Excerpt from a liturgical text (?).<q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 206vab: ስምዕዎኬ᎓ ለእግዚእነ᎓ ኵልክሙ᎓ አብያተ᎓ ክርስቲያናት᎓ ከመ᎓ ዘአክበሮሙ᎓ ለኦሪት᎓ ወለነቢያት᎓ በወንጌለ᎓ መንግሥት᎓ እንዘ᎓ ይብል᎓ ክርስቶስ᎓ ወልደ᎓ ዳዊት᎓ አሜን᎓...   </div>
+                           </q>
                            <q xml:lang="en">Fol. 206vab: Listen to our Lord, all you churches, for He is the one who glorified the ˀOrit and the Prophets in the Gospel of the Kingdom saying, Krǝstos son of David, “Amen…”</q>
-                           <p part="N"/>
+                           The hand is the same as that of Additio 3. Musical notation signs, along with numbers, are written interlineally and to the left from the text column.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 206vb-207va: Ṣälotä burake, Prayer of the Benediction of St. Basil.</div>
+                           <q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fols. 206vb-207va: ጸሎተ᎓ ቡራኬ᎓ ኦሥሉስ᎓ ቅዱስ᎓ አብ᎓ ወወልድ᎓ ወመንፈስ᎓ ቅዱስ᎓ ባርከ᎓ ዲበ᎓ ሕዝበከ᎓ ፍቁራን᎓ ክርስቶሳውያን᎓…</div>
+                           </q>
                            <q xml:lang="en">Fol. 206vb-207va: Prayer of the blessing, oh Triune Holy, Father, Son and Holy Spirit (give your) bless on your lovely Christian people… </q>
-                           <p part="N"/>
+                           The hand is possibly the same as that of Additio 2. The note is separated from Additio 2 with a simple divider line.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fols. 207vb-208rb: Liturgical chant (unidentified).</div>
+                           <q xml:lang="gez">
+                              <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete">Fol. 207vb-208rb: መዝሙር᎓ ተሰቅለ᎓ ወሐመ᎓ ዘእንበለ᎓ ኃጢአት᎓ ተረግዘ᎓ ገቦሁ᎓ ዘእንበለ᎓ ደዌ᎓ እስመ᎓ መለኮቱ᎓ ኢሐመ᎓...</div>
+                           </q>
                            <q xml:lang="en">Fols. 207vb-208rb: Psalm. He was crucified and suffered without sin, His ribs was pierced without pain because His divinity did not suffer…</q>
-                           <p part="N"/>
+                           Musical notation signs are written interlineally.
                         </item>
                         <item xml:id="e1">- Excerpts of hymns for the Good Friday (?) added in the upper margins in fols. 115r, 123v, 124v, 125v, 131rv, 132r, 152v, 158rv, 159rv, 164r, 167rv, 173r.&#xD;
 - The original name(s) mentioned in the supplication formulas has been erased throughout the Ms. (e.g., 11va l.15, 11vb l.16, 16ra l.24).&#xD;
@@ -234,7 +265,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0065Ë&#x81;AddigratQirqos" instant="false" full="yes">Ë&#x81;Addigrat Qirqos / AMQ</placeName>
+                        <placeName corresp="INS0065AMQ" instant="false" full="yes">Ë&#x81;Addigrat Qirqos / AMQ</placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1850" instant="false"/>
                   </origin>
@@ -276,10 +307,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -300,7 +327,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-19" status="draft">registered</change>
          <change who="IR" when="2013-04-08T15:28:29.478Z" status="draft">created</change>
          <change who="DN" when="2015-02-05T16:20:54.152Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

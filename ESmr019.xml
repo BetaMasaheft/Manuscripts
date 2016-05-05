@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmr019" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmr019"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0042MədräRuba"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0042MR"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MR-019</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">146.0</measure> folios,
-                                                in
-                                                <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">146.0</measure> folios, in <measure unit="quire">17.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">16.5</width>
@@ -124,7 +128,7 @@ Quire XVI was probably added later.</item>
                         <condition key="deficient">The leather is partly torn off from the wooden covers.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="22">
                            <dimensions unit="mm">
                               <height>145</height>
                               <width>120</width>
@@ -137,28 +141,39 @@ Quire XVI was probably added later.</item>
                               <dim type="left">15</dim>
                               <dim type="intercolumn">8</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 4r.</ab>
+                           <note anchored="true">All data are for fol. 4r.</note>
                            <ab type="ruling" part="N">average number</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are mostly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are mostly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1D-1D-1D1D/0-0/0-0/B.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible (s. fol. 63r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible (s. fol. 56v).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre. Quire XVI by different hand, more careful and regular.</ab>
                         <seg type="ink" part="N">Black; red; violet.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 19th century.</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይቤ፡ ካህን</item>
+                           <item>ይዲ፡ for ይቤ፡ ዲያቆን</item>
+                           <item>ይሕ፡ for ይቤ፡ ሕዝብ፡</item>
+                           <item>ቡራ፡ for ቡራኬ፡</item>
+                           <item>እማ፡ for እማሬ፡</item>
+                           <item>
+                              <abbr>ቅ፡ መ፡ ስ፡ ወእ፡ ይ፡ ወዘ፡ ወለዓ።</abbr> for <expan instant="false">…ቅዱስ፡ መንፈስ፡ ስብሐት፡ ወእኂዝ፡ ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም። </expan> (e.g., fol. 9rb, ll.14-15)</item>
+                           <item>
+                              <abbr>አ፡ ወ፡ ወመ፡ ቅ፡ and similar variants</abbr> for <expan instant="false">አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ </expan> (e.g., fol. 65r).</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">quires I-XV.  </handNote>
                      <handNote xml:id="h3" script="Ethiopic">quire XVI.</handNote>
@@ -176,34 +191,34 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 1r: Calendar notes.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 1r: Calendar notes.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           A mixture of Gǝʿǝz and Amharic; written in violet ink.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 2ra, l.1 – 2rb, l.4: Prayer (plea to God for the salvation of his servant Kidanä Maryam).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 2ra, l.1 – 2rb, l.4: Prayer (plea to God for the salvation of his servant Kidanä Maryam).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The text consists mostly of enumeration of various biblical personages saved by God from their enemies. After erroneously mentioning the salvation of Noah from Sodom and Gomorra, the scribe has drawn a line and begun writing the text anew. For the most part the text is in Amharic, with only the opening and the concluding supplications in Gǝʿǝz.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 2rb, l.5 – 2vb: ˀAsmat-prayer.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 2rb, l.5 – 2vb: ˀAsmat-prayer.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In violet ink. Various ʾasmat are invoked, to protect the cattle of ʾabunä Wäldä Tǝnśaʾe.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00">Fols. 144vb, l.4 – 146ra, l.4.: Poem in praise of the Virgin Mary.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fols. 144vb, l.4 – 146ra, l.4.: Poem in praise of the Virgin Mary.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           A supplication for St. Mary to intercede for Gäbrä Ḥǝywät and other believers is added (fol. 146ra, ll.5-12).
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez">Fol. 136vb, l. 4: ዛቲ፡ መጽሐፍ፡ ዘወሀበት፡ ለታቦተ፡ ሥላሴ፡ ምድር፡ ሩባ፡ ከመ፡ ትኩና፡ መድኃኒተ፡ ነፍስ፡ ወሥጋ፡ ለመንግሥተ፡ ሰማያት፡ ወለተ፡ ሥላሴ፡ ዓመተ፡ እግዚአብሔር፡ ዘሠረቆ፡ ወዘፈሐቆ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ።</q>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 136vb, l.4: Donation note.</div>
+                           <q xml:lang="gez"><!--[if gte mso 10]> <style> /* Style Definitions */ table.MsoNormalTable {mso-style-name:"Normale Tabelle"; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-qformat:yes; mso-style-parent:""; mso-padding-alt:0cm 5.4pt 0cm 5.4pt; mso-para-margin-top:0cm; mso-para-margin-right:0cm; mso-para-margin-bottom:10.0pt; mso-para-margin-left:0cm; line-height:115%; mso-pagination:widow-orphan; font-size:11.0pt; font-family:"Calibri","sans-serif"; mso-ascii-font-family:Calibri; mso-ascii-theme-font:minor-latin; mso-fareast-font-family:"Times New Roman"; mso-fareast-theme-font:minor-fareast; mso-hansi-font-family:Calibri; mso-hansi-theme-font:minor-latin;} </style> <![endif]--> Fol. 136vb, l. 4: ዛቲ፡ መጽሐፍ፡ ዘወሀበት፡ ለታቦተ፡ ሥላሴ፡ ምድር፡ ሩባ፡ ከመ፡ ትኩና፡ መድኃኒተ፡ ነፍስ፡ ወሥጋ፡ ለመንግሥተ፡ ሰማያት፡ ወለተ፡ ሥላሴ፡ ዓመተ፡ እግዚአብሔር፡ ዘሠረቆ፡ ወዘፈሐቆ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ። </q>
                            <q xml:lang="en">Fol. 136vb, l. 4: This is the book which was donated to the tabot of the Trinity in Mǝdr[ä] Ruba by Wälättä Śǝllase, a maidservant of God so that it might be for her the salvation of the soul and body (and a guide) to the Kingdom of Heaven. He who steals it or erases (its text shall be excommunicated) by the authority of Peter and Paul.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="e1">- Fols. 29v, 34r, 56r, 58v, 61r, 77v: Notes (corrections or additions to the main text?) are written in the upper margin.</item>
                      </list>
@@ -225,7 +240,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0042MədräRuba" instant="false" full="yes">Mədrä Ruba /MR</placeName>
+                        <placeName corresp="INS0042MR" instant="false" full="yes">Mәdrä Ruba /MR</placeName>
                      </origPlace>
                      <origDate notBefore="1881" notAfter="1889" instant="false">In a few cases (e.g., fol. 11ra, ll.5-7) ʾabba Ṗeṭros is mentioned as the metropolitan (1881-1917) and ʾabba Luqas as the bishop (1881-ca. 1901). On fol. 11ra, l.17 both Yoḥannǝs (1872-89) and Mǝnilǝk (1878-89 king of Šäwa; 1889-1913 emperor; here spelt Mǝnyǝlǝk, with the superscript last letter) are mentioned as kings.</origDate>
                   </origin>
@@ -267,10 +282,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -292,7 +303,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-12" status="draft">registered</change>
          <change who="IF" when="2010-12-13T14:04:20.920Z" status="draft">created</change>
          <change who="EG" when="2015-02-20T11:51:10.410Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

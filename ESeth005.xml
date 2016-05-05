@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESeth005" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESeth005"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0078ʿƎmbäytoTäkläHaymanot"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0078ETH"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>ETH-005</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">67.0</measure> folios,
-                                                in
-                                                <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">67.0</measure> folios, in <measure unit="quire">9.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">25.0</height>
                               <width unit="cm">19.0</width>
@@ -91,7 +95,7 @@ Many fols. are affected by humidity.&#xD;
 Cuts repaired on fols. 54, 55, 56, 58.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="19">
                            <dimensions unit="mm">
                               <height>155</height>
                               <width>128</width>
@@ -104,28 +108,36 @@ Cuts repaired on fols. 54, 55, 56, 58.</condition>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">9</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 5r.</ab>
+                           <note anchored="true">All data are for fol. 5r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine and regular.</ab>
                         <seg type="ink" part="N">Black; red (strong vermillion)</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
-                        <date instant="false">18th century (?)</date>
+                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes">Gäbrä Mikaʾel</persName>Gäbrä Mikaʾel is mentioned as the scribe in Additio 1 and in several supplication formulas or invocation to God (e.g., fols. 62rb and 65ra).<date instant="false">18th century (?)</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ዓለ፡ አሜ፡/ ዓለ፡ አ፡</abbr> for <expan instant="false">ዓለም፡ አሜን፡ </expan> (e.g., fols. 45vb, 47ra)</item>
+                           <item>
+                              <abbr>ለዓ፡ ዓለ፡ አሜን፡/ለዓለ፡ ዓለ፡ አሜን፡</abbr> for <expan instant="false">ለዓለመ፡ ዓለም፡ አሜን፡ </expan> (e.g., fols. 57ra, 60va)</item>
+                           <item>
+                              <abbr>ሰላ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (fols. 62ra-64vb, Text III)</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                      <handNote xml:id="h3" script="Ethiopic"/>
@@ -137,10 +149,9 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 41vb: Donation note.<q xml:lang="gez">Fol. 41vb: ዝመጽሐፍ፡ ዘወይዘሮ፡ ክለላ፡ ዘወሀበቶ፡ ለታቦተ፡ አቡነ፡ ተክለ፡ ሃይማኖቶ፡ ዕንበይቶ፡ ከመ፡ ይኩና፡ መርሐ፡ ለመንግሥተ፡ ሰማያት፡ ወስመ፡ ጥምቀታ፡ ዓመተ፡ ሚካኤል፡ ወአቡሃ፡ ኃይለ፡ ማርያም፡ ወእማ፡ ወለተ፡ ትንሣኤ፡ ወብእሲሃ፡ ኃይለ፡ ማርያም፡ ወወለታ፡ ወለተ፡ ተክለ፡ ሃይማኖት፡ ወአኃቲሃ፡ ወልደ፡ ኪዳን፡ ወልደ፡ ወ[sic]ገሪማ፡ ወለተ፡ ሃይማኖት፡ ወጸሐፊሁ፡ ኃጥእ፡ ወአባሲ፡ ገብረ፡ ሚካኤል፡ ለዓለመ፡ ዓለም፡ አሜን። </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           In this note, written by the scribe of the main text Gäbrä Mikaʾel, the donor of the Ms. wäyzäro Kǝläla, whose baptismal name is ʿAmätä Mikaʾel, is mentioned together with her relatives (i.d., her father Ḫaylä Maryam, ther mother Wälättä Tǝnśaʾe, her husband Ḫaylä Maryam, her daughter Wälättä Täklä Haymanot, her brothers Wäldä Kidan, Wäldä Gärima, Wälättä Haymanot).
                         </item>
                         <item xml:id="e1">- The numbers of some miracles are written (added later?) in the left margin of the column.&#xD;
 - Corrections (words or letters) written interlineally: fols. 15va, 18va, 25va, 29rb, 48ra.&#xD;
@@ -165,7 +176,7 @@ A small hole is visible in the centrefold of some quires, close to the tail or t
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0078ʿƎmbäytoTäkläHaymanot" instant="false" full="yes">ʿƎmbäyto Täklä Haymanot / ETH</placeName>
+                        <placeName corresp="INS0078ETH" instant="false" full="yes">ʿƎmbäyto Täklä Haymanot / ETH</placeName>
                      </origPlace>
                      <origDate notBefore="1700" notAfter="1800" instant="false">18th cent. (?)</origDate>
                   </origin>
@@ -208,8 +219,7 @@ Her baptismal name ʿAmätä Mikaʾel is present also in some supplication formu
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
+                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes">Gäbrä Mikaʾel</persName>
                </person>
                <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
@@ -232,7 +242,7 @@ Her baptismal name ʿAmätä Mikaʾel is present also in some supplication formu
          <change who="DN" when="2010-11-19" status="draft">registered</change>
          <change who="VP" when="2013-11-13T15:58:30.947Z" status="draft">created</change>
          <change who="SA" when="2014-08-20T09:52:48.607Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

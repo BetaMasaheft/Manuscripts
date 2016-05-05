@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmakm074" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmakm074"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0174MayË&#x80;AnbÃ¤saKidanÃ¤MÇ&#x9d;á¸¥rÃ¤t"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0174MAKM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MAKM-074</idno>
                   <altIdentifier>
                      <idno>C4-IV-78 (fol. 41r)</idno>
@@ -48,9 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">93.0</measure> folios,
-                                                in
-                                                <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">93.0</measure> folios, in <measure unit="quire">12.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">19.0</width>
@@ -117,7 +121,7 @@ The last two folios (fols. 92r-93v), originally of bigger size, are cut in the u
 Tear crudely amended on fol. 55.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="13">
                            <dimensions unit="mm">
                               <height>120</height>
                               <width>140</width>
@@ -130,28 +134,40 @@ Tear crudely amended on fol. 55.</condition>
                               <dim type="left">15</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 3r.</ab>
+                           <note anchored="true">All data are for fol. 3r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, somewhat irregular</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">18th century</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ሰ፡/ ሰላ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (Text I-1, Text I-4 – Text I-14) .</item>
+                           <item>
+                              <abbr>ጊ፡/ ጊዮ፡</abbr> for <expan instant="false">ጊዮርጊስ፡ </expan> (Text I-5, I-6) .</item>
+                           <item>
+                              <abbr>ፋሲሊዳ፡</abbr> for <expan instant="false">ፋሲሊደስ፡ </expan> (Text I-9).</item>
+                           <item>
+                              <abbr>ገለው፡/ ገለውዴ፡</abbr> for <expan instant="false">ገለውዴዎስ፡ </expan> (Text I-10).</item>
+                           <item>
+                              <abbr>ዮሐን፡</abbr> for <expan instant="false">ዮሐንስ፡ </expan> (Text I-11, Text I-12).</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                      <handNote xml:id="h3" script="Ethiopic"/>
@@ -160,16 +176,18 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 85vb l.1: Ownership note.</locus>
-                           <q xml:lang="gez"> Fol. 85vb: ዝመጽሐፍ፡ ዘቄስ፡ ተስፋ፡ ሥላሴ፡ ሣምራ፡ ዘሰረቃ፡ ወዘፈሐቃ፡ ውጉዝ፡ ይኩን።</q>
+                           <locus/>Fol. 85vb l.1: Ownership note. <q xml:lang="gez"> Fol. 85vb: ዝመጽሐፍ፡ ዘቄስ፡ ተስፋ፡ ሥላሴ፡ ሣምራ፡ ዘሰረቃ፡ ወዘፈሐቃ፡ ውጉዝ፡ ይኩን።</q>
                            <q xml:lang="en">Fol. 85vb: This book is of priest Täsfa Śəllase (of) Śamra. The one who stole it or the one who scratched (what is written in it), shall be excommunicated. </q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"> Fol. 93rb l.7: ˀAsmat-prayer.</locus>
-                           <q xml:lang="gez">Fol. 93rb l.7: በስመ፡ አብ፡ በል፡ ከል፡ ተከልከል ፯ጊዜ፡ ሔጄርጄ፡ ፯ጊዜ፡ ጉሐጄን፡ ወጉበርጄን፯ጊዜ፡…</q>
-                           <q xml:lang="en"> </q>
-                           <p part="N"/>
+                           <locus/> Fol. 93rb l.7: ˀAsmat-prayer.<q xml:lang="gez">Fol. 93rb l.7: በስመ፡ አብ፡ በል፡ ከል፡ ተከልከል ፯ጊዜ፡ ሔጄርጄ፡ ፯ጊዜ፡ ጉሐጄን፡ ወጉበርጄን፯ጊዜ፡…</q>
+                           <q xml:lang="en">  <div style="text-align: left;"
+                                   part="N"
+                                   org="uniform"
+                                   sample="complete"/>
+                           </q>
+                           
                         </item>
                         <item xml:id="e1">- The title of Text I is crudely written on the front leather cover with yellow paint.&#xD;
 - Titles of the works (fols. 8r መልክአ፡ ማርያም፡ Mälkǝʾa Maryam, fol. 9r (መልክአ፡ ኢየሱስ፡ Mälkǝʾa ʾIyäsus) are crudely written in blue pen in the upper margins.&#xD;
@@ -196,7 +214,7 @@ Quires I, II, III are reinforced by parchment guards.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0174MayË&#x80;AnbÃ¤saKidanÃ¤MÇ&#x9d;á¸¥rÃ¤t" instant="false" full="yes">May Ë&#x80;AnbÃ¤sa KidanÃ¤ MÇ&#x9d;á¸¥rÃ¤t / MAKM</placeName>
+                        <placeName corresp="INS0174MAKM" instant="false" full="yes">May Ë&#x80;AnbÃ¤sa KidanÃ¤ MÇ&#x9d;á¸¥rÃ¤t / MAKM</placeName>
                      </origPlace>
                      <origDate notBefore="1700" notAfter="1800" instant="false"/>
                   </origin>
@@ -239,10 +257,6 @@ The donor´s name is washed out on fols. 62ra, 67ra 76ra, erased from fol. 75va.
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -264,7 +278,7 @@ The donor´s name is washed out on fols. 62ra, 67ra 76ra, erased from fol. 75va.
          <change who="DN" when="2011-11-03" status="draft">registered</change>
          <change who="IR" when="2012-09-03T10:30:50.356Z" status="draft">created</change>
          <change who="SH" when="2014-09-23T12:21:53.382Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

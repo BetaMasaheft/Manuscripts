@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESdmd005" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESdmd005"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0129DÇ&#x9d;blaYoá¸¥annÇ&#x9d;sMÃ¤á¹­mÇ&#x9d;q"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0129DMD"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>DMD-005</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -46,9 +52,7 @@ On fol. 1r, the two upper lines of each column are rubricated.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">152.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">3.5</measure> blank, in
-                                                <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">152.0</measure> folios, of which <measure unit="leaf" type="blank">3.5</measure> blank, in <measure unit="quire">23.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">24.0</height>
                               <width unit="cm">20.5</width>
@@ -136,7 +140,7 @@ The structure of quires I-VIII and X-XI has been defined tentatively. Fols. 63 a
 Leather covering is for the most part lost, and preserved only on the inner faces of the boards. Original sewing is missing. Both boards are broken and repaired with leather cords.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="17">
                            <dimensions unit="mm">
                               <height>165</height>
                               <width>160</width>
@@ -149,55 +153,58 @@ Leather covering is for the most part lost, and preserved only on the inner face
                               <dim type="left">15</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 2r.</ab>
+                           <note anchored="true">All data are for fol. 2r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are not visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible (s. fol. 70r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Regular, fluent, by well-trained hand.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 18th cent.</date>
+                        <list type="abbreviations">
+                           <item>ይ፡ ካ፡ or ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይ፡ ዲ፡ or ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                           <item>ይ፡ ሕ፡ or ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>
+                              <abbr>ሕዝ፡</abbr> for <expan instant="false">(ይበል፡) ሕዝብ፡ </expan> (s. fol. 10ra)</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 63v: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 63v: ዛቲ፡ መጽሐፍ፡ ዘዕቁባ፡ ሥላሴ፡ ዘወሀበ [sic]፡ ለዮሐንስ፡ ዘተሣየጣ፡ በወርቁ፡ ጸሎቱ፡ ወበረከቱ፡ ይዕቀቦሙ፡ ለአቡሁ፡ ወለእሙ፡ ተስፋ፡ ጊዮርጊስ፡ ወለተ፡ ማርያም፡ ወለገብሩ፡ ዕቁባ፡ ሥላሴ፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
+                           <locus/>Fol. 63v: Donation note.<q xml:lang="gez">Fol. 63v: ዛቲ፡ መጽሐፍ፡ ዘዕቁባ፡ ሥላሴ፡ ዘወሀበ [sic]፡ ለዮሐንስ፡ ዘተሣየጣ፡ በወርቁ፡ ጸሎቱ፡ ወበረከቱ፡ ይዕቀቦሙ፡ ለአቡሁ፡ ወለእሙ፡ ተስፋ፡ ጊዮርጊስ፡ ወለተ፡ ማርያም፡ ወለገብሩ፡ ዕቁባ፡ ሥላሴ፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
                            <q xml:lang="en">Fol. 63v: This is a book of ˁƎquba Śǝllase who has donated it to (the church of) John (the Baptist), who bought it for his own money. May [God’s] protection and blessing guard his father and his mother, Täsfa Giyorgis [and] Wälättä Maryam, and His servant ˁƎquba Śǝllase for ever and ever. Amen.</q>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00">Fols. 148va-149r: 1 Cor. 11:23-29.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fols. 148va-149r: 1 Cor. 11:23-29.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Crudely written. Parts of the same text, in the same hand, are repeated in fol. 150v.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 149v: Ownership note (?).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 149v: Ownership note (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Crudely written, part of the text poorly visible. The name of John the Baptist (patron saint of the church) can be discerned.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#">Fol. 150v: Ownership note.</locus>
-                           <q xml:lang="gez">Fol. 150v: ዝመጽሐፍ፡ የደብረ [sic]፡ ዮሐንስ፡ መጥምቅ፡ ወሠማዕት። ዘፈሐቃ፡ ወዘሰረቃ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡</q>
+                           <locus/>Fol. 150v: Ownership note.<q xml:lang="gez">Fol. 150v: ዝመጽሐፍ፡ የደብረ [sic]፡ ዮሐንስ፡ መጥምቅ፡ ወሠማዕት። ዘፈሐቃ፡ ወዘሰረቃ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡</q>
                            <q xml:lang="en">Fol. 150v: This is a book of the church of John the Baptist and Martyr. He who erases [its text] and he who steals it shall be excommunicated by the authority of Peter and Paul.</q>
-                           <p part="N"/>
+                           The beginning of a pen trial is adjoined to the end of note.
                         </item>
                         <item xml:id="e1">- Round stamp is visible in the bottom right corner (the inner part of the stamp did not leave the imprint): fol. 1r.&#xD;
 - In the upper margin, notes marking beginning of important texts: fols. 28r, 33r, 34r, 38v.&#xD;
@@ -227,7 +234,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0129DÇ&#x9d;blaYoá¸¥annÇ&#x9d;sMÃ¤á¹­mÇ&#x9d;q" instant="false" full="yes">DÇ&#x9d;bla Yoá¸¥annÇ&#x9d;s MÃ¤á¹­mÇ&#x9d;q / DMD</placeName>
+                        <placeName corresp="INS0129DMD" instant="false" full="yes">DÇ&#x9d;bla Yoá¸¥annÇ&#x9d;s MÃ¤á¹­mÇ&#x9d;q / DMD</placeName>
                      </origPlace>
                      <origDate notBefore="1770" notAfter="1796" instant="false">Yosef is mentioned as the Patriarch (fol. 69vb), and Yosab is mentioned as the Metropolitan (fols. 69vb, 70rb). Yosab (II) was Metropolitan of Ethiopia from ca. 1770 to 1803; Joseph was the lay name of John XVIII, Patriarch of Alexandria in 1769-96.</origDate>
                   </origin>
@@ -269,10 +276,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -293,7 +296,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-09" status="draft">registered</change>
          <change who="IF" when="2012-06-23T10:28:26.046Z" status="draft">created</change>
          <change who="SA" when="2014-11-29T18:45:02.569Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESakm017" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESakm017"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0103ʾAmbäsätKidanäMǝḥrät"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0103AKM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>AKM-017</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">79.0</measure> folios,
-                                                in
-                                                <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">79.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">20.0</height>
                               <width unit="cm">16.5</width>
@@ -114,7 +118,7 @@ Many fols. are folded, cockled, cut off and badly affected by humidity. &#xD;
 A hole or a cut is carefully amended on fol. 57.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="18">
                            <dimensions unit="mm">
                               <height>130</height>
                               <width>155</width>
@@ -127,29 +131,29 @@ A hole or a cut is carefully amended on fol. 57.</condition>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 14.</ab>
+                           <note anchored="true">All data for fol. 14.</note>
                            <ab type="ruling" part="N">in some fols. 19, 20</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling; often below the ruling (e.g., fols. 37r, 39rv, 40r, 43r-49r. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling. The bottom ruled line was not used by the scribe on fols. 1r-10r.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, regular</ab>
                         <seg type="ink" part="N">Black, red</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Second half of the 18th century  – the first half of the 19th century</date>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
@@ -158,22 +162,29 @@ The bottom line is written above the ruling. The bottom ruled line was not used 
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 1v: Barely readable note.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 1v: Barely readable note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note, written in red ink, is barely readable.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 1v: Purchase note.</div>
+                           <q xml:lang="gez">Fol. 1v: ዝመጽሐፍ፡ ዘመምህሬ፡ ገብረ፡ ወልድ፡ ወስመ፡ አቡሁ፡ መምህር፡ ተ&lt;…&gt;፡ ዘአጥረዮ፡ በንዋዩ፡ ከመ፡ ይኵኖ፡ መድኃኒተ፡ ነፍስ፡ ወስጋ።</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note states that the Ms. was bought by mämhǝre Gäbrä Wäld. His father’s name is for the most part unreadable.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 78vb: Donation note.</div>
+                           <q xml:lang="gez">Fol. 78vb: ዛቲ፡ መጽሐፍ፡ ዘእቍባ፡ ጊዎርጊስ[sic]፡ ዘወሀባ፡ ለማርያም፡ ህርጉድ(?)፡ ከመ፡ ትኵኖ፡ መርሐ፡ መንግሥተ፡ ያት[sic]፡ ምስለ፡ አቡሁ፡ ኪዓደ(?)፡ ማርያም፡ ወምስለ፡ እሙ፡ ወለተ፡ ዮሐንስ፡ ወምስለ፡ ደቂቁ፡ ዘወልደ፡ ማርያም፡ ወልደ፡ ጊዎጊስ[sic]፡ አምኃ፡ ጊዎርጊስ፡ መድኅን፡ ባር[sic]፡ ነጋሽ፡ ዘጊዎርጊስ፡ ሰያጢ፡ አባ፡ ሰሎሞን፡ ዘደብረ፡ አቡነ፡ መርቆርየዎስ፡ ዘሰረቃ፡ ወዘፈሐቃ…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in the main hand. It states that the Ms. was donated by ʿƎqwǝba Giworgis to the Church of Maryam Hǝrgwǝd (?). Also, the donor’s family members are mentioned: his father Kiʿadä (?) Maryam, his mother Wälättä Yoḥannǝs as well as children Wäldä Maryam, Wäldä Giworgis, ʾAmḫa Giworgis Mädḫǝn and bar (baḥr) nägaš Zä-Giworgis. The seller is ʾabba Sälomon of Däbrä ʾAbunä Märqoryewos (possibly the monastery Däbrä Dǝmaḥ, Säraye, s. EAE II, p. 21), who might be also the scribe.
                         </item>
                         <item xml:id="e1">- Omitted letters, words, lines or passages are written interlineally, in secondary hands: e.g., fols. 5rab, 7vb, 8vb, 9rab, 11rb, 15ra, 16va, 22ra, 27vb, 29va, 35rab, 47ra, 72ra.&#xD;
 - The content of the Ms. is written in pen on fol. 57r. &#xD;
@@ -197,7 +208,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0103ʾAmbäsätKidanäMǝḥrät" instant="false" full="yes">ʾAmbäsät Kidanä Mǝḥrät  / AKM</placeName>
+                        <placeName corresp="INS0103AKM" instant="false" full="yes">ʾAmbäsät Kidanä Mǝḥrät  / AKM</placeName>
                      </origPlace>
                      <origDate notBefore="1750" notAfter="1850" instant="false">Second half of the 18th cent. to the first half of the 19th cent.</origDate>
                   </origin>
@@ -241,10 +252,6 @@ According to Additio 3, the book was originally donated to the Church of Maryam 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -266,7 +273,7 @@ According to Additio 3, the book was originally donated to the Church of Maryam 
          <change who="DN" when="2010-12-11" status="draft">registered</change>
          <change who="MK" when="2013-06-24T10:52:46.296Z" status="draft">created</change>
          <change who="AA" when="2014-06-16T09:15:31.436Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

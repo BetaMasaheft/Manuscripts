@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqmm004" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqmm004"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0178MärgaḥəyaQəddusMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0178QMM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QMM-004</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">55.0</measure> folios,
-                                                in
-                                                <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">55.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">11.0</height>
                               <width unit="cm">10.2</width>
@@ -85,7 +89,7 @@ The sewing is slightly damaged.&#xD;
 Several fols. are affected by humidity.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="1" writtenLines="14">
                            <dimensions unit="mm">
                               <height>73</height>
                               <width>73</width>
@@ -98,30 +102,42 @@ Several fols. are affected by humidity.</condition>
                               <dim type="left">7</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 3r.</ab>
+                           <note anchored="true">All data are for fol. 3r.</note>
                            <ab type="ruling" part="N">fols. 2r-8v: 14 lines; fols. 9r-53r: 13 lines</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, uniform.</ab>
                         <seg type="ink" part="N">Black; red (brilliant vermillion).</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">18th century (?)</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>አሜ፡</abbr> for <expan instant="false">አሜን፡ </expan> (fol. 5r l.14).</item>
+                           <item>
+                              <abbr>መ፡/መስ፡</abbr> for <expan instant="false">መስቀል፡ </expan> (e.g., fols. 12r, 29v, 38r)</item>
+                           <item>
+                              <abbr>ሰ፡</abbr> for <expan instant="false">ሰላም፡ </expan> (fols. 38r-38v)</item>
+                           <item>
+                              <abbr>አሜ፡</abbr> for <expan instant="false">አሜን፡ </expan> (fol. 35r l.1)</item>
+                           <item>
+                              <abbr>አ፡</abbr> for <expan instant="false">አሜን፡ </expan> (fol. 45r l.4).</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                      <handNote xml:id="h3" script="Ethiopic"/>
@@ -136,16 +152,15 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 52v: ˀAsmat-prayer.<q xml:lang="gez">Fol. 52v: ዮፍታሄ፡ ቱላሜሄ፡… በአስማተ፡ ዝንቱ፡ ስምከ፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Incomplete.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00">Fols. 53v-55v: Protective prayer against thieves and robbers.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fols. 53v-55v: Protective prayer against thieves and robbers.<q xml:lang="gez">Fol. 53v: በሚካኤል፡ መልአክ፡ አፍዝዝ፡… ወለነጣቂ፡…  </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in Amharic and Gǝʿǝz.
+The name of the person to whom they are dedicated (probably Täklä Haymanot) has been erased from the supplication formulas.
                         </item>
                         <item xml:id="e1">- The letters መ and መስ, abbreviations of the word መስቀል, and the word እገሌ (s. above “Other details”) are marked with black and red dashes below and above throughout the Ms.; the same is for a single sentence in fol. 35r (with lines below and above).&#xD;
 - Cues for the rubricator: fols. 12v and 27r.&#xD;
@@ -172,7 +187,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0178MärgaḥəyaQəddusMikaʾel" instant="false" full="yes">Märgaḥəya Qəddus Mikaʾel / QMM</placeName>
+                        <placeName corresp="INS0178QMM" instant="false" full="yes">Märgaḥәya Qәddus Mikaʾel / QMM</placeName>
                      </origPlace>
                      <origDate notBefore="1700" notAfter="1800" instant="false">18th cent. (?)</origDate>
                   </origin>
@@ -215,10 +230,6 @@ They might have been replaced with still another name written interlineally and 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -240,7 +251,7 @@ They might have been replaced with still another name written interlineally and 
          <change who="DN" when="2010-12-08" status="draft">registered</change>
          <change who="VP" when="2013-12-06T16:29:54.809Z" status="draft">created</change>
          <change who="SH" when="2014-09-08T18:08:44.201Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

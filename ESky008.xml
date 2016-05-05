@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESky008" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESky008"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0171KoholoYoḥannǝsDäbräBetel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0171KY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>KY-008</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">156.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">2.5</measure> blank, in
-                                                <measure unit="quire">20.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">156.0</measure> folios, of which <measure unit="leaf" type="blank">2.5</measure> blank, in <measure unit="quire">20.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">22.0</height>
                               <width unit="cm">20.0</width>
@@ -124,7 +128,7 @@ Many leaves are stained with dirt. &#xD;
 Fire damage in fols. 29, 30, 31 with text loss.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="20">
                            <dimensions unit="mm">
                               <height>140</height>
                               <width>150</width>
@@ -137,28 +141,33 @@ Fire damage in fols. 29, 30, 31 with text loss.</condition>
                               <dim type="left">17</dim>
                               <dim type="intercolumn">15</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 6r.</ab>
+                           <note anchored="true">All data for fol. 6r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible (s. fol. 16r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible (s. fol. 62r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Regular, careful.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Early 18th century (?)</date>
+                        <list type="abbreviations">
+                           <item>ይ፡ካ፡ for ይብል፡ ካህን፡</item>
+                           <item>ይ፡ዲ፡ for ይብል፡ ዲያቆን፡</item>
+                           <item>ይ፡ሕ፡ for ይብል፡ ሕዝብ፡</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -178,22 +187,19 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 3ra-vb: Miracle of the Archangel Michael.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 3ra-vb: Miracle of the Archangel Michael.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in a careless hand.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 156va-vb: Regulation concerning the preparation of the blessed bread (ˀawlogiya) followed by a prayer.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#">Fol. 156vb: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 156vb: ዝመጽሀፍ፡ ዘዘመደማርያም፡ ዘወሐበቶ፡ ለቅዱስ፡ ዮሀንስ፡ መጥምቅ፡ ዘአጥረየቶ፡ በንዋያ፡ ዘሰረቆ፡ ወዘፈሀቆ፡ በስልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዝ፡ ይኩን፡</q>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>Fol. 156vb: Donation note.<q xml:lang="gez">Fol. 156vb: ዝመጽሀፍ፡ ዘዘመደማርያም፡ ዘወሐበቶ፡ ለቅዱስ፡ ዮሀንስ፡ መጥምቅ፡ ዘአጥረየቶ፡ በንዋያ፡ ዘሰረቆ፡ ወዘፈሀቆ፡ በስልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዝ፡ ይኩን፡</q>
+                           <q xml:lang="en">Fol. 156vb: This is the book of Zämädä Maryam who donated it to (the church of) St. John the Baptist, who acquired it with her money. He who steals it or erases (its text) shall be excommunicated by the authority of Peter and Paul.</q>
+                           Written by a semi-literate person (rare spelling variants, non-existing variation of the last letter in the word ውጉዝ፡).
                         </item>
                         <item xml:id="e1">- A piece of white paper glued on to the folio, with the title ቅዳሴ, in blue ink: fol. 1r. &#xD;
 - Names of the donors crudely written in the upper margin, in the same hand as Additio 3: fols. 52r, 57v, 69r, 101v, 107r, 116r, 131r, 141r.&#xD;
@@ -215,7 +221,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0171KoholoYoḥannǝsDäbräBetel" instant="false" full="yes">Koholo Yoḥannǝs Däbrä Betel / KY</placeName>
+                        <placeName corresp="INS0171KY" instant="false" full="yes">Koholo Yoḥannǝs Däbrä Betel / KY</placeName>
                      </origPlace>
                      <origDate notBefore="1711" notAfter="1716" instant="false">Yoḥannǝs is mentioned as the Patriarch (John XVI, Patriarch of Alexandria in 1676-1718) and Marqos as the Metropolitan (Marqos IV was Metropolitan of Ethiopia in 1689-1716) (fols. 34rb, 35ra, etc.), Yosṭos (r. 1711-16) is mentioned as the reigning king (fols. 22ra, 35va, 46ra).</origDate>
                   </origin>
@@ -257,10 +263,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -281,7 +283,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-02" status="draft">registered</change>
          <change who="IF" when="2011-11-24T09:02:56.439Z" status="draft">created</change>
          <change who="MK" when="2014-12-19T14:24:12.666Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

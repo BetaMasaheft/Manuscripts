@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmgm008" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESmgm008"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0216MǝʾǝsarGwǝḥilaQǝddusMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0216MGM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>MGM-008</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -50,9 +56,7 @@ three groups of red lines alternating with black lines on the incipit page (vol.
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">121.0</measure> folios,
-                                                in
-                                                <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">121.0</measure> folios, in <measure unit="quire">19.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">20.0</height>
                               <width unit="cm">18.0</width>
@@ -119,7 +123,7 @@ One folio is missing between fols. 1 and 2.</item>
                         <condition key="deficient">The ms. is rebound, the order of the fols. is wrong; some fols. are missing; some fols. are damaged by water or torn; tears are carefully mended on fols. 33, 90</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="19">
                            <dimensions unit="mm">
                               <height>135</height>
                               <width>145</width>
@@ -132,27 +136,27 @@ One folio is missing between fols. 1 and 2.</item>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
+                           <note anchored="true"/>
                            <ab type="ruling" part="N"/>
-                           <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">mediocre</ab>
                         <seg type="ink" part="N">Black; red (vivid vermilion; dark vermilion on fol. 13rb)</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">1550-1650</date>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic">fols. 1-24, 31-92, 114-117</handNote>
@@ -177,7 +181,7 @@ The quires and the leather cover are sewn together by two (some quires with thre
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0216MǝʾǝsarGwǝḥilaQǝddusMikaʾel" instant="false" full="yes">Mǝʾǝsar Gwǝḥila Qǝddus Mikaʾel / MGM</placeName>
+                        <placeName corresp="INS0216MGM" instant="false" full="yes">Mǝʾǝsar Gwǝḥila Qǝddus Mikaʾel / MGM</placeName>
                      </origPlace>
                      <origDate notBefore="1550" notAfter="1650" instant="false">The dating is based on the paleographic data only.</origDate>
                   </origin>
@@ -219,10 +223,6 @@ The quires and the leather cover are sewn together by two (some quires with thre
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -243,7 +243,7 @@ The quires and the leather cover are sewn together by two (some quires with thre
          <change who="DN" when="2012-05-19" status="draft">registered</change>
          <change who="MB" when="2014-12-15T21:55:54.842Z" status="draft">created</change>
          <change who="MB" when="2014-12-15T21:55:54.842Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

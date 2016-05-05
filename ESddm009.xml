@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESddm009" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESddm009"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0157DänderaDäbräMəḥrätMikaʾel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0157DDM"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>DDM-009</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">107.0</measure> folios,
-                                                in
-                                                <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">107.0</measure> folios, in <measure unit="quire">12.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">18.0</height>
                               <width unit="cm">15.5</width>
@@ -112,7 +116,7 @@ Remains of glue on the boards indicate that the cover has been removed.&#xD;
 Tears amended on some leaves: e.g., fols. 1, 12, 32, 39, 46.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="25">
                            <dimensions unit="mm">
                               <height>131</height>
                               <width>123</width>
@@ -125,62 +129,85 @@ Tears amended on some leaves: e.g., fols. 1, 12, 32, 39, 46.</condition>
                               <dim type="left">11</dim>
                               <dim type="intercolumn">7</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 50r.</ab>
+                           <note anchored="true">All data for fol. 50r.</note>
                            <ab type="ruling" part="N">The number varies from 23 to 30.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Some fols. have two rows of ruling pricks in the same margin (e.g., fol. 86v, 87v, 88v).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab part="N">
 The scribe did not use the last ruled line on fol. 31ra; he left some ruled lines unfilled on fol. 100va.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Mediocre.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Mid-18th – mid-19th century (?)</date>
+                        <list type="abbreviations">
+                           <item>Some of the abbreviations used throughout the text:</item>
+                           <item>ለዓ፡ ዓለ፡ አሜን፡ for ለዓለመ፡ ዓለም፡ አሜን፡</item>
+                           <item>ማኅ፡/ማኅሌ፡ for ማኅሌት፡</item>
+                           <item>ምል፡/ምልጣ፡ for ምልጣን፡</item>
+                           <item>መዝ፡ for መዝሙር፡</item>
+                           <item>ለዓ፡ for ለዓለም፡</item>
+                           <item>ሰላ፡ for ሰላም፡</item>
+                           <item>ስብሐ፡ for ስብሐት፡</item>
+                           <item>ትጉሃ፡ for ትጉሃን፡</item>
+                           <item>እስ፡ for እስመ፡</item>
+                           <item>ይትባ፡/ይትባረ፡ for ይትባረክ፡</item>
+                           <item>ቅን፡/ቅንዋ፡ for ቅንዋት፡</item>
+                           <item>ተን፡/ተንሥ፡ for ተንሥአ፡</item>
+                           <item>ዘአም፡/ዘአምላ፡ for ዘአምላኪየ፡</item>
+                           <item>ዘሰ፡/ዘሰን፡/ዘሰንበ፡ for ዘሰንበት፡</item>
+                           <item>ዓራ፡/ዓራራ፡/አራራ፡ for አራራይ፡</item>
+                           <item>ዕ፡/ዕዝ፡ for ዕዝል፡</item>
+                           <item>አቡ፡ for አቡን፡</item>
+                           <item>ዘይእ፡ for ዘይእዜኒ፡</item>
+                           <item>እግዚ፡ ነ፡/እግዚ(፡)ር፡ ነግ፡ for እግዚአብሔር፡ ነግሠ፡</item>
+                           <item>ሥላ፡ for ሥላሴ፡</item>
+                           <item>አጥ፡/አጥመ፡ for አጥመቀ፡</item>
+                           <item>ሶበ፡ ይ፡ for ሶበ፡ ይትነሣእ፡</item>
+                           <item>ማር፡ for ማርያም፡</item>
+                           <item>የካ፡ for የካቲት፡</item>
+                        </list>
                      </handNote>
                      <handNote xml:id="h2" script="Ethiopic"/>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"> Fol. 4r: Purchase note.</locus>
-                           <q xml:lang="gez"> Fol. 4r: ፲፱፴፬፡ ዓመተ፡ ምሕረት፡ ሐምሌ፡ ፴ቀን፡ እኔ፡ አለቃ፡ ገብረ፡ ማርያም፡ ወልደ፡ ሥላሴ፡ መዝሙር፡ በ፵፭፡ ስጨ፡ አሎኍ፡ ለቀኘዝማች፡ የዕብዩ፡ ተስፋ፡ ሚካኤል፡ ኃይለ፡ ሥላሴ፡ ይሙት፡ ብሩም፡ ፵፭፡ ደረሰኝ፡ እኔ፡ አለቃ፡ ገብረ፡ ማርያም፡ …</q>
+                           <locus/> Fol. 4r: Purchase note. <q xml:lang="gez"> Fol. 4r: ፲፱፴፬፡ ዓመተ፡ ምሕረት፡ ሐምሌ፡ ፴ቀን፡ እኔ፡ አለቃ፡ ገብረ፡ ማርያም፡ ወልደ፡ ሥላሴ፡ መዝሙር፡ በ፵፭፡ ስጨ፡ አሎኍ፡ ለቀኘዝማች፡ የዕብዩ፡ ተስፋ፡ ሚካኤል፡ ኃይለ፡ ሥላሴ፡ ይሙት፡ ብሩም፡ ፵፭፡ ደረሰኝ፡ እኔ፡ አለቃ፡ ገብረ፡ ማርያም፡ …</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in Amharic and is dated 30 Ḥamle 1934 year of Mercy (= 6th August 1942). It states that ʾaläqa Gäbrä Maryam Wäldä Śǝllase sold this book to qäňňazmač Yäʿbǝyyo Täsfa Mikaʾel for 45 birr. It also mentions ʾaläqa Kahǝsay ʾAbrǝha as guarantor of the book. The fingerprints of the seller, the buyer and the guarantor are placed at the end of the note.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"> Fol. 4v: Donation note.</locus>
-                           <q xml:lang="gez"> Fol. 4v: ዝመዝሙር፡ ዘቀኘዝማች፡ የዕብዮ፡ ተስፋ፡ ሚካኤል፡ ዘወሀቦ፡ ለቅዱስ፡ ሚካኤል፡ ደንዴራ፡</q>
+                           <locus/> Fol. 4v: Donation note. <q xml:lang="gez"> Fol. 4v: ዝመዝሙር፡ ዘቀኘዝማች፡ የዕብዮ፡ ተስፋ፡ ሚካኤል፡ ዘወሀቦ፡ ለቅዱስ፡ ሚካኤል፡ ደንዴራ፡</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note states that qäňňazmač Yäʿbǝyyo Täsfa Mikaʾel donated this book to the church of Qǝddus Mikaʾel Dändera. The ink is partly faded away.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"> Fol. 5r: Ownership note.</locus>
-                           <q xml:lang="gez"> Fol. 5r: ዘንቱ፡ መጽሐፈ፡ መዝሙር፡ ዘቀኘዝማች፡ የዕብየዮ፡</q>
+                           <locus/> Fol. 5r: Ownership note. <q xml:lang="gez"> Fol. 5r: ዘንቱ፡ መጽሐፈ፡ መዝሙር፡ ዘቀኘዝማች፡ የዕብየዮ፡</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is crudely written in pencil in the upper margin of the folio. It states that the book belongs to qäňňazmač Yäʿbǝyyo.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#"> Fol. 94r: Prayer.</locus>
-                           <q xml:lang="gez"> Fol. 94r: ዘበሱራፌል፡ ወኬሩቤል፡ የዓርፍ፡ ወያከርሞ፡ በበዓመት፡ ዘእምቅድመ፡ ዓለም፡ ሀሎ፡ ኀይለ፡ ልዑለ፡ ይኬልልዎ፡ በስብሐት፡ …</q>
+                           <locus/> Fol. 94r: Prayer. <q xml:lang="gez"> Fol. 94r: ዘበሱራፌል፡ ወኬሩቤል፡ የዓርፍ፡ ወያከርሞ፡ በበዓመት፡ ዘእምቅድመ፡ ዓለም፡ ሀሎ፡ ኀይለ፡ ልዑለ፡ ይኬልልዎ፡ በስብሐት፡ …</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is crudely written in pencil.
                         </item>
                         <item xml:id="e1">- The title መዝምር is written on the back board with white paint.&#xD;
 - The scribe used compressed script: e.g., fols. 93rb, 95rb.&#xD;
@@ -207,7 +234,7 @@ The scribe did not use the last ruled line on fol. 31ra; he left some ruled line
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0157DänderaDäbräMəḥrätMikaʾel" instant="false" full="yes">Dändera Däbrä Məḥrät Mikaʾel / DDM</placeName>
+                        <placeName corresp="INS0157DDM" instant="false" full="yes">Dändera Däbrä Mәḥrät Mikaʾel / DDM</placeName>
                      </origPlace>
                      <origDate notBefore="1750" notAfter="1850" instant="false">Mid-18th – mid-19th cent. (?)</origDate>
                   </origin>
@@ -249,10 +276,6 @@ The scribe did not use the last ruled line on fol. 31ra; he left some ruled line
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -274,7 +297,7 @@ The scribe did not use the last ruled line on fol. 31ra; he left some ruled line
          <change who="DN" when="2011-05-16" status="draft">registered</change>
          <change who="MV" when="2015-03-09T10:13:16.222Z" status="draft">created</change>
          <change who="MV" when="2015-03-26T14:44:51.770Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

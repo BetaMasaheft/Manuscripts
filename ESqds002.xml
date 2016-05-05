@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESqds002" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESqds002"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0110QiʿatDäbräṢǝyonQǝddǝstMaryam"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0110QDS"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>QDS-002</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">123.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">1.0</measure> blank, in
-                                                <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">123.0</measure> folios, of which <measure unit="leaf" type="blank">1.0</measure> blank, in <measure unit="quire">18.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">16.0</width>
@@ -122,7 +126,7 @@ Holes in fols. 20, 30, 40, 48, 50.&#xD;
 Holes amended in fols. 1, 2, 81.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="20">
                            <dimensions unit="mm">
                               <height>155</height>
                               <width>135</width>
@@ -135,51 +139,57 @@ Holes amended in fols. 1, 2, 81.</condition>
                               <dim type="left">5</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for fol. 3r.</ab>
+                           <note anchored="true">All data are for fol. 3r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Structural pricks are partly visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Careful. Smaller letters starting from fol. 120va.</ab>
                         <seg type="ink" part="N">Black, red (sometimes reddish-brown, e.g. fols. 79v, 80r)</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">second half of 19th century</date>
+                        <list type="abbreviations">
+                           <item>ይካ፡ for ይበል፡ ካህን፡</item>
+                           <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
+                           <item>በእ፡ for በእንተ፡</item>
+                           <item>ይዲ፡ for ይበል፡ ዲያቆን፡</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00"><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:RelyOnVML /> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]-->Fols. 1va-2vb: Supplications from the Daily Office (cp. MQ p. 295), chants from the Ordinary of the Mass (MQ, 1955 E.C., cp. pp. 49-50), partly unidentified.</locus>
-                           <q xml:lang="gez">Fol. 1va: እግዚአብሔር፡ እግዚእ፡ ኢዘሱስ፡ ክርስቶስ፡ አምላክነ፡ ዘትቤሎ፡ ለፍቁርከ፡ ዮሐንስ፡ …</q>
+                           <locus/>
+                           <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:RelyOnVML /> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]-->Fols. 1va-2vb: Supplications from the Daily Office (cp. MQ p. 295), chants from the Ordinary of the Mass (MQ, 1955 E.C., cp. pp. 49-50), partly unidentified. <q xml:lang="gez">Fol. 1va: እግዚአብሔር፡ እግዚእ፡ ኢዘሱስ፡ ክርስቶስ፡ አምላክነ፡ ዘትቤሎ፡ ለፍቁርከ፡ ዮሐንስ፡ …</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Chants from the Ordinary of the Mass (fols. 2rb-2vb) has been written in script of smaller size.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#">Fol. 2vb: Heading of Text I mentioning the name of the donor in the supplication formula.</locus>
-                           <q xml:lang="gez">Fol. 2vb: ኪዳን፡ ዘነግህ፡ ዝነገሮሙ፡ በአባዊነ፡ ሐዋርያት፡ እምቅድመ፡ ዕርገቱ፡…</q>
+                           <locus/>
+                           <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:RelyOnVML /> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]-->Fol. 2vb: Heading of Text I mentioning the name of the donor in the supplication formula. <q xml:lang="gez">Fol. 2vb: ኪዳን፡ ዘነግህ፡ ዝነገሮሙ፡ በአባዊነ፡ ሐዋርያት፡ እምቅድመ፡ ዕርገቱ፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The heading written entirely in red ink has been added later.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00"><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:RelyOnVML /> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]-->Fol.122vb: Donation note.</locus>
-                           <q xml:lang="gez">Fol.122vb: ዛቲ፡ መጽሐፍ፡ ዘወይዘሮ፡ ትብለጽ፡ ስመ፡ አቡሃ፡ ገብረ፡ ሕይወት…</q>
+                           <locus/>
+                           <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:RelyOnVML /> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]-->Fol.122vb: Donation note. <q xml:lang="gez">Fol.122vb: ዛቲ፡ መጽሐፍ፡ ዘወይዘሮ፡ ትብለጽ፡ ስመ፡ አቡሃ፡ ገብረ፡ ሕይወት…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           wäyzäro Tǝbläṣ is mentioned as the donor, other family members are also mentioned.
                         </item>
                         <item xml:id="e1">- Omitted passages have been written in small script in the upper margin: fols. 8r, 31r, 34v, 35r, 72v, 73r, 80v, 83v, 85v, 109v. &#xD;
 - Crude notes: fol. 1r.</item>
@@ -200,7 +210,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0110QiʿatDäbräṢǝyonQǝddǝstMaryam" instant="false" full="yes">Qiʿat Däbrä Ṣǝyon Qǝddǝst Maryam / QDS</placeName>
+                        <placeName corresp="INS0110QDS" instant="false" full="yes">Qiʿat Däbrä Ṣǝyon Qǝddǝst Maryam / QDS</placeName>
                      </origPlace>
                      <origDate notBefore="1872" notAfter="1876" instant="false">King Yoḥannǝs IV (r. 1872-89) is mentioned on fols. 9ra, 33rb, 40va; Coptic Patriarch Demetrius (in tenure 1862-70) is mentioned on fols. 35va, 50ra, 50va; Metropolitan ʾAtnatewos (in tenure 1869-76) is mentioned on fols. 33vb, 35va, 40rb, 50ra, 50va, 80ra, 98va. &#xD;
 Fol. 123 originates from a different, older (late 15th or 16th century?) Ms.</origDate>
@@ -243,10 +253,6 @@ Fol. 123 originates from a different, older (late 15th or 16th century?) Ms.</or
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -267,7 +273,7 @@ Fol. 123 originates from a different, older (late 15th or 16th century?) Ms.</or
          <change who="DN" when="2010-12-02" status="draft">registered</change>
          <change who="DE" when="2013-10-10T13:10:55.104Z" status="draft">created</change>
          <change who="SD" when="2014-09-30T09:42:22.021Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

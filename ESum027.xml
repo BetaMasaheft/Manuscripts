@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESum027" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESum027"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0017ʿUraQirqos"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0017UQ"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>UM-027</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">263.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">0.0</measure> blank, in
-                                                <measure unit="quire">35.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">263.0</measure> folios, of which <measure unit="leaf" type="blank">0.0</measure> blank, in <measure unit="quire">35.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">29.5</height>
                               <width unit="cm">20.0</width>
@@ -172,7 +176,7 @@ The first two quires are incomplete, some fols. are missing.</item>
                         <condition key="good">The first two quires are incomplete, some fols. (probably those with miniatures) are missing. Fol.61 (Jn. 17:10-24) has been severed from the counterpart and misplaced; it must be between fol. 249v and 250r.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="25">
                            <dimensions unit="mm">
                               <height>220</height>
                               <width>130</width>
@@ -185,19 +189,21 @@ The first two quires are incomplete, some fols. are missing.</item>
                               <dim type="left">15</dim>
                               <dim type="intercolumn">20</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data are for the second page of the first Gospel (fol. 12r).</ab>
+                           <note anchored="true">All data are for the second page of the first Gospel (fol. 12r).</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Pricking and ruling are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written below the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
+                        </layout>
+                        <layout>
                            <ab type="CruxAnsata" part="N">
                               <locus target=""/>
                            </ab>
@@ -208,83 +214,97 @@ The bottom line is written above the ruling.</ab>
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Careful.</ab>
                         <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Late 14th - early 15th century (?)</date>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 82ra: Inventory of items donated to Qәfrәya by Tänśәˀa Krәstos in the time of King Bäˀәdä Maryam.</div>
+                           <q xml:lang="gez">Fol. 82ra: አነ፡ ተንሥአ፡ ክርስቶስ፡ ዘወሀብኩ፡ ለቅፍርያ፡ መካን፡ ለቤተ፡ መስቀል፡ እንዘ፡ ንጉሥ፡ በእደ፡ ማርያም፡ ዘተሰመየ፡ ደዊት፡ አሐዱ፡ በርይታ፡ ካባቴ፡ አበሳ፡ ሰባቱ፡ ጸምር፡ ቀሚስ፡ ሰባቱ፡ ምጣሕት፡ ክልኤቱ፡ መንጦላዕት፡ አሐዱ፡ ብዙት፡ ኢትርስዑኒ</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in a crude hand; it mentions King Bäʾәdä Maryam (r. 1468-78).
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 82va: Inventory of items donated to Qәfrәya by King Säyfä ˀArˁad, an unnamed "head of the monastery", and mälake baḥər Bəlän Sägäda.<q xml:lang="gez">Fol. 82va: አልባሰ፡ ዘወሀበ፡ ንጉሥ፡ ሰይፈ፡ አርዓድ፡ ለመካነ፡ ቅፍርያ፡ ፬፡ መከቱብ። ፬፡ ሞጣኅት፡ ዘመከቱብ። ፫፡ መርዋይ፡ ግብረ፡ መርፍእ፡ አልባሰ፡ ዘወሀበ፡ አሐዱ፡ አብ፡ ምኔት፡ ዘቅፍርያ፡ ፪፡ ቀሚስ፡ ፫፡ ጻሕለ፡ ኪዳን፡ ፬፡ አኵመም፡ አሐዱ፡ ግብረ፡ መርፍእ። ፫፡ መንጦላዕት፡ ፪፡ መጽሐፍ። ፬፡ ብዙት። ። ዘወሀበ፡ ብሌን፡ ሰገዳ፡ መላኬ፡ ባሕር፡ ፬፡ ሐሪር፡ ወ፬፡ መርዋይ፡ ፰ዘንጉሥ፡ ወ፰፡ ዘአበ፡ ምኔት፡ ፳ወ፰፡ በመዋዕለ፡ አሐዱ፡ አበ፡ ምኔት፡ ይምሐሮሙ፡ በጸሎተ፡ መስቀል፡ ወበጸሎተ፡ ማርያም፡ ወበጸሎተ፡ ሚካኤል፡ ወበጸሎተ፡ ገብርኤል፡ በመንግሥተ፡ ሰማያት፡ እግዚአብሔር፡ ይምሐሮሙ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወኤሜን፡ ይኩን።</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in a trained hand; it describes a rich donation to the church of Qәfrәya made by King Säyfä ʾArʿad (r. 1344-71) and others. The hand appears old, but it is questionable if it can be dated to Säyfä ʾArʿad’s period.
                         </item>
                         <item xml:id="a3">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 82vb: Record concerning donation to Qәfrәya made by Tänśәˀa Krәstos.</div>
+                           <q xml:lang="gez">Fol. 82vb: በአኰቴተ፡ አብ፡ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አጽሐፍኩ፡ አነ፡ ተንሥአ፡ ክርስቶስ፡ ዘፍቅርያ፡ መካን፡ ዘከመ፡ ረተዕክዎ፡ በሥዩመ፡ ግሎ፡ መከዳ፡ ስም፡ ዘአነ፡ በሰርሐ፡ ከተማ፡ ዘብሌን፡ እንዘ፡ መኩንን፡ እደ፡ ወርቅ፡ ወመለከንያ፡ ገብረ፡ ቂርቆስ፡ ወርእስ፡ መጼን፡ ኖብ፡ ወባኅር፡ እንባ፡ ማማስ፡ ዘከመ፡ ተገበተ፡ በአክሱም፡ ገንታ፡ ወርቅ፡ ወአግባእክዎ፡ ሕልቆ፡ ንጉሥ፡ ወዘንተ፡ አእምሩ፡ ደቂቀ፡ መካን፡ ለደሐሪ</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the same crude, old hand as Additio 1.
                         </item>
                         <item xml:id="a4">
-                           <locus target="#00" n="#">Fol. 126vb: Directive for the ministers.</locus>
-                           <q xml:lang="gez">Fol. 126vb: ስብከተ፡ ሆሣዕና፡ ቅድመ፡ ኵሉ፡ ንፍሑ፡ ቀርነ፡ በዕለተ፡ ሠርቅ፡ በእበርተ፡ በዓልነ፡ እስመ፡ ስርአቱ፡ በእስራኤል፡ ውእቱ።</q>
+                           <locus/>Fol. 126vb: Directive for the ministers.<q xml:lang="gez">Fol. 126vb: ስብከተ፡ ሆሣዕና፡ ቅድመ፡ ኵሉ፡ ንፍሑ፡ ቀርነ፡ በዕለተ፡ ሠርቅ፡ በእበርተ፡ በዓልነ፡ እስመ፡ ስርአቱ፡ በእስራኤል፡ ውእቱ።</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a5">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 127ra-b: Inventory of the books and holy utensils (of Qәfreya ˁUra Mäsqäl?).</div>
+                           <q xml:lang="gez">Fol. 127ra-b: ወንጌል፡ ፬፡ ኦሪት፡ ነገሥት። ኢሳይያስ። ኤርምያስ። ሄኖክ። ሕዝቅኤል። ዕዝራ። ምሳልያተ፡ ሰሎሞን። ሄርማ። ድርሳን፡ ፭። አፈወርቅ፡ ፪፡ ገድለ፡ ሐዋርያት። ገድለ፡ ሰማዕት፡ ፪። ሕብረተ፡ ቃላት፡፪። ሰዓታት፡፬። በርባራ፡ ዜና፡ አበው። እንባቆም። ዲድስቅልያ። ጳውሉስ፡ ፫። ሐዋርያ፡ ፪። ሲኖዶስ። ኪዳን፡ ፪፡ ቀኖና። መጽሐፈ፡ ምህልላ። ቅዱስ፡ ፫። ጸሎተ፡ ቊርባን፡ ፪። ቃሌ፡ ምንጦስ። ግብጻዊ። ጎርጎርዮስ። ቊስቋም። መጽሐፈ፡ ዕረፍታ፡ ለማርያም። ተአምረ፡ ጊዮርጊስ። ክርስጢና&lt;…&gt;ጳውሎስ፡ አርአያ፡ ዮሐንስ፡ ፪። ገድለ፡ እንድርያኖስ። ንስሓ፡ ጽገት። ብንያሚ። ንስሓ፡ አዳም። ዘገብረ፡ እንድርያስ። ሰላም፡ ፬። መዝሙር፡ ፪፡ ይትባረከ፡፪። ውዳሴ፡ ማርያም፡ ፪። ፍልሰተ፡ ማርያም፡ ፪። አርያም፡ ፪። ዋዜማ። ሃለላት፡ ፪። ስምዓኒ፡ ፪። ሰዓታት፡ አዳም፡ ምስለ፡ ኢየሱስ። ስብሐተ፡ ነግህ። ቅንዋት። ሊጦን። ዳዊት። ገድለ፡ ፈያታዊ ። ክብር፡ ይእቲ። ርእየ፡ በርቶሎሜዎስ።&lt;...&gt;፫ ሰርፍ። ፬ጺባግ። ፬፡ ርክቱብ። ፬፡ ቀሚስ። ፭፡ ሞጣኅት። ፫፡ ቅጥብ። ፬ጻዕዳ፡ ሐሪር። ፬፡ ጻሕል። ፫፡ ጽዋዕ። ፪፡ አውደ፡ ጻሕል። ፪፡ ዕርፈ፡ መስቀል። ፫፡ መግነዝ። ፬፡ ዘጽዋዕ። ፬ጻሕለ፡ ክዳን። ፪፡ አኲማም። ፪፡ ኲስኲስት። ፰፡ መስቀል፡ ዘብርት። ፭፡ ማዕተበ፡ ቀዋሚ። ፭፡ ማዕተብ፡ እድ። ፬፡ ይርዕየነ። ባሬታ። ፪፡ መደወል። ጸናጽል። ፪፡ ብዙት። ፬ቅስዬ። ፳ወ፬፡ ልብስ። ፪፡ ማዕጣንት። ፬፡ መንበር። ፬፡ መብራህት። ፶፫። ፲ወ፫፡ ወርቅ። ፬፡ ብሩር፡ ወኈልቆሙ፡ ፻፸ወ፬</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in a 15th-cent. hand.
                         </item>
                         <item xml:id="a6">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 127va: Inventory of donated items (?).</div> 
+                           <q xml:lang="gez">Fol. 127va: &lt;...&gt;በመንጦላዕት፡ ፬፡ ቀሚስ፡&lt;...&gt;ፍሉስ፡ ፬፡ ሰምዓ፡ ፬፡ ዘንተ፡ ዘወሀበ፡ ፬ል ፈለሲ፡ ዘመጽአ፡ እምርሑቅ፡&lt;...&gt;፡ መስቀለ፡ ክርስቶስ፡ ለማርያም፡ ፬፡ ለገብርኤል፡ በከመ፡ ይቤ፡ እግ&lt;...&gt;፡ በወንጌል፡&lt;...&gt;እምዘ&lt;...&gt;፡ እግዚአብሔር፡ አባእኩ፡ ወ&lt;...&gt;፡ስምየ፡&lt;...&gt;፡ መጽሐፈ፡&lt;...&gt;፡ በከመ፡&lt;...&gt;፡ አስማቲሆሙ፡&lt;...&gt;፡ ፍቅሩ፡ ለክርስቶስ፡ ወኪያከሙኒ፡ ይዘከርክመ፡ በምጽአቱ፡ ክርስቶስ፡ ዘዉስተ፡ ስንሐቲሁ፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The text of the note is abraded, for the most part poorly legible.
                         </item>
                         <item xml:id="a7">
-                           <locus target="#00" n="#">Fol. 127vb: Chronological record.</locus>
-                           <q xml:lang="gez">Fol. 127vb:  በዘሀሎነ፡ በመዋዕለ፡ ማርቆስ፡ ወንጌላዊ፡... </q>
+                           <locus/>Fol. 127vb: Chronological record.<q xml:lang="gez">Fol. 127vb:  በዘሀሎነ፡ በመዋዕለ፡ ማርቆስ፡ ወንጌላዊ፡... </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           Written in the same hand as Additio 4. The record  refers to 306 year of mercy, the year of Mark, which can be 1654 A.D.
                         </item>
                         <item xml:id="a8">
-                           <locus target="#00" n="#">Fol. 202va: Record concerning land possession and tributes Qəfrəya ˁUra Mäsqäl.</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 202va: Record concerning land possession and tributes Qәfrәya ˁUra Mäsqäl.<q xml:lang="gez">Fol. 202va: ስምዑ፡ አባዊነ፡ ወአሐዊነ፡ ምድር፡ ዘቅፍርያ፡ መካን፡ በዑራ፡ ፳፡ በሐገረ፡ ሕሴ፡ ፫ማየ፡ መሬት፡ ፫ጸቀምጤ፡ ፫ዐደ፡ ቄሶ፡ ፪ሰጦ፡ ፪ብርክቶ፡ ፭ደንጕሎ፡ ፲፪፡ ይእዜሰ፡ ኮነ፡ ፫፡ዝንቱ፡ ገራ[ህ]ተ፡ ዘቤተ፡ መስቀል፡ ወመባእኔ፡ ነበረ፡ ቀድመ፡ ለለ፡ ብሔሩ፡ ዕንተላም፡ ይእዜሰ፡ ኮነ፡ ካ{ዕ}በ። ወንፍቅ፡ ሰላም፡ መስሐል፡ ወእገብቶ፡ ዘጸሐፈ፡&lt;...&gt;</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a9">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>
+                           <div style="text-align: justify; line-height: normal"
+                                part="N"
+                                org="uniform"
+                                sample="complete">Fol. 260vb: Inventory of items donated to several churches.</div>
+                           <q xml:lang="gez">
+                              <div part="N" org="uniform" sample="complete">Fol. 260vb: በአኰተተ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወሀብኩ፡ ንዋይየ፡ ለመስቀለ፡ ክርስቶስ፡ ወለማርያም፡ ወለገብርኤል፡ ለቅፍርያ፡ መካን፡ ፬ሳግ፡ ወመንዙሌ፡ ወዳዊት፡ ወ፪፡ ደቂቅየ፡ ሀሎነ፡ ንብል፡ ወእግዚእ፡ ረድእነ፡ ወመንበረ፡ ኀጺን፡ ሠናይ፡ ከመ፡ ይዘክረኒ፡ ክርስቶስ፡ በመንግሥቱ፡ ወአንትመሂ፡ ካህናት፡ ከመ፡ ኢትርስዑኒ፡ በጊዜ፡ ጸባ[እ]ት፡ ወቊርባን፡ ለዓለመ፡ ዓለመ፡ አሜን፡ ወአመ፡ ፲፮፡ለግንቦት፡ ዘአዕረፈ፡ አይሕስመ፡ ነ፡ አሜ[ን]፡ እ</div>
+                           </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a10">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 262r: Record concerning a land grant of King Lәbnä Dәngәl (r. 1508-40) for commemoration (täzkar) of qäys ḥaḍäy ˀAskal.<q xml:lang="gez">Fol. 262r: በአኰተተ፡ አብ፡ ወወልደ፡ ወመንፈስ፡ ቅዱስ፡ ወሀበ፡ ንጉሥነ፡ ልብነ፡ ድንግል፡ ምድረ፡ ወሃቢት፡ [ለ]ተዝካረ፡ አስካል፡ ቀይስ፡ ሐፀይ፡ አመ፡ ሐሙሱ፡ ለስኔ፡ ወአመ፡ ሰዱሱ፡ ኅዳር፡ ይግበሩ፡ ተዝካሩ፡ በቊስቋም፡ ወትስፋ፡ ጊዮርጊስ፡ ዐቀቢሁ፡ ወልደ፡ ሰመረ፡ ለትውልደ፡ ትውልድ፡ ወለመስቀል፡ ዘተውሀበ፡ ዝንቱ፡ ኵሉ፡ እመሂ፡ መኰንን፡ ወእመሂ፡ ንቡረ፡ ዕድ፡ ወእመሂ፡ አውፋሪ፡ ወጉዛነ፡ ይኩኑ፡ በአፈ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ዘኢይትፈተሕ፡ ለዓለመ፡ ዓለም፡ አሜን። </q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           
                         </item>
                         <item xml:id="a11">
-                           <locus target="#00" n="#">Fol. 263ra: Record concerning the commemoration of nəburä ˀəd Tänśəˀa Krəstos and Sämrä Krəstos (7 Gənbot).</locus>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 263ra: Record concerning the commemoration of nәburä ˀәd Tänśәˀa Krәstos and Sämrä Krәstos (7 Gәnbot).<q xml:lang="gez">Fol. 263ra: በአኰተተ፡ አብ፡ ወወልደ፡ ወመንፈስ፡ ቅዱስ፡ አጽሐፍነ፡ ዘንተ፡ መጽሐፈ፡ ኀቢረነ፡ ደቂቀ፡ ቅፍርያ፡ ካህናት፡ ወመነኮሳት፡ አመ፡ ፯፡ ለግንቦት፡ በእንተ፡ ተዝካሮሙ፡ ለአቡነ፡ ተንሥአ፡ ክርስቶስ፡ ንቡረ፡ እድ፡ ወሰምረ፡ ክርስቶስ፡ ወይሰሀለነ፡ ክርስቶስ፡ እርድእቶሙ፡ ፪፡ ወዘንተ፡ ዘአጽሐፉ፡ ከመ፡ ይዝክርዎሙ</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note tells that the "book" was commissioned by the “children of Qәfrәya”, to commemorate, on the 7th of Gǝnbot nәburä ʾәd ʾabunä Tänśәʾa Krәstos and Yәsahlännä Krәstos.
                         </item>
                         <item xml:id="a12">
-                           <locus target="#00" n="#"/>
-                           <q xml:lang="gez"/>
+                           <locus/>Fol. 263ra-b: Inventory of books of the church of Qәfrәya ˁUra Mäsqäl.<q xml:lang="gez">Fol. 263ra-b: ወመጻሕፍትኒ፡ ዘቅርያ፡ ፴ወ፬፡ ግብረ፡ ሕማማት፡ ፪፡ ገድለ፡ ሰማዕት፩፡…</q>
                            <q xml:lang="en"/>
-                           <p part="N"/>
+                           The note is written in the same hand as Additio 7 and the directive for the ministers on fol. 126vb.
                         </item>
                      </list>
                   </additions>
@@ -308,7 +328,7 @@ Two metal pegs are inserted in the outer edge of the front board.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0017ʿUraQirqos" instant="false" full="yes">ʿUra Qirqos / UM</placeName>
+                        <placeName corresp="INS0017UM" instant="false" full="yes">ʿUra Qirqos / UM</placeName>
                      </origPlace>
                      <origDate notBefore="1350" notAfter="1450" instant="false">Mid-14th - mid-15th cent.(?) The earliest king mentioned in Additio 2 is Säyfä ʾArʿad (r. 1344-71), but the note may be posterior to his time.  &#xD;
 Other Additiones mention King Bäʾǝdä Maryam (r. 1468-78) and King Lǝbnä Dǝngǝl (r. 1508-40).</origDate>
@@ -351,10 +371,6 @@ Other Additiones mention King Bäʾǝdä Maryam (r. 1468-78) and King Lǝbnä D�
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -375,7 +391,7 @@ Other Additiones mention King Bäʾǝdä Maryam (r. 1468-78) and King Lǝbnä D�
          <change who="DN" when="2010-04-28" status="draft">registered</change>
          <change who="SA" when="2011-03-08T15:06:01.679Z" status="draft">created</change>
          <change who="DN" when="2015-09-11T17:37:44.011Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

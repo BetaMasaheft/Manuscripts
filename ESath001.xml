@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESath001" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESath001"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0095ʾAraʿroTäkläHaymanot"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0095ATH"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>ATH-001</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -47,9 +53,7 @@ The incipits of the Gospels are written alternately in red and black lines (s. f
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">130.0</measure> folios,
-                                                of which <measure unit="leaf" type="blank">0.5</measure> blank, in
-                                                <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">130.0</measure> folios, of which <measure unit="leaf" type="blank">0.5</measure> blank, in <measure unit="quire">12.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">37.5</height>
                               <width unit="cm">28.5</width>
@@ -90,7 +94,7 @@ Quire structure of the Ms. cannot be identified with certainty, as most of the l
                         <condition key="deficient">The binding of the Ms. is destroyed. Most of the traditional introduction texts are missing; Text V is incomplete. The front and the back boards are broken and repaired by means of strips of tissue. Some of the quires were reinforced by parchment guards.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="2" writtenLines="25">
                            <dimensions unit="mm">
                               <height>267</height>
                               <width>206</width>
@@ -103,19 +107,21 @@ Quire structure of the Ms. cannot be identified with certainty, as most of the l
                               <dim type="left">10</dim>
                               <dim type="intercolumn">17</dim>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 77r.</ab>
+                           <note anchored="true">All data for fol. 77r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling is mostly visible; pricking is partly visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling is mostly visible; pricking is partly visible.</ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are partly visible (s. fol. 19r).</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are not visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
+                        </layout>
+                        <layout>
                            <ab type="CruxAnsata" part="N">
                               <locus target=""/>
                            </ab>
@@ -125,9 +131,7 @@ The bottom line is written above the ruling.</ab>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, regular, by a well-trained hand.</ab>
-                        <seg type="ink" part="N">Black; red.</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
-                        <date instant="false">Late 15th - first half of the 16th century.</date>
+                        <seg type="ink" part="N">Black; red.</seg>The handwriting is similar to that of Ms. QQM-005.<date instant="false">Late 15th - first half of the 16th century.</date>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -148,7 +152,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0095ʾAraʿroTäkläHaymanot" instant="false" full="yes">ʾAraʿro Täklä Haymanot / ATH</placeName>
+                        <placeName corresp="INS0095ATH" instant="false" full="yes">ʾAraʿro Täklä Haymanot / ATH</placeName>
                      </origPlace>
                      <origDate notBefore="1450" notAfter="1550" instant="false">Second half of the 15th or first half of the 16th century (?).</origDate>
                   </origin>
@@ -190,10 +194,6 @@ Two pairs of sewing stations.</decoNote>
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -214,7 +214,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-17" status="draft">registered</change>
          <change who="IF" when="2011-06-18T11:58:46.166Z" status="draft">created</change>
          <change who="DN" when="2015-09-02T15:57:09.120Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

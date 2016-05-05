@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESky006" xml:lang="en" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESky006"
+     xml:lang="en"
+     type="mss">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -23,8 +29,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <sourceDesc default="false">
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository corresp="INS0171KoholoYoá¸¥annÇ&#x9d;sDÃ¤brÃ¤Betel"/>
-                  <collection>Ethio-Spare</collection>
+                  <repository corresp="INS0171KY"/>
+                  <collection>Ethio-SPaRe</collection>
                   <idno>KY-006</idno>
                </msIdentifier>
                <msContents defective="false">
@@ -45,9 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">174.0</measure> folios,
-                                                in
-                                                <measure unit="quire">22.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">174.0</measure> folios, in <measure unit="quire">22.0</measure> quires. 
                                                 <dimensions type="outer">
                               <height unit="cm">34.0</height>
                               <width unit="cm">30.0</width>
@@ -127,7 +131,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 The upper margin of the fols. is stained with water.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout columns="3" writtenLines="31">
                            <dimensions unit="mm">
                               <height>240</height>
                               <width>233</width>
@@ -140,43 +144,48 @@ The upper margin of the fols. is stained with water.</condition>
                               <dim type="left">11</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <ab type="ruling" part="N">All data for fol. 32r.</ab>
+                           <note anchored="true">All data for fol. 32r.</note>
                            <ab type="ruling" part="N"/>
-                           <ab type="pricking" subtype="pattern" part="N">Ruling and pricking are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">Ruling and pricking are visible. </ab>
+                           <ab type="ruling" subtype="patter" part="N">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Primary pricks are visible. </ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="pricking" part="N">
 Ruling pricks are visible.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The upper line is written above the ruling.</ab>
-                           <ab type="pricking" subtype="pattern" part="N">
+                           <ab type="ruling" part="N">
 The bottom line is written above the ruling.</ab>
                         </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <ab type="script" part="N">Fine, by a well-trained hand.</ab>
                         <seg type="ink" part="N">Black, red (vivid tangelo)</seg>
-                        <persName role="scribe" corresp="PRS00000" instant="false" full="yes"><!--Only the name of the scribe should be here, with appropriate correspondence--></persName>
                         <date instant="false">Mid-18th - mid-19th century.</date>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ክ/ክፍ</abbr> for <expan instant="false">ክፍል </expan> (e.g., fols. 5va, 13vc, 17vb).</item>
+                           <item>
+                              <abbr>ፍ/ፍካ</abbr> for <expan instant="false">ፍካሬ </expan> (e.g., fols. 155ra, 155vb).</item>
+                           <item>ጴጥ/ጴጥሮስ (e.g., fols. 167vc).</item>
+                        </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus target="#00" n="#">Fol. 173ra: Donation note.</locus>
-                           <q xml:lang="gez">Fol. 173ra: ዝንቱ፡ መጽሐፍ፡ ዘወሀቦ፡ ለቅዱስ፡ መጥምቅ፡ ከመ፡ ይስረይ፡ ኀጢአቶ፡ ለገብረ፡ እግዚአብሔር፡ አሚናዳብ።</q>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>Fol. 173ra: Donation note.<q xml:lang="gez">Fol. 173ra: ዝንቱ፡ መጽሐፍ፡ ዘወሀቦ፡ ለቅዱስ፡ መጥምቅ፡ ከመ፡ ይስረይ፡ ኀጢአቶ፡ ለገብረ፡ እግዚአብሔር፡ አሚናዳብ።</q>
+                           <q xml:lang="en">Fol. 173ra: This is the book which he donated to St. (John) the Baptist so that He might forgive the sins of ˀAminadab, the servant of God.</q>
+                           Written in the main hand.
                         </item>
                         <item xml:id="a2">
-                           <locus target="#00"/>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p part="N"/>
+                           <locus/>173vb: Donation note.<q xml:lang="gez">173vb: ዝንቱ፡ መጽሐፈ፡ ሃይማኖተ፡ አበው፡ ዘወለተ፡ ብርሃን፡ ወስመ፡ አቡሃ፡ ገብረ፡ ኢየሱስ፡ ወስመ፡ ዕማ፡ ወለተ፡ አብየ፡ እግዚእ፡ ወአሃዊሃ፡ አቡነ፡ ገብረ፡ ማርያም፡ አቡነ፡ ገብረ፡ ተኽለ፡ ሃይማኖት፡ አቡነ፡ ኀይለ፡ ሥላሴ፡ አቡነ፡ ገብረ፡ ሥላሴ፡ ገብረ፡ ህይወት፡ ኪዳነ፡ ማርያም፡ ወአሃቲሃ፡ ወለተ፡ ዮሐንስ፡ ወለተ፡ ሚካኤል፡ ወለተ፡ ገብርኤል፡ ወለተ፡ ሥላሴ፡ ወለተ፡ መድኅን፡ ወለተ፡ መስቀል፡ ዘተሳየጠቶ፡ በምእት፡ ፻ልጥረ፡ ብሩር፡ ዘወሃበቶ፡ ለቅዱስ፡ ዮሐንስ፡ መጥምቀ፡ መለኮት፡ ዘደብረ፡ ቤቴል፡ ኰኮሎ፡ ከመ፡ ይኩና፡ መርሃ፡ ወምክሃ፡ ለመንግስተ፡ ሰማያት፡ ዘኢየሃልፍ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ለይኩን፡ ለይኩን። ኦአ[በ]ውየ፡ ካህናት፡ ወአኀውየ፡ ዲያቆናት፡ በጊዜ፡ ጸሎትክሙ፡ ቅድስት፡ ኢትርስኡኒ፡ ፩፡ ፩፡ አቡነ፡ ዘበሰማያት፡ ሊተ፡ ለአመትክሙ፡ ለተ፡ ብርሃን።</q>
+                           <q xml:lang="en">173vb: This book of Haymanotä ˀabäw is of Wälättä Bǝrḥan, and her father’s name is Gäbrä ˀIyäsus and her mother’s name Wälättä ˀAbǝyä ˀƎgziˀ and her brothers ˀabunä Gäbrä Maryam, ˀabunä Gäbrä Täklä Haymanot, ˀabunä Ḫaylä Śǝllase, ˀabunä Gäbrä Śǝllase, Gäbrä Hǝywät, Kidanä Maryam, and her sisters Wälättä Yoḥannǝs, Wälättä Mikaˀel, Wälättä Gäbrǝˀel, Wälättä Śǝllase, Wälättä Mädḫǝn, Wälättä Mäsqäl. She bought it with 100 measures (lǝṭr) of silver and donated it to St. John the Baptist of Däbrä Betel K<sup>w</sup>äkol so that it might be for her guide and her pride for the Kingdom of Heaven which will not vanish. Forever and ever, Amen. So be it. So be it. O my fathers priests and my brothers deacons, during your holy prayer, do not forget one, one Pater Noster to me your servant Wälättä Bǝrḥan. </q>
+                           Recent, written in red pen.
                         </item>
                         <item xml:id="e1">- Two unnumbered fols. made out of re-utilized plastic bag(?) are inserted at the beginning of the Ms. as protective leaves.&#xD;
 - Small cross signs, perhaps to mark parts of the text: fols. 3r, 5r, 16v, 22r, 33r, 34r, 34v, 37r, 38r, 44r, 55v, 62r, 71r, 71v, 74v, 77r, 79v, 80r, 81v, 85v, 88r, 89r, 89v, 117r. &#xD;
@@ -201,7 +210,7 @@ Two pairs of sewing stations.</decoNote>
                <history>
                   <origin instant="false">
                      <origPlace instant="false">
-                        <placeName corresp="INS0171KoholoYoá¸¥annÇ&#x9d;sDÃ¤brÃ¤Betel" instant="false" full="yes">Koholo Yoá¸¥annÇ&#x9d;s DÃ¤brÃ¤ Betel / KY</placeName>
+                        <placeName corresp="INS0171KY" instant="false" full="yes">Koholo Yoá¸¥annÇ&#x9d;s DÃ¤brÃ¤ Betel / KY</placeName>
                      </origPlace>
                      <origDate notBefore="1750" notAfter="1850" instant="false">Mid-18th to mid-19th century (?).</origDate>
                   </origin>
@@ -244,10 +253,6 @@ In a more recent note written in red (Additio 2), another person, Wälättä Bǝ
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person instant="false">
-                  <persName role="scribe" corresp="PRS00000" instant="false" full="yes"/>
-                  <!--copyst-->
-               </person>
-               <person instant="false">
                   <persName corresp="PRS00000" instant="false" full="yes"/>
                   <!--other-->
                </person>
@@ -268,7 +273,7 @@ In a more recent note written in red (Additio 2), another person, Wälättä Bǝ
          <change who="DN" when="2011-05-02" status="draft">registered</change>
          <change who="AA" when="2013-01-02T18:18:37.695Z" status="draft">created</change>
          <change who="DN" when="2015-04-12T08:24:54.714Z" status="draft">last edited</change>
-         <change who="PL" when="2016-04-27+02:00" status="draft">transformed from mycore to TEI
+         <change who="PL" when="2016-05-05+02:00" status="draft">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>
