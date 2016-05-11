@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqdgm013"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Kiros “Vita of Kiros”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QDGM-013</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; names of the scribe and the donors; groups of lines (alternating with black lines) in the incipit page; a few lines on fol. 46va; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">71.0</measure> folios, in <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">71.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2rv, 68r, 69rv, 70v, 71rv, in
+                                                  <measure unit="quire">10.0</measure> quires (A+8+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">18.5</height>
                               <width unit="cm">13.8</width>
@@ -60,6 +63,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>Quire marks (some decorated) are written in the middle of the upper margin of fols.: 11r, 19r, 27r, 35r, 43r, 59r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -113,7 +119,7 @@ Holes are carefully amended on fols. 45, 67.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -134,14 +140,15 @@ The bottom line is written above the ruling.</ab>
                         <persName role="scribe" corresp="PRS00000">ʿAbiyä ʾƎgziʾ</persName>ʿAbiyä ʾƎgziʾ is mentioned as the scribe in the supplication formula on fol. 4rb.<date>First half of the 20th century (?)</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ለዓ፡</abbr> for <expan>ለዓለመ፡ ዓለም </expan> (fol. 67vb)</item>
+                              <abbr>ለዓ፡</abbr> for
+                                                  <expan>ለዓለመ፡ ዓለም </expan> (fol. 67vb)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 70r: Ownership note.<q xml:lang="gez">Fol. 70r: ናይ ቐቐማ ገዳም ደብረ ገነት</q>
+                           <locus target="#70r">Fol. 70r</locus>: Ownership note.<q xml:lang="gez">Fol. 70r: ናይ ቐቐማ ገዳም ደብረ ገነት</q>
                            <q xml:lang="en"/>
                            The note is crudely written in pen in Tǝgrǝñña. It states that the book belongs to the Däbrä Gännät Qäqäma monastery.
                         </item>
@@ -151,7 +158,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -161,6 +168,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 4 tools were used: triple line fillet, double circle, braid, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -203,8 +211,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä ʾƎgziʾ, Wälättä Mädḫǝn and Täwäldä Mädḫǝn are mentioned in the concluding supplication on fol. 67v. They are also mentioned in the supplication formulas: Wälättä Mädḫǝn (fols. 4rb, 46va 53ra, 58ra), Täwäldä Mädḫǝn (fol. 53ra), Wäldä Śǝllase (fol. 33ra), Gäbrä Mädḫǝn (fol. 46va), Ḥaylä Śǝllase (fols. 57vb-58ra).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä ʾƎgziʾ, Wälättä Mädḫǝn and Täwäldä Mädḫǝn are mentioned in the concluding supplication on fol. 67v. They are also mentioned in the supplication formulas: Wälättä Mädḫǝn (fols. 4rb, 46va 53ra, 58ra), Täwäldä Mädḫǝn (fol. 53ra), Wäldä Śǝllase (fol. 33ra), Gäbrä Mädḫǝn (fol. 46va), Ḥaylä Śǝllase (fols. 57vb-58ra).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -228,7 +236,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2012-06-01">registered</change>
          <change who="MK" when="2014-03-27">created</change>
          <change who="MV" when="2015-05-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

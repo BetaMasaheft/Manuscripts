@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqsm026"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Ṣalotä ˤǝṭan “Prayer of Incense”</title>
@@ -33,15 +33,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QSM-026</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Text I; initial lines (one or two first lines) of prayers; names of Ethiopian prelates; directives for the ministers; some separated letters of nomina sacra (fols. 38ra); elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
  &#xD;
 On the incipit page of Text I (fol. 5r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -53,7 +53,10 @@ On the incipit page of Text I (fol. 5r), a few lines are rubricated (alternating
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">59.0</measure> folios, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">59.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 59rv, in
+                                                  <measure unit="quire">9.0</measure> quires (A+7+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">18.0</height>
                               <width unit="cm">14.0</width>
@@ -114,7 +117,7 @@ Tear carefully amended on fol. 2.</condition>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1E-1E-1E1E-/0-0/0-0/B. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -137,12 +140,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 1va-4rb: Excerpt from the Anaphora of the Apostles (Benediction of St. Basil?).<q xml:lang="gez"/>
+                           <locus target="#1va">Fols. 1va-4</locus>rb: Excerpt from the Anaphora of the Apostles (Benediction of St. Basil?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written in a careful secondary hand.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 57vb-58rb: Donation note.<q xml:lang="gez"/>
+                           <locus target="#57vb">Fol. 57vb-58</locus>rb: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Partly in Amharic, crudely written in pencil in a secondary hand and hardly readable. The note mentions that the book was donated by ras Gäbrä Mädhǝn to the church Qärsäbär Mikaʾel in Ṭǝrr 13 (?) [19]39 A.M. (= January 1946 A.D.) during the time of Ḫaylä Śǝllase I (r. 1930-74) and Bishop Marqos (r. 1937-1951, as Bishop of Tǝgray and Eritrea).
                         </item>
@@ -162,6 +165,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Quire B has been reinforced with parchment guards.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornaments on the reddish-brown leather cover (5 tools were used: double line fillet, double circle, cross hatching, triple sine wave, x-form with dot).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -204,8 +208,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 2, the Ms. was donated by ras Gäbrä Mädhǝn.&#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 2, the Ms. was donated by ras Gäbrä Mädhǝn.&#xD;
 On fol. 57vb, the name of the original donor has been erased.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
@@ -232,7 +236,7 @@ On fol. 57vb, the name of the original donor has been erased.</persName>
          <change who="DN" when="2010-05-18">registered</change>
          <change who="SA" when="2013-09-06">created</change>
          <change who="DN" when="2014-10-11">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

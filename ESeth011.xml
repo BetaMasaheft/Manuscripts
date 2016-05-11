@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESeth011"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,17 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>ETH-011</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts; titles and numbers of the chapters, the word mǝʿǝraf and x-shaped signs after chapter numbers; elements of the punctuation signs; elements of Ethiopic numerals; parts of quire marks and running titles; names of the donors, the scribe and the commissioner.&#xD;
 On the incipit page of each Gospel, a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- For details concerning the traditional introduction texts s. R.W. COWLEY, “New Testament Introduction in the Andemta Commentary Tradition”, Ostkirchliche Studien 26, 1977, 144-92; R. ZUURMOND, Novum Testamentum Aethiopice: the Synoptic Gospels, Part I: General Introduction, Part II: Edition of the Gospel of Mark, Stuttgart, 1989 (AeF 27), 6-36.</note>
+                     <note>- The canon tables are missing.</note>
+                     <note>- X-shaped sign after chapter numbers or after the word mǝʿǝraf (not regular).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +58,10 @@ On the incipit page of each Gospel, a few lines are rubricated (alternating with
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">141.0</measure> folios, of which <measure unit="leaf" type="blank">4.5</measure> blank, in <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">141.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">4.5</measure> blank
+                                                  1, 4v, 5r, 6v, 140, 141, in
+                                                  <measure unit="quire">15.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">33.0</height>
                               <width unit="cm">26.0</width>
@@ -61,6 +70,7 @@ On the incipit page of each Gospel, a few lines are rubricated (alternating with
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">6</dim>
@@ -141,7 +151,7 @@ On the incipit page of each Gospel, a few lines are rubricated (alternating with
                            <note>All data are for the second page of the first Gospel, recto side (fol. 8r).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are mostly visible (s. fol. 41r).</ab>
@@ -163,7 +173,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown leather. &#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -173,6 +183,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Impossible to determinate due to the secondary yellow textile cover.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -215,8 +226,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Ḫaylä Maryam (mentioned in supplication formulas on fols. 51rb, 73r, 139rb), Wälättä Maryam (mentioned in a supplication formula on fol. 72vb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Ḫaylä Maryam (mentioned in supplication formulas on fols. 51rb, 73r, 139rb), Wälättä Maryam (mentioned in a supplication formula on fol. 72vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -244,7 +255,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-19">registered</change>
          <change who="IF" when="2011-08-10">created</change>
          <change who="VP" when="2015-05-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESsdgm002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the first half of the year)</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>SDGM-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; a few lines of the incipit pages of Texts I-1 to I-6, alternating with black lines; incipit of each commemorative notice; the word sälam; elements of the punctuation signs, the text dividers and the quire marks; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Fol. 1 is unruled.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">232.0</measure> folios, in <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">232.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v, 42v, 201v, in
+                                                  <measure unit="quire">23.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">35.3</height>
                               <width unit="cm">29.5</width>
@@ -60,6 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks written in the upper margin on fols. 11r, 23r, 31r, 41r, 53r, 65r, 77r, 89r, 101r.&#xD;
+- Undecorated quire marks written in the upper right corner on fols. 134r, 144r, 154r, 164r, 174r, 184r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">8</dim>
@@ -180,7 +190,7 @@ Holes or tears amended, e.g., on fols. 3, 17, 26, 38, 72, 97, 109.</condition>
                            <note>All data from fol. 53r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -201,7 +211,8 @@ The bottom line is written above the ruling.</ab>
                         <date>19th century (?)</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ሰ፡ / ሰላ፡</abbr> for <expan>ሰላም፡ </expan> (e.g., fols. 98vc, 101vc, 102vb, 103rac)</item>
+                              <abbr>ሰ፡ / ሰላ፡</abbr> for
+                                                  <expan>ሰላም፡ </expan> (e.g., fols. 98vc, 101vc, 102vb, 103rac)</item>
                         </list>
                      </handNote>
                   </handDesc>
@@ -210,7 +221,7 @@ The bottom line is written above the ruling.</ab>
                      <decoNote type="frame" xml:id="d2">Fol. 113vc: simple short coloured (red, black, white) ornamental band; geometric motifs.</decoNote>
                   </decoDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Three pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
                         <decoNote xml:id="b3" type="Endbands"/>
@@ -257,8 +268,8 @@ The bottom line is written above the ruling.</ab>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The names of the original donors have mostly been erased or crossed out in the supplication formulas but are still legible on several fols.: Gäbrä ʾƎgziʾ (e.g., fols. 2rb, 3va, 5vc, 6va, 8rab, 9rbc), Wäldä Rufaʾel (e.g., fols. 18rc, 38rc, 41vb), Wälättä ʾArägawi (e.g., fols. 34va, 38rb, 41va), Täsfa Giyorgis (e.g., fols. 40ra, 49vc, 75vc). Their names have been replaced in a secondary hand by the names of Sǝbḥat lä-ʾAb (e.g., fols. 11ra, 12vb, 13rbc, 14ra), Wälättä Mäsqäl (e.g., fols. 25vc, 27rac, 30ra, 30vbc), Wälättä Maryam (e.g., fols. 16vb, 17ra, 18rc, 27va).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The names of the original donors have mostly been erased or crossed out in the supplication formulas but are still legible on several fols.: Gäbrä ʾƎgziʾ (e.g., fols. 2rb, 3va, 5vc, 6va, 8rab, 9rbc), Wäldä Rufaʾel (e.g., fols. 18rc, 38rc, 41vb), Wälättä ʾArägawi (e.g., fols. 34va, 38rb, 41va), Täsfa Giyorgis (e.g., fols. 40ra, 49vc, 75vc). Their names have been replaced in a secondary hand by the names of Sǝbḥat lä-ʾAb (e.g., fols. 11ra, 12vb, 13rbc, 14ra), Wälättä Mäsqäl (e.g., fols. 25vc, 27rac, 30ra, 30vbc), Wälättä Maryam (e.g., fols. 16vb, 17ra, 18rc, 27va).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -283,7 +294,7 @@ The bottom line is written above the ruling.</ab>
          <change who="DN" when="2011-12-08">registered</change>
          <change who="VR" when="2015-05-13">created</change>
          <change who="MV" when="2015-05-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

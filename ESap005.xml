@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsanat, Homiliary</title>
@@ -36,16 +36,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-4 (fol. 1r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric/>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Subscriptions on fol. 14vb, 30vb, 118rb.</note>
+                     <note>Rubrication appears to have been completed by two hands; one is the main hand, the second is distinct from it, using a different tone of red (reddish brown) on fols. 15r, 38r, 40v, 45v, 90r and elsewhere).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -54,7 +59,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">119.0</measure> folios, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">119.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  fols. 1r-v, 3v, 89v, 118v, 119r-v., in
+                                                  <measure unit="quire">18.0</measure> quires (16+A+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">31.0</height>
                               <width unit="cm">24.0</width>
@@ -139,7 +147,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are mostly visible.</ab>
@@ -172,7 +180,7 @@ The bottom ruled line is not used on fols. 49v-50v.</ab>
                         <seg type="ink">Black; red (reddish brown in fols. 15r, 38r, 40v, 45v, 90r and elsewhere)</seg>
                         <persName role="scribe" corresp="PRS00000">Habtä ʾIyäsus</persName>The scribe has mentioned his own name, Habtä ʾIyäsus, in a subscription (exhortation, fol. 118ra).<date>First half of the 16th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">- ጠ (1st order) and ጣ (4th order) can hardly be distinguished (e.g., fol. 37ra).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="miniature" xml:id="d1">
@@ -190,6 +198,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -232,11 +241,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">Habtä ʾIyäsus</persName>
                </person>
@@ -261,7 +265,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-03">registered</change>
          <change who="DN" when="2013-05-25">created</change>
          <change who="DN" when="2015-05-30">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

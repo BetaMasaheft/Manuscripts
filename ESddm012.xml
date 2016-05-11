@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESddm012"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Säʿatat zä-lelit wä-zä-nägh “Horologium for the Night and the Morning Hours”</title>
@@ -33,17 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DDM-012</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of prayers and hymns and their abbreviations; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 2r), few lines are rubricated alternating with black lines.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- About the text “Mäṣḥafä Säʿatat” and the different versions, cp. EAE V,<ref type="mss" corresp="ES501503">501-503</ref>. The text in Ms.<ref type="mss" corresp="ESddm012">DDM-012</ref>seems to belong to the category described as S.2.</note>
+                     <note>- The text is similar, but not identical to Mss.<ref type="mss" corresp="ESmr027">MR-027</ref>and<ref type="mss" corresp="ESqmm027">QMM-027</ref>.</note>
+                     <note>- The Ms. contains most of the prayers and hymns included in the edition: Mäṣḥafä Säʿatat, bä-gǝˤǝzǝnna bä-ʾamarǝñña. Zä-lelit wä-zä-nägh, Addis Abäba 1952 A.M. [1960 A.D.].</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +58,8 @@ On the incipit page of Text I (fol. 2r), few lines are rubricated alternating wi
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">63.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">63.0</measure> folios, in
+                                                  <measure unit="quire">7.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">12.5</height>
                               <width unit="cm">8.7</width>
@@ -117,7 +124,7 @@ Tears carefully amended on fols. 1, 33.</condition>
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -138,14 +145,17 @@ The bottom line is written above the ruling.</ab>
                         <date>19th century.</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ቅ፡ ቅ፡ ቅ፡</abbr> for <expan>ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ </expan> (e.g., fols. 2v-3r).</item>
+                              <abbr>ቅ፡ ቅ፡ ቅ፡</abbr> for
+                                                  <expan>ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ </expan> (e.g., fols. 2v-3r).</item>
                            <item>
-                              <abbr>ገነ፡</abbr> for <expan>ገነይነለኪ፡ </expan> (fol. 13v).</item>
+                              <abbr>ገነ፡</abbr> for
+                                                  <expan>ገነይነለኪ፡ </expan> (fol. 13v).</item>
                            <item>
-                              <abbr>ማር/ማርያ፡</abbr> for <expan>ማርያም፡ </expan> (e.g., fols. 42r, 44r)</item>
+                              <abbr>ማር/ማርያ፡</abbr> for
+                                                  <expan>ማርያም፡ </expan> (e.g., fols. 42r, 44r)</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">Ligature ግዚ is used throughout the text.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">- Fol. 2r: crude coloured (black, red) ornamental band; geometric motifs.</decoNote>
@@ -201,11 +211,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -227,7 +232,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-06">registered</change>
          <change who="SA" when="2014-10-23">created</change>
          <change who="DN" when="2015-01-09">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

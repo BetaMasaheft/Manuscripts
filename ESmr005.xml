@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmr005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArganonä wǝddase “The Harp of Praise”</title>
@@ -33,14 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MR-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donor; Ethiopic numerals; elements of the punctuation signs; incipit of Text I and its sections; names of the days of the week indicating daily readings of Text I written in the upper margins. &#xD;
 On the incipit page of Texts I-1 to I-6 (fol. 2ra, 47rb, 71vb, 92rb, 113va, 125ra), a few red lines alternate with black lines.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -52,7 +52,8 @@ On the incipit page of Texts I-1 to I-6 (fol. 2ra, 47rb, 71vb, 92rb, 113va, 125r
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">133.0</measure> folios, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">133.0</measure> folios, in
+                                                  <measure unit="quire">19.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">23.5</height>
                               <width unit="cm">18.5</width>
@@ -144,7 +145,7 @@ Fol. 1 used as a flyleaf, is of slightly smaller size, and originates from a dif
                            <note>All data for fol. 7r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -168,13 +169,13 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 1r-v:  Hymn to St. George, incomplete.<q xml:lang="gez"/>
+                           <locus target="#1r">Fol. 1r</locus>-v:  Hymn to St. George, incomplete.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written on a leaf originating from a different manuscript, in a hand similar or identical to the main hand. The leaf has been included into the manuscript as a flyleaf. Text area: 12.5x14.5. Margins: left 1.5, intercolumn 1.0, right 3.5; top 2.0, bottom 3.5.
 The text mentions St. George of Lydda as Giyorgis kokäbä Lǝdda ("Star of Lydda"), ʾabunä Täklä Haymanot and ʾabunä ʾEwosṭatewos.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fols. 68v-72r: Unidentified prayer or hymn (?).<q xml:lang="gez"/>
+                           <locus target="#68v">Fols. 68v-72</locus>r: Unidentified prayer or hymn (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Distributed in the upper margins of fols. 68v, 69r, 69v, 70r, 70v, 71r, 72r, in a similar or the same hand as that of the main text. Poorly readable; possibly dedicated to St. George.
                         </item>
@@ -184,7 +185,7 @@ The text mentions St. George of Lydda as Giyorgis kokäbä Lǝdda ("Star of Lydd
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">One single piece of cardboard is reutilized for the front and back boards, and for the spine cover.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -192,6 +193,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -234,8 +236,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʿAmdä Haymanot (s. supplication formulas, fols. 4vb, 37va, 64ra, 113rb); another name, Kidanä Dǝngǝl, is crudely written in the right margin of fol. 47r.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʿAmdä Haymanot (s. supplication formulas, fols. 4vb, 37va, 64ra, 113rb); another name, Kidanä Dǝngǝl, is crudely written in the right margin of fol. 47r.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -260,7 +262,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-11">registered</change>
          <change who="SA" when="2013-01-15">created</change>
          <change who="DN" when="2014-11-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

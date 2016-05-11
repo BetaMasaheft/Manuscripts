@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESsm015"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,16 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>SM-015</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the commissioners; a few lines or groups of lines (alternating with black lines) of the incipits of the texts; word mǝʿǝraf; “tituli” written in the upper margins; stichometry; elements of the punctuation signs and Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Only few chapters are numbered, e.g. on fol. 21vb.</note>
+                     <note>- Traditional headings of Gospels are not present.</note>
+                     <note>- The “tituli” are not numbered.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +57,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">143.0</measure> folios, in <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">143.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 142v, 143rv, in
+                                                  <measure unit="quire">23.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">33.5</height>
                               <width unit="cm">26.5</width>
@@ -60,6 +69,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks are written in the left upper corner of the first fol. of the quire: fols. 11r, 19r, 73r, 81r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -154,7 +165,7 @@ Holes are amended on fols. 6, 14, 25, 43, 45, 49, 54, 59, 62, 94, 95, 98, 121, 1
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Ruling pricks are visible.</ab>
@@ -193,9 +204,7 @@ The bottom ruled lined is not used on fols. 55, 57, 59-61v, 91-93, 99, 130r.</ab
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 40r: Note on commissioning the writing. <q xml:lang="gez">
-                              <div style="text-align: left;" org="uniform" sample="complete">Fol. 40v: በዘበኖሙ፡ ዘአጽሐፍዋ፡ ለዘቲ፡ መጽሐፍ፡ አቡዩ፡ ተስፋ፡ ሚካኤል፡ ወአቡየ፡ ቀሲሰ፡ ወልደ፡ ጋብር፡ ይኩኖሙ፡ ዓሰቦ፡ በመንግሥተ፡ ሰማያት፡ ለዓለመ፡ ዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።  </div>
-                           </q>
+                           <locus target="#40r">Fol. 40r</locus>: Note on commissioning the writing. <q xml:lang="gez">Fol. 40v: በዘበኖሙ፡ ዘአጽሐፍዋ፡ ለዘቲ፡ መጽሐፍ፡ አቡዩ፡ ተስፋ፡ ሚካኤል፡ ወአቡየ፡ ቀሲሰ፡ ወልደ፡ ጋብር፡ ይኩኖሙ፡ ዓሰቦ፡ በመንግሥተ፡ ሰማያት፡ ለዓለመ፡ ዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።  </q>
                            <q xml:lang="en"/>
                            The note is written in the main hand, in red. It mentions as the commissioners priest (qäsis) Täsfa Mikaʾel and priest Wäldä Gabǝr.
                         </item>
@@ -217,6 +226,7 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b4" type="Other">A pair of chains of endband stitches at the remains of the spine cover, close to the head of the codex.&#xD;
 A row of holes is  visible on the spine fold of the quires, close to the tail of the codex.&#xD;
 Turn-ins are laced with a cord.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament of poor quality on reddish-brown cover (at least 2 tools were used: single line fillet, single circle).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -259,8 +269,8 @@ Turn-ins are laced with a cord.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 1, priest (qäsis) Täsfa Mikaʾel and priest Wäldä Gabǝr commissioned the Ms. They are also mentioned together with “the children of deacon Nǝwayä Maryam” in the supplication formula on fol. 39va, and with “the children of Mäḥarä Krǝstos” and “the children of Maḫletä Mikaʾel” in the concluding supplication formula on fol. 142ra.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 1, priest (qäsis) Täsfa Mikaʾel and priest Wäldä Gabǝr commissioned the Ms. They are also mentioned together with “the children of deacon Nǝwayä Maryam” in the supplication formula on fol. 39va, and with “the children of Mäḥarä Krǝstos” and “the children of Maḫletä Mikaʾel” in the concluding supplication formula on fol. 142ra.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -285,7 +295,7 @@ Turn-ins are laced with a cord.</decoNote>
          <change who="DN" when="2010-05-14">registered</change>
          <change who="SA" when="2011-02-24">created</change>
          <change who="EG" when="2015-02-20">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

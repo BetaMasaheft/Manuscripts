@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESbqm014"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Sǝmʿon näbiy “Vita of Simeon the Prophet” / Täʾamrä Sǝmʿon näbiy “Miracle of Simeon the Prophet / Qal kidan, Covenant of Simeon the Prophet</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>BQM-014</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; name of the church; incipit of Text I and of its sections; incipit of sections of Text II; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Simeon the Prophet feaures in some Ethiopic texts, like the Synaxarion with the commemorative notice dedicated to him for 8 Yäkkatit (s. ColSyn X, 58-61), in the Gädlä sämaʿtat, the homily for 8 Yäkkatit (s. EMML V, 345) or in the 4th and 5th Miracles of Jesus (s. GrébMJ I, 603-07), but no text comparable to Texts I-III have been identified so far, neither in Ethiopian published sources nor in CANT.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">57.0</measure> folios, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">57.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fol. 1r-v., in
+                                                  <measure unit="quire">9.0</measure> quires (A+8). 
                                                 <dimensions type="outer">
                               <height unit="cm">28.0</height>
                               <width unit="cm">22.0</width>
@@ -109,7 +116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/A. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -135,7 +142,7 @@ On some fols., the bottom ruling line is not used (e.g. fols. 18r, 19r, 20r).</a
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -145,6 +152,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: double line fillet, triple line fillet, double circle, criss-cross, wave form, small x)</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -187,11 +195,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -213,7 +216,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-21">registered</change>
          <change who="SA" when="2014-10-23">created</change>
          <change who="DN" when="2014-12-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

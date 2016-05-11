@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdsm005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DSM-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donors; name of the scribe; the word sälam; incipit of each commemorative notice; elements of the punctuation signs; elements of Ethiopic numerals. &#xD;
 On the incipit page for each month (fols. 2r, 38r, 67v, 104v, 141r, 190r, 221v) a few lines are rubricated, alternating with black lines.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The section of Pagwemen ends with a subscription mentioning the commissioner Wäldä Krǝstos (fols. 22<ref type="mss" corresp="ES7vc228">7vc-228</ref>ra): ለዛቲ፡ መጽሐፈ፡ ስንከሳር፡ ዜና፡ መላእከት፡ ትጉሃን፡ ወተዝካረ፡ ነቢያት፡ ቅዱሳን፡ ወስብከተ፡ ሐዋርያት፡ ፍጹማን፡ ወገድለ፡ ሰማዕታት፡ መዋዕያን፡ ወተዝካረ፡ ኵሎሙ፡ ጻድቃን፡ ዘአጽሐፍክዋ፡ አነ፡ ወልደ፡ ክርስቶስ፡ እንዘ፡ እሴፎ፡ ረድኤተ፡ እምኀበ፡ እግዚአብሔር፡…</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,8 @@ On the incipit page for each month (fols. 2r, 38r, 67v, 104v, 141r, 190r, 221v) 
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">228.0</measure> folios, in <measure unit="quire">30.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">228.0</measure> folios, in
+                                                  <measure unit="quire">30.0</measure> quires (A+29). 
                                                 <dimensions type="outer">
                               <height unit="cm">39.0</height>
                               <width unit="cm">32.0</width>
@@ -176,7 +181,7 @@ Tears carefully amended in fols. 23, 36, 118, 161, 165, 207.</condition>
                            <note>All data for fol. 64r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -201,7 +206,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 228v: Ownership or donation note (?).<q xml:lang="gez">Fol. 228v: ዛቲ፡ መጽሐፍ፡ ዘቤት፡ ምካዕ፡ ስንክሳር፡…</q>
+                           <locus target="#228v">Fol. 228v</locus>: Ownership or donation note (?).<q xml:lang="gez">Fol. 228v: ዛቲ፡ መጽሐፍ፡ ዘቤት፡ ምካዕ፡ ስንክሳር፡…</q>
                            <q xml:lang="en"/>
                            Written possibly in the main hand (?), the note is for the most part erased: only the two initial lines are readable. The note states that the Ms. belongs to the church of Bet Mǝḵaʿ; the name ʾIyasu also seems to be readable.
                         </item>
@@ -211,7 +216,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown leather cover.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -222,6 +227,7 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head, one close to the tail.&#xD;
 Remains of tiedowns (s. fols. 161v-162r).&#xD;
 Parchment guards reinforce quires A-I, II-III, IV-V, VI-VIII.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -264,8 +270,8 @@ Parchment guards reinforce quires A-I, II-III, IV-V, VI-VIII.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä Krǝstos is mentioned as the commissioner on fol. 227vb, and in the supplication formulas. Other individuals are mentioned in the supplication formulas: Täklä ʾƎgziʾǝnä (e.g., fols. 7vb, 39ra), ʾƎdä Krǝstos (e.g., fols. 45ra, 68rc), ʾƎsṭifanos (e.g., fols. 56rb, 69va), ʾƎdna (e.g., fols. 82rb, 82va), ʾƎlleni (e.g., fols. 64ra, 83vb, 84rb), Ṣǝge Gännät (fol. 38va), Ṣǝge Dǝngǝl (fol. 80rb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä Krǝstos is mentioned as the commissioner on fol. 227vb, and in the supplication formulas. Other individuals are mentioned in the supplication formulas: Täklä ʾƎgziʾǝnä (e.g., fols. 7vb, 39ra), ʾƎdä Krǝstos (e.g., fols. 45ra, 68rc), ʾƎsṭifanos (e.g., fols. 56rb, 69va), ʾƎdna (e.g., fols. 82rb, 82va), ʾƎlleni (e.g., fols. 64ra, 83vb, 84rb), Ṣǝge Gännät (fol. 38va), Ṣǝge Dǝngǝl (fol. 80rb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -293,7 +299,7 @@ Parchment guards reinforce quires A-I, II-III, IV-V, VI-VIII.</decoNote>
          <change who="DN" when="2011-05-14">registered</change>
          <change who="SA" when="2014-08-26">created</change>
          <change who="DN" when="2015-06-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

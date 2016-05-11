@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdmb004"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DMB-004</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; the word sälam; several groups of lines alternating with balck lines on the incipit page of every month; incipit of each commemorative notice; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">152.0</measure> folios, in <measure unit="quire">20.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">152.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v, 2r, 2v, 151r, 151v, 152r, in
+                                                  <measure unit="quire">20.0</measure> quires (A+19). 
                                                 <dimensions type="outer">
                               <height unit="cm">35.0</height>
                               <width unit="cm">26.5</width>
@@ -146,7 +149,7 @@ Cuts and tears are carefully amended in fols. 56, 69, 109, 112, 136.</condition>
                            <note>All data for fol. 95r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -170,7 +173,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 94rc: Record concerning a litigation in the court over an alleged murder.<q xml:lang="gez">Fol. 94rc: በ፲ወ፱፻፲ወ፱ ዓመተ፡ምሕረት፡ ጊዜውን፡ በራስ፡ ሥዩም፡ ጊዜ፡ ነው፡ ቄስ፡ ተክለ፡ ሃይማኖት፡ ቄስ፡ ገብረ፡ ጻድቃን፡ ከሳስኪ[sic]፡ አቶ፡ ደስታ፡ ተከሻሽ፡ እኅትየን፡ ገድልከልኝ፡ ብለው፡ ከሰሱት[sic]፡እኔ፡ አልገደልኩም፡ ብሎ፡ ከሰንሰለት፡ ገባ፡ ከደጃዝማች፡ ደስታ፡ ችኰት፡ ቀረቡ፡ …</q>
+                           <locus target="#94rc">Fol. 94rc</locus>: Record concerning a litigation in the court over an alleged murder.<q xml:lang="gez">Fol. 94rc: በ፲ወ፱፻፲ወ፱ ዓመተ፡ምሕረት፡ ጊዜውን፡ በራስ፡ ሥዩም፡ ጊዜ፡ ነው፡ ቄስ፡ ተክለ፡ ሃይማኖት፡ ቄስ፡ ገብረ፡ ጻድቃን፡ ከሳስኪ[sic]፡ አቶ፡ ደስታ፡ ተከሻሽ፡ እኅትየን፡ ገድልከልኝ፡ ብለው፡ ከሰሱት[sic]፡እኔ፡ አልገደልኩም፡ ብሎ፡ ከሰንሰለት፡ ገባ፡ ከደጃዝማች፡ ደስታ፡ ችኰት፡ ቀረቡ፡ …</q>
                            <q xml:lang="en"/>
                            The record was written in Amharic in 1919 year of mercy (= 1926/27 A.D.) during the time of ras Sǝyyum Mängäša (govenor of Tǝgray in 1914-60).
 The priests Täklä Haymanot and Gäbrä Ṣadǝqan accuse ʾato Dästa to have murdered their sister, they went to the court of däǧǧazmač Dästa to settle the dispute. The judges were lǝğ Kidanu, šäqa Ḫǝdaru and Baḥǝta Sǝkus.
@@ -196,6 +199,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover (partly destroyed).</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: cross hatching, double circle, triple line fillet, chain, triple sine wave, x-from).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -239,11 +243,6 @@ Additio 1 was written in 1919 year of mercy (= 1926/27 A.D.).</origDate>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -266,7 +265,7 @@ Additio 1 was written in 1919 year of mercy (= 1926/27 A.D.).</origDate>
          <change who="DN" when="2010-12-10">registered</change>
          <change who="SD" when="2014-10-09">created</change>
          <change who="MV" when="2015-02-04">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

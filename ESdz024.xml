@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdz024"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DZ-024</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts; number of the chapters and the word mǝʿǝraf; elements of the punctuation signs and numerals; on the incipit page of each Gospel, a few lines are rubricated (in groups of two lines, alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The Four Gospels book seems to have substituted for the old "Golden Gospel" of Däbrä Zäyt,<ref type="mss" corresp="ESdz001">DZ-001</ref>.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">146.0</measure> folios, of which <measure unit="leaf" type="blank">9.0</measure> blank, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">146.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">9.0</measure> blank
+                                                  , in
+                                                  <measure unit="quire">18.0</measure> quires (A+17). 
                                                 <dimensions type="outer">
                               <height unit="cm">34.0</height>
                               <width unit="cm">26.7</width>
@@ -137,7 +144,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data are for the second page of the first Gospel, recto side (fol. 16r).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible;</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C;</ab>
                            <ab type="pricking">
 Primary pricks are visible;</ab>
@@ -161,7 +168,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather (partly hidden under the secondary textile cover).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -213,11 +220,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -239,7 +241,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-07">registered</change>
          <change who="SA" when="2011-02-17">created</change>
          <change who="SH" when="2014-10-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

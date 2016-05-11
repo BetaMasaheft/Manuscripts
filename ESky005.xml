@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESky005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,16 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KY-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors (mostly in lilac ink); on the incipit page of each Gospel, a few lines are rubricated (alternating with black lines); chapter numbers and the word mǝʿǝraf; short postscript to the Gospel of Matthew; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Most of the traditional Introduction texts are missing.</note>
+                     <note>Units of the Gospel text (mǝʿǝrafat and kǝflat) are systematically marked with Ethiopic numerals in the margins.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +56,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">168.0</measure> folios, in <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">168.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  131r, 168v, in
+                                                  <measure unit="quire">23.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">22.0</height>
                               <width unit="cm">21.0</width>
@@ -168,7 +176,7 @@ Parchment guards in quire I originate from a different, older Ms. (15th cent.?).
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are mostly visible (s. fol. 66r).</ab>
@@ -178,7 +186,7 @@ Ruling pricks are visible (s. fol. 76r).</ab>
 The upper line is written above the ruling.</ab>
                            <ab type="ruling">
 The bottom line is written above the ruling.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 The ruling pattern is different for the Canon tables.</ab>
                         </layout>
                         <layout/>
@@ -200,33 +208,33 @@ The ruling pattern is different for the Canon tables.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 130r: Ownership note.<q xml:lang="gez">Fol. 130r: ዝመጽሐፍ፡ ዘፊተውራሪ፡ ወልዱ፡ ወብእሲቱ፡ ወይዘሮ፡ ንርአያ።</q>
+                           <locus target="#130r">Fol. 130r</locus>: Ownership note.<q xml:lang="gez">Fol. 130r: ዝመጽሐፍ፡ ዘፊተውራሪ፡ ወልዱ፡ ወብእሲቱ፡ ወይዘሮ፡ ንርአያ።</q>
                            <q xml:lang="en">Fol. 130r: This is a book of fitäwrari Wäldu; his wife is wäyzäro Nǝrʾaya.</q>
                            Crudely written. Some of the letters not clearly legible.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 130r: Ownership note.<q xml:lang="gez">Fol. 130r: ዝመጽሐፍ፡ ዘፊተውራሪ፡ ተወልደመድህን፡ ወብእሲቱ፡ ወዘሮ፡ ንርአያ</q>
+                           <locus target="#130r">Fol. 130r</locus>: Ownership note.<q xml:lang="gez">Fol. 130r: ዝመጽሐፍ፡ ዘፊተውራሪ፡ ተወልደመድህን፡ ወብእሲቱ፡ ወዘሮ፡ ንርአያ</q>
                            <q xml:lang="en">Fol. 130r: This is a book of fitäwrari Täwäldä Mädḫǝn; his wife is wäzäro Nǝrʾaya.</q>
                            Crudely written in pen, in recent hand. Variation of Additio 1.
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 130rb-va: Donation note.<q xml:lang="gez">Fol. 130rb-va: ዝመጽሐፍ፡ ዘተወልደ፡ መድኅን፡ እሙ፡ ወለተ፡ ማርያም፡ ወአቡሁ፡ ገብረ፡ ጻድቅ፡ ዘወሀቦ፡ ለቅዱስ፡ ዮሐንስ፡ መጥምቅ፡ ዘኰኰሎ፡ ደብረ፡ ቤቴል፡ ስመ፡ አቡሁ፡ ክፍለ፡ ጊወርጊስ፡ ወለተ፡ መድኅን፡ ወለተ፡ ሚካኤል፡ ወለተ፡ ጻድቃን፡ ወለተ፡ ሥላሴ፡ ወለተ፡ ሙሴ፡ ወለተ፡ ኪዳን፡ ወለተ፡ ክርስቶስ፡ ወለተ፡ መድኅን፡ ወለተ፡ ጊወርጊስ፡ ወለተ፡ ማርያም፡ ወለተ፡ ሚካኤል፡ ወለተ፡ ማርያም፡ ወለተ፡ ሚካኤል፡ ታቦተ፡ ጽዮን፡ ወለተ፡ ብርሃን፡ ወለተ፡ ዮሐንስ፡ ፀበለ፡ ዮስጣቴዎስ፡ ወብእሲቱ፡ ወለተ፡ መድኅን። ወውሉዱ፡ ገብረ፡ መስቀል፡ ገብረ፡ ማርያም፡ ገብረ፡ ሥላሴ፡ ገብረ፡ ሚካኤል፡ ገብረ፡ መድኅን፡ ገብረ፡ ሚካኤል፡ ተወልደ፡ መድኅን፡ ወልደ፡ ማርያ[fol. 130va]ም፡ ገብረ፡ መድኅን፡ ወለተ፡ ዮሐንስ፡ ወለተ፡ ጊወርጊስ፡ ወልደ፡ አብ፡ ገብረ፡ ሕይወት፡ ኪዳነ፡ ማርያም፡ ገብረ፡ አጋዕዝ፡ ዓመተ፡ ሥላሴ፡ ገብረ፡ መድኅን፡ ገብረ፡ ሥላሴ፡ ኃይለ፡ ማርያም፡ ገብረ፡ ማርያም፡ ዘአጥረዮ፡ በንዋዩ፡ ዘሰረቆ፡ ወዘፈሐቆ፡ ዘሤጦ፡ ወዘተሳየጦ፡ ዘእንበለ፡ ፈቃዱ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዘ፡ ከመ፡ አርዮስ። ለይኩን።</q>
+                           <locus target="#130rb">Fol. 130rb</locus>-va: Donation note.<q xml:lang="gez">Fol. 130rb-va: ዝመጽሐፍ፡ ዘተወልደ፡ መድኅን፡ እሙ፡ ወለተ፡ ማርያም፡ ወአቡሁ፡ ገብረ፡ ጻድቅ፡ ዘወሀቦ፡ ለቅዱስ፡ ዮሐንስ፡ መጥምቅ፡ ዘኰኰሎ፡ ደብረ፡ ቤቴል፡ ስመ፡ አቡሁ፡ ክፍለ፡ ጊወርጊስ፡ ወለተ፡ መድኅን፡ ወለተ፡ ሚካኤል፡ ወለተ፡ ጻድቃን፡ ወለተ፡ ሥላሴ፡ ወለተ፡ ሙሴ፡ ወለተ፡ ኪዳን፡ ወለተ፡ ክርስቶስ፡ ወለተ፡ መድኅን፡ ወለተ፡ ጊወርጊስ፡ ወለተ፡ ማርያም፡ ወለተ፡ ሚካኤል፡ ወለተ፡ ማርያም፡ ወለተ፡ ሚካኤል፡ ታቦተ፡ ጽዮን፡ ወለተ፡ ብርሃን፡ ወለተ፡ ዮሐንስ፡ ፀበለ፡ ዮስጣቴዎስ፡ ወብእሲቱ፡ ወለተ፡ መድኅን። ወውሉዱ፡ ገብረ፡ መስቀል፡ ገብረ፡ ማርያም፡ ገብረ፡ ሥላሴ፡ ገብረ፡ ሚካኤል፡ ገብረ፡ መድኅን፡ ገብረ፡ ሚካኤል፡ ተወልደ፡ መድኅን፡ ወልደ፡ ማርያ[fol. 130va]ም፡ ገብረ፡ መድኅን፡ ወለተ፡ ዮሐንስ፡ ወለተ፡ ጊወርጊስ፡ ወልደ፡ አብ፡ ገብረ፡ ሕይወት፡ ኪዳነ፡ ማርያም፡ ገብረ፡ አጋዕዝ፡ ዓመተ፡ ሥላሴ፡ ገብረ፡ መድኅን፡ ገብረ፡ ሥላሴ፡ ኃይለ፡ ማርያም፡ ገብረ፡ ማርያም፡ ዘአጥረዮ፡ በንዋዩ፡ ዘሰረቆ፡ ወዘፈሐቆ፡ ዘሤጦ፡ ወዘተሳየጦ፡ ዘእንበለ፡ ፈቃዱ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዘ፡ ከመ፡ አርዮስ። ለይኩን።</q>
                            <q xml:lang="en"/>
                            Beginning of the note crudely written in black ink (until ወአቡሁ፡), the rest is written in lilac ink, by a different hand.
                         </item>
                         <item xml:id="a4">
-                           <locus/>Fol. 130v: ʾAsmat-prayer (?).<q xml:lang="gez"/>
+                           <locus target="#130v">Fol. 130v</locus>: ʾAsmat-prayer (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Very crudely written in reddish-brown ink, possibly as a writing exercise. Not all letters legible.
                         </item>
                         <item xml:id="a5">
-                           <locus/>Fol. 131va-vb: Ownership note extended by a traditional genealogy.<q xml:lang="gez">Fol. 131va-vb: ዝመጽሐፍ፡ ዘቁርባነ፡ ድንግል፡ ወለብእሲቱ፡ ሰበነ፡ ጊዮርጊስ፡ ወለመምሕሩ፡ ቅብዓ፡ ክርስቶስ፡ ወለውሉዴሀ፡ [sic] ክፍለ፡ ጊዮርጊስ፡ ምህርካ፡ ድንግል፡ ወልደ፡ ክርስቶስ፡ ከናፍረ፡ ክርስቶስ፡ ገዴ፡ ማኅደረ፡ ቃል፡ ሰርፀ፡ ድንግል፡ ጽጌ፡ ድንግል፡ ዶቅማ፡ እኅተ፡ ክርስቶስ፡ አዙራ። ጸበለ፡ ማርያም፡ ወሉዳኒሃ፡ ሰበነ፡ ጊዮርጊስ፡ ዘሮ፡ ስኖ፡ አመተ፡ ሚካኤል፡ ሠርፀ፡ ያዕቆብ ።ልዱት፡ ብትወልድ፡ ሥርጉትን፡ ሥርጉትን፡ ብትወልድ፡ አስናናን፡ የማኖን። ዶቅማ፡ ብትወልድ፡ ምዕመነ፡ ክርስቶስ፡ ሞገሱት፡ አመተ፡ ስላሴ፡ ብትወልድ፡ ፈትሉትን፡ ስፍራን፡ መርዓቶን፡ ትእምርተ፡ ማርያምን፡ ዘሚካኤልን። ቢወልድ፡ ኢሱን፡ [sic] ኢያሱ፡ ቢወልድ፡ አርካኔዎስን።</q>
+                           <locus target="#131va">Fol. 131va</locus>-vb: Ownership note extended by a traditional genealogy.<q xml:lang="gez">Fol. 131va-vb: ዝመጽሐፍ፡ ዘቁርባነ፡ ድንግል፡ ወለብእሲቱ፡ ሰበነ፡ ጊዮርጊስ፡ ወለመምሕሩ፡ ቅብዓ፡ ክርስቶስ፡ ወለውሉዴሀ፡ [sic] ክፍለ፡ ጊዮርጊስ፡ ምህርካ፡ ድንግል፡ ወልደ፡ ክርስቶስ፡ ከናፍረ፡ ክርስቶስ፡ ገዴ፡ ማኅደረ፡ ቃል፡ ሰርፀ፡ ድንግል፡ ጽጌ፡ ድንግል፡ ዶቅማ፡ እኅተ፡ ክርስቶስ፡ አዙራ። ጸበለ፡ ማርያም፡ ወሉዳኒሃ፡ ሰበነ፡ ጊዮርጊስ፡ ዘሮ፡ ስኖ፡ አመተ፡ ሚካኤል፡ ሠርፀ፡ ያዕቆብ ።ልዱት፡ ብትወልድ፡ ሥርጉትን፡ ሥርጉትን፡ ብትወልድ፡ አስናናን፡ የማኖን። ዶቅማ፡ ብትወልድ፡ ምዕመነ፡ ክርስቶስ፡ ሞገሱት፡ አመተ፡ ስላሴ፡ ብትወልድ፡ ፈትሉትን፡ ስፍራን፡ መርዓቶን፡ ትእምርተ፡ ማርያምን፡ ዘሚካኤልን። ቢወልድ፡ ኢሱን፡ [sic] ኢያሱ፡ ቢወልድ፡ አርካኔዎስን።</q>
                            <q xml:lang="en"/>
                            The note states that the Ms. belongs to Qwǝrbanä Dǝngǝl and his wife Säbänä Giyorgis. Other persons listed include their mämḥǝr Qǝbʿa Krǝstos and their children.
 The genealogical part of the note is written in Amharic and apparently includes two distinct fragments, written in the same hand as the ownership note, but with two different kinds of red ink. The genealogical fragment mentions Doqǝma, a person also mentioned in the ownership note.
                         </item>
                         <item xml:id="a6">
-                           <locus/>Fol. 168rb: Ownership note.<q xml:lang="gez">Fol 168rb: ዝመጽሐፍ፡ ዘስልጣነ፡ ክርስቶስ፨ ወዘጸሐፊሁኒ፡ አፈ፡ ክርስቶስ፨ ዘአጥረዮ፡ በንዋዩ፡ ዘሠረቆ፡ ወዘፈሐቆ፡ ወዘተአገሎ፡ በኃይል፡ ዘሤጦ፡ ወዘተሣየጦ፡ ዘእንበለ፡ ፈቃዱ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዝ፡ ከመ፡ አርዮስ፡ ለይኩን።</q>
+                           <locus target="#168rb">Fol. 168rb</locus>: Ownership note.<q xml:lang="gez">Fol 168rb: ዝመጽሐፍ፡ ዘስልጣነ፡ ክርስቶስ፨ ወዘጸሐፊሁኒ፡ አፈ፡ ክርስቶስ፨ ዘአጥረዮ፡ በንዋዩ፡ ዘሠረቆ፡ ወዘፈሐቆ፡ ወዘተአገሎ፡ በኃይል፡ ዘሤጦ፡ ወዘተሣየጦ፡ ዘእንበለ፡ ፈቃዱ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዝ፡ ከመ፡ አርዮስ፡ ለይኩን።</q>
                            <q xml:lang="en">Fol. 168rb: This is a book of Sǝlṭanä Krǝstos and of its scribe ʾAfä Krǝstos, who acquired it for his money. He who steals it or erases (its text), he who removes it by force, he who sells it or buys it without permission shall be excommunicated like Arius by the authority of Peter and Paul.</q>
                            The two upper lines of the note are rubricated.
                         </item>
@@ -247,6 +255,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Quire I is reinforced by parchment guards originating from a different, older Ms. (15th cent.?).</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -289,13 +298,18 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The names of Gäbrä Ṣadǝq (fols. 4r, 52r, 82r) and Wäldä Mikaʾel, Kǝflä Giwärgis, Wälättä Mädḫǝn, Sǝlṭanä Krǝstos (fols. 52r, 132r) are written in a secondary hand. According to Additio 3, Gäbrä Ṣadǝq is the father of fitawrari Täwäldä Mädḫǝn (s. Owner).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The names of Gäbrä Ṣadǝq (fols. 4r, 52r, 82r) and Wäldä Mikaʾel, Kǝflä Giwärgis, Wälättä Mädḫǝn, Sǝlṭanä Krǝstos (fols. 52r, 132r) are written in a secondary hand. According to Additio 3, Gäbrä Ṣadǝq is the father of fitawrari Täwäldä Mädḫǝn (s. Owner).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">ʾAfä Krǝstos</persName>
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The Ms. was apparently initially owned by Sǝlṭanä Krǝstos (Additio 6). Afterwards it passed to Qwǝrbanä Dǝngǝl and his wife Säbänä Giyorgis (Additio 5). The last recorded owner was fitawrari Täwäldä Mädḫǝn (Wäldu), his wife was wäyzäro Nǝrʾaya (Additiones 1-3).</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName corresp="PRS00000"/>
@@ -319,7 +333,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-02">registered</change>
          <change who="IF" when="2011-10-20">created</change>
          <change who="AA" when="2014-10-22">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

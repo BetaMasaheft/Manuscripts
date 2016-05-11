@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqqm015"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QQM-015</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of the texts or their subsections (cp. fol. 45va); directives for the ministers; most of the abbreviations; elements of the quire marks; elements of the punctuation signs; elements of Ethiopic numbers.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I is incomplete, the beginning is missing.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">128.0</measure> folios, of which <measure unit="leaf" type="blank">0.0</measure> blank, in <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">128.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">0.0</measure> blank
+                                                  , in
+                                                  <measure unit="quire">17.0</measure> quires (16+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">24.3</height>
                               <width unit="cm">17.2</width>
@@ -60,6 +67,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks are written, together with the word ጥራዝ፡, in the upper margin: fols. 1r: ፭, 9r: ፮, 16r: ፯, 23r: ፰, 31r: ፱, 39r: ፲, 47r: ፲፩, 55r: ፲፪, 63r: ፲፫, 71r: ፲፬, 79r: ፲፭, 87r: not clearly visible, 95r: ፲፯, 103r: ፲፰, 111r: ፲፱, 121r: ፬.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">8</dim>
@@ -133,7 +142,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data are for fol. 118r.</note>
                            <ab type="ruling">20 on some folios</ab>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are mostly visible.</ab>
@@ -171,6 +180,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -213,8 +223,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Priest Naryus is mentioned in supplication formulas on fols. 23vb, 48va, 57va-vb, 84rb.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Priest Naryus is mentioned in supplication formulas on fols. 23vb, 48va, 57va-vb, 84rb.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -239,7 +249,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-25">registered</change>
          <change who="IF" when="2015-02-26">created</change>
          <change who="DN" when="2015-03-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

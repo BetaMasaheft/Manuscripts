@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdmb001"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsanä Mikaʾel, Homiliary for the feasts of St. Michael</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DMB-001</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; the second part of names of the donor and the scribe; some lines in the incipit page of the text alternating with black lines; two initial lines of all sections; the word sälam “peace”; the initial word for the ʾarke; elements of punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">85.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">85.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.0</measure> blank
+                                                  85r, 85v, in
+                                                  <measure unit="quire">10.0</measure> quires (A+9). 
                                                 <dimensions type="outer">
                               <height unit="cm">23.0</height>
                               <width unit="cm">20.0</width>
@@ -120,7 +123,7 @@ Fols. 1, 2 are damaged; the outer margin of fol. 85 is cut.</condition>
                            <note/>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -145,12 +148,8 @@ The bottom line is written above the ruling.</ab>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
-                        <item xml:id="a1">
-                           <locus/>
-                           <div style="text-align: justify; line-height: normal; margin-bottom: 0pt"
-                                org="uniform"
-                                sample="complete"><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:TargetScreenSize>800x600</o:TargetScreenSize> </o:OfficeDocumentSettings> </xml><![endif]-->Fol. 84v: Magic prayer against the destruction of harvest by hail.</div>
-                           <q xml:lang="gez">Fol. 84v: በስመ፡ አብ፡ በል፡ ጸሎተ፡ በረድ፡ ምድምያስ፡ ፫ጊዜ … </q>
+                        <item xml:id="a1"><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:TargetScreenSize>800x600</o:TargetScreenSize> </o:OfficeDocumentSettings> </xml><![endif]-->
+                           <locus target="#84v">Fol. 84v</locus>: Magic prayer against the destruction of harvest by hail.<q xml:lang="gez">Fol. 84v: በስመ፡ አብ፡ በል፡ ጸሎተ፡ በረድ፡ ምድምያስ፡ ፫ጊዜ … </q>
                            <q xml:lang="en">Fol. 84v: Pray “Bä-sǝmä ʾAb“ recite “ṣälotä bäräd mǝdǝmyas” three times …  </q>
                            Crude written in violet ink, partly unreadable.
                         </item>
@@ -161,7 +160,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (the front board is broken and repaired).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -211,8 +210,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of the donor Wäldä Gäbrä Mänfäs Qǝddus is mentioned in the supplication formula on fols. 8vb, 84ra. Other two names, Täsfa Maryam (e.g. fols. 8vb, 9ra, 59vb) and ʿAmdä Mikaʾel (fol. 10rb) are also mentioned in the supplication formula.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of the donor Wäldä Gäbrä Mänfäs Qǝddus is mentioned in the supplication formula on fols. 8vb, 84ra. Other two names, Täsfa Maryam (e.g. fols. 8vb, 9ra, 59vb) and ʿAmdä Mikaʾel (fol. 10rb) are also mentioned in the supplication formula.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -240,7 +239,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-10">registered</change>
          <change who="AA" when="2012-09-28">created</change>
          <change who="DN" when="2014-08-22">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

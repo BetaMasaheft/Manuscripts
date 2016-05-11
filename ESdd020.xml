@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd020"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -39,13 +39,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>344 (fol. 1r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the ruler, the commissioner and other individuals; a few lines (alternating with black lines) and one group of lines in the incipit page of each section of the text; two initial lines of the first commemorative notice of the day and one initial line of the subsequent commemorative notices of the day; the word sälam opening the sälam-hymns; elements of the punctuation signs; Ethiopic numerals or their elements.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -57,7 +57,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">182.0</measure> folios, in <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">182.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, 2v, 36v, 60v, 93rbc, 93v, 122vc, 155rv, 176rc, 176v, 181rc, 181v, 182rv, in
+                                                  <measure unit="quire">23.0</measure> quires (A + 22). 
                                                 <dimensions type="outer">
                               <height unit="cm">40.0</height>
                               <width unit="cm">34.0</width>
@@ -173,7 +176,7 @@ Holes are carefully amended on fols. 35, 38, 91.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: </ab>
                            <ab>
 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
@@ -201,12 +204,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 35vb-36rc: Tarik zä-täṣǝḥfä bä-mäwaʿǝlihomu lä-näguśä nägäśt Yoḥannǝs..., "History that was written in the time of the King of Kings Yoḥannǝs...", a short historiographic composition. <q xml:lang="gez"/>
+                           <locus target="#35vb">Fols. 35vb-36</locus>rc: Tarik zä-täṣǝḥfä bä-mäwaʿǝlihomu lä-näguśä nägäśt Yoḥannǝs..., "History that was written in the time of the King of Kings Yoḥannǝs...", a short historiographic composition. <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note, in a mediocre hand, was written during the time of King Yoḥannǝs IV (r. 1872-89), nǝburä ʾǝd ʾIyasu and ʾabba Täklä Haymanot and ʾaläqa Täklä ʾƎsṭifanos from Gondär (the scribe?) "who was with them". The note is a list of metropolitans of the Ethiopian Orthodox Church from ʾabba Sälama to ʾabunä ʾAtnatewos (in tenure 1867-76), with description of some events. It contains 107 names. Besides, it mentions some rulers of Ethiopia and events that took place when they were in power, such as King Susǝnyos and the arrival of the Catholic priests, the restoration of the Orthodox faith, the rule of King ʾIyasu, the conflict between däğğazmač Wube and ras ʿAli, the death of ʾAtnatewos at ʿAdwa.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 181rb-rc: Extensive donation note.<q xml:lang="gez"/>
+                           <locus target="#181rb">Fol. 181rb</locus>-rc: Extensive donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in the main hand. It states that the commissioner of the Ms. is ʾabba Gǝrma Ṣǝyon who donated it to the Däbrä Dammo monastery.
                         </item>
@@ -215,7 +218,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with brown tooled leather; textile inlays.&#xD;
 Overback made of brown tooled leather.&#xD;
 Spinelining made of a piece of parchment. &#xD;
@@ -227,6 +230,8 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornaments on the brown leather cover (at least 10 tools were used: triple line fillet, fourfold line fillet, double circle, Maltese-cross, corni-form, cross hatching, hatching with dots, criss-cross, wave form, double sine wave with dots).&#xD;
+Blind tooled ornament on the brown overback (at least 1 tool is used: triple line fillet).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -269,8 +274,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Gǝrma Ṣǝyon is mentioned  as the commissioner of the Ms. in the postscript and in Additio 2. His name and the names of other individuals are written in supplication formulas throughout the Ms.: Gǝrma Ṣǝyon (e.g., fols. 3vb, 4va, 46ra, 66rb, 90ra, 106rc, 146va, 170rc), his father Läbase Krǝstos (e.g., fols. 5vc, 7rb, 47ra, 66rb, 90ra, 106rb, 146va), Wäldä Krǝstos (e.g., fols. 3ra, 3vab), ʾabunä ʾAskalä Maryam (e.g., fols. 171vb, 172rac, 173ra), ʾabunä ʾAskalä Dǝngǝl (e.g., fols. 172rabc, 173ra, 174ra).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Gǝrma Ṣǝyon is mentioned  as the commissioner of the Ms. in the postscript and in Additio 2. His name and the names of other individuals are written in supplication formulas throughout the Ms.: Gǝrma Ṣǝyon (e.g., fols. 3vb, 4va, 46ra, 66rb, 90ra, 106rc, 146va, 170rc), his father Läbase Krǝstos (e.g., fols. 5vc, 7rb, 47ra, 66rb, 90ra, 106rb, 146va), Wäldä Krǝstos (e.g., fols. 3ra, 3vab), ʾabunä ʾAskalä Maryam (e.g., fols. 171vb, 172rac, 173ra), ʾabunä ʾAskalä Dǝngǝl (e.g., fols. 172rabc, 173ra, 174ra).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -295,7 +300,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-23">registered</change>
          <change who="MK" when="2013-07-30">created</change>
          <change who="DN" when="2015-04-27">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

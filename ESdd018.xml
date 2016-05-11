@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd018"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -39,8 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>342 (front cover, inner side)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra;&#xD;
 the two first lines  of the opening entry for each day; &#xD;
 incipit (one line) of each commemoration  note;&#xD;
@@ -52,13 +52,18 @@ elements of the punctuation signs;&#xD;
 elements of Ethiopic numerals;&#xD;
 some lines of the concluding formulas of each month;&#xD;
 the first two lines of the concluding formula at the end of the entire text (fol. 173vb).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>On many fols., there are ruling lines (one-three, in the bottom of fols.) which the scribe did not use. They are: fols. 5ra – 16v; fols. 21v – 28v.</note>
+                     <note>Fol. 1r is mutilated.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -67,7 +72,10 @@ the first two lines of the concluding formula at the end of the entire text (fol
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">174.0</measure> folios, of which <measure unit="leaf" type="blank">4.0</measure> blank, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">174.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">4.0</measure> blank
+                                                  Fols. 1rv, 2rv, 53v, 174rv., in
+                                                  <measure unit="quire">19.0</measure> quires (A + 18). 
                                                 <dimensions type="outer">
                               <height unit="cm">39.0</height>
                               <width unit="cm">36.5</width>
@@ -199,7 +207,7 @@ Stains on fols. 1r-5v, 39v-40r, 109v-110r, 159v-160r. Little holes on fols. 16, 
                            <note>All data are for fol. 4r.</note>
                            <ab type="ruling">The number of the lines to a folio is very irregular; it ranges from 37 to 43. On average the number is 40.</ab>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: </ab>
                            <ab>
 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
@@ -225,7 +233,7 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black; red.</seg>
                         <persName role="scribe" corresp="PRS00000">Silondis</persName>Silondis  seems to be the name of the scribe; a short invocation at the conclusion of entries for Miyazya (fol. 53rc) mentions "Silondis, the one who wrote it".<date>17th century (?).</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">In some passages ጵ has the horizontal marker of the vowel attached to the left side of the vertical line, not directly to the body of the letter (esp. fol. 5rb, l.5).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <bindingDesc>
                      <binding contemporary="partly">
@@ -279,8 +287,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʿAqbä Mikaʾel is mentioned in the supplication formulas throughout the text; besides, in the conclusion of the entries for the month Miyazya, on fol. 53rc, an invocation mentions the scribe and "ʿAqbä Mikaʾel, the one who caused (the book) be written".&#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʿAqbä Mikaʾel is mentioned in the supplication formulas throughout the text; besides, in the conclusion of the entries for the month Miyazya, on fol. 53rc, an invocation mentions the scribe and "ʿAqbä Mikaʾel, the one who caused (the book) be written".&#xD;
 In some passages, his name is replaced with the names of Śǝʿǝlä Mikaʾel (esp. fol. 157rc, l.19) and Kǝnfä Mikaʾel (esp. fol. 171ra, l.6).&#xD;
 Together  with ʿAqbä Mikaʾel, "his maid Wälättä Maryam" is also mentioned (e.g., fols. 40ra, l.16, 40va, l.9, 88ra, ls. 23-24).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
@@ -310,7 +318,7 @@ Together  with ʿAqbä Mikaʾel, "his maid Wälättä Maryam" is also mentioned 
          <change who="DN" when="2010-11-23">registered</change>
          <change who="VP" when="2011-11-17">created</change>
          <change who="EG" when="2015-01-07">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

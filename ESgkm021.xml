@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESgkm021"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä krǝstǝnna “Book of the Christening”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>GKM-021</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Text I; directives to the ministers; the abbreviation; titles of the books to be read; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 3r), two lines are rubricated (alternating with a black line).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text I is called Mäṣḥafä ṭǝmqät wä-mäṣḥafä krǝstǝnna in the incipit (s. fol. 3ra).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ On the incipit page of Text I (fol. 3r), two lines are rubricated (alternating w
                         <support>
                            <material key=""/>
                         </support>
-                        <extent>Made of <measure unit="leaf">34.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">34.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1, 2, 33, 34., in
+                                                  <measure unit="quire">5.0</measure> quires (A+4). 
                                                 <dimensions type="outer">
                               <height unit="cm">16.0</height>
                               <width unit="cm">11.5</width>
@@ -100,7 +107,7 @@ Tear carefully amended on fol. 1.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -133,6 +140,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Quire A is reinforced by parchment guards.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -175,11 +183,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -201,7 +204,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-04">registered</change>
          <change who="SA" when="2013-08-08">created</change>
          <change who="SA" when="2014-08-20">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

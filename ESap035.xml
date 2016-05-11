@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap035"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary” / Homily by Cyril of Jerusalem on the Assumption of Mary / Homily by Cyriacus of Behnesa on the Assumption of Mary</title>
@@ -36,16 +36,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-28 (fol. 71r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra, names of donors and owners, titles and headings of the texts, elements of the punctuation marks.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Fols. 1-4,<ref type="mss" corresp="ES189190">189-190</ref>are unruled.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -54,7 +58,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">190.0</measure> folios, in <measure unit="quire">26.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">190.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2r, 3v, 189r, 190rv, in
+                                                  <measure unit="quire">26.0</measure> quires (A+24+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">24.0</height>
                               <width unit="cm">19.0</width>
@@ -137,7 +144,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>Fols. 5r-14v: all data are for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/A.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible.</ab>
@@ -164,7 +171,7 @@ The bottom line is written above the ruling.</ab>
                            <note>Fols. 15r-188v: all data are for fol. 23r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/A.</ab>
                            <ab>
 fols. 15r-188v: 1A-1A-1A1A/0-0/0-0/C.</ab>
@@ -187,20 +194,21 @@ The bottom line is written above the ruling.</ab>
                         <persName role="scribe" corresp="PRS00000">Habtä ʾIyäsus, Wäldä Ḥawaryat Zä-Mikaʾel</persName>Habtä ʾIyäsus (the old hand b) wrote Texts I-4, I-5, II and III. His name is mentioned in the subscription, fol. 188rb. He was the scribe of Ms. AP-005.&#xD;
 Wäldä Ḥawaryat Zä-Mikaʾel (?), more recent scribe (hand a) wrote Texts I-1, I-2 and I-3: he is mentioned in the concluding supplication, fol. 14rb (on fol. 13va, he is mentioned but not as the scribe).<date>First half of the 16th century (quires I and II of more recent time).</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">fols.5ra-12va, more recent (17th cent.?)</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">fols.15ra-188rb</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: fols.5ra-12va, more recent (17th cent.?)<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: fols.15ra-188rb<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 4r: Two transaction records. <q xml:lang="gez"/>
+                           <locus target="#4r">Fol. 4r</locus>: Two transaction records. <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -209,6 +217,7 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Some quires are reinforced by parchment guards.&#xD;
 Fol. 1 was possibly used as pastedown.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -251,13 +260,13 @@ Fol. 1 was possibly used as pastedown.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">Habtä ʾIyäsus, Wäldä Ḥawaryat Zä-Mikaʾel</persName>
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Perhaps the owner of part of the Ms. (quires I and II) was scribe Wäldä Ḥawaryat Zä-Mikaʾel who mentions himself (fol. 7vb) and his father Zä-Mikaʾel  Wäldä Ḥawaryat (fols. 8ra, 9vb, 13vab) in the supplication formulas.</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName corresp="PRS00000"/>
@@ -281,7 +290,7 @@ Fol. 1 was possibly used as pastedown.</decoNote>
          <change who="DN" when="2010-05-04">registered</change>
          <change who="MK" when="2010-09-23">created</change>
          <change who="DN" when="2015-07-13">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

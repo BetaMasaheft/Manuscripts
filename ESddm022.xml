@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESddm022"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary” / Täʾamrä ʾIyäsus “Miracles of Jesus”</title>
@@ -33,15 +33,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DDM-022</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of other characters like Michael and Gäbrǝʾel (fol. 5r); name of the donor; the word sänbät “Sabbath” on fol. 5v; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 &#xD;
 Groups of lines on the incipit page of Text II, alternating with black lines; two lines in the incipit of Texts I-1, I-2, I-3 and I-4; of Texts I-3, II and III; two initial lines of sections of Texts I-1, I-3 and I-4.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -53,7 +53,10 @@ Groups of lines on the incipit page of Text II, alternating with black lines; tw
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">36.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">36.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1r-2v, 36r-v., in
+                                                  <measure unit="quire">6.0</measure> quires (A+5). 
                                                 <dimensions type="outer">
                               <height unit="cm">13.0</height>
                               <width unit="cm">9.5</width>
@@ -62,6 +65,8 @@ Groups of lines on the incipit page of Text II, alternating with black lines; tw
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks are written in upper margin of the first folio of the quires on fols. 3r: ፩, 11r: ፪, 19r: ፫, 27r: ፬.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -102,7 +107,7 @@ Groups of lines on the incipit page of Text II, alternating with black lines; tw
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -175,8 +180,9 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Ḫaylä Maryam is mentioned in the supplication formulas (fols. 20r, 32v etc.).&#xD;
+Currently, the Ms. is in private possession of Bärihun Gäbre (Dändera).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -201,7 +207,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-18">registered</change>
          <change who="SH" when="2015-02-03">created</change>
          <change who="SH" when="2015-02-17">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

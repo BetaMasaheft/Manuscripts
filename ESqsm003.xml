@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqsm003"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QSM-003</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts; numbers and titles of the chapters in the upper margins of the fols.; elements of the punctuation signs and numbers; in the incipit page of each Gospel, a few lines are rubricated (in groups of two lines, alternating with black lines); crux ansata.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The "Golden Gospel" of Qärsäbär Mikaʾel.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">184.0</measure> folios, in <measure unit="quire">27.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">184.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, in
+                                                  <measure unit="quire">27.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">40.0</height>
                               <width unit="cm">27.0</width>
@@ -163,7 +170,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data are for the second page of the first Gospel, recto side (fol. 14r).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Ruling pricks are visible.</ab>
@@ -196,27 +203,27 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 11v (outer margin): Excerpt from “Ordinary of the Mass” (MQ, Śǝrʿatä qǝddase, §§ 160-171) followed by a directive for the ministers. <q xml:lang="gez"/>
+                           <locus target="#11v">Fol. 11v</locus>(outer margin): Excerpt from “Ordinary of the Mass” (MQ, Śǝrʿatä qǝddase, §§ 160-171) followed by a directive for the ministers. <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 63ra: Note concerning tributes and revenues for the church or Qärsäbär.<q xml:lang="gez"/>
+                           <locus target="#63ra">Fol. 63ra</locus>: Note concerning tributes and revenues for the church or Qärsäbär.<q xml:lang="gez"/>
                            <q xml:lang="en">The note is written in red ink; mentioning the name of Queen Zäwditu (r. 1916-30).</q>
                            
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 63ra-rb: Recent note.<q xml:lang="gez"/>
+                           <locus target="#63ra">Fol. 63ra</locus>-rb: Recent note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is poorly readable.
                         </item>
                         <item xml:id="a4">
-                           <locus/>Fol. 64rb: Recent note.<q xml:lang="gez"/>
+                           <locus target="#64rb">Fol. 64rb</locus>: Recent note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is poorly readable, with two signatures (finger prints) at the bottom.
                         </item>
                         <item xml:id="a5">
-                           <locus/>Fol. 94r-b: Yä-Qärsäbär ḥǝgg, Note concerning customary law of Qärsäbär.<q xml:lang="gez"/>
+                           <locus target="#94r">Fol. 94r</locus>-b: Yä-Qärsäbär ḥǝgg, Note concerning customary law of Qärsäbär.<q xml:lang="gez"/>
                            <q xml:lang="en">The note is dated to 1929 year of mercy.</q>
                            
                         </item>
@@ -279,11 +286,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -305,7 +307,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-17">registered</change>
          <change who="SA" when="2011-02-24">created</change>
          <change who="DN" when="2015-10-29">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

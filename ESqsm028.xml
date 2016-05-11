@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqsm028"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä nǝfq “Book of the Assistant Priest”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QSM-028</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; initial lines of the parts of Text I; the numeral indicating the first quire (fol. 4r); abbreviations of the protagonists in Text I-1; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">27.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">27.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2rv, 3rv, 26v, 27rv, in
+                                                  <measure unit="quire">5.0</measure> quires (A+4). 
                                                 <dimensions type="outer">
                               <height unit="cm">12.5</height>
                               <width unit="cm">11.7</width>
@@ -60,6 +63,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>Undecorated quire marks are written in the middle of the upper margin of fols.: 5r, 10r, 16r, 22r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">3</dim>
@@ -109,7 +115,7 @@ Cut amended in fol. 1, 18.</condition>
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -131,7 +137,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two recent fiber wood boards covered with brown tooled leather (quarter cover).&#xD;
 One pair of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -140,6 +146,7 @@ One pair of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover(at least 2 tools were used: triple line fillet, double circle).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -182,11 +189,6 @@ One pair of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -208,7 +210,7 @@ One pair of sewing stations.</decoNote>
          <change who="DN" when="2010-05-18">registered</change>
          <change who="MK" when="2012-08-07">created</change>
          <change who="MK" when="2014-06-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

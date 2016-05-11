@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap049a"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mälkǝʾa sämaʿtatä Ṗäraqliṭos “Image of the Martyrs of Ṗäraqliṭos”</title>
@@ -33,16 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AP-049a</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>The name of the protagonists sämaʿtatä Ṗäraqliṭos; a few lines alternating with black lines in the incipit page of the text; the word sälam; elements of the punctuation signs, of corrections and of decorations around the word hǝräy at the text margins.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- The text is incomplete (at the 32nd strophe), the same as in Mss.<ref type="mss" corresp="ESap046">AP-046</ref>and<ref type="mss" corresp="ESap019">AP-019</ref>.</note>
+                     <note>- The handwriting seems to be the same as in<ref type="mss" corresp="ESap019">AP-019</ref>.</note>
+                     <note>- Fols. 73r-75v, 79rb-84v: blank folios not ruled; fols. 73 and 84 probably used as protective leaves.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +57,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">12.0</measure> folios, in <measure unit="quire">1.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">12.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  73r-75v, 79rb-84v, in
+                                                  <measure unit="quire">1.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">15.8</width>
@@ -86,7 +95,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data for fol. 77r</note>
                            <ab type="ruling">the number of lines changes: e.g., 22 in fol. 77r, 24 in fol. 76r and 26 in fol. 78r.</ab>
                            <ab type="pricking">Pricking and ruling are not visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: </ab>
                            <ab>
 1A-1A-1A1A/0-0/0-0/C. </ab>
@@ -112,7 +121,7 @@ The scribe disregarded the ruling: he doesn’t write on the ruled lines.</ab>
                         <seg type="ink">Black; red (brilliant red).</seg>
                         <date>First half of the 20th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">On fol. 78va l.20, the letter ጵ has the 6th order marker set up on the vertical stroke at the top, oriented to the left; the same, in the same word and passage, is in Mss. AP-046 (fol. 43ra l.3) and AP-019 (fol. 20rb l.7).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <bindingDesc>
                      <binding>
@@ -162,11 +171,6 @@ The scribe disregarded the ruling: he doesn’t write on the ruled lines.</ab>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -188,7 +192,7 @@ The scribe disregarded the ruling: he doesn’t write on the ruled lines.</ab>
          <change who="DN" when="2010-05-05">registered</change>
          <change who="VP" when="2014-02-27">created</change>
          <change who="EG" when="2014-08-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

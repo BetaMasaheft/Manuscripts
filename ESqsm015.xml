@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqsm015"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QSM-015</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Titles of texts and their incipits; nomina sacra; the name of the Emperor in the supplication for the reigning monarch (e.g., fol. 122v); directives to the ministers; abbreviations; titles of larger parts of the Ms. in the table of contents (fol. 2v).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The text of the Ms. was probably copied from a printed book (?).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">125.0</measure> folios, in <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">125.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1, 2, 111, 124, 125, in
+                                                  <measure unit="quire">17.0</measure> quires (A+16). 
                                                 <dimensions type="outer">
                               <height unit="cm">28.0</height>
                               <width unit="cm">21.5</width>
@@ -134,7 +141,7 @@ Some fols. are worn and dirty.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling">on average; 22-23.</ab>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible (s. fol. 57r).</ab>
@@ -179,12 +186,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 123rb: Donation note.<q xml:lang="gez"/>
+                           <locus target="#123rb">Fol. 123rb</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note mentions that the Ms. has been donated to Qärsäbär Mikaʾel in 1966 A.M. (= 1973/74 A.D.) by wäyzäro Bǝrritu.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 123v: Purchase note.<q xml:lang="gez"/>
+                           <locus target="#123v">Fol. 123v</locus>: Purchase note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Hardly readable. The note mentions that wäyzäro Bǝrritu paid for the Ms. 110 Birr, in 1966 A.M. (= 1973/74 A.D.).
                         </item>
@@ -196,7 +203,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -205,6 +212,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: triple line fillet, double circle, small x, x-form, criss cross, chain).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -247,8 +255,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Additiones 1 and 2 mention wäyzäro Bǝrritu as the donor. Elsewhere, ʾabunä Kidanä Maryam, Wälättä Ṣadǝqan, Gäbrä ʾƎgziʾabǝḥer are mentioned (s. fol. 59vb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Additiones 1 and 2 mention wäyzäro Bǝrritu as the donor. Elsewhere, ʾabunä Kidanä Maryam, Wälättä Ṣadǝqan, Gäbrä ʾƎgziʾabǝḥer are mentioned (s. fol. 59vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -273,7 +281,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-17">registered</change>
          <change who="IF" when="2010-11-13">created</change>
          <change who="MK" when="2014-07-24">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

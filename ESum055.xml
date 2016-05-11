@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESum055"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä gǝnzät “Book of the Funeral Ritual” / Mäṣḥafä qedär “Book of the Jar” / Mäṣḥafä krǝstǝnna “Book of the Christening”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>UM-055</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Texts I-III; initial lines of section of Text I; titles of books to be read; titles or initial lines of prayers; some words: halle luya (fols.), bǝḍuʿ (fols. 37r), fǝtuḥa; elements of the punctuation signs; elements of Ethiopic numbers.&#xD;
 On the incipit page of Texts I and III (fols. 1r and 61v) and on fol. 28r, a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text III is called Mäṣḥafä krǝstǝnna in the incipit (fol. 61va).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,8 @@ On the incipit page of Texts I and III (fols. 1r and 61v) and on fol. 28r, a few
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">84.0</measure> folios, in <measure unit="quire">11.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">84.0</measure> folios, in
+                                                  <measure unit="quire">11.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">19.2</height>
                               <width unit="cm">18.6</width>
@@ -61,6 +66,9 @@ On the incipit page of Texts I and III (fols. 1r and 61v) and on fol. 28r, a few
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Quire marks written in a secondary hand.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">8</dim>
@@ -120,7 +128,7 @@ Tears carefully amended on fols. 20, 47.</condition>
                            <note>All data for fol. 2r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -151,6 +159,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -193,11 +202,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -219,7 +223,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2014-06-08">registered</change>
          <change who="SA" when="2014-07-29">created</change>
          <change who="DN" when="2014-08-20">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

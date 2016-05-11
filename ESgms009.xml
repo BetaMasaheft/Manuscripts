@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESgms009"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝggwa, Antiphonary / Mäzmur, Antiphones for Sundays of the year</title>
@@ -33,14 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>GMS-009</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; a few lines on the incipit page of Texts I-II; one or two initial lines of the sections of Text I (e.g., ʾamä 20 wä 1 wazema zä-Ṣǝyon); names of sections of Text II (e.g., mäzmur zä-Däbrä Zäyt) followed by feast names; two initial lines of parts of Text II (fols. 81vb, 97va); antiphons and their abbreviations (e.g., maḫlet, mäzmur, śäläst, sälam, bä-5-tu, ʾabun, ʾaryam, ʾǝsmä lä-ʿaläm, zä-ʾamlakiyä, zä-yǝʾǝze, yǝtbaräk); names of other chants and their abbreviations sometimes followed by month and feast names (e.g., mǝlṭan, mǝsbak, ʿǝzl); musical notation: intratextual signs (e.g., sǝräyu, qädami, yǝgäbru, qalä ʿawadi, ʾaklilä, täsäfḥa), interlinear (e.g., fol. 49rb) and elements of the marginal signs; elements of the Table of halleluiatic chants; chains of red and black dots separating groups of antiphones; elements of the punctuation signs, Ethiopic numerals or their elements.&#xD;
 Sometimes only two or three initial letters of a word are rubricated.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -52,7 +52,10 @@ Sometimes only two or three initial letters of a word are rubricated.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">109.0</measure> folios, in <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">109.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, 2rv, 3rv, 4v, 74vb, 106r, 107rv, in
+                                                  <measure unit="quire">12.0</measure> quires (A+11). 
                                                 <dimensions type="outer">
                               <height unit="cm">20.0</height>
                               <width unit="cm">16.0</width>
@@ -134,7 +137,7 @@ Holes are carefully amended on fols. 32, 68, 76, 94,105.</condition>
                            <note>All data are for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -169,7 +172,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 106va: Directive concerning the recitation of two prayers (?).<q xml:lang="gez"/>
+                           <locus target="#106va">Fol. 106va</locus>: Directive concerning the recitation of two prayers (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in a poor hand.
                         </item>
@@ -190,6 +193,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -232,11 +236,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -258,7 +257,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-07">registered</change>
          <change who="MK" when="2013-05-27">created</change>
          <change who="MK" when="2014-09-08">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

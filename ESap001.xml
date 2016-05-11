@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap001"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -36,18 +36,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-13 (fol. 75r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; first words (headings or parts of headings) of constituent texts; directives for the ministers; some of the musical notation signs above the lines; most of the abbreviations; elements of the punctuation signs and Ethiopic numerals.&#xD;
 &#xD;
 The incipit parts of texts I, II, III are written alternately in red and black lines (s. fols. 3r, 26r, 40ra).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>-In Text IV-2) by beginning of the excerpt from the “Book of the Testament" (fol. 71vb) is not marked with the heading ʾƎm-mäṣḥafä kidan zä-nägäromu....</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -56,7 +60,10 @@ The incipit parts of texts I, II, III are written alternately in red and black l
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">136.0</measure> folios, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">136.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2rv, in
+                                                  <measure unit="quire">19.0</measure> quires (A+18). 
                                                 <dimensions type="outer">
                               <height unit="cm">22.6</height>
                               <width unit="cm">19.0</width>
@@ -146,7 +153,7 @@ In quire XVIII, the stubs of two bifolios which have been cut short can be seen.
                            <note>All data are for fol. 133r.</note>
                            <ab type="ruling">or 21</ab>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible (s. fol. 37r).</ab>
@@ -194,23 +201,19 @@ The bottom line is written above the ruling.</ab>
                   </decoDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
-                        <item xml:id="a1">
-                           <locus/> Fol. 2r: Record concerning the income of the church.<q xml:lang="gez"/>
+                        <item xml:id="a1"> <locus target="#2r">Fol. 2r</locus>: Record concerning the income of the church.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Gǝʿǝz and Amharic.
                         </item>
-                        <item xml:id="a2">
-                           <locus/> Fol. 135va-vb: Donation note.<q xml:lang="gez">Fol. 135va-vb: ዛቲ፡ መጽሐፍ፡ ዘወልደ፡ ኪዳን፡ በዘጠኝ፡ ብር፡ ር፡ ከኍለት፡ ሻማ፡ ተሣይጦ፡ ወሀቦ፡ ለመቅደሰ፡ ጰራቅሊጦስ፡ ከመ፡ ይኵኖ፡ መርሃ፡ ውስተ፡ መንግሥተ፡ ሰማያት፡ ሐዳስ፨ ወከመ፡ ያንብሮ፡ ምስለ፡ አቡሁ፡ ተወልደ፡ መድኅን፡ ወእሙ፡ ሰበነ፡ ጊዮርጊስ፡ ወብእሲቱ፡ አስካለ፡ ማርያም፡ ወልዱ፡ ወልደ፡ ማርያም፡ ገብረ፡ ኢየሱስ፡ ተክለ፡ ሊባኖስ፡ ገብረ፡ ጊዮርጊስ፡ ወለተ፡ ሊባኖስ፡ ወለተ፡ ኪሮስ፡ ምስለ፡ ሕሩያን፡ ጻድቃን፡ ልበሳነ፡ ግርማ፡ ወሞገስ፨ ያድኅኖ፡ ያድኅኖ፡ ያድኅኖ፡ ብላቹኽ፡ በጊዜ፡ ጸሎት፡ ወቅዳሴ። ፩፩አቡነ፡ ዘበሰማያት፡ እየ፡ ደገማቹኽ፡ አትርሱኝ፡ አንትሙ፡ ካህናት፡ ወዲያቆናት። </q>
+                        <item xml:id="a2"> <locus target="#135va">Fol. 135va</locus>-vb: Donation note.<q xml:lang="gez">Fol. 135va-vb: ዛቲ፡ መጽሐፍ፡ ዘወልደ፡ ኪዳን፡ በዘጠኝ፡ ብር፡ ር፡ ከኍለት፡ ሻማ፡ ተሣይጦ፡ ወሀቦ፡ ለመቅደሰ፡ ጰራቅሊጦስ፡ ከመ፡ ይኵኖ፡ መርሃ፡ ውስተ፡ መንግሥተ፡ ሰማያት፡ ሐዳስ፨ ወከመ፡ ያንብሮ፡ ምስለ፡ አቡሁ፡ ተወልደ፡ መድኅን፡ ወእሙ፡ ሰበነ፡ ጊዮርጊስ፡ ወብእሲቱ፡ አስካለ፡ ማርያም፡ ወልዱ፡ ወልደ፡ ማርያም፡ ገብረ፡ ኢየሱስ፡ ተክለ፡ ሊባኖስ፡ ገብረ፡ ጊዮርጊስ፡ ወለተ፡ ሊባኖስ፡ ወለተ፡ ኪሮስ፡ ምስለ፡ ሕሩያን፡ ጻድቃን፡ ልበሳነ፡ ግርማ፡ ወሞገስ፨ ያድኅኖ፡ ያድኅኖ፡ ያድኅኖ፡ ብላቹኽ፡ በጊዜ፡ ጸሎት፡ ወቅዳሴ። ፩፩አቡነ፡ ዘበሰማያት፡ እየ፡ ደገማቹኽ፡ አትርሱኝ፡ አንትሙ፡ ካህናት፡ ወዲያቆናት። </q>
                            <q xml:lang="en"> Fol. 135va-vb: This is a book of Wäldä Kidan, he bought (it) for nine Bǝrr and two šämmas and donated to the sanctuary of Ṗäraqliṭos, so that it might be for him a guide to the new Kingdom of Heaven, and so that He might place him together with his father Täwäldä Mädḫǝn, and his mother Säbänä Giyorgis and his wife ʾAskalä Maryam, and his son Wäldä Maryam, Gäbrä ʾIyäsus, Täklä Libanos, Gäbrä Giyorgis, Wälättä Libanos, Wälättä Kiros, together with the select righteous who are clad in glory and grace. Saying: “May He save him, may He save him, may He save him!”, do not forget me, reciting, each of you, the Paternoster at the time of prayer and liturgy, oh you priests and deacons.</q>
                            In Gǝʿǝz and Amharic. The price has been written over an erasure the last letter of which is still visible.
                         </item>
-                        <item xml:id="a3">
-                           <locus/> Fol. 136ra-rc: Litanical prayer  to the Holy Cross.<q xml:lang="gez"/>
+                        <item xml:id="a3"> <locus target="#136ra">Fol. 136ra</locus>-rc: Litanical prayer  to the Holy Cross.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Possibly an extract from the Ordinary of the Mass. Musical notation signs are written above the lines.
                         </item>
-                        <item xml:id="a4">
-                           <locus/> Fol. 136v: Sǝfrä säʿat "Measuring of the Hours".<q xml:lang="gez"/>
+                        <item xml:id="a4"> <locus target="#136v">Fol. 136v</locus>: Sǝfrä säʿat "Measuring of the Hours".<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Note on computus (?), about counting the time during the liturgy. In Amharic; cp. Sǝfrä säʿatat in Ms. FBM-011.
                         </item>
@@ -225,7 +228,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -234,6 +237,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the leather cover (at least 5 tools were used: double circles, double line fillets, double sine waves with dots, criss-cross, x-form).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -276,8 +280,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä Kidan (s. Additio 2, and supplication formulas in the main text). Additio 2 also mentions the donor’s father Täwäldä Mädḫǝn, his mother Säbänä Giyorgis and his wife ʾAskalä Maryam as well as other relatives.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä Kidan (s. Additio 2, and supplication formulas in the main text). Additio 2 also mentions the donor’s father Täwäldä Mädḫǝn, his mother Säbänä Giyorgis and his wife ʾAskalä Maryam as well as other relatives.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -304,7 +308,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-03">registered</change>
          <change who="IF" when="2013-05-24">created</change>
          <change who="IF" when="2015-01-09">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

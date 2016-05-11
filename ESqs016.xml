@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqs016"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsan zä-qǝddus Yoḥannǝs wäldä Zäbdewos bä-ʾǝntä ˤǝbäya wä-kǝbra lä-Maryam “Homily by John the Son of Zebedee on the Greatness and Glory of Mary”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QS-016</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Two lines on the incipit of the text, alternating with a black line; the name of Maryam and of Yoḥannǝs; the name of the donor and of the scribe; elements of Ethiopic numerals and of punctuation signs.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The incipit of the text is as follows: [fol. 2ra] በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አምላክ፡ ፩፡ አምላክ፡ ክርስቶስ፡ ኦእግዚእየ፡ ወአምላኪየ። ትስአል፡ ሊተ፡ ድርሳነ፡ ዘቅዱስ፡ ወብፁዕ፡ ዮሐንስ፡ ወልደ፡ ዘብዴዎስ፡ በእንተ፡ ዕበያ፡ ወክብራ፡ ለማርያም፡ ቅድስት፡ ድንግል፤ …</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">18.0</measure> folios, in <measure unit="quire">2.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">18.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, in
+                                                  <measure unit="quire">2.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">20.0</height>
                               <width unit="cm">14.0</width>
@@ -92,7 +99,7 @@ Fol. 1r, damaged in the upper part, probably was used as front cover, attached t
                            <note>All data are for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern:</ab>
                            <ab>
 1A-1A-1A1A/0-0/0-0/C.</ab>
@@ -119,7 +126,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Both boards are missing (possibly the bookblock never had any).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -169,8 +176,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of Wäldä Bǝrhan is written, over erasure and in red, in the final supplication formula (fol. 18rb). In the supplication formula on fol. 2ra, a name in red has been erased, before the mention of the scribe.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of Wäldä Bǝrhan is written, over erasure and in red, in the final supplication formula (fol. 18rb). In the supplication formula on fol. 2ra, a name in red has been erased, before the mention of the scribe.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -199,7 +206,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2012-12-02">registered</change>
          <change who="VP" when="2015-05-07">created</change>
          <change who="DN" when="2015-06-19">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmgm001"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä ʾIyäsus “Miracles of Jesus”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MGM-001</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Texts I-1, I-4; incipit of sections of Text I-2; numbers and incipits of miracles; word ʾǝsäggǝd in Text I-1; elements of the punctuation signs; Ethiopic numerals and/or their elements.&#xD;
 A few groups of lines on the incipit page of Text I-2.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The miracles are introduced with the words mǝʿǝraf “chapter”, täʾamǝr “miracle”, täʾamrihu “his miracle”, nägär “speech”. They are counted starting from number 6 (fol. 14vb).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ A few groups of lines on the incipit page of Text I-2.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">122.0</measure> folios, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">122.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2rv, 122rv, in
+                                                  <measure unit="quire">18.0</measure> quires (A+17). 
                                                 <dimensions type="outer">
                               <height unit="cm">28.5</height>
                               <width unit="cm">24.0</width>
@@ -61,6 +68,9 @@ A few groups of lines on the incipit page of Text I-2.</rubric>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>Undecorated quire marks are written in the left upper corner of the first fol. of the quire and in the right upper corner of the last fol. of the quire: fols. 5r, 12r, 18v, 19r, 25v, 26r, 32v, 33r, 38v, 39r, 47v, 48r, 54v, 55r, 61v, 62r, 69v, 70r, 76v, 77r, 85v, 86r, 92v, 93r, 100v, 101r, 108, 109r, 116v.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -141,7 +151,7 @@ Holes are carefully amended on fols. 33, 58, 59.</condition>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -172,6 +182,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of some quires, close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: double line fillet, double circle, corni form, interlaced line fillet, x-form, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -214,8 +225,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Zä-Wäldä Maryam, Zärʾa Ṣǝyon, Ḫadära Mikaʾel, ʾAmḫa Giyorgis and Lǝʿulä Qal are mentioned in the supplication formulas.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Zä-Wäldä Maryam, Zärʾa Ṣǝyon, Ḫadära Mikaʾel, ʾAmḫa Giyorgis and Lǝʿulä Qal are mentioned in the supplication formulas.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -240,7 +251,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2012-05-19">registered</change>
          <change who="MK" when="2014-08-27">created</change>
          <change who="MB" when="2015-04-21">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

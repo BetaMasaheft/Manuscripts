@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdsm021b"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,15 +33,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DSM-021b</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donor; elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.&#xD;
 &#xD;
 Two initial lines of the sections of Text I-2.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -53,7 +53,10 @@ Two initial lines of the sections of Text I-2.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">12.0</measure> folios, in <measure unit="quire">2.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">12.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 2v, 12v., in
+                                                  <measure unit="quire">2.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">20.5</height>
                               <width unit="cm">15.5</width>
@@ -93,7 +96,7 @@ Tears amended on fols. 8, 11.</condition>
                            <note>Quire I: all data for fol. 1r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -120,7 +123,7 @@ The bottom line is written above the ruling.</ab>
                            <note>Quire II: all data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -140,11 +143,12 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, red (only hand b)</seg>
                         <date>19th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">fol. 1ra-vb (quire I); the vowel marker of ግ is conspicuously big.</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">fols. 3ra-12ra (quire II).</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: fol. 1ra-vb (quire I); the vowel marker of ግ is conspicuously big.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: fols. 3ra-12ra (quire II).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
                         <decoNote xml:id="b3" type="Endbands"/>
@@ -191,8 +195,8 @@ The bottom line is written above the ruling.</ab>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of Zä-Giyorgis is mentioned in the supplication formulas of Text I-2, in hand b.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of Zä-Giyorgis is mentioned in the supplication formulas of Text I-2, in hand b.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -217,7 +221,7 @@ The bottom line is written above the ruling.</ab>
          <change who="DN" when="2011-05-14">registered</change>
          <change who="SH" when="2015-02-03">created</change>
          <change who="SH" when="2015-03-26">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

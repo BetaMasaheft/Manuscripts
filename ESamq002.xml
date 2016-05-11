@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESamq002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,16 +33,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AMQ-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; groups of lines in the incipit page of Texts I-I; incipit of sections; elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I-1 includes the hymn:</note>
+                     <note>- Sälam läki ḫoḫǝtä mǝśraq ... "Salutation to you, Threshold of the East ..." (fol. 5vb-vc)</note>
+                     <note/>
+                     <note>Text I-2 includes the hymns:</note>
+                     <note>- ʾO-ʾǝgzǝʾtǝyä Maryam dǝngǝl ... "O my Lady, Virgin Mary ..." (fol. 6vc)</note>
+                     <note>- Sälam läki ʾo-ʾǝgzǝʾtǝyä qǝddǝst dǝngǝl bä-kǝlʾe Maryam Mariham ʾǝmmu lä-ʾIyäsus kähali ... "Salutation to you, o my Lady, Holy Two-fold Virgin Mary, Mother of Jesus the Almighty ..." (fols. 6vc-7ra)</note>
+                     <note>- Sälam läki ʾo-ʾǝgzǝʾtǝyä qǝddǝst dǝngǝl bä-kǝlʾe Maryam ʾǝmmä mädḫǝn wä-ʾǝmmä bǝrhan ... "Salutation to you, o my Lady, Holy Two-fold Virgin Mary, Mother of the Light and Mother of the Saviour ..." (fol. 7ra-8va).</note>
+                     <note/>
+                     <note>All miracles of Mary (Text I-4) are numbered. The numbers 17 and 18 are give twice instead of 19 and 20; number 40 is given between 49 and 50.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +63,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">108.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">108.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.0</measure> blank
+                                                  fols. 1rv, 2rv, in
+                                                  <measure unit="quire">14.0</measure> quires (A+13). 
                                                 <dimensions type="outer">
                               <height unit="cm">33.0</height>
                               <width unit="cm">25.0</width>
@@ -60,6 +75,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks are written trice in the upper margin, on fols.: 3r: ፩; 9r: ፪; 18r: ፫; 27r: ፬; 37r: ፭; 45r: ፮; 51r: ፯; 59r: ፰; 67r: ፱; 74r: ፲; 82r: ፩; 92r: ፪; 100r: ፫.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -127,7 +144,7 @@ Holes or tears amended on fols. 21, 36, 47, 48.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -153,7 +170,7 @@ The upper line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 108: Donation note.<q xml:lang="gez"/>
+                           <locus target="#108">Fol. 108</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note, written in the main hand, states that Gäbrä Ḥǝywät purchased and donated the book to the church of Qirqos ʿAddigrat gädam in 1931 A.M. (= 1938/39 A.D.). It mentions also the names of his family members.
                         </item>
@@ -162,7 +179,7 @@ The upper line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -171,6 +188,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes or tears are visible at the spine fold of the quires, close to the head and tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover is poorly visible (at least 5 tools were used: triple line fillet, double circle, cross hatching, x-form, double sine wave).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -213,8 +231,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 1, the Ms. was purchased and donated to the church by Gäbrä Ḥǝywät. He and his family members are mentioned also in the supplication formulas throughout the Ms.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 1, the Ms. was purchased and donated to the church by Gäbrä Ḥǝywät. He and his family members are mentioned also in the supplication formulas throughout the Ms.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -239,7 +257,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-19">registered</change>
          <change who="SA" when="2010-09-29">created</change>
          <change who="DN" when="2015-02-05">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

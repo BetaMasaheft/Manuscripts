@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESamm005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä ʾIyäsus “Miracles of Jesus”</title>
@@ -36,18 +36,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>[AMM-006]</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Rubrication of the main text is executed in vivid red. &#xD;
 Nomina sacra; original names of the donors (mostly erased); incipit of Text I-1; a few lines on the incipit page of Text I-2, incipit of its sections and subsections; incipit of Text I-3 and its sections (fols. 16ra, 19rb, 22ra, 23rb, 29rb, 30va, 34vb, 37va, 39ra, 40rb, 41rb, 42va, 44ra, 49ra, 51ra) and of a subsection (fol. 26va); word ʾǝsäggǝd, "I worship"; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 Names of other donors, added (later) in a secondary hand, are written in strong amaranth and strong vermillion.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The end of the Ms. was photographed separately and given the signature<ref type="mss" corresp="ESamm006">AMM-006</ref>as the codex has been preserved as two separate units. The entire Ms. comprised 160 fols. with 49 (?) miracles of Jesus.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -56,7 +60,10 @@ Names of other donors, added (later) in a secondary hand, are written in strong 
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">52.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">52.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fol. 1rv., in
+                                                  <measure unit="quire">7.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">25.0</height>
                               <width unit="cm">17.5</width>
@@ -111,7 +118,7 @@ Many fols. are affected by humidity, occasionally blurred ink.&#xD;
                            <note>All data are for fol. 5r.</note>
                            <ab type="ruling">Number differs: from 17 (fol. 5r, 32r) to 22 (fols. 50ra).</ab>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -131,7 +138,7 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, red (vivid scarlet, strong amaranth, strong vermillion).</seg>
                         <date>Mid 18th - early 19th century</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">e.g., fols. 15ra, 23r, 28r, 35rb), changes of the pen nib (slender or broad nib: e.g. fol. 1vab), changes in letters' height and varying spaces between the letters.</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">The handwriting tend to left-sloping; it appears very irregular due to the variations in ruling (the size of the columns and the space between lines often differs significantly: e.g., fols. 15ra, 23r, 28r, 35rb), changes of the pen nib (slender or broad nib: e.g. fol. 1vab), changes in letters' height and varying spaces between the letters.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 4v: Black ornamental band; interlaces.</decoNote>
@@ -139,7 +146,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 4v: Donation note.<q xml:lang="gez"/>
+                           <locus target="#4v">Fol. 4v</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is crudely written and hardly legible because the ink has faded away.
 Haftä [sic] Gäbrǝʾel with his father Wäldä Giworgis [sic] and his mother Wälättä Maryam are mentioned in the lower part of the note.
@@ -162,6 +169,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold of some quires, close to the head and the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">none</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -205,8 +213,8 @@ Dagǝmawi Zä-Mänfäs Qǝddus might be identified with Ḫagos (d. 1831), the s
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of the original female donor has been erased throughout the Ms. Only the name of the donor's father, ʾAmdä Maryam, has been preserved (fols. 19rb, 30va).&#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of the original female donor has been erased throughout the Ms. Only the name of the donor's father, ʾAmdä Maryam, has been preserved (fols. 19rb, 30va).&#xD;
 Their names were partly replaced with those of Dagǝmawi Zä-Mänfäs Qǝddus and his wife ʿAmätä Dǝngǝl in strong amaranth ink (e.g., fols. 5ra, 19ra, 23ra, 29ra, 37va, 40rb; s. also Additio 1), occasionally with that of Haftä (sic) Gäbrǝʾel and Wälättä Mädḫǝn in strong vermillion and black ink (e.g, fols. 19ra, 23rb, 30va, 41rb; s. also Additio 1).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
@@ -232,7 +240,7 @@ Their names were partly replaced with those of Dagǝmawi Zä-Mänfäs Qǝddus an
          <change who="DN" when="2010-05-20">registered</change>
          <change who="SH" when="2013-01-23">created</change>
          <change who="SH" when="2014-10-22">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESktm007"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä ʾIyäsus “Miracles of Jesus”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KTM-007</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; a few groups of lines (alternating with black lines) on the incipit page of Texts I-1 and I-2; incipit of the miracles; the word ʾǝsäggǝd “I worship” in Text I-1; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The miracles are not numbered. They are introduced with the words mǝʿǝraf “chapter”, täʾamǝr “miracle”, täʾamrihu “his miracle”, nägär “speech”.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">73.0</measure> folios, in <measure unit="quire">8.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">73.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, 2rv, in
+                                                  <measure unit="quire">8.0</measure> quires (A+7). 
                                                 <dimensions type="outer">
                               <height unit="cm">23.0</height>
                               <width unit="cm">15.0</width>
@@ -60,6 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Undecorated quire marks are written in the centre of the first fol. of the quire: fols. 13r, 23r, 34r, 43r, 51r, 62r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -118,7 +128,7 @@ Holes are carefully amended in fols. 47, 49, 65.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -139,11 +149,14 @@ The bottom line is written above the ruling.</ab>
                         <date>19th century (?)</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ም:</abbr> for <expan>ምዕራፍ: </expan> (fol. 28rb)</item>
+                              <abbr>ም:</abbr> for
+                                                  <expan>ምዕራፍ: </expan> (fol. 28rb)</item>
                            <item>
-                              <abbr>ምዕ:</abbr> for <expan>ምዕራፍ: </expan> (fol. 13rb)</item>
+                              <abbr>ምዕ:</abbr> for
+                                                  <expan>ምዕራፍ: </expan> (fol. 13rb)</item>
                            <item>
-                              <abbr>ምዕራ:</abbr> for <expan>ምዕራፍ: </expan> (fol. 20rb)</item>
+                              <abbr>ምዕራ:</abbr> for
+                                                  <expan>ምዕራፍ: </expan> (fol. 20rb)</item>
                         </list>
                      </handNote>
                   </handDesc>
@@ -159,6 +172,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, close to the head and tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -201,8 +215,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʾAmätä Śǝllase, Wälättä Kidan and Gäbrä Giyorgis are mentioned in the supplication formulas throughout the Ms.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʾAmätä Śǝllase, Wälättä Kidan and Gäbrä Giyorgis are mentioned in the supplication formulas throughout the Ms.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -227,7 +241,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-17">registered</change>
          <change who="MK" when="2013-11-26">created</change>
          <change who="MV" when="2015-03-02">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

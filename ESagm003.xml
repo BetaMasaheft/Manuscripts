@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESagm003"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaˤtu wängel “Four Gospels”</title>
@@ -33,18 +33,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AGM-003</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts; postscripts to the Gospels of Mark, Luke and John; marginal notes repeating chapter titles or indicating Gospel readings for certain occasions; chi rho and crux ansata signs; elements of the punctuation signs; chapter numbers and the word mǝˤǝraf.&#xD;
 &#xD;
 Incipits of the Gospel texts are written alternately in red and black lines (fols. 4r, 56r, 88r, 138r).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Chi rho sing (s. fols. 12r, 31r, 104r, etc.).</note>
+                     <note/>
+                     <note>The Golden Gospel of ʾAgamyo Qǝddus Mikaʾel church.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +59,10 @@ Incipits of the Gospel texts are written alternately in red and black lines (fol
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">179.0</measure> folios, of which <measure unit="leaf" type="blank">0.5</measure> blank, in <measure unit="quire">27.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">179.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">0.5</measure> blank
+                                                  3v, in
+                                                  <measure unit="quire">27.0</measure> quires (A+26). 
                                                 <dimensions type="outer">
                               <height unit="cm">31.5</height>
                               <width unit="cm">22.0</width>
@@ -169,7 +178,7 @@ Traces and turn-ins of a previous overback are preserved on the inner side of bo
                            <note>All data for fol. 70r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling is partly visible; pricking is visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible (s. fol. 29r).</ab>
@@ -182,7 +191,7 @@ The bottom line is written above the ruling.</ab>
                         </layout>
                         <layout>
                            <ab type="CruxAnsata">
-                              <locus target=""/>
+                              <locus target="#00"/>
                            </ab>
                         </layout>
                      </layoutDesc>
@@ -208,6 +217,7 @@ The bottom line is written above the ruling.</ab>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.&#xD;
 Some quires are reinforced by parchment guards (quires I, II, III, VI, etc.).</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover (at least 1 tool was used: double line fillet).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -250,11 +260,6 @@ Some quires are reinforced by parchment guards (quires I, II, III, VI, etc.).</d
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -276,7 +281,7 @@ Some quires are reinforced by parchment guards (quires I, II, III, VI, etc.).</d
          <change who="DN" when="2010-11-17">registered</change>
          <change who="IF" when="2011-06-15">created</change>
          <change who="MV" when="2015-04-30">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

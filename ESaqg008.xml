@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESaqg008"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Orit “Octateuch”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AQG-008</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>A few lines in the incipit pages of Texts I-VIII (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">245.0</measure> folios, in <measure unit="quire">33.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">245.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  48v, in
+                                                  <measure unit="quire">33.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">46.0</height>
                               <width unit="cm">34.0</width>
@@ -195,7 +198,7 @@ Tears carefully amended on fols. 116, 118, 148.</condition>
 Primary pricks are partly visible. </ab>
                            <ab type="pricking">
 Ruling pricks are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C </ab>
                            <ab type="pricking">
 Structural pricks are partly visible </ab>
@@ -217,17 +220,12 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, red</seg>
                         <date>17th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The script is conspicuously right sloping (cp. fol. 208r). Number six ፮, looks like “compressed” number ‘seven’ (e.g., fol. 123va l.19).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>
-                           <div style="line-height: normal" org="uniform" sample="complete">Fol. 195va: Note on commissioning of the writing.</div>  <q xml:lang="gez">
-                              <div style="text-align: left; line-height: normal;"
-                                   org="uniform"
-                                   sample="complete">Fol. 195va: ዝኦሪት፡ ዝአድ፡ ቈልቋል፡ ዘቅዱስ፡ ጊዮርጊስ፡ ዘአጽሐፈ፡ ተስፋ፡ ሐዋርያት፡ ቄስ፡ ገበዙ፡ ኤውስጣቴዎስ፡ ዘሰረቃ፡ ወዘፈሐቃ፡…</div>
-                           </q>
+                           <locus target="#195va">Fol. 195va</locus>: Note on commissioning of the writing.  <q xml:lang="gez">Fol. 195va: ዝኦሪት፡ ዝአድ፡ ቈልቋል፡ ዘቅዱስ፡ ጊዮርጊስ፡ ዘአጽሐፈ፡ ተስፋ፡ ሐዋርያት፡ ቄስ፡ ገበዙ፡ ኤውስጣቴዎስ፡ ዘሰረቃ፡ ወዘፈሐቃ፡…</q>
                            <q xml:lang="en"/>
                            Written in a fine secondary hand. The note states that Ms. belongs to the church of ʾAdd Qwälqwal Qǝddus Giyorgis and mentions Täsfa Ḥawaryat as the commissioner of the Ms. and ʾEwosṭatiwos as the qes gäbäz.
                         </item>
@@ -236,7 +234,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards (both are missing).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
@@ -284,8 +282,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Täsfa Ḥawaryat is mentioned as the commissioner of the Ms. in Additio 1.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Täsfa Ḥawaryat is mentioned as the commissioner of the Ms. in Additio 1.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -310,7 +308,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-18">registered</change>
          <change who="MK" when="2013-04-29">created</change>
          <change who="DN" when="2014-11-10">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

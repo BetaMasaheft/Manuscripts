@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESgms017"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä täklil “Book of the Marriage Ritual” / Mäṣḥafä qedär “Book of the Jar”</title>
@@ -32,14 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>GMS-017</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the kings; incipit of Text I; titles of the books to be read; titles and initial lines of the payers to be read; directives to the ministers; the abbreviation “yǝka” for “yǝbäl kahǝn” in fol. 41v; elements of the punctuation signs; Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 5r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ On the incipit page of Text I (fol. 5r), a few lines are rubricated (alternating
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">48.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">48.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fol. 31v, in
+                                                  <measure unit="quire">7.0</measure> quires (A+5+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">19.5</height>
                               <width unit="cm">14.0</width>
@@ -107,7 +110,7 @@ Quires are reinforced with stitches through all the leaves in the inner margin o
                            <note>Quires I-IV: all data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -134,7 +137,7 @@ The bottom line is written above the ruling.</ab>
                            <note>Quire V (fols. 36r-47r): all data for fol. 37r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -157,8 +160,9 @@ The bottom line is written above the ruling.</ab>
                            <item>ይካ፡ for ይበል፡ ካህን፡</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">fols. 5ra-34vb (quires I-IV).</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">fols. 36r-47r (quire V).</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: fols. 5ra-34vb (quires I-IV).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: fols. 36r-47r (quire V).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 5r: simple uncoloured ornamental band (ails).</decoNote>
@@ -173,6 +177,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains (partly damaged) of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornaments on the brown leather cover (4 tools were used: fourfold line fillet, double circle, cross-hatching, x-form).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -215,11 +220,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -241,7 +241,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-07">registered</change>
          <change who="SA" when="2013-10-04">created</change>
          <change who="MK" when="2014-09-08">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

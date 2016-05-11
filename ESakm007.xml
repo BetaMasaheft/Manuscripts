@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESakm007"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä täklil “Book of the Marriage Ritual” / Mäṣḥafä qedär “Book of the Jar”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AKM-007</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the king; incipit of Texts I-II; titles of the books to be read; directives for the ministers and their abbreviations; elements of the punctuation signs; Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">31.0</measure> folios, in <measure unit="quire">4.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">31.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r-v, 30v, in
+                                                  <measure unit="quire">4.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">15.5</height>
                               <width unit="cm">11.0</width>
@@ -95,7 +98,7 @@ Holes and tears carefully amended on fols. 11, 12, 16. Fols. 10, 11, 16, 17, 18,
                            <note>All data for fol. 2r.</note>
                            <ab type="ruling">Deviates, cp. fols. 15v, 16r.</ab>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are not visible. </ab>
@@ -124,7 +127,7 @@ The scribe frequently disregarded the ruling (s., e.g., fols. 13v, 18v-19r).</ab
                            <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The handwriting is characterized by very thin lines and angular letter shapes.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 1r: simple uncoloured ornamental band; geometric motifs.</decoNote>
@@ -134,7 +137,7 @@ The scribe frequently disregarded the ruling (s., e.g., fols. 13v, 18v-19r).</ab
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 30 l.9: Note on the commissioner.<q xml:lang="gez">Fol. 30 l.9: ዘአጽሐፋ፡ በንዋዩ፡ ወልደ፡ ኤስጣታ[ዩስ]።</q>
+                           <locus target="#30">Fol. 30</locus>l.9: Note on the commissioner.<q xml:lang="gez">Fol. 30 l.9: ዘአጽሐፋ፡ በንዋዩ፡ ወልደ፡ ኤስጣታ[ዩስ]።</q>
                            <q xml:lang="en"/>
                            The note is crudely written in the main hand. The note mentions Wäldä ʾEsṭata[yus] (ʾEwosṭatewos?) as the commissioner of the Ms.
                         </item>
@@ -142,12 +145,13 @@ The scribe frequently disregarded the ruling (s., e.g., fols. 13v, 18v-19r).</ab
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Limp binding made of one piece of parchment embracing the textblock.&#xD;
 One pair of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -190,8 +194,8 @@ One pair of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Additio 1 mentions Wäldä ʾEsṭata[yus] (ʾEwosṭatewos?) as the commissioner of the Ms.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Additio 1 mentions Wäldä ʾEsṭata[yus] (ʾEwosṭatewos?) as the commissioner of the Ms.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -216,7 +220,7 @@ One pair of sewing stations.</decoNote>
          <change who="DN" when="2010-11-20">registered</change>
          <change who="SA" when="2013-05-28">created</change>
          <change who="AA" when="2014-06-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

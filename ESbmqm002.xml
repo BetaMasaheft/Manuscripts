@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESbmqm002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,18 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>BMQM-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.&#xD;
 &#xD;
 Several groups of lines on the incipit page of Text I-1, alternating with black lines; two initial lines in the incipit of Texts I-2, I-3 and I-4.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The miracles of Mary are numbered (partly erroneously).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +57,10 @@ Several groups of lines on the incipit page of Text I-1, alternating with black 
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">71.0</measure> folios, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">71.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1ar-1bv., in
+                                                  <measure unit="quire">9.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">20.7</height>
                               <width unit="cm">18.8</width>
@@ -62,6 +69,9 @@ Several groups of lines on the incipit page of Text I-1, alternating with black 
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Undecorated quire marks are written in the left upper corner: fols. 2r: ፩, 10r: ፪, 18r: ፫, 26r: ፬, 34r: ፭, 42r: ፮, 50r: ፯, 59: ፰.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">10</dim>
@@ -118,7 +128,7 @@ Holes or tears amended on fols. 12, 15, 20, 29, 30, 53.</condition>
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C </ab>
                            <ab>
 (fols. 67-70: 1A-1A-1A1A/0-0/0-0/A)</ab>
@@ -152,7 +162,7 @@ Fol. 67r-70ra have additional ruled lines at the bottom not used by the scribe.<
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 70rb-vb: Täʾamrä ʾIyäsus “Miracles of Jesus”: 1 miracle, incomplete.<q xml:lang="gez"/>
+                           <locus target="#70rb">Fol. 70rb</locus>-vb: Täʾamrä ʾIyäsus “Miracles of Jesus”: 1 miracle, incomplete.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
@@ -162,7 +172,7 @@ Fol. 67r-70ra have additional ruled lines at the bottom not used by the scribe.<
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (back board broken and repaired).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -171,6 +181,8 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Small holes and tears are visible on the spine fold of the quires, close to the head and the tail of the codex.&#xD;
+Remains of a spine protection made of parchment.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -213,8 +225,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The following persons are mentioned in the supplication formulas (in the main hand): Wälättä Qwǝrban (e.g., fols. 9vb, 11ra, 12ra), Sǝbḥat Lä- ʾAb (e.g., fols. 28va, 35vb, 43ra), ʿAmdä	Ṣǝyon (e.g., fols. 60ra, 61rb, 62ra) and Täklä Yoḥannǝs (fol. 70ra). These names have been overwritten with that of Täsfa Mikaʾel in a secondary hand, in black (cp., Ms. BMQM-003).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The following persons are mentioned in the supplication formulas (in the main hand): Wälättä Qwǝrban (e.g., fols. 9vb, 11ra, 12ra), Sǝbḥat Lä- ʾAb (e.g., fols. 28va, 35vb, 43ra), ʿAmdä	Ṣǝyon (e.g., fols. 60ra, 61rb, 62ra) and Täklä Yoḥannǝs (fol. 70ra). These names have been overwritten with that of Täsfa Mikaʾel in a secondary hand, in black (cp., Ms. BMQM-003).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -242,7 +254,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-12-08">registered</change>
          <change who="SH" when="2015-04-21">created</change>
          <change who="SH" when="2015-05-05">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

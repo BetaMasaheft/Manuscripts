@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESsmm007"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>SMM-007</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Name of St. Mary; name of the donor; incipits of all texts; first word of sections and structural parts of texts; some words in instructions for officiating clergy; abbreviations; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">99.0</measure> folios, in <measure unit="quire"/> quires. 
+                        <extent>Made of <measure unit="leaf">99.0</measure> folios, in
+                                                  <measure unit="quire"/> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">17.0</height>
                               <width unit="cm">16.0</width>
@@ -109,7 +110,7 @@ Some folios (esp. at the beginning) are missing; some are torn or (badly) damage
                            <note>All data for fol. 15.</note>
                            <ab type="ruling">17-21</ab>
                            <ab type="pricking">Ruling and pricking are mostly visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are occasionally visible (s. fol. 55r).</ab>
@@ -140,11 +141,13 @@ The bottom line is written above the ruling.</ab>
                            <item>ይዲ፡ for ይቤ፡ ዲያቆን፡</item>
                            <item>እማ or ዕማ for እማሬ፡</item>
                            <item>
-                              <abbr>ምስ፡ መ</abbr> for <expan>ምስለ፡ መንፈስክሙ </expan> (e.g., fol 23va)</item>
+                              <abbr>ምስ፡ መ</abbr> for
+                                                  <expan>ምስለ፡ መንፈስክሙ </expan> (e.g., fol 23va)</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">quires I-VII, IX.</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">quire VIII; ancient way of writing the letter ṗ in the 6th order (s. fol. 55vb). On fols. 75-77, the quality of the writing is inferior.</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: quires I-VII, IX.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: quire VIII; ancient way of writing the letter ṗ in the 6th order (s. fol. 55vb). On fols. 75-77, the quality of the writing is inferior.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="miniature" xml:id="d1">
@@ -164,7 +167,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 27va: Ownership or donation note (?) <q xml:lang="gez"/>
+                           <locus target="#27va">Fol. 27va</locus>: Ownership or donation note (?) <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note, partly difficult to read, contains the names of Wäldä Girgis (sic), his son Habtä Giworgis (sic) and his wife Wälättä Mikaʾel.
                         </item>
@@ -174,7 +177,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (the front board is missing; the back board is broken) covered with dark brown tooled leather (for the most part missing).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -183,6 +186,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Remains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -225,8 +229,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wärädä Mǝḥrät is mentioned in the supplication formulas (fols. 29ra, l.6; 48vb, l.4; 66rb, l.14; 75ra, l.12-13 and elsewhere). Cp. also Wäldä Girgis (sic), Habtä Giworgis (sic) and his wife Wälättä Mikaʾel, Additio 1.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wärädä Mǝḥrät is mentioned in the supplication formulas (fols. 29ra, l.6; 48vb, l.4; 66rb, l.14; 75ra, l.12-13 and elsewhere). Cp. also Wäldä Girgis (sic), Habtä Giworgis (sic) and his wife Wälättä Mikaʾel, Additio 1.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -251,7 +255,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-15">registered</change>
          <change who="IF" when="2010-12-05">created</change>
          <change who="DN" when="2015-05-15">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

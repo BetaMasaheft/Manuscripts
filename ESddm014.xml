@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESddm014"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Lǝfafä ṣǝdq “Bandlet of Righteousness” / Mängädä sämay “Journey to Heaven”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DDM-014</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the owner; two groups of line on the incipit page of Text I; incipit of Text II and of sections of Texts I and II; elements of the punctuation signs and text dividers; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">60.0</measure> folios, in <measure unit="quire">8.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">60.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v, 2r, 2v, 3r, 3v, 4r, 4v, 59r, 61v., in
+                                                  <measure unit="quire">8.0</measure> quires (A + 7). 
                                                 <dimensions type="outer">
                               <height unit="cm">7.0</height>
                               <width unit="cm">6.0</width>
@@ -109,7 +112,7 @@ The text on many leaves is illegible or barely legible (e.g., fols. 5r, 9r, 12r,
 All data for fol. 9r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -141,7 +144,7 @@ The scribe sometimes disregards the ruling: e.g., fols. 7r, 11r, 17r.</ab>
 All data for fol. 49r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -162,11 +165,13 @@ The bottom line is written above the ruling.</ab>
                         <date>Mid-18th – mid-19th century (?)</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>አሜ፡</abbr> for <expan>አሜን፡ </expan> (fol. 58v)</item>
+                              <abbr>አሜ፡</abbr> for
+                                                  <expan>አሜን፡ </expan> (fol. 58v)</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">fols. 4r-57v</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">fols. 57v-58v.</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: fols. 4r-57v<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: fols. 57v-58v.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 5r (incipit page of Text I): simple coloured (red) ornamental band; geometrical motifs. Mostly faded away.</decoNote>
@@ -222,8 +227,9 @@ One pair of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of Wälättä Ṣǝrḥa is written in a secondary hand in blue pen in the lower margin (e.g., fols. 9v, 23v, 26v) and over erasure in the supplication formulas (e.g., fols. 20v, 24v, 47v, 57r).&#xD;
+The name of Wälättä Mar(yam), possibly the name of a former owner, is written in the main hand in the supplication formula on fol. 56v.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -248,7 +254,7 @@ One pair of sewing stations.</decoNote>
          <change who="DN" when="2011-05-16">registered</change>
          <change who="MV" when="2015-04-10">created</change>
          <change who="MV" when="2015-04-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmr033"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,8 +33,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MR-033</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; &#xD;
 the word mǝʿǝraf;&#xD;
 six lines (both columns) of the incipit page of each text (fols. 3rab, 36rab, 54rab, 85rab), divided into three groups, alternating with black lines;&#xD;
@@ -45,13 +45,19 @@ Ethiopic numerals indicating the “tituli”;&#xD;
 the horizontal dashes above and below Ethiopic numerals; &#xD;
 elements of the punctuation signs;&#xD;
 names of the scribe (fol. 108va, ls. 14-15; 20-21) and donors (fol. 108va, ls. 8, 9, 10).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Concerning the short postscripts, cp. R. ZUURMOND, Novum Testamentum Aethiopice: the Synoptic Gospels, Part I: General Introduction, Part II: Edition of the Gospel of Mark, Stuttgart 1989 (AeF 27), 29-31.</note>
+                     <note>The list of “Tituli” for the Gospel of Matthew is missing.</note>
+                     <note>In the list of “Tituli” for the Gospel of Mark (fol. 35ra [l.1] – 35rb [l.23]), the titles are 48, but the ultimate number is 50 (፶): after 31 (፴፩), the numbers 32 (፴፪) and 33 (፴፫) are missing; the numbering resumes from 34 (፴፬) and goes until 50.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -60,7 +66,10 @@ names of the scribe (fol. 108va, ls. 14-15; 20-21) and donors (fol. 108va, ls. 8
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">109.0</measure> folios, of which <measure unit="leaf" type="blank">3.0</measure> blank, in <measure unit="quire">13.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">109.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">3.0</measure> blank
+                                                  fols. 1rv, 2rv, 109rv, in
+                                                  <measure unit="quire">13.0</measure> quires (A + 12). 
                                                 <dimensions type="outer">
                               <height unit="cm">33.5</height>
                               <width unit="cm">27.5</width>
@@ -135,7 +144,7 @@ names of the scribe (fol. 108va, ls. 14-15; 20-21) and donors (fol. 108va, ls. 8
                            <note>All data for the second page of the first Gospel, recto side (fol. 4r).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -167,17 +176,17 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 1va: Inventory of books, items and vestments.<q xml:lang="gez"/>
+                           <locus target="#1va">Fol. 1va</locus>: Inventory of books, items and vestments.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 2ra-b: Traditional genealogy of the people of (Däbrä Mikaʾel) ʾƎnba Ḥarisa(y), written upon the order of ʾabunä Täsfa Giyorgis Täsfa Mikaʾel.<q xml:lang="gez"/>
+                           <locus target="#2ra">Fol. 2ra</locus>-b: Traditional genealogy of the people of (Däbrä Mikaʾel) ʾƎnba Ḥarisa(y), written upon the order of ʾabunä Täsfa Giyorgis Täsfa Mikaʾel.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 84[a]vb: Continuation of the genealogy of (Däbrä Mikaʾel) ʾƎnba Ḥarisay (Additio 2), followed by a short ownership note.<q xml:lang="gez"/>
+                           <locus target="#84">Fol. 84</locus>[a]vb: Continuation of the genealogy of (Däbrä Mikaʾel) ʾƎnba Ḥarisay (Additio 2), followed by a short ownership note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note mentions the church Däbrä Mikaʾel ʾƎnba Ḥarisay ʾAd Ḥǝyaw.
                         </item>
@@ -185,7 +194,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Wooden boards covered with reddish-brown tooled leather; textile inlays. &#xD;
 Two pairs of sewing stations;</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -237,13 +246,18 @@ Two pairs of sewing stations;</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Zärʾa Krǝstos  and  his mother Goytana Maryam (s. fol. 108va, l.9-10).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Zärʾa Krǝstos  and  his mother Goytana Maryam (s. fol. 108va, l.9-10).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">Zä-Wäldä Maryam</persName>
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">As some other books of Mǝdrä Ruba, MR-033 previously was in possession of a church called (Däbrä Mikaʾel) ʾƎnba Ḥarisa(y) ʾAd Ḥǝyaw (Additio 3).</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName corresp="PRS00000"/>
@@ -266,7 +280,7 @@ Two pairs of sewing stations;</decoNote>
          <change who="DN" when="2010-05-11">registered</change>
          <change who="VP" when="2011-06-22">created</change>
          <change who="DN" when="2015-03-10">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

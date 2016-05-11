@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmhg009"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mǝʿǝraf, The Common of the Office / Dǝggwa, Antiphonary</title>
@@ -33,17 +33,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MHG-009</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the categories of melody and their abbreviations (ʿǝzl, gǝʿǝz, ʾararay); elements of punctuation signs; Ethiopic numerals or their elements. &#xD;
 Text I-1&#xD;
 Two initial lines on the incipit page; names of feasts and other occasions; names of antiphons and chants, and their abbreviations (e.g., mäzmur, sälam, ʾaryam, mǝlṭan, qǝne); initial words of supplications, antiphons and other chants, and their sections (e.g., nastäbqwǝʿ, ʾaṣmǝʿ, täśahalänni, nǝsebbǝḥo, ʾantä, täkäśtä, sǝmǝʿanni); intratextual musical notation signs (e.g.,ʿabiy zema); the word haleluya.&#xD;
 Text II&#xD;
 Names of sections sometimes followed by feast names and initial lines (e.g., wazema zä-ʾabunä ʾArägawi); names of antiphons and their abbreviations (e.g., maḫǝlet, mäzmur, śäläst, sälam, bä-5-tu, ʾabun, ʾaryam, ʾǝsmä lä-ʿaläm, kwǝllǝkkǝmu, zä-ʾamlakiyä, zä-yǝʾǝze, yǝtbaräk); names of other chants and their abbreviations (e.g., mǝlṭan, mǝsbak, mǝqnay, mǝdgam, ʿǝzl, qǝne); musical notation signs: intratextual (e.g., qalä ʿawadi, ʾaklilä, täsäfḥa, bä-zemahu) and marginal (entire and elements); elements of the Table of halleluiatic chants; tämälläs signs (fols. 30va l.16); crude frames or lines used for indicating festive periods (e.g., fols. 38vb-39rb).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -55,7 +55,10 @@ Names of sections sometimes followed by feast names and initial lines (e.g., waz
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">128.0</measure> folios, in <measure unit="quire">16.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">128.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 128v, in
+                                                  <measure unit="quire">16.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">19.0</height>
                               <width unit="cm">17.0</width>
@@ -138,7 +141,7 @@ A hole crudely amended in fol. 50.</condition>
                            <note/>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible (horizontal ruling not clearly visible on some fols., e.g., fols. 114-119).</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -180,11 +183,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>
-                           <div style="text-align: justify; line-height: normal;"
-                                org="uniform"
-                                sample="complete">Fol. 128r: Genealogy of the disciples of Gǝrma Lǝʾul (?).</div>
-                           <q xml:lang="gez">Fol. 128r: ደቅ፡ ዘዘ፡ ግርማልኡል፡ ወለደ፡ ለአንዱ፡ ወለደ፡ ለጻድቁ…</q>
+                           <locus target="#128r">Fol. 128r</locus>: Genealogy of the disciples of Gǝrma Lǝʾul (?).<q xml:lang="gez">Fol. 128r: ደቅ፡ ዘዘ፡ ግርማልኡል፡ ወለደ፡ ለአንዱ፡ ወለደ፡ ለጻድቁ…</q>
                            <q xml:lang="en">Fol. 128r: Disciples (?) of Gǝrma Lǝʾul. (Gǝrma Lǝʾul)  begat ʾAndu, (ʾAndu) begat Ṣadǝqu…</q>
                            The note is written in a very crude hand.
                         </item>
@@ -196,7 +195,7 @@ Lack of rubricated text on fols. 72ra-77rb, 116ra-121rb, 123va-124rb and rubrica
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two leather boards.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -246,11 +245,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -272,7 +266,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-20">registered</change>
          <change who="MK" when="2012-02-27">created</change>
          <change who="MK" when="2014-09-15">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

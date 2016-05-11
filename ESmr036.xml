@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmr036"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Täklä Haymanot “Vita of Täklä Haymanot” / Täʾamrä Täklä Haymanot “Miracles of ʾabunä Täklä Haymanot”</title>
@@ -33,17 +33,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MR-036</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; names of the donors; incipit of Text I and its subsections (fols. 3ra, 4rb, 5rb, 7ra, 8ra, 14ra, 15rb, 21va, 22va, 23vb, 24rb, 27rb, 27vb, 33vb, 49va, 79vb, 82vb); incipit of Text II and its subsections (fols. 83ra, 83vb, 84va, 85ra, 85va, 87ra, 87va, 87vb, 88ra, 88vb, 89ra, 89rb, 89va, 90rb, 92rb, 92vb, 93va, 94ra); elements of the punctuation signs; elements of Ethiopic numerals; elements of the quire marks. &#xD;
 In the incipit page of Text I and II (fols. 3r, 83r) a few lines are rubricated (in groups of two lines, alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The text of the Vita has some characteristics of the so-called "Ḥayq recension" of Gädlä Täklä Haymanot. Cp. Mss. EMML no. 1834 (EMML V, 310-14); BN, Éth. 342 (GrébGriaule II, 18-20), Ṭānāsee 162 (SixTana III, 202-06). For a (rough) French translation of the text s. J. DUCHESNE-FOURNET, Mission en Éthiopie, 1<ref type="mss" corresp="ES901190">901-190</ref>3, vol. 1, Paris 1908,<ref type="mss" corresp="ES340431">340-431</ref>.</note>
+                     <note/>
+                     <note>The text of the Miracles basically coincides with that of Ms. Éth. 343 (GrébGriaule II, 21-25); miracle 17 is absent from Éth. 343; miracle 18 is identical to miracle 17 of Éth. 343.</note>
+                     <note/>
+                     <note>Decorated quire marks.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +60,10 @@ In the incipit page of Text I and II (fols. 3r, 83r) a few lines are rubricated 
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">98.0</measure> folios, of which <measure unit="leaf" type="blank">5.5</measure> blank, in <measure unit="quire">13.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">98.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">5.5</measure> blank
+                                                  1, 2, 95v, 96, 97, 98, in
+                                                  <measure unit="quire">13.0</measure> quires (A+12). 
                                                 <dimensions type="outer">
                               <height unit="cm">26.3</height>
                               <width unit="cm">18.7</width>
@@ -61,6 +72,8 @@ In the incipit page of Text I and II (fols. 3r, 83r) a few lines are rubricated 
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -124,7 +137,7 @@ One bifolio of quire A is of irregular size.</item>
                            <note>All data are for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible (s. fol. 76r).</ab>
@@ -148,7 +161,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 94v (in the bottom margin): Purchase note.<q xml:lang="gez"/>
+                           <locus target="#94v">Fol. 94v</locus>(in the bottom margin): Purchase note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic.
                         </item>
@@ -207,8 +220,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The names Wäldä Maryam, ʾabunä Gäbrä Śǝllase are added by secondary hand (s. supplication formulas on fols. 4rb, 5rb, 8ra, 23va, 82vb, etc.), over erasures, possible in place of original name(s). Besides, other individuals are mentioned in the supplication formulas: ʾAbunä Gäbrä Giwärgis/Giyorgis (fol. 8ra), Wäldä Gäbrǝʾel (fol. 7ra), Wäldä ʾAmlak (fol. 7ra), Wälättä Mädḫǝn (fol. 24ra), Wälättä Maryam (fol. 82vb), Wälättä Kidan (fol. 82vb), Wäldä Ḥawaryat (fol. 82vb), Haylä Maryam (fol. 82vb), Wälättä Kidan (fol. 82vb), Wälättä Yoḥannǝs (fol. 82vb), Wälättä Śǝllase (fol. 82vb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The names Wäldä Maryam, ʾabunä Gäbrä Śǝllase are added by secondary hand (s. supplication formulas on fols. 4rb, 5rb, 8ra, 23va, 82vb, etc.), over erasures, possible in place of original name(s). Besides, other individuals are mentioned in the supplication formulas: ʾAbunä Gäbrä Giwärgis/Giyorgis (fol. 8ra), Wäldä Gäbrǝʾel (fol. 7ra), Wäldä ʾAmlak (fol. 7ra), Wälättä Mädḫǝn (fol. 24ra), Wälättä Maryam (fol. 82vb), Wälättä Kidan (fol. 82vb), Wäldä Ḥawaryat (fol. 82vb), Haylä Maryam (fol. 82vb), Wälättä Kidan (fol. 82vb), Wälättä Yoḥannǝs (fol. 82vb), Wälättä Śǝllase (fol. 82vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -234,7 +247,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-13">registered</change>
          <change who="IF" when="2011-09-16">created</change>
          <change who="SH" when="2014-10-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdz003"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Haymanotä ʾabäw “Faith of the Fathers” / Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,17 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DZ-003</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra, name of the donors, elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.&#xD;
 Two lines on the incipit page of Text I; several lines on the incipit page of Text II-4, alternating with black lines; two initial lines of each subsection of Text I, of Texts II-2, II-3 and of each miracle in Text II-4.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- The right sequence of Text II-4 is fols. 33-39 (miracles 1-8), 32 (miracle 8), 50 (miracles 8-10), 58-63 (miracles 10-14), 48 (miracles 14-15), 57 (miracles 15-16), 64-68 (miracles 16-22), 89 (miracles 23-25), 51-56 (miracles 26-31), 70 (miracles 31-32), 73-87 (miracles 32-51), 40-47 (miracles 51-61), 69 (miracles 61-62), 71 (miracles 62-63),<ref type="mss" corresp="ES112116">112-116</ref>(miracles 64-72), 72 (miracles 72-73),<ref type="mss" corresp="ES90111">90-111</ref>(miracles<ref type="mss" corresp="ES73103">73-103</ref>), 117 (miracle 103).</note>
+                     <note>- Miracles 6,<ref type="mss" corresp="ES101103">101-103</ref>are not numbered. Some numbers were not used: e.g., 86, 92, 95.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +57,10 @@ Two lines on the incipit page of Text I; several lines on the incipit page of Te
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">118.0</measure> folios, in <measure unit="quire"/> quires. 
+                        <extent>Made of <measure unit="leaf">118.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v, 20v, 26vb, 118r, 118v., in
+                                                  <measure unit="quire"/> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">25.0</height>
                               <width unit="cm">21.5</width>
@@ -97,7 +105,7 @@ Tear amended on fols. 20, 116.</condition>
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling">The number varies from 25 to 28.</ab>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -121,7 +129,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 20r: Maḫbärä mǝʾǝmänan "Congregation of the Faithful" (ChRep 191, no. 17), incomplete (only the beginning). <q xml:lang="gez">Fol. 20r:  ማኅበረ፡  ምእመናን፡ ወምእመናት፡ እለ፡ ኪያከ፡ ተአምኑ፡... </q>
+                           <locus target="#20r">Fol. 20r</locus>: Maḫbärä mǝʾǝmänan "Congregation of the Faithful" (ChRep 191, no. 17), incomplete (only the beginning). <q xml:lang="gez">Fol. 20r:  ማኅበረ፡  ምእመናን፡ ወምእመናት፡ እለ፡ ኪያከ፡ ተአምኑ፡... </q>
                            <q xml:lang="en"/>
                            The note is written in a crude hand.
                         </item>
@@ -136,7 +144,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (the front one is broken; the back one is broken and repaired). &#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -187,8 +195,8 @@ Fols. 108-110, 117 originate from a Ms. of later period.</origDate>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Tabotä Wälda and Lahǝyä Dǝngǝl are mentioned in the supplication formulas, e.g., on fols. 102vb, 103ra. ʾAtnatewos is mentioned on fols. 108-110.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Tabotä Wälda and Lahǝyä Dǝngǝl are mentioned in the supplication formulas, e.g., on fols. 102vb, 103ra. ʾAtnatewos is mentioned on fols. 108-110.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -214,7 +222,7 @@ Fols. 108-110, 117 originate from a Ms. of later period.</origDate>
          <change who="DN" when="2010-05-06">registered</change>
          <change who="SA" when="2010-09-23">created</change>
          <change who="MV" when="2015-05-21">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

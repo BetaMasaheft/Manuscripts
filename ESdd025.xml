@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd025"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -39,16 +39,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>424 (fol. 1r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; a few lines in the incipit page of  monthly readings alternating with black lines; two initial lines of each sections of the Texts; elements of the punctuation signs; elements of Ethiopic numerals; the word sälam (e.g., fols. 18va, 19rb, 20rb).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Subscription to sections of the Text: fols. 36rc, 62rc, 96vc, 129rc, 174vc, 208vb, 215rb.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,7 +61,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">214.0</measure> folios, in <measure unit="quire">25.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">214.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, 2r, 2v, 215v, in
+                                                  <measure unit="quire">25.0</measure> quires (24+A). 
                                                 <dimensions type="outer">
                               <height unit="cm">39.5</height>
                               <width unit="cm">31.2</width>
@@ -66,6 +73,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Quire marks: fols. 21r, 37r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -172,7 +182,7 @@ Fols 48, 49, 112, 153, 166, 189 are of smaller size.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and Ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -195,26 +205,28 @@ The bottom line is written above the ruling.</ab>
                         <date>End of the 19th and beginning of the 20th century.</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ለዓ: ዓለ:</abbr> for <expan>ለዓለመ: ዓለም: </expan> (e.g., fols. 13vc, 64rb, 66rc)</item>
+                              <abbr>ለዓ: ዓለ:</abbr> for
+                                                  <expan>ለዓለመ: ዓለም: </expan> (e.g., fols. 13vc, 64rb, 66rc)</item>
                            <item>
-                              <abbr>ሰላ:</abbr> for <expan>ሰላም: </expan> (e.g., 118va, 119rb, 132ra)</item>
+                              <abbr>ሰላ:</abbr> for
+                                                  <expan>ሰላም: </expan> (e.g., 118va, 119rb, 132ra)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 160r-v: Commemorative notice on ʾabba Näbiyä Lǝʿul (for  Ḥamle 20). <q xml:lang="gez">Fol. 160r-v: ወበዛቲ: ዕለት: አዕረፈ: አባ: ነቢየ: ልዑል ... ወቦአ: ኀበ: መፍቀሬ: እግዚአብሔር: ንጉሥ: ዮሐንስ: ...</q>
+                           <locus target="#160r">Fol. 160r</locus>-v: Commemorative notice on ʾabba Näbiyä Lǝʿul (for  Ḥamle 20). <q xml:lang="gez">Fol. 160r-v: ወበዛቲ: ዕለት: አዕረፈ: አባ: ነቢየ: ልዑል ... ወቦአ: ኀበ: መፍቀሬ: እግዚአብሔር: ንጉሥ: ዮሐንስ: ...</q>
                            <q xml:lang="en"/>
                            The note mentions the visit of ʾabba Näbiyä Lǝʿul to Emperor Yoḥannǝs IV (r. 1872-89).
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 187v: Commemorative notice on the consecration of the church of ʾabunä Zä-Mikaʿel Arägawi (for Näḥase 13). <q xml:lang="gez">Fol. 187v: ወበዛቲ: ዕለት: ቅዳሴ: ቤተ: ክርስቲያኑ: ለአቡነ: አረጋዊ: ...</q>
+                           <locus target="#187v">Fol. 187v</locus>: Commemorative notice on the consecration of the church of ʾabunä Zä-Mikaʿel Arägawi (for Näḥase 13). <q xml:lang="gez">Fol. 187v: ወበዛቲ: ዕለት: ቅዳሴ: ቤተ: ክርስቲያኑ: ለአቡነ: አረጋዊ: ...</q>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 215rc: Zä-ʾaqräbku maḫletä… “The song I am offering…” (concluding prayer)<q xml:lang="gez">Fol. 215rc: ዘአቅረብኩ᎓ ማኅሌተ᎓ አዘኪርየ᎓ አእላፈ᎓ እምእለ᎓ ተጸምዱከ᎓ ዘልፈ። ለለይትነበብ᎓ ተወከፈ᎓ ዘንዴትየ᎓ መጽሐፈ᎓ እንተ᎓ ረሰይከ᎓ እግዚኦ᎓ ጸሪቀ᎓ መበለት᎓ ውኩፈ። እምእለ᎓ አብኡ᎓ ብዑላን᎓ እምብዕሎሙ᎓ ዘተርፈ። ነቢያት᎓ ቅዱሳን᎓ ወሐዋርያት᎓ ንጹሐን᎓ ሰማዕት᎓ ወጻድቃን᎓ ወመላእክት᎓ ትጉሃን᎓ ደናግል᎓ ዓዲ᎓ ወመነኮሳት᎓ ኄራን᎓ ባርኮ᎓ ባርኩ᎓ ጉባኤ᎓ ዛቲ᎓ መካን᎓ እስከ᎓ አረጋዊ᎓ ልኂቅ᎓ ወንዑስ᎓ ሕፃን᎓ ለዘጸሐፎ᎓ በክርታስ᎓ ወለዘአጽሐፎ᎓ እንዘ᎓ ይደርስ። ለዘአንበቦ᎓ ወለዘተርጐሞ᎓ በልሳን᎓ ሐዲስ᎓ ወለዘሰምዓ᎓ ቃላቲሁ᎓ በዕዝነ᎓ መንፈስ᎓ በጸሎተ᎓ እሙ᎓ ማርያም᎓ ዓራቂተ᎓ ኵሉ᎓ እምባዕስ᎓ ኅቡረ᎓ ይምሐረነ᎓ ኢየሱስ᎓ ክርስቶስ።</q>
+                           <locus target="#215rc">Fol. 215rc</locus>: Zä-ʾaqräbku maḫletä… “The song I am offering…” (concluding prayer)<q xml:lang="gez">Fol. 215rc: ዘአቅረብኩ᎓ ማኅሌተ᎓ አዘኪርየ᎓ አእላፈ᎓ እምእለ᎓ ተጸምዱከ᎓ ዘልፈ። ለለይትነበብ᎓ ተወከፈ᎓ ዘንዴትየ᎓ መጽሐፈ᎓ እንተ᎓ ረሰይከ᎓ እግዚኦ᎓ ጸሪቀ᎓ መበለት᎓ ውኩፈ። እምእለ᎓ አብኡ᎓ ብዑላን᎓ እምብዕሎሙ᎓ ዘተርፈ። ነቢያት᎓ ቅዱሳን᎓ ወሐዋርያት᎓ ንጹሐን᎓ ሰማዕት᎓ ወጻድቃን᎓ ወመላእክት᎓ ትጉሃን᎓ ደናግል᎓ ዓዲ᎓ ወመነኮሳት᎓ ኄራን᎓ ባርኮ᎓ ባርኩ᎓ ጉባኤ᎓ ዛቲ᎓ መካን᎓ እስከ᎓ አረጋዊ᎓ ልኂቅ᎓ ወንዑስ᎓ ሕፃን᎓ ለዘጸሐፎ᎓ በክርታስ᎓ ወለዘአጽሐፎ᎓ እንዘ᎓ ይደርስ። ለዘአንበቦ᎓ ወለዘተርጐሞ᎓ በልሳን᎓ ሐዲስ᎓ ወለዘሰምዓ᎓ ቃላቲሁ᎓ በዕዝነ᎓ መንፈስ᎓ በጸሎተ᎓ እሙ᎓ ማርያም᎓ ዓራቂተ᎓ ኵሉ᎓ እምባዕስ᎓ ኅቡረ᎓ ይምሐረነ᎓ ኢየሱስ᎓ ክርስቶስ።</q>
                            <q xml:lang="en"/>
                            
                         </item>
@@ -225,7 +237,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays. &#xD;
 Overback made of reddis-brown leather. &#xD;
 Two pairs of sewing stations. &#xD;
@@ -236,6 +248,7 @@ Two pair of rows of endband stitches through the spine cover.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Turn-ins of the overback are laced with a cord.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover and turn-ins (at least 5 tools were used: double circle, double line fillet, interlaced line fillet, double sine wave with dots, crisscross).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -278,8 +291,8 @@ Two pair of rows of endband stitches through the spine cover.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">King Yoḥannǝs IV (r. 1872-89), ʾArʾaya Śǝllase, and Gäbrä Mikaʾel are mentioned in the supplication formulas throughout the Ms. Besides, the names of King Mǝnilǝk II (e.g., fols. 75rc, 94rb, 120rb) and Täwäldä Mädḫǝn (e.g., fol. 53va, 62rc, 88ra) are mentioned a few times.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">King Yoḥannǝs IV (r. 1872-89), ʾArʾaya Śǝllase, and Gäbrä Mikaʾel are mentioned in the supplication formulas throughout the Ms. Besides, the names of King Mǝnilǝk II (e.g., fols. 75rc, 94rb, 120rb) and Täwäldä Mädḫǝn (e.g., fol. 53va, 62rc, 88ra) are mentioned a few times.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -304,7 +317,7 @@ Two pair of rows of endband stitches through the spine cover.</decoNote>
          <change who="DN" when="2010-11-23">registered</change>
          <change who="AA" when="2013-06-21">created</change>
          <change who="MV" when="2015-01-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

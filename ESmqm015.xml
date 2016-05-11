@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmqm015"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä ʾAbrǝham “Book of Abraham” / Täʾamrä Śǝllase “Miracles of the Trinity”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MQM-015</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; Trinitarian formula; several groups of lines on the incipit page of Text I and II, alternating with black lines; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">45.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">45.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v., in
+                                                  <measure unit="quire">7.0</measure> quires (A+6). 
                                                 <dimensions type="outer">
                               <height unit="cm">26.0</height>
                               <width unit="cm">20.0</width>
@@ -111,7 +114,7 @@ Some fols. are damaged with text loss, fols. 42, 44, 45.</condition>
                            <note>All data for fol 3r. The text area size and layout of the text varies throughout the Ms.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -131,7 +134,7 @@ The upper line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Limp binding made of one piece of stiff leather embracing the textblock (possibly formerly spine protection); only front board is present.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -183,8 +186,13 @@ Quire VI (fols. 43r-45v) is reinforced by a parchment guard.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The names of the original donors have been erased on fols. 3ra, 5vb, 18vb, 21rb. ʾAbunä Wäldä Rufaʾel is mentioned in the supplication formula on fol. 40vb.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The names of the original donors have been erased on fols. 3ra, 5vb, 18vb, 21rb. ʾAbunä Wäldä Rufaʾel is mentioned in the supplication formula on fol. 40vb.</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The Ms. is owned by the church of Gäbrä Mänfäs Qǝddus ʿOna Maʿḍo.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -209,7 +217,7 @@ Quire VI (fols. 43r-45v) is reinforced by a parchment guard.</decoNote>
          <change who="DN" when="2010-12-03">registered</change>
          <change who="SD" when="2014-04-16">created</change>
          <change who="DN" when="2014-11-13">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

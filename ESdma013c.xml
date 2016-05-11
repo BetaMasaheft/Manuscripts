@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdma013c"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Excerpts from Dǝggwa, Antiphonary</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DMA-013c</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of antiphons and/or their incipit; elements of the punctuation signs; Ethiopic numerals or their elements.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">8.0</measure> folios, in <measure unit="quire">1.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">8.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 8r, in
+                                                  <measure unit="quire">1.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">9.7</height>
                               <width unit="cm">6.9</width>
@@ -86,7 +89,7 @@ The edges of some leaves are damaged by rodents.</condition>
                            <note>All data are for fol. 2r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -116,7 +119,7 @@ The bottom ruled line was not used by the scribe on fols. 3r-4r.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 1v: Excerpt from Mäzmur zä-sǝbkät, Antiphon for the Sunday in the Time of the Preaching.<q xml:lang="gez">Fol. 1v: በ፯፡ ዘሙሴ፡ ሰበከ፡ ለነ፡ ዜናሁ፡ ዘሙሴ…</q>
+                           <locus target="#1v">Fol. 1v</locus>: Excerpt from Mäzmur zä-sǝbkät, Antiphon for the Sunday in the Time of the Preaching.<q xml:lang="gez">Fol. 1v: በ፯፡ ዘሙሴ፡ ሰበከ፡ ለነ፡ ዜናሁ፡ ዘሙሴ…</q>
                            <q xml:lang="en"/>
                            The note, probably a writing exercise, is written in a crude hand.
                         </item>
@@ -126,11 +129,12 @@ The bottom ruled line was not used by the scribe on fols. 3r-4r.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">One pair of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Holes are visible in the centre fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -173,11 +177,6 @@ The bottom ruled line was not used by the scribe on fols. 3r-4r.</ab>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -199,7 +198,7 @@ The bottom ruled line was not used by the scribe on fols. 3r-4r.</ab>
          <change who="DN" when="2010-11-24">registered</change>
          <change who="MK" when="2014-12-02">created</change>
          <change who="DN" when="2014-12-17">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

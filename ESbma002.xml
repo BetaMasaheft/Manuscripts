@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESbma002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the first half of the year)</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>BMA-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; the name of the donor; groups of red lines alternating with black in the incipits of texts; incipits of the texts sections; elements of the punctuation signs; elements of Ethiopic numerals; the word sälam.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">239.0</measure> folios, in <measure unit="quire">30.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">239.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v, 2r, 2v, 3r, 3v, 113v, 237v, 238r, 238v, 239r, 239v., in
+                                                  <measure unit="quire">30.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">36.0</height>
                               <width unit="cm">28.5</width>
@@ -177,7 +180,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data are for fol. 133r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1E-1E-1E1E-1E1E/0-0/0-0/C</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -202,15 +205,15 @@ The bottom line is written above the ruling.</ab>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
-                        <item xml:id="a1">
-                           <locus/>Fol. 237ra: Donation note. <q xml:lang="gez">Fol. 237ra: ዝንቱ፡ መጽሐፍ፡ ዘደጃዝማች፡ ካሳ፡ ስብሐት፡ አጋሜ፡ </q>
+                        <item xml:id="a1"><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:RelyOnVML /> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]-->
+                           <locus target="#237ra">Fol. 237ra</locus>: Donation note. <q xml:lang="gez">Fol. 237ra: ዝንቱ፡ መጽሐፍ፡ ዘደጃዝማች፡ ካሳ፡ ስብሐት፡ አጋሜ፡ </q>
                            <q xml:lang="en"/>
                            The note mentions the donor, Waldä ʾArägawi (baptisal name of däǧǧazmačč Kasa Sǝbḥat of ʿAgame).
                         </item>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -220,6 +223,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 7 tool were used: double line fillet,triple line fillet, double circle, interlaced line fillet, corni-form, triple sine wave, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -262,8 +266,13 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Waldä ʾArägawi (baptisal name of däǧǧazmačč Kasa Sǝbḥat of ʿAgame) is mentioned in Additio 1 and in supplication formulas (e.g., 7rb, 7vb, 9rb, 10rb, 10vc, 14ra, 15vb, 16ra).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Waldä ʾArägawi (baptisal name of däǧǧazmačč Kasa Sǝbḥat of ʿAgame) is mentioned in Additio 1 and in supplication formulas (e.g., 7rb, 7vb, 9rb, 10rb, 10vc, 14ra, 15vb, 16ra).</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The church “Bet Marya ʿAddigrat” (s. Additio 1)</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -288,7 +297,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-20">registered</change>
          <change who="DE" when="2014-02-22">created</change>
          <change who="DN" when="2015-02-19">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdz005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Collection of miniatures / Täʾamrä Maryam "Miracles of Mary"</title>
@@ -33,16 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DZ-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Legends.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Measurements if unfolded: 10.8 x 140 (width) x (length)</note>
+                     <note>Blank sections: 12r, 4v-1v.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +56,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf"/> folios, in <measure unit="quire"/> quires. 
+                        <extent>Made of <measure unit="leaf"/> folios, in
+                                                  <measure unit="quire"/> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">10.0</height>
                               <width unit="cm">10.0</width>
@@ -71,16 +77,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <seg type="ink">Black, red.</seg>
                         <date>16th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The script, slender and upright, shows typical paleographic features of the mid-16th century; at the beginning it appears uneven due to the lack of ruling.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two dark brown tooled leather boards; the left one is possibly glued upon the firs section of the sǝnsul; the right one is sewn to the edge of the last section (12).</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="leather"/>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornament on the dark brown leather cover (at least 5 tools were used: single line fillet, single circle, Maltese cross, quatrefoil, x-form).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -124,8 +131,8 @@ The text has been added later (16th cent. ?)</origDate>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of Yoḥannǝs is written in the supplication formulas of Text II-1.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of Yoḥannǝs is written in the supplication formulas of Text II-1.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -150,7 +157,7 @@ The text has been added later (16th cent. ?)</origDate>
          <change who="DN" when="2010-05-06">registered</change>
          <change who="SH" when="2014-01-13">created</change>
          <change who="SH" when="2014-05-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

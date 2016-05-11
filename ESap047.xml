@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap047"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Täklä Haymanot “Vita of Täklä Haymanot” / Mäṣḥafä lǝdätu lä-ʾabunä Täklä Haymanot “Book of the Genealogy of ʾabunä Täklä Haymanot” / Täʾamrä Täklä Haymanot “Miracles of Täklä Haymanot”</title>
@@ -36,17 +36,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-23 (fol. 59r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist and other saints; name of the scribe; names of the donors; incipit of Text I and III, and its subsections (fols. 4ra, 6vb, 11vb, 24va, 37ra, 41va, 42vb, 43ra, 50rb, 52vb, 60vb, 64rb, 67va, 71va, 75ra, 76vb, 77rb, 78va, 80rb, 81ra); incipit of Text II; incipit of Text IV; elements of the punctuation signs; elements of Ethiopic numerals; elements of the quire marks.&#xD;
 In the incipit page of Texts I, III and IV (fols. 4r, 11vb, 87ra), a few lines are rubricated (alternating with black lines)</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The text of the Vita represents the first of the two sub-types of the Däbrä Libanos recension of the Gädlä Täklä Haymanot (close, but not identical to the published text of the Vita, s. E.A.W. BUDGE (ed., tr.), The Life and Miracles of Takla Hâymânôt in the Version of Dabra Lîbânôs..., London 1906).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -55,7 +59,10 @@ In the incipit page of Texts I, III and IV (fols. 4r, 11vb, 87ra), a few lines a
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">94.0</measure> folios, of which <measure unit="leaf" type="blank">1.0</measure> blank, in <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">94.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">1.0</measure> blank
+                                                  fol. 1., in
+                                                  <measure unit="quire">12.0</measure> quires (A+11). 
                                                 <dimensions type="outer">
                               <height unit="cm">31.0</height>
                               <width unit="cm">24.0</width>
@@ -124,7 +131,7 @@ In the incipit page of Texts I, III and IV (fols. 4r, 11vb, 87ra), a few lines a
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -147,7 +154,7 @@ The same scribe as of MA-002.<date>Second half of the 19th cent., beginning of t
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -198,8 +205,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Gäbrä ʾIyäsus, ʿAmätä Maryam, Wälättä Kidan (s. supplication formulas on fols. 6vb, 24va, 43ra, 53vb)</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Gäbrä ʾIyäsus, ʿAmätä Maryam, Wälättä Kidan (s. supplication formulas on fols. 6vb, 24va, 43ra, 53vb)</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -227,7 +234,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-05">registered</change>
          <change who="SA" when="2012-01-18">created</change>
          <change who="MV" when="2014-11-03">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd021"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Apostolic Epistles / Gǝbrä ḥawaryat "Acts of the Apostles"</title>
@@ -39,16 +39,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>116 (fol. 1r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>A few lines in the incipit page of Texts I and VIIII, headings of all other texts; the word kǝfl "section" and section numbers in Text VIII; elements of the punctuation signs and text dividers; Ethiopic numerals or their elements.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- The correct order of fols. containing Texts I-IV is as follows:</note>
+                     <note>1 Peter</note>
+                     <note>1:1-17 (fol. 6rv); 1:17-2:7 (fol. 17rv); 2:7-20 (fol. 12rv); 2:20-3:9 (fol. 18rv); 3:9-22 (fol. 23rv); 4:1-14 (fol. 13rv); 5:11-14 (fol. 8ra-b)</note>
+                     <note>2 Peter</note>
+                     <note>1:1-9 (fol. 8rb-vb); 1:10-21 (fol. 24rv); 1:21-3:4 (fols. 19r-20v); 3:4-18 (fol. 11rv)</note>
+                     <note>1 John</note>
+                     <note>1:1-2:23 (fols. 9ra-10vb); 2:24-4:17 (fols. 14ra-16vb); 4:17-5:20 (fols. 21ra-22vb)</note>
+                     <note>2 John</note>
+                     <note>1:1-4 (fol. 22vb); 1:4-13 (fol. 25ra-va).</note>
+                     <note>-Text VIII is divided into 63 "sections" (kǝfl).</note>
+                     <note>-In a few fols. the word qum "stop", "stand" (fols. 15rb, 28ra 48ra), frequently in abbreviated form (ቁ፡) by a crude secondary hand, is written interlineally or in the margins throughout the Ms.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,7 +71,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">94.0</measure> folios, in <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">94.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  fols. 1rv, 5rv, 35rb, 94rv, in
+                                                  <measure unit="quire">10.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">19.0</width>
@@ -66,6 +83,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks (?): fols. 45r, 65r, 75r, 85r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">8</dim>
@@ -131,7 +150,7 @@ Tear amended on fol. 79.</condition>
                            <note>All data are for fol. 11r.</note>
                            <ab type="ruling">Number differs: from 20 (fol. 11r) to to 23 (fol. 63r).</ab>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -165,12 +184,12 @@ Some fols. have an additional ruled line in the upper margin (fols. 38r-39r).</a
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 2r-2v: Fragment of a lectionary (excerpt from the Epistle of Paul to the Hebrews, Heb. 3:7-4:3). <q xml:lang="gez"/>
+                           <locus target="#2r">Fols. 2r-2</locus>v: Fragment of a lectionary (excerpt from the Epistle of Paul to the Hebrews, Heb. 3:7-4:3). <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written on a leaf originating from an older manuscript (late 14th cent.?).
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fols. 3r-4v: Fragment of Revelation of John (Rev. 3:5-13).<q xml:lang="gez"/>
+                           <locus target="#3r">Fols. 3r-4</locus>v: Fragment of Revelation of John (Rev. 3:5-13).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written on leaves originating from an older manuscript (15th cent.?).
                         </item>
@@ -185,7 +204,7 @@ Some fols. have an additional ruled line in the upper margin (fols. 38r-39r).</a
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards (probably re-used, originating from two different codices?) covered with reddish-brown tooled leather preserved only on the front board.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -194,6 +213,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two rows of small holes are visible on the spinefolds of the quires, close to the head and tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Crude blind tooled ornament on the reddish-brown leather overback (2 tools were used: single line fillet and circle).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -237,8 +257,8 @@ Fols. 2 and 3-4 originate from two different older Mss. (late 15th or early 16th
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Zǝkrä Maryam is mentioned in the concluding supplication (fol. 93vb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Zǝkrä Maryam is mentioned in the concluding supplication (fol. 93vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -263,7 +283,7 @@ Fols. 2 and 3-4 originate from two different older Mss. (late 15th or early 16th
          <change who="DN" when="2010-11-23">registered</change>
          <change who="SH" when="2013-05-17">created</change>
          <change who="EG" when="2015-02-03">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

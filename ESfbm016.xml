@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESfbm016"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Barǝkännä ʾǝgziʾo… “Bless us, O Lord…” (Blessing prayer) / Mäṣḥafä ʾaślǝṭi, Lectionary for the entire year / Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>FBM-016</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of Texts I and II; incipit of sections of Text III; names of the donors; the word barǝkännä “bless us…” in Text I; titles of books to be read in Text II; notes written in the upper margins; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit pages of Texts I and II (fols. 2r, 4r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text II is called Mäṣḥafä ʾaslǝṭi in its incipit (fol. 4ra).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ On the incipit pages of Texts I and II (fols. 2r, 4r), a few lines are rubricate
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">65.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">65.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.0</measure> blank
+                                                  Fols. 1, 65v, in
+                                                  <measure unit="quire">9.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">18.0</height>
                               <width unit="cm">15.0</width>
@@ -112,7 +119,7 @@ Fols of quire I, of smaller size and added later.</item>
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -132,9 +139,11 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, vivid red.</seg>
                         <date>19th century.</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">fols. 4ra-60rb</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">fols. 61va-65rb</handNote>
-                     <handNote xml:id="h4" script="Ethiopic">fols. 2ra-3vb</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: fols. 4ra-60rb<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: fols. 61va-65rb<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h4" script="Ethiopic">
+Hand c: fols. 2ra-3vb<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">
@@ -151,6 +160,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -194,8 +204,8 @@ Quire I is of more recent time (20th cent.?).</origDate>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Täsfa Maryam and his wife Wälättä Mikaʾel (s. the supplication formula on fol. 4va); Bäʾǝdä Maryam (s. the supplication formulas on fols. 61va, 63ra, 64va, 65rb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Täsfa Maryam and his wife Wälättä Mikaʾel (s. the supplication formula on fol. 4va); Bäʾǝdä Maryam (s. the supplication formulas on fols. 61va, 63ra, 64va, 65rb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -221,7 +231,7 @@ Quire I is of more recent time (20th cent.?).</origDate>
          <change who="DN" when="2010-05-21">registered</change>
          <change who="SA" when="2013-03-06">created</change>
          <change who="EG" when="2014-03-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

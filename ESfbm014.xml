@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESfbm014"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä krǝstǝnna “Book of the Christening” / Mäṣḥafä qedär “Book of the Jar”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>FBM-014</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Texts I-II; directives to the ministers and their abbreviations; titles of the books to be read; initial passages of the reading; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text I is called Mäṣḥafä krǝstǝnna zä-ṭǝmqät in the incipit (s. fol. 3ra)</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">44.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">44.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  fol. 1, 2, 43, 44., in
+                                                  <measure unit="quire">7.0</measure> quires (A+5+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">15.3</height>
                               <width unit="cm">11.0</width>
@@ -106,7 +113,7 @@ The threads of the back board attachment are broken.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: </ab>
                            <ab>
 1A-1A-1A1A/0-0/0-0/C. </ab>
@@ -133,7 +140,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards (re-used).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -141,6 +148,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -183,11 +191,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -209,7 +212,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-21">registered</change>
          <change who="SA" when="2013-08-05">created</change>
          <change who="EG" when="2014-03-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

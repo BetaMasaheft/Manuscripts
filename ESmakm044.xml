@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmakm044"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MAKM-044</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Headings and incipits of the texts; on the incipit page of each Gospel a few lines are rubricated (alternating with black lines); numbers of the “tituli”; chapter numbers and the word mǝʿǝraf; parts of the Canon tables; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The biography and the list of “tituli” for the Gospel of Matthew are missing.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">132.0</measure> folios, of which <measure unit="leaf" type="blank">4.0</measure> blank, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">132.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">4.0</measure> blank
+                                                  fols. 1 and 132, in
+                                                  <measure unit="quire">19.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">36.0</height>
                               <width unit="cm">30.5</width>
@@ -60,6 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Undecorated quire marks are written in the inner margin, close to the first written line, on each initial fol. of the quire: 14v (close to the first line of column c, the last fol. the quire) 15r, 23r, 31r, 39r, 47r, 57r, 64r, 72r, 80r, 88r, 96r, 104r, 112r, 118r, 126r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -145,7 +155,7 @@ Colour of the parchment and ink of quire I is different from the rest of the Ms.
                            <note>Quire II: all data are for fol. 2r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A1A1A/0-0/0-0/C</ab>
                            <ab type="ruling">
 The upper line is written above the ruling.</ab>
@@ -168,7 +178,7 @@ The bottom line is written above the ruling.</ab>
                            <note>Quires III-XVIII: all data are for fol. 8r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A1A1A/0-0/0-0/C</ab>
                            <ab type="ruling">
 The upper line is written above the ruling.</ab>
@@ -183,18 +193,17 @@ The bottom line is written above the ruling.</ab>
                         <ab type="script">Fine, regular.</ab>
                         <seg type="ink">Black; red.</seg>The name of the scribe, now unreadable, was mentioned in Additio 2.<date>Second half of the 19th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">Quire I is possibly written in a different hand (belonging to the same period of time).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 63r: Note on the land charter issued by King Yoḥannǝs IV (r. 1872-89) to May ʾAnbäsa. <q xml:lang="gez"/>
+                           <locus target="#63r">Fol. 63r</locus>: Note on the land charter issued by King Yoḥannǝs IV (r. 1872-89) to May ʾAnbäsa. <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic; the note concerns the gwǝlt to May ʾAnbäsa donated by King Yoḥannǝs IV (r. 1872-89).
                         </item>
                         <item xml:id="a2">
-                           <locus/>
-                           <div style="text-align: left;" org="uniform" sample="complete">Fol. 131rc: Donation note (?)</div>  <q xml:lang="gez"/>
+                           <locus target="#131rc">Fol. 131rc</locus>: Donation note (?)  <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is effaced. The name of the donor Täklä Wängel and the name of his wife are still readable; the note contained also the name of the scribe, written in red ink, now unreadable.
                         </item>
@@ -205,7 +214,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards covered with brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -214,6 +223,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold and in the centre fold of the quires, close to the head and tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the remains of the brown leather cover is visible on the front board and on the turn-ins (at least 9 tools were used: double sine wave, cross hatching, triple line fillet, single circle, criss-cross, triple dot fillet, double crescent, corni-form, small x).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -257,8 +267,8 @@ Additio 1, dated to the time of King Yoḥannǝs IV (r. 1872-89), is probably ex
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Täklä Wängel is mentioned in the headings of the Gospels on fols. 7r, 46r, 64r, 101r and in Additio 2.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Täklä Wängel is mentioned in the headings of the Gospels on fols. 7r, 46r, 64r, 101r and in Additio 2.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -284,7 +294,7 @@ Additio 1, dated to the time of King Yoḥannǝs IV (r. 1872-89), is probably ex
          <change who="DN" when="2011-11-02">registered</change>
          <change who="IF" when="2012-08-07">created</change>
          <change who="VR" when="2015-05-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

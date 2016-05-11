@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESddm019"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäftǝḥe śǝray “Undoing of Charms”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DDM-019</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the king; the first two lines on the incipit page of the text; incipit of each section of the text; the word sälam; elements of Ethiopic numerals; elements of the punctuation signs.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">49.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">49.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  49r, in
+                                                  <measure unit="quire">6.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">10.5</height>
                               <width unit="cm">7.5</width>
@@ -103,7 +106,7 @@ The structure of quire VI cannot be established with certainty, because fol. 43 
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -124,12 +127,14 @@ The bottom line is written above the ruling.</ab>
                         <date>20th century</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ሰላ፡</abbr> for <expan>ሰላም፡ </expan> (e.g., fols. 13r, 38v, 39r)</item>
+                              <abbr>ሰላ፡</abbr> for
+                                                  <expan>ሰላም፡ </expan> (e.g., fols. 13r, 38v, 39r)</item>
                            <item>
-                              <abbr>ለገ(ብ)፡</abbr> for <expan>ለገብርከ፡ </expan> (e.g., fols. 10v, 11v, 12r)</item>
+                              <abbr>ለገ(ብ)፡</abbr> for
+                                                  <expan>ለገብርከ፡ </expan> (e.g., fols. 10v, 11v, 12r)</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The quality of writing varies throughout the Ms. The writing in the last quire is executed more hastily.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 2r (incipit page): coloured (white, red, black) ornamental band; geometric motifs.</decoNote>
@@ -137,7 +142,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 49v: Ownership note<q xml:lang="gez">Fol. 49v: ዝተሐዳስትሉ 24/12/96 ዓ/ም እዚ መፅሐፍ መፍትሄ፡ ስራይ ናይ ቀሺ ብርሃነ ተስፍይ ገብረትንሳኤ</q>
+                           <locus target="#49v">Fol. 49v</locus>: Ownership note<q xml:lang="gez">Fol. 49v: ዝተሐዳስትሉ 24/12/96 ዓ/ም እዚ መፅሐፍ መፍትሄ፡ ስራይ ናይ ቀሺ ብርሃነ ተስፍይ ገብረትንሳኤ</q>
                            <q xml:lang="en"/>
                            Written in a crude secondary hand with red and blue ballpoint pen on cardboard, in Tǝgrǝñña. It states that the book belongs to qäšši Bǝrhanä Täsfǝy Gäbrä Tǝnśaʾe. The date 24/12/96 A.M. (= 2003/04 A.D.) is mentioned.
                         </item>
@@ -159,6 +164,7 @@ One pair of sewing stations.</decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stiches at the spine cover.&#xD;
 Before the first and after the last quire a page of cardboard has been inserted.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the leather cover (at least 4 tools were used: double line fillet, double circle, triple line fillet, wave form with dots).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -201,8 +207,8 @@ Before the first and after the last quire a page of cardboard has been inserted.
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Priest (qäšši) Bǝrhanä Täsfǝy Gäbrä Tǝnśaʾe, according to Additio 1. The names of the original donors or owners are not known since the space for rubricated names was left unfilled (the first part of the name was probably Ḫaylä, cp. fol. 4v).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -229,7 +235,7 @@ Before the first and after the last quire a page of cardboard has been inserted.
          <change who="DN" when="2011-05-18">registered</change>
          <change who="VR" when="2015-03-11">created</change>
          <change who="VR" when="2015-04-13">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

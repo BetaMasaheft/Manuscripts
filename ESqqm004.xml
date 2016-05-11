@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqqm004"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam "Miracles of Mary"</title>
@@ -32,16 +32,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QQM-004</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; groups of lines on the incipit page of Texts I-1 and I-4; sometimes the first word of Text I-5;  incipit of (sub)sections partly section numbers of Text I-4; elements of the punctuation signs and of text dividers; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I-2 is followed by the hymns:</note>
+                     <note>- ʾO-ʾǝgzǝʾtǝyä Maryam wäladitä ʾamlak ... "O my Lady Mary, Godbearing ..." (fol. 7ra-7ra l.11)</note>
+                     <note>- ʾƎgzǝʾtǝyä ʾǝmmu lä-ʾǝgziʾǝyä kähali ... "My Lady, Mother of my Lord the Almighty ..." (fol. 7ra l.11-rb l.3) (cp. ChRep no. 373)</note>
+                     <note>- Sälam läki Maryam ʾǝmmä mädḫǝn wä nädd ... "Salutation to you Mary, Mother of the Saviour, Mother of the Flame ..." (fol. 7rb l.3-7vb).</note>
+                     <note/>
+                     <note>The miracles of Mary (Text I-4) are numbered, partly in a secondary hand (the same as Additio 1).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -50,7 +59,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">134.0</measure> folios, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">134.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, 2r, 132v, in
+                                                  <measure unit="quire">18.0</measure> quires (A+17). 
                                                 <dimensions type="outer">
                               <height unit="cm">24.0</height>
                               <width unit="cm">21.5</width>
@@ -137,7 +149,7 @@ Fols. 133 and 134 (miniatures), originating from an older MS., have been inserte
                            <note>All data are for fol. 30r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -166,12 +178,12 @@ Some leaves have an additional ruled line in the upper margin: fols. 55r-57r, 59
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 8vb: Supplication for the donor.<q xml:lang="gez"/>
+                           <locus target="#8vb">Fol. 8vb</locus>: Supplication for the donor.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The supplication is written in Amharic, in purple pen. The donor's baptismal name, Gäbrä ʾƎgziʾabǝḥer, and names of his family members are included in the note.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 131va: Purchase note.<q xml:lang="gez"/>
+                           <locus target="#131va">Fol. 131va</locus>: Purchase note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note states that the "book of ʿAddi Qiyahto" was purchased by Wäldä Yoḥannǝs during the time of King Mǝnilǝk II (r. 1889-1913) and the governor šum ʾagame Dästa whose baptismal name is Gäbrä Ḥǝywät (in office 1902-08). 
 Wäldä Yoḥannǝs' family members are also mentioned (e.g., father: Wäldä ʾAbbǝyä ʾƎgziʾ, mother: Wälättä Maryam).
@@ -186,7 +198,7 @@ A similar note is written in purple pen on fol. 2v.
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with dark brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -195,6 +207,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the dark brown leather cover is poorly visible (at least 4 tools were used: double line fillet, double circle, cross hatching, double sine wave with dots).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -237,8 +250,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 2, the Ms. was purchased by Wäldä Yoḥannǝs. His name (and his baptismal name Gäbrä ʾƎgziʾabǝḥer) as well as the names of his family members were added to the supplication formulas by the same hands as Additiones 1 and 2.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 2, the Ms. was purchased by Wäldä Yoḥannǝs. His name (and his baptismal name Gäbrä ʾƎgziʾabǝḥer) as well as the names of his family members were added to the supplication formulas by the same hands as Additiones 1 and 2.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -265,7 +278,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-24">registered</change>
          <change who="SH" when="2014-05-14">created</change>
          <change who="DN" when="2015-09-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

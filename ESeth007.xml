@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESeth007"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Täklä Haymanot “Vita of Täklä Haymanot” / Täʾamrä Täklä Haymanot “Miracles of Täklä Haymanot”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>ETH-007</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist and other saints; names of the donors; incipits of Text I and its subsections (fols. 8ra, 15vb, 24rb, 28ra, 33va, 44vb, 49vb, 57vb, 68ra, 74rb); incipit of Text II; notes in the upper margin of some fols.; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fols. 3r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The text of the Vita represents the first of the two sub-types of the Däbrä Libanos recension of the Gädlä Täklä Haymanot (close, but not identical to the published text of the Vita, s. E.A.W. BUDGE (ed., tr.), The Life and Miracles of Takla Hâymânôt in the Version of Dabra Lîbânôs..., London 1906).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,8 @@ On the incipit page of Text I (fols. 3r), a few lines are rubricated (alternatin
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">82.0</measure> folios, in <measure unit="quire">13.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">82.0</measure> folios, in
+                                                  <measure unit="quire">13.0</measure> quires (A+12). 
                                                 <dimensions type="outer">
                               <height unit="cm">24.5</height>
                               <width unit="cm">20.0</width>
@@ -122,7 +127,7 @@ On the incipit page of Text I (fols. 3r), a few lines are rubricated (alternatin
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -151,6 +156,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -193,8 +199,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Täklä Yoḥannǝs (s. supplication formulas fols. 3rb, 8ra, 80vb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Täklä Yoḥannǝs (s. supplication formulas fols. 3rb, 8ra, 80vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -219,7 +225,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-19">registered</change>
          <change who="SA" when="2012-01-04">created</change>
          <change who="DN" when="2015-07-31">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

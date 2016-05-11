@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESddm020"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Bǝsratä Yoḥannǝs "Gospel of John" / Mälkǝʾa Maryam "Image of Mary"</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DDM-020</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of the chapters; elements of the punctuation signs, element of chapter dividers; elements of Ethiopic numerals. &#xD;
 On the incipit page of Text I (fol. 3r), a few lines are rubricated (two red line alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- The list of the “tituli” of the Gospel is missing.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,8 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (two red lin
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">104.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">104.0</measure> folios, in
+                                                  <measure unit="quire">14.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">15.5</height>
                               <width unit="cm">12.0</width>
@@ -61,6 +66,8 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (two red lin
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Only one quire mark, on fol. 43r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -125,7 +132,7 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (two red lin
                            <note>All data are for the second page of the Gospel, recto side (fol. 4r).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -149,19 +156,19 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 1ra-2vb, 104ra-104va: Ṣalotä nǝssǝḥa “Prayer of Penance”.<q xml:lang="gez"/>
+                           <locus target="#1ra">Fol. 1ra-2</locus>vb, 104ra-104va: Ṣalotä nǝssǝḥa “Prayer of Penance”.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Additio 1 mentions Metropolitan Krǝstodolu (in tenure 1720-1735) and King Dawit III (r. 1716-21), but the text is obviously a late addition written on the protective leaves of the Ms., and the scribe copied the names from the model manuscript.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fols. 103v: List of religious feasts.<q xml:lang="gez"/>
+                           <locus target="#103v">Fols. 103v</locus>: List of religious feasts.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden board covered by tooled reddish-brown leather; textile inlays. &#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -171,6 +178,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover (at least 5 tools were used: double circle, double line fillet, criss-cross, double sine wave with dots, x-form).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -214,8 +222,13 @@ Additio 1 mentions Metropolitan Krǝstodolu (in tenure 1720-1735) and King Dawit
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">On the incipit of Text I (fol. 3r), the name ʾabunä Gäbrä Krǝstos is crudely added in pencil (following the words mǝslä gäbru...).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">On the incipit of Text I (fol. 3r), the name ʾabunä Gäbrä Krǝstos is crudely added in pencil (following the words mǝslä gäbru...).</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Currently the Ms. is in private possession of priest (qäšši) Täsfay ʾAbrǝha.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -241,7 +254,7 @@ Additio 1 mentions Metropolitan Krǝstodolu (in tenure 1720-1735) and King Dawit
          <change who="DN" when="2011-05-18">registered</change>
          <change who="SA" when="2011-09-20">created</change>
          <change who="SA" when="2014-09-12">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

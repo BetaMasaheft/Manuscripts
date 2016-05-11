@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmg001"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MG-001</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the commissioner and his family members; group of lines (alternating with black lines) in the incipit pages of the sections; two initial lines of the first commemorative notice of the day and one initial line of the subsequent commemorative notices of the day; the word sälam “salutation” opening the sälam-hymns; elements of text dividers; elements of the punctuation signs; Ethiopic numerals or their elements.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">129.0</measure> folios, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">129.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2v, 129v, in
+                                                  <measure unit="quire">19.0</measure> quires (A + 18). 
                                                 <dimensions type="outer">
                               <height unit="cm">37.5</height>
                               <width unit="cm">30.0</width>
@@ -145,7 +148,7 @@ Holes are carefully amended in fols. 1, 2, 3, 4, 7, 8, 11, 42, 59, 65, 66, 74, 8
                            <note>All data for fol. 7r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: </ab>
                            <ab>
 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
@@ -166,7 +169,7 @@ The bottom line is written above the ruling.</ab>
                         <ab type="script">Mediocre, irregular</ab>
                         <seg type="ink">Black, red (strong vermilion)</seg>The name of the scribe has been erased from fol. 129rb.<date>First half of the 19th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">in fols. 99rb-100ra tall and slender letters become clearly smaller and broader, in fols. 116rb-118va letters become conspicuously right-sloping.</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">The quality of the handwriting changes: in fols. 99rb-100ra tall and slender letters become clearly smaller and broader, in fols. 116rb-118va letters become conspicuously right-sloping.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 64r (incipit of the text for Säne): simple coloured (red, black) ornamental band; interlace.</decoNote>
@@ -174,7 +177,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 129rc: Zä-ʾaqräbku maḫletä... “The song I am offering...”.<q xml:lang="gez"/>
+                           <locus target="#129rc">Fol. 129rc</locus>: Zä-ʾaqräbku maḫletä... “The song I am offering...”.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in a recent mediocre and hasty hand, in pen.
                         </item>
@@ -196,6 +199,7 @@ Three pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.&#xD;
 All quires are reinforced with parchment guards of different sizes (on both the spine folds and centre folds).</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornaments on the reddish-brown leather cover (at least 4 tools are used: double line fillet, triple line fillet, double circle, Maltese-cross).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -238,8 +242,8 @@ All quires are reinforced with parchment guards of different sizes (on both the 
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʾAmdä Śǝllase is mentioned as the commissioner on fol. 129rb, but his name has been written, in vivid red and in a secondary hand, over an erasure. The original owner of the Ms. might be Wäldä ʾAmlak whose name has been retained on fol. 107rb.&#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʾAmdä Śǝllase is mentioned as the commissioner on fol. 129rb, but his name has been written, in vivid red and in a secondary hand, over an erasure. The original owner of the Ms. might be Wäldä ʾAmlak whose name has been retained on fol. 107rb.&#xD;
 The name of the commissioner and his family members have been written over erased names in the supplication formulas: ʾAmdä Śǝllase (e.g., fols. 3rac, 6rabc, 7vc, 21va, 26rb, 30vabc, 94rab), his wife Wälättä Haymanot (fols. 90vc, 92rc, 94rab), Ḫǝdrä Mikaʾel (fols. 19rb, 21rc, 21vb, 95va), Gäbrä Śǝllase (fols. 90va, 92rc), Wäldä Śǝllase (Bä-Gäday) (fols. 90vc, 96rb, 99rbc),  ʾƎqwǝba Mikaʾel (fols. 95vb, 104ra). &#xD;
 In fols. 3r-90r, the names of Wäldä Mikaʾel (most frequently), Gäbrä Maryam and Sǝḥunä Śǝllase have been added, in black and in another hand, over the names mentioned above.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
@@ -266,7 +270,7 @@ In fols. 3r-90r, the names of Wäldä Mikaʾel (most frequently), Gäbrä Maryam
          <change who="DN" when="2010-05-14">registered</change>
          <change who="MK" when="2013-08-05">created</change>
          <change who="MV" when="2015-01-29">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

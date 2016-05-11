@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESehpp012"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,17 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>EHPP-012</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; headings of the Gospels; the word mǝʿǝraf, chapter numbers and the signs between them; usually, two lines on the incipit of each chapter; elements of the punctuation signs; Ethiopic numerals.&#xD;
 Incipit of Text I and of its subsections; incipits of Text II, III, IV; incipits of the Evangelists' biographies; on the incipit pages of Text I, II, III, IV, IV, a few lines are rubricated (in groups of two lines, alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The list of the “tituli” for the Gospel of Mark and John are missing.</note>
+                     <note>The list of the “tituli” for the Gospel of Luke is misplaced.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +57,8 @@ Incipit of Text I and of its subsections; incipits of Text II, III, IV; incipits
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">137.0</measure> folios, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">137.0</measure> folios, in
+                                                  <measure unit="quire">18.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">32.0</height>
                               <width unit="cm">24.0</width>
@@ -140,7 +146,7 @@ Incipit of Text I and of its subsections; incipits of Text II, III, IV; incipits
                            <note>All data for fol. 100r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern:1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -163,27 +169,27 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 11rb: Record concerning a reconciliation after litigation over land.<q xml:lang="gez"/>
+                           <locus target="#11rb">Fol. 11rb</locus>: Record concerning a reconciliation after litigation over land.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic, written in 1928 A.M. (= 1935/1936 A.D.).
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 61va: Record concerning a reconciliation.<q xml:lang="gez"/>
+                           <locus target="#61va">Fol. 61va</locus>: Record concerning a reconciliation.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic, written in the month of Naḥase 1921 A.M. (= 1929 A.D.); mentioning ras Gugsa.
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 85va-vb: Record concerning decisions about tribute.<q xml:lang="gez"/>
+                           <locus target="#85va">Fol. 85va</locus>-vb: Record concerning decisions about tribute.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic, written in the month of Ṭǝrr 1930 A.M. (= 1937 A.D.); unreadable stamp.
                         </item>
                         <item xml:id="a4">
-                           <locus/>Fol. 114ra: Record concerning a contract.<q xml:lang="gez"/>
+                           <locus target="#114ra">Fol. 114ra</locus>: Record concerning a contract.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic; written in Gǝnbot 1936 A.M. (= 1944 AD).
                         </item>
                         <item xml:id="a5">
-                           <locus/>Fol. 137rb: Record concerning a decision made by the elders of the community.<q xml:lang="gez"/>
+                           <locus target="#137rb">Fol. 137rb</locus>: Record concerning a decision made by the elders of the community.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic; written in Ḥamle 1915 A.M. (= 1923 AD).
                         </item>
@@ -192,7 +198,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with tooled reddish-brown leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -243,11 +249,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -269,7 +270,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-11-23">registered</change>
          <change who="SA" when="2012-03-29">created</change>
          <change who="VP" when="2014-09-23">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

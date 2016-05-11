@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESgbi007"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä ʾIyäsus “Miracles of Jesus”</title>
@@ -33,17 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>GBI-007</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donor; incipits of sections of Text I-1; numbers and incipits of miracles; a few words following the nomina sacra; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 A few groups of lines (alternating with black lines) on the incipit page of Text I-1.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- All miracles are correctly numbered.</note>
+                     <note>- Within the introduction (Text I-1) the scribe numbered three sections as miracles. Thus, the 1st miracle proper bears number 4 (fol. 14vb).</note>
+                     <note>- The miracles are introduced with the word täʾamǝr “miracle” and in one case with the word mǝʿǝraf “chapter”.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +58,10 @@ A few groups of lines (alternating with black lines) on the incipit page of Text
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">91.0</measure> folios, in <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">91.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 3v, 4r, 87rv, 88v, 89rv, 90rv, 91rv, in
+                                                  <measure unit="quire">12.0</measure> quires (A+11). 
                                                 <dimensions type="outer">
                               <height unit="cm">18.3</height>
                               <width unit="cm">15.5</width>
@@ -130,7 +139,7 @@ A hole carefully amended on fol. 52.</condition>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -150,12 +159,12 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, red</seg>
                         <date>18th cent. (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">Numeral ፮ “six” looks like compressed numeral ፯ “seven” (fols. 19vb, 41rb, 61ra).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 2ra-3rb: Unidentified canonical or hagiographic text (?). <q xml:lang="gez">Fol. 2ra: አው፡ እምዘ፡ በልዓ፡ ኢይቅረብ፡ ዓዲ፡ በይእት፡ ዕለት፡ ወአጽንዑ፡ እንከ፡ ጸዊመ፡ ረቡዐ፡ ወአርበ ወጾመ፡ ፵፡ በከመ፡ ይቤ፡ ሐዋርያት፡ ዘይመስሕ፡ በረቡዕ፡ ወበዓርብ፡...</q>
+                           <locus target="#2ra">Fols. 2ra-3</locus>rb: Unidentified canonical or hagiographic text (?). <q xml:lang="gez">Fol. 2ra: አው፡ እምዘ፡ በልዓ፡ ኢይቅረብ፡ ዓዲ፡ በይእት፡ ዕለት፡ ወአጽንዑ፡ እንከ፡ ጸዊመ፡ ረቡዐ፡ ወአርበ ወጾመ፡ ፵፡ በከመ፡ ይቤ፡ ሐዋርያት፡ ዘይመስሕ፡ በረቡዕ፡ ወበዓርብ፡...</q>
                            <q xml:lang="en"/>
                            The fols. are a fragment of a different (more recent?) Ms. The explicit is on fol. 3rb. The text is written in a crude hand.
                         </item>
@@ -173,6 +182,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -215,8 +225,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä Haymanot is mention in the supplication formulas (e.g., fols. 5ra, 17rb, 19vb, 26rb, 37ra, 70ra, 77vb, 83ra).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä Haymanot is mention in the supplication formulas (e.g., fols. 5ra, 17rb, 19vb, 26rb, 37ra, 70ra, 77vb, 83ra).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -241,7 +251,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-01">registered</change>
          <change who="MK" when="2014-06-17">created</change>
          <change who="DN" when="2014-09-01">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

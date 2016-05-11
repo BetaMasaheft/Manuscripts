@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESky008"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KY-008</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the king, patriarch and metropolitan; names of the donors; on fol. 5r and on the incipit page of each Anaphora, a few lines are rubricated (alternating with black lines); incipits and headings of some of the constituent texts; abbreviations; some of the marginal notes (s. Varia); elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>In the incipit of the Anaphora of St. John Chrysostom (fol. 96ra) the author of the Anaphora is mistakenly named “John, patriarch of the city of Alexandria”.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">156.0</measure> folios, of which <measure unit="leaf" type="blank">2.5</measure> blank, in <measure unit="quire">20.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">156.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.5</measure> blank
+                                                  1, 2v, 4, in
+                                                  <measure unit="quire">20.0</measure> quires (A+19). 
                                                 <dimensions type="outer">
                               <height unit="cm">22.0</height>
                               <width unit="cm">20.0</width>
@@ -144,7 +151,7 @@ Fire damage in fols. 29, 30, 31 with text loss.</condition>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible (s. fol. 16r).</ab>
@@ -187,17 +194,17 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 3ra-vb: Miracle of the Archangel Michael.<q xml:lang="gez"/>
+                           <locus target="#3ra">Fol. 3ra</locus>-vb: Miracle of the Archangel Michael.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written in a careless hand.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 156va-vb: Regulation concerning the preparation of the blessed bread (ʾawlogiya) followed by a prayer.<q xml:lang="gez"/>
+                           <locus target="#156va">Fol. 156va</locus>-vb: Regulation concerning the preparation of the blessed bread (ʾawlogiya) followed by a prayer.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 156vb: Donation note.<q xml:lang="gez">Fol. 156vb: ዝመጽሀፍ፡ ዘዘመደማርያም፡ ዘወሐበቶ፡ ለቅዱስ፡ ዮሀንስ፡ መጥምቅ፡ ዘአጥረየቶ፡ በንዋያ፡ ዘሰረቆ፡ ወዘፈሀቆ፡ በስልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዝ፡ ይኩን፡</q>
+                           <locus target="#156vb">Fol. 156vb</locus>: Donation note.<q xml:lang="gez">Fol. 156vb: ዝመጽሀፍ፡ ዘዘመደማርያም፡ ዘወሐበቶ፡ ለቅዱስ፡ ዮሀንስ፡ መጥምቅ፡ ዘአጥረየቶ፡ በንዋያ፡ ዘሰረቆ፡ ወዘፈሀቆ፡ በስልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዝ፡ ይኩን፡</q>
                            <q xml:lang="en">Fol. 156vb: This is the book of Zämädä Maryam who donated it to (the church of) St. John the Baptist, who acquired it with her money. He who steals it or erases (its text) shall be excommunicated by the authority of Peter and Paul.</q>
                            Written by a semi-literate person (rare spelling variants, non-existing variation of the last letter in the word ውጉዝ፡).
                         </item>
@@ -207,7 +214,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (the front board is broken, the back board is missing).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -215,6 +222,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold of the quires, two close to the head, two close to the tail.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -257,8 +265,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Zämädä Maryam was the donor according to Additio 3. Supplication formulas also mention Täklä Mikaʾel, Gäbrä Krǝstos, Gäbrä Hǝywät, Zä-Wäldä Maryam, Wälättä Mikaʾel, Wälättä Maryam, Wälättä Yoḥannǝs, Wälättä Mädḫǝn and Wälättä Kidan (s. fols. 64vb, 69ra, 79ra, etc.).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Zämädä Maryam was the donor according to Additio 3. Supplication formulas also mention Täklä Mikaʾel, Gäbrä Krǝstos, Gäbrä Hǝywät, Zä-Wäldä Maryam, Wälättä Mikaʾel, Wälättä Maryam, Wälättä Yoḥannǝs, Wälättä Mädḫǝn and Wälättä Kidan (s. fols. 64vb, 69ra, 79ra, etc.).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -283,7 +291,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-02">registered</change>
          <change who="IF" when="2011-11-24">created</change>
          <change who="MK" when="2014-12-19">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

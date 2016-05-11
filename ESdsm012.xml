@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdsm012"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsanä Mikaʾel, Homiliary for the feasts of St. Michael</title>
@@ -33,18 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DSM-012</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the protagonist and of the angel Gäbrǝʾel (fols. 89rb, 99va-100ra, 107rb, 107vb, 109rb); names of the donors; words addressing the reader on fols. 11rb, 22ra; elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.&#xD;
 &#xD;
 Several groups of lines on the incipit page of Text I (alternating with black lines); two or three initial lines in the incipit of sections (homilies), sometimes alternating with black lines (e.g., fols. 61rb, 89ra, 97vb); one or two initial lines of subsections (miracles and commemorative notices); the first word in the incipit of subsections (hymns), i.e. sälam "salutation".</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I-6 does not include an ʾarke-hymn.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +57,10 @@ Several groups of lines on the incipit page of Text I (alternating with black li
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">112.0</measure> folios, in <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">112.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1r-2v, 112v., in
+                                                  <measure unit="quire">15.0</measure> quires (A+14). 
                                                 <dimensions type="outer">
                               <height unit="cm">24.0</height>
                               <width unit="cm">18.5</width>
@@ -132,7 +139,7 @@ Tears amended on fols. 62, 63.</condition>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -165,6 +172,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes and tears are visible on the spine fold of the quires, close to the head and the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the dark brown leather cover is abraded.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -207,11 +215,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -233,7 +236,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-14">registered</change>
          <change who="SH" when="2015-01-14">created</change>
          <change who="MV" when="2015-05-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

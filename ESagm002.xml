@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESagm002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dawit “Psalter”</title>
@@ -33,18 +33,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AGM-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra (name of St. Mary in Texts I-4 and I-5); titles and numbers of Pss. (Pss. 1, 5-64, 102-140, 142-151); titles of Canticles; doxology at the end of each Song; titles of Texts I-1, I-2, I-3 and I-5; title and incipit of the daily readings of Text I-4; second line of some Pss. (Pss. 37-42, 44-48,51, 55, 59-64); names of the Hebrew letters in Ps. 118 and the traditional interpretation of the name of the first letter, Aleph; letters ስ and ሕ in the word ስብሕዎ in Ps. 150; refrains of Texts I-4 and I-5 (written out fully or abbreviated); elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.&#xD;
 &#xD;
 A few lines on the incipit page of Texts I-1, I-2, I-3 (two lines); a few lines on the incipit page of Text I-4 and incipits of its (sub)sections.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Traditional interpretation of the Hebrew letters in Ps. 118 is missing (except for Aleph).</note>
+                     <note>- Ps. 150 is numbered as ፻፵፲.</note>
+                     <note>- The following Pss. are numbered incorrectly: Pss. 70: ፷፲, 80: ፸፲, 100: ፺፲, 118: ፩ት (?).</note>
+                     <note>- Some Pss. with numbers from 100 onwards are numbered without the sign for 100, ፻ (e.g., Ps. 122 is numbered as ፳፪).</note>
+                     <note>- Ps. 107 is numbered as 108, mistake continues until Ps. 109; for the next Ps. 110, instead of the number, the scribe used a special, unusual sign: two crosses (?, s. fol. 107v).</note>
+                     <note>- Ps. 121 is numbered as 120, Ps. 130 as 129 and Ps. 131 numbered as 130.</note>
+                     <note>- The following Pss. are not numbered: Pss. 10, 44, 101 and 148.</note>
+                     <note>- Text I-3 contains interlineally inserted verses from Songs of Solomon (so called “Hebrew version”). For more information s. Ms.<ref type="mss" corresp="ESdd004">DD-004</ref>‘Other details’.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +64,10 @@ A few lines on the incipit page of Texts I-1, I-2, I-3 (two lines); a few lines 
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">179.0</measure> folios, in <measure unit="quire">21.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">179.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fol. 1rv., in
+                                                  <measure unit="quire">21.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">20.0</height>
                               <width unit="cm">18.8</width>
@@ -62,6 +76,8 @@ A few lines on the incipit page of Texts I-1, I-2, I-3 (two lines); a few lines 
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks are written in the left upper corner of fols. 56r: ፲, 66r: ተ, 76r: ደ, 93r: ፩, 103r: ፪, 112r: ፫, 122r: ፬, 132r: ፭, 140r: ፮, 148r: ፯, 166r: ፱.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">8</dim>
@@ -160,7 +176,7 @@ A few holes and tears amended: e.g., fols. 9, 25, 92, 176, 177, 179.</condition>
                            <note>Texts I-1, I-2, I-3: all data are for fol. 10r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -187,7 +203,7 @@ The bottom line is written above the ruling.</ab>
                            <note>Texts I-4, I-5: all data are for fol. 165r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -209,33 +225,43 @@ The bottom line is written above the ruling.</ab>
                         <list type="abbreviations">
                            <item>Text I-4</item>
                            <item>
-                              <abbr>ሰአ፡</abbr> for <expan>ሰአሊ፡ ለነ፡ ቅድስት፡ </expan> (e.g., fols. 164va, 168rb)</item>
+                              <abbr>ሰአ፡</abbr> for
+                                                  <expan>ሰአሊ፡ ለነ፡ ቅድስት፡ </expan> (e.g., fols. 164va, 168rb)</item>
                            <item>Words or their abbreviations stand for the whole refrain:</item>
                            <item>
-                              <abbr>ሠ፡</abbr> for <expan>ሠረቀ፡ በሥጋ፡ እምድንግል፡ ዘእንበለ፡ ዘርአ፡ ብእሲ፡ ወአድኅነነ </expan> (fol. 164ra-vb)</item>
+                              <abbr>ሠ፡</abbr> for
+                                                  <expan>ሠረቀ፡ በሥጋ፡ እምድንግል፡ ዘእንበለ፡ ዘርአ፡ ብእሲ፡ ወአድኅነነ </expan> (fol. 164ra-vb)</item>
                            <item>
-                              <abbr>እ፡</abbr> for <expan>እስመ፡ በፈቃዱ፡ ወበሥምረቱ፡ አቡሁ፡ ወመንፈስ፡ ቅዱስ፡ መጽአ፡ ወአድኅነነ </expan> (fols. 165rb-166va)</item>
+                              <abbr>እ፡</abbr> for
+                                                  <expan>እስመ፡ በፈቃዱ፡ ወበሥምረቱ፡ አቡሁ፡ ወመንፈስ፡ ቅዱስ፡ መጽአ፡ ወአድኅነነ </expan> (fols. 165rb-166va)</item>
                            <item>
-                              <abbr>ኵ፡</abbr> for <expan>ኵሉ፡ ትውልድ፡ ያስተበፅዑኪ፡ ለኪ፡ ለበሕቲትኪ፡ ኦእግዝእትነ፡ ወላዲተ፡ አምላክ </expan> (fols. 166vb-168ra)</item>
+                              <abbr>ኵ፡</abbr> for
+                                                  <expan>ኵሉ፡ ትውልድ፡ ያስተበፅዑኪ፡ ለኪ፡ ለበሕቲትኪ፡ ኦእግዝእትነ፡ ወላዲተ፡ አምላክ </expan> (fols. 166vb-168ra)</item>
                            <item>
-                              <abbr>ወ፡</abbr> for <expan>ወበእንተዝ፡ ናዓብየኪ፡ ኵልነ፡ ኦእግዝእትነ፡ ወላዲተ፡ አምላክ፡ ንጽሕት፡ ኵሎ፡ ጊዜ፡ ንስእል፡ ወናንቀዓዱ፡ ከመ፡ ንርከብ፡ ሣህለ፡ በኀበ፡ መፍቀሬ፡ ሰብእ</expan> (fols. 169ra-170rb, 173rb-vb)</item>
+                              <abbr>ወ፡</abbr> for
+                                                  <expan>ወበእንተዝ፡ ናዓብየኪ፡ ኵልነ፡ ኦእግዝእትነ፡ ወላዲተ፡ አምላክ፡ ንጽሕት፡ ኵሎ፡ ጊዜ፡ ንስእል፡ ወናንቀዓዱ፡ ከመ፡ ንርከብ፡ ሣህለ፡ በኀበ፡ መፍቀሬ፡ ሰብእ</expan> (fols. 169ra-170rb, 173rb-vb)</item>
                            <item>
-                              <abbr>ለ፡</abbr> for <expan>ለኪ፡ ለበሕቲትኪ፡ ኦእግዝእትነ፡ ማርያም፡ ወላዲተ፡ አምላክ፡ እመ፡ ብርሃን፡ ናዓብየኪ፡ በስብሐት፡ ወበውዳሴ ፡ </expan> (fols. 170vb-171rb)</item>
+                              <abbr>ለ፡</abbr> for
+                                                  <expan>ለኪ፡ ለበሕቲትኪ፡ ኦእግዝእትነ፡ ማርያም፡ ወላዲተ፡ አምላክ፡ እመ፡ ብርሃን፡ ናዓብየኪ፡ በስብሐት፡ ወበውዳሴ ፡ </expan> (fols. 170vb-171rb)</item>
                            <item>
-                              <abbr>ተ፡</abbr> for <expan>ተፈሥሒ፡ ኦምልዕልተ፡ ጸጋ፡ ተፈሥሒ፡ እስመ፡ ረከብኪ፡ ሞገስ፡ ተፈሥሒ፡ እግዚአብሔር፡ ምስሌኪ </expan> (fol. 172ra-vb)</item>
+                              <abbr>ተ፡</abbr> for
+                                                  <expan>ተፈሥሒ፡ ኦምልዕልተ፡ ጸጋ፡ ተፈሥሒ፡ እስመ፡ ረከብኪ፡ ሞገስ፡ ተፈሥሒ፡ እግዚአብሔር፡ ምስሌኪ </expan> (fol. 172ra-vb)</item>
                            <item>
-                              <abbr>ሰ፡</abbr> for <expan>ሰአሊ፡ ለነ፡ ቅድስት፡ </expan> (fols. 164ra-173vb)</item>
+                              <abbr>ሰ፡</abbr> for
+                                                  <expan>ሰአሊ፡ ለነ፡ ቅድስት፡ </expan> (fols. 164ra-173vb)</item>
                            <item>Text I-5</item>
                            <item>
-                              <abbr>ወ፡ (ሰ)</abbr> for <expan>ወልድኪ፡ ሣህሎ፡ ይክፍለነ፡ ሰአሊ፡ ለነ፡ ቅድስት፡ </expan> (fol. 174va-178ra)</item>
+                              <abbr>ወ፡ (ሰ)</abbr> for
+                                                  <expan>ወልድኪ፡ ሣህሎ፡ ይክፍለነ፡ ሰአሊ፡ ለነ፡ ቅድስት፡ </expan> (fol. 174va-178ra)</item>
                            <item>The abbreviation stand for the whole refrain:</item>
                            <item>
-                              <abbr>ወ፡</abbr> for <expan>ወበእንተዝ፡ ናዓብየኪ፡ ኵልነ፡ ኦእግዝእትነ፡ ወላዲተ፡ አምላክ፡ ንጽሕት፡ ኵሎ፡ ጊዜ፡ ንስእል፡ ወናንቀዓዱ፡ ከመ፡ ንርከብ፡ ሣህለ፡ በኀበ፡ መፍቀሬ፡ ሰብእ </expan> (fols. 175va-178ra)</item>
+                              <abbr>ወ፡</abbr> for
+                                                  <expan>ወበእንተዝ፡ ናዓብየኪ፡ ኵልነ፡ ኦእግዝእትነ፡ ወላዲተ፡ አምላክ፡ ንጽሕት፡ ኵሎ፡ ጊዜ፡ ንስእል፡ ወናንቀዓዱ፡ ከመ፡ ንርከብ፡ ሣህለ፡ በኀበ፡ መፍቀሬ፡ ሰብእ </expan> (fols. 175va-178ra)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -245,6 +271,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 2 tools were used: triple line fillet, double circle).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -287,8 +314,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name Wälättä Mädḫǝn was inserted into supplication formulas  in a secondary hand (e.g., fols. 9r, 19r, 28v, 47v, 63v, 122r, 125v, 133r, 143r, 156r, 164r).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name Wälättä Mädḫǝn was inserted into supplication formulas  in a secondary hand (e.g., fols. 9r, 19r, 28v, 47v, 63v, 122r, 125v, 133r, 143r, 156r, 164r).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -314,7 +341,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-17">registered</change>
          <change who="SH" when="2013-02-20">created</change>
          <change who="SH" when="2014-10-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

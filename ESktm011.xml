@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESktm011"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä krǝstǝnna “Book of the Christening”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KTM-011</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; incipit of Text I; directives to the ministers and their abbreviations; titles of the books to be read; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 2r), two lines are rubricated (alternating with two black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text I is called Mäṣḥafä ṭǝmqät in fols. 2r and 3v.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ On the incipit page of Text I (fol. 2r), two lines are rubricated (alternating w
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">40.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">40.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  fols. 1r, 1v, 40v, in
+                                                  <measure unit="quire">5.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">14.5</height>
                               <width unit="cm">10.5</width>
@@ -61,6 +68,9 @@ On the incipit page of Text I (fol. 2r), two lines are rubricated (alternating w
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>Quire marks for quires III-V (fols. 20r, 28r, 38r).</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">11</dim>
@@ -101,7 +111,7 @@ On the incipit page of Text I (fol. 2r), two lines are rubricated (alternating w
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -132,7 +142,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 40r: Donation note.<q xml:lang="gez">Fol. 40r: ዘመጽሐፍ፡ ዘአቶ፡ ተክለ፡ ሃይማኖት፡ ዘአጽሐፎ፡ በንዋዩ፡ ዘወሀቦ፡ ለታቦተ፡ ማርያም፡ ዘከዲህ፡ ከመ፡ ትኩኖ፡ መድኃኒተ፡ ሥጋ፡ ወነፍስ፡ ዘሠረቆ፡ ወዘፈሐቆ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዘ፡ ይኩን።</q>
+                           <locus target="#40r">Fol. 40r</locus>: Donation note.<q xml:lang="gez">Fol. 40r: ዘመጽሐፍ፡ ዘአቶ፡ ተክለ፡ ሃይማኖት፡ ዘአጽሐፎ፡ በንዋዩ፡ ዘወሀቦ፡ ለታቦተ፡ ማርያም፡ ዘከዲህ፡ ከመ፡ ትኩኖ፡ መድኃኒተ፡ ሥጋ፡ ወነፍስ፡ ዘሠረቆ፡ ወዘፈሐቆ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ውጉዘ፡ ይኩን።</q>
                            <q xml:lang="en"/>
                            Written in the main hand. The note mentions the name of the commissioner and donor, ʾato Täklä Haymanot.
                         </item>
@@ -141,7 +151,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -149,6 +159,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -191,8 +202,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Täklä Haymanot (s. Additio 1); he and Nǝgǝśtä Maryam are also mentioned in the supplication formula on fol. 39v.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Täklä Haymanot (s. Additio 1); he and Nǝgǝśtä Maryam are also mentioned in the supplication formula on fol. 39v.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -217,7 +228,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-17">registered</change>
          <change who="SA" when="2013-08-21">created</change>
          <change who="SA" when="2014-09-08">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

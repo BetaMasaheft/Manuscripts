@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmy013"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä gǝnzät “Book of the Funeral Ritual”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MY-013</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of the texts; the name of the reigning monarch; directives for the ministers; the words ሃሌ፡ ሉያ፡, ጸልዩ፡, ንበል፡, እገሌ፡ (for the name of the deceased); abbreviations; elements of the punctuation signs; elements of the Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Decorated quire marks (partly visible), on the first and the last folio of the quires.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">70.0</measure> folios, of which <measure unit="leaf" type="blank">0.0</measure> blank, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">70.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">0.0</measure> blank
+                                                  , in
+                                                  <measure unit="quire">9.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">18.5</height>
                               <width unit="cm">17.0</width>
@@ -60,6 +67,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>Decorated quire marks, in the first and the last folio of the quires.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <locus from="1r" to="6v"/>፩I፩(fols. 1r-6v) </item>
@@ -103,7 +112,7 @@ The threads of the binding are broken.</condition>
                            <note>All data for fol. 5.</note>
                            <ab type="ruling">average number</ab>
                            <ab type="pricking">Pricking and ruling are mostly visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are mostly visible (s. fol. 31r).</ab>
@@ -127,11 +136,14 @@ The bottom line is written above the ruling.</ab>
                         <list type="abbreviations">
                            <item>ሃሌ፡ or ሃሌሉ፡ for ሃሌ፡ ሉያ፡</item>
                            <item>
-                              <abbr>ፍ፡</abbr> for <expan>ፍቱሐ፡ </expan> (e.g., fols. 45v, 46r)</item>
+                              <abbr>ፍ፡</abbr> for
+                                                  <expan>ፍቱሐ፡ </expan> (e.g., fols. 45v, 46r)</item>
                            <item>
-                              <abbr>ይካ፡</abbr> for <expan>ይብል፡ ካህን፡ </expan> (e.g., fol. 57va, l.8)</item>
+                              <abbr>ይካ፡</abbr> for
+                                                  <expan>ይብል፡ ካህን፡ </expan> (e.g., fol. 57va, l.8)</item>
                            <item>
-                              <abbr>ይዲ፡</abbr> for <expan>ይብል፡ ዲያቆን፡ </expan> (e.g., fol. 58va, l.15).</item>
+                              <abbr>ይዲ፡</abbr> for
+                                                  <expan>ይብል፡ ዲያቆን፡ </expan> (e.g., fol. 58va, l.15).</item>
                         </list>
                      </handNote>
                   </handDesc>
@@ -144,6 +156,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -186,11 +199,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -212,7 +220,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-10">registered</change>
          <change who="IF" when="2011-02-16">created</change>
          <change who="DN" when="2015-05-15">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

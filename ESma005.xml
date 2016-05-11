@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESma005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Nägärä Maryam “The Story of Mary”</title>
@@ -33,21 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MA-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of the sections and subsections; Ethiopic numerals; elements of the punctuation signs.&#xD;
 On the incipit page (fol. 3r) a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
                   </msItem>
-                  <msItem xml:id="coloph1" defective="false">
+                  <msItem xml:id="coloph1">
                      <colophon>
-                        <locus>&lt;span style="font-size</locus>Fol. 152vb: ተጽሐፈ፡ በዘመነ፡ ንጉሥነ፡ ኃይለ፡ ሥላሴ፡ ወጳጳስነ፡ አባ፡ ይስሐቅ፡ ወመስፍንነ፡ ራስ፡ ሥዩም፡ [fol. 153ra] በ፲፻ወ፱፻፵ወ፯፡ ዓመተ፡ ምሕረት፡ ተፈጸመ፡ በወርኃ፡ ሰኔ፡ በ፳ወ፫፡ በዕለተ፡ ኃሙስ።<foreign xml:lang="en"/>
+                        <locus target="152vb"/>Fol. 152vb: ተጽሐፈ፡ በዘመነ፡ ንጉሥነ፡ ኃይለ፡ ሥላሴ፡ ወጳጳስነ፡ አባ፡ ይስሐቅ፡ ወመስፍንነ፡ ራስ፡ ሥዩም፡ [fol. 153ra] በ፲፻ወ፱፻፵ወ፯፡ ዓመተ፡ ምሕረት፡ ተፈጸመ፡ በወርኃ፡ ሰኔ፡ በ፳ወ፫፡ በዕለተ፡ ኃሙስ።<foreign xml:lang="en"/>
                         <note>The colophon mentions the 23 Säne 1947 A.M. (= 30 July 1955 A.D.) as the date of completion of the writing. It mentions also King Ḫaylä Śǝllase (r. 1930-74), Metropolitan Yǝsḥaq, Bishop of Tǝgray (in tenure in 1929-54) and ras Śǝyyum (1887-1960), a governor of Tǝgray.</note>
                      </colophon>
                   </msItem>
@@ -58,7 +58,10 @@ On the incipit page (fol. 3r) a few lines are rubricated (alternating with black
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">155.0</measure> folios, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">155.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1r-v, 153v., in
+                                                  <measure unit="quire">19.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">30.5</height>
                               <width unit="cm">24.0</width>
@@ -67,6 +70,7 @@ On the incipit page (fol. 3r) a few lines are rubricated (alternating with black
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">9</dim>
@@ -150,7 +154,7 @@ On the incipit page (fol. 3r) a few lines are rubricated (alternating with black
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -174,7 +178,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -182,6 +186,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, close to the head and the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -224,11 +229,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -250,7 +250,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-23">registered</change>
          <change who="SA" when="2014-02-21">created</change>
          <change who="DN" when="2015-02-20">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

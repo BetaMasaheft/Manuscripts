@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdmd005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DMD-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the Patriarch and Metropolitan; headings and incipits of the texts; directives for the ministers; some of the musical notation signs above the lines; abbreviations; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On fol. 1r, the two upper lines of each column are rubricated.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I begins with Kidan zä-nägh.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ On fol. 1r, the two upper lines of each column are rubricated.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">152.0</measure> folios, of which <measure unit="leaf" type="blank">3.5</measure> blank, in <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">152.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">3.5</measure> blank
+                                                  149, 150r, 151, 152, in
+                                                  <measure unit="quire">23.0</measure> quires (22+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">24.0</height>
                               <width unit="cm">20.5</width>
@@ -156,7 +163,7 @@ Leather covering is for the most part lost, and preserved only on the inner face
                            <note>All data are for fol. 2r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are not visible.</ab>
@@ -180,29 +187,30 @@ The bottom line is written above the ruling.</ab>
                            <item>ይ፡ ዲ፡ or ይዲ፡ for ይበል፡ ዲያቆን፡</item>
                            <item>ይ፡ ሕ፡ or ይሕ፡ for ይበል፡ ሕዝብ፡</item>
                            <item>
-                              <abbr>ሕዝ፡</abbr> for <expan>(ይበል፡) ሕዝብ፡ </expan> (s. fol. 10ra)</item>
+                              <abbr>ሕዝ፡</abbr> for
+                                                  <expan>(ይበል፡) ሕዝብ፡ </expan> (s. fol. 10ra)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 63v: Donation note.<q xml:lang="gez">Fol. 63v: ዛቲ፡ መጽሐፍ፡ ዘዕቁባ፡ ሥላሴ፡ ዘወሀበ [sic]፡ ለዮሐንስ፡ ዘተሣየጣ፡ በወርቁ፡ ጸሎቱ፡ ወበረከቱ፡ ይዕቀቦሙ፡ ለአቡሁ፡ ወለእሙ፡ ተስፋ፡ ጊዮርጊስ፡ ወለተ፡ ማርያም፡ ወለገብሩ፡ ዕቁባ፡ ሥላሴ፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
+                           <locus target="#63v">Fol. 63v</locus>: Donation note.<q xml:lang="gez">Fol. 63v: ዛቲ፡ መጽሐፍ፡ ዘዕቁባ፡ ሥላሴ፡ ዘወሀበ [sic]፡ ለዮሐንስ፡ ዘተሣየጣ፡ በወርቁ፡ ጸሎቱ፡ ወበረከቱ፡ ይዕቀቦሙ፡ ለአቡሁ፡ ወለእሙ፡ ተስፋ፡ ጊዮርጊስ፡ ወለተ፡ ማርያም፡ ወለገብሩ፡ ዕቁባ፡ ሥላሴ፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
                            <q xml:lang="en">Fol. 63v: This is a book of ʿƎquba Śǝllase who has donated it to (the church of) John (the Baptist), who bought it for his own money. May [God’s] protection and blessing guard his father and his mother, Täsfa Giyorgis [and] Wälättä Maryam, and His servant ʿƎquba Śǝllase for ever and ever. Amen.</q>
                            
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fols. 148va-149r: 1 Cor. 11:23-29.<q xml:lang="gez"/>
+                           <locus target="#148va">Fols. 148va-149</locus>r: 1 Cor. 11:23-29.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Crudely written. Parts of the same text, in the same hand, are repeated in fol. 150v.
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 149v: Ownership note (?).<q xml:lang="gez"/>
+                           <locus target="#149v">Fol. 149v</locus>: Ownership note (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Crudely written, part of the text poorly visible. The name of John the Baptist (patron saint of the church) can be discerned.
                         </item>
                         <item xml:id="a4">
-                           <locus/>Fol. 150v: Ownership note.<q xml:lang="gez">Fol. 150v: ዝመጽሐፍ፡ የደብረ [sic]፡ ዮሐንስ፡ መጥምቅ፡ ወሠማዕት። ዘፈሐቃ፡ ወዘሰረቃ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡</q>
+                           <locus target="#150v">Fol. 150v</locus>: Ownership note.<q xml:lang="gez">Fol. 150v: ዝመጽሐፍ፡ የደብረ [sic]፡ ዮሐንስ፡ መጥምቅ፡ ወሠማዕት። ዘፈሐቃ፡ ወዘሰረቃ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡</q>
                            <q xml:lang="en">Fol. 150v: This is a book of the church of John the Baptist and Martyr. He who erases [its text] and he who steals it shall be excommunicated by the authority of Peter and Paul.</q>
                            The beginning of a pen trial is adjoined to the end of note.
                         </item>
@@ -219,7 +227,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (both broken and repaired) originally covered with reddish-brown leather (to the most part missing).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -228,6 +236,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -270,8 +279,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʿƎquba Śǝllase (s. Additio 1 and supplication formulas within the main text). The donation note also mentions the names of the donor's parents, Täsfa Giyorgis and Wälättä Maryam.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʿƎquba Śǝllase (s. Additio 1 and supplication formulas within the main text). The donation note also mentions the names of the donor's parents, Täsfa Giyorgis and Wälättä Maryam.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -296,7 +305,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-09">registered</change>
          <change who="IF" when="2012-06-23">created</change>
          <change who="SA" when="2014-11-29">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

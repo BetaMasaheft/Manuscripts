@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESktm010"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dawit “Psalter”</title>
@@ -33,18 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KTM-010</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra (name of God in Texts I-1, I-2 and I-3; name of St. Mary and other names in Texts I-4, I-5 and I-6; titles and numbers of the Pss., Canticles and Songs; titel of Texts I-2, I-3, I-5, I-6; title and incipit of the daily readings of Text I-4; name, number and traditional interpretation of the Hebrew letters in Ps. 118; a few single words in Texts I-4, I-5, I-6; elements of the punctuation signs and text dividers.&#xD;
 &#xD;
 A few groups of lines (alternating with black lines) on the incipit page of Texts I-1 and I-4; two lines (alternating with a black line) of the incipit of each Ps., Canticle and Song.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Ps. 1 is preceded by a few lines from the Mäzmurä dǝngǝl “Psalter of the Virgin”: ነዓ፡ ኀቤየ፡ ንጉሠ፡ እስራኤል። በዓለ፡ መዝሙር፡ ሠናይ፡ ወጥዑመ፡ ቃል።...</note>
+                     <note>- Ps. 118 is not numbered.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +58,10 @@ A few groups of lines (alternating with black lines) on the incipit page of Text
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">152.0</measure> folios, in <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">152.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  3v, 4v, in
+                                                  <measure unit="quire">10.0</measure> quires (A+9). 
                                                 <dimensions type="outer">
                               <height unit="cm">17.0</height>
                               <width unit="cm">12.5</width>
@@ -124,7 +132,7 @@ Tear careful amended on fol. 21r.</condition>
                            <note>Texts I-1, I-2, I-3: all data are for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -151,7 +159,7 @@ The bottom line is written above the ruling.</ab>
                            <note>Texts I-4, I-5: all data are for fol. 138r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -179,22 +187,22 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 2r: List of the feasts dedicated to St. Mary.<q xml:lang="gez">Fol. 2r: ኅልቈ፡ በአላቲሃ፡ ለእግዝትነ፡ ማርያም፡...</q>
+                           <locus target="#2r">Fol. 2r</locus>: List of the feasts dedicated to St. Mary.<q xml:lang="gez">Fol. 2r: ኅልቈ፡ በአላቲሃ፡ ለእግዝትነ፡ ማርያም፡...</q>
                            <q xml:lang="en"/>
                            The note is written in the same hand as Additiones 2 and 3.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 2r-v: List of the feasts dedicated to the Apostles.<q xml:lang="gez">Fol. 2r: ወካዕበ፡ እጽሕፍ፡ ሕልቈ፡ በዓላቲሆሙ፡ ለሐዋርያት፡…</q>
+                           <locus target="#2r">Fol. 2r</locus>-v: List of the feasts dedicated to the Apostles.<q xml:lang="gez">Fol. 2r: ወካዕበ፡ እጽሕፍ፡ ሕልቈ፡ በዓላቲሆሙ፡ ለሐዋርያት፡…</q>
                            <q xml:lang="en"/>
                            The note is written in the same hand as Additiones 1 and 3.
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 2v: Genealogy starting with a certain Gäbrä Krǝstos.<q xml:lang="gez">Fol. 2v: ሕልቈ፡ ትወልድ፡ ገብረ፡ ክርስቶስ፡ ወልደ፡ ክርስቶስ፡ ኪዳነ፡ ማርያም፡...</q>
+                           <locus target="#2v">Fol. 2v</locus>: Genealogy starting with a certain Gäbrä Krǝstos.<q xml:lang="gez">Fol. 2v: ሕልቈ፡ ትወልድ፡ ገብረ፡ ክርስቶስ፡ ወልደ፡ ክርስቶስ፡ ኪዳነ፡ ማርያም፡...</q>
                            <q xml:lang="en"/>
                            The note is written in Amharic, in the same hand as Additiones 1 and 2.
                         </item>
                         <item xml:id="a4">
-                           <locus/>Fol. 152v: Genealogy of an unknown person starting from King Solomon of Israel and Mǝnilǝk I.<q xml:lang="gez"/>
+                           <locus target="#152v">Fol. 152v</locus>: Genealogy of an unknown person starting from King Solomon of Israel and Mǝnilǝk I.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in Amharic. The first name in the genealogy has been erased.
                         </item>
@@ -211,7 +219,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -221,6 +229,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: single line fillet, double line fillet, double circle, cross hatching, double sine wave with dots, criss-cross).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -263,11 +272,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -290,7 +294,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-17">registered</change>
          <change who="SA" when="2013-10-31">created</change>
          <change who="MK" when="2014-07-09">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmy009"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MY-009</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donors; four groups of lines on the incipit page of Text I alternating with black lines; incipit of the sections; miracle numbers, elements of the punctuation signs.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">113.0</measure> folios, in <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">113.0</measure> folios, in
+                                                  <measure unit="quire">15.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">25.0</height>
                               <width unit="cm">21.0</width>
@@ -60,6 +61,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Undecorated quire marks are written in the left upper corner of fols. 3r (twice), 11r, 19r, 27r, 35r, 43r, 51r, 59r, 67r, 73r, 81r, 89r, 97r, 105r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -127,7 +131,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data are for fol. 2r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -151,17 +155,17 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 1ra-2vb, 113ra: ʾƎsäggǝd lä-mäläkotǝkä... “I worship Thy Godhead…”<q xml:lang="gez"/>
+                           <locus target="#1ra">Fols. 1ra-2</locus>vb, 113ra: ʾƎsäggǝd lä-mäläkotǝkä... “I worship Thy Godhead…”<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Crudely written; the text on fol. 1r has been partly abraded.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 8v: Donation note.<q xml:lang="gez"/>
+                           <locus target="#8v">Fol. 8v</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 112vb: Donation note.<q xml:lang="gez"/>
+                           <locus target="#112vb">Fol. 112vb</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in the same hand as Additio 2. It mentions the price of the book, 20 Bǝrr, the date of the purchase 27 Mäggabit, the year of John, and King Mǝnilǝk (r. 1889-1913).
                         </item>
@@ -169,7 +173,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -220,8 +224,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wälättä ʾAbiyä ʾƎgziʾ and her confessor (ʾabä näfs) Bǝsratä Maryam are the donors according to Additio 2 (which mentions also the names of her relatives) and Additio 3.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wälättä ʾAbiyä ʾƎgziʾ and her confessor (ʾabä näfs) Bǝsratä Maryam are the donors according to Additio 2 (which mentions also the names of her relatives) and Additio 3.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -246,7 +250,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-10">registered</change>
          <change who="SA" when="2010-09-22">created</change>
          <change who="DN" when="2015-03-09">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

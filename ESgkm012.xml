@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESgkm012"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsanä Mikaʾel, Homiliary for the feasts of St. Michael / Mälkǝʾa Mikaʾel "Image of Michael"</title>
@@ -33,16 +33,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>GKM-012</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; name of the commissioner and of her family members; groups of lines on the incipit page of Texts I; incipits of all sections of Text I and incipit of Text II; the word sälam "salutation" in Text II; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Many leaves are misplaced. The correct sequence would be:</note>
+                     <note>I-2) Homily: fols. 9rb-11vb, 40ra-41vb; miracle: fols. 41vb, 13ra-vb,12ra-rb</note>
+                     <note>I-3) Homily: fols. 12vb, 14ra-15vb, 17ra-18vb, 32ra-35vb, 19ra; miracle: fols. 19ra-vb, 16ra-rb</note>
+                     <note>I-4) Homily: fols. 16vb, 20ra-26rb</note>
+                     <note>I-5) Homily: fols. 27vb, 36ra-37vb, 28ra-31vb, 38ra; commemorative notice: fols. 38vb-39vb, 42ra.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +59,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">52.0</measure> folios, in <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">52.0</measure> folios, in
+                                                  <measure unit="quire">10.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">22.5</height>
                               <width unit="cm">17.0</width>
@@ -121,7 +130,7 @@ Fol. 16 is damaged with the loss of text.</condition>
                            <note>All data are for fol. 2r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -153,12 +162,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 46vb: Record of guarantee for borrowing the book of Dǝrsanä Mikaʾel.<q xml:lang="gez"/>
+                           <locus target="#46vb">Fol. 46vb</locus>: Record of guarantee for borrowing the book of Dǝrsanä Mikaʾel.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The very recent note is crudely written in Tǝgrǝñña, in pen, and is followed by writing exercises. It states 1983 year of mercy (= 1990/91 A.D.) as the date of the conclusion of the contract.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 47ra: Unidentified text, incomplete.<q xml:lang="gez">Fol. 47ra: ሰዋስው፡ ነሣኦሙ፡ ስነ፡ ምግባሩ፡ ጽዱለ፡ ወንጹሐ፡ ጥዑም፡ መዓዘሁ፡ ዘይሰልብ፡ ልበና፡ ዘዘዚአሁ፡ ኀበሪሁ።...</q>
+                           <locus target="#47ra">Fol. 47ra</locus>: Unidentified text, incomplete.<q xml:lang="gez">Fol. 47ra: ሰዋስው፡ ነሣኦሙ፡ ስነ፡ ምግባሩ፡ ጽዱለ፡ ወንጹሐ፡ ጥዑም፡ መዓዘሁ፡ ዘይሰልብ፡ ልበና፡ ዘዘዚአሁ፡ ኀበሪሁ።...</q>
                            <q xml:lang="en"/>
                            The note is probably written in the main hand.
                         </item>
@@ -219,8 +228,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wälättä Maryam is mentioned as the commissioner (ʾaṣḥafiha) on fol. 38ra. Furthermore her name and the names of her father Gäbrä Solomon, her mother Wälättä Giyorgis and her sister Wälättä Mikaʾel are written in supplication formulas. In addition, several other persons are mentioned: Wälättä Yoḥannǝs (fol. 9rb), Ḫirutä Śǝllase (fol. 12vb), Wäldä ʾƎsṭifanos (fols. 12rb, 38ra), Wälättä Tǝnśaʾe (fol. 13ra), Gäbrä Maryam (fol. 16rb), Wäldä Maryam (fols. 16rb, 19ra), Ḫaylä Maryam (fol. 19ra-rb), Ḫarägä Wäyn (fol. 19rb), Täwäldä Mädḫǝn (fols. 38ra, 41vb), ʾabunä Ḫaylä Maryam (fol. 42ra).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wälättä Maryam is mentioned as the commissioner (ʾaṣḥafiha) on fol. 38ra. Furthermore her name and the names of her father Gäbrä Solomon, her mother Wälättä Giyorgis and her sister Wälättä Mikaʾel are written in supplication formulas. In addition, several other persons are mentioned: Wälättä Yoḥannǝs (fol. 9rb), Ḫirutä Śǝllase (fol. 12vb), Wäldä ʾƎsṭifanos (fols. 12rb, 38ra), Wälättä Tǝnśaʾe (fol. 13ra), Gäbrä Maryam (fol. 16rb), Wäldä Maryam (fols. 16rb, 19ra), Ḫaylä Maryam (fol. 19ra-rb), Ḫarägä Wäyn (fol. 19rb), Täwäldä Mädḫǝn (fols. 38ra, 41vb), ʾabunä Ḫaylä Maryam (fol. 42ra).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -250,7 +259,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-04">registered</change>
          <change who="SH" when="2013-09-30">created</change>
          <change who="EG" when="2014-11-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

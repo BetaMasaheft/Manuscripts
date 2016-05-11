@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESgmg009"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Gäbrä Mänfäs Qǝddus “Vita of Gäbrä Mänfäs Qǝddus” / Homily by Zena Gäbrǝʾel on Gäbrä Mänfäs Qǝddus / Täʾamrä Gäbrä Mänfäs Qǝddus “Miracles of Gäbrä Mänfäs Qǝddus”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>GMG-009</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; names of the commissioners and the scribe; groups of lines (alternating with black lines) on the incipit page of Text I; incipits of Texts II-III; incipits of sections/miracles; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">121.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">121.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, 2v, 120v, 121v, in
+                                                  <measure unit="quire">14.0</measure> quires (A+12+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">23.0</height>
                               <width unit="cm">18.2</width>
@@ -135,7 +138,7 @@ Holes are amended on fol. 1.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -165,7 +168,7 @@ The same scribe wrote Ms. MKL-012.<date>19th century (?)</date>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 119ra: Note on commissioning of the writing.<q xml:lang="gez"/>
+                           <locus target="#119ra">Fol. 119ra</locus>: Note on commissioning of the writing.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in the main hand. Wäldä Libanos and his wife Fre Maryam are mentioned as the commissioners of the Ms. for their children Ḫaylä Śǝllase, ʾAmätä Śǝllase, Wälättä Śǝllase, Wälättä Ṣǝyon and for fathers Zä-Wäldä Maryam and Mäzgäbä Śǝllase (s. also Varia, below).
                         </item>
@@ -175,7 +178,7 @@ The same scribe wrote Ms. MKL-012.<date>19th century (?)</date>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with dark brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -184,6 +187,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover (at least 5 tools are used: double circle, double line fillet, x-form, interlaced line fillet, cross hatching)</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -226,8 +230,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä Libanos and his wife Fre Maryam are mentioned in Additio 1 as the commissioners of the Ms. for their children Ḫaylä Śǝllase, ʾAmätä Śǝllase, Wälättä Śǝllase and Wälättä Ṣǝyon as well as for fathers Zä-Wäldä Maryam and Mäzgäbä Śǝllase. Their names are written in the supplication formulas: Wäldä Libanos (e.g., fols. 3ra, 21va, 27rb, 55va, 63vb, 88rb, 103vb), Fre Maryam (e.g., fols. 21vb, 27rb, 55va, 63vb, 88rb 103vb), Ḫaylä Śǝllase (e.g., fols. 27rb, 63vb,  88rb, 103vb), ʾAmätä Śǝllase (e.g., fols. 63vb, 88rb, Wälättä Śǝllase (e.g., fol. 103vb), Wälättä Ṣǝyon (e.g., fol. 95ra), Zä-Wäldä Maryam and Mäzgäbä Śǝllase (e.g., fol. 81vb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä Libanos and his wife Fre Maryam are mentioned in Additio 1 as the commissioners of the Ms. for their children Ḫaylä Śǝllase, ʾAmätä Śǝllase, Wälättä Śǝllase and Wälättä Ṣǝyon as well as for fathers Zä-Wäldä Maryam and Mäzgäbä Śǝllase. Their names are written in the supplication formulas: Wäldä Libanos (e.g., fols. 3ra, 21va, 27rb, 55va, 63vb, 88rb, 103vb), Fre Maryam (e.g., fols. 21vb, 27rb, 55va, 63vb, 88rb 103vb), Ḫaylä Śǝllase (e.g., fols. 27rb, 63vb,  88rb, 103vb), ʾAmätä Śǝllase (e.g., fols. 63vb, 88rb, Wälättä Śǝllase (e.g., fol. 103vb), Wälättä Ṣǝyon (e.g., fol. 95ra), Zä-Wäldä Maryam and Mäzgäbä Śǝllase (e.g., fol. 81vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -255,7 +259,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2033-05-02">registered</change>
          <change who="MK" when="2013-05-29">created</change>
          <change who="SH" when="2014-09-09">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

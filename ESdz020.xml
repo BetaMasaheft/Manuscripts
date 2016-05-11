@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdz020"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Ṣalotä ˤǝṭan “Prayer of Incense”</title>
@@ -33,14 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DZ-020</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donors; name of the Metropolitan; incipit of Text I; incipit of the prayers to be read; directives to the ministers; elements of the punctuation signs; elements of Ethiopic numerals. &#xD;
 On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -52,7 +52,10 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">39.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">39.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1r-v, 2r-v, 36v, 37r-v, 38r, 39v, in
+                                                  <measure unit="quire">7.0</measure> quires (A+6). 
                                                 <dimensions type="outer">
                               <height unit="cm">16.8</height>
                               <width unit="cm">12.5</width>
@@ -61,6 +64,7 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -110,7 +114,7 @@ The leaves of the last quire, with miniatures (fols. 38-39) are of a smaller siz
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -134,7 +138,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with brown tooled leather cover.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -143,6 +147,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover. The endbands are laced with a cord.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover, of poor quality (at least 3 tools were used: triple line fillet, double circle, X-form).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -185,8 +190,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Kidanä Maryam and Wälättä Krǝstos are mentioned in supplication formulas on fols. 21ra, 28rb, 36rb.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Kidanä Maryam and Wälättä Krǝstos are mentioned in supplication formulas on fols. 21ra, 28rb, 36rb.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -211,7 +216,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-07">registered</change>
          <change who="SA" when="2014-01-28">created</change>
          <change who="EG" when="2014-05-04">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

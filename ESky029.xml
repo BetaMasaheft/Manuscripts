@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESky029"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä täklil “Book of the Marriage Ritual”</title>
@@ -33,18 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KY-029</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the tabot to which the Ms. was donated; incipits of the sections; directives to the ministers (occasionally partially rubricated); elements of the punctuation signs and Ethiopic numerals.&#xD;
 &#xD;
 A few groups of lines (alternating with black lines) on the incipit page.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>For the text of the Ethiopian ritual of Matrimony s. M. CHAÎNE (ed.), “Le Rituel éthiopien – Rituel de la confirmation et du mariage”, Bessarione 29, 1913, 255-83; THE PATRIARCHATE OF THE ETHIOPIAN ORTHODOX TÄWAḥƎDO CHURCH (ed.), Mäṣḥafä täklil, ‘The Book of Crowning’, Addis Abäba 1956 E.C. [1964 A.D.], 21994 E.C. [2001/02 A.D.].</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +57,10 @@ A few groups of lines (alternating with black lines) on the incipit page.</rubri
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">47.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">47.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  45v, 46rv, 47rv, in
+                                                  <measure unit="quire">6.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">14.0</height>
                               <width unit="cm">12.5</width>
@@ -104,7 +111,7 @@ A hole amended in fol. 15.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -124,12 +131,12 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black; red; vinous.</seg>
                         <date>Late 19th - first half of the 20th century.</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The Ms. was apparently written by several hands; delimitation of text portions written in each hand appears difficult.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 45ra-rb: Donation note.<q xml:lang="gez">Fol. 45ra: ዝመጽሐፍ፡ ዘሃለቃ፡ ዓብርኀ፡ ዘአጥረያ፡ በንዋዩ፡ ወወሐቦ፡ ለታቦተ፡ [45rb] ዮ፡ ሐንስሥ [sic]፡ ከመ፡ ይኲኖ፡ መርሃ፡ ለመንግሥተ፡ ሠማያት፨፨</q>
+                           <locus target="#45ra">Fol. 45ra</locus>-rb: Donation note.<q xml:lang="gez">Fol. 45ra: ዝመጽሐፍ፡ ዘሃለቃ፡ ዓብርኀ፡ ዘአጥረያ፡ በንዋዩ፡ ወወሐቦ፡ ለታቦተ፡ [45rb] ዮ፡ ሐንስሥ [sic]፡ ከመ፡ ይኲኖ፡ መርሃ፡ ለመንግሥተ፡ ሠማያት፨፨</q>
                            <q xml:lang="en">[Fol. 45ra-rb]: This is a book of haläqa ʿAbrǝḫa who acquired it for his money and has donated it to the tabot of Yoḥannǝs, so that it might be for him a guide to the Kingdom of Heaven.</q>
                            The note is written in the main hand.
                         </item>
@@ -146,6 +153,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Holes are visible at the spine fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -188,8 +196,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 1, the Ms. was donated by haläqa ʿAbrǝḫa.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 1, the Ms. was donated by haläqa ʿAbrǝḫa.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -214,7 +222,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-04">registered</change>
          <change who="IF" when="2011-12-20">created</change>
          <change who="SA" when="2014-11-20">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

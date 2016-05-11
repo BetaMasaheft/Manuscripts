@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESddm010"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsanä Mikaʾel, Homiliary for the feasts of St. Michael</title>
@@ -33,18 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DDM-010</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; names of the previous donors (in most cases erased and replaced with that of other names in black ink); elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.&#xD;
 &#xD;
 Several groups of lines on the incipit page of Text I (alternating with black lines); two initial lines in the incipit of sections (homilies) and subsections (miracles and commemorative notices); the first word in the incipit of subsections (hymns), i.e. sälam "salutation".</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Texts I-5 and I-6 are not followed by an ʿarke-hymn as all other sections.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +57,10 @@ Several groups of lines on the incipit page of Text I (alternating with black li
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">93.0</measure> folios, in <measure unit="quire">13.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">93.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1rv, 93v., in
+                                                  <measure unit="quire">13.0</measure> quires (A+12). 
                                                 <dimensions type="outer">
                               <height unit="cm">23.5</height>
                               <width unit="cm">19.3</width>
@@ -62,6 +69,9 @@ Several groups of lines on the incipit page of Text I (alternating with black li
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Undecorated quire marks are written in the left upper corner of fols. 2r: ፩, 11r: ፪, 10r: ፫ (?), 26r: ፬, 34r: ፭, 42r: ፮, 50r: ፯, 58r: ፰, 66r: ፱, 74r: ፲, 81r: ፲፩, 89r: ፲፪.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">1</dim>
@@ -129,7 +139,7 @@ Holes or tears amended on fols. 1, 45, 47, 49, 53, 70, 88.</condition>
                            <note>All data are for fol. 3r.</note>
                            <ab type="ruling">varies from 19 to 22 (ca. after fol. 50)</ab>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -149,12 +159,12 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, red</seg>
                         <persName role="scribe" corresp="PRS00000">Wäldä ʾIyäsus</persName>Wäldä ʾIyäsus is mentioned as the scribe in Additio 1.<date>19th century (?)</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The handwriting is slightly left-sloping; it appears sometimes quite irregular (due to the change of pen, slight variation in letter size? cp. fols. 60va-63vb, 88ra-93ra).<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 93ra-rb: Donation note. <q xml:lang="gez">Fol. 93ra: ዛቲ፡ መጽሐፍ፡ ዘገብረ፡ ጻድቅ፡ ወብእሲቱ፡ አመተ፡ ሚካኤል፡ ወአቡሁ፡ ወልደ፡ ኢየሱስ፡ ወእሙኒ፡ ወለተ፡ ኪዳን፡ እኁኁ፡ ገብረ፡ ክርስቶስ። ዘወሀቦ፡ ለታቦተ፡ ሚካኤል፡ ደንደራ፡ ከመ፡ ይኵኖ፡ ለመድኃኒተ፡ ሥጋ፡ ወነፍስ። ኅቡረ፡ ይምሐሮሙ፡ ምስለ፡ ጸሐፊሁ፡ ወልደ፡ ኢየሱስ። ዘሠረቆ፡ ወዘፈሕቆ፡ ውጉዘ፡ ይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳሎውስ። አሜን። ወአሜን።</q>
+                           <locus target="#93ra">Fol. 93ra</locus>-rb: Donation note. <q xml:lang="gez">Fol. 93ra: ዛቲ፡ መጽሐፍ፡ ዘገብረ፡ ጻድቅ፡ ወብእሲቱ፡ አመተ፡ ሚካኤል፡ ወአቡሁ፡ ወልደ፡ ኢየሱስ፡ ወእሙኒ፡ ወለተ፡ ኪዳን፡ እኁኁ፡ ገብረ፡ ክርስቶስ። ዘወሀቦ፡ ለታቦተ፡ ሚካኤል፡ ደንደራ፡ ከመ፡ ይኵኖ፡ ለመድኃኒተ፡ ሥጋ፡ ወነፍስ። ኅቡረ፡ ይምሐሮሙ፡ ምስለ፡ ጸሐፊሁ፡ ወልደ፡ ኢየሱስ። ዘሠረቆ፡ ወዘፈሕቆ፡ ውጉዘ፡ ይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳሎውስ። አሜን። ወአሜን።</q>
                            <q xml:lang="en"/>
                            The note is written in a hand which is similar, but possibly not identical with the main one. The name Mikaʾel Dändära is written over erasure.
                         </item>
@@ -175,6 +185,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold of the quires, close to the head and the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: double line fillet, interlaced line fillet, double circle, dot fillet, corni-from, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -217,8 +228,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 1, Gäbrä Ṣadǝq donated the Ms. to the church of Dändära Mikaʾel. His name and the name of his wife, ʾAmätä Mikaʾel, were written in supplication formulas over the (sometimes erased) names of the original donors, probably in the same hand that wrote Additio 1. The names of the original donors can be deciphered as Wäldä Mikaʾel and Wälättä Gärima (s. fols. 19ra, 28vb, 32va); the name of Täsfa ʾIyäsus is written on fol. 57ra.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 1, Gäbrä Ṣadǝq donated the Ms. to the church of Dändära Mikaʾel. His name and the name of his wife, ʾAmätä Mikaʾel, were written in supplication formulas over the (sometimes erased) names of the original donors, probably in the same hand that wrote Additio 1. The names of the original donors can be deciphered as Wäldä Mikaʾel and Wälättä Gärima (s. fols. 19ra, 28vb, 32va); the name of Täsfa ʾIyäsus is written on fol. 57ra.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -246,7 +257,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-16">registered</change>
          <change who="SH" when="2014-12-09">created</change>
          <change who="DN" when="2015-01-19">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

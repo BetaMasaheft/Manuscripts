@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESsmm006"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä nǝfq “Book of the Assistant Priest”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>SMM-006</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors, name of the king, name of the Coptic metropolitan; incipit of Texts I-1, I-2, I-3 and their sections; incipit of Texts I-6, I-7, I-9 and I-10; elements of the punctuation signs.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Main part of the texts provided by the Ms. is excerpt from the Missal (Maṣḥafä qǝddase). The title of the liturgical miscellea possibly appears on fol. 23: Śǝrʿatä qǝddase sänbät, "Ordinary of the Mass for the Sabbath".</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">23.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">23.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.0</measure> blank
+                                                  fol. 1, 23v., in
+                                                  <measure unit="quire">5.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">18.5</height>
                               <width unit="cm">10.0</width>
@@ -97,7 +104,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -124,7 +131,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 23r l.5-12: Supplication formula.<q xml:lang="gez"/>
+                           <locus target="#23r">Fol. 23r</locus>l.5-12: Supplication formula.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Mention of the title of the work, “Śǝrʿatä qǝddase sänbät”, and of the name of the scribe, Wäldä Muse.
                         </item>
@@ -139,6 +146,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -181,8 +189,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʾabunä Wäldä Tǝnśaʾe, Laḥǝyä Dǝngǝl and her husband ʿƎquba Libanos (s. supplication formulas on fols. 7v, 9r, 11v, 18v, 20r, 22v).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʾabunä Wäldä Tǝnśaʾe, Laḥǝyä Dǝngǝl and her husband ʿƎquba Libanos (s. supplication formulas on fols. 7v, 9r, 11v, 18v, 20r, 22v).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -210,7 +218,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-19">registered</change>
          <change who="SA" when="2012-07-10">created</change>
          <change who="SA" when="2014-07-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

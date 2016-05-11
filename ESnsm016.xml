@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESnsm016"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase "Missal"</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>NSM-016</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the king, bishop and patriarch; groups of red lines alternating with black in the incipit page of Text I; incipits of the texts and their sections; incipit of Additio 1; musical notation signs; (abbreviated) directives for the ministers; some other words, e.g.  yǝtǝfeśaḥǝ, ṣägahu, ṣällǝyu,kaʿǝbä; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">131.0</measure> folios, of which <measure unit="leaf" type="blank">8.0</measure> blank, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">131.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">8.0</measure> blank
+                                                  Fols. 1r, 1v, 3v, 129v-131v., in
+                                                  <measure unit="quire">18.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">22.0</height>
                               <width unit="cm">18.5</width>
@@ -138,7 +141,7 @@ Holes in fols. 17, 47, 72.</condition>
                            <note>All data are for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -167,12 +170,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 2ra-3rb: Ṣalotä nǝssǝḥa "Prayer of Penance".<q xml:lang="gez">Fol. 2ra: ጸሎተ፡ ንስሐ፡ እግዚእ፡ እግዚእ፡ እግዚአብሔር፡ አኃዚ፡ ኵሉ፡ ዓለም፡ አምላክነ፡ አንተ፡ ውእቱ፡ ዘትፌውስ... </q>
+                           <locus target="#2ra">Fols. 2ra-3</locus>rb: Ṣalotä nǝssǝḥa "Prayer of Penance".<q xml:lang="gez">Fol. 2ra: ጸሎተ፡ ንስሐ፡ እግዚእ፡ እግዚእ፡ እግዚአብሔር፡ አኃዚ፡ ኵሉ፡ ዓለም፡ አምላክነ፡ አንተ፡ ውእቱ፡ ዘትፌውስ... </q>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 131r: Ownership note.<q xml:lang="gez">Fol. 131r: ዝመጽሐፍ፡ ዘመምሕር፡ ባይሩ፡ የሽቃ...</q>
+                           <locus target="#131r">Fol. 131r</locus>: Ownership note.<q xml:lang="gez">Fol. 131r: ዝመጽሐፍ፡ ዘመምሕር፡ ባይሩ፡ የሽቃ...</q>
                            <q xml:lang="en"/>
                            Written in a secondary hand, incomplete.
                         </item>
@@ -181,7 +184,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (possibly re-used) covered in reddish-brown leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -190,6 +193,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 5 tools were used: fourfold line fillet, triple circle, small x, criss cross, wave form).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -232,9 +236,14 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The original donor appears to be Wäldä Sämaʿt. His name and names of his family members are mentioned in the supplication formula on fol. 38vb. &#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">The original donor appears to be Wäldä Sämaʿt. His name and names of his family members are mentioned in the supplication formula on fol. 38vb. &#xD;
 Other names have been inserted in supplication formulas throughout the Ms. with recent hand, in red pen.</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Bayru Yäšǝqa (?) is mentioned in Additio 2.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -259,7 +268,7 @@ Other names have been inserted in supplication formulas throughout the Ms. with 
          <change who="DN" when="2010-11-26">registered</change>
          <change who="DE" when="2013-09-25">created</change>
          <change who="EG" when="2014-11-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

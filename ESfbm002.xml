@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESfbm002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä gǝbrä ḥǝmamat “Book of the Rite of the Holy Week”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>FBM-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra (Mary); headings and incipits of the texts, their sections and subsections (in some cases a few lines are rubricated alternating with black lines, fols. 3r, 52r); titles of the Biblical books and other works; the initial word of each paragraph in “Tǝmḫǝrtä ḫǝbuʾat” Text I-9; elements of the punctuation signs; Ethiopic numerals or their elements; directives for the ministers; elements of the text dividers.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">103.0</measure> folios, in <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">103.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 2rv, 51v, 101r-v, 102r-v, 103r-v, in
+                                                  <measure unit="quire">15.0</measure> quires (A+13+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">42.0</height>
                               <width unit="cm">28.5</width>
@@ -60,6 +63,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Undecorated quire marks are written in the upper margin, above the 1st intercolumn, of fols. 19r, 27r, 35r, 43r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">2</dim>
@@ -132,7 +138,7 @@ Holes repaired on fols. 9, 10, 58, 61, 92.</condition>
                            <note>All data are for fol. 4r.</note>
                            <ab type="ruling">Changes in some cases, s. fols. 5b, 6r (37ls.), 8v (38ls.), 5rc (40ls.).</ab>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -154,7 +160,7 @@ The bottom line is written above the ruling.</ab>
                         <seg type="ink">Black, red.</seg>
                         <date>18th or early 19th century.</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The word ʾǝgziʾabǝḥer is in the most cases written with a ligature.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">- Three narrow coloured (red and yellow) ornamental bands (interlaced and floral motifs) on fol. 3ra, 3rb, 3rc.</decoNote>
@@ -163,16 +169,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>
-                           <div style="line-height: normal; margin-bottom: 0pt"
-                                org="uniform"
-                                sample="complete">Fol. 3r: Donation note.</div>
-                           <q xml:lang="gez">Fol. 3r: ዝመጽሐፍ᎓ ዘወሀባ᎓ ደጀዝማች᎓ ኀጎስ᎓ ዳግማዊ᎓ ዘመንፈስ᎓ ቅዱስ᎓ ለታቦተ᎓ ማርያም᎓ ዘፈቃዳ።</q>
+                           <locus target="#3r">Fol. 3r</locus>: Donation note.<q xml:lang="gez">Fol. 3r: ዝመጽሐፍ᎓ ዘወሀባ᎓ ደጀዝማች᎓ ኀጎስ᎓ ዳግማዊ᎓ ዘመንፈስ᎓ ቅዱስ᎓ ለታቦተ᎓ ማርያም᎓ ዘፈቃዳ።</q>
                            <q xml:lang="en">Fol. 3r: This (is) the book which däğğazmač Ḫagos (of ) Zä-Mänfäs Qǝddus the Second donated to the church of Mary of Fäqada. </q>
                            Ḫagos (d. 1831), baptismal name Dagǝmawi Zä-Mänfäs Qǝddus, is probably the second son of däğğazmač Säbagadis whose baptismal name is Zä-Mänfäs Qǝddus (b. 1780/85, d. 1831, s. EAE IV, 431). The note is written in the same hand as Additio 2.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 51ra: Donation note.<q xml:lang="gez"/>
+                           <locus target="#51ra">Fol. 51ra</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note is written in the same hand as Additio 2 and has an identical content.
                         </item>
@@ -195,6 +197,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two rows of small holes are visible at the spine fold of the quires.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -237,8 +240,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additiones 1-2, the Ms. was donated by däğğazmač Ḫagos (d. 1831), baptismal name Dagǝmawi Zä-Mänfäs Qǝddus.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additiones 1-2, the Ms. was donated by däğğazmač Ḫagos (d. 1831), baptismal name Dagǝmawi Zä-Mänfäs Qǝddus.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -263,7 +266,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-21">registered</change>
          <change who="IR" when="2013-04-25">created</change>
          <change who="DN" when="2015-09-14">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

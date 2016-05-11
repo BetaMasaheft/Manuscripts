@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap004"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase "Missal"</title>
@@ -36,13 +36,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-12 (fol. 61r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the reigning monarch, Archbishop and Bishop; names of donors; a few lines alternating with black ink in the incipit page of text I, II; incipits of sections of text I, II, III; musical notation(in a different tone of red ink); abbreviated directives for the ministers; a few other words like ካዕበ, ሊጦን, ወእምዝ, ጸሎት; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -54,7 +54,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">122.0</measure> folios, in <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">122.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  fols.: 1r-2v, 61vb, 124rb, 124v., in
+                                                  <measure unit="quire">17.0</measure> quires ((A+16)). 
                                                 <dimensions type="outer">
                               <height unit="cm">23.0</height>
                               <width unit="cm">20.0</width>
@@ -138,7 +141,7 @@ Holes or tears amended on fols. 1, 19, 55, 82, 87, 111, 113.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -174,7 +177,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 61va: Donation note.<q xml:lang="gez">Fol. 61va: ዝመጽሐፍ፡ ዘብለታ፡ ካህሣይ፡ ወስመ፡ ጥምቀቱ፡ ገብረ፡ አረጋዊ፡ ወብእሲቱ፡ ወለተ፡ አረጋዊ፡ ዘወሀበ፡ ለመቅደሰ፡ ጰራቅሊጦስ፡…</q>
+                           <locus target="#61va">Fol. 61va</locus>: Donation note.<q xml:lang="gez">Fol. 61va: ዝመጽሐፍ፡ ዘብለታ፡ ካህሣይ፡ ወስመ፡ ጥምቀቱ፡ ገብረ፡ አረጋዊ፡ ወብእሲቱ፡ ወለተ፡ አረጋዊ፡ ዘወሀበ፡ ለመቅደሰ፡ ጰራቅሊጦስ፡…</q>
                            <q xml:lang="en"/>
                            According to the note, Gäbrä ʾArägawi donated the Ms. to the church. Also his family members are mentioned.
                         </item>
@@ -185,7 +188,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.&#xD;
 Two pairs of chains of endband stitches (or their traces) through the spine cover.</decoNote>
@@ -195,6 +198,7 @@ Two pairs of chains of endband stitches (or their traces) through the spine cove
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 5 tools were used: single fillet, double circle, double sine wave, criss-cross, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -237,8 +241,8 @@ Two pairs of chains of endband stitches (or their traces) through the spine cove
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">According to Additio 1, Gäbrä ʾArägawi donated the Ms. to the church. He and his family members are mentioned in the supplication formulas throughout the Ms.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 1, Gäbrä ʾArägawi donated the Ms. to the church. He and his family members are mentioned in the supplication formulas throughout the Ms.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -266,7 +270,7 @@ Two pairs of chains of endband stitches (or their traces) through the spine cove
          <change who="DN" when="2010-05-03">registered</change>
          <change who="SH" when="2013-07-09">created</change>
          <change who="EG" when="2014-08-01">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

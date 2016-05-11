@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdsm021c"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam “Miracles of Mary”</title>
@@ -33,18 +33,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DSM-021c</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donor; the word sälam "salutation" in Text I-3; abbreviated directives for the ministers in Text I-3; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 &#xD;
 Several groups of lines on the incipit page of Texts I-1 and I-4, alternating with black lines; two lines of the incipit in Texts I-2 and I-3; of Texts I-3, II and III; one to three initial lines of subsections; section numbers in Text I-4.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The correct order of fols. 1-16 is as follows:</note>
+                     <note>Text I-3: fols. 15va-vb, 4ra-va, 3ra-rb;</note>
+                     <note>Text I-4 (miracles 1-4): fols. 3va-vb,1ra-2va, 6ra-vb, 5ra-vb, 16ra.</note>
+                     <note/>
+                     <note>The Miracles of Mary (Text I-4) are numbered.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -53,7 +61,10 @@ Several groups of lines on the incipit page of Texts I-1 and I-4, alternating wi
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">64.0</measure> folios, in <measure unit="quire">8.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">64.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fol. 64vb., in
+                                                  <measure unit="quire">8.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">20.5</height>
                               <width unit="cm">15.5</width>
@@ -113,7 +124,7 @@ Holes or tears amended on fols. 1, 50, 53.</condition>
                            <note>All data for fol. 8r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -141,7 +152,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Both boards are missing.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
@@ -190,8 +201,8 @@ Tälawe Krǝstos is known as a contemporary of King ʾIyasu II (r. 1682-1706), c
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Tälawe Krǝstos is mentioned in the supplication formulas.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Tälawe Krǝstos is mentioned in the supplication formulas.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -216,7 +227,7 @@ Tälawe Krǝstos is known as a contemporary of King ʾIyasu II (r. 1682-1706), c
          <change who="DN" when="2011-05-14">registered</change>
          <change who="SH" when="2015-02-03">created</change>
          <change who="SH" when="2015-03-26">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

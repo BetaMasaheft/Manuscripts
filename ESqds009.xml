@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqds009"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäzmur, Antiphones for Sundays of the year</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QDS-009</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; a few lines on the incipit page; names of sections followed by the feast name and occasionally by initial words (e.g., wazema zä-kahǝnatä sämay); names of antiphons and their abbreviations (e.g., maḫlet, mäzmur, sälam, bä-5-tu, ʾabun, ʾaryam, ʾǝsmä lä-ʿaläm, zä-ʾamlakiyä, zä-yǝʾǝze, yǝtbaräk); names of other chants (e.g., mǝlṭan, ʿǝzl); musical notation: intratextual signs (e.g., ʾaklilä) and elements of marginal signs; chains of red and black dots separating groups of antiphons; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">49.0</measure> folios, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">49.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 49v, in
+                                                  <measure unit="quire">9.0</measure> quires (A+8). 
                                                 <dimensions type="outer">
                               <height unit="cm">20.7</height>
                               <width unit="cm">17.0</width>
@@ -113,7 +116,7 @@ Holes are carefully amended on fols. 26, 29, 34, 35.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/B. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -139,7 +142,8 @@ On some fols. the ruling is done carelessly (e.g., fols. 4, 8, 25).</ab>
                            <item>እስመ፡ ለዓ፡ for እስመ፡ ለዓለም፡</item>
                            <item>እግዚአ፡ ነግ፡ for እግዚአብሔር፡ ነግሠ፡</item>
                            <item>
-                              <abbr>ኪ፡</abbr> for <expan>ኪሬ፡ ላይሶን </expan> (e.g., fol. 40ra).</item>
+                              <abbr>ኪ፡</abbr> for
+                                                  <expan>ኪሬ፡ ላይሶን </expan> (e.g., fol. 40ra).</item>
                         </list>
                      </handNote>
                   </handDesc>
@@ -150,7 +154,7 @@ On some fols. the ruling is done carelessly (e.g., fols. 4, 8, 25).</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 40r-42r: ʾAbun-antiphone for the Holy Week from Mäzmur, Antiphones for seasons of the year.<q xml:lang="gez"/>
+                           <locus target="#40r">Fols. 40r-42</locus>r: ʾAbun-antiphone for the Holy Week from Mäzmur, Antiphones for seasons of the year.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The antiphone is crudely written in the upper and right margins of the fols.
                         </item>
@@ -168,6 +172,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes and tears are visible in the centre fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -210,11 +215,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -236,7 +236,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2008-06-01">registered</change>
          <change who="MK" when="2013-05-14">created</change>
          <change who="SD" when="2014-09-30">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

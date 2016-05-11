@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESsdm006"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä krǝstǝnna “Book of the Christening”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>SDM-006</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Text I; directives to the minister and their abbreviations; title of books to be read; the word ʾǝgäle in fol. 6v; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 1r), few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text I is called Mäṣḥafä ṭǝmqät in the incipit (fol. 1r).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,8 @@ On the incipit page of Text I (fol. 1r), few lines are rubricated (alternating w
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">55.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">55.0</measure> folios, in
+                                                  <measure unit="quire">6.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">14.5</height>
                               <width unit="cm">10.0</width>
@@ -108,7 +113,7 @@ Fols. 40r-45v (quire V) are of a smaller size.</condition>
                            <note>All data for fol. 2r (fols. 1r-45r).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -137,7 +142,7 @@ The bottom line is written above the ruling.</ab>
                            <note>All data for fol. 47r (fols. 46r-55r)</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -164,8 +169,9 @@ The bottom line is written above the ruling.</ab>
                            <item>ይሕ፡ for ይበል፡ ሕዝብ፡</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">fols. 1r-45r.</handNote>
-                     <handNote xml:id="h3" script="Ethiopic">fols. 46r-55r.</handNote>
+                     <handNote xml:id="h2" script="Ethiopic">Hand a: fols. 1r-45r.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+Hand b: fols. 46r-55r.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <bindingDesc>
                      <binding contemporary="partly">
@@ -219,11 +225,6 @@ Quire VI was added later.</origDate>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -245,7 +246,7 @@ Quire VI was added later.</origDate>
          <change who="DN" when="2011-05-16">registered</change>
          <change who="SA" when="2014-07-31">created</change>
          <change who="SH" when="2014-09-15">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

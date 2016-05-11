@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESbmqm011"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä krǝstǝnna “Book of the Christening”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>BMQM-011</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Text I; directives to the ministers and their abbreviations; initial words or title of the prayers; the word ʿǝgäle (fol. 3v); elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 3r), few lines are rubricated alternating with black lines.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text I is called Mäṣḥafä ṭǝmqät on fol. 3r.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,10 @@ On the incipit page of Text I (fol. 3r), few lines are rubricated alternating wi
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">39.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">39.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  fols. 1, 2, 39., in
+                                                  <measure unit="quire">6.0</measure> quires (A+5). 
                                                 <dimensions type="outer">
                               <height unit="cm">17.0</height>
                               <width unit="cm">11.7</width>
@@ -103,7 +110,7 @@ Some fols. are worn and stained with dirt (esp. fols. 1-7).</condition>
                            <note>All data for fol. 4r (quires I-III).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -132,7 +139,7 @@ The bottom line is written above the ruling.</ab>
                            <note>All data for fol. 27r (quires IV-V).</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -159,12 +166,12 @@ The bottom line is written above the ruling.</ab>
                            <item>ይሕ፡ for ይብል፡ ሕዝብ፡</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The size of the script changes (cp. fols. 26v-27) and the quality deteriorates, but the hand remains the same.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 38v: Ownership note.<q xml:lang="gez">Fol. 38v: ዛቲ፡ መጽሐፍ፡ ዘታቦተ፡ ቅዱስ፡ ሚካኤል፡ ቤት፡ ሙካዕ፡ ዘአጽሐፋ፡ ወልደ፡ አብርሃ።</q>
+                           <locus target="#38v">Fol. 38v</locus>: Ownership note.<q xml:lang="gez">Fol. 38v: ዛቲ፡ መጽሐፍ፡ ዘታቦተ፡ ቅዱስ፡ ሚካኤል፡ ቤት፡ ሙካዕ፡ ዘአጽሐፋ፡ ወልደ፡ አብርሃ።</q>
                            <q xml:lang="en"/>
                            The note states that the Ms. is owned by the church Bet Muḵaʿ Mikaʾel and that it was commissioned by Wäldä ʾAbrǝha.
                         </item>
@@ -179,6 +186,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head, one close to the tail.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -221,8 +229,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The Ms. was commissioned by Wäldä ʾAbrǝha (s. Additio 1).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The Ms. was commissioned by Wäldä ʾAbrǝha (s. Additio 1).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -247,7 +255,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-12-08">registered</change>
          <change who="SA" when="2014-11-17">created</change>
          <change who="DN" when="2014-12-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

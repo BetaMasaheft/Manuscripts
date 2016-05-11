@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESnsm009"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä täklil “Book of the Marriage Ritual”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>NSM-009</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of Text I and its subsections; a few lines are rubricated (alternating with black lines) on the incipit page of Text I (fol.3r); titles of the books to be read; incipit of the prayers to be read; numbers of the prayers; directives to the ministers and their abbreviation (fol. 6v); elements of Ethiopic numerals; elements of the punctuation signs.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">38.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">38.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1r-v, 2r-v, 35v, 36r-v, 37r-v, 38r-v, in
+                                                  <measure unit="quire">7.0</measure> quires (A+5+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">16.0</height>
                               <width unit="cm">12.0</width>
@@ -104,7 +107,7 @@ Some fols. stained with water (esp. fols. 10-14).</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -133,7 +136,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 34v-35r: Excommunication against those who read the book in transgressing the faith.<q xml:lang="gez"/>
+                           <locus target="#34v">Fols. 34v-35</locus>r: Excommunication against those who read the book in transgressing the faith.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written in a crude hand.
                         </item>
@@ -141,7 +144,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -191,11 +194,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -217,7 +215,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-25">registered</change>
          <change who="SA" when="2013-11-21">created</change>
          <change who="SD" when="2014-09-10">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

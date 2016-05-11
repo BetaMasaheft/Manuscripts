@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="EShmm010"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä śǝnä fǝṭrät “Book of the Beauty of Creation’’ / ʾAmmǝstu ʾaʿmadä mǝsṭir “The Five Pillars of Mystery’’</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>HMM-010</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; three pairs of lines on the incipit page of Text I alternating with black lines; the initial line in the beginnings of sections of Text I and II; two initial lines on the incipit page of Text II; corrections written interlineally (e.g., fols. 12v, 18r, 37v); elements of the punctuation signs; the word kǝfǝl “Part”; elements of Ethiopic numerals; some other words, e.g., wängel “Gospel” (fols. 15v, 17v, 30r), ʾorit, “Pentateuch” (fols. 25r, 48v), dǝrsan “Homily” (fol. 66v), liqawǝnt “Scholars”(fol. 120v).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">145.0</measure> folios, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">145.0</measure> folios, in
+                                                  <measure unit="quire">18.0</measure> quires (A+17). 
                                                 <dimensions type="outer">
                               <height unit="cm">15.5</height>
                               <width unit="cm">10.0</width>
@@ -60,6 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Quire marks are written in the upper left margin of fols. 35r, 43r, 51r, 59r, 67r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">8</dim>
@@ -142,7 +145,7 @@ Cuts amended on fols. 75, 82.</condition>
                            <note>All data for fol. 4r</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling  are partly visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -171,12 +174,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 1v: Scribe’s entreat to God for help during the writing.<q xml:lang="gez"/>
+                           <locus target="#1v">Fol. 1v</locus>: Scribe’s entreat to God for help during the writing.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 98v: Ownership note.<q xml:lang="gez">Fol. 98v: ዝመጽሐፍ᎓ ዘ&lt;...&gt;</q>
+                           <locus target="#98v">Fol. 98v</locus>: Ownership note.<q xml:lang="gez">Fol. 98v: ዝመጽሐፍ᎓ ዘ&lt;...&gt;</q>
                            <q xml:lang="en">Fol. 98v: This book is of &lt;…&gt; (144v)</q>
                            - The note is written in the same hand as the main text. The personal name was scratched out but its second part might be ʾIyäsus.
 - An identical ownership note at the end of Text II, fol. 144r.
@@ -194,7 +197,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with dark brown leather (quarter cover).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -203,6 +206,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the dark brown leather cover, poorly visible (2 tools were used: triple line fillet, double circle)</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -245,8 +249,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The Ms. was probably in private possession of an individual mentioned in Additio 2 (only the second part of his name, ʾIyäsus, can be guessed). The ownership right of the Ms. possibly passed to the church after the owner diseased.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -272,7 +276,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-12-05">registered</change>
          <change who="AA" when="2012-08-29">created</change>
          <change who="VP" when="2014-09-24">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

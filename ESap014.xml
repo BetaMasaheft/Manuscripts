@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap014"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the first half of the year)</title>
@@ -36,13 +36,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-8 (fol. 80r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts; elements of the punctuation signs; abbreviations.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -54,7 +54,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">190.0</measure> folios, of which <measure unit="leaf" type="blank">5.0</measure> blank, in <measure unit="quire">23.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">190.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">5.0</measure> blank
+                                                  1rv, 2rv, 3rv, 189rv, 190rv, in
+                                                  <measure unit="quire">23.0</measure> quires (A + 22). 
                                                 <dimensions type="outer">
                               <height unit="cm">34.5</height>
                               <width unit="cm">27.0</width>
@@ -63,6 +66,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>Decorated quire marks are written thrice in the upper margins of the fols.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">3</dim>
@@ -155,7 +160,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data for fol. 72r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -190,14 +195,14 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 188v: Acquisition note.<q xml:lang="gez"/>
+                           <locus target="#188v">Fol. 188v</locus>: Acquisition note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            
                         </item>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather. &#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -206,6 +211,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Carved relief of the Trinity on the inner side of the front board.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -248,8 +254,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä Śǝllase, ʾabunä Ṣǝge Śǝllase, ʾabunä  Gäbrä Śǝllase are mentioned in the supplication formulas; cp. Additio 1 mentioning the same names with ecclesiastic titles.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä Śǝllase, ʾabunä Ṣǝge Śǝllase, ʾabunä  Gäbrä Śǝllase are mentioned in the supplication formulas; cp. Additio 1 mentioning the same names with ecclesiastic titles.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -274,7 +280,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-03">registered</change>
          <change who="VP" when="2010-10-20">created</change>
          <change who="MV" when="2015-01-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

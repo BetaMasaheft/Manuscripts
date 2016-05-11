@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdma004"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,17 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DMA-004</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts; short postscripts to the Gospels of Matthew and Mark; chapter numbers (in the “tituli”), titles and the word mǝʿǝraf; elements of the punctuation signs and Ethiopic numbers.&#xD;
 On the incipit page of each Gospel, a few lines are rubricated (in groups of two lines, alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- The “tituli” are numbered only when they precede the Gospel text; within the text itself the chapters are not numbered. The number of the “tituli” for the Gospel of Mark (47) is given erroneously.</note>
+                     <note>- The introduction to the Four Gospels is missing.</note>
+                     <note>- The canon tables are missing.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +58,10 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">137.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">137.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.0</measure> blank
+                                                  1, 2v, 137v, in
+                                                  <measure unit="quire">19.0</measure> quires (A+18). 
                                                 <dimensions type="outer">
                               <height unit="cm">32.5</height>
                               <width unit="cm">26.0</width>
@@ -61,6 +70,7 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures/>
                            <list>
                               <item xml:id="q1">
                                  <locus from="1r" to="2v"/>A(fols. 1r-2v) </item>
@@ -121,7 +131,7 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                            <note>All data for fol. 7r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible (s. fol. 5r).</ab>
@@ -142,19 +152,20 @@ The bottom line is written above the ruling.</ab>
                         <date>Second half of the 19th century (?).</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ምዕ(ራ)፡</abbr> for <expan>ምዕራፍ፡ </expan> (e. g., fols. 51rb, 70rb).</item>
+                              <abbr>ምዕ(ራ)፡</abbr> for
+                                                  <expan>ምዕራፍ፡ </expan> (e. g., fols. 51rb, 70rb).</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 111vb, l.2. Blessing for the persons mentioned.<q xml:lang="gez">Fol. 111vb, l.2: ወከማሁ፡ ይባርኮ፡ እግዚአብሔር፡ ለገብሩ፡ አቡነ፡ አስተአ፡ ድንግል፡ ወአቡሁ፡ አቡነ፡ አሥራተ</q>
+                           <locus target="#111vb" n="#2">Fol. 111vb, l.2</locus>. Blessing for the persons mentioned.<q xml:lang="gez">Fol. 111vb, l.2: ወከማሁ፡ ይባርኮ፡ እግዚአብሔር፡ ለገብሩ፡ አቡነ፡ አስተአ፡ ድንግል፡ ወአቡሁ፡ አቡነ፡ አሥራተ</q>
                            <q xml:lang="en">Fol. 111vb: And likewise may God bless His servant ʾabunä ʾAstäʾa Dǝngǝl and his father ʾabunä ʾAśratä …</q>
                            Written as continuation and part of the preceding Gospel text.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 137ra-rb. Record concerning a reconciliation agreement and punishment for its transgressors (?).<q xml:lang="gez"/>
+                           <locus target="#137ra">Fol. 137ra</locus>-rb. Record concerning a reconciliation agreement and punishment for its transgressors (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Written in difficult language, a mixture of Amharic and Gǝʿǝz. The reconciliation took place on Mäskäräm 21, 1889 E.C. (September 30, 1896 A.D.). The note was written down on Ṭǝqǝmt 1 (October 10).
 The note mentions ras Mängäša (Yoḥannǝs, d. 1906 A.D.), governor of Tǝgray in 1889-1906, as well as a number of geographical locations, including Mǝʾsar Gwǝhila and ʿAddiqäḥarsi.
@@ -166,7 +177,7 @@ The note mentions ras Mängäša (Yoḥannǝs, d. 1906 A.D.), governor of Tǝgra
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards possibly covered with leather which cannot be seen because of the recent textile secondary cover.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>
@@ -217,11 +228,6 @@ The note mentions ras Mängäša (Yoḥannǝs, d. 1906 A.D.), governor of Tǝgra
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -244,7 +250,7 @@ The note mentions ras Mängäša (Yoḥannǝs, d. 1906 A.D.), governor of Tǝgra
          <change who="DN" when="2010-11-24">registered</change>
          <change who="IF" when="2011-08-09">created</change>
          <change who="MV" when="2015-05-04">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

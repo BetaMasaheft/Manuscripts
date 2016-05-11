@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqds013"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä śǝʿǝl "Book of Images"</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QDS-013</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric/>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Mäṣḥafä śǝʿǝl "Book of Images" is the traditional title of the book.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">8.0</measure> folios, of which <measure unit="leaf" type="blank">1.0</measure> blank, in <measure unit="quire">1.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">8.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">1.0</measure> blank
+                                                  Fol. 5v., in
+                                                  <measure unit="quire">1.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">14.25</height>
                               <width unit="cm">9.25</width>
@@ -87,6 +94,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -129,8 +137,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The donor(s) may be depicted in miniatures 3, 4, 5, 11.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The donor(s) may be depicted in miniatures 3, 4, 5, 11.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -155,7 +163,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-02">registered</change>
          <change who="SA" when="2012-08-17">created</change>
          <change who="DN" when="2014-12-03">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

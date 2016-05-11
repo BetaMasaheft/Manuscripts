@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESky068"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Kiros “Vita of Kiros”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>KY-068</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the protagonist; groups of lines (alternating with black lines) on the incipit page; punctuation signs (fol. 5ra) or their elements; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">48.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">48.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1rv, 2rv, 3rv, 4rv, 48rv, in
+                                                  <measure unit="quire">6.0</measure> quires (A+5). 
                                                 <dimensions type="outer">
                               <height unit="cm">46.0</height>
                               <width unit="cm">20.0</width>
@@ -103,7 +106,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -127,13 +130,13 @@ Pricks in the upper part of the folios, have probably been prepared for endband 
                         <seg type="ink">Black, red (strong crimson)</seg>
                         <persName role="scribe" corresp="PRS00000">Gäbrä Giyorgis</persName>The name of the scribe, Gäbrä Giyorgis, is mentioned in the concluding supplication on fol. 47vb. He also wrote Ms. KY-064.<date>First half of 20th century</date>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The 6th order ም (e.g., fol. 5ra) has a peculiar shape.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">Fol. 5r (incipit page of Text I): elaborate coloured (strong crimson, red) ornamental band; geometric, floral and anthropomorphic motifs.</decoNote>
                   </decoDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -142,6 +145,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 5 tools were used: double line fillet, triple line fillet, double circle, wave form, x-form, criss-cross).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -185,8 +189,8 @@ The scribe Gäbrä Giyorgis wrote also Ms. KY-064 which is dateable from 1881 to
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Wäldä Tǝnśaʾe is mentioned as the commissioner on fol. 47ra. His name appears in the supplication formulas on fols. 40rb, 46vb, 47va. &#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">Wäldä Tǝnśaʾe is mentioned as the commissioner on fol. 47ra. His name appears in the supplication formulas on fols. 40rb, 46vb, 47va. &#xD;
 Also, Gäbrä Ḥǝywät, Wälättä ʾArägawi (fols. 5ra, 32ra, 46ra, 47ra, 47vb) and Wälättä Mikaʾel (fol. 46vb) are mentioned in the supplication formulas. &#xD;
 All the names are written in crimson red.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
@@ -216,7 +220,7 @@ All the names are written in crimson red.</persName>
          <change who="DN" when="2011-05-06">registered</change>
          <change who="MK" when="2011-10-05">created</change>
          <change who="EG" when="2015-02-20">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

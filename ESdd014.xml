@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd014"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾOrit “Octateuch”</title>
@@ -39,14 +39,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>384 (fol. 1r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>A few lines (1st, 3rd, 5th and occasionally 24th, 25th) in the incipit pages of Texts I-VIII; the word mǝˤǝraf, “chapter”, followed by an Ethiopic numeral; the initial line of some chapters of Texts II and III: wä-näbäbä ʾƎgziʾabǝḥer lä-Muse wä-yǝbelo, “And God spoke unto Moses and said to him”, (e.g., fols. 53rc, 58rab, 70rabc); elements of the punctuation signs and Ethiopic numerals.&#xD;
 Rubrication is not executed on fols. 14vb-18rb, 29rb-35ra, 150ra-159rc.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -58,7 +58,8 @@ Rubrication is not executed on fols. 14vb-18rb, 29rb-35ra, 150ra-159rc.</rubric>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">165.0</measure> folios, in <measure unit="quire">22.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">165.0</measure> folios, in
+                                                  <measure unit="quire">22.0</measure> quires (A+21). 
                                                 <dimensions type="outer">
                               <height unit="cm">40.0</height>
                               <width unit="cm">32.0</width>
@@ -183,7 +184,7 @@ and carefully repaired.</condition>
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are partly visible. </ab>
@@ -207,19 +208,19 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 191vab: Record concerning litigation over land holding.<q xml:lang="gez"/>
+                           <locus target="#191va">Fol. 191va</locus>b: Record concerning litigation over land holding.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note, dated to 1923 year of mercy (=1930/31 A.D.), contains names of the judge, parties involved in the trial, witnesses and guarantors as well as the matter in dispute and the verdict. 
 It is written in Amharic, by a well-trained hand.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fols. 192r-193v: Land grant issued by King Mǝnilǝk II for ras Mängäša Yoḥannǝs’ children.<q xml:lang="gez"/>
+                           <locus target="#192r">Fols. 192r-193</locus>v: Land grant issued by King Mǝnilǝk II for ras Mängäša Yoḥannǝs’ children.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The text runs as follows: 193r, 193v, 192r. The document, dated to 1889 years of mercy, gives a list of lands in various parts of Tǝgray (32 places) which King Mǝnilǝk II donated as gwǝlt and rǝst to ras Mängäša Yoḥannǝs’ two children after the battle of ʾAdwa (1896). In the beginning, it mentions the invasion of Italians and their defeat at ʿAdwa.
 It is written in Amharic, in a well-trained hand. There is a stamp of King Mǝnilǝk II on fol. 193r.
                         </item>
                         <item xml:id="a3">
-                           <locus/>Fol. 194rv: Record concerning reconciliation.<q xml:lang="gez"/>
+                           <locus target="#194rv">Fol. 194rv</locus>: Record concerning reconciliation.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note mentions involved parties and guarantors. It is written in Amharic, in a well-trained hand.
                         </item>
@@ -239,6 +240,7 @@ Three pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather overback (at least 2 tools were used: double line fillet, triple line fillet).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -281,11 +283,6 @@ Three pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -308,7 +305,7 @@ Three pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-23">registered</change>
          <change who="MK" when="2013-01-29">created</change>
          <change who="SD" when="2014-09-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

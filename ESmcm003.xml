@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmcm003"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä krǝstǝnna “Book of the Christening”</title>
@@ -33,17 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MCM-003</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Text I; directives to the ministers and their abbreviations; titles of the books to be read; elements of the punctuation signs; elements of Ethiopic numbers. &#xD;
 On the incipit page of Text I (fol. 3r), two first lines of the two columns are rubricated.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text I is called Mäṣḥafä ṭǝmqät in the incipit (fol. 3r).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +56,8 @@ On the incipit page of Text I (fol. 3r), two first lines of the two columns are 
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">50.0</measure> folios, in <measure unit="quire">7.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">50.0</measure> folios, in
+                                                  <measure unit="quire">7.0</measure> quires (A+6). 
                                                 <dimensions type="outer">
                               <height unit="cm">15.5</height>
                               <width unit="cm">11.7</width>
@@ -105,7 +110,7 @@ The bottom corner of fols. 1-7 is damaged by rodents.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -135,7 +140,7 @@ The bottom line is written above the ruling.</ab>
                      <decoNote type="frame" xml:id="d1">Fol. 3r (incipit page of Text I): Coloured (vivid red, black) ornamental band; interlaces motifs.</decoNote>
                   </decoDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather cover.&#xD;
 Three sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -144,6 +149,7 @@ Three sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament of poor quality on the reddish-brown leather cover (at least 5 tools were used: four line fillet, triple line fillet, double circle, double sine wave with dots, cross-hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -186,11 +192,6 @@ Three sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -212,7 +213,7 @@ Three sewing stations.</decoNote>
          <change who="DN" when="2011-05-24">registered</change>
          <change who="SA" when="2014-04-02">created</change>
          <change who="SA" when="2015-02-04">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

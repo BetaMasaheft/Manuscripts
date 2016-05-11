@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdma010"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Täʾamrä Maryam "Miracles of Mary" / Excerpt from a lectionary</title>
@@ -33,16 +33,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DMA-010</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; groups of lines on the incipit page of Texts I-1 and II; a few lines on the incipit page of Texts I-2 and I-3; incipit of Text I-4 and of sections; the word täfäśśǝḥi “rejoice”; elements of the punctuation signs and of the text dividers; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I-2 includes the hymns:</note>
+                     <note>- ʾO-ʾǝgzǝʾtǝyä qǝddǝst dǝngǝl Maryam ʾǝmmu lä-ʾIyäsus Krǝstos kähali ... "O my Lady, Holy Virgin Mary, Mother of Jesus Christ the Almighty ..." (fol. 7rb-va) (cp. ChRep no. 373)</note>
+                     <note>- Sälam läki ʾo-ʾǝgzǝʾtǝyä qǝddǝst dǝngǝl Maryam ʾǝmmä mädḫǝn wä-ʾǝmmä bǝrhan ... "Salutation to you, o my Lady, Holy Virgin Mary, Mother of the Saviour and Mother of the Light ..."(fols. 7va-8rb).</note>
+                     <note/>
+                     <note>The miracles of Text I-4 are not numbered.</note>
+                     <note/>
+                     <note>The arrangement of Text II is similar to the scriptural readings for the days of the week, cp. Ms. S<ref type="mss" corresp="ESdgm007">DGM-007</ref>(Mäṣḥafä gǝṣṣǝw) for</note>
+                     <note>- Sunday: fols. 29ra-31vb (S<ref type="mss" corresp="ESdgm007">DGM-007</ref>: fols. 54vb-59ra)</note>
+                     <note>- Friday: fols. 31vb-34rb (S<ref type="mss" corresp="ESdgm007">DGM-007</ref>: fols. 50rb-52ra)</note>
+                     <note>- Saturday: fols. 34rb-36vb (S<ref type="mss" corresp="ESdgm007">DGM-007</ref>: fols. 52ra-54vb).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +64,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">37.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">37.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fol. 1rv, 28vb, 37vb, in
+                                                  <measure unit="quire">5.0</measure> quires (A+4). 
                                                 <dimensions type="outer">
                               <height unit="cm">20.0</height>
                               <width unit="cm">14.5</width>
@@ -107,7 +123,7 @@ The ink is faded on fols. 10r, 17v.</condition>
                            <note>All data are for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -132,7 +148,7 @@ The bottom line is written above the ruling.</ab>
                      <decoNote type="frame" xml:id="d1">Fol. 5rb: short coloured (red, black) ornamental band; interlaces.</decoNote>
                   </decoDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards (the front board broken and repaired).&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -182,8 +198,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">ʿAmätä Ṣǝyon is mentioned in many supplications (e.g., fols. 7ra, 12ra, 14vb), many other names are written throughout the Ms.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">ʿAmätä Ṣǝyon is mentioned in many supplications (e.g., fols. 7ra, 12ra, 14vb), many other names are written throughout the Ms.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -212,7 +228,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-11-24">registered</change>
          <change who="SH" when="2014-04-30">created</change>
          <change who="EG" when="2014-11-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqgm010"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (the second half of the year)</title>
@@ -33,20 +33,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QGM-010</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; name of the king; a few lines of the incipit pages of Texts I-1 – I-7, alternating with black lines; incipit of each commemorative notice; the word sälam; elements of Ethiopic numerals; elements of the punctuation signs and text dividers.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
                   </msItem>
-                  <msItem xml:id="coloph1" defective="false">
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Fols. 1 and 2 are unruled.</note>
+                  </msItem>
+                  <msItem xml:id="coloph1">
                      <colophon>
-                        <locus target="189rc">Fol. 189rc</locus>Fol. 189rc:<foreign xml:lang="en">Fol. 189rc:</foreign>
+                        <locus target="189rc"/>Fol. 189rc:<foreign xml:lang="en">Fol. 189rc:</foreign>
                         <note>The colophon is written in Amharic. It tells that the scribe is Wäldä Giyorgis (his baptismal name; his worldly mane is däbtära Fänta) of Säqwäṭa Gäbrǝʾel, who was brought up by Wag sǝyyum Bǝrru, and that the exemplar was the Synaxarion of Säqwäṭa Gäbrǝʾel.</note>
                      </colophon>
                   </msItem>
@@ -57,7 +61,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">192.0</measure> folios, in <measure unit="quire">18.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">192.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 1v, 2r, 2v, in
+                                                  <measure unit="quire">18.0</measure> quires (A+17 (?)). 
                                                 <dimensions type="outer">
                               <height unit="cm">40.5</height>
                               <width unit="cm">31.8</width>
@@ -157,7 +164,7 @@ Holes or tears amended, e.g., on fols. 1, 2, 23, 43, 47, 51, 57, 58, 78, 165.</c
                            <note>All data for fol. 9r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -181,7 +188,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 189vb: Register of the donors' names.<q xml:lang="gez"/>
+                           <locus target="#189vb">Fol. 189vb</locus>: Register of the donors' names.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            List of the names of the donors written in red and reddish-brown ink.
                         </item>
@@ -203,6 +210,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches on the spine cover close to the head and tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the leather cover (at least 4 tools were used: double line fillet, double circle, x-form, criss-cross).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -245,8 +253,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Several individuals are mentioned in the supplication formulas, written in a secondary hand: e.g., ʾabunä Gäbrä Qirqos (e.g., fols. 3ra, 12vb), Wälättä Bǝrhan (e.g., fol. 3ra), ʾAmätä Maryam (e.g., fols. 3va, 7vc), Gäbrä Maryam (e.g., fols. 3vb, 7rb, 9vc), Zärʾa Mäsqäl (e.g., fols. 4rc, 7vb), Habtä Śǝllase (e.g., fols. 5rb, 9ra), Täsfa Śǝllase (e.g., fol. 5rb). The same individuals are also mentioned in Additio 1.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Several individuals are mentioned in the supplication formulas, written in a secondary hand: e.g., ʾabunä Gäbrä Qirqos (e.g., fols. 3ra, 12vb), Wälättä Bǝrhan (e.g., fol. 3ra), ʾAmätä Maryam (e.g., fols. 3va, 7vc), Gäbrä Maryam (e.g., fols. 3vb, 7rb, 9vc), Zärʾa Mäsqäl (e.g., fols. 4rc, 7vb), Habtä Śǝllase (e.g., fols. 5rb, 9ra), Täsfa Śǝllase (e.g., fol. 5rb). The same individuals are also mentioned in Additio 1.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -275,7 +283,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-11-28">registered</change>
          <change who="VR" when="2015-05-27">created</change>
          <change who="DN" when="2015-06-17">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

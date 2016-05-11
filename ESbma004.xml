@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESbma004"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä gǝnzät “Book of the Funeral Ritual”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>BMA-004</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donor; a few lines in the incipit page, alternating with black lines; two initial lines of each section of the text; names of Hebrew letters in Ps. 118 (fol. 101va-vb), elements of the punctuation signs; elements of Ethiopic numbers; some other words, e.g., halle luya (e.g., fols. 5ra, 7rb, 8ra), ṣällǝyu (e.g., fols. 8va, 9rb, 10rb), ʾǝgäle (e.g., fols. 10va, 15ra, 16vb), wä-yǝblu (e.g., fols. 22va, 23rb, 24ra).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">105.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">105.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1r, 103v, 104r, in
+                                                  <measure unit="quire">14.0</measure> quires (12+A+B). 
                                                 <dimensions type="outer">
                               <height unit="cm">32.0</height>
                               <width unit="cm">23.0</width>
@@ -123,18 +126,23 @@ Cuts repaired on fols. 89.</condition>
                         <date>19th century?</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ይ፡ ካ፡</abbr> for <expan>ይበል፡ ካሕን፡ </expan> (fol. 27rb)</item>
+                              <abbr>ይ፡ ካ፡</abbr> for
+                                                  <expan>ይበል፡ ካሕን፡ </expan> (fol. 27rb)</item>
                            <item>
-                              <abbr>ይ፡ ዲ፡</abbr> for <expan>ይበል፡ ዲያቆን፡ </expan> (fols. 27rb, 28va)</item>
+                              <abbr>ይ፡ ዲ፡</abbr> for
+                                                  <expan>ይበል፡ ዲያቆን፡ </expan> (fols. 27rb, 28va)</item>
                            <item>
-                              <abbr>ፍ፡</abbr> for <expan>ፍቱሐ፡ ረስዮ፡ ለዝንቱ፡ በድን፡ </expan> (e.g., fols. 80va, 81rb, 81va)</item>
+                              <abbr>ፍ፡</abbr> for
+                                                  <expan>ፍቱሐ፡ ረስዮ፡ ለዝንቱ፡ በድን፡ </expan> (e.g., fols. 80va, 81rb, 81va)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 2ra-rc: Excerpt from a miracle of ʾabunä Täklä Haymanot. <q xml:lang="gez"> </q>
+                           <locus target="#00"/>
+                           <desc>Fol. 2ra-rc: Excerpt from a miracle of ʾabunä Täklä Haymanot. </desc>
+                           <q xml:lang="gez"> </q>
                            <q xml:lang="en"> </q>
                            Written in the same hand as that of the main text.
                         </item>
@@ -159,6 +167,7 @@ Two rows of small holes visible on the spinefolds of the quires, one close to th
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">No</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -201,8 +210,8 @@ Two rows of small holes visible on the spinefolds of the quires, one close to th
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Habtä ʾIyäsus is mentioned in the supplication formulas throughout the Ms (e.g., fols. 2rb, 18rb).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Habtä ʾIyäsus is mentioned in the supplication formulas throughout the Ms (e.g., fols. 2rb, 18rb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -227,7 +236,7 @@ Two rows of small holes visible on the spinefolds of the quires, one close to th
          <change who="DN" when="2010-11-20">registered</change>
          <change who="AA" when="2013-08-23">created</change>
          <change who="EG" when="2014-07-23">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

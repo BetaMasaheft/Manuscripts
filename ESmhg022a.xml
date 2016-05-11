@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmhg022a"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Dǝrsanä sänbätä krǝstiyan “Homily on the Sabbath of Christians”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MHG-022a</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the donor; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">27.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">27.0</measure> folios, in
+                                                  <measure unit="quire">5.0</measure> quires (A+4). 
                                                 <dimensions type="outer">
                               <height unit="cm">14.5</height>
                               <width unit="cm">10.0</width>
@@ -101,7 +102,7 @@ Some fols. are damaged (e.g., fols. 3-4, 12).</condition>
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -125,7 +126,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 27r: Donation note.<q xml:lang="gez"/>
+                           <locus target="#27r">Fol. 27r</locus>: Donation note.<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            Half-erased, probably written in the main hand. The note mentions the church of Ḥarennät.
                         </item>
@@ -141,6 +142,7 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial"/>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -183,8 +185,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Possibly Zä-Wäldä Maryam (mentioned in the supplication, fol. 26r).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Possibly Zä-Wäldä Maryam (mentioned in the supplication, fol. 26r).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -209,7 +211,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-20">registered</change>
          <change who="SA" when="2014-07-31">created</change>
          <change who="MK" when="2014-09-15">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

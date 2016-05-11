@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESsmm004"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Säʿatat zä-mäʿalt “Horologium for the Day Hours”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>SMM-004</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; the Trinitarian formula in the incipit page of the text (fol. 3r); incipit of the subsections; elements of the punctuation signs, elements of Ethiopic numerals;</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Cp. MSaBH (the same excerpts, but in different order).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">52.0</measure> folios, in <measure unit="quire">5.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">52.0</measure> folios, in
+                                                  <measure unit="quire">5.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">18.5</height>
                               <width unit="cm">12.0</width>
@@ -107,7 +112,7 @@ Fols. stained with wax and water.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A/0-0/0-0/A </ab>
                            <ab type="pricking">
 Primary pricks are not visible. </ab>
@@ -142,12 +147,12 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 1v: Unclear note.<q xml:lang="gez">Fol. 1v: አባቴ፡ ወልደ፡ ማርያም፡ ዕቀብ…</q>
+                           <locus target="#1v">Fol. 1v</locus>: Unclear note.<q xml:lang="gez">Fol. 1v: አባቴ፡ ወልደ፡ ማርያም፡ ዕቀብ…</q>
                            <q xml:lang="en"/>
                            An appeal of Mäzgäbä Sǝllase who wrote the note, to "his father" Wäldä Maryam and Mäzgäbä Śǝllase.
                         </item>
                         <item xml:id="a2">
-                           <locus/>Fol. 2r: Unidentified prayer.<q xml:lang="gez">Fol. 2r: ግነዩ፡ ለእግዚአብሔር፡ ወጸውኡ፡ ስሞ፡ ምዕመናን…</q>
+                           <locus target="#2r">Fol. 2r</locus>: Unidentified prayer.<q xml:lang="gez">Fol. 2r: ግነዩ፡ ለእግዚአብሔር፡ ወጸውኡ፡ ስሞ፡ ምዕመናን…</q>
                            <q xml:lang="en"/>
                            Probably written in the same hand as that of Additio 1.
                         </item>
@@ -206,11 +211,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">Wäldä Muse</persName>
                </person>
@@ -236,7 +236,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-15">registered</change>
          <change who="SA" when="2013-01-14">created</change>
          <change who="SH" when="2014-06-02">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

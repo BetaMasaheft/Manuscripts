@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqds005"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Haymanotä ʾabäw “Faith of the Fathers”</title>
@@ -33,16 +33,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QDS-005</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; 1st, 2nd, 8th , 9th, 15th and 16th line of the incipit page; two or three initial lines of sub-sections; Gǝʿǝz names of ordinal numerals followed by the word tǝʾǝzaz on fol. 103v; elements of punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Quire A was probably added later.</note>
+                     <note>- A few bifolios have shorter upper and/or lower margins, e.g., 2r-3v, 31r-32v.</note>
+                     <note>- The scribe does not always pay attention to the ruling lines.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +57,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">104.0</measure> folios, of which <measure unit="leaf" type="blank">7.0</measure> blank, in <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">104.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">7.0</measure> blank
+                                                  1r, 1v, 2r, 2v, 3r, 3v, 104v, in
+                                                  <measure unit="quire">14.0</measure> quires (A+13). 
                                                 <dimensions type="outer">
                               <height unit="cm">35.5</height>
                               <width unit="cm">27.5</width>
@@ -60,6 +69,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks are written above one or both intercolumns: fols. 12r, 20r, 28r, 60r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">3</dim>
@@ -156,7 +167,7 @@ Cuts and tears carefully amended in fols. 6, 21, 37, 52, 86, 89.</condition>
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -176,7 +187,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards (the front board is broken and repaired; the back board is cracked). &#xD;
 Remnants of turn-ins and textile inlays visible in the back board.&#xD;
 Two pairs of sewing stations.</decoNote>
@@ -187,6 +198,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two rows of small holes visible on the spine fold of the quires.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown turn-ins (one tool was used: triple line fillet).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -229,8 +241,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of the owner or donor, Wäldä Mikaʾel, is mentioned in the supplication formula on fol. 75rc. It is followed by the name Wälättä Mikaʾel, added later, probably by a secondary hand.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of the owner or donor, Wäldä Mikaʾel, is mentioned in the supplication formula on fol. 75rc. It is followed by the name Wälättä Mikaʾel, added later, probably by a secondary hand.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -255,7 +267,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-02">registered</change>
          <change who="MK" when="2012-10-16">created</change>
          <change who="SD" when="2014-09-30">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

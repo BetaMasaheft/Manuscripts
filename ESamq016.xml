@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESamq016"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>AMQ-016</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; name of the reigning monarch, Patriarch and Bishop; 1st, 2nd, 5th, 6th, 14th and 15th line in the incipit page of Text I; 1st, 2nd, 5th and 6th line in the incipit page of Text II and Texts III; two initial lines of sections of Texts II and III; initial words of subsections of Texts I-III; directives for the ministers; musical notation (e.g., fols. 5r-7ra, 12va-13vb, 133 rb); elements of Drawing 1; elements of Ethiopic numerals; elements of punctuation signs.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">140.0</measure> folios, of which <measure unit="leaf" type="blank">9.0</measure> blank, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">140.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">9.0</measure> blank
+                                                  1r, 1v, 2r, 2v, 3r, 3v, 4r, 140rb, 140v, in
+                                                  <measure unit="quire">19.0</measure> quires (A + 18). 
                                                 <dimensions type="outer">
                               <height unit="cm">28.0</height>
                               <width unit="cm">21.0</width>
@@ -60,6 +63,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Fols. 13r, 21r, 29r, 37r, 45r, 53r, 61r, 69r (?), 77r (?), 85r, 93r, 101r, 109r, 117r (in the left upper margin): Decorated quire marks.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">4</dim>
@@ -139,7 +144,7 @@ A hole is amended on fol. 83.</condition>
                            <note>All data for fol. 5r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -170,7 +175,7 @@ The bottom line is written above the ruling.</ab>
                            <item>እግ for እግዚአብሔር</item>
                         </list>
                      </handNote>
-                     <handNote xml:id="h2" script="Ethiopic"/>
+                     <handNote xml:id="h2" script="Ethiopic">The handwriting is characterized by a fine, rounded script.<!--The names of this hands need to be replaced by appropriate refs.--></handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="miniature" xml:id="d1">
@@ -181,7 +186,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 140ra: Purchase note. <q xml:lang="gez"/>
+                           <locus target="#140ra">Fol. 140ra</locus>: Purchase note. <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            The note, dated to 17th Taḫśas 1935 A.M. (= December 26, 1942 A.D.), mentions the purchaser bašay Šähisän (?) Sänqe, the seller märigeta Ḥaddis Mäkwännǝn (of) Maḫdärä Maryam, the judge and the witnesses. The Ms. was purchased for 35 Birr. It is crudely written in pen, in Amharic. There is a fingerprint at the end of the note.
                         </item>
@@ -191,7 +196,7 @@ The bottom line is written above the ruling.</ab>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with brown tooled leather; textile inlays. &#xD;
 Two pairs of sewing stations. &#xD;
 Two pairs of chains of endband stitches through the spine cover.</decoNote>
@@ -202,6 +207,7 @@ Two pairs of chains of endband stitches through the spine cover.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornaments on the leather cover (at least 5 tools were used: triple line fillet, double circle, criss-cross, x-form, wave form)</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -245,13 +251,13 @@ Also, the name of King Ḫaylä Śǝllase I (r. 1930-74) is mentioned in supplic
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">Ḥaddis Mäkwännǝn (of) Maḫdärä Maryam</persName>
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The purchase note in fol. 140ra (s. Additio 1) mentiones as the buyer bašay Šähisän (?) Sänqe.</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName corresp="PRS00000"/>
@@ -275,7 +281,7 @@ Also, the name of King Ḫaylä Śǝllase I (r. 1930-74) is mentioned in supplic
          <change who="DN" when="2010-05-19">registered</change>
          <change who="MK" when="2013-02-19">created</change>
          <change who="SD" when="2014-09-24">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

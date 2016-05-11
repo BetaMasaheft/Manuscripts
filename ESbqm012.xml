@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESbqm012"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Giyorgis “Vita of George” / Täʾamrä Giyorgis “Miracles of George”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>BQM-012</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of the texts; elements of the punctuation signs; original names of the owners (or donors).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- The 11th miracles in Text II is incomplete.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">76.0</measure> folios, of which <measure unit="leaf" type="blank">3.0</measure> blank, in <measure unit="quire">10.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">76.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">3.0</measure> blank
+                                                  fols 1r-2v, 76rv, in
+                                                  <measure unit="quire">10.0</measure> quires (A+9). 
                                                 <dimensions type="outer">
                               <height unit="cm">23.5</height>
                               <width unit="cm">20.5</width>
@@ -100,7 +107,7 @@ Crude recent repair by treads in fol. 4.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -130,6 +137,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible in the centre fold of the quires, one close to the head, one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -172,8 +180,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The names of the donors mentioned in the supplication formula, were corrected several (at least three) times.&#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">The names of the donors mentioned in the supplication formula, were corrected several (at least three) times.&#xD;
 The name of a person who was perhaps the original donor, Täklä Giyorgis, alongside with his wife’s name Wälättä Maryam, has been deleted (washed out) or corrected respectively into Gäbrä Giyorgis and Wälättä Giyorgis (in black ink). Some other names written in the original hand, are still readable: Gäbrä Krǝstos (fols. 3va, 20ra, 38vb).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
@@ -202,7 +210,7 @@ The name of a person who was perhaps the original donor, Täklä Giyorgis, along
          <change who="DN" when="2011-05-21">registered</change>
          <change who="VP" when="2011-09-20">created</change>
          <change who="DN" when="2015-07-15">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

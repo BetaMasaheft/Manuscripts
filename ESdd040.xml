@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd040"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä ʾIsayǝyyas “Book of Isaiah” / Mäṣḥafä  mǝssale “Book of Proverbs” / Ṭǝbäbä Sälomon “Wisdom of Solomon” / Qalä Mäkbǝb “Word of Ecclesiastes” / Mäṣḥafä ʾIyob “Book of Job”</title>
@@ -39,16 +39,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>278 (fol. 1r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Two groups of lines (alternating with black lines) on the incipit page of Text I; a few lines (alternating with black a line) on the incipit page of Texts II-1 and V; two lines (alternating with black a line) of the incipit of Texts II-2, III and IV; two initial lines of the sections of Texts I and V; words kǝfǝl and mǝʿǝraf; part and chapter numbers; elements of the punctuation signs; Ethiopic numerals or their elements.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>Text I is divided into parts (kǝfǝl) which are followed by a number. The numeration is not reliable and stops after fol. 34ra. Up to fol. 56ra, the scribe left blank spaces for rubricated numerals.</note>
+                     <note>Texts II-IV are divided into parts (kǝfǝl), but only at the beginning of Text II-1 they are followed by a number.</note>
+                     <note>Text V is divided into parts (kǝfǝl) and chapters (mǝʿǝraf) which are followed by numbers up to fol. 120rb.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,7 +63,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">141.0</measure> folios, in <measure unit="quire">15.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">141.0</measure> folios, in
+                                                  <measure unit="quire">15.0</measure> quires (A+14). 
                                                 <dimensions type="outer">
                               <height unit="cm">21.0</height>
                               <width unit="cm">20.0</width>
@@ -149,7 +156,7 @@ Fol. 111 is a half leaf.</condition>
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -173,11 +180,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>
-                           <div style="text-align: justify; line-height: normal"
-                                org="uniform"
-                                sample="complete">Fol. 2r (upper margin): Donation note. </div>
-                           <q xml:lang="gez">Fol. 2r: ዝመጽሐፍ፡ ዘአባ፡ ገብረ፡ ክርስቶስ፡ ወወልዱ፡ አባ፡ ገብረ፡ ሚካኤል፡ ወሀብነ፡ ለአቡነ፡ አረጋዊ፡ ደብረ፡ ዳሞ፡ ከመ፡ ይኵነነ፡ መርሐ፡ ለመንግሥተ፡ ሰማያት፡ ኢትርስዑኑ፡ ዓቢይ፡ ወንዑስ፡ ደቂቀ፡ ዳሞ </q>
+                           <locus target="#2r">Fol. 2r</locus>(upper margin): Donation note. <q xml:lang="gez">Fol. 2r: ዝመጽሐፍ፡ ዘአባ፡ ገብረ፡ ክርስቶስ፡ ወወልዱ፡ አባ፡ ገብረ፡ ሚካኤል፡ ወሀብነ፡ ለአቡነ፡ አረጋዊ፡ ደብረ፡ ዳሞ፡ ከመ፡ ይኵነነ፡ መርሐ፡ ለመንግሥተ፡ ሰማያት፡ ኢትርስዑኑ፡ ዓቢይ፡ ወንዑስ፡ ደቂቀ፡ ዳሞ </q>
                            <q xml:lang="en"/>
                            The note is written in a very crude hand. It states that the Ms. was donated to the Däbrä Dammo monastery by ʾabba Gäbrä Krǝstos and his son ʾabba Gäbrä Mikaʾel.
                         </item>
@@ -207,6 +210,7 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Small holes are visible on the spine fold of the quires, one pair close to the head and one pair close to the tail of the codex.&#xD;
 Chains of endband stitches are visible in the upper part of the spine cover.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 6 tools were used: triple line fillet, double circle, corni-form, small x, double sine wave with dots, criss cross).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -249,8 +253,8 @@ Chains of endband stitches are visible in the upper part of the spine cover.</de
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of the original donor has been erased from the supplication formula on fol. 56vb.&#xD;
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of the original donor has been erased from the supplication formula on fol. 56vb.&#xD;
 According to Additio 1, the Ms. was donated by ʾabba Gäbrä Krǝstos and his son ʾabba Gäbrä Mikaʾel.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
@@ -277,7 +281,7 @@ According to Additio 1, the Ms. was donated by ʾabba Gäbrä Krǝstos and his s
          <change who="DN" when="2014-02-06">registered</change>
          <change who="MK" when="2014-03-24">created</change>
          <change who="EG" when="2014-08-25">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

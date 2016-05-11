@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmhg022"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä gǝṣṣǝw, Lectionary for the week / Mäṣḥafä nǝfq “Book of the Assistant Priest”</title>
@@ -33,14 +33,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MHG-022</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits of Texts I-II and their sections; names of the donors; directives to the ministers; abbreviations of the directives yǝbǝl kahǝn, “the priest says”, yǝbǝl diyaqon, “the deacon says”, yǝbǝl ḥǝzb, “the people say”, yǝbǝl kahǝn nǝfq, “the assistant priest says”; titles of books to be read; names of the weekdays indicating daily readings of Text II; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit pages of Text I (fols. 3r, 4v) a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -52,7 +52,10 @@ On the incipit pages of Text I (fols. 3r, 4v) a few lines are rubricated (altern
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">48.0</measure> folios, in <measure unit="quire">6.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">48.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1, 2v, 48v, in
+                                                  <measure unit="quire">6.0</measure> quires (A+5). 
                                                 <dimensions type="outer">
                               <height unit="cm">16.8</height>
                               <width unit="cm">13.0</width>
@@ -104,7 +107,7 @@ On the incipit pages of Text I (fols. 3r, 4v) a few lines are rubricated (altern
                            <note>All data for fol. 4r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -134,7 +137,7 @@ The bottom line is written above the ruling.</ab>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fol. 2r: Record concerning a litigation over pasture land (?).<q xml:lang="gez"/>
+                           <locus target="#2r">Fol. 2r</locus>: Record concerning a litigation over pasture land (?).<q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            In Amharic.
                         </item>
@@ -150,6 +153,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -192,8 +196,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Names of two individuals, Gäbrä Mädḫǝn and Wälättä Maryam, are mentioned in the supplication formulas on fols. 4va, 6ra, 6rb, 7ra.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Names of two individuals, Gäbrä Mädḫǝn and Wälättä Maryam, are mentioned in the supplication formulas on fols. 4va, 6ra, 6rb, 7ra.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -219,7 +223,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2011-05-20">registered</change>
          <change who="SA" when="2013-02-20">created</change>
          <change who="DN" when="2015-01-28">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

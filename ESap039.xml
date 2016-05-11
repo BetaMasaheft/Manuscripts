@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESap039"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä ʾaślǝṭi, Lectionary for the entire year</title>
@@ -36,17 +36,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno>C3-IV-39 (fol. 30r)</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipit of Text I; names of the donors; directives to the ministers; notes written in the upper margins (fols. 7vb, 54r); titles of books to be read; elements of the punctuation signs; elements of Ethiopic numerals.&#xD;
 On the incipit page of Text I (fol. 6r), a few lines are rubricated (alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The text is called ʾAslǝṭ in the incipit (fol. 6ra).</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -55,7 +59,10 @@ On the incipit page of Text I (fol. 6r), a few lines are rubricated (alternating
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">60.0</measure> folios, in <measure unit="quire">9.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">60.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  Fols. 1r-v, 2r-v, 3r-v, 4r-v, 59r-v, 60r-v, in
+                                                  <measure unit="quire">9.0</measure> quires (A+8). 
                                                 <dimensions type="outer">
                               <height unit="cm">28.0</height>
                               <width unit="cm">21.5</width>
@@ -64,6 +71,8 @@ On the incipit page of Text I (fol. 6r), a few lines are rubricated (alternating
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures> Decorated <note>- Decorated quire marks on the first folio of the quires I-VIII.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">4</dim>
@@ -113,7 +122,7 @@ On the incipit page of Text I (fol. 6r), a few lines are rubricated (alternating
                            <note>All data for fol. 6r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -135,7 +144,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with tooled reddish-brown leather. &#xD;
 Secondary plastic cover.&#xD;
 Two pairs of sewing stations.</decoNote>
@@ -188,8 +197,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Gäbrä ʾAnanya and Wälättä Yoḥannǝs are mentioned in supplication formulas (e.g. fols. 5ra, 5vb, 7ra, 13rb). Names of other individuals are also mentioned in the supplication formulas (s. e.g. fols. 20ra, 22ra): Gäbrä Yoḥannǝs, Ḫaylä Maryam, ʿAmätä Mikaʾel, Täklä Maryam, Wälättä Maryam, Wälättä Ṣadǝqan, Zä-Gäbrǝʾel, Gäbrä ʾƎgziʾabǝḥer, Gäbrä Kidan, Wälättä Śǝllase and ʾAmätä Śǝllase.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Gäbrä ʾAnanya and Wälättä Yoḥannǝs are mentioned in supplication formulas (e.g. fols. 5ra, 5vb, 7ra, 13rb). Names of other individuals are also mentioned in the supplication formulas (s. e.g. fols. 20ra, 22ra): Gäbrä Yoḥannǝs, Ḫaylä Maryam, ʿAmätä Mikaʾel, Täklä Maryam, Wälättä Maryam, Wälättä Ṣadǝqan, Zä-Gäbrǝʾel, Gäbrä ʾƎgziʾabǝḥer, Gäbrä Kidan, Wälättä Śǝllase and ʾAmätä Śǝllase.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -214,7 +223,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-04">registered</change>
          <change who="SA" when="2013-04-04">created</change>
          <change who="EG" when="2014-08-06">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

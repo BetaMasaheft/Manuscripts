@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESdd047"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Gädlä Qirqos “Vita of Cyricus” / Dǝrsanä kidanä mǝḥrät “Homily of the Covenant of Mercy” / Gädlä Zä-Mikaʾel ʾArägawi "Vita of Zä-Mikaʾel ʾArägawi" / Discourse by John Chrysostom on the life and decollation of John the Baptist / Homily by John Chrysostom on the glory of John the Baptist / Homily by John of Constantinople on the Four Living Creatures, for the 8th of Ḥǝdar / Homily by an anonymous author for the commemoration of the Four Living Creatures and the Twenty-Four Heavenly Priests / Homily by an anonymous author for the commemoration of the angels Michael and Gabriel, the Twenty-Four Heavenly Priests and the Four Living Creatures for the 12th of Ḥǝdar and Säne / Täʾamrä Gäbrǝʾel “Miracles of Gabriel” / Täʾamrä Rufaʾel “Miracles of Raphael”</title>
@@ -33,16 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>DD-047</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; names of the donors; a few lines on the incipit page of Texts I, IV, VI, VII, alternating with black lines; incipit of Texts II, III, V, VI-1, VI-2; abbreviations; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- Text VI is ascribed to ʾabba Yoḥannǝs, the Patriarch of Constantinople whereas in Ms.<ref type="mss" corresp="ESkae015">KAE-015</ref>a similar text (Text V) is ascribed to ʾabba Sawiros. In Ms.<ref type="mss" corresp="ESkae001">KAE-001</ref>the homily is anonymous.</note>
+                     <note>- The incipit of Text VII is referred as ድርሳን ዘገብርኤል but the actual content is Miracles of Gabriel.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +56,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key=""/>
                         </support>
-                        <extent>Made of <measure unit="leaf">110.0</measure> folios, in <measure unit="quire">14.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">110.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  74v, 110v, in
+                                                  <measure unit="quire">14.0</measure> quires (13+A). 
                                                 <dimensions type="outer">
                               <height unit="cm">21.7</height>
                               <width unit="cm">18.5</width>
@@ -127,7 +135,7 @@ Holes amended on fols. 103, 105.</condition>
                            <note>All data for fol. 7r</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible.</ab>
@@ -152,16 +160,18 @@ The bottom ruled line was not used by the scribe on fol. 19ra.</ab>
                         <date>18th century (?)</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ሰላ</abbr> for <expan>ሰላም </expan> (e.g., fols. 1va, 2vb, 3ra)</item>
+                              <abbr>ሰላ</abbr> for
+                                                  <expan>ሰላም </expan> (e.g., fols. 1va, 2vb, 3ra)</item>
                            <item>
-                              <abbr>ቂር / ቂርቆ</abbr> for <expan>ቂርቆስ </expan> (e.g., fols. 1va, 2rb, 3rb)</item>
+                              <abbr>ቂር / ቂርቆ</abbr> for
+                                                  <expan>ቂርቆስ </expan> (e.g., fols. 1va, 2rb, 3rb)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>Fols. 1va-5vb: Mälkǝʾa Qirqos “Image of Cyricus”<q xml:lang="gez">Fols. 1va: ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ። ፀሐይ፡ ብሩህ፡ ወጽዱል፡ አመ፡ ሱራሄሁ፡ አጽለመ። መጽሐፈ፡ ዜናሁ፡ ለቂርቆስ፡ መንፈሳዊ፡ ወዘመላክዑ፡ [sic] ሰላመ። ጸሐፍ፡ ውስተ፡ ልብየ፡ እንዘ፡ ትገብር፡ ቀለመ። ደመከ፡ አምላካዊ፡ በመስቀል፡ ዘዘንመ። </q>
+                           <locus target="#1va">Fols. 1va-5</locus>vb: Mälkǝʾa Qirqos “Image of Cyricus”<q xml:lang="gez">Fols. 1va: ኦክርስቶስ፡ ናዝራዊ፡ ዘተወከፍከ፡ ሕማመ። ፀሐይ፡ ብሩህ፡ ወጽዱል፡ አመ፡ ሱራሄሁ፡ አጽለመ። መጽሐፈ፡ ዜናሁ፡ ለቂርቆስ፡ መንፈሳዊ፡ ወዘመላክዑ፡ [sic] ሰላመ። ጸሐፍ፡ ውስተ፡ ልብየ፡ እንዘ፡ ትገብር፡ ቀለመ። ደመከ፡ አምላካዊ፡ በመስቀል፡ ዘዘንመ። </q>
                            <q xml:lang="en"/>
                            Written in a fine hand.
 Cp. WQ-006, UM-008, KAE-001
@@ -227,8 +237,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">The name of the original donor has been erased in the supplication formulas and replaced with Wäldä ʾArägawi and Säwasǝwä Dǝngǝl (but in some occasions those names appear to be original, fols. 55rb, 56ra). On fol. 75ra the last two letters of his name, ማር (mar), have been preserved.</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">The name of the original donor has been erased in the supplication formulas and replaced with Wäldä ʾArägawi and Säwasǝwä Dǝngǝl (but in some occasions those names appear to be original, fols. 55rb, 56ra). On fol. 75ra the last two letters of his name, ማር (mar), have been preserved.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -254,7 +264,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2014-05-30">registered</change>
          <change who="AA" when="2014-08-26">created</change>
          <change who="MV" when="2015-04-16">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

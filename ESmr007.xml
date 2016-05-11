@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmr007"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mäṣḥafä qǝddase “Missal”</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MR-007</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>First words or lines of constituent texts (sometimes alternating lines in black and reddish brown); name of the Virgin Mary; names of the king and the metropolitan; names of the persons mentioned at the beginning of each Anaphora; abbreviations; the words ቡራኬ፡, ዕማሬ፡, ሃሌ፡ ሉያ፡; elements of the punctuation signs; elements of Ethiopic numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>The same hand as<ref type="mss" corresp="ESmr034">MR-034</ref>.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">96.0</measure> folios, of which <measure unit="leaf" type="blank">2.0</measure> blank, in <measure unit="quire">11.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">96.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.0</measure> blank
+                                                  1, 96, in
+                                                  <measure unit="quire">11.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">22.0</height>
                               <width unit="cm">17.0</width>
@@ -144,9 +151,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <additions><!--THIS element in domlib CONTAINS ESCAPED HTML, thus it is not possible to reliably extract the information about pages. Please watch out.-->
                      <list>
                         <item xml:id="a1">
-                           <locus/>
-                           <div style="line-height: normal;" org="uniform" sample="complete">Fol. 95r: Ownership note.</div>
-                           <q xml:lang="gez">Fol. 95r: ዝቅዳሴ፡ ዘእግዝእትነ፡ ማርያም፡ ዘአባዕኮ፡ ወቄስ፡ ገበዝ፡ አቡነ፡ ኪዳነ፡ ማርያ [sic]፡ ወጸሐፊሃ፡ አቡነ፡ ወልደ፡ ሙሴ። ዘሰረቃ፡ ወዘፈሐቃ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ።</q>
+                           <locus target="#95r">Fol. 95r</locus>: Ownership note.<q xml:lang="gez">Fol. 95r: ዝቅዳሴ፡ ዘእግዝእትነ፡ ማርያም፡ ዘአባዕኮ፡ ወቄስ፡ ገበዝ፡ አቡነ፡ ኪዳነ፡ ማርያ [sic]፡ ወጸሐፊሃ፡ አቡነ፡ ወልደ፡ ሙሴ። ዘሰረቃ፡ ወዘፈሐቃ፡ ውጉዘ፡ ለይኩን፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ።</q>
                            <q xml:lang="en">Fol. 95r: This Missal belongs to (the church of) Our Lady Mary in ʾAbaʿko and qes gäbäz is ʾabunä Kidanä Marya[m], and its scribe is ʾabunä Wäldä Muse. He who steals (this book) or erases (its text) shall be excommunicated by the authority of Peter and Paul.</q>
                            
                         </item>
@@ -162,6 +167,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -204,13 +210,18 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Mentioned in the supplication formulas: Yǝtbaräk ʾAb and his wife ʾAmätä Mikaʾel (fols. 23ra, 34vb, 47vb, etc.), Gäbrä Ṣadǝq (fols. 30rb, 52ra, etc.).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Mentioned in the supplication formulas: Yǝtbaräk ʾAb and his wife ʾAmätä Mikaʾel (fols. 23ra, 34vb, 47vb, etc.), Gäbrä Ṣadǝq (fols. 30rb, 52ra, etc.).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName role="scribe" corresp="PRS00000">Wäldä Muse</persName>
+               </person>
+               <person>
+                  <persName role="owner" corresp="PRS0000">According to Additio 1, the Ms. belonged to (the church of)ʾAbaʿko Maryam (not identical to Mǝdrä Ruba?)</persName>
+                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
+                                        Person/persName should only contain the person name, not all the paragraph.-->
                </person>
                <person>
                   <persName corresp="PRS00000"/>
@@ -233,7 +244,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-11">registered</change>
          <change who="IF" when="2010-12-14">created</change>
          <change who="MK" when="2014-08-26">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

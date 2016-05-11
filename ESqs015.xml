@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESqs015"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Haymanotä ʾabäw “Faith of the Fathers” / Mäṣḥafä ṭomar “Book of the Letter (from Heaven)”</title>
@@ -33,13 +33,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>QS-015</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; a few lines on the incipit page, alternating with black lines; two initial lines of each subsection of the text; elements of punctuation signs; elements of Ethiopic numerals; some words like kǝfl (e.g., fols. 9ra, 13rb, 24ra), fǝkkare (e.g., fols. 121rb, 121va, 122ra), rabǝʿ (e.g., fols.122vc, 124rb, 126va), yǝbe (e.g., fols. 130ra, 130va), tǝʿǝzaz (e.g., fols. 132vc, 133ra).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
@@ -51,7 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">136.0</measure> folios, in <measure unit="quire">17.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">136.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank"/> blank
+                                                  1v, in
+                                                  <measure unit="quire">17.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">29.0</height>
                               <width unit="cm">26.5</width>
@@ -60,6 +63,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>- Quire marks are written twice, one on bottom margin by black ink and one on the top margin by red pen, in fols. 2r, 10r, 18r, 26r, 34r, 42r, 50r, 58r, 66r, 74r, 82r, 90r, 98r, 107r, 115r, 123r, 131r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">9</dim>
@@ -189,7 +195,7 @@ Fol. 136 is mutilated.</condition>
                            <note>All data for fol. 3r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -212,14 +218,16 @@ The bottom line is written above the ruling.</ab>
                         <date>18th century.</date>
                         <list type="abbreviations">
                            <item>
-                              <abbr>ክ፡/ክፍ፡</abbr> for <expan>ክፍል፡ </expan> (e.g., fols. 39rb, 39vb, 64rb)</item>
+                              <abbr>ክ፡/ክፍ፡</abbr> for
+                                                  <expan>ክፍል፡ </expan> (e.g., fols. 39rb, 39vb, 64rb)</item>
                            <item>
-                              <abbr>ራብ፡</abbr> for <expan>ራብዕ፡ </expan> (fol. 122ra)</item>
+                              <abbr>ራብ፡</abbr> for
+                                                  <expan>ራብዕ፡ </expan> (fol. 122ra)</item>
                         </list>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="no">
+                     <binding contemporary="false">
                         <decoNote xml:id="b1">Two wooden boards (the front board is repaired, half of the back board is missing) covered with covered with brown tooled leather (for the most part is missing); textile inlays preserved on the inner side of the front board.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -227,6 +235,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two rows of holes on the back folds of the quires.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the brown leather turn-ins (at least 2 tools were used: triple line fillet, double circle).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -269,11 +278,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -295,7 +299,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2012-12-02">registered</change>
          <change who="AA" when="2013-01-22">created</change>
          <change who="MK" when="2014-09-17">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmr003"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Sǝnkǝssar “Synaxarion” (three months)</title>
@@ -33,16 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MR-003</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; the word sälam; several lines or groups of lines in the incipit page of the commemorative notices for each month; one or two initial lines of each commemorative notice; elements of punctuation signs throughout the Ms. (e.g., nine dot asterisks in red and black, separating the commemoration notes; chains of red and black dots and nine dot asterisks separates the months Mäskäräm and Ṭǝqǝmt, fol. 42r); elements of Ethiopian numerals.</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- On 17 Ḫǝdar the commemorative notice for Wälättä Ṗeṭros is included, fol. 91vc-92rc.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,7 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">111.0</measure> folios, of which <measure unit="leaf" type="blank">8.0</measure> blank, in <measure unit="quire">12.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">111.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">8.0</measure> blank
+                                                  fols. 1r-2v, 110r-111v, in
+                                                  <measure unit="quire">12.0</measure> quires ((A+11)). 
                                                 <dimensions type="outer">
                               <height unit="cm">34.0</height>
                               <width unit="cm">27.5</width>
@@ -60,6 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                         <foliation/>
                         <collation>
+                           <signatures>
+                              <note>Quire marks are written in the upper left corner: fols. 3e, 13r, 23r, 33r, 43r, 53r, 63r, 73r, 83r.</note>
+                           </signatures>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">10</dim>
@@ -125,7 +135,7 @@ Small water stains throughout the Ms. (e.g., fols. 4r, 5rv, 13v, 14r).</conditio
                            <note>All data for fol. 48r.</note>
                            <ab type="ruling">Quires I-VI have 32 lines, quires VII-XI have 33 lines.</ab>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1E-1E-1E1E/0-0/0-0/C. </ab>
                            <ab type="pricking">
 Primary pricks are visible. </ab>
@@ -147,7 +157,7 @@ The bottom line is written above the ruling.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -157,6 +167,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other"/>
+                        <decoNote xml:id="b5">Blind tooled ornament visible on front and back cover (8 tools were used: criss cross, triple line fillet, small x, x-form, type of double sine waves with dots, double circle, corniform, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -199,11 +210,6 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000"/>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
                <person>
                   <persName corresp="PRS00000"/>
                   <!--other-->
@@ -225,7 +231,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-11">registered</change>
          <change who="SD" when="2013-02-06">created</change>
          <change who="MV" when="2015-01-29">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>

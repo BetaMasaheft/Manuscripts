@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmqm002"
      xml:lang="en"
      type="mss">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>ʾArbaʿtu wängel “Four Gospels”</title>
@@ -33,17 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MQM-002</idno>
                </msIdentifier>
-               <msContents defective="false">
-                  <msItem xml:id="ms_i1" defective="false">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                      <rubric>Nomina sacra; incipits and headings of the texts (occasionally in alternating red and black lines); short postscript to the Gospel of Luke; the word mǝʿǝraf, numbers, x-shaped signs and incipits of the chapters; numbers of the “tituli”; some of the marginal notes indicating liturgical occasions on which a given section should be recited; elements of the punctuation signs; elements of the Ethiopic numerals; names of the donors; chi rho and coronis.&#xD;
 On the incipit page of each Gospel, a few lines are rubricated (in groups of two lines, alternating with black lines).</rubric>
-                     <incipit defective="false">
+                     <incipit>
                         <foreign xml:lang="en"/>
                      </incipit>
-                     <explicit defective="false">
+                     <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
                      <note/>
+                  </msItem>
+                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
+                  <msItem xml:id="ms_i2">
+                     <note>- X-shaped (rubricated) sign with dashes above and below stands between the number of the chapter and its incipit (not quite regular, s., e. g., fols. 31r-v; 46v-47r, etc.).</note>
+                     <note>- Parts of the traditional introduction texts are missing. Concerning the traditional introduction texts s. R.W. COWLEY, "New Testament Introduction in the Andemta Commentary Tradition", Ostkirchliche Studien 26, 1977, 144-92 ; R. ZUURMOND, Novum Testamentum Aethiopice: the Synoptic Gospels, Part I: General Introduction, Part II: Edition of the Gospel of Mark, Stuttgart 1989 (AeF 27), 6-21.</note>
+                     <note>- The “tituli” for the Gospel of Matthew are not numbered, although their total number (66, incorrect) is written out at the end.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,7 +58,10 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">145.0</measure> folios, of which <measure unit="leaf" type="blank">2.5</measure> blank, in <measure unit="quire">19.0</measure> quires. 
+                        <extent>Made of <measure unit="leaf">145.0</measure> folios, of which
+                                                  <measure unit="leaf" type="blank">2.5</measure> blank
+                                                  1, 45v, 74v, 145v, in
+                                                  <measure unit="quire">19.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="cm">28.5</height>
                               <width unit="cm">26.0</width>
@@ -121,7 +130,7 @@ On the incipit page of each Gospel, a few lines are rubricated (in groups of two
                            <note>All data for. 8r.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Ruling and pricking are visible.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 Ruling pattern: 1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
                            <ab type="pricking">
 Primary pricks are not visible.</ab>
@@ -131,7 +140,7 @@ Ruling pricks are visible.</ab>
 The upper line is written above the ruling.</ab>
                            <ab type="ruling">
 The bottom line is written above the ruling.</ab>
-                           <ab type="ruling" subtype="patter">
+                           <ab type="ruling" subtype="pattern">
 The ruling pattern is different for the Canon tables.</ab>
                         </layout>
                         <layout>
@@ -152,7 +161,7 @@ The ruling pattern is different for the Canon tables.</ab>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
-                     <binding contemporary="yes">
+                     <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards covered with dark-brown tooled leather; textile inlays.&#xD;
 Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
@@ -162,6 +171,7 @@ Two pairs of sewing stations.</decoNote>
                         </decoNote>
                         <decoNote xml:id="b3" type="Endbands"/>
                         <decoNote xml:id="b4" type="Other">Two pairs of chains of endband stitches at the spine cover, one close to the head and one close to the tail of the codex.</decoNote>
+                        <decoNote xml:id="b5">Blind tooled ornament on the reddish-brown leather cover (at least 5 tools were used: triple line fillet, criss-cross, double circle, cross-hatching, sine wave with dots).</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -204,8 +214,8 @@ Two pairs of sewing stations.</decoNote>
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <persName corresp="PRS0000">Rǝtuʿ ʾAmlak (mentioned in the supplication formulas on fols. 7r, 75r, 116r); Ker ʾƎgziʾ and Gädä Maryam (mentioned in the supplication formula on fol. 46r).</persName>
+               <person>
+                  <persName role="owner" corresp="PRS0000">Rǝtuʿ ʾAmlak (mentioned in the supplication formulas on fols. 7r, 75r, 116r); Ker ʾƎgziʾ and Gädä Maryam (mentioned in the supplication formula on fol. 46r).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -230,7 +240,7 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-12-03">registered</change>
          <change who="IF" when="2011-08-02">created</change>
          <change who="SA" when="2014-09-10">last edited</change>
-         <change who="PL" when="2016-05-05">transformed from mycore to TEI
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI
                             P5</change>
       </revisionDesc>
    </teiHeader>
