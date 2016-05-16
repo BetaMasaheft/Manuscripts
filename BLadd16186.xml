@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Sirach, Ezra 1, Ezra 2, Ezra-Nehemias, Wisdom of the Sibyl</title>
+                <title>Proverbs, Admonition of Solomon, Ecclesiastes, Wisdom of Solomon, Job</title>
                 <editor key="MV"/>
                 <editor role="generalEditor" key="AB"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,37 +37,40 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <msContents>
                         <summary>
-                            I) Mǝsālǝyāta Salomon "The Proverbs of Solomon" (fols. 3r-22r)
-                            II) Tagśāṣa Salomon, "The Institutions of Solomon" (fols. 22r-26r)
-                            III) ..., "Ecclesiastes" (fols. 26r-34v)
+                            I) Mǝssسālǝyāta Salomon "The Proverbs of Solomon" (fols. 3r-22r)
+                            II) Tagśāṣa Salomon, "The Admonition of Solomon" (fols. 22r-26r)
+                            III) Qāla makbǝb, "Ecclesiastes" (fols. 26r-34v)
                             IV) Ṭǝbaba Salomon "The Wisdom of Solomon" (fols. 35r-51r)
-                            V) ʾIyob "Job" (fols. 51v-76r).
+                            V) Maṣḥafa ʾIyob "The Book of Job" (fols. 51v-76r).
                         </summary>
                         
                         <msItem xml:id="ms_i1">
                             <locus from="3r" to="22r"/>
                             <title type="Complete" corresp="---"/>
+                            <!-- Check on EAE 5: LIT2012Messal or LIT2195Prover? Double ID?-->
+                            <note>It corresponds to Proverbs 1-24.</note>
                         </msItem>
                             
                         <msItem xml:id="ms_i2">
                             <locus from="22r" to="26r"/>
-                            <title type="Complete" corresp="---"/>
-                            <note>It corresponds to capp. 25 usque ad finem.</note>
+                            <title type="Complete" corresp="LIT2396Tagsas"/>
+                            <note>It corresponds to Proverbs 25-29.</note>
                         </msItem>
                         
                         <msItem xml:id="ms_i3">
                             <locus from="26r" to="34v"/>
-                            <title type="Complete" corresp="LIT1377Bookof"/>
+                            <title type="Complete" corresp="LIT1320Eccles"/>
                             <note/>
                         </msItem>
                         
                         <msItem xml:id="ms_i4">
                             <locus from="35r" to="51v"/>
-                            <title type="Complete" corresp="---"/>
+                            <title type="Complete" corresp="LIT2433tebaba"/>
                         </msItem>
+                        
                         <msItem xml:id="ms_i5">
-                            <locus from="137v" to="142r"/>
-                            <title type="Complete" corresp="---"/>
+                            <locus from="51v" to="76r"/>
+                            <title type="Complete" corresp="LIT1688Job"/>
                         </msItem>
                     </msContents>
                     
@@ -81,7 +84,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <measure unit="leaf">76</measure>
                                     <measure unit="leaf" type="blank"/>
                                     <measure unit="quire"/>
-                                    <note>Formae 4ae mediae</note>
+                                    <note>Formae 4ae mediae.</note>
                                 </extent>
                                 <foliation/>
                                 <condition key="good"/>
@@ -102,16 +105,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <additions>
                             <list>
                                 <item xml:id="a1">
-                                    <desc type=""/>
+                                    <desc type="Record"/>
                                     <locus target="#1r"/>
-                                    <q xml:lang="en">"..."</q>
-                                    <p>The note records ...</p>
+                                    <q xml:lang="en">"History of our Fathers, the monks who sprang from Dabra Libānos: ʾAnorewos of Warab, Tadewos of Ṭǝlālǝš (sic) and Dabra Dǝḫuḫān, Gabra Krǝstos of Dǝmbiyā, Zenā Mārqos of Morat, Sāmuʾel of Dabra Wagal (sic), Yosef of ʾƎnnārʾǝt, Qawestos of Māgl, ʾAdḫānani (sic) of Dāmot, ʾIyosǝyās of Waǧ, Matyas of Faṭagār, another ʾAdḫānani (sic) of Dawāro, Madḫane ʾƎgziʾ of Tǝgrāy. All of them fulfill their office, each according to their own rank".</q>
+                                    <p>The note records the names of prominent monks coming from the monastic community of <placeName corresp="LOC2297DabraL"/>:
+                                        <persName corresp="PRS1955Anorewos"/>, <persName corresp="PRS9087Tadewos"/>, <persName corresp="PRS4284GabraKr">O forse target="PRS4279GabraKr"?</persName>, <persName corresp="PRS10708ZenaMa"/>, <persName corresp="PRS8485Samuel"/>, <persName corresp=""/>, <persName corresp="PRS8023Qawestos"/>, <persName corresp="PRS1417Adhani"/>, <persName corresp=""/>, <persName corresp="PRS6913Matyas">check on EAE 5</persName>, <persName corresp=""/>, <persName corresp="PRS6445Madhanin"/>.</p>
+                                    <!-- Ids missing; identification uncertain. ʾIyosǝyās who? -->
                                 </item>
                                 <item xml:id="e1">
+                                    <locus target="#35r"/>
+                                    <q xml:lang="gez">ቃሉ፡ ፻ወ፷፫፻፴ወ፱ ጥበበ፡ ሰሎሞን።</q>
+                                    <q xml:lang="en">"Words: 16,339, Wisdom of Solomon".</q>
+                                    <desc>Stichometry of <ref target="#ms_i4"/>.</desc>
+                                </item>
+                                <item xml:id="e2">
                                     <locus target="#76"/>
                                     <desc>Interpretation of foreign words, such as Κυριε ἐλεισον, ἁγια and others.</desc>
                                 </item>
-                                <item xml:id="e2">
+                                <item xml:id="e3">
                                     <desc>Glosses are written on the margin of many leaves.</desc>
                                 </item>
                             </list>
@@ -136,6 +147,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <surrogates/>
                         <listBibl type="editions">
                             <bibl><ptr target="bm:Dillmann1894VetTest"/></bibl>
+                            <!--  Ecc by Mercer [bm:Mercer1931Ecclesiastes] ok
+                                Prov have been only examined in an unpublished dissertation (cp. Pilkington 1978) -->
                         </listBibl>
                     </additional>
                 </msDesc>
@@ -150,7 +163,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <textClass>
                 <keywords>
                     <term key="OldTestament"/>
-                    <term key="Apocrypha"/>
                 </keywords>
             </textClass>
             <langUsage>
