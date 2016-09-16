@@ -4,11 +4,11 @@ href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rn
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BNFet96" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BNFet99" type="mss">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Ḫoḫǝta bǝrhān</title>
+        <title>Feast list, ʾArgānona Māryām, Prayers from the Maṣḥafa Saʿātāt</title>
         <editor key="DR"/>
        <editor role="generalEditor" key="AB"/>
         <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -30,25 +30,64 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <repository ref="INS0303BNF"/>
             <collection>Manuscrits orientaux</collection>
             <collection>Fonds éthiopien</collection>
-            <idno>BnF Éthiopien 96</idno>
+            <idno>BnF Éthiopien 99</idno>
             <altIdentifier>
-              <idno>Éth. 52</idno>
-            </altIdentifier>
-            <altIdentifier>
-              <idno>Saint-Germain 665. Séguier</idno>
+              <idno>Éth. 44</idno>
             </altIdentifier>
           </msIdentifier>
           
-          <msContents>
-            <summary/> 
-            
-          <msItem xml:id="ms_i1">
-            <title type="Complete" ref="LIT1608hoheta">በስመ፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/> ውዳሴ፡ ዘግናይ፡ ዘእግዝእትነ፡
-            ማርያም።</title>
-            <textLang mainLang="gez"/>
-            <incipit>እንተ፡ ይ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/> ተ፡ ብርሃን፡ ወሙፃአ፡ ፀሓይ፡ ወመራኁተ፡ ገነት፡</incipit>
-            <note>This manuscript was produced for <persName ref="PRS11148MalakS"/>, whose name is mentioned in several invocations.</note>
-          </msItem>
+            <msContents>
+              <summary/>
+              
+              <msItem xml:id="ms_i1">
+                <title>List of the principal feasts of Maskaram, Ḫǝdār and Tāḫśās</title>
+                <!--Should this be a narrative unit, work...?-->
+                <textLang mainLang="gez"/>
+              </msItem>
+              
+              <msItem xml:id="ms_i2">
+                <title type="Incomplete" ref="LIT1716Kidanz"/>
+                <textLang mainLang="gez"/>
+              </msItem>
+              
+              <msItem xml:id="ms_i3">
+                <title type="Complete" ref="LIT1146Argano"/>
+                <textLang mainLang="gez"/>
+              
+                <rubric>
+                  <title ref="LIT1146Argano#Monday"/>
+                </rubric>
+                <rubric>
+                  <locus from="34v"/>
+                  <title ref="LIT1146Argano#Tuesday"/>
+                </rubric>
+                <rubric>
+                  <locus from="60v"/>
+                  <title ref="LIT1146Argano#Wednesday"/>
+                </rubric>
+                <rubric>
+                  <locus from="87r"/>
+                  <title ref="LIT1146Argano#Thursday"/>
+                </rubric>
+                <rubric>
+                  <locus from="116r"/>
+                  <title ref="LIT1146Argano#Friday"/>
+                </rubric>
+                <rubric>
+                  <locus from="142v"/>
+                  <title ref="LIT1146Argano#Saturday"/>
+                </rubric>
+                <rubric>
+                  <locus from="156r"/>
+                  <title ref="LIT1146Argano#Sunday"/>
+                </rubric>
+              </msItem>
+              
+              <msItem xml:id="ms_i4">
+                <title type="Incomplete" ref="LIT1961Mashaf"/>
+                <textLang mainLang="gez"/>
+              </msItem>
+     
             </msContents>
           
           <physDesc>
@@ -58,34 +97,39 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <material key="parchment"/>
                   </support>
                 <extent>
-                  <measure unit="leaf">50</measure>
+                  <measure unit="leaf">172</measure>
                 <dimensions type="outer" unit="mm">
-                    <height>105</height>
-                    <width>82</width>
+                    <height>185</height>
+                    <width>160</width>
                     <depth/>
                   </dimensions>
                 </extent>
                 <condition key="good"/>
               </supportDesc>
               <layoutDesc>
-                <layout writtenLines="13"/>
+                <layout columns="2" writtenLines="16"/>
               </layoutDesc>
             </objectDesc>
             
             <handDesc>
               <handNote xml:id="h1" script="Ethiopic"> 
-                <date notBefore="1500" notAfter="1599"/>
+                <date notBefore="1600" notAfter="1699"/>
               </handNote>
             </handDesc>
+            
+            <additions>
+              <list>
+                <item xml:id="e1">
+                  <desc>The name of the original owner has been replaced that of by <persName ref="PRS11157KenfaM"/>.</desc>
+                </item>
+              </list>
+            </additions>
           </physDesc>
             
           <history>
             <origin>
-              <origDate notBefore="1500" notAfter="1599"/>
+              <origDate notBefore="1600" notAfter="1699"/>
             </origin>
-            <provenance>Belonged to <persName ref="PRS8700Seguier">Pierre Séguier</persName>, after whose death it was kept at the library of 
-              <placeName ref="INS0305SGP">the Abbey of Saint-Germain-des-Prés</placeName> and came to the 
-              <placeName ref="INS0303BNF">BNF</placeName> during the French Revolution <date notBefore="1790" notAfter="1795"/></provenance>
           </history>
           <additional>
             <adminInfo>
@@ -94,7 +138,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <listBibl type="catalogue">
                 <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>
-                  <citedRange unit="page">94</citedRange>
+                  <citedRange unit="page">96</citedRange>
                 </bibl>
               </listBibl>
                 </source>
@@ -102,6 +146,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </adminInfo>
          </additional>
         </msDesc>
+          
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -114,6 +159,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <keywords>
           <term key="ChristianLiterature"/>
           <term key="Prayers"/>
+          <term key="Other"/>
         </keywords>
       </textClass>
       <langUsage>
@@ -123,12 +169,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </langUsage>
       <particDesc>
         <listPerson>
-          <person><persName role="owner" ref="PRS11148MalakS"></persName></person>
+          <person><persName role="owner" ref="PRS11157KenfaM"></persName></person>
         </listPerson>
       </particDesc>
     </profileDesc>
     <revisionDesc>
-      <change who="DR" when="2016-09-15">Created catalogue entry</change>
+      <change who="DR" when="2016-09-16">Created catalogue entry</change>
     </revisionDesc>
   </teiHeader>
   <text>
