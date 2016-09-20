@@ -36,13 +36,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </altIdentifier>
           </msIdentifier>
           
+          <msContents>
+            <summary/>
+            
+            <!--msContents with summary tag needed before msParts to show the summary of the entire ms-->
+            
+          </msContents>
+          
+            
           <!--MsParts have to be added-->
           
             <msPart xml:id="p1">
               <msIdentifier>
               </msIdentifier>                   
               <msContents>
-                <summary/>
+                
                 
             <msItem xml:id="p1_i1">
               <title type="Complete" ref="LIT2253salota">ጸሎተ፡ ፈትቶ፡ ዘጎርጎርዮስ።</title> 
@@ -130,6 +138,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <title type="Complete" ref="LIT1103Anapho">ቅዳሴ፡ ዓቢይ፡ ዘ፫፻፲ወ፰፡ ርቱዓነ፡ ሃይማኖት።</title> 
               <textLang mainLang="gez"/>
               
+              <!-- ms_i15 moved back up to validate -->
+              
+              <msItem xml:id="ms_i15">
+                <title type="Incomplete">Liturgical fragment</title>
+                <textLang mainLang="gez"/>
+                <note><locus target="#71"/> has been inserted arbitrarly inside <ref target="#ms_i14"/>. It contains a fragment of another liturgy. </note>
+              </msItem>
+              
 
             <msItem xml:id="ms_i16">
               <locus from="83v"/>
@@ -161,7 +177,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <title type="Incomplete" ref="LIT1569habeka">አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ቄርሎስ፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/></title> 
               <textLang mainLang="gez"/>
               <incipit>ኀቤከ፡ እግዚኦ፡ አምላክ፡ አማልክት፡ ወእግዚአ፡ አጋእዝት፡ አምላክ፡ ኅቡእ፡ ህላዌሁ፡ ዘኢይትዌዳእ።</incipit>
-              <note>The text stops at <locus target="#113v"/>. According to <bibl><ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl>, 
+              <note>The text stops at <locus target="#113v"/>. According to <bibl><ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl>, 
               its remaining part should probably be found at another place in the manuscript.</note>
             </msItem>
             
@@ -170,10 +186,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <title type="Incomplete" ref="LIT1162Athana"/> 
               <textLang mainLang="gez"/>
               <incipit><supplied resp="PRS3908Euringer">ተስ</supplied>እረ፡ ኵሉ፡ ዘበምድር
-             <note>   <bibl><ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl></note>  </incipit>
+             <note>   <bibl><ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl></note>  </incipit>
               <note>This is probably the end of the Anaphora of Athanasius, which has been transposed from <ref target="#ms30"/>, see
-                <bibl><ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl>. </note>
+                <bibl><ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl>. </note>
             </msItem>
+              
+              <!--  avoid diacritics in links (including bibliography tags) -->
             
             
             <msItem xml:id="ms_i22">
@@ -189,7 +207,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <textLang mainLang="gez"/>
               <incipit>ይ፡ ዲ፡ ጸልዩ፡ በእንተ፡ ዛቲ፡ ቅድስት፡ ቤተ፡ ክርስቲያን፡ እለ፡ ይጼልልዋ፡ ኪሩቤል፡ እለ፡ ብዙኃት፡ አዕይንቲሆሙ፡ ወሱራፌል፡ እለ፡ ፮፡ ክንፊሆሙ።</incipit>
               <listBibl type="editions">
-                <bibl><ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">213-217</citedRange></bibl>
+                <bibl><ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">213-217</citedRange></bibl>
               </listBibl>
             </msItem>
             
@@ -238,11 +256,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <title type="Incomplete" ref="LIT1162Athana">አኰቴተ፡ ቍርባን፡ ዘአትናቴዎስ፡ ሐዋርያዊ።</title> 
               <textLang mainLang="gez"/>
               <note>The end has been transposed to <locus target="#114r"/>, see also <ref target="#ms_i21"/>.
-                According to <bibl><ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl>, 
+                According to <bibl><ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">233</citedRange></bibl>, 
                 the Anaphora should therefore be contained in its entirety in this manuscript.</note>
             </msItem>
             
-            <msItem xml:id="ms_">
+            <msItem xml:id="ms_i31">
               <locus from="145r" to="146r"/>
               <title type="Incomplete" ref="LIT2444Temher"/> 
               <textLang mainLang="gez"/>
@@ -250,13 +268,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </msItem>
             
             
-            <msItem xml:id="ms_i31">
+            <msItem xml:id="ms_i32">
               <locus from="146r"/>
               <title type="Incomplete">Prayers</title> 
               <textLang mainLang="gez"/>
               <note>The beginning is missing.</note>
             </msItem>
+            </msItem>
             </msContents>
+              
           
           <physDesc>
             
@@ -275,7 +295,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 </extent>
                 <condition key="deficient">Between <locus target="#145"/> and <locus target="#146"/>,
                   one or several pages are missing. Some pages have been transposed. See also   <bibl>
-                    <ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">233</citedRange>
+                    <ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">233</citedRange>
                   </bibl></condition>
               </supportDesc>
               <layoutDesc>
@@ -321,12 +341,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <citedRange unit="page">81-82</citedRange>
                 </bibl>
                 <listBibl type="editions" corresp="#ms_i23">
-                  <bibl><ptr target="bm:EuringerLöfgen1932Anaphoren"/><citedRange unit="page">213-217</citedRange></bibl>
+                  <bibl><ptr target="bm:EuringerLoefgren1932Anaphoren"/><citedRange unit="page">213-217</citedRange></bibl>
                 </listBibl>
               </listBibl>
                   <listBibl type="secondary">
                     <bibl>
-                      <ptr target="bm:EuringerLöfgen1932Anaphoren"/>
+                      <ptr target="bm:EuringerLoefgren1932Anaphoren"/>
                     </bibl>
                       <bibl>
                         <ptr target="bm:Lifchitz1940textes"/>
@@ -337,12 +357,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               </recordHist>
             </adminInfo>
          </additional>
-          <msItem xml:id="ms_i15">
-            <title type="Incomplete">Liturgical fragment</title>
-            <textLang mainLang="gez"/>
-            <note><locus target="#71"/> has been inserted arbitrarly inside <ref target="#ms_i14"/>. It contains a fragment of another liturgy. </note>
-          </msItem>
-          </msItem>
+              
+            </msPart>
+
+
           
         </msDesc>
       </sourceDesc>
@@ -375,4 +393,4 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <ab/>
     </body>
   </text>
-</TEI>-->
+</TEI>
