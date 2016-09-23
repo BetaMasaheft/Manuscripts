@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title></title>
+        <title>Hymns</title>
         <editor key="DR"/>
        <editor role="generalEditor" key="AB"/>
         <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -41,13 +41,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           
          <!-- p2 has been inserted into p1, how can this be encoded? This is a provisorial trial, msParts p1.1 and p1.2 cannot be expanded in the preview-->
           
-          <msPart xml:id="p1.1">
+          <msPart xml:id="p1">
             <msIdentifier>
             </msIdentifier>                   
             <msContents>
               <summary/>
               
-              <msItem xml:id="p1.1_i1">
+              <msItem xml:id="p1_i1">
                 <title type="Complete" ref="LIT2954RepCh235" cert="low">ዝንቱ፡ ስብሐተ፡ ፍቁር፡ ዘያትመሀለሉ፡ ቦቱ፡
                 ክርስቲያን፡ በጊዜ፡ ምንዳቤሆሙ።</title>
                 <textLang mainLang="gez"/>
@@ -59,15 +59,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <!-- Is this the correct identification of this work?-->
               </msItem>
               
-              <msItem xml:id="p1.1_i2">
+              <msItem xml:id="p1_i2">
                 <locus from="7r"/>
+                <locus from="42"/>
                 <title type="Complete" ref="LIT2731RepCh15" cert="low">
                   መኃልይ፡ ለእግዚአብሔር፡ ዓቢይ፡ በ፫፡ ዕዝል፡ <hi rend="overline">ሃ</hi>፡
                 </title>
                 <textLang mainLang="gez"/>
                 <incipit>ለአዳም፡ አቡነ፡ ዘለሐኮ፡ በአርአያከ፡ እግዚአብሔር፡ ርድአነ፡ ለሕዝብከ። <hi rend="overline">ሃ</hi>፡ ለአቤል፡ ቅቱል፡
                 ዘነጽርከ፡ ቍርባኖ፡</incipit>
-                <!--This is the same work as p1.2_i1-->
+              </msItem>
+              
+              
+              <msItem xml:id="p1_i3">
+                <locus from="50r"/>
+                <title type="Incomplete"/>
+                <textLang mainLang="gez"/>
+                <note>Only the first few lines remain.</note>
               </msItem>
             </msContents>
           
@@ -78,8 +86,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <material key="parchment"/>
                   </support>
                 <extent>
-                  <measure unit="leaf">8</measure>
+                  <measure unit="leaf">17</measure>
                   <locus from="1" to="8"/>
+                  <locus from="42" to="50"/>
                 <dimensions type="outer" unit="mm">
                     <height>188</height>
                     <width>155</width>
@@ -87,7 +96,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </dimensions>
                 </extent>
                 <condition key="good">Between <locus target="#8"/> and  
-                  <locus target="#9"/>, a folio is missing.</condition>
+                  <locus target="#9"/>, a folio is missing. A folio is also missing at the end.</condition>
               </supportDesc>
               <layoutDesc>
                 <layout columns="2" writtenLines="13 18"/>
@@ -229,78 +238,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               </adminInfo>
             </additional>
           </msPart>
-          
-          <msPart xml:id="p1.2">
-            <msIdentifier>
-            </msIdentifier>                   
-            <msContents>
-              <summary/>
-          
-              <msItem xml:id="p1.2_i1" corresp="#p1.1_i2">
-                <locus from="42"/>
-                <title type="Incomplete" ref="LIT2731RepCh15" cert="low"/>
-                <textLang mainLang="gez"/>
-                <!--This is the same work as p1.1_i2!-->
-              </msItem>
-              
-              <msItem xml:id="p1.2_i2">
-                <locus from="50r"/>
-                <title type="Incomplete"/>
-                <textLang mainLang="gez"/>
-                <note>Only the first few lines remain.</note>
-              </msItem>
-            </msContents>
-          
-              <physDesc>
-                <objectDesc form="Codex">
-                  <supportDesc>
-                    <support>
-                      <material key="parchment"/>
-                    </support>
-                    <extent>
-                      <measure unit="leaf">9</measure>
-                      <locus from="42" to="50"/>
-                      <dimensions type="outer" unit="mm">
-                        <height>188</height>
-                        <width>155</width>
-                        <depth/>
-                      </dimensions>
-                    </extent>
-                    <condition key="good">A folio is missing at the end.</condition>
-                  </supportDesc>
-                  <layoutDesc>
-                    <layout columns="2" writtenLines="13 18"/>
-                  </layoutDesc>
-                </objectDesc>
-                
-                <handDesc>
-                  <handNote xml:id="h1.2" script="Ethiopic"> 
-                    <date notBefore="1600" notAfter="1699"/>
-                  </handNote>
-                </handDesc>
-              </physDesc>
-              
-              <history>
-                <origin>
-                  <origDate notBefore="1600" notAfter="1699"/>
-                </origin>
-              </history>
-              <additional>
-                <adminInfo>
-                  <recordHist>
-                    <source>
-                      <listBibl type="catalogue">
-                        <bibl>
-                          <ptr target="bm:Zotenberg1877Catalogue"/>
-                          <citedRange unit="page">98-99</citedRange>
-                        </bibl>
-                      </listBibl>
-                    </source>
-                  </recordHist>
-                </adminInfo>
-              </additional>
-          </msPart>
-          
         </msDesc>
       </sourceDesc>
     </fileDesc>
