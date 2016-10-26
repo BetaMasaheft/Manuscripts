@@ -42,12 +42,65 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <msContents>
               <summary/>
               
+              <!--Should the three testaments be textparts of LIT1388Felsat?-->
+              <!--Many Arabic quotes and summary of the Arabic version by Zotenberg, should they be added here?-->
+              
                   <msItem xml:id="ms_i1">
-                    <title type="Complete" ref=""></title>
-                    <textLang mainLang="gez"/>
-                    <incipit>
-                    </incipit>
+                      <locus from="1ra" to="5rb"/>
+                    <title type="Incomplete" ref="LIT4058GadlaAII"/>
+                      <textLang mainLang="gez"/>
+                      <note>The beginning is missing.</note>
+                      <listBibl type="editions">
+                        <bibl><ptr target="bm:Aescoly1951Recueil"/><citedRange unit="page">66-74</citedRange></bibl>
+                        <bibl><ptr target="bm:Heide2012Abraham"/><citedRange unit="page">129-132</citedRange></bibl>
+                      </listBibl>
+                      <listBibl type="translation">
+                        <bibl><ptr target="bm:Aescoly1951Recueil"/><citedRange unit="page">67-75</citedRange></bibl>
+                        <bibl><ptr target="bm:Heide2012Abraham"/><citedRange unit="page">163-167</citedRange></bibl>
+                      </listBibl>
                   </msItem>
+                    
+                    
+                    <msItem xml:id="ms_i2">
+                      <locus from="5v" to="17v"/>
+                      <title type="Complete" ref="LIT4061GadlaYaIII"></title>
+                      <textLang mainLang="gez"/>
+                      <incipit></incipit>
+                      <listBibl type="editions">
+                        <bibl><ptr target="bm:Heide2000Testamente"/><citedRange unit="page">193-207</citedRange></bibl>
+                      </listBibl>
+                      <listBibl type="translation">
+                        <bibl><ptr target="bm:Heide2000Testamente"/><citedRange unit="page">279-293</citedRange></bibl>
+                      </listBibl>
+                    </msItem>
+                    
+                    <msItem xml:id="ms_i3">
+                      <locus from="18r" to="27r"/>
+                      <title type="Complete" ref="LIT4064GadlaYeIII"></title>
+                      <textLang mainLang="gez"/>
+                      <incipit></incipit>
+                      <listBibl type="editions">
+                        <bibl><ptr target="bm:Heide2000Testamente"/><citedRange unit="page">208-219</citedRange></bibl>
+                      </listBibl>
+                      <listBibl type="translation">
+                        <bibl><ptr target="bm:Heide2000Testamente"/><citedRange unit="page">294-304</citedRange></bibl>
+                      </listBibl>
+                    </msItem>
+              
+              <msItem xml:id="ms_i4">
+                <locus from="28r"/>
+                <title type="Complete" ref="LIT1488GadlaQ"></title>
+                <textLang mainLang="gez"/>
+                <incipit></incipit>
+                <!--work record-->
+              </msItem>
+              
+              <msItem xml:id="ms_i5">
+                <locus from="52v"/>
+                <title type="Complete" ref="LIT1455GadlaG"></title>
+                <textLang mainLang="gez"/>
+                <incipit></incipit>
+              </msItem>
             </msContents>
           
           <physDesc>
@@ -84,11 +137,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <additions>
               <list>
-                <item xml:id="">
-                  <locus target=""/>
-                  <desc>T</desc>
+                
+                <item xml:id="e1">
+                  <locus target="#4v #74v"/>
+                  <desc>The name of the owner <persName ref="PRS11261GabraQ"/> is mentioned on <locus target="#4v"/> and <locus target="#74v"/>.</desc>
                   <q xml:lang="gez"/>
                 </item>
+                
               </list>
             </additions>
           </physDesc>
@@ -109,6 +164,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <citedRange unit="page">200-203</citedRange>
                 </bibl>
               </listBibl>
+                  <listBibl type="secondary">
+                    <bibl><ptr target="bm:Uhlig1988Palaographie"/><citedRange unit="page">281-282</citedRange></bibl>
+                    <bibl><ptr target="bm:Heide2000Testamente"/><citedRange unit="page">30-32</citedRange></bibl>
+                    <bibl><ptr target="bm:Aescoly1951Recueil"/><citedRange unit="page">17</citedRange></bibl>
+                  </listBibl>
                 </source>
               </recordHist>
             </adminInfo>
@@ -137,12 +197,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </langUsage>
       <particDesc>
         <listPerson>
-          <person><persName role="" ref=""/></person>
+          <person><persName role="owner" ref="PRS11261GabraQ"/></person>
         </listPerson>
       </particDesc>
     </profileDesc>
     <revisionDesc>
       <change who="DR" when="2016-10-25">Created catalogue entry</change>
+      <change who="DR" when="2016-10-26">Additions</change>
     </revisionDesc>
   </teiHeader>
   <text>
