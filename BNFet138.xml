@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title></title>
+        <title>Gadla Takla Hāymānot</title>
         <editor key="DR"/>
        <editor role="generalEditor" key="AB"/>
         <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -40,11 +40,48 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <summary/>
               
                   <msItem xml:id="ms_i1">
-                    <title type="Complete" ref=""></title>
+                    <title type="Complete" ref="LIT3973GadlaT"/>
                     <textLang mainLang="gez"/>
-                    <incipit>
-                    </incipit>
+                    <!--Seems not to be  the same recension as in BNFet137-->
+                    <note>The gadl is preceded by an introduction and a homily.</note>
+                    <note>The genealogies of ʾAzaryas and the kings of Ethiopia are missing.</note>
+                    <note>There are no chapter divisions.</note>
+                    
+                    <colophon xml:id="coloph1">
+                      <locus target="#93r"/>
+                      <note xml:lang="en">The colophon is the same as <ref type="mss" corresp="BLadd16257#coloph1"/>. </note>
+                    </colophon>
                   </msItem>
+                    
+                <msItem xml:id="ms_i2">
+                  <title type="Complete" ref="LIT3972Mashaf"/>
+                  <textLang mainLang="gez"/>
+                  
+                    <colophon xml:id="coloph2">
+                      <locus target="#96v"/>
+                      ወተጽሕፈት፡ ዛቲ፡ መጽሐፍ፡ በ<date>፸፻ወ፯፡ ዓመተ፡ ምሕረት፡</date> በመንግሥተ፡ ገብረ፡ መስቀል፡ መፍቀሬ፡ እግዚአብሔር፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/>
+                      <note xml:lang="en">The note states that the book was written in the <date>year of Grace 7007</date> under the reign of Gabra Masqal.</note>
+                    </colophon> <!--which Gabra Masqal?-->
+                    
+                  </msItem>
+              
+              <msItem xml:id="ms_i3">
+                <locus target="99r"/>
+                <title type="Complete">Homily for the feast of the Translation of the Body of Takla Hāymānot, <date>12th gǝnbot</date></title> <!--LIT1929Mashaf?-->
+                <textLang mainLang="gez"/>
+              </msItem>
+              
+              <msItem xml:id="ms_i4">
+                <locus target="106v"/>
+                <title type="Complete">Homily on the birth of Takla Hāymānot</title> <!--LIT3972Mashaf?-->
+                <textLang mainLang="gez"/>
+              </msItem>
+              
+              <msItem xml:id="ms_i5">
+                <title type="Complete" ref="LIT3971Taamme"/>
+                <textLang mainLang="gez"/>
+              </msItem>
+              
             </msContents>
           
           <physDesc>
@@ -71,7 +108,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <handDesc>
               <handNote xml:id="h1" script="Ethiopic"> 
-                <date  notBefore="1847" evidence="internal"/> 
+                <date  notBefore="1847" evidence="internal"/>
+                <desc>There are several changes of style, cp. the writing on <locus target="#149r"/>.</desc>
                 <listBibl type="secondary">
                   <bibl><ptr target="bm:Uhlig1988Palaographie"/><citedRange unit="page">797-798</citedRange></bibl>
                 </listBibl>
@@ -80,10 +118,33 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <additions>
               <list>
-                <item xml:id="">
-                  <locus target=""/>
-                  <desc></desc>
+                <item xml:id="e1">
+                  <desc>The name of the owner <persName role="owner" ref="PRS11282HaylaG"/> 
+                    and his wife <persName ref="PRS11283Dina"/>
+                  are mentioned at several places. </desc>
                   <q xml:lang="gez"/>
+                </item>
+                
+                <item xml:id="a1">
+                  <desc type="Invocation">At the end of the volume there is an invocation enumerting the names of
+                    <persName role="owner" ref="PRS11282HaylaG"/>'s father, mother, brothers, sisters and all the members
+                  of his family.</desc> <!--"invocation" here possibly not as the schema's definition!-->
+                  <q xml:lang="gez"/>
+                </item>
+                
+                <item xml:id="a2">
+                  <locus target="#145v"/>
+                  <desc type="Invocation"/> <!--"invocation",  Ownership Note or colophon?-->
+                  <q xml:lang="gez">ዝንቱ፡ መጽሐፍ፡ ዘእራስ፡ <persName role="owner" ref="PRS5205haylaMa">ኀይለ፡ መለኮት፡</persName> ንጉሠ፡ ሸዋ፡ ወአቡሁ፡ <persName ref="PRS8346sahlase">ሣህለ፡ ሥላሴ፡</persName> ወእሙ፡
+                    <persName ref="PRS2604Bazzabbe">ወለተ፡ ማርያም፡</persName> ዘአጥረዮ፡ በንዋዩ፡ ሰሜን፡ እድትጠሩ፡ በሥልጣነ፡ ጴጥሮስ፡ ወጳውሎስ፡ ዘሠረቆ፡ ወዘፈሐቆ፡ ውጉዘ፡
+                  ለይኩን።</q>
+                </item>
+                
+                <item xml:id="a3">
+                  <locus target="#149r"/>
+                  <desc type="Invocation"/> <!--"invocation", Ownership Note or colophon?-->
+                  <note>The same note as <ref target="#a3"/>, except for:</note>
+                  <q xml:lang="gez">ምስጠቴ፡ ሰሜን፡ እድትጠሩ፡ ነው፡ ሰሜን፡ ጥሩ፡</q>
                 </item>
               </list>
             </additions>
@@ -93,6 +154,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <origin>
               <origDate notBefore="1847" evidence="reign"/>
             </origin>
+            <provenance>The manuscript was given to the <placeName ref="INS0303BNF"/> by <persName role="donor" ref="PRS11284GallyPassebosc"/>.</provenance>
           </history>
          
           <additional>
@@ -129,16 +191,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <language ident="gez">Gǝʿǝz</language>
         <language ident="fr">French</language>
         <language ident="am">Amharic</language>
-        <language ident="la">Latin</language>
       </langUsage>
-      <particDesc>
-        <listPerson>
-          <person><persName role="" ref=""/></person>
-        </listPerson>
-      </particDesc>
     </profileDesc>
     <revisionDesc>
       <change who="DR" when="2016-10-25">Created catalogue entry</change>
+      <change who="DR" when="2016-11-01">Additions</change>
     </revisionDesc>
   </teiHeader>
   <text>
