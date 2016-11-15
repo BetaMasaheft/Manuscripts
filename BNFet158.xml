@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title></title>
+        <title>Maṣḥafa falāsfā ṭabibān, Sawāsǝwa ṭǝbab</title>
         <editor key="DR"/>
        <editor role="generalEditor" key="AB"/>
         <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -40,11 +40,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <summary/>
               
                   <msItem xml:id="ms_i1">
-                    <title type="Complete" ref=""></title>
+                    <title type="Complete" ref="LIT1925Mashaf" xml:lang="gez">በስመ፡ እግዚአብሔር፡
+                    መሐሪ፡ ወመስተሣህል፡ ወላዕሌሁ፡ ትውክልት፡ ወረድኤትነ። ንወጥን፡ በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡
+                    በጽሒፈ፡ መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡ ዘተናገሩ፡ ባቲ፡ ለለ፩፩፡ እምኔሆሙ፡</title>
                     <textLang mainLang="gez"/>
-                    <incipit>
-                    </incipit>
+                    <note></note>
+                    <note><ref target="#Sentence"/> at the end is not present in <ref type="mss" corresp="BNFet157#ms_i3"/>.</note>
                   </msItem>
+              
+              <msItem xml:id="ms_i2">
+                <title type="Complete" ref="LIT4089SawasewaT" xml:lang="gez"></title>
+                <textLang mainLang="gez" otherLangs="am"/>
+            <incipit xml:lang="gez">
+              <locus target="#112r"/>
+            </incipit>
+                <note>The chapters are not numbered.</note>
+                
+                <colophon xml:id="coloph1">
+                  <note>The colophon states that the manuscript was written in the year <date calendar="world">7220</date></note>
+                </colophon>
+              </msItem>
+              
+              
             </msContents>
           
           <physDesc>
@@ -61,7 +78,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <depth/>
                   </dimensions>
                 </extent>
-                <condition key="good"/>
+                <condition key="deficient">A leaf is missing between <locus target="#107"/> and <locus target="#108"/>.
+                <locus target="#152"/> has been displaced.</condition>
               </supportDesc>
              
               <layoutDesc>
@@ -80,10 +98,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <additions>
               <list>
-                <item xml:id="">
-                  <locus target=""/>
-                  <desc>T</desc>
+                
+                <item xml:id="e1" rend="marginal">
+                  <locus from="1" to="23"/>
+                  <locus target="50" to="75"/>
+                  <desc>Numbers have been added irregularly in the margins in an attempt of dividing the work into section. These divisions are different from 
+                    those in <ref type="mss" corresp="FSUrueppIII4"/>.</desc>
                   <q xml:lang="gez"/>
+                </item>
+                
+                <item xml:id="e2">
+                  <locus from="71v"/>
+                  <desc>Spaces left for the rubrication of sentence beginnings have been left unfilled.</desc>
                 </item>
               </list>
             </additions>
@@ -121,7 +147,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <profileDesc>
       <textClass>
         <keywords>
-          <term key="ChristianLiterature"/>
+          <term key="Other"/>
           <term key="Vocabulary"/>
         </keywords>
       </textClass>
@@ -133,17 +159,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </langUsage>
       <particDesc>
         <listPerson>
-          <person><persName role="" ref=""/></person>
+          <person><persName role="owner" ref="PRS11311SardaY"/></person>
         </listPerson>
       </particDesc>
     </profileDesc>
     <revisionDesc>
       <change who="DR" when="2016-10-25">Created catalogue entry</change>
+      <change who="DR" when="2016-11-15">Additions</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <ab/>
+    <div type="edition">
+      <div type="textpart" xml:lang="gez" xml:id="Sentence" corresp="#ms_i1">
+        <ab>
+          <supplied resp="PRS10747Zotenbe"> ይቤ</supplied>ልዎ፡ ለ፩፡ እምጠቢባን፡ ዘፍጹም፡ በጥበብ፡ በምንት፡ አእምርከ፡ ዘንተ፡ ኵሎ፡ ጥበብ። ወይቤሎሙ፡ በ፫፡ ግብራት።
+          ወይቤልዎ፡ እለ፡ መኑ፡ እሙንቱ፡ ወይቤሎሙ፡ በሠናይ፡ ዘመን፡ በርትዓ፡ ንጉሥ፡ በተራድኦ፡ አሐው።
+        </ab>
+      </div>
+      
+      <div type="textpart" xml:lang="gez" xml:id="IntroChapter14" corresp="#ms_i2">
+        <ab>
+        
+        </ab>
+      </div>
+    </div>
     </body>
   </text>
 </TEI>
