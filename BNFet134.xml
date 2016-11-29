@@ -105,16 +105,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 </title>
                 <textLang mainLang="gez"/>
                 <incipit>ወኮነ፡ ስደት፡ ዐቢየ፡ ለቤተ፡ ክርስቲያናት፡ ወበእንተ፡ ብእሲት፡ እንተ፡ ስማ፡ ኢየሉጣ፡ ወፈራሂተ፡
-                  እግዚአብሔር፡ ይእቲ፡ እመንስት። ወሰሚዐ፡ ዘንተ፡ ስደተ፡ በፍርሃተ፡ መኰንን፡
+                  እግዚአብሔር፡ ይእቲ፡ እመአንስት። ወሰሚዐ፡ ዘንተ፡ ስደተ፡ በፍርሃተ፡ መኰንን፡
                   ወጐየት፡ ወበጽሐት፡ ብሔረ፡ ጠርሲስ፡</incipit>
-                <!--work record-->
               </msItem>
               
               <msItem xml:id="ms_i5">
                 <locus from="52v"/>
-                <title type="Complete" ref="LIT1455GadlaG"></title>
+                <title type="Complete" ref="LIT1455GadlaG">በስመ፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/>
+                  ገድል፡ ወስምዕ፡ ዘቅዱስ፡ ወብፁዕ፡ ጊዮርጊስ፡ መዋኢ፡ ጸሎቱ፡
+                  <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/>
+                </title>
                 <textLang mainLang="gez"/>
-                <incipit></incipit>
+                <incipit>ወኮነ፡ በውእቱ፡ መዋዕል፡ ስደታት፡ ዘአብያተ፡ ክርስቲያናት፡ እምነገሥታት፡ ጻልእ፡ በበመካናት፡ ከመ፡ ዕቡዳን፡
+                አንስርት፡ ለሰባኪያኒሃ፡ ለጽድቅ፡ እንዘ፡ ይስሕቡ፡ ለኀበ፡ ዘዘዚአሆሙ፡ ጣዖታት፡ ወያጌብርዎሙ፡ ከመ፡ ይሡዑ። ወበውእቱ፡ መዋዕል፡ አንሥኦ፡
+                ሰይጣን፡ ለንጉሠ፡ ፋርስ፡ ወወሀቦ፡ ስልጣነ፡ ላዕለ፡ አርባዕቱ፡ መንግሥታት፡ ወስሙ፡ ዶድያኖስ፡</incipit>
               </msItem>
             </msContents>
           
@@ -154,8 +158,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <list>
                 
                 <item xml:id="e1">
-                  <locus target="#4v #74v"/>
-                  <desc>The name of the owner <persName ref="PRS11261GabraQ"/> is mentioned on <locus target="#4v"/> and <locus target="#74v"/>.</desc>
+                  <locus target="#4v #74v"/> <!--how is this information stated in the manuscript?-->
+                  <desc>The name of the owner <persName role="owner" ref="PRS11261GabraQ"/> is mentioned on <locus target="#4v"/> and <locus target="#74v"/>.</desc>
                   <q xml:lang="gez"/>
                 </item>
                 
@@ -167,7 +171,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <origin>
               <origDate notBefore="1400" notAfter="1450" evidence="lettering"/>
             </origin>
-            <provenance> Belonged to <persName ref="PRS8700Seguier"/>, after whose death it was kept at the library of <placeName ref="INS0305SGP"/>
+            <provenance> Belonged to <persName role="owner" ref="PRS8700Seguier"/>, after whose death it was kept at the library of <placeName ref="INS0305SGP"/>
               and came to the <placeName ref="INS0303BNF"/> during the French Revolution <date notBefore="1790" notAfter="1795"/>.</provenance>
           </history>
          
@@ -178,7 +182,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <listBibl type="catalogue">
                 <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>
-                  <citedRange unit="page">200-203</citedRange>
+                  <citedRange unit="page">200a-203b</citedRange>
                 </bibl>
               </listBibl>
                   <listBibl type="secondary">
@@ -202,7 +206,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <profileDesc>
       <textClass>
         <keywords>
-          <term key="ChristianLiterature"/>
           <term key="Hagiography"/>
         </keywords>
       </textClass>
@@ -221,11 +224,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <revisionDesc>
       <change who="DR" when="2016-10-25">Created catalogue entry</change>
       <change who="DR" when="2016-10-26">Additions</change>
+      <change who="DR" when="2016-11-29">Additions</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <ab/>
+      <div type="edition">
+        <div type="textpart" corresp="#ms_i5" xml:id="FinalNote" xml:lang="gez">
+          <note xml:lang="en">Final note of the Gadla Giyorgis. <foreign xml:lang="gez">Ṗāṗṗās Qerǝllos</foreign>
+            is probably a variant of <persName ref="PRS8767Seqrates"/>.</note> <!--colophon?-->
+          <ab>
+            ለእግዚእየ፡ አነ፡ ገብሩ፡ ለቅዱስ፡ ጊዮርጊስ፡ ጳጳስ፡ ቄርሎስ፡ ተላዊያኒሁ፡ ለእግዚእየ፡ ጊዮርጊስ፡ በከመ፡ ሐተትክዎ፡ ለሠብዐ፡ ነገሥት፡
+            ዘአርኢኩ፡ በአዕይንትየ፡ ለካዕኩ፡ ዘንተ፡ ተዝካረ። ያአምር፡ ዘይኴንን፡ ሕያዊነ፡ ወምውታነ፡ ከመ፡ ኢወሰኩ፡ ወኢያንተጉ፡ እምዝ፡
+            ዘተገብረ፡ ወከመዝ፡ ተኰነነ፡ ወኵሎሙ፡ እለ፡ ነሥኡ፡ አክሊለ፡ በገድሉ፡ ለቅዱስ፡ ጊዮርጊስ፡ ወኆልቆሙ፡ ዕድ፡ ወአንስት፡ ፴፻ወ፯፻ወ፱፡
+            ወንግሥተ፡ እለ፡ ስክንድርያ፡ ትትነብል፡ በእንቲአነ፡ በእንተ፡ ኀጥኣን፡ ኀበ፡ ዘሎቱ፡ ስብሐት፡ ወጽን፡ ወመንፈስ፡ ለዓለመ፡ ዓለም፡ አሜን፡ 
+            ወአሜን። ወተፈጸመ፡ ገድሉ፡ ለቅዱስ፡ ጊዮርጊስ፡ እንዘ፡ ንነግድ፡ ቈስጥንጥንያ፡ ጶሊስ፡ በመካን፡ ዘከመ፡ ቈስቌኖ፡ መርሶ፡
+            እንዘ፡ ንነግድ፡ ኣዕሎኩ፡ ዘንተ፡ መጽሐፈ፡ ወኮነ፡ በዘአዕረፈ፡ እግዚእየ፡ ጊዮርጊስ፡
+          </ab>
+        </div>
+      </div>
     </body>
   </text>
 </TEI>
