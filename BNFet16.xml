@@ -41,7 +41,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           </msIdentifier>
           
           <msContents>
-            <summary> </summary>
+            <summary/> 
             
             <msItem xml:id="ms_i1">
               <title type="Incomplete" ref="LIT2701Dawit"/>
@@ -52,13 +52,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <textLang mainLang="gez"/>
               <note>There are some lacunae.</note>
               <note>Very neglected copy (copie très-négligée).</note>
-              <rubric>Nearly all rubrics are omitted.</rubric>
+              <note>Nearly all rubrics are omitted.</note>
             </msItem> 
             
             <msItem xml:id="ms_i1.2">
-              <locus from="56r"/>
-              <title type="Complete">Hymn to Mary</title>
+              <locus from="56r" to="58"/>
+              <title type="Complete" ref="LIT4026Weddas"/>
+              <listBibl type="secondary">
+                <bibl><ptr target="bm:Grohmann1919Marien"/><citedRange unit="page">25-26</citedRange></bibl>
+              </listBibl>
+              <!--should this be part of LIT2701Dawit?-->
             </msItem>
+              
             </msItem>
             </msContents>
           
@@ -73,10 +78,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <dimensions type="outer" unit="mm">
                     <height>127</height>
                     <width>105</width>
-                    <depth/>
                   </dimensions>
                 </extent>
-                <foliation><locus target="#4"/> and <locus target="#5"/> are inverted.</foliation>
+                <foliation>
+                  <locus target="#4"/> and <locus target="#5"/> are inverted.
+                </foliation>
                 
               </supportDesc>
               <layoutDesc>
@@ -95,16 +101,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           </physDesc>
           <history>
             <origin>
-              <origDate notBefore="1500" notAfter="1599"/>
+              <origDate notBefore="1500" notAfter="1599" evidence="lettering"/>
             </origin>
-            <provenance> Belonged to <persName ref="PRS8700Seguier">Pierre Séguier</persName>, after whose death it was kept at the library of <placeName ref="INS0305SGP">the Abbey of Saint-Germain-des-Prés</placeName> and came to the <placeName ref="INS0303BNF">BNF</placeName> during the French Revolution <date notBefore="1790" notAfter="1795"/>.</provenance>
+            <provenance> Belonged to <persName ref="PRS8700Seguier"/>, after whose death it was kept at the library of 
+              <placeName ref="INS0305SGP"/> and came to the <placeName ref="INS0303BNF"/> during the French Revolution <date notBefore="1790" notAfter="1795"/>.</provenance>
           </history>
           <additional>
             <adminInfo> <recordHist> <source>
               <listBibl type="catalogue">
                 <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>
-                  <citedRange unit="page">18</citedRange>
+                  <citedRange unit="page">18b</citedRange>
                 </bibl>
               </listBibl>
               </source> </recordHist> </adminInfo>
@@ -132,6 +139,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <revisionDesc>
       <change who="DR" when="2016-06-28">Created catalogue entry</change>
       <change who="DR" when="2016-08-31">ID and i1 changed</change>
+      <change who="DR" when="2016-12-09">LIT4026Weddas identified</change>
     </revisionDesc>
   </teiHeader>
   <text>
