@@ -37,24 +37,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           </msIdentifier>
           
           <msContents>
-            <summary> </summary>
+            <summary/> 
               
-            <msItem xml:id="ms_i1">
-              <locus target="#1r" cert="low"/>
-              <title type="Complete">Hymn to <persName ref="PRS8974Stephen">St. Stephen</persName></title>
-              <textLang mainLang="gez"/>
-            </msItem>
             
-              <msItem xml:id="ms_i2">
+              <msItem xml:id="ms_i1">
                 <locus from="2r" to="110v" cert="low"/>
                 <title ref="LIT1697Jubilees" type="Complete"/>
                 <textLang mainLang="gez"/>
-                <incipit>ዝንቱ፡ ነገረ፡ ኩፋሌ፡ መዋዕል፡ ለሕግ፡ ወለስምዕ፡ ለግብረ፡ ዓመታት፡
+                <incipit xml:lang="gez">ዝንቱ፡ ነገረ፡ ኩፋሌ፡ መዋዕል፡ ለሕግ፡ ወለስምዕ፡ ለግብረ፡ ዓመታት፡
                   በተሰብዖቶሙ፡ ለኢየቤላስቲሆሙ፡ ውስተ፡ ኵሉ፡ ዓመታተ፡ ዓለም፡ በከመ፡ ተናገሮ፡ እግዚእ፡ ለሙሴ፡ በደብረ፡ ሲና፡ አመ፡ ዐርገ፡ ይንሣእ፡
-                  ፪፡ ጽላተ፡ ዘሕግ፡ ወዘትእዛዝ፡ በቃለ፡ እግዚአብሔር፡ በከመ፡ ይቤሎ፡ ዕረግ፡ ውስተ፡ ርእሰ፡ ደብር።</incipit>
-                <note>This manuscript represents an older version than those that were used for the edition  <bibl><ptr target="bm:Dillmann1859Kufale"/></bibl> 
+                  ፪፡ ጽላተ፡ ዘሕግ፡ ወዘትእዛዝ፡ በቃለ፡ እግዚኣብሔር፡ በከመ፡ ይቤሎ፡ ዕረግ፡ ውስተ፡ ርእሰ፡ ደብር።</incipit>
+                <note>This manuscript represents an older version than those used for the edition  
+                  <bibl><ptr target="bm:Dillmann1859Kufale"/></bibl> 
                   and translation <bibl><ptr target="bm:Dillmann1850Jubilaeen"/></bibl>.
-                For a list of the most noteworthy variants for the first twenty pages of the printed edition, see the transcription.</note>
+                For a list of the most noteworthy variants for the first twenty pages of the printed edition, see <ref target="#"/>.</note> <!--add ref-->
                 </msItem>
             
             </msContents>
@@ -70,15 +66,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <dimensions type="outer" unit="mm">
                     <height>285</height>
                     <width>210</width>
-                    <depth/>
                   </dimensions>
                 </extent>
                 <collation>
                   <note>
                     <locus target="#19"/> should be placed after <locus target="#25"/>;
-                    <locus target="#33"/> and <locus target="#40"/> should be interchanged.</note></collation>
-             
+                    <locus target="#33"/> and <locus target="#40"/> should be interchanged.
+                  </note></collation>
               </supportDesc>
+              
               <layoutDesc>
                 <layout columns="2" writtenLines="23 25">
                   
@@ -97,16 +93,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <decoDesc>
               <decoNote type="miniature" xml:id="d1">
                 <locus target="#34r"/>
-                A portrait of the patriarch <persName ref="PRS5578Isaac">Isaac</persName>, drawn with a feather.</decoNote>
+                A portrait of the patriarch <persName ref="PRS5578Isaac"/>, drawn with a feather.</decoNote>
             </decoDesc>
               
             <additions>
               <list>
                 
                 <item xml:id="a1">
-                  <desc type="DonationNote" cert="low">Note (?) stating that the manuscript was made for <persName ref="PRS11014BahaylaM"/>,
-                    who donated it to the Tābot of Māryām of <placeName ref="INS0329DE">Dāgā ʾƎsṭifānos</placeName>.</desc>
-                  <q xml:lang="gez">ለደሴተ፡ <placeName ref="INS0329DE">ዳጋ</placeName>፡ ለታቦተ፡ ማርያም፡ እመ፡ ብርሃን፡ ወለእስጢፋኖስ፡ ቀዳሜ፡ ሰማዕት፡ <gap reason="omitted" extent="unknown"  resp="PRS10747Zotenbe"/></q>
+                  <desc type="DonationNote">Note stating that the manuscript was produced for <persName ref="PRS11014BahaylaM"/>,
+                    who donated it to the <foreign xml:lang="gez">Tābot</foreign> of Māryām of <placeName ref="INS0329DE">Dāgā ʾƎsṭifānos</placeName>.</desc>
+                  <q xml:lang="gez">ለደሴተ፡ <placeName ref="INS0329DE">ዳጋ</placeName>፡ ለታቦተ፡ ማርያም፡ እመ፡ ብርሃን፡ ወለእስጢፋኖስ፡ ቀዳሜ፡ 
+                    ሰማዕት፡ <gap reason="omitted" extent="unknown"  resp="PRS10747Zotenbe"/></q>
+                </item>
+                
+                <item xml:id="a2">
+                  <desc type="GuestText">A hymn to <persName ref="PRS8974Stephen"/> has been added later at the beginning of the manuscript.</desc>
+                  <q xml:lang="gez"/>
                 </item>
                 
               </list>
@@ -115,7 +117,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           </physDesc>
           <history>
             <origin>
-              <origDate notBefore="1400" notAfter="1499"/>
+              <origDate notBefore="1400" notAfter="1499" evidence="lettering"/>
             </origin>
           </history>
           <additional>
@@ -125,7 +127,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <listBibl type="catalogue">
                 <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>
-                  <citedRange unit="page">51-53</citedRange>
+                  <citedRange unit="page">51b-53b</citedRange>
                 </bibl>
               </listBibl>
                 </source>
@@ -159,7 +161,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <revisionDesc>
       <change who="DR" when="2016-07-28">Created catalogue entry</change>
       <change who="DR" when="2016-08-31">ID changed</change>
-      <change who="DR" when="2016-10-27">small changes</change>
+      <change who="DR" when="2016-10-27">Small changes</change>
+      <change who="DR" when="2017-01-31">Small changes</change>
     </revisionDesc>
   </teiHeader>
   <text>
