@@ -38,6 +38,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <msContents>
                   <summary/>
                   
+                  <!--can the msItems be nested/numbered according to the work they belong to?-->
+                  
                      <msItem xml:id="ms_i1">
                         <locus from="2r"/>
                         <title type="Complete" ref="LIT1146Argano#Monday"/>
@@ -121,6 +123,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <title type="Complete" ref="LIT2505Weddas#Sunday"/>
                      <textLang mainLang="gez"/>
                   </msItem>
+                  
+                  <msItem xml:id="ms_i15">
+                     <locus from="155v" to="156r"/>
+                     <title type="Complete">Short concluding prayers</title> <!--msItem?-->
+                     <textLang mainLang="gez"/>
+                  </msItem>
                
                </msContents>
                      
@@ -200,16 +208,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <list>
                         <item xml:id="a1">
                            <locus target="#1r"/>
-                           <desc type="MagicFormula"></desc>
-                           <q xml:lang="gez">ወበል፡ በትሐት፡ ቃል፡ እሎንተ፡ አስማት፡ 
-                              እሙንቱ፡ አስማት፡ ክቡራት፡ ወልዑላት። ኦአምላክ፡ ሚካኤል፡ ዕቀቦ፡ ወአድኅኖ፡ ለአቡነ፡ ገብረ፡ ማርያም፡
+                           <desc type="MagicFormula">List of magic names, omitted by <persName ref="PRS9622Ullendor"/> in the catalogue. The text breaks off at the end.</desc> <!--is this an addition?-->
+                           <q xml:lang="gez">ወበል፡ በትሐት፡ ቃል፡ እሎንተ፡ አስማት፡ <gap reason="omitted" extent="unknown" resp="PRS9622Ullendor"/>
+                              እሙንቱ፡ አስማት፡ ክቡራት፡ ወልዑላት። ኦአምላክ፡ ሚካኤል፡ ዕቀቦ፡ ወአድኅኖ፡ ለአቡነ፡ <persName ref="PRS11435GabraMaryam">ገብረ፡ ማርያም፡</persName>
                            </q>
                         </item>
                         
                         <item xml:id="a2">
                            <locus target="#155v"/>
                            <desc type="OwnershipNote"/>
-                           <q xml:lang="gez">ዝመጽሐፍ፡ ዘአለቃ፡ ገብረ፡ ማርያም፡ ካሳ።</q>
+                           <q xml:lang="gez">ዝመጽሐፍ፡ ዘአለቃ፡ <persName role="owner" ref="PRS11435GabraMaryam">ገብረ፡ ማርያም፡</persName> ካሳ።</q>
+                        </item>
+                        
+                        <item xml:id="e1">
+                           <desc>Names of owners and scribes are generally erased in this manuscript.</desc>
+                           <q xml:lang="gez"/>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <locus target="#15r" n="9"/>
+                           <desc><persName ref="PRS11436Cyriacus" role="owner"><certainty locus="value" match="../@role" assertedValue="owner" cert="low"/></persName> given here is probably the name of one of the owners of this manuscript.</desc>
+                           <q xml:lang="gez"/>
                         </item>
                      </list>
                   </additions>
@@ -272,6 +291,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-02-08">Created catalogue entry</change>
+         <change who="DR" when="2017-02-13">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
