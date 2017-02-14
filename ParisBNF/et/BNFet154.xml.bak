@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BNFet154" type="mss">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title><foreign xml:lang="la">Lexicon æthiopico-latinum</foreign> with comments and corrections by Ludolf</title>
+        <editor key="DR"/>
+       <editor role="generalEditor" key="AB"/>
+        <funder>Akademie der Wissenschaften in Hamburg</funder>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+        <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+          Forschungsumgebung / beta maṣāḥǝft</publisher>
+        <pubPlace>Hamburg</pubPlace>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is licensed
+            under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+        </availability>
+      </publicationStmt>
+      
+      <sourceDesc>
+        <msDesc xml:id="ms">
+          <msIdentifier>
+            <repository ref="INS0303BNF"/>
+            <collection>Manuscrits orientaux</collection>
+            <collection>Fonds éthiopien</collection>
+            <idno>BnF Éthiopien 154</idno>
+            <altIdentifier>
+              <idno>Éth. 135</idno>
+            </altIdentifier>
+          </msIdentifier>
+          
+            <msContents>
+              <summary/>
+              
+              <!-- (msParts for book and interleaved pages?)-->
+              
+                  <msItem xml:id="ms_i1">
+                    
+                    <title type="Complete" xml:lang="la">Lexicon æthiopico-latinum</title> 
+                    <textLang mainLang="gez" otherLangs="la"/>
+                    <note>This volume consists of the first edition of <persName ref="PRS6378Ludolf"/>'s
+                      <foreign xml:lang="la">Lexicon</foreign>, interleaved with some comments and corrections by <persName ref="PRS6378Ludolf"/>.
+                    There are less notes added to the dictionary and more to the grammar than in <ref type="mss" corresp="BNFet153"/>.</note>
+                    <listBibl type="secondary">
+                      <bibl><ptr target="bm:Ludolf1661Lexicon"/></bibl>
+                    </listBibl>                 
+                  </msItem>
+              
+            </msContents>
+          
+          <physDesc>
+            <objectDesc form="Codex"> <!--Book-->
+              <supportDesc>
+                <support>
+                  <material key="paper"/>
+                  </support>
+                <extent>
+                  <measure unit="leaf">408</measure>
+                <dimensions type="outer" unit="mm">
+                    <height>310</height>
+                    <width>190</width>
+                    <depth/>
+                  </dimensions>
+                </extent>
+                
+              </supportDesc>
+            </objectDesc>
+            
+            <handDesc>
+              <handNote xml:id="h1" script="Ethiopic"> 
+                <date notBefore="1661" notAfter="1699"/> 
+                <persName role="scribe" ref="PRS6378Ludolf"/>
+              </handNote>
+              
+              <handNote xml:id="h2" script="Latin" corresp="#e1">
+                <date when="1694" evidence="internal"/>
+                <persName role="owner" ref="PRS11319Weissenbruch"/>
+              </handNote> 
+              
+            </handDesc>
+            
+            <additions>
+              <list>
+                <item xml:id="a1">
+                  <locus target="#1"/>
+                  <desc>Note by <persName ref="PRS6378Ludolf"/> on the Ethiopian version 
+                    of the Bible. Cp. <ref type="mss" corresp="BNFet1#a4"/> and
+                    <bibl><ptr target="bm:Ludolf1691Commentarius"/><citedRange unit="page">295-297</citedRange></bibl>.</desc>
+                  <q xml:lang="la"/>
+                </item>
+                
+                <item xml:id="a2">
+                  <date when="1694-08-01" evidence="internal"/>
+                  <desc type="OwnershipNote">The name of one of the owners, <persName ref="PRS11319Weissenbruch" role="owner"/>, is written on the title.</desc>
+                  <q xml:lang="la"><persName role="owner" ref="PRS11319Weissenbruch">Johannes Hermannus Weissenbruch</persName>. 
+                    <placeName ref="gn:3220968">Francof.</placeName>. <date>Kal. Augusti: CIƆIƆCXCIV</date>.</q>
+                </item>
+             
+              </list>
+            </additions>
+            
+          </physDesc>
+            
+          <history>
+            <origin>
+              <origDate notBefore="1661" notAfter="1699"/>
+            </origin>
+            <provenance><p>Came to the <placeName ref="INS0303BNF"/> from the library of the <placeName ref="INS0340ASG"/>.</p></provenance>
+          </history>
+         
+          <additional>
+            <adminInfo>
+              <recordHist>
+                <source>
+              <listBibl type="catalogue">
+                <bibl>
+                  <ptr target="bm:Zotenberg1877Catalogue"/>
+                  <citedRange unit="page">256ab</citedRange>
+                </bibl>
+              </listBibl>
+                </source>
+              </recordHist>
+            </adminInfo>
+         </additional>
+        </msDesc>
+          
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Encoded according to TEI P5 Guidelines.</p>
+      </projectDesc>
+    </encodingDesc>
+    <profileDesc>
+      <textClass>
+        <keywords>
+          <term key="Vocabulary"/> <!--Grammar?-->
+          <term key="Other"/>
+        </keywords>
+      </textClass>
+      <langUsage>
+        <language ident="gez">Gǝʿǝz</language>
+        <language ident="fr">French</language>
+        <language ident="am">Amharic</language>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change who="DR" when="2016-11-18">Created record</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+     <ab/>
+    </body>
+  </text>
+</TEI>
