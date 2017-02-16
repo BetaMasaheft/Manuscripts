@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" 
-  xml:id="IVefiopsk4" 
+  xml:id="IVefiopsk5" 
   type="mss">
   <teiHeader>
     <fileDesc>
@@ -30,44 +30,42 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <msDesc xml:id="ms">
           <msIdentifier>
             <repository ref="INS0301IV"/>
-            <idno>IV Efiopsk. 4</idno>
+            <idno>IV Efiopsk. 5</idno>
             <altIdentifier>
-              <idno>Turaev cat. I.12</idno>
+              <idno>Turaev cat. I.13</idno>
             </altIdentifier>
                         </msIdentifier>
           
-            <msContents>
-              <summary/>
+          <msContents>
+            
+                       <summary> </summary>
+          <msItem xml:id="ms_i1">
+            <locus from="4r" to="111v"/>
+            <title type="complete" ref="LIT1693John"/>
+            <textLang mainLang="gez"/>
+            
+            <rubric></rubric>
+            
+            <msItem xml:id="ms_i1.1">
+              <locus from="4r" to="111v"/>
+              <title type="complete" ref="LIT2715John"/>
               
-                  <msItem xml:id="ms_i1">
-                    <locus from="1r" to="133v"/>
-                    <title type= "incomplete" ref="LIT2701Dawit"/>
-                     <textLang mainLang="gez"/>
-                        </msItem>
-                        
-                    <msItem xml:id="ms_i1.1">
-                      <locus from="1r" to="112v"/>
-                      <title type="incomplete" ref="LIT2000Mazmur"/>
-                      <note>Psalms 1 to 16 are missing</note>
-                    </msItem>
-                        
-                                       
-                    <msItem xml:id="ms_i1.2">
-                      <locus from="113r" to="125v"/>
-                      <title type="complete" ref="LIT1828Mahale"/>
-                      <note/>
-                    </msItem>
-                    
-                    
-                    <msItem xml:id="ms_i1.3">
-                      <locus from="126r" to="133v"/>
-                      <title type="complete" ref="LIT2362Songof"/>
-                      <note/>
-                    </msItem>
-                                                                                   
-           </msContents>
+              
+            </msItem>
+            
+            
+            <msItem xml:id="ms_i1.2">
+              <locus from="111v" to="111v"/>
+              <title type="complete" ref="LIT1693John#Stichometry"/>
+              <quote>  </quote>
+              
+            </msItem>
+                   
+          <!-- the foliation is unsure -->
+          </msItem>
           
-          <!--  numbers of folios are not certain -->
+          
+          </msContents>
           
           <physDesc>
             <objectDesc form="Codex">
@@ -83,8 +81,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <depth/>
                   </dimensions>
                 </extent>
-                <condition key="deficient"/>
-                <note>The binding is damaged, the back board with leather cover is missing; the initial quires (probably two) are also missing </note>
+                <condition key="deficient">The binding is damaged, the back board with leather cover is missing; the initial quires (probably two) are also missing</condition>
+                
               </supportDesc>
              
               <layoutDesc>
@@ -155,16 +153,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       
       <particDesc>
         <listPerson>
-          <person> <persName ref="PRS11337Tischendorf" role="donor"/></person>
+          <person> <persName ref="..." role="donor"/></person>
            </listPerson>
              </particDesc>
       
       <textClass>
         <keywords>
           <term key= "Bible"/>
-          <term key= "OldTestament"/>
-          <term key= "Poetry"/>
-        </keywords>
+          <term key= "NewTestament"/>
+                </keywords>
       </textClass>
       
       <langUsage>
@@ -177,9 +174,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <change who="DN" when="2016-12-21">Additions</change>
     </revisionDesc>
   </teiHeader>
+  
   <text>
     <body>
-     <ab/>
-    </body>
+        <div type="edition">
+        <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="Stichometry" corresp="#ms_i1.1">
+                    <ab>
+            <locus target="#111v"/>
+            ተፈጸመ᎓ ወንጌል᎓ ዘ<hi rend="rubric">ዮሐንስ</hi>᎓ ቃሉ᎓ ዕስራ᎓ ምእት᎓ ወስድስቱ᎓ ምእት፨ 
+            እምርእሱ᎓ እስከ᎓ ተፍጻሜቱ᎓ ለሊሁ᎓ <hi rend="rubric">ወልድ</hi>᎓ ተናገረ፨
+          </ab>
+          
+                      <listBibl type="text">
+            <bibl> <ptr target="bm:Turaev1906rukopisi"/>
+              <citedRange unit="page">21</citedRange></bibl>
+          </listBibl>
+       </div>
+   </body>
   </text>
 </TEI>
