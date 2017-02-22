@@ -5,11 +5,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLaethg11" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLaethg15" type="mss">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Hymns to St. George amd Gabra Manfas Qǝddus, Prayers </title>
+            <title>Hymn, Kidān za-nagh, Golgotā, Tǝmhǝrta ḫǝbuʾāt </title>
             <editor key="DR"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,9 +29,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msIdentifier>
                      <repository ref="INS0312BDL"/>
                      <collection>Codices aethiopici</collection>
-                      <idno>Bodleian Aeth. g. 11</idno>
+                      <idno>Bodleian Aeth. g. 15</idno>
                      <altIdentifier>
-                        <idno>Ullendorff 58</idno>
+                        <idno>Ullendorff 71</idno>
                      </altIdentifier>
                   </msIdentifier>
                
@@ -46,26 +46,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">27</measure>
-                           <measure unit="page" type="blank">1</measure>
-                           <locus target="#1r"/>
+                           <measure unit="leaf">43</measure>
+                           <measure unit="leaf" type="blank">1</measure>
+                           <locus target="#43"/>
                            <dimensions type="outer" unit="in">
-                              <height>3</height>
+                              <height>3.5</height>
                               <width>3</width>
                            </dimensions>
                         </extent>
-                        
                      </supportDesc>
-                     <layoutDesc>
-                        <layout columns="1"/>
-                     </layoutDesc>
                   </objectDesc>
                   
                   <bindingDesc>
                      <binding xml:id="binding">
-                        <decoNote xml:id="b1">Stiff leather covers.</decoNote>
+                        <decoNote xml:id="b1">Ethiopian binding: wooden boards, front cover missing.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="leather"/>
+                           <material key="wood"/>
                         </decoNote>
                      </binding>
                   </bindingDesc>
@@ -77,17 +73,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <summary/>
                   
                      <msItem xml:id="p1_i1">
-                        <locus from="3r"/>
-                        <title type="complete" ref="LIT2866RepCh147"/>
+                        <locus from="12r"/>
+                        <title type="complete" ref="LIT2246salotz"/>
                         <textLang mainLang="gez"/>
-                        <incipit xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘሰሌዳ፡ ሞገስ፡ መጽሐፉ።</incipit>
                      </msItem>
                   
                <msItem xml:id="p1_i2">
-                     <locus from="18v" to="23v"/>
-                  <title type="complete" ref="LIT2915RepCh196"/>
+                     <locus from="33v"/>
+                  <title type="complete" ref="LIT2444Temher"/>
                      <textLang mainLang="gez"/>
-                     <incipit xml:lang="gez">ሰላም፡ ለፅንሰትከ፡ መሠረተ፡ ነገር፡ ወውጣኔ። </incipit>
                   </msItem>
                   
                   </msContents>
@@ -99,44 +93,51 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <material key="parchment"/>
                            </support>
                            <extent>
-                              <measure unit="leaf">23</measure>
+                              <measure unit="leaf">34</measure> <!--or two msParts?-->
+                              <locus from="1" to="2"/>
+                              <locus from="12" to="43"/>
                               <measure unit="page" type="blank">1</measure>
-                              <locus target="#1r"/>
+                              <locus target="#43"/>
                               <dimensions type="outer" unit="in">
-                                 <height>3</height>
+                                 <height>3.5</height>
                                  <width>3</width>
                               </dimensions>
                            </extent>
                            
                         </supportDesc>
                         <layoutDesc>
-                           <layout columns="1" writtenLines="11" cert="low"/>
+                           <layout columns="1" writtenLines="14" cert="low"/>
                         </layoutDesc>
                      </objectDesc>
                   
                   <handDesc>
-                     <handNote xml:id="h1" script="Ethiopic">
+                     <handNote xml:id="h1" script="Ethiopic" corresp="#p1_i1 #p1_i2">
                         <date notBefore="1700" notAfter="1799" cert="low"/>
-                        <seg type="script">Written in a small and fine hand, 
+                        <seg type="script">Written in a poor hand, 
                            possibly of the <date>18th century</date>.</seg>
                      </handNote>
                      
                      <handNote xml:id="h2" script="Ethiopic" corresp="#a1">
-                        <seg type="script">Crude hand</seg>
+                        <seg type="script">Written in a crude hand.</seg>
                      </handNote>
                   </handDesc>
                   
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <locus from="1v"/>
-                           <desc type="Unclear">Prayer to <persName ref="PRS4585Georgeo"/>
-                           in <ref type="hand" corresp="#h2"/>.</desc>
+                           <locus from="1" to="2"/>
+                           <desc type="GuestText">A Hymn to the Saviour of the World, fragmentary and almost 
+                              entirely illegible.</desc>
                         </item>
                         
-                        <item xml:id="a2">
-                           <locus target="#2v"/>
-                           <desc type="Unclear">Scribbles.</desc>
+                        <item xml:id="e1"> <!--is this correctly encoded?-->
+                           <locus target="#42v"/>
+                           <desc type="Unclear">Faint impression of a green-coloured seal, illegible.</desc>
+                        </item>
+                        
+                        <item xml:id="e3">
+                           <locus target="#12r"/>
+                           <desc>The name of the owner was <persName ref="PRS11455SebhatL" role="owner"/>.</desc>
                         </item>
                      </list>
                   </additions>
@@ -158,7 +159,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <source>
                               <listBibl type="catalogue">
                                  <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
-                                 <citedRange unit="page">11b</citedRange></bibl>
+                                 <citedRange unit="page">16a</citedRange></bibl>
                               </listBibl>
                            </source>
                         </recordHist>
@@ -174,16 +175,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <summary/>
                      
                      <msItem xml:id="p2_i1">
-                           <locus from="24" to="25"/>
-                           <title type="incomplete">Prayer written in  <ref type="hand" corresp="#h3"/>.</title>
+                           <locus from="3r" to="11"/>
+                        <title type="complete" ref="LIT1716Kidanz" xml:lang="gez">ኪዳን፡ ዘነግህ፡</title>
                            <textLang mainLang="gez"/>
                         </msItem>
-                     
-                     <msItem xml:id="p2_i2"> <!--or another msPart?-->
-                        <locus from="26" to="27"/>
-                        <title type="incomplete">Prayer against demons <ref type="hand" corresp="#h4"/></title>
-                        <textLang mainLang="gez"/>
-                     </msItem>
                   </msContents>
                   
                      <physDesc>
@@ -193,24 +188,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <material key="parchment"/>
                               </support>
                               <extent>
-                                 <measure unit="leaf">4</measure>
-                                 <locus from="24" to="27"/>
-                                 <dimensions type="outer" unit="in">
-                                    <height>3</height>
-                                    <width>3</width>
-                                 </dimensions>
+                                 <measure unit="leaf">9</measure>
+                                 <locus from="3" to="11"/>
                               </extent>
                            </supportDesc>
                         </objectDesc>
                         
                         <handDesc>
                            <handNote xml:id="h3" script="Ethiopic" corresp="#p2_i1">
-                              <seg type="script">Written in a crude hand.</seg>
-                           </handNote>
-                           <handNote xml:id="h4" script="Ethiopic" corresp="#p2_i2">
-                              <seg type="script">Written in a poor hand.</seg>
+                              <seg type="script">Written in a good hand.</seg>
                            </handNote>
                         </handDesc>
+                        
+                        <additions>
+                           <list>
+                              <item xml:id="e2">
+                                 <locus target="#11r"/>
+                                 <desc>The name of the owner was <persName ref="PRS11456WaldaA" role="owner"/>.</desc>
+                              </item>
+                           </list>
+                        </additions>
                      </physDesc>
                      
                      <history>
@@ -218,6 +215,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <origDate notBefore="1700" notAfter="1799" evidence="lettering" cert="low"/>
                         </origin>
                         <provenance>
+                           This part of the manuscript formed originally part of another manuscript of different size and
+                           shape that <ref target="#p1"/>.
                            The manuscript was  purchased by the <placeName ref="INS0312BDL"/> in 
                            <date>1930</date>.
                         </provenance>
@@ -229,7 +228,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <source>
                                  <listBibl type="catalogue">
                                     <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
-                                       <citedRange unit="page">11b</citedRange></bibl>
+                                       <citedRange unit="page">16a</citedRange></bibl>
                                  </listBibl>
                               </source>
                            </recordHist>
@@ -248,11 +247,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="Hagiography"/>
                <term key="Chants"/>
-               <term key="Poetry"/>
                <term key="Prayers"/>
                <term key="ChristianLiterature"/>
+               <term key="Liturgy"/>
+               <term key="ApocryphaPseudoepigrapha"/>
+               <term key="Magic"/>
             </keywords>
          </textClass>
          <langUsage>
@@ -263,7 +263,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="DR" when="2017-02-06">Created catalogue entry</change>
+         <change who="DR" when="2017-02-22">Created catalogue entry</change>
       </revisionDesc>
    </teiHeader>
    <text>
