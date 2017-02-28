@@ -60,18 +60,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </msItem>
             
                      <msItem xml:id="ms_i1.3">
-                        <title type="complete" ref="LIT2362Songof" cert="high"/>
+                        <title type="complete" ref="LIT2362Songof" cert="high" evidence="conjecture"/>
                      </msItem>
             
                      <msItem xml:id="ms_i1.4">
                         <locus from="134r"/>
                         <title type="complete" ref="LIT1113Anqasa"/>
+                        <incipit xml:lang="gez">በስመ፡ <gap reason="omitted" extent="unknown"  resp="PRS10747Zotenbe"/>
+                           ወእምዝ፡ ንጽሕፍ፡ ውዳሴሃ፡ ለእግዚእትነ፡ ማርያም።</incipit>
                      </msItem>
             
                      <msItem xml:id="ms_i1.5">
                         <locus from="139v"/>
                         <title type="complete" ref="LIT2509Weddas"/>
-                        <note>More recent than the rest of the manuscript.</note>
+                        <note>More recent than the rest of the manuscript.</note> <!--msPart?-->
               
                         <msItem xml:id="ms_i1.5.1">
                            <locus from="139v"/>
@@ -84,12 +86,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
               
                         <msItem xml:id="ms_i1.5.3">
-                           <locus from="141"/>
+                           <locus from="141r"/>
                            <title type="complete" ref="LIT2509Weddas#Tuesday"/>
                         </msItem>
               
                         <msItem xml:id="ms_i1.5.4">
-                           <locus from="143"/>
+                           <locus from="143r"/>
                            <title type="complete" ref="LIT2509Weddas#Wednesday"/>
                         </msItem>
               
@@ -122,7 +124,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <dimensions type="outer" unit="mm">
                               <height>160</height>
                               <width>140</width>
-                              <depth/>
                            </dimensions>
                         </extent>
                         
@@ -143,10 +144,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <locus from="1" to="139"/>
                      </handNote>
               
-                     <handNote xml:id="h2" script="Ethiopic">
+                     <handNote xml:id="h2" script="Ethiopic" corresp="ms_i1.5">
                         <date notBefore="1400" notAfter="1499">More recent than the rest of the manuscript.</date>
                         <locus from="140" to="148"/>
-                        <persName ref="PRS10808GabraKr"/>
+                        <persName role="scribe" ref="PRS10808GabraKr"/>
                      </handNote>
               
                      <handNote xml:id="h3" script="Latin" corresp="#a2">
@@ -157,23 +158,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               
                      <list>
                         <item xml:id="a1">
-                           <desc type="Excerpt">Fragment of a prayer to Mary at the beginning of the volume</desc>
-                           <!-- Should this be a msItem?-->
+                           <desc type="Excerpt">Fragment of a prayer to <persName ref="PRS6819Mary"/> at the beginning of the volume</desc>
                         </item>
                 
                         <item xml:id="a2" rend="marginal">
-                           <desc type="Gloss">Some titles, phrases and words have been translated to latin.</desc>
+                           <desc type="Gloss">Some titles, phrases and words have been translated into Latin.</desc>
                            <q xml:lang="la"/>
                         </item>
                 
                         <item xml:id="a3">
+                           <locus target="#148" cert="low"/>
                            <desc type="Invocation"/>
-                           <q xml:lang="gez">ጸሎታ፡ ለማርያም፡ ወስእለታ፡ ለገብረ፡ ክርስቶስ፡ ያድኅኖ፡ እምዓተ፡ ወልዳ።</q>
+                           <q xml:lang="gez">ጸሎታ፡ ለማርያም፡ ወስእለታ፡
+                              ለ<persName ref="PRS10808GabraKr">ገብረ፡ ክርስቶስ፡</persName> ያድኅኖ፡ እመዓተ፡ ወልዳ።</q>
                         </item>
                 
                         <item xml:id="a4">
-                           <desc type="Excerpt">Prayer at the end of the volume</desc>
-                           <!-- Should this be a msItem?-->
+                           <desc type="Unclear">Prayer at the end of the volume</desc>
                         </item>
                      </list>
                   </additions>
@@ -181,9 +182,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1400" notAfter="1499"/>
+                     <origDate notBefore="1400" notAfter="1499" evidence="lettering"/>
                   </origin>
-                  <provenance>Comes from the library of <placeName ref="INS0305SGP">the Abbey of Saint-Germain-des-Prés</placeName> and came to the <placeName ref="INS0303BNF">BNF</placeName> during the French Revolution <date notBefore="1790" notAfter="1795"/>.</provenance>
+                  <provenance>The manuscript belonged to the library of the
+                     <placeName ref="INS0305SGP"/> and came to the 
+                     <placeName ref="INS0303BNF"/> during the French Revolution <date notBefore="1790" notAfter="1795"/>.</provenance>
                </history>
                <additional>
                   <adminInfo> 
@@ -192,7 +195,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:Zotenberg1877Catalogue"/>
-                                 <citedRange unit="page">17-18</citedRange>
+                                 <citedRange unit="page">17b-18a</citedRange>
                               </bibl>
                            </listBibl>
                         </source> 
@@ -221,6 +224,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="OldTestament"/>
                <term key="Liturgy"/>
                <term key="Chants"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
          <langUsage>
@@ -232,6 +236,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2016-07-22">deleted locus="unknown"</change>
          <change who="DR" when="2016-08-31">ID and i1 changed</change>
          <change who="DR" when="2016-10-26">minor change</change>
+         <change who="DR" when="2017-02-28">Small changes</change>
       </revisionDesc>
   </teiHeader>
   <text>

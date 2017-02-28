@@ -37,7 +37,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           </msIdentifier>
           
           <msContents>
-            <summary> </summary>
+            <summary/> 
             
             <msItem xml:id="ms_i1">
               <title type="complete" ref="LIT2701Dawit"/>
@@ -46,11 +46,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <msItem xml:id="ms_i1.1">
                 <title type="complete" ref="LIT2000Mazmur"/>
                 <textLang mainLang="gez"/>
-                <note> <ref target="#h1">The first hand</ref>stops in the middle of Ps. 102 on <locus target="#88"/>.</note>
+                <note> <ref type="hand" corresp="#h1">The first hand</ref>stops in the middle of
+                  Ps. 102 on <locus target="#88"/>.</note>
               </msItem>
               
             <msItem xml:id="ms_i1.2">
-              <locus from="132"/>
+              <locus from="132r"/>
               <title type="complete" ref="LIT1828Mahale"/>
               <textLang mainLang="gez"/>
               </msItem>
@@ -60,7 +61,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </msItem>
             
             <msItem xml:id="ms_i1.4">
-              <locus from="149" to="153"/>
+              <locus from="149r"/>
               <title type="complete" ref="LIT1113Anqasa"/>
             </msItem>
             </msItem>
@@ -78,7 +79,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <dimensions type="outer" unit="mm">
                     <height>160</height>
                     <width>130</width>
-                    <depth/>
                   </dimensions>
                 </extent>
                 
@@ -90,44 +90,43 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <handDesc>
               <handNote xml:id="h1" script="Ethiopic">
-                <seg type="ink">black</seg>
                 <date notBefore="1700" notAfter="1799"/>
                 <locus to="88"/>
                 <desc/>
               </handNote>
                 
                 <handNote xml:id="h2" script="Ethiopic">
-                  <seg type="ink">black</seg>
                   <date notBefore="1700" notAfter="1799"/>
                   <locus from="88"/>
                   <desc/>
               </handNote>
                 
-                <handNote xml:id="h3" script="Ethiopic">
-                  <seg type="ink">black</seg>
+                <handNote xml:id="h3" script="Ethiopic" corresp="#e1">
                   <date notBefore="1700" notAfter="1799"/>
-                  <locus target="#3 #44v #86 #131v #141v #148v #153"/>
+                  <locus target="#3r #44v #86r #131v #141v #148v #153r"/>
                   <persName role="owner" ref="PRS10810TasfaIy"/>
-                  <desc>The owner,  <persName ref="PRS10810TasfaIy">Tasfā ʾIyasus</persName>, wrote his name at several places in the manuscript.</desc>
                 </handNote>
             </handDesc>
      
             <additions>
               <list>
                 <item xml:id="a1">
-                  <desc type="Excerpt"> A fragment of the <title ref="LIT1692EpistleJohn">First Epistle of John</title>, chap. 1, vers. 1-7 is written at the beginning of the volume.</desc>
+                  <desc type="Excerpt"> A fragment of <ref type="work" corresp="LIT1692EpistleJohn"/>,
+                    1:1-7, is written at the beginning of the volume.</desc>
                 </item>
                 
                 <item xml:id="a2">
-                  <desc type="OwnershipNote">   The owner, <persName ref="PRS10810TasfaIy">Tasfā ʾIyasus</persName> , wrote his name at several places in the manuscript. </desc>
-                    <locus  target="#3 #44v #86 #131v #141v #148v #153"/>
+                  <locus target="#88v"/>
+                  <desc type="Unclear">List of contributions in Amharic</desc> <!--mark up persNames-->
+                  <q xml:lang="am">ኍልቈ፡ እርፅባን፡ ዘዮናክንዲስ፡ ፪ ጪ፡ እርቃነክሶስ፡ ጫ፡ እዩኤል፡ ጫ፡
+                    ይብቃ፡ ፭ ማ፡ ስብሐት፡ ፪ ማ፡ ክፍለ፡ ማርያም፡ ፪ ማ፡ ከከለ፡ ፪ ማ፡ ወልዱ፡ ፪ አሞሊ፡ 
+                    ርእሰ፡ ቃል፡ ማ፡ <gap reason="omitted" extent="unknown"  resp="PRS10747Zotenbe"/></q>
                 </item>
                 
-                <item xml:id="a3">
-                  <locus target="#88v"/>
-                  <desc type="Unclear">List of contributions in Amharic</desc>
-                  <q xml:lang="am">ኍልቈ፡ እርፅባን፡ ዘዮናክንዲስ፡ ፪ ጪ፡ እርቃነክሶስ፡ ጫ፡ እዩኤል፡ ጫ፡
-                    ይብቃ፡ ፭ ማ፡ ስብሐት፡ ፪ ማ፡ ክፍለ፡ ማርያም፡ ፪ ማ፡ ከከለ፡ ፪ ማ፡ ወልዱ፡ ፪ አሞሊ፡ ርእሰ፡ ቃል፡ ማ፡ <gap reason="omitted" extent="unknown"  resp="PRS10747Zotenbe"/></q>
+                <item xml:id="e1">
+                  <desc type="OwnershipNote">   The owner, <persName ref="PRS10810TasfaIy"/>,
+                    added his name at several places in the manuscript. </desc>
+                  <locus  target="#3r #44v #86r #131v #141v #148v #153r"/>
                 </item>
               </list>
             </additions>
@@ -135,7 +134,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           </physDesc>
           <history>
             <origin>
-              <origDate notBefore="1700" notAfter="1799"/>
+              <origDate notBefore="1700" notAfter="1799" evidence="lettering"/>
             </origin>
           </history>
           <additional>
@@ -143,7 +142,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <listBibl type="catalogue">
                 <bibl>
                   <ptr target="bm:Zotenberg1877Catalogue"/>
-                  <citedRange unit="page">19</citedRange>
+                  <citedRange unit="page">19a</citedRange>
                 </bibl>
               </listBibl>
               </source> </recordHist> </adminInfo>
@@ -167,6 +166,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           <term key="OldTestament"/>
           <term key="Liturgy"/>
 <term key="Chants"/>
+          <term key="ChristianLiterature"/>
         </keywords>
       </textClass>
       <langUsage>
@@ -178,6 +178,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <change who="DR" when="2016-06-28">Created catalogue entry</change>
       <change who="DR" when="2016-07-22">deleted locus="unknown"</change>
       <change who="DR" when="2016-08-31">ID and i2 changed</change>
+      <change who="DR" when="2017-02-28">Small changes</change>
     </revisionDesc>
   </teiHeader>
   <text>
