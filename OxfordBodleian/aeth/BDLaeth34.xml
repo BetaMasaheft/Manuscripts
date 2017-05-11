@@ -5,11 +5,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLor219" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLaeth34" type="mss">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Persian Grammar, Ethiopic Alphabet, Solomon and the ant, Our Father</title>
+            <title>Alphabets, names of the months, Persian sentences</title>
             <editor key="DR"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,10 +29,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msIdentifier>
                      <repository ref="INS0312BDL"/>
                      <collection>Codices aethiopici</collection>
-                     <collection>Or.</collection>
-                        <idno>Or. 219</idno>
+                     <collection>Aeth.</collection> <!--BDLaeth34 assigned provisorily, real shelfmark has to be found out-->
+                        <idno>34</idno>
                      <altIdentifier>
-                        <idno>Dillmann cat. XXXV</idno>
+                        <idno>Dillmann cat. XXXIV</idno>
                      </altIdentifier>
                   </msIdentifier>
                
@@ -41,30 +41,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   
                   <msItem xml:id="ms_i1">
-                     <locus from="3" to="37"/>
-                     <title type="complete">Persian Grammar</title>
-                     <textLang mainLang="la" otherLangs="fa"/>
-                     <note>On the alphabet, declinations, numerals, pronouns, adverbs, prepositions, 
-                     conjunctions and verbs.</note>
+                     <locus target="#1"/>
+                     <title type="complete">Phoenician, Hebrew, Samaritan, Syriac, Arabic and
+                     Ethiopic alphabets</title>
+                     <textLang mainLang="gez" otherLangs="he syr ar"/>
                   </msItem>
                   
                   <msItem xml:id="ms_i2">
-                     <locus target="#38"/>
-                     <title type="complete">Ethiopic Alphabet</title>
-                     <textLang mainLang="gez"/>
+                     <locus target="#2"/>
+                     <title type="complete">Coptic and Ethiopic names of the months</title>
+                     <textLang mainLang="gez" otherLangs="cop"/>
                   </msItem>
                  
                   <msItem xml:id="ms_i3">
-                     <locus from="39" to="39"/>
-                     <title type="complete">Fable of Solomon and the ant</title>
-                     <textLang mainLang="ar"/>
-                     <note>Written in Arabic in Ethiopic script.</note>
+                     <locus target="#3"/>
+                     <title type="complete">Armenian Alphabet</title>
+                     <textLang mainLang="hy"/>
                   </msItem>
                   
                   <msItem xml:id="ms_i4">
-                     <locus target="#39"/>
-                     <title type="complete" ref="LIT2168PaterN"/>
-                     <textLang mainLang="gez"/>
+                     <locus target="#4"/>
+                     <title type="complete">Some Persian sentences</title>
+                     <textLang mainLang="fa"/>
                   </msItem>
                   
                   
@@ -77,8 +75,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="paper"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">39</measure>
-                           <note>formae 8<hi rend="apices">ae</hi> </note>
+                           <measure unit="leaf">20</measure>
+                           <note>formae 4<hi rend="apices">ae</hi> minoris</note>
+                           <measure unit="leaf" type="blank">16</measure>
+                           <locus from="5" to="20"/>
                         </extent>
                      </supportDesc>
                   </objectDesc>
@@ -103,7 +103,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               
                               <listBibl type="catalogue">
                                  <bibl><ptr target="bm:Dillmann1848Catalogus"/>
-                                 <citedRange unit="page">83b</citedRange></bibl>
+                                 <citedRange unit="page">83ab</citedRange></bibl>
                               </listBibl>
                            </source>
                         </recordHist>
@@ -120,10 +120,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="ChristianLiterature"/>
                <term key="Vocabulary"/>
-               <term key="Prayers"/>
-               <term key="IslamicLiterature"/>
+               <term key="Other"/>
             </keywords>
          </textClass>
          <langUsage>   
@@ -133,6 +131,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <language ident="am">Amharic</language>
             <language ident="la">Latin</language>
             <language ident="fa">Persian</language>
+            <language ident="he">Hebrew</language>
+            <language ident="syr">Syriac</language>
+            <language ident="hy">Armenian</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
