@@ -61,11 +61,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <bindingDesc>
                      <binding contemporary="false" xml:id="binding">
                         <decoNote xml:id="b1">European binding.</decoNote>
-                        <decoNote xml:id="b2" type="bindingMaterial">
-                        </decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
+               
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
+                                 <citedRange unit="page">6ab</citedRange></bibl>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
                
                
                <msPart  xml:id="p1">
@@ -126,14 +137,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </msItem>
                            
                            <msItem xml:id="p1_i1.2.8">
-                              <locus target="#131"/>
+                              <locus from="129v"/>
                               <title type="complete" ref="LIT1828Mahale#ThreeYouths1"/>
-                              <note><locus target="#131"/> is erroneously bound between
-                                 <locus target="#122"/> and <locus target="#123"/>.</note>
                            </msItem>
                            
                            <msItem xml:id="p1_i1.2.9">
+                              <locus target="#131"/>
                               <title type="complete" ref="LIT1828Mahale#ThreeYouths2"/>
+                              <note><locus target="#131"/> is erroneously bound between
+                                 <locus target="#122"/> and <locus target="#123"/>.</note>
                            </msItem>
                            
                            <msItem xml:id="p1_i1.2.10">
@@ -178,6 +190,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <locus from="143r"/>
                            <title type="complete" ref="LIT2509Weddas"/>
                            <textLang mainLang="gez"/>
+                           
                            <msItem xml:id="p1_i1.4.1">
                               <locus from="143r"/>
                               <title type="complete" ref="LIT2509Weddas#Monday"/>
@@ -214,7 +227,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <textLang mainLang="gez"/>
                         </msItem>
                      </msItem>
-                    
+                     
+                     <msItem xml:id="p1_i2">
+                        <locus from="160v" to="161"/> 
+                        <title type="incomplete" ref="LIT1959Mashaf"/>
+                        <textLang mainLang="gez"/>
+                     </msItem>
                      
                   </msContents>
                      
@@ -238,13 +256,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <locus from="4" to="142"/>
                         </layout>
                         <layout columns="2">
-                           <locus from="143" to="160"/>
+                           <locus from="143" to="161"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   
                   <handDesc>
-                     <handNote xml:id="h1" script="Ethiopic">
+                     <handNote xml:id="h1" script="Ethiopic" corresp="#p1_i1">
+                        <date notBefore="1600" notAfter="1699" evidence="conjecture"/>
+                        <seg type="script">Probably<date>17th century</date>.</seg>
+                     </handNote>
+                     
+                     <handNote xml:id="h2" script="Ethiopic" corresp="#p1_i2">
                         <date notBefore="1600" notAfter="1699" evidence="conjecture"/>
                         <seg type="script">Probably<date>17th century</date>.</seg>
                      </handNote>
@@ -264,19 +287,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      It was purchased by the <placeName ref="INS0312BDL"/> in <date>1879</date>.
                   </provenance>
                </history>
-               
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              <listBibl type="catalogue">
-                                 <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
-                                 <citedRange unit="page">6ab</citedRange></bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                        </adminInfo>
-                  </additional>
+                  
                </msPart>
                
                <msPart xml:id="p2">
@@ -320,26 +331,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </objectDesc>
                      
                      <handDesc>
-                        <handNote xml:id="h2" script="Ethiopic">
+                        <handNote xml:id="h3" script="Ethiopic">
                         </handNote>
                      </handDesc>
                   </physDesc>
-                  
-                 <!--history same as p1?-->
-                  
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              <listBibl type="catalogue">
-                                 <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
-                                    <citedRange unit="page">6ab</citedRange></bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                     </adminInfo>
-                  </additional>
-                  
                </msPart>
                
                <msPart xml:id="p3">
@@ -352,7 +347,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <msItem xml:id="p3_i1">
                         <locus from="2" to="3"/>
                         <locus target="#163"/>
-                        <title type="incomplete"><foreign xml:lang="gez">Salām</foreign> to <persName ref="PRS6819Mary"/></title>
+                        <title type="incomplete"><foreign xml:lang="gez">Salām</foreign>-hymn to <persName ref="PRS6819Mary"/></title>
                         <textLang mainLang="gez"/>
                      </msItem>
                   </msContents>
@@ -376,80 +371,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </objectDesc>
                      
                      <handDesc>
-                        <handNote xml:id="h3" script="Ethiopic">
-                        </handNote>
-                     </handDesc>
-                  </physDesc>
-                  
-                  <!--history same as p1?-->
-                  
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              <listBibl type="catalogue">
-                                 <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
-                                    <citedRange unit="page">6ab</citedRange></bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                     </adminInfo>
-                  </additional>
-                  
-               </msPart>
-               
-               <msPart xml:id="p4">
-                  <msIdentifier>
-                  </msIdentifier>
-                  
-                  <msContents>
-                     <summary/>
-                     
-                     <msItem xml:id="p4_i1">
-                        <locus target="#160v"/> <!--160 belongs to p1-->
-                        <locus target="#161"/>
-                        <title type="incomplete" ref="LIT1959Mashaf"/>
-                        <textLang mainLang="gez"/>
-                     </msItem>
-                  </msContents>
-                  
-                  <physDesc>
-                     <objectDesc form="Leaf">
-                        <supportDesc>
-                           <support>
-                              <material key="parchment"/>
-                           </support>
-                           <extent>
-                              <measure unit="leaf">1</measure>
-                              <locus target="#161"/>
-                           </extent>
-                        </supportDesc>
-                        <layoutDesc>
-                           <layout columns="2"/>
-                        </layoutDesc>
-                     </objectDesc>
-                     
-                     <handDesc>
                         <handNote xml:id="h4" script="Ethiopic">
                         </handNote>
                      </handDesc>
                   </physDesc>
-                  
-                  <!--history same as p1?-->
-                  
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              <listBibl type="catalogue">
-                                 <bibl><ptr target="bm:Ullendorff1951Catalogue"/>
-                                    <citedRange unit="page">6ab</citedRange></bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                     </adminInfo>
-                  </additional>
-                  
                </msPart>
                
             </msDesc>
@@ -467,6 +392,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="Poetry"/>
                <term key="Chants"/>
                <term key="ChristianLiterature"/>
+               <term key="RitualsAndRites"/>
             </keywords>
          </textClass>
          <langUsage>
@@ -478,6 +404,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-01-27">Created catalogue entry</change>
+         <change who="DR" when="2017-06-12">Changes</change>
       </revisionDesc>
    </teiHeader>
    <text>
