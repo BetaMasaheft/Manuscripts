@@ -42,7 +42,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <locus from="2r"/>
                         <title type="complete" ref="LIT2505Weddas"/>
                         <textLang mainLang="gez"/>
-                   
                   
                   <msItem xml:id="ms_i1.1">
                      <locus from="2r"/>
@@ -93,18 +92,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <textLang mainLang="gez"/>
                   </msItem>
                      </msItem>
-                  
-                  <msItem xml:id="ms_i2">
-                     <locus from="159r" to="164r"/>
-                     <title type="incomplete" ref="LIT2733RepCh17"/>
-                     <textLang mainLang="gez"/>
-                     <note>The text is fully identical with <persName ref="PRS3562Dillmann"/>'s edition, but 
-                        breaks off in what corresponds to verse 18 of  <bibl>
-                        <ptr target="bm:Dillmann1866Chrestomathia"/>
-                        <citedRange unit="page">135</citedRange>
-                     </bibl>.</note>
-                  </msItem>
-               
                </msContents>
                      
                <physDesc>
@@ -139,11 +126,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <date notBefore="1700" notAfter="1799" cert="low"/>
                         <seg type="script">Written in a good hand, probably <date>18th century</date>. </seg>
                  </handNote>
-                     <handNote xml:id="h2" script="Ethiopic" corresp="#ms_i2">
+                     <handNote xml:id="h2" script="Ethiopic" corresp="#a1">
                         <date notBefore="1700" notAfter="1799" cert="low"/>
                         <seg type="script">Written in a poor hand. </seg>
                      </handNote>
-                     <handNote xml:id="h3" script="Ethiopic" corresp="#a1">
+                     <handNote xml:id="h3" script="Ethiopic" corresp="#a2">
                         <date notBefore="1700" notAfter="1799" cert="low"/>
                         <seg type="script">Writing very poor. </seg>
                      </handNote>
@@ -159,22 +146,35 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <additions>
                      <list>
-                        <item xml:id="a1">
-                           <locus target="#161v"/>
-                           <desc type="GuestText"><title ref="LIT4274AkkonuB" type="complete"/>; the following is the incipit:</desc> <!--is this an addition?-->
-                           <q xml:lang="gez">አኮኑ፡ ብእሲ፡ ሶበ፡ ኀኒጸ፡ ቤት፡</q>
+                        
+                        <item xml:id="a1"> <!--addition?-->
+                           <locus from="159r" to="164r"/>
+                           <desc type="GuestText">
+                           <title type="incomplete" ref="LIT2733RepCh17"/>; The text is fully identical with <bibl>
+                              <ptr target="bm:Dillmann1866Chrestomathia"/>
+                              <citedRange unit="page">135</citedRange>
+                           </bibl>, but 
+                              breaks off in what corresponds to verse 18 of the edition.</desc>
+                           <q xml:lang="gez"/>
                         </item>
                         
                         <item xml:id="a2">
+                           <locus target="#161v"/>
+                           <desc type="GuestText">
+                              <title ref="LIT4274AkkonuB" type="complete"/>; the following is the incipit:</desc> <!--is this an addition?-->
+                           <q xml:lang="gez">አኮኑ፡ ብእሲ፡ ሶበ፡ ኀኒጸ፡ ቤት፡</q>
+                        </item>
+                        
+                        <item xml:id="a3">
                            <locus target="#1r"/>
                            <date when="1868" evidence="internal"/>
                            <desc type="OwnershipNote"/> 
-                           <q xml:lang="en">Major General <persName ref="PRS11438Roome" role="owner">F. Roome</persName>, C.B., late Chief of the Political <!--&-->
+                           <q xml:lang="en">Major General <persName ref="PRS11438Roome" role="owner">F. Roome</persName>, C.B., late Chief of the Political &amp;
                               Intelligence Department <placeName ref="LOC5534Sanafe">Senafé</placeName> Abyssinia in <date>1868</date>.</q>
                         </item>
                         
                            <item xml:id="e1">
-                              <desc>The name of the owner is erased often.</desc> 
+                              <desc>The name of the owner is erased throughout.</desc> 
                               <q xml:lang="gez"/>
                            </item>
                      </list>
@@ -242,6 +242,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-02-14">Created catalogue entry</change>
+         <change who="DR" when="2017-06-13">Changes</change>
       </revisionDesc>
    </teiHeader>
    <text>
