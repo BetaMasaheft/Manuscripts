@@ -39,28 +39,58 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </altIdentifier>
                   </msIdentifier>
                
-               <msContents>
-                  <summary/>
+               <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                        </support>
+                        <extent>
+                           <measure unit="leaf">98</measure>
+                           <note>formae 4<hi rend="apices">ae</hi></note>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="3"/>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               
+                  <history>
+                     <origin>
+                        <origDate notBefore="1592" notAfter="1605" evidence="reign"/>
+                        <origPlace ref="LOC3010Ethiop"/>
+                     </origin>
+                     <provenance><ref target="#p2"/>  was copied for <persName ref="PRS2916Bruce" role="patron"/>, but the rest
+                        of the manuscript was produced between <date notBefore="1592" notAfter="1605"/>.</provenance>
+                  </history>
+                  
+                  <additional>
+                     <adminInfo>
+                        <recordHist>
+                           <source>
+                              
+                              <listBibl type="catalogue">
+                                 <bibl><ptr target="bm:Dillmann1848Catalogus"/>
+                                    <citedRange unit="page">76b-80a</citedRange></bibl>
+                              </listBibl>
+                              <listBibl type="secondary">
+                                 <bibl><ptr target="bm:Kropp2016Zekra"/><citedRange unit="page">1702</citedRange></bibl>
+                                 <bibl><ptr target="bm:Wion2009LibAks"/><citedRange unit="page">139-142</citedRange></bibl>
+                              </listBibl>
+                           </source>
+                        </recordHist>
+                     </adminInfo>
+                  </additional>
                   
                   
-                  <msItem xml:id="ms_i1">
-                     <locus target="#1 #3"/>
-                     <title type="complete" ref="LIT3852KingList" xml:lang="gez">በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS3562Dillmann" extent="unknown"/>
-                     ንጽሕፍ፡ ዜና፡ ልደቶሙ፡ ለአበው፡ እምአዳም፡ እስከ፡ ይእዜ፡</title> <!--which recension?-->
-                     <textLang mainLang="gez"/> 
-                  </msItem>
+                  <msPart  xml:id="p1">
+                     <msIdentifier/>
+                     <msContents>
+                        <summary/>
                   
-                  <msItem xml:id="ms_i2">
-                     <locus target="#3 #2 #4"/>
-                     <title type="incomplete" ref="LIT1076alMagm"/>
-                     <textLang mainLang="gez"/>
-                     <note>Excerpts from <ref type="work" corresp="LIT1076alMagm"/> and
-                       a chronology of the Ethiopian kings.</note>
-                  </msItem>
-                  
-                  
-                  <msItem xml:id="ms_i3">
-                     <locus from="5" to="15"/>
+                        <msItem xml:id="p1_i1">
+                     <locus from="5r" to="15"/>
                      <title type="complete" ref="LIT4275ChronAmdS"/>
                      <textLang mainLang="gez"/>
                      <incipit xml:lang="gez">በስመ፡ <gap reason="ellipsis" resp="PRS3562Dillmann" extent="unknown"/>
@@ -70,14 +100,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <explicit type="subscription" xml:lang="gez">እግዚአብሔር፡ የሀቦ፡ ህየንተ፡ ዘበምድር፡ 
                         ዘበሰማያት፡ ወያኑሕ፡ መዋዕሊሁ፡ ዲበ፡ ምድር፡ ወያድኅኖ፡ እሞት፡ ዘግብት፡ ወያውርሶ፡ መንግሥተ፡
                         ሰማያት፡ ምስለ፡ ኂራን፡ ነገሥት፡ ለዓለመ፡ ዓለም፡</explicit>
+                           <listBibl type="editions">
+                              <bibl><ptr target="bm:Kropp1994AmdaSeyon"/></bibl>
+                           </listBibl>
+                           <listBibl type="translation">
+                              <bibl><ptr target="bm:Kropp1994AmdaSeyonTr"/></bibl>
+                           </listBibl>
                   </msItem>
                   
-                  <msItem xml:id="ms_i4">
-                     <locus from="16" to="30"/>
+                        <msItem xml:id="p1_i2">
+                     <locus from="16" to="30va"/>
                      <title type="complete">History of the Kings of Ethiopia from Zarʾa
                      Yāʿǝqob to Nāʿod</title>
                      
-                  <msItem xml:id="ms_i4.1">
+                           <msItem xml:id="p1_i2.1">
                      <locus from="16" to="23"/>
                      <title type="complete" ref="LIT4646Chronicle"/>
                      <textLang mainLang="gez"/>
@@ -92,16 +128,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <note>Similar prayers as in the incipit for <persName ref="PRS6229LebnaDe"/> are written at the end of the work.</note>
                   </msItem>
                   
-                  <msItem xml:id="ms_i4.2">
+                           <msItem xml:id="p1_i2.2">
                      <locus from="23" to="29"/>
                      <title type="complete" ref="LIT4647ChronBaEd"/>
                      <textLang mainLang="gez"/>
                      <incipit xml:lang="gez">ወእምድኅረ፡ አዕረፈ፡ ንጉሥ፡ ዘርአ፡ ያዕቆብ፡ ነግሠ፡ ወልዱ፡ <persName ref="PRS2334BaedaM">በእደ፡ ማርያም፡</persName></incipit>
                      <note>The entirety of <persName ref="PRS2334BaedaM"/>'s reign is covered. Prayers for
-                        <persName ref="PRS6229LebnaDe"/> similar to those in <ref target="#ms_i4.1"/> are included at the end.</note>
+                        <persName ref="PRS6229LebnaDe"/> similar to those in <ref target="#p1_i2.1"/> are included at the end.</note>
                   </msItem>
                   
-                  <msItem xml:id="ms_i4.3">
+                           <msItem xml:id="p1_i2.3">
                      <locus from="29" to="30"/>
                      <title type="complete" ref="LIT4648ChronEsk"/>
                      <textLang mainLang="gez"/>
@@ -111,7 +147,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <note>Prayers for  <persName ref="PRS6229LebnaDe"/> are included at the end. </note>
                   </msItem>
                   
-                  <msItem xml:id="ms_i4.4">
+                           <msItem xml:id="p1_i2.4">
                      <locus target="#30"/>
                      <title type="complete" ref="LIT4649ChronNa"/>
                      <textLang mainLang="gez"/>
@@ -121,25 +157,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </msItem>
                   
                   
-                  <msItem xml:id="ms_i5">
-                     <locus from="30" to="38"/>
+                        <msItem xml:id="p1_i3">
+                     <locus from="30" to="34vb"/>
                      <title type="complete" ref="LIT2341serata"/>
                      <textLang mainLang="gez" otherLangs="am"/>
+                           <!--folio numbers and divisions of the text taken from bm:Kropp2017Erbbesitz-->
                      
-                     <msItem xml:id="ms_i5.1">
+                           <msItem xml:id="p1_i3.1">
                         <locus from="30" to="31"/>
                         <title type="complete" ref="LIT2335serata">ሥርዓተ፡ ግብር፡ ዘቋሞች፡ ወዘዕለት፡ ማእድ፡</title>
                         <textLang mainLang="gez" otherLangs="am"/>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.2">
+                           <msItem xml:id="p1_i3.2">
                         <locus from="31" to="32"/>
                         <title type="complete">Sitting and eating order of the dignitaries</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                         <note>The individual sections composing this part have no titles.</note>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.3">
+                           <msItem xml:id="p1_i3.3">
                         <locus target="#32"/>
                         <title type="complete" xml:lang="gez">ወግዕ፡ ዘመንግሥት፡ ቤት፡ ሥርዓተ፡ ዘሠርዑ፡ ንጉሥነ፡
                         ዓምደ፡ ጽዮን፡</title>
@@ -148,39 +185,40 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         treasures are kept and the servants guarding them.</note>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.4">
+                           <msItem xml:id="p1_i3.4">
                         <locus from="32" to="33"/>
                         <title type="complete">On the royal camps</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.5">
+                           <msItem xml:id="p1_i3.5">
                         <locus from="33" to="34"/>
                         <title type="complete" xml:lang="gez">ወግዕ፡ ዘበቍሎ፡ ቤት፡ ዘሠርዑ፡ ሐፄ፡ ዓምደ፡ ጽዮን፡</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                         <note>On mules.</note>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.6">
+                           <msItem xml:id="p1_i3.6">
                         <locus target="#34"/>
                         <title type="complete" xml:lang="gez">ዘወፅኡ፡ እምግብጽ፡ ምስለ፡ እብነ፡ እልሐኪም፡ እብነ፡
                         እልሀኪም፡ ብሂል፡ ወልደ፡ ጠቢብ፡ ብሂል፡ እሉ፡ እሙንቱ፡</title>
                            <textLang mainLang="gez" otherLangs="am"/>
-                     </msItem>
+                     </msItem> 
+                        </msItem>
                      
-                     <msItem xml:id="ms_i5.7">
+                           <msItem xml:id="p1_i3.7">
                         <locus from="34" to="35"/>
-                        <title type="complete">Catalogue of 150 place names</title>
+                              <title type="complete" ref="LIT4666Sema"/>
                            <textLang mainLang="gez" otherLangs="am"/>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.8">
+                           <msItem xml:id="p1_i3.8">
                         <locus from="36" to="37"/>
                         <title type="complete" ref="LIT4650RoyalSongs">Royal Songs</title> 
                            <textLang mainLang="am"/>
                      </msItem>
                      
-                     <msItem xml:id="ms_i5.9">
+                           <msItem xml:id="p1_i3.9">
                         <locus target="#38"/>
                         <title type="incomplete" xml:lang="gez">በአኰቴተ፡ አብ፡ ወውልድ፡ ወመንፈስ፡ ቅዱስ፡
                         ትጽሕፈ፡ ርስተ፡ አምባ፡ ዘእስራኤል፡ በከመ፡ ኮነ፡ በበ፡ ገጹ፡ ወበበ፡ ዘመኑ፡</title>
@@ -188,17 +226,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <note>Description of the inheritance of the Ethiopian kings.</note>
                         <note>The end is missing.</note>
                   </msItem>
-                  </msItem>
                   
                   <!--apparently different foliation used in bm:Kropp1988LebnaI compared to Dillmann/bm:ContiRossini1894Lebna/Solomon
                   the description here follows Dillmann-->
                   
-                  <msItem xml:id="ms_i6">
+                        <msItem xml:id="p1_i4">
                      <locus from="39" to="97"/>
                      <title type="complete">History of <persName ref="PRS8550sardaDe"/> and his predecessors</title>
                      <textLang mainLang="gez"/>
                      
-                     <msItem xml:id="ms_i6.1">
+                           <msItem xml:id="p1_i4.1">
                         <locus from="39ra" to="39rb"/>
                         <title type="complete">Introduction to <ref type="work" corresp="LIT4651ChronLeb"/></title>
                         <textLang mainLang="gez"/>
@@ -211,7 +248,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </listBibl>
                      </msItem>
                      
-                     <msItem xml:id="ms_i6.2">
+                           <msItem xml:id="p1_i4.2">
                         <locus from="39rb" to="40vb"/>
                         <title type="complete" ref="LIT4651ChronLeb" xml:lang="gez">ዜናሁ፡ ለንጉሥ፡ ጻድቅ፡
                         ልብነ፡ ድንግል፡ መፍቀሬ፡ እግዚአብሔር፡ ርቱዐ፡ ሃይማኖት፡ ላዕሌሁ፡ ሰላም፡</title>
@@ -229,7 +266,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </listBibl>
                      </msItem>
                      
-                     <msItem xml:id="ms_i6.3">
+                           <msItem xml:id="p1_i4.3">
                         <locus from="41vc" to="43rc"/> <!--foliation from bm:Kropp1988LebnaI-->
                         <title type="complete" ref="LIT1965Mashaf"/>
                         <textLang mainLang="gez"/>
@@ -241,7 +278,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </listBibl>
                      </msItem>
                      
-                     <msItem xml:id="ms_i6.4">
+                           <msItem xml:id="p1_i4.4">
                         <locus from="43r" to="54v"/>
                         <title type="complete" ref="LIT3122Galaw"/>
                         <textLang mainLang="gez"/>
@@ -250,7 +287,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </listBibl>
                      </msItem>
                      
-                     <msItem xml:id="ms_i6.5">
+                           <msItem xml:id="p1_i4.5">
                         <locus from="55" to="56"/>
                         <title type="complete" xml:lang="gez" ref="LIT4653Compendium">ክፍል፡ ዳግማዊ፡ ዘንከሥት፡ ቦቱ፡ ዜና፡ መዊኦቱ፡ 
                         ወትሩፋተ፡ ኂሩቱ፡ በአኅዥሮ፡ አኮ፡ በአንሖ፡ አኮ፡ በአፈድፍደ፡ አላ፡ በአውሕደ፡ ለንጉሥነ፡ መፍቀሬ፡ እግዚአብሔር፡
@@ -264,7 +301,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </listBibl>
                      </msItem>
                      
-                     <msItem xml:id="ms_i6.6">
+                           <msItem xml:id="p1_i4.6">
                         <locus from="56" to="60"/>
                         <title type="complete" xml:lang="gez" ref="LIT4330Minas">ክፍል፡ ሠልሳዊ፡ ዘቦቱ፡
                         ንከሥት፡ ዜና፡ ስቃያቲሁ፡ ለንጉ<sic resp="DR">ም</sic>፡ ሚናስ፡</title>
@@ -277,7 +314,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </listBibl>
                      </msItem>
                      
-                     <msItem xml:id="ms_i6.7">
+                           <msItem xml:id="p1_i4.7">
                         <locus from="61" to="97"/> <!--different foliation used in bm:ContiRossini1907SarsaDengel-->
                         <title type="complete" xml:lang="gez" ref="LIT3531Sarsa">ንጽሕፍ፡ መጽሐፈ፡ 
                         ዜናሁ፡ ለንጉሥ፡ ሠርፀ፡ ድንግል፡ እግዚአብሔር፡ ያኑኅ፡ መዋዕሊሁ፡ ከመ፡ መዋዕለ፡ ዕፀ፡ ሕይወት፡
@@ -303,11 +340,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">98</measure>
+                           <measure unit="leaf">95</measure>
+                           <locus from="5" to="98"/>
                            <note>formae 4<hi rend="apices">ae</hi></note>
+                           <measure unit="folio" type="blank">3</measure>
+                           <locus target="#35v #39r #39v"/>
                         </extent>
-                        <collation><locus target="#2"/> has been misplaced from its proper position
-                        after <locus target="#3"/>.</collation>
+                        <collation><locus target="#38"/> and <locus target="#39"/> are separated by an empty leaf, which Kropp supposes was the end of a quire. <bibl><ptr target="bm:Kropp2017Erbbesitz"/><citedRange unit="page">347</citedRange></bibl></collation>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="3"/>
@@ -316,10 +355,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <locus to="5"/>
-                        <seg type="script"/>
-                     </handNote>
-                     <handNote xml:id="h2" script="Ethiopic">
                         <locus from="5"/>
                         <seg type="script">Very small characters, carefully executed.</seg>
                      </handNote>
@@ -345,7 +380,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <origDate notBefore="1592" notAfter="1605" evidence="reign"/>
                      <origPlace ref="LOC3010Ethiop"/>
                   </origin>
-                  <provenance> </provenance>
+                  <provenance></provenance>
                </history>
                
                   <additional>
@@ -365,6 +400,66 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </recordHist>
                         </adminInfo>
                   </additional>
+                  </msPart>
+               
+                  <msPart  xml:id="p2">
+                     <msIdentifier/>
+                     <msContents>
+                        <summary/>
+                        
+                        <msItem xml:id="p2_i1">
+                           <locus target="#1 #3"/>
+                           <title type="complete" ref="LIT3852KingList" xml:lang="gez">በስመ፡ አብ፡ <gap reason="ellipsis" resp="PRS3562Dillmann" extent="unknown"/>
+                              ንጽሕፍ፡ ዜና፡ ልደቶሙ፡ ለአበው፡ እምአዳም፡ እስከ፡ ይእዜ፡</title> <!--which recension?-->
+                           <textLang mainLang="gez"/> 
+                        </msItem> 
+                        
+                        <msItem xml:id="p2_i2">
+                           <locus target="#3 #2 #4"/>
+                           <title type="incomplete" ref="LIT1076alMagm"/>
+                           <textLang mainLang="gez"/>
+                           <note>Excerpts from <ref type="work" corresp="LIT1076alMagm"/> and
+                              a chronology of the Ethiopian kings.</note>
+                        </msItem>
+                     </msContents>
+                        
+                        <physDesc>
+                           <objectDesc form="Codex">
+                              <supportDesc>
+                                 <support>
+                                    <material key="parchment"/>
+                                 </support>
+                                 <extent>
+                                    <measure unit="leaf">4</measure>
+                                    <locus from="1" to="4"/>
+                                    <note>formae 4<hi rend="apices">ae</hi></note>
+                                 </extent>
+                                 <collation>These leaves probably consitute a quire which was added later to the manuscript. <locus target="#2"/> has been misplaced from its proper position
+                                    after <locus target="#3"/>.
+                                    See also <bibl><ptr target="bm:Kropp2017Erbbesitz"/><citedRange unit="page">346</citedRange></bibl>.</collation>
+                              </supportDesc>
+                              <layoutDesc>
+                                 <layout columns="3"/>
+                              </layoutDesc>
+                           </objectDesc>
+                           
+                           <handDesc>
+                              <handNote xml:id="h2" script="Ethiopic">
+                                 <locus to="5"/>
+                                 <seg type="script">Written by several hands, see <bibl><ptr target="bm:Kropp2017Erbbesitz"/><citedRange unit="page">346</citedRange></bibl>.</seg>
+                              </handNote>
+                           </handDesc>
+                        </physDesc>
+                        
+                        <history>
+                           <origin>
+                              <origDate notBefore="1769" notAfter="1772"/>
+                              <origPlace ref="LOC3010Ethiop"/>
+                           </origin>
+                           <provenance>This part of the manuscript was copied for <persName ref="PRS2916Bruce" role="patron"/>.</provenance>
+                        </history>
+                  </msPart>
+               
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -378,6 +473,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
                <term key="Hagiography"/>
+               <term key="HistoryAndHistoriography"/>
+               <term key="Paks2" corresp="#p1"/>
+               <term key="Gon" corresp="#p2"/>
+               <term key="ZaMa" corresp="#p2"/>
             </keywords>
          </textClass>
          <langUsage>   
@@ -391,17 +490,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <revisionDesc>
          <change who="DR" when="2017-05-16">Created catalogue entry</change>
          <change who="DR" when="2017-05-22">Additions</change>
+         <change who="DR" when="2017-07-03">Added mspart</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div type="edition">
-            <div type="textpart" xml:lang="gez" xml:id="ExcerptIntroLebnaD" corresp="#ms_i6.1">
+            <div type="textpart" xml:lang="gez" xml:id="ExcerptIntroLebnaD" corresp="#p1_i4.1">
                <ab>
                   ንጽሕፍ፡ መቅድመ፡ ዜና፡ አበዊሁ፡ ነገሥት፡ ርቱዓነ፡ ሃይማኖት፡ ወአስተዳኅርነ፡ ኪያሁ፡ ከመ፡ ይኩን፡ ኀበ፡ ዘየዓቢ፡ መዓርግ፡ እምዘ፡ ይቴሐት፡
                </ab>
             </div>
-            <div type="textpart" xml:lang="gez" xml:id="ExcerptSarsaD" corresp="#ms_i6.5"> <!--subscription, addition?-->
+            <div type="textpart" xml:lang="gez" xml:id="ExcerptSarsaD" corresp="#p1_i4.5"> <!--subscription, addition?-->
                <ab>
                   ይቤ፡ በዓለ፡ ዝንቱ፡ መጽሐፍ፡ ኦአኃው፡ ማእምራን፡ እለ፡ ታነብብዎ፡ ለዝንቱ፡ መጽሐፍ፡ ኢትትዐቀፉ፡ ቦቱ። እምኒ፡
                   ኢያሠነየ፡ ንባበ፡ ወኢያሠርገወ፡ ቃለ፡ አልቦቱ፡ ነውረ፡ እስመ፡ ውእቱ፡ ተናገረ፡ አምጣነ፡ ክሂሎቱ፡ በከመ፡ አንበቦ፡
