@@ -43,7 +43,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <title type="complete" ref="LIT2230Saatat"/>
                         <textLang mainLang="gez"/> 
                      <incipit xml:lang="gez">እጽሕፍ፡ በሰላመ፡ እግዚአብሔር፡ ትእዛዘ፡ ጸሎት፡ ዘዘ፯፡ ጊዜያት፡ ዘመአልት፡
-                     ወዘሌሊት፡ ዘነገሮ፡ መልአክ፡ ለአባ፡ እንጦንስ፡ ብትእዛዘ፡ እግዚአብሔር፡ አሜን።</incipit>
+                     ወዘሌሊት፡ ዘነገሮ፡ መልአክ፡ ለአባ፡ እንጦንስ፡ በትእዛዘ፡ እግዚአብሔር፡ አሜን።</incipit>
                      
                      <msItem xml:id="ms_i1.1">
                         <locus from="4v"/>
@@ -104,7 +104,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msItem xml:id="ms_i3">
                      <locus from="108v"/>
                      <colophon xml:id="coloph1">
-                        <note>Passage describing the date (<date calendar="ethiopian">1787</date>/<date>1794</date>) and place of origin, 
+                        <note>Passage describing the date (<date calendar="ethiopian" when="1794" when-custom="1787" evidence="internal">1787</date>)
+                           and place of origin, 
                            <placeName ref="gn:281184">Jerusalem</placeName>, of the manuscript.</note>
                      </colophon>
                   </msItem>
@@ -112,14 +113,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msItem xml:id="ms_i4">
                      <locus from="109r"/>
                      <title type="incomplete" ref="LIT3989Aragawi">A <foreign>dǝrsān</foreign> of
-                        <persName ref="PRS5740JohnSab"/></title> <!--which textpart/ID?-->
+                        <persName ref="PRS5740JohnSab"/></title>
                      <textLang mainLang="gez"/> 
                   </msItem>
                   
                   <msItem xml:id="ms_i5">
                      <locus from="120r"/>
                      <title type="incomplete" ref="LIT3989Aragawi">A <foreign>dǝrsān</foreign> of
-                        <persName ref="PRS5740JohnSab"/></title> <!--which textpart/ID?-->
+                        <persName ref="PRS5740JohnSab"/></title> 
                      <textLang mainLang="gez"/> 
                   </msItem>
                
@@ -136,8 +137,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <measure unit="folio" type="blank">8</measure>
                            <locus target="#1 #2v #3r #86v #128v #129"/>
                            <dimensions type="outer" unit="in">
-                              <height>7.63</height>
-                              <width>5</width>
+                              <height>5.75</height>
+                              <width>4.25</width>
                            </dimensions>
                         </extent>
                         <condition key="deficient">Illegible in parts.</condition>
@@ -157,15 +158,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <desc type="Record"></desc>
+                           <locus target="#2r"/>
+                           <desc type="Record"/>
                            <q xml:lang="en">Prayers and other theological writings in the Abyssinian 
                               language. <placeName ref="gn:360630">Cairo</placeName> <date>1801</date>.</q>
                         <q xml:lang="en">I obtained this Manuscript of an Abyssinian Dean, A Negro, 
                            who came to Grand <placeName ref="gn:360630">Cairo</placeName>.
                            <persName ref="PRS11462Clarke">E. D. Clarke</persName>.</q>
                         </item>
+                        
+                        <item xml:id="a2">
+                           <locus target="#2r"/>
+                           <desc type="Unclear">Gnomoníc table in Arabic.</desc>
+                           <q xml:lang="ar"/>
+                        </item>
+                        
+                        <item xml:id="e1">
+                           <locus target="#46v"/>
+                           <desc>The scribe was <persName ref="PRS11703HabtaM" role="scribe"/>, as is mentioned on <locus target="#46v"/> and elsewhere.</desc>
+                       <q xml:lang="gez"/>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <desc>The owner was <persName ref="PRS11704GabraG" role="owner"/>.</desc>
+                           <q xml:lang="gez"/>
+                        </item>
                      </list>
                   </additions>
+                  
                   <bindingDesc>
                      <binding xml:id="binding" contemporary="false">
                         <decoNote xml:id="b1">In European leather binding</decoNote>
@@ -214,6 +234,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="Chants"/>
                <term key="Liturgy"/>
                <term key="MonasticLiterature"/>
+               <term key="ZaMa"/>
             </keywords>
          </textClass>
          <langUsage>
@@ -225,6 +246,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-02-23">Created catalogue entry</change>
+         <change who="DR" when="2017-08-08">Additions</change>
       </revisionDesc>
    </teiHeader>
    <text>
