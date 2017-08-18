@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="FSUor10" type="mss">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Old Testament Books</title>
+                <editor key="DR"/>
+                <editor key="AB" role="generalEditor"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                    Forschungsumgebung / beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc xml:id="ms">
+                    <msIdentifier>
+                        <repository ref="INS0317Frank"/>
+                        <idno facs="http://sammlungen.ub.uni-frankfurt.de/msorient/content/pageview/5247790">Ms.or.10</idno>
+                        <altIdentifier>
+                            <idno>Rüpp. II,4</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno>Goldschmidt Nr. 4</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    
+                    <msContents>
+                        <summary/>
+                        
+                        
+                        <msItem xml:id="ms_i1">
+                            <locus target="#i" facs="http://sammlungen.ub.uni-frankfurt.de/msorient/content/pageview/5247796"/>
+                            <title type="incomplete" ref="LIT2697Sam" xml:lang="gez"/>
+                            <textLang mainLang="gez"/>
+                        </msItem>
+                 
+                    </msContents>
+                    
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <measure unit="folio">603</measure> 
+                                    <note>The last leaf is cut in half vertically.</note>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>310</height>
+                                        <width>260</width>
+                                    </dimensions>
+                                </extent>
+                            </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="2" writtenLines="21 23">
+                                    <locus from="1" to="312"/>
+                                    <locus from="515" to="603"/>
+                                </layout>
+                                <layout columns="3" writtenLines="25">
+                                    <locus from="313" to="514"/>
+                                </layout>
+                            </layoutDesc>
+                            
+                        </objectDesc>
+                        
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic"> 
+                                <seg type="script">Good, clear handwriting.</seg>
+                                <seg type="rubrication">Content description at the top of the pages until <locus target="#312"/>, <ref target="#a1"/>, chapter division.</seg>
+                            </handNote>
+                            <handNote xml:id="h2" script="Ethiopic">
+                                <locus from="313" to="514"/>
+                                <seg type="script">Smaller characters than <ref target="#h1"/>.</seg>
+                            </handNote>
+                            <handNote xml:id="h3" script="Ethiopic" corresp="#a1">
+                                <locus target="#311"/>
+                            </handNote>
+                        </handDesc>
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <locus to="312"/>
+                                    <desc>At the top of each page, the content is indicated in red.</desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <locus target="#311 #313 #453 #515"/>
+                                    <desc>The name of the original owner or scribe has been erased everywhere.</desc>
+                                </item>
+                                <item xml:id="e3">
+                                    <locus target="#1"/>
+                                    <desc>The name of <persName ref="PRS8249Ruppell"/> is added on the first page.</desc>
+                                </item>
+                                <item xml:id="a1" corresp="#h3">
+                                    <locus target="#311"/>
+                                    <desc type="OwnershipNote"/>
+                                    <q xml:lang="gez"><hi rend="rubrication">ዝመጽሐፍ፡ ዘ<persName ref="PRS11719SuraheK" role="owner">ሱራሔ፡ ክርስቶስ፡</persName>
+                                        ወዘአቡሁ፡ <persName ref="PRS11718MazrataK">መዝራዕተ፡ ክርስቶስ።</persName> ወብእሲቱ፡ <persName ref="PRS11717AmataY">ዓመተ፡ ዮሐንስ።</persName></hi></q>
+                                </item>
+                            </list>
+                        </additions>
+                        
+                        <bindingDesc>
+                            <binding xml:id="binding" contemporary="true">
+                                <decoNote xml:id="b1">Ethiopian binding, wooden boards covered with leather, slightly damaged</decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/></decoNote>
+                            </binding>
+                        </bindingDesc>
+                    </physDesc>
+                    
+                    <history>
+                        <origin>
+                            <origPlace ref="LOC3010Ethiop"/>
+                            <origDate notBefore="1700" notAfter="1799" cert="low"/>
+                        </origin>
+                        <provenance>Bought by <persName ref="PRS8249Ruppell"/> between <date>1831</date> and <date>1834</date> in <placeName ref="LOC3010Ethiop"/>.
+                            While being transported from the Soviet to the American occupation zone on the  <date>3rd July 1945</date>, it fell from a truck,
+                            but was found on the same day and returned to the <placeName ref="INS0317Frank"/> in <date>1950</date>.
+                            See also <bibl><ptr target="bm:Toennies2012Verlust"/></bibl>.</provenance>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <listBibl type="catalogue">
+                                        <bibl><ptr target="bm:Goldschmidt1897catalogue"/>
+                                        <citedRange unit="page">12-17</citedRange></bibl>
+                                    </listBibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                       
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Encoded according to TEI P5 Guidelines.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term key="Bible"/>
+                    <term key="OldTestament"/>
+                    <term key="ApocryphaPseudoepigrapha"/>
+                    <term key="ChristianLiterature"/>
+                    <term key="ZaMa" cert="low"/>
+                    <term key="Gon" cert="low"/>
+                </keywords>
+            </textClass>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="gez">Gǝʿǝz</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="DR" when="2017-08-18">Created catalogue entry</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <ab/>
+        </body>
+    </text>
+</TEI>
