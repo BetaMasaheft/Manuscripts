@@ -5,11 +5,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="FSUor42" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="FSUor13" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Gospel of John</title>
+                <title>Maṣḥafa Ḥāwi</title>
                 <editor key="DR"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,12 +28,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0317Frank"/>
-                        <idno>Ms. or. 42</idno>
+                        <idno>Ms. or. 13</idno>
                         <altIdentifier>
-                            <idno>Rüpp. II, 8</idno>
+                            <idno>Rüpp. II, 9</idno>
                         </altIdentifier>
                         <altIdentifier>
-                            <idno>Goldschmidt Nr. 8</idno>
+                            <idno>Goldschmidt Nr. 9</idno>
                         </altIdentifier>
                     </msIdentifier>
                     
@@ -41,9 +41,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <summary/>
                         
                         <msItem xml:id="ms_i1">
-                            <title type="complete" ref="LIT1693John"/>
-                            <textLang mainLang="ti"/>
-                            <note>Chapters and verses are numbered, the content is summarized before most chapters.</note>
+                            <title type="complete" ref="LIT1933Mashaf" xml:lang="gez">መጽሐፈ፡ ሐዊ።</title>
+                            <textLang mainLang="gez"/>
                         </msItem>
                         
                     </msContents>
@@ -52,28 +51,30 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="paper"/>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="page">140</measure> 
+                                    <measure unit="page">589</measure> 
                                     <dimensions type="outer" unit="mm">
-                                        <height>170</height>
-                                        <width>240</width>
+                                        <height>470</height>
+                                        <width>380</width>
                                     </dimensions>
                                 </extent>
-                                <condition key="good">Some leaves are stained.</condition>
+                                <foliation>Quire numbers (<foreign xml:lang="gez">ባህል፡</foreign>) are indicated at the end of each quire.</foliation>
+                                <collation><note></note></collation>
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout writtenLines="18"/>
+                                <layout columns="3" writtenLines="40"/>
                             </layoutDesc>
                             
                         </objectDesc>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic"> 
-                                <seg type="script">Recent handwriting.</seg>
-                                <seg type="rubrication">Chapter divisions, verses, content summaries and the name of Jesus Christ are always rubricated.</seg>
+                                <seg type="script">Beautiful and clear recent handwriting.</seg>
+                                <seg type="rubrication">Beginnings of chapters and sections are always rubricated. The quire numbers are 
+                                indicated in red on the last folio of each quire.</seg>
                             </handNote>
                         </handDesc>
                         
@@ -83,14 +84,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#1r"/>
                                     <desc>The name of <persName ref="PRS8249Ruppell"/> is added on the first page.</desc>
                                 </item>
+                                <item xml:id="e3"> <!--colophon?-->
+                                    <desc>At the end of the manuscript, the names of the scribe, <persName ref="PRS11728BedaG" role="scribe"/> 
+                                        and the patron, <persName ref="PRS11729KesadaG" role="patron"/> are mentioned.</desc>
+                                </item>
                             </list>
                         </additions>
                         
                         <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1">European half leather cover.</decoNote> <!--Halbledereinband-->
+                            <binding xml:id="binding" contemporary="true">
+                                <decoNote xml:id="b1">Ethiopian wooden boards, covered with leather.</decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
-                                    <material key="leather"/></decoNote>
+                                    <material key="leather"/>
+                                <material key="wood"/></decoNote>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -98,15 +104,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <history>
                         <origin>
                             <origPlace><placeName ref="LOC3010Ethiop"/></origPlace>
-                            <origDate notBefore="1830" notAfter="1832"/>
+                            <origDate notBefore="1682" notAfter="1755" evidence="reign"/>
                         </origin>
-                        <provenance>This manuscript was produced possibly for <persName ref="PRS4722Gobat" role="patron"/>, see
-                            <bibl><ptr target="bm:Rueppell1840Reise"/><citedRange unit="page">408</citedRange></bibl>. 
-                            It was bought by <persName ref="PRS8249Ruppell"/> between <date>1831</date> and <date>1834</date> in <placeName ref="LOC3010Ethiop"/> and given by him
-                            after his return to the <placeName ref="INS0317Frank"/>.
-                            While being transported from the Soviet to the American occupation zone on the  <date>3rd July 1945</date>, it fell from a truck, and was lost during the following decades. 
-                            It was returned in <date>1979</date> to the Landesbibliothek Coburg and finally returned to the <placeName ref="INS0317Frank"/> in <date>1980</date>.
-                            See also <bibl><ptr target="bm:Toennies2012Verlust"/></bibl>.
+                        <provenance>Bought by <persName ref="PRS8249Ruppell"/> between <date>1831</date> and <date>1834</date> in <placeName ref="LOC3010Ethiop"/>
+                            and given by him after his return to the <placeName ref="INS0317Frank"/>.
                     </provenance>
                     </history>
                     <additional>
@@ -115,7 +116,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <source>
                                     <listBibl type="catalogue">
                                         <bibl><ptr target="bm:Goldschmidt1897catalogue"/>
-                                        <citedRange unit="page">22</citedRange></bibl>
+                                        <citedRange unit="page">22-48</citedRange></bibl>
                                     </listBibl>
                                 </source>
                             </recordHist>
@@ -133,17 +134,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term key="Bible"/>
-                    <term key="NewTestament"/>
                     <term key="ChristianLiterature"/>
-                    <term key="TigrinyaLiterature"/>
+                    <term key="Theology"/>
                     <term key="Translation"/>
-                    <term key="ZaMa"/>
+                    <term key="Gon"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
-                <language ident="ti">Tigrinya</language>
+                <language ident="it">Italian</language>
                 <language ident="gez">Gǝʿǝz</language>
             </langUsage>
         </profileDesc>
@@ -153,7 +152,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     </teiHeader>
     <text>
         <body>
-   <ab/>
+            <ab/>
         </body>
     </text>
 </TEI>
