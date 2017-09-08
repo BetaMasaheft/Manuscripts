@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmr003" xml:lang="en" type="mss">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESmr003" xml:lang="en" type="mss">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Sǝnkǝssar “Synaxarion” (three months)</title>
+            <title>Sǝnkǝssar (three months)</title>
             <editor key="DN"/>
             <editor role="generalEditor" key="AB"/>
          </titleStmt>
@@ -24,100 +25,116 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
+               
                <msIdentifier>
                   <repository ref="INS0042MR"/>
                   <collection>Ethio-SPaRe</collection>
                   <idno>MR-003</idno>
                </msIdentifier>
+               
                <msContents>
-                  <summary>I) Sǝnkǝssar “Synaxarion” for the first three months of the year (fols. 3ra-109vc)&#xD;
-I-1) Mäskäräm (fols. 3ra–42rc) &#xD;
-I-2) Ṭǝqǝmt (fols. 42ra–73vc)&#xD;
-I-3) Ḫǝdar (fols. 74ra–109vc)&#xD;
-The commemorative notices are followed by ʿarke-hymns.</summary>
+                  <summary/>
+                  
                   <msItem xml:id="ms_i1">
-                     
-                     <incipit>
-                        <foreign xml:lang="en"/>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
-                     <note/>
-                  </msItem>
-                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
-                  <msItem xml:id="ms_i2">
-                     <note>- On 17 Ḫǝdar the commemorative notice for Walatta Ṗeṭros is included, fol. 91vc-92rc.</note>
+                     <locus from="3ra" to="109vc"/>
+                     <title type="complete" ref="LIT2375Synaxa">Synaxarion for the first three months of the year</title>
+                     <note>The commemorative notices are followed by <foreign xml:lang="gez">ʿarke</foreign>-hymns</note>
+                     <msItem xml:id="ms_i1.1">
+                        <locus from="3ra" to="42rc"/>
+                        <title type="complete" ref="LIT2375Synaxa#Maskaram"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.2">
+                        <locus from="42ra" to="73vc"/>
+                        <title type="complete" ref="LIT2375Synaxa#Teqemt"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.3">
+                        <locus from="74ra" to="109vc"/>
+                        <title type="complete" ref="LIT2375Synaxa#Hedar"/>
+                        <note>The commemorative notice for <persName ref="PRS9848Walatta">Walatta Ṗeṭros</persName> on 17 Ḫǝdār is included on <locus from="91vc" to="92rc"/>.</note>
+                     </msItem>
                   </msItem>
                </msContents>
+               
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">111.0</measure> folios, of which
-                                                  <measure unit="leaf" type="blank">8.0</measure> blank
-                                                  fols. 1r-2v, 110r-111v, in
-                                                  <measure unit="quire">12.0</measure> quires ((A+11)). 
-                                                <dimensions type="outer">
+                        <extent>
+                           <measure unit="leaf">110</measure>
+                           <measure unit="leaf" type="blank">8</measure>
+                           <locus from="1r" to="2v"></locus>
+                           <locus from="110r" to="111v"></locus>
+                           <measure unit="quire">12 (A + 11)</measure>
+                           <dimensions type="outer" unit="mm">
                               <height unit="cm">34.0</height>
                               <width unit="cm">27.5</width>
                               <depth unit="cm">6.0</depth>
                            </dimensions>
                         </extent>
-                        <foliation><!--2016-10-18+02:00 Updated MR-003 from DomLib--></foliation>
+                        <foliation></foliation>
                         <collation>
                            <signatures>
-                              <note>Quire marks are written in the upper left corner: fols. 3e, 13r, 23r, 33r, 43r, 53r, 63r, 73r, 83r.</note>
+                              <note>Quire marks from <foreign xml:lang="gez">፩</foreign> to <foreign xml:lang="gez">፱</foreign> are written in the upper left corner 
+                                 on <locus target="#3r #13r #23r #33r #43r #53r #63r #73r #83r"/>.</note>
                            </signatures>
                            <list>
-                              <item xml:id="q1">
-                                 <dim unit="leaf">10</dim>
+                              <item xml:id="q1" n="A">
+                                 <dim unit="leaf">2</dim>
                                  <locus from="1r" to="2v"/>
-                                 <locus target="10"/>
-                                 <locus from="3r" to="12v"/>A(2/fols. 1r-2v) - ፩I(10/fols. 3r-12v) </item>
-                              <item xml:id="q2">
+                              </item>
+                              <item xml:id="q2" n="1">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="13r" to="22v"/> ፪II(10/fols. 13r-22v) </item>
-                              <item xml:id="q3">
+                                 <locus from="3r" to="12v"/>
+                              </item>
+                              <item xml:id="q3" n="3">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="23r" to="32v"/> ፫III(10/fols. 23r-32v) </item>
-                              <item xml:id="q4">
+                                 <locus from="13r" to="22v"/>
+                              </item>
+                              <item xml:id="q4" n="3">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="33r" to="42v"/> ፬IV(10/fols. 33r-42v) </item>
-                              <item xml:id="q5">
+                                 <locus from="23r" to="32v"/>
+                              </item>
+                              <item xml:id="q5" n="4">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="43r" to="52v"/> ፭V(10/fols. 43r-52v) </item>
-                              <item xml:id="q6">
+                                 <locus from="33r" to="42v"/>
+                              </item>
+                              <item xml:id="q6" n="5">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
+                                 <locus from="43r" to="52v"/>
+                              </item>
+                              <item xml:id="q7" n="6">
+                                 <dim unit="leaf">10</dim>
                                  <locus from="53r" to="62v"/>
-                                 <locus target="10"/>
-                                 <locus from="63r" to="72v"/> ፮VI(10/fols. 53r-62v)  - ፯VII(10/fols.63r-72v) </item>
-                              <item xml:id="q7">
+                              </item>
+                              <item xml:id="q8" n="7">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="73r" to="82v"/> ፰VIII(10/fols. 73r-82v) </item>
-                              <item xml:id="q8">
+                                 <locus from="63r" to="72v"/>
+                              </item>
+                              <item xml:id="q9" n="8">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="83r" to="92v"/> ፱IX(10/fols. 83r-92v) </item>
-                              <item xml:id="q9">
+                                 <locus from="73r" to="82v"/>
+                              </item>
+                              <item xml:id="q10" n="9">
                                  <dim unit="leaf">10</dim>
-                                 <locus target="10"/>
-                                 <locus from="93r" to="102v"/> X(10/fols. 93r-102v) </item>
-                              <item xml:id="q10">
+                                 <locus from="83r" to="92v"/>
+                              </item>
+                              <item xml:id="q11" n="10">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="93r" to="102v"/>
+                              </item>
+                              <item xml:id="q12" n="11">
                                  <dim unit="leaf">9</dim>
-                                 <locus from="103r" to="111r"/> XI(9; s.l.: 2, stub after 8/fols. 103r-111r).</item>
+                                 <locus from="103r" to="111r"/>
+                                 single leaf: 2, stub after 8
+                              </item>
                            </list>
                         </collation>
-                        <condition key="good">Holes and cuts are carefully repaired (e.g., fols. 2, 47, 56, 61).&#xD;
-Small water stains throughout the Ms. (e.g., fols. 4r, 5rv, 13v, 14r).</condition>
+                        <condition key="good">
+                           Holes and cuts are carefully repaired (e.g., on <locus target="2 #47 #56 #61"/>).
+                           Small water stains throughout the Ms. (e.g., on <locus target="4r #5rv #13v #14r"/>).
+                        </condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="3" writtenLines="32">
@@ -133,7 +150,7 @@ Small water stains throughout the Ms. (e.g., fols. 4r, 5rv, 13v, 14r).</conditio
                               <dim type="left">15</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <note>All data for fol. 48r.</note>
+                           <note>All data for <locus target="#48r"/>.</note>
                            <ab type="ruling">Quires I-VI have 32 lines, quires VII-XI have 33 lines.</ab>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
                            <ab type="ruling" subtype="pattern">
