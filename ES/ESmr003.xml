@@ -76,7 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <foliation></foliation>
                         <collation>
                            <signatures>
-                              <note>Quire marks from <foreign xml:lang="gez">፩</foreign> to <foreign xml:lang="gez">፱</foreign> are written in the upper left corner 
+                              <note>Quire marks from <q xml:lang="gez">፩</q> to <q xml:lang="gez">፱</q> are written in the upper left corner 
                                  on <locus target="#3r #13r #23r #33r #43r #53r #63r #73r #83r"/>.</note>
                            </signatures>
                            <list>
@@ -137,47 +137,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout columns="3" writtenLines="32">
+                        <layout columns="3" writtenLines="32 33">
                            <dimensions unit="mm">
                               <height>217</height>
                               <width>233</width>
-                              <dim type="intercolumn"/>
+                              <dim type="intercolumn">13 - 12</dim>
                            </dimensions>
                            <dimensions type="margin">
                               <dim type="top">41</dim>
                               <dim type="bottom">82</dim>
                               <dim type="right">27</dim>
                               <dim type="left">15</dim>
-                              <dim type="intercolumn"/>
+                              <dim type="intercolumn">13 - 12</dim>
                            </dimensions>
                            <note>All data for <locus target="#48r"/>.</note>
-                           <ab type="ruling">Quires I-VI have 32 lines, quires VII-XI have 33 lines.</ab>
+                           <ab type="ruling">Quires <ref target="#q2 #q3 #q4 #q5 #q6 #q7"/> have 32 lines, 
+                              quires <ref target="#q8 #q9 #q10 #q11 #q12 #q13"/> have 33 lines.</ab>
                            <ab type="pricking">Ruling and pricking are visible. </ab>
                            <ab type="ruling" subtype="pattern">
-Ruling pattern: 1E-1E-1E1E/0-0/0-0/C. </ab>
+                              Ruling pattern: 1E-1E-1E1E/0-0/0-0/C. </ab>
                            <ab type="pricking">
-Primary pricks are visible. </ab>
+                              Primary pricks are visible. </ab>
                            <ab type="pricking">
-Ruling pricks are visible. </ab>
+                              Ruling pricks are visible. </ab>
                            <ab type="ruling">
-The upper line is written above the ruling. </ab>
+                              The upper line is written above the ruling. </ab>
                            <ab type="ruling">
-The bottom line is written above the ruling.</ab>
+                              The bottom line is written above the ruling.</ab>
                         </layout>
                         <layout/>
                      </layoutDesc>
                   </objectDesc>
-                  <handDesc><!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
+                  <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Mediocre</seg>
                         <seg type="ink">Black, red (brilliant red)</seg>
-                        <date/>
+                        <date notBefore="1900" notAfter="1930">Early 20th-century script</date>
+                        <seg type="rubrication">
+                           Nomina sacra; the word <foreign xml:lang="gez">salām</foreign>; several lines or groups of lines in the incipit page of the commemorative 
+                           notices for each month; one or two initial lines of each commemorative notice; elements of punctuation signs throughout the Ms. 
+                           (e.g., nine dot asterisks in red and black, separating the commemoration notes; chains of red and black dots and nine dot asterisks separates the 
+                           months Maskaram and Ṭǝqǝmt on <locus target="#42r"/>); elements of Ethiopian numerals.
+                        </seg>
                      </handNote>
                   </handDesc>
+              
                   <bindingDesc>
                      <binding contemporary="true">
-                        <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.&#xD;
-Two pairs of sewing stations.</decoNote>
+                        <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather; textile inlays.
+                           Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>
                            <material key="leather"/>
@@ -188,52 +196,44 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b5">Blind tooled ornament visible on front and back cover (8 tools were used: criss cross, triple line fillet, small x, x-form, type of double sine waves with dots, double circle, corniform, cross hatching).</decoNote>
                      </binding>
                   </bindingDesc>
-                  <decoDesc>
-                     <decoNote type="rubrication" xml:id="d0">Nomina sacra; the word salām; several lines or groups of lines in the incipit page of the commemorative notices for each month; one or two initial lines of each commemorative notice; elements of punctuation signs throughout the Ms. (e.g., nine dot asterisks in red and black, separating the commemoration notes; chains of red and black dots and nine dot asterisks separates the months Mäskäräm and Ṭǝqǝmt, fol. 42r); elements of Ethiopian numerals.</decoNote>
-                  </decoDesc>
                </physDesc>
+               
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0042MR">MÓ&#x99;drÃ¤ Ruba /MR</placeName>
+                        <placeName ref="INS0042MR"></placeName>
                      </origPlace>
-                     <origDate notBefore="1900" notAfter="1930">early 20th century.</origDate>
+                     <origDate notBefore="1900" notAfter="1930">Early 20th century.</origDate>
                   </origin>
                </history>
                <additional>
                   <adminInfo>
                      <recordHist>
                         <source>
-                           <listBibl type="catalogue">                               <bibl><ptr target="bm:EthioSpare"/></bibl>                            </listBibl>
+                           <listBibl type="catalogue">                         
+                              <bibl><ptr target="bm:EthioSpare"/></bibl>              
+                           </listBibl>
                         </source>
                      </recordHist>
                      <custodialHist>
                         <custEvent type="restorations" subtype="none"/>
                      </custodialHist>
                   </adminInfo>
-                  
-                  
                </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+      
       <encodingDesc>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-               <person>
-                  <persName ref="PRS00000"/>
-                  <!--other-->
-               </person>
-            </listPerson>
-         </particDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Hagiography"/>
+               <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
          <langUsage>
@@ -246,8 +246,8 @@ Two pairs of sewing stations.</decoNote>
          <change who="DN" when="2010-05-11">registered</change>
          <change who="SD" when="2013-02-06">created</change>
          <change who="MV" when="2015-01-29">last edited</change>
-         <change who="PL" when="2016-05-10">transformed from mycore to TEI
-                            P5</change>
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change who="MV" when="2017-09-08">edited</change>
       </revisionDesc>
    </teiHeader>
    <text>
