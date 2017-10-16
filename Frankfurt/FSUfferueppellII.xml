@@ -5,11 +5,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="FSUrueppadIa" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="FSUfferueppellII" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Old Testament Books</title>
+                <title>German translation of the Ḫāylu Compilation</title>
                 <editor key="DR"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,7 +28,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0317Frank"/>
-                        <idno></idno>
+                        <idno>Ms. Ff. E. Rüppell II</idno>
                         <altIdentifier>
                             <idno>Rüpp. ad Ia</idno>
                         </altIdentifier>
@@ -43,8 +43,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                         
                         <msItem xml:id="ms_i1">
-                            <title type="incomplete" ref="LIT4090Haylu#"/> <!--add German title to work record-->
-                            <textLang mainLang="gez"/>
+                            <locus from="1r" to="123v"/>
+                            <title type="incomplete" ref="LIT4090Haylu#"/> <!--textparts, and add German title to work record-->
+                            <textLang mainLang="de"/>
                             <note>German translation by <persName ref="PRS8249Ruppell"/> of parts of <ref type="work" corresp="LIT4090Haylu"/>, qualified by
                                 <persName ref="PRS4747Goldschm"/> as very incorrect.</note>
                         </msItem>
@@ -57,18 +58,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="paper"/>
                                 </support>
                                 <extent>
-                                    <measure unit="page">246</measure> 
+                                    <measure unit="leaf">126</measure> <!--123+I, last two leaves not foliated-->
                                     <dimensions type="outer" unit="cm">
                                         <height>31</height>
                                         <width>22</width>
                                     </dimensions>
                                 </extent>
+                                <foliation>The manuscript was foliated after <persName ref="PRS4747Goldschm"/>'s catalogue description. The last two leaves
+                                are not foliated.</foliation>
                             </supportDesc>
                             
-                            <!--<layoutDesc>
-                                <layout columns="" writtenLines="">
-                                </layout>-->
-                            <!--</layoutDesc>-->
+                            
+                            <layoutDesc>
+                                <layout columns="1" writtenLines="32 37">
+                                </layout>
+                            </layoutDesc>
                             
                         </objectDesc>
                         
@@ -103,7 +107,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <history>
                         <origin>
                             <origPlace><placeName ref="LOC2085Cairo"/></origPlace>
-                            <origDate notBefore="1831" notAfter="1834" cert="low"/> <!--exact date-->
+                            <origDate notBefore="1833" notAfter="1834"/> 
                         </origin>
                         <provenance>Copied by <persName ref="PRS8249Ruppell"/> in <placeName ref="LOC2085Cairo"/>.
                       </provenance>
@@ -146,10 +150,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2017-10-15">Created catalogue entry</change>
+            <change who="DR" when="2017-10-16">Additions</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <graphic url=""/>
+        <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5410495"/>
     </facsimile>
     <text>
         <body>
