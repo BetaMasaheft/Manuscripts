@@ -41,24 +41,33 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <msItem xml:id="ms_i1">
                             <locus from="2r" to="9v"/>
-                            <title type="complete" xml:lang="la">Prolegomena in Pentateuchum Aethiopicum a Wanslebio Romae m. Febr. &amp; Mart. A. 1666
-                            descriptum etc., Vocabula Aethiopica quae Wanslebius in Pentateucho a se descripto etc. Excellentissimi domini Jobi Ludolfi 
+                            <title type="complete" xml:lang="la">Prolegomena in Pentateuchum Aethiopicum a
+                                <persName ref="PRS10036Wansleb">Wanslebio</persName> <placeName ref="Q220">Romae</placeName> m. <date>Febr. &amp; Mart. A. 1666</date>
+                                descriptum etc., Vocabula Aethiopica quae <persName ref="PRS10036Wansleb">Wanslebius</persName> in Pentateucho a se descripto etc. 
+                                Excellentissimi domini <persName ref="PRS6378Ludolf">Jobi Ludolfi</persName> 
                             observationes in librum hunc, de descriptione huius libri sciendum etc., Expositio abbrevationum</title> 
                             <textLang mainLang="gez"/>
                         </msItem>
                         
                         <msItem xml:id="ms_i2">
                             <locus from="15r" to="242v"/>
-                            <title type="complete" ref="LIT2477Torah" xml:lang="la">Pentateuchus <hi rend="rubric">Aethiopice</hi> a filio meo <persName ref="PRS6377Ludolf"><hi rend="rubric">Christiano Ludolfo</hi></persName> ab exemplaro
-                                Dn. <hi rend="rubric"><persName ref="PRS10789Picques">Ludovici Piques</persName></hi>, doctoris et socii Sorbonnae: Quod illi <persName ref="PRS10036Wansleb">Ioh. Mich: Wansleben</persName> 
-                                <placeName ref="Q220">Roma</placeName> a se descriptum vendiderat, <placeName ref="Q90">Parisiis</placeName> Ao: <date>CIƆIƆCLXXXIV</date>
-                                descriptus, atq. partim a me, partim ab amanuensi meo, <persName ref="PRS8634Schlicht">Christoph: Schlichting</persName>, versibus notatus. accedit etiam <hi rend="rubric">Isoua</hi>. Vide finem libri.</title> 
+                            <title type="complete" ref="LIT2477Torah" xml:lang="la">Pentateuchus <hi rend="rubric">Aethiopice</hi> a filio meo 
+                                <persName ref="PRS6377Ludolf"><hi rend="rubric">Christiano Ludolfo</hi></persName> ab exemplaro
+                                Dn. <hi rend="rubric"><persName ref="PRS10789Picques">Ludovici Piques</persName></hi>, 
+                                doctoris et socii Sorbonnae: Quod illi <persName ref="PRS10036Wansleb">Ioh. Mich: Wansleben</persName> 
+                                <placeName ref="Q220">Roma</placeName> a se descriptum vendiderat, 
+                                <placeName ref="Q90">Parisiis</placeName> Ao: <date>CIƆIƆCLXXXIV</date>
+                                descriptus, atq. partim a me, partim ab amanuensi meo,
+                                <persName ref="PRS8634Schlicht">Christoph: Schlichting</persName>, versibus notatus. accedit etiam <hi rend="rubric">Isoua</hi>. Vide finem libri.</title> 
                             <textLang mainLang="gez"/>
                             
                             <filiation>
                                 <listBibl type="relations">
                                     <bibl/>
-                                    <relation name="saws:isDirectCopyOf" active="FSUffhludolfII21" passive="BNFet1"/>
+                                    <relation name="saws:isDirectCopyOf" active="FSUffhludolfII21" passive="BNFet1">
+                                        <desc>This manuscript is a direct copy of <ref type="mss" corresp="BNFet1"/>.</desc>
+                                    </relation>
+                                   
                                 </listBibl>
                             </filiation>
                             
@@ -66,12 +75,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus from="17r" to="82v"/>
                                 <title type="complete" ref="LIT1546Genesi"/> 
                                 <textLang mainLang="gez"/>
+                                <note>Chapters 1-4 were copied by <persName ref="PRS6378Ludolf"/>.</note>
                             </msItem>
                             
                             <msItem xml:id="ms_i2.2">
                                 <locus from="83r" to="126v"/>
                                 <title type="complete" ref="LIT1367Exodus"/> 
                                 <textLang mainLang="gez"/>
+                                <note>Chapters 36-40 were copied by  <persName ref="PRS6378Ludolf"/>.</note>
                             </msItem>
                             
                             <msItem xml:id="ms_i2.3">
@@ -109,7 +120,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="paper"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">240</measure> <!--and several blank leafs at the end-->
+                                    <measure unit="leaf">248</measure>
+                                    <measure unit="leaf" type="blank">8</measure>
+                                    <locus from="i" to="v"/>
+                                    <locus from="243" to="244"></locus>
                                     <dimensions type="outer" unit="cm">
                                         <height>21</height>
                                         <width>18</width>
@@ -120,7 +134,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             
                             
                             <layoutDesc>
-                                <layout columns="1"> <!--lines-->
+                                <layout columns="1"> 
+                                    <locus from="1r" to="9v"/>
+                                </layout>
+                                <layout columns="1" writtenLines="20 25"> 
+                                    <locus from="17r" to="23v"/>
+                                    <locus from="117r" to="126v"/>
+                                </layout>
+                                <layout columns="1" writtenLines="28 30"> 
+                                    <locus from="24r" to="116v"/>
+                                    <locus from="127r" to="242v"/>
                                 </layout>
                             </layoutDesc>
                            
@@ -136,6 +159,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <seg type="ink">Black.</seg>
                             </handNote>
                             <handNote xml:id="h3" script="Ethiopic"> 
+                                <locus from="17r" to="23v"/>
+                                <locus from="117r" to="126v"/>
                                 <persName ref="PRS6378Ludolf"/>
                                 <seg type="ink">Black, red.</seg>
                             </handNote>
