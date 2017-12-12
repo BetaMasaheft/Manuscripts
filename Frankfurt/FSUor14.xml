@@ -44,7 +44,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <msItem xml:id="ms_i1">
                             <locus from="3ra" to="161rb"/>
-                            <title type="incomplete" ref="LIT1395Fethan" xml:lang="gez">ፍትሐ፡ ነገሥት።</title>
+                            <title type="incomplete" ref="LIT1395Fethan"/>
                             <textLang mainLang="gez"/>
                             
                             <msItem xml:id="ms_i1.1">
@@ -336,9 +336,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <title type="complete" ref="LIT1395Fethan#Appendix"/>
                             </msItem>
                             
-                            <msItem xml:id="ms_i1.54">
+                            <colophon xml:id="coloph1" xml:lang="gez">
                                 <locus target="#161rb"/>
+                                <note>The colophon mentions <persName ref="PRS9153TaklaHa"/>.</note>
+                            </colophon>
+                            
+                            <msItem xml:id="ms_i1.54" corresp="#h2">
+                                <locus from="161va"  to="161vb"/>
                                 <title type="complete" ref="LIT1395Fethan#FinalNoteTranslation"/>
+                                <note>The last eight lines have been erased.</note>
                             </msItem>
                         </msItem>
                         
@@ -351,7 +357,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="page">318</measure> <!--1 guard leaf at the beginning and 2 at the end-->
+                                    <measure unit="folio">162</measure> <!--1 guard leaf at the beginning and 2 at the end-->
                                     <dimensions type="outer" unit="cm">
                                         <height>23</height>
                                         <width>17</width>
@@ -444,7 +450,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic"> 
+                                <seg type="ink">Black, red.</seg>
                                 <seg type="rubrication">Beginnings of chapters and sections are rubricated.</seg>
+                            </handNote>
+                            <handNote xml:id="h2" script="Ethiopic" corresp="#ms_i1.54"> 
+                                <seg type="ink">Black.</seg>
                             </handNote>
                         </handDesc>
                         
@@ -457,12 +467,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="e2">
                                     <desc>Corrected in some places.</desc>
                                 </item>
+                                <item xml:id="a1">
+                                    <locus target="#162v"/>
+                                    <desc type="Unclear">Hardly legible note, written upside down.</desc>
+                                </item>
                             </list>
                         </additions>
                         
                         <bindingDesc>
                             <binding xml:id="binding" contemporary="true">
-                                <decoNote xml:id="b1">Ethiopian binding, wooden boards covered with leather</decoNote>
+                                <decoNote xml:id="b1">Ethiopian binding, wooden boards covered with leather.</decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
                                     <material key="leather"/>
                                 <material key="wood"/>
