@@ -50,14 +50,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </msItem>
                </msContents>
                <physDesc>
-                  <objectDesc>
+                  <objectDesc form="Codex">
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
                         </support>
                         <extent>Made of <measure unit="leaf">39.0</measure> folios, of which
                                                   <measure unit="leaf" type="blank"/> blank
-                                                  ff. 1r-v, 2r-v, 36v, 37r-v, 38r, 39v, in
+                                                  <locus target="1r">1r-</locus>v, 2r-v, 36v, 37r-v, 38r, 39v, in
                                                   <measure unit="quire">7.0</measure> quires (A+6). 
                                                 <dimensions type="outer">
                               <height unit="mm">168</height>
@@ -98,7 +98,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 The leaves of the last quire, with miniatures (fols. 38-39) are of a smaller size (8x7.5cm)</item>
                            </list>
                         </collation>
-                        <condition key="good">ff. 38-39 of the last quire (bifolio) originate from a different, older Ms. (15th cent.?) and has been sewn into the codex later. Holes carefully amended on fols. 19, 30.</condition>
+                        <condition key="good">
+                           <locus from="38" to="39">38-39</locus> of the last quire (bifolio) originate from a different, older Ms. (15th cent.?) and has been sewn into the codex later. Holes carefully amended on <locus target="19">19</locus>, 30.</condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="2" writtenLines="19">
@@ -114,7 +115,7 @@ The leaves of the last quire, with miniatures (fols. 38-39) are of a smaller siz
                               <dim type="left">8</dim>
                               <dim type="intercolumn">5</dim>
                            </dimensions>
-                           <note>All data for fol. 6r.</note>
+                           <note>All data for <locus target="6r">6r</locus>.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
                            <ab type="ruling" subtype="pattern">
@@ -138,6 +139,8 @@ The bottom line is written above the ruling.</ab>
                         <seg type="script">Careful.</seg>
                         <seg type="ink">Black, red.</seg>
                         <date>First half of the 20th century.</date>
+                        <seg type="rubrication">Nomina sacra; name of the donors; name of the Metropolitan; incipit of Text I; incipit of the prayers to be read; directives to the ministers; elements of the punctuation signs; elements of Ethiopic numerals. &#xD;
+On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating with black lines).</seg>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
@@ -153,17 +156,14 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b5">Blind tooled ornament on the brown leather cover, of poor quality (at least 3 tools were used: triple line fillet, double circle, X-form).</decoNote>
                      </binding>
                   </bindingDesc>
-                  <decoDesc>
-                     <decoNote type="rubrication" xml:id="d0">Nomina sacra; name of the donors; name of the Metropolitan; incipit of Text I; incipit of the prayers to be read; directives to the ministers; elements of the punctuation signs; elements of Ethiopic numerals. &#xD;
-On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating with black lines).</decoNote>
-                  </decoDesc>
+                  
                </physDesc>
                <history>
                   <origin>
                      <origPlace>
                         <placeName ref="INS0034DZ">Dabra Zäyt Qǝddǝst Māryām / DZ</placeName>
                      </origPlace>
-                     <origDate notBefore="1881" notAfter="1926">Metropolitan Matewos (in tenure in 1881-1926) is mentioned on fol. 19vb.</origDate>
+                     <origDate notBefore="1881" notAfter="1926">Metropolitan Matewos (in tenure in 1881-1926) is mentioned on <locus target="19vb">19vb</locus>.</origDate>
                   </origin>
                </history>
                <additional>
@@ -196,7 +196,7 @@ On the incipit page of Text I (fol. 3r), a few lines are rubricated (alternating
          <particDesc>
             <listPerson>
                <person>
-                  <persName role="owner" ref="PRS0000">Kidāna Māryām and Walatta Krǝstos are mentioned in supplication formulas on fols. 21ra, 28rb, 36rb.</persName>
+                  <persName role="owner" ref="PRS0000">Kidāna Māryām and Walatta Krǝstos are mentioned in supplication formulas on <locus target="21ra">21ra</locus>, 28rb, 36rb.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>

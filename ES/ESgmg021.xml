@@ -50,14 +50,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </msItem>
                </msContents>
                <physDesc>
-                  <objectDesc>
+                  <objectDesc form="Codex">
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
                         </support>
                         <extent>Made of <measure unit="leaf">57.0</measure> folios, of which
                                                   <measure unit="leaf" type="blank"/> blank
-                                                  ff. 1r, 56r-v, 57r-v, in
+                                                  <locus target="1r">1r</locus>, 56r-v, 57r-v, in
                                                   <measure unit="quire">8.0</measure> quires . 
                                                 <dimensions type="outer">
                               <height unit="mm">160</height>
@@ -95,9 +95,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            </list>
                         </collation>
                         <condition key="deficient">The sewing is damaged. The quires are misplaced, a few fols. are probably missing.&#xD;
-f. 26 is damaged by fire.&#xD;
-Some fols. are damaged by water (esp. fols. 21-32).&#xD;
-Tear carefully amended on fol. 55.</condition>
+<locus target="26">26</locus> is damaged by fire.&#xD;
+Some fols. are damaged by water (esp. <locus from="21" to="32">21-32</locus>).&#xD;
+Tear carefully amended on <locus target="55">55</locus>.</condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="1" writtenLines="16">
@@ -113,7 +113,7 @@ Tear carefully amended on fol. 55.</condition>
                               <dim type="left">15</dim>
                               <dim type="intercolumn"/>
                            </dimensions>
-                           <note>All data for fol. 2r.</note>
+                           <note>All data for <locus target="2r">2r</locus>.</note>
                            <ab type="ruling"/>
                            <ab type="pricking">Pricking and ruling are visible. </ab>
                            <ab type="ruling" subtype="pattern">
@@ -139,6 +139,8 @@ The bottom line is written above the ruling.</ab>
                         <seg type="script">Mediocre, but careful.</seg>
                         <seg type="ink">Black, red.</seg>
                         <date>Second half of the 18th century.</date>
+                        <seg type="rubrication">Nomina sacra; name of the donor; name of the king, patriarch and metropolitan; incipit of Text I (fol. 37r); titles, initial lines or initial word of the prayers to be read; directives to the ministers; elements of the punctuation signs; elements of Ethiopic numerals. &#xD;
+On the incipit page of Text I (fol. 37r) a few lines are rubricated (alternating with black lines).</seg>
                      </handNote>
                   </handDesc>
                   <bindingDesc>
@@ -153,17 +155,14 @@ Two pairs of sewing stations.</decoNote>
                         <decoNote xml:id="b5">None.</decoNote>
                      </binding>
                   </bindingDesc>
-                  <decoDesc>
-                     <decoNote type="rubrication" xml:id="d0">Nomina sacra; name of the donor; name of the king, patriarch and metropolitan; incipit of Text I (fol. 37r); titles, initial lines or initial word of the prayers to be read; directives to the ministers; elements of the punctuation signs; elements of Ethiopic numerals. &#xD;
-On the incipit page of Text I (fol. 37r) a few lines are rubricated (alternating with black lines).</decoNote>
-                  </decoDesc>
+                  
                </physDesc>
                <history>
                   <origin>
                      <origPlace>
                         <placeName ref="INS0115GMG">Gänaḥti Qǝddǝst Māryām / GMG</placeName>
                      </origPlace>
-                     <origDate notBefore="1779" notAfter="1796">King Takla Giyorgis (r. 1779-84, 1788-89, 1794-95, 1795-96, 1798-99, 1800) is mentioned on fols. 13r, 34r, 34v. Metropolitan Yosab II (in tenure ca. 1770-1803) is also mentioned (fols. 33v, 35r) and called ʾIyosab on fol. 4r. Patriarch Yosef (fol. 34v) is most probably John XVIII, Patriarch of Alexandria in 1769-96 whose lay name was Joseph (?).</origDate>
+                     <origDate notBefore="1779" notAfter="1796">King Takla Giyorgis (r. 1779-84, 1788-89, 1794-95, 1795-96, 1798-99, 1800) is mentioned on <locus target="13r">13r</locus>, 34r, 34v. Metropolitan Yosab II (in tenure ca. 1770-1803) is also mentioned (<locus target="33v">33v</locus>, 35r) and called ʾIyosab on <locus target="4r">4r</locus>. Patriarch Yosef (<locus target="34v">34v</locus>) is most probably John XVIII, Patriarch of Alexandria in 1769-96 whose lay name was Joseph (?).</origDate>
                   </origin>
                </history>
                <additional>
@@ -196,7 +195,7 @@ On the incipit page of Text I (fol. 37r) a few lines are rubricated (alternating
          <particDesc>
             <listPerson>
                <person>
-                  <persName role="owner" ref="PRS0000">Za-Walda Māryām is mentioned in supplications formulas (fols. 4v, 6r, 16v).</persName>
+                  <persName role="owner" ref="PRS0000">Za-Walda Māryām is mentioned in supplications formulas (<locus target="4v">4v</locus>, 6r, 16v).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
