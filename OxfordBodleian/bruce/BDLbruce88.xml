@@ -4,10 +4,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:lang="en"
-     xml:id="BDLbruce88"
-     type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLbruce88" type="mss">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -28,19 +25,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
-                  <msIdentifier>
-                     <repository ref="INS0312BDL"/>
-                     <collection>Codices aethiopici</collection>
-                     <collection>Bruce</collection>
-                     <idno>Bodleian Bruce 88</idno>
-                     <altIdentifier>
-                        <idno>Dillmann cat. XXIX</idno>
-                     </altIdentifier>
-                     <altIdentifier>
-                        <idno>Bodleian Bruce 7</idno>
-                     </altIdentifier>
-                  </msIdentifier>
-               
+               <msIdentifier>
+                  <repository ref="INS0312BDL"/>
+                  <collection>Codices aethiopici</collection>
+                  <collection>Bruce</collection>
+                  <idno>Bodleian Bruce 88</idno>
+                  <altIdentifier>
+                     <idno>Dillmann cat. XXIX</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>Bodleian Bruce 7</idno>
+                  </altIdentifier>
+               </msIdentifier>
+
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -48,14 +45,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">99</measure> <!--4 guard leaves at the beginning and two at the end-->
+                           <measure unit="leaf">99+6</measure>
+                           <!--4 guard leaves at the beginning and two at the end-->
                            <note>formae 4<hi rend="apices">ae</hi>
                            </note>
                         </extent>
-                        <foliation>Foliation in pencil probably by <persName ref="PRS2916Bruce"/>. On <locus target="#39r"/>,
-                           <q xml:lang="en">(not counted by <persName ref="PRS3562Dillmann">Dillmann</persName>)</q> is written under the folio number. On all subsequent folia,
-                           <persName ref="PRS3562Dillmann"/>'s numeration is indicated in brackets under the folio number.
-                           <listBibl type="secondary">
+                        <foliation>Foliation in pencil probably by <persName ref="PRS2916Bruce"/>.
+                           On <locus target="#39r"/>, <q xml:lang="en">(not counted by <persName
+                                 ref="PRS3562Dillmann">Dillmann</persName>)</q> is written under the
+                           folio number. On all subsequent folia, <persName ref="PRS3562Dillmann"
+                           />'s numeration is indicated in brackets under the folio number.
+                              <listBibl type="secondary">
                               <bibl>
                                  <ptr target="bm:Wion2009LibAks"/>
                                  <citedRange unit="page">138</citedRange>
@@ -63,10 +63,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </bibl>
                            </listBibl>
                         </foliation>
+
                         <collation>
-                           <note>It is difficult to distinguish the original quires. Probably the sewing of the quires has been redone.
-                           Many false guard leaves, paper and parchment, have been added when the manuscript was rebound by <persName ref="PRS2916Bruce"/>.
-                           <listBibl type="secondary">
+                           <note>In the current condition of the manuscript, it is difficult to
+                              distinguish the boundaries of the individual quires. The textblock has
+                              been resewn, many false guard leaves, of paper and parchment, have
+                              been added when the manuscript was rebound for <persName
+                                 ref="PRS2916Bruce"/>
+                              <listBibl type="secondary">
                                  <bibl>
                                     <ptr target="bm:Wion2009LibAks"/>
                                     <citedRange unit="page">138</citedRange>
@@ -74,19 +78,109 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  </bibl>
                               </listBibl>
                            </note>
+                           <list>
+                              <item xml:id="q1" n="A">
+                                 <dim unit="leaf">4</dim>
+                                 <locus from="ir" to="ivv"/>
+                              </item>
+                              <item xml:id="q2" n="1">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="1r" to="4v"/>
+                                 <note>This quire was added later to the manuscript. <locus
+                                       target="#2"/> has been misplaced from its proper position
+                                    after <locus target="#3"/>. <listBibl type="secondary">
+                                       <bibl>
+                                          <ptr target="bm:Wion2009LibAks"/>
+                                          <citedRange unit="page">141</citedRange>
+                                       </bibl>
+                                       <bibl>
+                                          <ptr target="bm:Kropp2017Erbbesitz"/>
+                                          <citedRange unit="page">346</citedRange>
+                                       </bibl>
+                                    </listBibl>
+                                 </note>
+                              </item>
+
+                              <item xml:id="q3" n="2">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="5r" to="12v"/>
+                              </item>
+                              
+                              <item xml:id="q4" n="3">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="13r" to="20v"/>
+                              </item>
+                              
+                              <item xml:id="q5" n="4">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="21r" to="28v"/> 2, stub after 7 5, stub after 4 </item>
+                              
+                              <item xml:id="q6" n="5">
+                                 <dim unit="leaf">9</dim>
+                                 <locus from="29r" to="37v"/> 7, stub after 3 </item>
+
+                              <item xml:id="q7" n="6">
+                                 <dim unit="leaf">2</dim>
+                                 <note>Two single leaves constitute <ref target="#p3"/></note>
+                                 <locus from="38r" to="39v"/> 1, stub after 2 2, stub after 2 </item>
+                             
+
+                              <item xml:id="q8" n="7">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="40r" to="47v"/>
+                              </item>
+
+                              <item xml:id="q9" n="8">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="48r" to="55v"/>
+                              </item>
+
+                              <item xml:id="q10" n="9">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="56r" to="63v"/>
+                              </item>
+
+                              <item xml:id="q11" n="10">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="64r" to="71v"/>
+                              </item>
+
+                              <item xml:id="q12" n="11">
+                                 <dim unit="leaf">6</dim>
+                                 <locus from="72r" to="77v"/>
+                              </item>
+
+                              <item xml:id="q13" n="12">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="78r" to="85v"/>
+                              </item>
+
+                              <item xml:id="q14" n="13">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="86r" to="88v"/> 2, stub after 1 </item>
+
+                              <item xml:id="q15" n="14">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="89r" to="96v"/>
+                              </item>
+                           </list>
                         </collation>
+
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="3"/>
                      </layoutDesc>
-                     
+
                   </objectDesc>
+
                   <bindingDesc>
                      <binding contemporary="false" xml:id="binding">
-                        <decoNote xml:id="b1">European binding; leather covering with gold leaf. The inner cover is
-                           reinforced with decorative paper. The French title is given on the spine by <persName ref="PRS2916Bruce"/> with golden letters.  Many false paper
-                           and parchment guard leaves have been added. The edges were gilded, probably after the folios were recut.
-                           <listBibl type="secondary">
+                        <decoNote xml:id="b1">European binding; leather covering with gold leaf. The
+                           inner cover is reinforced with decorative paper. The French title is
+                           impressed on the spine by <persName ref="PRS2916Bruce"/> with golden
+                           letters. Many false paper and parchment guard leaves have been added. The
+                           edges were gilded, probably after the folios were trimmed. <listBibl
+                              type="secondary">
                               <bibl>
                                  <ptr target="bm:Wion2009LibAks"/>
                                  <citedRange unit="page">138</citedRange>
@@ -101,267 +195,383 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </decoNote>
                      </binding>
                   </bindingDesc>
+
+
                </physDesc>
-               
-                  <history>
-                     <origin>
-                        <origDate notBefore="1592" notAfter="1605" evidence="reign"/>
-                        <origPlace>
+
+               <history>
+                  <origin>
+                     <origDate notBefore="1592" notAfter="1632" evidence="reign"/>
+                     <origPlace>
                         <placeName ref="LOC3010Ethiop"/>
                      </origPlace>
-                     </origin>
-                     <provenance>
-                     <ref target="#p2"/>  was copied for <persName ref="PRS2916Bruce" role="patron"/>, but the rest
-                        of the manuscript, which was produced between <date notBefore="1592"/> and
-                        <date notAfter="1605"/>, was given to <persName ref="PRS2916Bruce"/> by <persName ref="PRS1878AmmehaI"/>.
-                     <listBibl type="secondary">
-                        <bibl><ptr target="bm:Wion2009LibAks"/><citedRange unit="page">140-141</citedRange></bibl>
+                  </origin>
+                  <provenance>
+                     <ref target="#p1"/> was copied for <persName ref="PRS2916Bruce" role="patron"
+                     />, but the rest of the manuscript which was produced between <date
+                        notBefore="1592"/> and <date notAfter="1632"/>, was given to <persName
+                        ref="PRS2916Bruce"/> by <persName ref="PRS1878AmmehaI"/>. <listBibl
+                        type="secondary">
+                        <bibl><ptr target="bm:Wion2009LibAks"/><citedRange unit="page"
+                              >140-141</citedRange></bibl>
+                           <bibl><ptr target="bm:Kropp2017Erbbesitz"/><citedRange unit="page"
+                              >349</citedRange></bibl>
                      </listBibl></provenance>
-                  </history>
-                  
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              
-                              <listBibl type="catalogue">
-                                 <bibl>
+               </history>
+
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
                                  <ptr target="bm:Dillmann1848Catalogus"/>
-                                    <citedRange unit="page">76b–80a</citedRange>
+                                 <citedRange unit="page">76b–80a</citedRange>
                               </bibl>
-                              </listBibl>
-                              <listBibl type="secondary">
-                                 <bibl>
+                           </listBibl>
+                           <listBibl type="secondary">
+                              <bibl>
                                  <ptr target="bm:Kropp2016Zekra"/>
                                  <citedRange unit="page">1702</citedRange>
                               </bibl>
-                                 <bibl>
+                              <bibl>
                                  <ptr target="bm:Wion2009LibAks"/>
                                  <citedRange unit="page">139–142</citedRange>
                               </bibl>
-                                 <bibl><ptr target="bm:Kropp2017Erbbesitz"/></bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                     </adminInfo>
-                  </additional>
-                  
-                  
-                  <msPart xml:id="p1">
-                     <msIdentifier/>
-                     <msContents>
-                        <summary/>
-                  
-                        <msItem xml:id="p1_i1">
+                              <bibl><ptr target="bm:Kropp2017Erbbesitz"/></bibl>
+                              <bibl>
+                                 <ptr target="bm:Kropp2001Sarsadengel"/>
+                              </bibl>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
+
+               <msPart xml:id="p1">
+                  <msIdentifier/>
+                  <msContents>
+                     <summary/>
+
+                     <msItem xml:id="p1_i1">
+                        <locus target="#1 #3r"/>
+                        <title type="complete" ref="LIT3854KingList" xml:lang="gez">በስመ፡ አብ፡ <gap
+                              reason="omitted" resp="PRS3562Dillmann" extent="unknown"/> ንጽሕፍ፡ ዜና፡
+                           ልደቶሙ፡ ለአበው፡ እምአዳም፡ እስከ፡ ይእዜ፡</title>
+                        <textLang mainLang="gez"/>
+                     </msItem>
+
+                     <msItem xml:id="p1_i2">
+                        <locus target="#3v #2 #4"/>
+                        <title type="incomplete" ref="LIT4723TarikaWaldaAmid"/>
+                        <textLang mainLang="gez"/>
+                        <note>Excerpts from <ref type="work" corresp="LIT4723TarikaWaldaAmid"/> and
+                           a chronology of the Ethiopian kings.</note>
+                     </msItem>
+                  </msContents>
+
+                  <physDesc>
+                     <objectDesc form="Codex">
+                        <supportDesc>
+                           <support>
+                              <material key="parchment"/>
+                           </support>
+                           <extent>
+                              <measure unit="leaf">4</measure>
+                              <locus from="1" to="4"/>
+                              <note>formae 4<hi rend="apices">ae</hi>
+                              </note>
+                           </extent>
+
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout columns="3"/>
+                        </layoutDesc>
+                     </objectDesc>
+
+                     <handDesc>
+                        <handNote xml:id="h2" script="Ethiopic">
+                           <locus to="5"/>
+                           <seg type="script">Written by several hands, see <bibl>
+                                 <ptr target="bm:Kropp2017Erbbesitz"/>
+                                 <citedRange unit="page">346</citedRange>
+                              </bibl>.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+
+                  <history>
+                     <origin>
+                        <origDate notBefore="1769" notAfter="1772"/>
+                        <origPlace>
+                           <placeName ref="LOC3010Ethiop"/>
+                        </origPlace>
+                     </origin>
+                     <provenance>This part of the manuscript was copied for <persName
+                           ref="PRS2916Bruce" role="patron"/>.</provenance>
+                  </history>
+               </msPart>
+
+               <msPart xml:id="p2">
+                  <msIdentifier/>
+                  <msContents>
+                     <summary/>
+
+                     <msItem xml:id="p2_i1">
                         <locus from="5ra" to="15vc"/>
                         <title type="complete" ref="LIT4275ChronAmdS"/>
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">
-                           <locus target="#5ra"/>
-                           በስመ፡ <gap reason="omitted" resp="PRS3562Dillmann" extent="unknown"/>
-                        ንጽሕፍ፡ በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ኃይለ፡ ወመዊአ፡ ዘገብረ፡ እግዚአብሔር፡ በእደዊሁ፡ 
-                        ለ<persName ref="PRS1854Amdase#n1">ዓምደ፡ ጽዮን፡</persName> ንጉሠ፡ ኢትዮጵያ። ወስመ፡ መንግሥቱ፡ <persName ref="PRS1854Amdase#n2">ገብረ፡ መስቀል።</persName> በዐሠርቱ፡ ወሰመንቱ፡ ዓመተ፡
-                           መንግሥቱ፡ እምዘ፡ ነግሠ፡ <date calendar="grace" when="1330" when-custom="0516">ወዓመተ፡ ምሕረትሂ፡ ፭፻፲ወ፮፡</date>
-                        </incipit> 
-                           <explicit type="supplication" xml:lang="gez"> <!--type="supplication" not documented, see issue 497-->
-                           <locus target="#15vb"/>እግዚአብሔር፡ የሀቦ፡ ህየንተ፡ ዘበምድር፡ 
-                        ዘበሰማያት፨ ወያኑሕ፡ መዋዕሊሁ፡ ዲበ፡ ምድር፡ ወያድኅኖ፡ እሞት፡ ዘግብት፡ ወያውርሶ፡ መንግሥተ፡
-                        ሰማያት፡ ምስለ፡ ኄራን፡ ነገሥት፡ ለዓለመ፡ ዓለም፡</explicit> <!--this is part of a longer supplication-->
-                           <listBibl type="editions">
-                              <bibl>
+                           <locus target="#5ra"/> በስመ፡ <gap reason="omitted" resp="PRS3562Dillmann"
+                              extent="unknown"/> ንጽሕፍ፡ በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ኃይለ፡ ወመዊአ፡ ዘገብረ፡
+                           እግዚአብሔር፡ በእደዊሁ፡ ለ<persName ref="PRS1854Amdase#n1">ዓምደ፡ ጽዮን፡</persName>
+                           ንጉሠ፡ ኢትዮጵያ። ወስመ፡ መንግሥቱ፡ <persName ref="PRS1854Amdase#n2">ገብረ፡
+                              መስቀል።</persName> በዐሠርቱ፡ ወሰመንቱ፡ ዓመተ፡ መንግሥቱ፡ እምዘ፡ ነግሠ፡ <date
+                              calendar="grace" when="1330" when-custom="0516">ወዓመተ፡ ምሕረትሂ፡
+                              ፭፻፲ወ፮፡</date>
+                        </incipit>
+                        
+                        <explicit type="supplication" xml:lang="gez">
+                           <!--type="supplication" not documented, see issue 497-->
+                           <locus target="#15vb"/>እግዚአብሔር፡ የሀቦ፡ ህየንተ፡ ዘበምድር፡ ዘበሰማያት፨ ወያኑሕ፡ መዋዕሊሁ፡
+                           ዲበ፡ ምድር፡ ወያድኅኖ፡ እሞት፡ ዘግብት፡ ወያውርሶ፡ መንግሥተ፡ ሰማያት፡ ምስለ፡ ኄራን፡ ነገሥት፡ ለዓለመ፡
+                           ዓለም፡</explicit>
+                        <!--this is part of a longer supplication-->
+                        <listBibl type="editions">
+                           <bibl>
                               <ptr target="bm:Kropp1994AmdaSeyon"/>
                            </bibl>
-                           </listBibl>
-                           <listBibl type="translation">
-                              <bibl>
+                        </listBibl>
+                        <listBibl type="translation">
+                           <bibl>
                               <ptr target="bm:Kropp1994AmdaSeyonTr"/>
                            </bibl>
-                           </listBibl>
+                        </listBibl>
                      </msItem>
-                  
-                        <msItem xml:id="p1_i2">
+
+                     <msItem xml:id="p2_i2">
                         <locus from="16ra" to="30va"/>
-                           <title type="complete">History of the Kings of Ethiopia from <persName ref="PRS10626ZaraY"/> to <persName ref="PRS7481NaodA"/>,
-                              written at the time of <persName ref="PRS6229LebnaDe"/>. </title> <!-- Should this be considered as a work and thus remain as a title?-->
-                     
-                           <msItem xml:id="p1_i2.1">
+                        <title type="complete">History of the Kings of Ethiopia from <persName
+                              ref="PRS10626ZaraY"/> to <persName ref="PRS7481NaodA"/>, written at
+                           the time of <persName ref="PRS6229LebnaDe"/>. </title>
+                        <!-- Should this be considered as a work and thus remain as a title?-->
+
+                        <msItem xml:id="p2_i2.1">
                            <locus from="16ra" to="23ra"/>
                            <title type="complete" ref="LIT4646Chronicle"/>
                            <textLang mainLang="gez"/>
                            <incipit xml:lang="gez">
-                              <locus target="#16ra"/>
-                              በስመ፡ <gap reason="omitted" resp="PRS3562Dillmann" extent="unknown"/>
-                              እወጥን፡ አንሰ፡ ከመ፡ እንብብ፡ ወእከርትስ፡ ኵሉ፡ ሥርዓታቲሁ፡ ለእግዚእነ፡ ወመሲሕነ፡ <persName ref="PRS10626ZaraY">ዘርአ፡ ያዕቆብ፡</persName> 
-                              ዘተሰምየ፡ <persName ref="PRS10626ZaraY#n2">ቈስጠንጢኖስ፡ ወልደ፡ ማርያም፡</persName> ክቡር፡ ኢየሱስ፡ ክርስቶስ፡ ይረስዮ፡ ጽድቆ፡ ወመንግሥቶ፡ ከመ፡ 
-                              ይትዋረስ፡ በከመ፡ ሕሊናሁ፡ ይፈቅድ፡ ወየኀሥሥ፡ ወይሡጥ፡ ካዕበተ፡ ጸጋሁ፡ ላዕለ፡ ወልዱ፡ <persName ref="PRS6229LebnaDe">ልብነ፡ ድንግል፡</persName>
-                        ሐዲስ፡ ለረኪበ፡ ፍድፋድ፡ ዕቢይ፡ ወሞገስ። በከመ፡ ተሠውጠ፡ ካዕበተ፡ መንፈሱ፡ ለኤልያስ፡ ላዕለ፡ ኤልሳዕ፡ ረድኡ፡
-                        ጊዜ፡ ዓርገ፡ ላዕለ፡ በአፍራሰ፡ መንፈስ። ወያኑኅ፡ መዋዕሊሁ፡ እስከ፡ ኅልፈተ፡ ሰማይ፡ ወየብስ፡ አሜን፡ ወአሜን።
-                     </incipit>
-                              <note>The entirety of <persName ref="PRS10626ZaraY"/>'s reign, 35 years, is covered by the chronicle.</note>
-                           <note>Prayers for <persName ref="PRS6229LebnaDe"/>, similar to those in the incipit, are included at the end of the work.</note>
+                              <locus target="#16ra"/> በስመ፡ <gap reason="omitted"
+                                 resp="PRS3562Dillmann" extent="unknown"/> እወጥን፡ አንሰ፡ ከመ፡ እንብብ፡
+                              ወእከርትስ፡ ኵሉ፡ ሥርዓታቲሁ፡ ለእግዚእነ፡ ወመሲሕነ፡ <persName ref="PRS10626ZaraY">ዘርአ፡
+                                 ያዕቆብ፡</persName> ዘተሰምየ፡ <persName ref="PRS10626ZaraY#n2">ቈስጠንጢኖስ፡
+                                 ወልደ፡ ማርያም፡</persName> ክቡር፡ ኢየሱስ፡ ክርስቶስ፡ ይረስዮ፡ ጽድቆ፡ ወመንግሥቶ፡ ከመ፡
+                              ይትዋረስ፡ በከመ፡ ሕሊናሁ፡ ይፈቅድ፡ ወየኀሥሥ፡ ወይሡጥ፡ ካዕበተ፡ ጸጋሁ፡ ላዕለ፡ ወልዱ፡ <persName
+                                 ref="PRS6229LebnaDe">ልብነ፡ ድንግል፡</persName> ሐዲስ፡ ለረኪበ፡ ፍድፋድ፡ ዕቢይ፡
+                              ወሞገስ። በከመ፡ ተሠውጠ፡ ካዕበተ፡ መንፈሱ፡ ለኤልያስ፡ ላዕለ፡ ኤልሳዕ፡ ረድኡ፡ ጊዜ፡ ዓርገ፡ ላዕለ፡
+                              በአፍራሰ፡ መንፈስ። ወያኑኅ፡ መዋዕሊሁ፡ እስከ፡ ኅልፈተ፡ ሰማይ፡ ወየብስ፡ አሜን፡ ወአሜን። </incipit>
+                           <note>The entirety of <persName ref="PRS10626ZaraY"/>'s reign, 35 years,
+                              is covered by the chronicle.</note>
+                           <note>Prayers for <persName ref="PRS6229LebnaDe"/>, similar to those in
+                              the incipit, are included at the end of the work.</note>
                         </msItem>
-                  
-                           <msItem xml:id="p1_i2.2">
+
+                        <msItem xml:id="p2_i2.2">
                            <locus from="23ra" to="29rb"/>
                            <title type="complete" ref="LIT4647ChronBaEd"/>
                            <textLang mainLang="gez"/>
-                              <incipit xml:lang="gez">
-                                 <locus target="#23ra"/>
-                                 ወእምድኅረ፡ አዕረፈ፡ ንጉሥ፡ 
-                                 <persName ref="PRS10626ZaraY">ዘርአ፡ ያዕቆብ፡</persName> ነግሠ፡ ወልዱ፡ 
-                                 <persName ref="PRS2334BaedaM">በእደ፡ ማርያም፡</persName>
+                           <incipit xml:lang="gez">
+                              <locus target="#23ra"/> ወእምድኅረ፡ አዕረፈ፡ ንጉሥ፡ <persName
+                                 ref="PRS10626ZaraY">ዘርአ፡ ያዕቆብ፡</persName> ነግሠ፡ ወልዱ፡ <persName
+                                 ref="PRS2334BaedaM">በእደ፡ ማርያም፡</persName>
                            </incipit>
-                           <note>The entirety of <persName ref="PRS2334BaedaM"/>'s reign is covered. Prayers for
-                        <persName ref="PRS6229LebnaDe"/> similar to those in <ref target="#p1_i2.1"/> are included at the end.</note>
+                           <note>The entirety of <persName ref="PRS2334BaedaM"/>'s reign is covered.
+                              Prayers for <persName ref="PRS6229LebnaDe"/> similar to those in <ref
+                                 target="#p1_i2.1"/> are included at the end.</note>
                         </msItem>
-                  
-                           <msItem xml:id="p1_i2.3">
+
+                        <msItem xml:id="p2_i2.3">
                            <locus from="29rb" to="30rb"/>
                            <title type="complete" ref="LIT4648ChronEsk"/>
                            <textLang mainLang="gez"/>
                            <incipit xml:lang="gez">
-                              <locus target="#29rb"/>
-                              ወእምድኅሬሁ፡ ነግሠ፡ ወልዱ፡ <persName ref="PRS3874eskender">እስክንድር፡</persName>
+                              <locus target="#29rb"/> ወእምድኅሬሁ፡ ነግሠ፡ ወልዱ፡ <persName
+                                 ref="PRS3874eskender">እስክንድር፡</persName>
                            </incipit>
-                              <note>There is no new title.</note>
-                           <note>A few passages on the reign of <persName ref="PRS1855Amdase"/> are joined to the Chronicle of
-                        <persName ref="PRS3874eskender"/>.</note>
-                           <note>Prayers for  <persName ref="PRS6229LebnaDe"/> are included at the end. </note>
-                              <listBibl type="editions">
-                                 <bibl><ptr target="bm:Perruchon1894Eskender"/></bibl>
-                              </listBibl>
+                           <note>There is no new title.</note>
+                           <note>A few passages on the reign of <persName ref="PRS1855Amdase"/> are
+                              joined to the Chronicle of <persName ref="PRS3874eskender"/>.</note>
+                           <note>Prayers for <persName ref="PRS6229LebnaDe"/> are included at the
+                              end. </note>
+                           <listBibl type="editions">
+                              <bibl><ptr target="bm:Perruchon1894Eskender"/></bibl>
+                           </listBibl>
                         </msItem>
-                  
-                           <msItem xml:id="p1_i2.4">
+
+                        <msItem xml:id="p2_i2.4">
                            <locus from="30rb" to="30va"/>
                            <title type="complete" ref="LIT4649ChronNa"/>
                            <textLang mainLang="gez"/>
-                              <incipit xml:lang="gez">
-                                 <locus target="#30rb"/>
-                                 ወእምዝ፡ ነግሠ፡ እግዚእነ፡ <persName ref="PRS7481NaodA">ናኦድ፡</persName> 
-                                 ወልደ፡ <persName ref="PRS2334BaedaM">በእደ፡ ማርያም፡</persName> እኁሁ፡ 
-                                 ለ<persName ref="PRS3874eskender">እስክንድር፡</persName>
+                           <incipit xml:lang="gez">
+                              <locus target="#30rb"/> ወእምዝ፡ ነግሠ፡ እግዚእነ፡ <persName ref="PRS7481NaodA"
+                                 >ናኦድ፡</persName> ወልደ፡ <persName ref="PRS2334BaedaM">በእደ፡
+                                 ማርያም፡</persName> እኁሁ፡ ለ<persName ref="PRS3874eskender"
+                                 >እስክንድር፡</persName>
                            </incipit>
-                              <note>There is no new title.</note>
+                           <note>There is no new title.</note>
                            <note>The account is very short; there is no subscription.</note>
-                              <listBibl type="editions">
-                                 <bibl><ptr target="bm:Perruchon1894Eskender"/></bibl>
-                              </listBibl>
+                           <listBibl type="editions">
+                              <bibl><ptr target="bm:Perruchon1894Eskender"/></bibl>
+                           </listBibl>
                         </msItem>
                      </msItem>
-                  
-                  
-                        <msItem xml:id="p1_i3">
+
+                     <msItem xml:id="p2_i3">
                         <locus from="30va" to="34vb"/>
                         <title type="complete" ref="LIT2341serata"/>
                         <textLang mainLang="gez" otherLangs="am"/>
-                           <!--folio numbers and divisions of the text taken from bm:Kropp2017Erbbesitz-->
-                     
-                           <msItem xml:id="p1_i3.1">
+                        <!--folio numbers and divisions of the text taken from bm:Kropp2017Erbbesitz-->
+
+                        <msItem xml:id="p2_i3.1">
                            <locus from="30va" to="31rb"/>
-                           <title type="complete" ref="LIT2335serata">ሥርዓተ፡ ግብር፡ ዘቋሞች፡ ወዘዕለት፡ ማእድ፡</title>
+                           <title type="complete" ref="LIT2335serata">ሥርዓተ፡ ግብር፡ ዘቋሞች፡ ወዘዕለት፡
+                              ማእድ፡</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i3.2">
-                              <locus from="31rb" to="32va"/>
-                           <title type="complete">Sitting and eating order of the dignitaries</title>
+
+                        <msItem xml:id="p2_i3.2">
+                           <locus from="31rb" to="32va"/>
+                           <title type="complete">Sitting and eating order of the
+                              dignitaries</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                            <note>The individual sections composing this part have no titles.</note>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i3.3">
-                              <locus from="32va" to="32vc"/>
+
+                        <msItem xml:id="p2_i3.3">
+                           <locus from="32va" to="32vc"/>
                            <title type="complete" xml:lang="gez">ወግዕ፡ ዘመንግሥት፡ ቤት፡ ሥርዓተ፡ ዘሠርዑ፡ ንጉሥነ፡
-                        ዓምደ፡ ጽዮን፡</title>
+                              ዓምደ፡ ጽዮን፡</title>
                            <textLang mainLang="gez" otherLangs="am"/>
-                           <note>Accurate enumeration of the storage places and tents in which the King's 
-                        treasures are kept and the servants guarding them.</note>
+                           <note>Accurate enumeration of the storage places and tents in which the
+                              King's treasures are kept and the servants guarding them.</note>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i3.4">
+
+                        <msItem xml:id="p2_i3.4">
                            <locus from="32vc" to="33vc"/>
                            <title type="complete">On the royal camps</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i3.5">
+
+                        <msItem xml:id="p2_i3.5">
                            <locus from="33vc" to="34rb"/>
-                           <title type="complete" xml:lang="gez">ወግዕ፡ ዘበቍሎ፡ ቤት፡ ዘሠርዑ፡ ሐፄ፡ ዓምደ፡ ጽዮን፡</title>
+                           <title type="complete" xml:lang="gez">ወግዕ፡ ዘበቍሎ፡ ቤት፡ ዘሠርዑ፡ ሐፄ፡ ዓምደ፡
+                              ጽዮን፡</title>
                            <textLang mainLang="gez" otherLangs="am"/>
                            <note>On mules.</note>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i3.6">
+
+                        <msItem xml:id="p2_i3.6">
                            <locus from="34rb" to="34vb"/>
                            <title type="complete" xml:lang="gez">ዘወፅኡ፡ እምግብጽ፡ ምስለ፡ እብነ፡ እልሐኪም፡ እብነ፡
-                        እልሀኪም፡ ብሂል፡ ወልደ፡ ጠቢብ፡ ብሂል፡ እሉ፡ እሙንቱ፡</title>
+                              እልሀኪም፡ ብሂል፡ ወልደ፡ ጠቢብ፡ ብሂል፡ እሉ፡ እሙንቱ፡</title>
                            <textLang mainLang="gez" otherLangs="am"/>
-                        </msItem> 
                         </msItem>
-                     
-                           <msItem xml:id="p1_i3.7">
+                     </msItem>
+
+                     <msItem xml:id="p2_i3.7">
                         <locus from="34vb" to="35rc"/>
-                              <title type="complete" ref="LIT4666Sema"/>
-                           <textLang mainLang="gez" otherLangs="am"/>
+                        <title type="complete" ref="LIT4666Sema"/>
+                        <textLang mainLang="gez" otherLangs="am"/>
                      </msItem>
-                     
-                           <msItem xml:id="p1_i3.8">
+
+                     <msItem xml:id="p2_i3.8">
                         <locus from="36ra" to="37vc"/>
-                        <title type="complete" ref="LIT4650RoyalSongs"/> 
-                           <textLang mainLang="am"/>
+                        <title type="complete" ref="LIT4650RoyalSongs"/>
+                        <textLang mainLang="am"/>
                      </msItem>
-                     
-                           <msItem xml:id="p1_i3.9">
+
+                     <msItem xml:id="p2_i3.9">
                         <locus from="38ra" to="38vb"/>
-                              <title type="incomplete" xml:lang="gez" ref="LIT4679Rest">በአኰቴተ፡ አብ፡ ወውልድ፡ ወመንፈስ፡ ቅዱስ፡
-                        ትጽሕፈ፡ ርስተ፡ አምባ፡ ዘእስራኤል፡ በከመ፡ ኮነ፡ በበ፡ ገጹ፡ ወበበ፡ ዘመኑ፡</title> 
-                           <textLang mainLang="gez" otherLangs="am"/>
+                        <title type="incomplete" xml:lang="gez" ref="LIT4679Rest">በአኰቴተ፡ አብ፡ ወውልድ፡
+                           ወመንፈስ፡ ቅዱስ፡ ትጽሕፈ፡ ርስተ፡ አምባ፡ ዘእስራኤል፡ በከመ፡ ኮነ፡ በበ፡ ገጹ፡ ወበበ፡ ዘመኑ፡</title>
+                        <textLang mainLang="gez" otherLangs="am"/>
                         <note>Description of the inheritance of the Ethiopian kings.</note>
                         <note>The end is missing.</note>
                      </msItem>
-                  
-                        <!-- Kropp refers to the empty leaf between p1_i3.9 and p1_i4 as f. 39, while it is not considered in the foliation used by  Dillmann/bm:ContiRossini1894Lebna/Solomon.
+
+                     <!-- Kropp refers to the empty leaf between p1_i3.9 and p1_i4 as f. 39, while it is not considered in the foliation used by  Dillmann/bm:ContiRossini1894Lebna/Solomon.
                   The description here follows Dillmann-->
-                        <!--Which foliation should we follow here? Both are indicated on the ms, Dillmann's in brackets-->
-                  
-                        <msItem xml:id="p1_i4">
-                        <locus from="39ra" to="97"/>
-                           <!--<locus from="40ra" to="97"/>-->
-                        <title type="complete">History of <persName ref="PRS8550sardaDe"/> and his predecessors</title>
+                     <!--Which foliation should we follow here? Both are indicated on the ms, Dillmann's in brackets-->
+
+                     <msItem xml:id="p2_i4">
+                        <locus from="40ra" to="97"/>
+                        <title type="complete">History of <persName ref="PRS8550sardaDe"/> and his
+                           predecessors</title>
                         <textLang mainLang="gez"/>
-                     
-                           <msItem xml:id="p1_i4.1">
-                           <locus from="39ra" to="39rb"/>
-                              <!--<locus from="40ra" to="40rb"/>-->
-                           <title type="complete">Introduction to <ref type="work" corresp="LIT4651ChronLeb"/>
-                           </title> <!--ID?-->
+                        <incipit xml:lang="gez">
+                           <locus target="#39ra"/> በስመ፡ እግዚአብሔር፡ ፈጣሪ፡ ዘአምጽአ፡ ዓለም፡ እምኀበ፡ ኢሀልዎ፡ ኀበ፡
+                           ሀልዎ፠ ንወጥን፡ ጸሒፈ፡ ዜና፡ አዝማናት፡ ዘኮነ፡ በመዋዕለ፡ ነገሥት፡ ርቱዓነ፡ ሃይማኖት፠ ወአስማቲሆሙ፡ ናየዕድ፡
+                           እምድኅረ፡ ዝንቱ ፨ </incipit>
+
+                        <explicit type="supplication" xml:lang="gez">
+                           <!--type="supplication" not documented, see issue 497-->
+                           <locus target="#40rb"/>ወከመዝ፡ ገብረ፡ እግዚአብሔር፡ ወአቅደመ፡ ጽሒፈ፡ ኦሪት፡ ዘውእቱ፡ ሕግ፡
+                           ሥጋዊ፨ ወአስተዳኅረ፡ ሰቢከ፡ ወንጌል፡ ዘውእቱ፡ ሕግ፡ መንፈሳዊ፠ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ መጋቤ፡ ብሉይ፡
+                           ወሓዲስ፡ ሎቱ፡ ስብሐት፡ ወአኰቴት፡ ለዓለመ፡ ዓለም፡ ኣሜን፨</explicit>
+
+                        <listBibl type="editions">
+                           <bibl>
+                              <ptr target="bm:ContiRossini1894Lebna"/>
+                              <citedRange unit="page">620</citedRange>
+                              <citedRange unit="note">5</citedRange>
+                           </bibl>
+                        </listBibl>
+                        <listBibl type="translation">
+                           <bibl>
+                              <ptr target="bm:Kropp1988LebnaII"/>
+                              <citedRange unit="page">1–2</citedRange>
+                           </bibl>
+                        </listBibl>
+                     </msItem>
+
+                     <msItem xml:id="p2_i4.1">
+                        <locus from="40ra" to="97"/>
+                        <title type="complete">Introduction to the History of <persName
+                              ref="PRS8550sardaDe"/> and his predecessors</title>
+                        <textLang mainLang="gez"/>
+                        <incipit xml:lang="gez">
+                           <locus target="#40ra"/>
+                           <hi rend="rubric">በስመ፡ እግዚአብሔር፡ ፈጣሪ፡ ዘአ</hi>ምጽአ፡ ዓለም፡ እምኀበ፡ ኢሀልዎ፡<hi rend="rubric"> ኀበ፡
+                              ሀልዎ፠ ንወጥን፡ ጸሒፈ፡ ዜና፡</hi> አዝማናት፡ ዘኮነ፡ በመዋዕለ፡ ነገሥት፡ <hi rend="rubric">ርቱዓነ፡ ሃይማኖት፠
+                              ወአስማቲሆሙ</hi> ናየዕድ፡ እምድኅረ፡ ዝንቱ ፨ </incipit>
+
+                        <explicit type="supplication" xml:lang="gez">
+                           <!--type="supplication" not documented, see issue 497-->
+                           <locus target="#40rb"/>ወከመዝ፡ ገብረ፡ እግዚአብሔር፡ <hi rend="rubric">ወአቅደመ፡ ጽሒፈ፡ ኦሪት፡
+                              ዘውእቱ፡</hi>ሕግ፡ ሥጋዊ፨ ወአስተዳኅረ፡ ሰቢከ፡ ወ<hi rend="rubric">ንጌል፡ ዘውእቱ፡ ሕግ፡ መንፈሳዊ፠
+                           ለ</hi>እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ መጋቤ፡ ብሉይ፡ ወሓዲስ፡ ሎቱ፡ ስብሐት፡ ወአኰቴት፡ ለዓለመ፡ ዓለም፡
+                           ኣሜን፨</explicit>
+
+                        <msItem xml:id="p2_i4.2">
+                           <locus from="40rb" to="41vb"/>
+                           <title type="complete" ref="LIT4651ChronLeb" xml:lang="gez"><hi rend="rubric">ክፍል፡
+                                 ቀዳማዊ፡ ዜናሁ፡ ለንጉሥ፡ ጻድቅ፡ ልብነ፡ ድንግል፡ መፍቀሬ፡ እግዚ</hi>አብሔር፡ ርቱዐ፡ ሃይማኖት፡
+                              ላዕሌሁ፡ ሰላም፨</title>
                            <textLang mainLang="gez"/>
-                           <listBibl type="editions">
-                              <bibl>
-                                 <ptr target="bm:Kropp1988LebnaI"/>
-                                 <citedRange unit="page">1–2</citedRange>
-                              </bibl>
-                              <bibl>
-                                 <ptr target="bm:ContiRossini1894Lebna"/>
-                                 <citedRange unit="page">620</citedRange>
-                                 <citedRange unit="note">5</citedRange>
-                              </bibl>
-                           </listBibl>
-                           <listBibl type="translation">
-                              <bibl>
-                                 <ptr target="bm:Kropp1988LebnaII"/>
-                                 <citedRange unit="page">1–2</citedRange>
-                              </bibl>
-                           </listBibl>
-                        </msItem>
-                     
-                           <msItem xml:id="p1_i4.2">
-                           <locus from="39rb" to="40vb"/>
-                              <!--<locus from="40rb" to="41vb"/>-->
-                           <title type="complete" ref="LIT4651ChronLeb" xml:lang="gez">ዜናሁ፡ ለንጉሥ፡ ጻድቅ፡
-                        ልብነ፡ ድንግል፡ መፍቀሬ፡ እግዚአብሔር፡ ርቱዐ፡ ሃይማኖት፡ ላዕሌሁ፡ ሰላም፡</title>
-                           <textLang mainLang="gez"/>
+
+
+                           <incipit xml:lang="gez">
+                              <locus target="#40rb"/>ወምክንያቱሰ፡ ዘኀደግነ፡ ጽሒፈ፡ ዜና፡ ነገሥታት፡ እለ፡ ቀደሙ፡ </incipit>
+
+                           <explicit type="supplication" xml:lang="gez">
+                              <!--type="supplication" not documented, see issue 497-->
+                              <locus target="#41vb"/>ወተቀብረ፡ ውስተ፡ ምኔተ፡ ኣባ፡ ኣረጋዊ፡ ዘትሰመይ፡ ደብረ፡ ዳሞ፡ ፨
+                              እግዚአብሔር፡ ያዕረፍ፡ ነፍሶ፡ ውስተ፡ ሕፅነ፡ አብርሃም፡ ይስሓቅ፡ ወያዕቆብ፨ ጸሎቱ፡ ወበረከቱ፡ ለዝንቱ፡
+                              ጻድቅ፡ ንጉሥ፡ <hi rend="rubric">ልብነ፡ ድንግል</hi>፠ የሀሉ፡ ምስለ፡ ወልዱ፡ ንጉሥነ፡
+                              <del rend="erasure"/><add place="overstrike"><hi rend="rubric"> ሱስንዮስ፠</hi></add> 
+                              በዓለ፡ ራብዓይ፡ ክፍል፡ ዘንሕነ፡ ጽሁቃን፡ ለከሢተ፡ ትሩፋቲሁ፨ ወለነሂ፡ ትትኖለወነ፡ ሀብተ፡ ረድኤቱ፡
+                              መንፈሳዊት፡ ወትመግበነ፡ ሥነ፡ ጽድቁ፡ ወንጌላዊት፡ ለዓለመ፡ ዓለም፡ ኣሜን፨ </explicit>
+
                            <listBibl type="editions">
                               <bibl>
                                  <ptr target="bm:Kropp1988LebnaI"/>
@@ -389,10 +599,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </bibl>
                            </listBibl>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i4.3">
-                           <locus from="41vc" to="43rc"/> 
-                           <!--foliation from bm:Kropp1988LebnaI, this is the "new foliation"-->
+
+                        <msItem xml:id="p2_i4.3">
+                           <locus from="41vc" to="43rc"/>
                            <title type="complete" ref="LIT1965Mashaf"/>
                            <textLang mainLang="gez"/>
                            <listBibl type="editions">
@@ -408,10 +617,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </bibl>
                            </listBibl>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i4.4">
-                           <locus from="43ra" to="54vb"/>
-                              <!--<locus from="44ra" to="55vb"/>-->
+
+                        <msItem xml:id="p2_i4.4">
+                           <locus from="44ra" to="55vb"/>
                            <title type="complete" ref="LIT3122Galaw"/>
                            <textLang mainLang="gez"/>
                            <listBibl type="editions">
@@ -420,62 +628,84 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </bibl>
                            </listBibl>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i4.5">
-                           <locus from="55ra" to="56rc"/>
-                              <!--<locus from="56ra" to="57rc"/>-->
-                           <title type="complete" xml:lang="gez" ref="LIT4653Compendium">ክፍል፡ ዳግማዊ፡ ዘንከሥት፡ ቦቱ፡ ዜና፡ መዊኦቱ፡ 
-                        ወትሩፋተ፡ ኂሩቱ፡ በአኅፅሮ፡ አኮ፡ በአንሖ፡ አኮ፡ በአፈድፍ
-                        ዶ፡ አላ፡ በአውሕዶ፡ ለንጉሥነ፡ መፍቀሬ፡ እግዚአብሔር፡
-                        ወመፍቀሬ፡ ሰብእ፡ በጸጋ፡ አሐቲ፡ ጥምቀት፡ ዘተሰምየ፡ <persName ref="PRS4428Galawdew">ገላውዴዎስ፡</persName> ላዕሌሁ፡ ሰላም፡</title>
+
+                        <msItem xml:id="p2_i4.5">
+                           <locus from="56ra" to="57rc"/>
+                           <title type="complete" xml:lang="gez" ref="LIT4653Compendium">ክፍል፡ ዳግማዊ፡
+                              ዘንከሥት፡ ቦቱ፡ ዜና፡ መዊኦቱ፡ ወትሩፋተ፡ ኂሩቱ፡ በአኅፅሮ፡ አኮ፡ በአንሖ፡ አኮ፡ በአፈድፍ ዶ፡ አላ፡
+                              በአውሕዶ፡ ለንጉሥነ፡ መፍቀሬ፡ እግዚአብሔር፡ ወመፍቀሬ፡ ሰብእ፡ በጸጋ፡ አሐቲ፡ ጥምቀት፡ ዘተሰምየ፡
+                                 <persName ref="PRS4428Galawdew">ገላውዴዎስ፡</persName> ላዕሌሁ፡
+                              ሰላም፡</title>
                            <textLang mainLang="gez"/>
                            <listBibl type="editions">
                               <bibl>
                                  <ptr target="bm:Kropp1988LebnaI"/>
                                  <citedRange unit="page">25–34</citedRange>
-                              </bibl> 
+                              </bibl>
                            </listBibl>
                            <listBibl type="translation">
                               <bibl>
                                  <ptr target="bm:Kropp1988LebnaII"/>
                                  <citedRange unit="page">29–38</citedRange>
-                              </bibl> 
+                              </bibl>
                            </listBibl>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i4.6">
-                           <locus from="56va" to="60vc"/>
-                              <!--<locus from="57va" to="61vc"/>-->
+
+                        <msItem xml:id="p2_i4.6">
+                           <locus from="57va" to="61vc"/>
                            <title type="complete" xml:lang="gez" ref="LIT4330Minas">ክፍል፡ ሠልሳዊ፡ ዘቦቱ፡
-                              ንከሥት፡ ዜና፡ ስቃያቲሁ፡ ለንጉ<sic resp="DR">ም</sic>፡ <persName ref="PRS7102Minas">ሚናስ፡</persName></title>
+                              ንከሥት፡ ዜና፡ ስቃያቲሁ፡ ለንጉ<sic resp="DR">ም</sic>፡ <persName
+                                 ref="PRS7102Minas">ሚናስ፡</persName></title>
                            <textLang mainLang="gez"/>
                            <listBibl type="editions">
                               <bibl>
                                  <ptr target="bm:Kropp1988LebnaI"/>
                                  <citedRange unit="page">35–63</citedRange>
-                              </bibl> 
+                              </bibl>
                            </listBibl>
                            <listBibl type="translation">
                               <bibl>
                                  <ptr target="bm:Kropp1988LebnaII"/>
                                  <citedRange unit="page">39–62</citedRange>
-                              </bibl> 
+                              </bibl>
                            </listBibl>
                         </msItem>
-                     
-                           <msItem xml:id="p1_i4.7">
-                           <locus from="61ra" to="97vc"/> 
+
+                        <msItem xml:id="p2_i4.7">
+                           <locus from="62ra" to="99vc"/>
                            <!--different foliation used in bm:ContiRossini1907SarsaDengel, 63r-100v-->
-                              <!--<locus from="62ra" to="99vc"/>-->
-                           <title type="complete" xml:lang="gez" ref="LIT3531Sarsa">ንጽሕፍ፡ መጽሐፈ፡ 
-                              ዜናሁ፡ ለንጉሥ፡ <persName ref="PRS8550sardaDe">ሠርፀ፡ ድንግል፡</persName> እግዚአብሔር፡ ያኑኅ፡ መዋዕሊሁ፡ ከመ፡ መዋዕለ፡ ዕፀ፡ ሕይወት፡
-                        ወይዕቀቦ፡ እመከራ፡ አዝማናት፡</title>
+                           <title type="complete" xml:lang="gez" ref="LIT3531Sarsa">ንጽሕፍ፡ መጽሐፈ፡ ዜናሁ፡
+                              ለንጉሥ፡ <persName ref="PRS8550sardaDe">ሠርፀ፡ ድንግል፡</persName> እግዚአብሔር፡
+                              ያኑኅ፡ መዋዕሊሁ፡ ከመ፡ መዋዕለ፡ ዕፀ፡ ሕይወት፡ ወይዕቀቦ፡ እመከራ፡ አዝማናት፡</title>
                            <textLang mainLang="gez"/>
+                           
                            <explicit type="subscription" xml:lang="gez">
-                              ተወጥነ፡ ዝንቱ፡ መጽሐፍ፡ በትእዛዘ፡ <persName ref="PRS8550sardaDe#n2">መለክ፡ ሰገድ፡</persName> ንጉሥ፡ ወተፈጸመ፡ በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡
-                           ዘሎቱ፡ ክሂል፡ ላዕለ፡ ኵሉ፡ ግብር፡ ወቦቱ፡ ይከውን፡ ፍጻሜ፡ ኵሉ፡ ነገር። ስብሐት፡ ለእግዚአብሔር፡ ወላዕሌነ፡ ይኩን፡
-                           ምሕረት፡
-                        </explicit> <!--is this a colophon?-->
+                              <locus target="87ra" to="87rb"/>
+                              ተፈጸመ፡ ዜና፡ አይሁድ፡ <sic resp="PRS3562Dillmann"
+                                 >በ፸፡፻፡፸፡፫፡</sic> ዓመት፡ እምዓመተ፡ ዓለም፡ <date calendar="eskender"
+                                    >በ፲፻ወ፰፻፺ወ፰ ዓመት፡ እምዓመተ፡ እስክንድር፡ ዘ፪ አቅርንቲሁ፡</date>
+                              <date calendar="ethiopian">በ፲፻ወ፭፻፸ወ፫ ዓመት፡ እምትስጉተ፡ እግዚእነ፡ ኢየሱስ፡
+                                 ክርስቶስ፡ ሎቱ፡ ስብሐት፡</date>
+                              <date calendar="diocletian">በ፲፻ወ፪፻፺ወ፯ ዓመት፡ እምዓመተ፡ ሰማዕታት፡</date>
+                              በ፲ወ፰፡ ዓመት፡ እምዓመተ፡ መንግሥቱ፡ ለንጉሥ፡ <persName ref="PRS8550sardaDe#n2"
+                                 >መለክ፡ ሰገድ፡</persName> ኃይል፡ ወጽኑዕ፡ መዋኢ፡ በውስተ፡ ፀብእ፡ እግዚአብሔር፡ ያጽንዕ፡
+                              መዋዕሊሁ፡ ከመ፡ መዋዕለ፡ ፪ <sic resp="PRS3562Dillmann">ዕፅው፡</sic> ዘይት፡ አሜን፡
+                              ወአሜን ፧ <hi rend="rubric">ይቤ፡ በዐለ፡ ዝንቱ፡ መጽሐፍ፡ ኦኣኃውየ፡ ማእምራን፡ አንባብያኒሁ፡ ወሰማዕያ</hi>ኒሁ፡ ለዝንቱ፡ መጽሐፍ፡ እመ፡
+                              ረከብክሙ፡ ብየ፡ ስሕተተ፡ በኃዲገ፡ ዜና፡ እመንገለ፡ ዝንጋዔ፡ ወኢያእምሮ፡ ኅደጉ፡ ሊተ፡ አበሳየ፡ ተዘኪረክሙ፡ ከመኅፁፅ፡ 
+                              ውእቱ፡ አእምሮተ፡ እጓለ፡ 
+                              እመሕያው፡ ወአኮ፡ ምሉእ ፨ ተውሰከሰ፡ ኢወሰኩ፡ በእንተ፡ ስብሓተ፡ ፅሩዕ፨ 
+                              አላ፡ ጸሓፍኩ፡ ዘሰማዕኩ፡ ወዘርኢኩ፨ በእንተዝ፡ በሉ፡ 
+                              ይምሓሮ፡ ወይሠሃሎ፡ እግዚአብሔር፡ አሜን ፨
+                                          
+                           </explicit>
+                           
+                           <explicit type="subscription" xml:lang="gez">
+                              <locus target="#99vc"/>
+                              ተወጥነ፡ ዝንቱ፡ መጽሐፍ፡ በትእዛዘ፡ <persName ref="PRS8550sardaDe#n2">መለክ፡ ሰገድ፡</persName> ንጉሥ፡ ወተፈጸመ፡
+                              በረድኤተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ዘሎቱ፡ ክሂል፡ ላዕለ፡ ኵሉ፡ ግብር፡ ወቦቱ፡ ይከውን፡ ፍጻሜ፡ ኵሉ፡
+                              ነገር። ስብሐት፡ ለእግዚአብሔር፡ ወላዕሌነ፡ ይኩን፡ ምሕረት፡ </explicit>
+                           <!--is this a colophon?-->
+                           
                            <listBibl type="editions">
                               <bibl>
                                  <ptr target="bm:ContiRossini1907SarsaDengel"/>
@@ -483,9 +713,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </listBibl>
                         </msItem>
                      </msItem>
-                  
                   </msContents>
-               
+
+
                   <physDesc>
                      <objectDesc form="Codex">
                         <supportDesc>
@@ -493,13 +723,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <material key="parchment"/>
                            </support>
                            <extent>
-                              <measure unit="leaf">95</measure>
+                              <measure unit="leaf">92</measure>
+                              <locus from="5" to="37"/>
+                              <locus from="40" to="99"/>
                               <dimensions type="outer" unit="mm">
                                  <height>295</height>
                                  <width>260</width>
                               </dimensions>
-                              <note>The volume has been cut in Europe. <bibl><ptr target="bm:Kropp1994AmdaSeyon"/>
-                              <citedRange unit="page">xviii</citedRange></bibl></note> 
+                              <note>The textblock of the volume has been trimmed in Europe. <bibl><ptr
+                                       target="bm:Kropp1994AmdaSeyon"/>
+                                    <citedRange unit="page">xviii</citedRange></bibl></note>
                               <locus from="5" to="98"/>
                               <note>formae 4<hi rend="apices">ae</hi>
                               </note>
@@ -508,253 +741,280 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </extent>
                            <collation>
                               <note>
-                                 <locus target="#38"/> and <locus target="#39"/> are separated by an empty leaf, which Kropp supposes was the end of a quire. 
-                           <bibl>
+                                 <locus target="#38"/> and <locus target="#39"/> are separated by an
+                                 empty leaf, which Kropp supposes was the end of a quire. He supposes also another 
+                                 discontinuity <locus target="#88"/> and <locus target="#89"/> between <bibl>
                                     <ptr target="bm:Kropp2017Erbbesitz"/>
-                                    <citedRange unit="page">347</citedRange>
+                                    <citedRange unit="page">347–348</citedRange>
                                  </bibl>
                               </note>
                            </collation>
-                           
+
                         </supportDesc>
-                     
+
                         <layoutDesc>
                            <layout columns="3">
                               <dimensions unit="mm">
                                  <height>215</height>
                                  <width>60</width>
                               </dimensions>
-                              
                               <bibl><ptr target="bm:Kropp1994AmdaSeyon"/>
                                  <citedRange unit="page">xviii</citedRange></bibl>
                            </layout>
-                     <!--      Schriftspiegel fast quadratisch, 215x210 mm <bibl><ptr target="bm:Kropp1994AmdaSeyon"/>
+                           <!--      Schriftspiegel fast quadratisch, 215x210 mm <bibl><ptr target="bm:Kropp1994AmdaSeyon"/>
                               <citedRange unit="page">xviii</citedRange></bibl>-->
                            <!--Schrifthöhe 4,5 cm <bibl><ptr target="bm:Kropp1994AmdaSeyon"/>
                               <citedRange unit="page">xviii</citedRange></bibl>-->
                         </layoutDesc>
                      </objectDesc>
-                  
+
                      <handDesc>
                         <handNote xml:id="h1" script="Ethiopic">
                            <persName ref="PRS11890WaldaH" role="scribe"/>
                            <locus from="5"/>
-                           <seg type="script">Very small characters, carefully executed. See for a description
-                              <bibl>
+                           <seg type="script">Very small characters, carefully executed. See for a
+                              description <bibl>
                                  <ptr target="bm:Kropp1994AmdaSeyon"/>
                                  <citedRange unit="page">xviii–xix</citedRange>
                               </bibl>
                            </seg>
                         </handNote>
                      </handDesc>
-                  
+
                      <additions>
                         <list>
-                           <item xml:id="a1">
-                              <locus target="#86ra"/>
-                             <!-- <locus target="87ra" to="87rb"/>-->
-                              <desc type="ScribalNoteCompleting"/>
-                              <q xml:lang="gez">ተፈጸመ፡ ዜና፡ አይሁድ፡ <sic resp="PRS3562Dillmann">በ፸፡፻፡፸፡፫፡</sic> ዓመት፡ እምዓመተ፡ ዓለም፡ <date calendar="eskender">በ፲፻ወ፰፻፺ወ፰ ዓመት፡
-                           እምዓመተ፡ እስክንድር፡ ዘ፪ አቅርንቲሁ፡</date> <date calendar="ethiopian">በ፲፻ወ፭፻፸ወ፫ ዓመት፡ እምትስጉተ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ሎቱ፡ 
-                              ስብሐት፡</date> <date calendar="diocletian">በ፲፻ወ፪፻፺ወ፯ ዓመት፡ እምዓመተ፡ ሰማዕታት፡</date> በ፲ወ፰፡ ዓመት፡ እምዓመተ፡ መንግሥቱ፡ ለንጉሥ፡ <persName ref="PRS8550sardaDe#n2">መለክ፡
-                           ሰገድ፡</persName> ኃይል፡ ወጽኑዕ፡ መዋኢ፡ በውስተ፡ ፀብእ፡ እግዚአብሔር፡ ያጽንዕ፡ መዋዕሊሁ፡ ከመ፡ መዋዕለ፡ ፪ <sic resp="PRS3562Dillmann">ዕፅው፡</sic>
-                           ዘይት፡ አሜን፡ ወአሜን፡</q>
-                           </item>
-                           
+
                            <item xml:id="e1">
                               <locus target="#89r"/>
-                              <desc>The name of the scribe, <persName ref="PRS11890WaldaH" role="scribe"/>, is written in the lower margin. It can be assumed that it was 
-                              originally written on more folios, but cut away when the volume was recut in Europe.</desc>
-                              <q xml:lang="gez">ዘ<persName ref="PRS11890WaldaH">ወልደ፡ ሃይማኖት፨</persName></q>
+                              <desc>The name of a scribe, <persName ref="PRS11890WaldaH"
+                                    role="scribe"/>, is written in the lower margin.</desc>
+                              <q xml:lang="gez">ዘ<persName ref="PRS11890WaldaH">ወልደ፡
+                                    ሃይማኖት፨</persName></q>
                            </item>
-                           
+
                            <item xml:id="e2">
                               <locus target="#5r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e3">
                               <locus target="#10r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e4">
                               <locus target="#16r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e5">
                               <locus target="#17r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, partly visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, partly visible in the upper margin.</desc>
                               <q xml:lang="gez">ዘንጉሥ፡ ዘርአ፡ ያዕቆብ፡</q>
                            </item>
-                           
+
                            <item xml:id="e6">
-                              <locus target="#27r"/> <!--?-->
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <locus target="#27r"/>
+                              <!--?-->
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e7">
                               <locus target="#44r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e8">
-                              <locus target="#62r"/> <!--?-->
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <locus target="#62r"/>
+                              <!--?-->
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e9">
                               <locus target="#64r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e10">
                               <locus target="#65r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e11">
                               <locus target="#68r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e12">
                               <locus target="#69r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e13">
                               <locus target="#73r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e14">
                               <locus target="#74r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e15">
                               <locus target="#81r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                               <q xml:lang="gez">ዘንጉሥ፡ መለክ፡ ሰገድ፡</q>
                            </item>
-                           
+
                            <item xml:id="e16">
                               <locus target="#82r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e17">
                               <locus target="#83r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                               <q xml:lang="gez">ዘንጉሥ፡ መለክ፡ ሰገድ፡</q>
                            </item>
-                           
+
                            <item xml:id="e18">
                               <locus target="#89r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e19">
                               <locus target="#90r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e20">
                               <locus target="#94r"/>
-                              <desc>Remainder of a running title, which was cut off when the volume was recut in Europe, visible in the upper margin.</desc>
+                              <desc>Remainder of a running title, which was cut off when the volume
+                                 was trimmed in Europe, visible in the upper margin.</desc>
                            </item>
-                           
+
                            <item xml:id="e21">
                               <locus target="#18rb"/>
                               <desc>Cue for the rubricator visible.</desc>
                            </item>
-                           
+
                            <item xml:id="e22">
                               <locus target="#19ra"/>
                               <desc>Cues for the rubricator visible.</desc>
                            </item>
-                 
+
                            <item xml:id="e23">
                               <locus target="#28rc"/>
                               <desc>Cue for the rubricator visible.</desc>
                               <q xml:lang="gez">ምዕራፍ</q>
                            </item>
-                           
+
                            <item xml:id="e24">
                               <locus target="#28vc"/>
                               <desc>Cue for the rubricator visible.</desc>
                               <q xml:lang="gez">ምዕራፍ</q>
                            </item>
-                           
+
                            <item xml:id="e25">
                               <locus target="#29ra"/>
                               <desc>Cues for the rubricator visible.</desc>
                            </item>
-                           
+
                            <item xml:id="e26">
                               <locus target="#29vb"/>
                               <desc>Cues for the rubricator visible.</desc>
                               <q xml:lang="gez">ምዕራፍ</q>
                            </item>
-                           
-                           
+
+
                            <item xml:id="e27">
                               <locus target="#28va"/>
-                              <desc>Note written in the margin.</desc> <!--??-->
+                              <desc>Note written in the margin.</desc>
                               <q xml:lang="gez">ለቈ</q>
                            </item>
-                           
+
                            <item xml:id="e28">
                               <locus target="#21vb"/>
-                              <desc>Note written in the margin.</desc> <!--??-->
+                              <desc>Note written in the margin.</desc>
                               <q xml:lang="gez">ለዝ</q>
                            </item>
-                           
+
                            <item xml:id="e30">
                               <locus target="#24va"/>
-                              <desc>Note written in the margin.</desc> <!--??-->
+                              <desc>Note written in the margin.</desc>
                               <q xml:lang="gez">ለዝ</q>
                            </item>
-                           
+
                            <item xml:id="e31">
                               <locus target="#27vc"/>
-                              <desc>Note written in the margin.</desc> <!--??-->
+                              <desc>Note written in the margin.</desc>
                               <q xml:lang="gez">ለቈ</q>
                            </item>
-                           
-                           
+
+
                            <item xml:id="e32">
                               <locus target="#29rb"/>
-                              <desc>Note written in the margin.</desc> <!--??-->
+                              <desc>Note written in the margin.</desc>
                               <q xml:lang="gez">ለቈ</q>
                            </item>
                         </list>
                      </additions>
                   </physDesc>
-               
+
                   <history>
                      <origin>
-                        <origDate notBefore="1592" notAfter="1605" evidence="reign"/>
-                        <origDate notBefore="1610" resp="PRS6089Kropp"/>
+                                               
+                        <origDate notBefore="1592" notAfter="1632" evidence="reign"/>
+                        <origDate notBefore="1610" notAfter="1632" resp="PRS6089Kropp"/>
+                            <origDate when="1592" resp="PRS6784Marrassi"/>
+                        <note>Kropp argues that  <ref target="#p2"/> was written in the time of  <ref  type="pers" corresp ="PRS9038Susenyos">King Susǝnyos</ref> 
+                           most probably after <date>1610</date> because  <ref type="work" corresp="LIT3531Sarsa"/>
+                              is presented in the so-called "censored version"</note>
                         <listBibl type="secondary">
                            <bibl>
+                              <ptr target="bm:bm:Kropp1988LebnaII"/>
+                              <citedRange unit="page">10</citedRange>
+                           </bibl>
+                              <bibl>
                               <ptr target="bm:Kropp1994AmdaSeyon"/>
                               <citedRange unit="page">xviii</citedRange>
-                           </bibl>
+                           </bibl>                                                                     
+                              <bibl>
+                              <ptr target="bm:Kropp2001Sarsadengel"/>                                                  
+                           </bibl>                           
                         </listBibl>
-                        <origPlace>
-                           <placeName ref="LOC3010Ethiop"/>
-                        </origPlace>
+                           
+                           <origPlace> 
+                              <placeName ref="LOC3010Ethiop"/>
+                           </origPlace>
+                       
                      </origin>
+                   
                   </history>
-               
-                  <additional>
+                                  
+            
+                 <additional>
                      <adminInfo>
                         <recordHist>
                            <source>
-                              
                               <listBibl type="catalogue">
                                  <bibl>
                                     <ptr target="bm:Dillmann1848Catalogus"/>
@@ -766,7 +1026,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <ptr target="bm:Kropp2016Zekra"/>
                                     <citedRange unit="page">1702</citedRange>
                                  </bibl>
-                                    <bibl>
+                                 <bibl>
                                     <ptr target="bm:Wion2009LibAks"/>
                                     <citedRange unit="page">139–142</citedRange>
                                  </bibl>
@@ -781,180 +1041,61 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </listBibl>
                            </source>
                         </recordHist>
-                        </adminInfo>
+                     </adminInfo>
                   </additional>
-                  </msPart>
-               
-                  <msPart xml:id="p2">
-                     <msIdentifier/>
-                     <msContents>
-                        <summary/>
-                        
-                        <msItem xml:id="p2_i1">
-                           <locus target="#1 #3r"/>
-                           <title type="complete" ref="LIT3854KingList" xml:lang="gez">በስመ፡ አብ፡ <gap reason="omitted" resp="PRS3562Dillmann" extent="unknown"/>
-                              ንጽሕፍ፡ ዜና፡ ልደቶሙ፡ ለአበው፡ እምአዳም፡ እስከ፡ ይእዜ፡</title> 
-                           <textLang mainLang="gez"/> 
-                        </msItem> 
-                        
-                        <msItem xml:id="p2_i2">
-                           <locus target="#3v #2 #4"/>
-                           <title type="incomplete" ref="LIT4723TarikaWaldaAmid"/>
-                           <textLang mainLang="gez"/>
-                           <note>Excerpts from <ref type="work" corresp="LIT4723TarikaWaldaAmid"/> and
-                              a chronology of the Ethiopian kings.</note>
-                        </msItem>
-                     </msContents>
-                        
-                        <physDesc>
-                           <objectDesc form="Codex">
-                              <supportDesc>
-                                 <support>
-                                    <material key="parchment"/>
-                                 </support>
-                                 <extent>
-                                    <measure unit="leaf">4</measure>
-                                    <locus from="1" to="4"/>
-                                    <note>formae 4<hi rend="apices">ae</hi>
-                              </note>
-                                 </extent>
-                                 
-                                 <collation>
-                                    <signatures>
-                                       <note/>
-                                    </signatures>
-                                    <list>
-                                       <item xml:id="q1" n="A">
-                                          <dim unit="leaf">4</dim>
-                                          <locus from="1r" to="4v"/>
-                                       </item>
-                                       <item xml:id="q2" n="1">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="1r" to="4v"/>
-                                          
-                                          
-                                          <note>This quire  was added later to the manuscript. <locus target="#2"/> has been misplaced from its proper position
-                                             after <locus target="#3"/>. 
-                                             <listBibl type="secondary">
-                                                <bibl>
-                                                   <ptr target="bm:Wion2009LibAks"/>
-                                                   <citedRange unit="page">141</citedRange>
-                                                </bibl>
-                                                <bibl>
-                                                   <ptr target="bm:Kropp2017Erbbesitz"/>
-                                                   <citedRange unit="page">346</citedRange>
-                                                </bibl>
-                                             </listBibl>
-                                             
-                                          </note>
-                                       </item>
-                                       
-                                       <item xml:id="q3" n="2">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="5r" to="12v"/>
-                                       </item>
-                                       <item xml:id="q4" n="3">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="13r" to="20v"/>
-                                
-                                          
-                                       </item>
-                                       <item xml:id="q5" n="4">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="21r" to="28v"/>
-                                          2, stub after 7
-                                          5, stub after 4
-                                          
-                                          
-                                       </item>
-                                       <item xml:id="q6" n="5">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="29r" to="37v"/>
-                                          7, stub after 3                                          
-                                       </item>
-                                       
-                                       <item xml:id="q7" n="6">
-                                          <dim unit="leaf">2</dim>
-                                          <locus from="38r" to="39v"/>
-                                          1, stub after 2
-                                          2, stub after 2
-                                       </item>
-                                    
-                                       <item xml:id="q8" n="7">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="40r" to="47v"/>
-                                       </item>
-                                       
-                                       <item xml:id="q9" n="8">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="48r" to="55v"/>
-                                       </item>
-                                       
-                                       <item xml:id="q10" n="9">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="56r" to="63v"/>
-                                          </item>
-                                       
-                                       
-                                       <item xml:id="q11" n="10">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="64r" to="71v"/>
-                                       </item>
-                                       
-                                       <item xml:id="q12" n="11">
-                                          <dim unit="leaf">6</dim>
-                                          <locus from="72r" to="77v"/>
-                                       </item>
-                                       
-                                       <item xml:id="q13" n="12">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="78r" to="85v"/>
-                                       </item>
-                                       
-                                         <item xml:id="q14" n="13">
-                                          <dim unit="leaf">3</dim>
-                                          <locus from="86r" to="88v"/>
-                                            2, stub after 1
-                                       </item>
-                                       
-                                       <item xml:id="q15" n="14">
-                                          <dim unit="leaf">8</dim>
-                                          <locus from="89r" to="96v"/>
-                                       </item>
-                                       
-                              
-                                       
-                                    </list>
-                                 </collation>
-                                 
-                              </supportDesc>
-                              <layoutDesc>
-                                 <layout columns="3"/>
-                              </layoutDesc>
-                           </objectDesc>
-                           
-                           <handDesc>
-                              <handNote xml:id="h2" script="Ethiopic">
-                                 <locus to="5"/>
-                                 <seg type="script">Written by several hands, see <bibl>
-                                 <ptr target="bm:Kropp2017Erbbesitz"/>
-                                 <citedRange unit="page">346</citedRange>
-                              </bibl>.</seg>
-                              </handNote>
-                           </handDesc>
-                        </physDesc>
-                        
-                        <history>
-                           <origin>
-                              <origDate notBefore="1769" notAfter="1772"/>
-                              <origPlace>
-                           <placeName ref="LOC3010Ethiop"/>
-                        </origPlace>
-                           </origin>
-                           <provenance>This part of the manuscript was copied for <persName ref="PRS2916Bruce" role="patron"/>.</provenance>
-                        </history>
-                  </msPart>
-               
+               </msPart>
+
+               <msPart xml:id="p3">
+                  <msIdentifier/>
+                  <msContents>
+                     <summary/>
+
+                     <msItem xml:id="p3_i1">
+                        <locus from="38ra" to="38vb"/>
+                        <title type="incomplete" xml:lang="gez" ref="LIT4679Rest">በአኰቴተ፡ አብ፡ ወውልድ፡
+                           ወመንፈስ፡ ቅዱስ፡ ትጽሕፈ፡ ርስተ፡ አምባ፡ ዘእስራኤል፡ በከመ፡ ኮነ፡ በበ፡ ገጹ፡ ወበበ፡ ዘመኑ፡</title>
+                        <textLang mainLang="gez" otherLangs="am"/>
+                        <note>Description of the inheritance of the Ethiopian kings.</note>
+                        <note>The end is missing.</note>
+                     </msItem>
+                  </msContents>
+
+                  <physDesc>
+                     <objectDesc form="Codex">
+                        <supportDesc>
+                           <support>
+                              <material key="parchment"/>
+                           </support>
+                           <extent>
+                              <measure unit="leaf">2</measure>
+                              <locus from="38" to="39"/>
+                              <measure unit="leaf" type="blank">1</measure>
+                              <locus target="#39"/>
+                           </extent>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout columns="3"/>
+                        </layoutDesc>
+                     </objectDesc>
+
+                     <handDesc>
+                        <handNote xml:id="h3" script="Ethiopic">
+                           <seg type="script"/>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  
+                  <history>
+                     <origin>
+                        <origDate notBefore="1592" notAfter="1632" evidence="reign"/>
+                        <origDate notBefore="1610" notAfter="1632" resp="PRS6089Kropp"/>
+                        <origDate when="1592" resp="PRS6784Marrassi"/>
+                        <note>Neither Kropp nor Marrassini consider a different dating for <ref target="#p3"/></note>
+                     </origin>
+                  </history>
+               </msPart>
+
+
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -967,14 +1108,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
-               <term key="Hagiography"/>
                <term key="HistoryAndHistoriography"/>
-               <term key="Paks2" corresp="#p1"/>
-               <term key="Gon" corresp="#p2"/>
-               <term key="ZaMa" corresp="#p2"/>
             </keywords>
          </textClass>
-         <langUsage>   
+         <langUsage>
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
             <language ident="gez">Gǝʿǝz</language>
@@ -992,27 +1129,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <text>
       <body>
          <div type="edition">
-            <div type="textpart"
-                 xml:lang="gez"
-                 xml:id="ExcerptIntroLebnaD"
-                 corresp="#p1_i4.1">
+            <div type="textpart" xml:lang="gez" xml:id="ExcerptIntroLebnaD" corresp="#p1_i4.1">
                <ab>
-                  <locus from="40ra" to="40rb"/>
-                  ንጽሕፍ፡ መቅድመ፡ ዜና፡ አበዊሁ፡ ነገሥት፡ ርቱዓነ፡ ሃይማኖት፡ ወአስተዳኅርነ፡ ኪያሁ፡ ከመ፡ ይኩን፡ ኀበ፡ ዘየዓቢ፡ መዓርግ፡ እምዘ፡ ይቴሐት፡
-               </ab>
+                  <locus from="40ra" to="40rb"/> ንጽሕፍ፡ መቅድመ፡ ዜና፡ አበዊሁ፡ ነገሥት፡ ርቱዓነ፡ ሃይማኖት፡ ወአስተዳኅርነ፡
+                  ኪያሁ፡ ከመ፡ ይኩን፡ ኀበ፡ ዘየዓቢ፡ መዓርግ፡ እምዘ፡ ይቴሐት፡ </ab>
             </div>
-            <div type="textpart"
-                 xml:lang="gez"
-                 xml:id="ExcerptSarsaD"
-                 corresp="#p1_i4.5"> <!--subscription, addition?-->
+
+            <div type="textpart" xml:lang="gez" xml:id="ExcerptSarsaD" corresp="#p1_i4.5">
+               <!--subscription, addition?-->
                <ab>
-                  <locus target="#82vc"/>
-                  ይቤ፡ በዓለ፡ ዝንቱ፡ መጽሐፍ፡ ኦአኃው፡ ማእምራን፡ እለ፡ ታነብብዎ፡ ለዝንቱ፡ መጽሐፍ፡ ኢትትዐቀፉ፡ ቦቱ። እምኒ፡
-                  ኢያሠነየ፡ ንባበ፡ ወኢያሠርገወ፡ ቃለ፡ አልቦቱ፡ ነውረ፡ እስመ፡ ውእቱ፡ ተናገረ፡ አምጣነ፡ ክሂሎቱ፡ በከመ፡ አንበቦ፡
-                  መንፈስ፡ ቅዱስ፡ አኮ፡ ዘጸሐፈ፡ ዘንተ፡ በኃሢሠ፡ ውዳሴ፡ ብጡል፡ ወበኃሢሠ፡ ክብር፡ ምድራዊ። አላ፡ ከመ፡ ይፈጽም፡
-                  ትእዛዙ፡ እግዚኡ። እስመ፡ ይቤ፡ መጽሐፍ፡ አግብርትኒ፡ ተአዘዙ፡ ለአጋእዝቲክሙ። እንከሰ፡ ኦማእምራን፡ ኢታንክሩ፡
-                  ስሕተተ፡ ዝንቱ፡ ተአዛዚ፡ ተዘኪረክሙ፡ ቃለ፡ መጽሐፍ፡ ዘይቤ፡ ለስሒት፡ መኑ፡ ይሌብዋ። ኀተምነ፡ ነገረ፡ በዝንቱ፡ ቃል።
-               </ab>
+                  <locus target="#82vc"/> ይቤ፡ በዓለ፡ ዝንቱ፡ መጽሐፍ፡ ኦአኃው፡ ማእምራን፡ እለ፡ ታነብብዎ፡ ለዝንቱ፡ መጽሐፍ፡
+                  ኢትትዐቀፉ፡ ቦቱ። እምኒ፡ ኢያሠነየ፡ ንባበ፡ ወኢያሠርገወ፡ ቃለ፡ አልቦቱ፡ ነውረ፡ እስመ፡ ውእቱ፡ ተናገረ፡ አምጣነ፡ ክሂሎቱ፡
+                  በከመ፡ አንበቦ፡ መንፈስ፡ ቅዱስ፡ አኮ፡ ዘጸሐፈ፡ ዘንተ፡ በኃሢሠ፡ ውዳሴ፡ ብጡል፡ ወበኃሢሠ፡ ክብር፡ ምድራዊ። አላ፡ ከመ፡
+                  ይፈጽም፡ ትእዛዙ፡ እግዚኡ። እስመ፡ ይቤ፡ መጽሐፍ፡ አግብርትኒ፡ ተአዘዙ፡ ለአጋእዝቲክሙ። እንከሰ፡ ኦማእምራን፡ ኢታንክሩ፡
+                  ስሕተተ፡ ዝንቱ፡ ተአዛዚ፡ ተዘኪረክሙ፡ ቃለ፡ መጽሐፍ፡ ዘይቤ፡ ለስሒት፡ መኑ፡ ይሌብዋ። ኀተምነ፡ ነገረ፡ በዝንቱ፡ ቃል። </ab>
             </div>
          </div>
       </body>
