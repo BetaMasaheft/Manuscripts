@@ -100,7 +100,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </adminInfo>
                </additional>
                
-               <msFrag xml:id="f1">
+               <msPart xml:id="p1">
                   
                   <msIdentifier>
                      <repository ref="INS0312BDL"/>
@@ -114,21 +114,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msContents>
                      <summary/>
                   
-                     <msItem xml:id="f1_i1">
+                     <msItem xml:id="p1_i1">
                         <title type="complete" ref="LIT4574MagicPr"/> 
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">
                            <gap extent="unknown" reason="omitted" resp="PRS9622Ullendor"/> ጸሎተ፡ ንጽራ፡ ዘውእቱ፡ ሕማመ፡ ዓይነት፡ ወዓይነ፡ ወርቅ፡</incipit>
                      </msItem>
                   
-                     <msItem xml:id="f1_i2">
+                     <msItem xml:id="p1_i2">
                         <title type="complete" ref="LIT4575MagicPr"/> 
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">ጸሎት፡ በእንተ፡ ሕማመ፡ ባርያ፡ 
                         ወሌጌ<supplied reason="undefined" resp="PRS9622Ullendor">ዎ</supplied>ን፡ ወበእንተ፡ ማዕሠረ፡ አጋንንት፡</incipit>
                      </msItem>
                   
-                     <msItem xml:id="f1_i3">
+                     <msItem xml:id="p1_i3">
                         <title type="complete" ref="LIT4576MagicPr"/> 
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">
@@ -136,7 +136,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         ጸሎተ፡ ድንጋፄ፡ ዘወሀቦ፡ እግዚአብሔር፡ ለአዳም፡ ከመ፡ ይደንገጽ፡ ልቡ፡</incipit>
                      </msItem>
                   
-                     <msItem xml:id="f1_i4">
+                     <msItem xml:id="p1_i4">
                         <title type="complete" ref="LIT4577MagicPr"/> 
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">ጸሎት፡ በእንተ፡ ሕማመ፡ ቍርጥማት፡</incipit> 
@@ -185,9 +185,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </adminInfo>
                   </additional>
                
-               </msFrag>
+               </msPart>
                
-               <msFrag xml:id="f2">
+               <msPart xml:id="p2">
                   <msIdentifier>
                      <repository ref="INS0312BDL"/>
                      <collection>Codices aethiopici</collection>
@@ -200,21 +200,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msContents>
                      <summary/>
                      
-                     <msItem xml:id="f2_i1">
+                     <msItem xml:id="p2_i1">
                         <title type="complete" ref="LIT4578MagicPr"/> 
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">ጸሎት፡ በእንተ፡ ሱስንዮስ፡ ዘያሰስል፡ ሕማ<supplied reason="undefined" resp="PRS9622Ullendor">መ</supplied>፡ 
                            ባርያ፡ ወሌጌዎን፡ ወበእንተ፡ መጋኛ፡ ወጉሥምት፡</incipit>
                      </msItem>
                      
-                     <msItem xml:id="f2_i2">
+                     <msItem xml:id="p2_i2">
                         <title type="complete" ref="LIT4560Salot"/> 
                         <!--exactly the same prayer or similar?-->
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">ጸሎት፡ በእንተ፡ ሱስንዮስ፡ በእንተ፡ አሰስሎ፡ ደዌ፡ እምሕፃናት፡</incipit>
                      </msItem>
                      
-                     <msItem xml:id="f2_i3">
+                     <msItem xml:id="p2_i3">
                         <title type="complete" ref="LIT4579MagicPr"/> 
                         <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">ጸሎት፡ በእንተ፡ ሕማመ፡ በሽታ፡ አበስኢሎን፡</incipit>
@@ -272,7 +272,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </adminInfo>
                   </additional>
                   
-               </msFrag>
+               </msPart>
             </msDesc>
             
          </sourceDesc>
@@ -306,6 +306,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <text>
       <body>
          <ab/>
+         <listRelation>
+            <relation active="BDLaethf11#UniCirc1" name="SdC:undergoesTransformation" passive="BDLaethf11#tr1"/>
+            <relation active="BDLaethf11#UniCirc1" name="dcterms:hasPart" passive="BDLaethf11#p1 BDLaethf11#p2 BDLaethf12"/>
+            <relation active="BDLaethf11#tr1" name="SdC:hasTransformationModel" passive="SdC:D3"/>
+            <relation active="BDLaethf11#tr1" name="SdC:produces" passive="BDLaethf11#UniCirc2 BDLaethf11#UniCirc3"/>
+            <relation active="BDLaethf11#UniCirc2" name="skos:exactMatch" passive="BDLaethf11"/>
+            <relation active="BDLaethf11#UniCirc3" name="skos:exactMatch" passive="BDLaethf12"/>
+         </listRelation>
       </body>
    </text>
 </TEI>
