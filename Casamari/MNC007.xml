@@ -17,7 +17,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <pubPlace>Hamburg</pubPlace>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
@@ -48,17 +48,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
                   <msItem xml:id="ms_i1">
                      <locus from="3r" to="16v"/>
-                     <title type="complete" ref="">Malkǝʾa śǝllāse</title>
+                     <title type="complete">Malkǝʾa śǝllāse</title>
                      <textLang mainLang="gez"/>
-                     <note>
+                     <note><persName ref="PRS12029GabraMa">Gabra Māryām</persName> is mentioned in the supplication formula. 
+                        <persName role="scribe" ref="PRS12028WaldaAr">Walda ʾAragāwi</persName> is mentioned as the scribe.
                      </note>                
                   </msItem>
                   <msItem xml:id="ms_i2">
                      <locus from="16v" to="21v"/>
                      <title type="complete">Malkǝʾa Gabra Manfas Qǝddus</title>
                      <textLang mainLang="gez"/>
-                     <note>
-                     </note>                
+                     <note><persName ref="PRS12029GabraMa">Gabra Māryām</persName> is mentioned in the supplication formula at the end of the text.
+                     </note>                  
                   </msItem>
                   <msItem xml:id="ms_i3">
                      <locus from="21v" to="32r"/>
@@ -71,8 +72,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <locus from="32v" to="41v"/>
                      <title type="complete">Malkǝʾa ʾIyasus</title>
                      <textLang mainLang="gez"/>
-                     <note>
-                     </note>                
+                     <note><persName ref="PRS12028WaldaAr">Walda ʾAragāwi</persName> is mentioned in the supplication formula at the end of the text.
+                     </note>             
                   </msItem>
                </msContents>
           
@@ -179,6 +180,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <locus from="3r" to="21v"/>
+                        <persName ref="PRS12028WaldaAr"></persName>
                         <ab type="script">Mediocre.</ab>
                         <seg type="ink">Black, red</seg>
                         <date notBefore="1700" notAfter="1899">17th-18th century</date>
@@ -202,15 +204,37 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </seg>
                      </handNote>
                   </handDesc>
+                  <decoDesc>
+                     <decoNote type="band" xml:id="d1">
+                        <locus target="#3r"/>
+                        <desc>Coloured ornamental band with simple drawings</desc>
+                     </decoNote>
+                  </decoDesc>
                   <additions>
                      <list>
-                      <item xml:id="a1">
-                         <desc></desc>
-                           <locus from="" to=""/>
-                           <desc>
+                        <item xml:id="a1">
+                           <desc type="Unclear"/>
+                           <locus target="#1v"/>
+                           <desc>Unclear note written in Amharic.
+                           </desc>
+                        </item> 
+                        <item xml:id="a2">
+                           <desc type="CommemorativeNote"></desc>
+                           <locus from="2r"/>
+                           <desc>List of commemorations days for one unspecified month. 
+                              The note begins on <locus target="#2r"/> and terminates on <locus target="#1v"/>.
                            </desc>
                         </item>
-                        
+                        <item xml:id="a3">
+                           <desc type="ProtectivePrayer"/>
+                           <locus from="41v" to="42r"/>
+                           <desc></desc>
+                        </item> 
+                        <item xml:id="a4">
+                           <desc type="Doxology">Praise to Mary</desc>
+                           <locus from="42v" to="44v"/>
+                           <desc>Written in a mediocre hand. The ink is partly faded. It mentions a certain Walda Qirqos as the commissioner.</desc>
+                        </item> 
                         </list>
                   </additions>
             
@@ -263,7 +287,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <listPerson>
                <person role="donor"/>
                <person role="owner"/>
-               <person role="scribe"/>
+               <person>
+                  <persName ref="PRS12028WaldaAr" role="scribe"/>
+               </person>
                <person role="other"/>
             </listPerson>
          </particDesc>
