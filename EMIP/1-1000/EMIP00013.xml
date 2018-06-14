@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 9</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,92 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 70 </measure>
+                           <measure unit="quire">Protection quire + 8</measure>
                            <dimensions type="outer" unit="mm">
                               <height>150</height>
                               <width>128</width>
                               <depth>47</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 3–7 balanced; quires 1, 2, 8 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              <note>There is, perhaps, a reinforcement strip that goes around the spine of the protection sheet. A stub at the gutter is visible before f. i; a folio stub, cut off about 1 cm from the gutter is visible between ff. ii and 1.</note>
+                              stub before 1
+                              stub after 2
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                              <note>Ff. 8 and 10 seem to be single sheets sewn into the quire.</note>
+                              8 added
+                              10 added
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">9</dim>
+                              <locus from="11" to="19"></locus>
+                              <note>Folio 16 is split in half from top to bottom, down one of the creases of the center column. It is sewn together in two places.</note>
+                              9 added
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="20" to="29"></locus>
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="30" to="39"></locus>
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="40" to="49"></locus>
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="50" to="59"></locus>
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="60" to="69"></locus>
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">11</dim>
+                              <locus from="70" to="80"></locus>
+                              <note>A folio stub is visible between ff. 69 and 70.</note>
+                              11, stub before 1
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="10" atMost="13">10-13</dim>
+                           <dim type="bottom" atLeast="30" atMost="37">30-37</dim>
+                           <dim type="right" atLeast="12" atMost="14">12-14</dim>
+                           <dim type="left" atLeast="8" atMost="10">8-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="15">
+                         <locus from="iv(erso)" to="iir"></locus>
+                         <locus from="1r" to="79v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Four repaired Coptic chain stitches attached with bridle attachments to repaired rough-hewn boards (segment of back board missing).</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1725">early-eighteenth  century</origDate>
+                     <origDate notBefore="1700" notAfter="1750">early-eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +153,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-14" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
