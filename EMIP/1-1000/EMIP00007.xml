@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -50,18 +50,65 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">iv + 38 </measure>
+                           <measure unit="quire">One protection quire + four full quires</measure>
                            <dimensions type="outer" unit="mm">
                               <height>180</height>
                               <width>115</width>
                               <depth>35</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–4 balanced. Navigation system: variously-colored string sewn into corners of ff. 5, 7, 17, and 23 to mark content divisions.</note>
+                          <note>Either through wear or through trimming, the fore edges of all of the folios are uniformly rounded, extending furthest (115 mm) at the center and 110 mm at top and bottom. </note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">4</dim>
+                              <locus from="i" to="iv"></locus>
+                              <note>Protection Quire</note>
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="9" to="18"></locus>
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="19" to="28"></locus>
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="29" to="38"></locus>
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="12" atMost="18">12-18</dim>
+                           <dim type="bottom" atLeast="28" atMost="30">28-30</dim>
+                           <dim type="right" atLeast="8" atMost="12">8-12</dim>
+                           <dim type="left">5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="17 21"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Four Coptic chain stitches attached with bridle attachments to rough-hewn boards the front one being broken and stitched together. The binding appears to be secondary and very recent. The binding string is still uncut and an unused portion of about 50 cm is hanging free.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1775">late-eighteenth  century</origDate>
+                     <origDate notBefore="1750" notAfter="1799">late-eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +125,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-14" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
