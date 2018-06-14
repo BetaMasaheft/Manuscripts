@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -50,18 +50,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 40 </measure>
+                           <measure unit="quire">Protection sheet + four full quires</measure>
                            <dimensions type="outer" unit="mm">
                               <height>125</height>
                               <width>96</width>
                               <depth>32</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–4 balanced. Single-slip case. The case has a set of guiding slots for a leather strap and the staining and wear of the leather shows where a strap has been. However, there is currently no strap.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              <note>Protection Sheet</note>
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="8" atMost="10">8-10</dim>
+                           <dim type="bottom" atLeast="27" atMost="30">27-30</dim>
+                           <dim type="right" atLeast="16" atMost="18">16-18</dim>
+                           <dim type="left" atLeast="6" atMost="10">6-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="13 16"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Four Coptic chain stitches attached with bridle attachments to rough-hewn boards, the front board is broken ca. 55 mm from the spine and the fore edge piece is missing. The back board is unbroken.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1750">eighteenth  century</origDate>
+                     <origDate notBefore="1700" notAfter="1799">eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +124,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-14" who="JS">Added quire desc, binding desc, margin dim, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
