@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -50,18 +50,102 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">95</measure>
+                           <measure unit="quire">12</measure>
                            <dimensions type="outer" unit="mm">
                               <height>163</height>
                               <width>110</width>
                               <depth>48</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–9 and 12, balanced; quire 11, adjusted balanced; quire 10 unbalanced. Navigation system:  marginal notations to indicate readings, some of which may include inserted lines of overlooked text.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="11" to="18"></locus>
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="19" to="26"></locus>
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="27" to="34"></locus>
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="35" to="42"></locus>
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="43" to="50"></locus>
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="51" to="58"></locus>
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="59" to="66"></locus>
+                            </item>
+                            <item xml:id="q9" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="67" to="74"></locus>
+                            </item>
+                            <item xml:id="q10" n="10">
+                              <dim unit="leaf">7</dim>
+                              <locus from="75" to="81"></locus>
+                              <note>A folio stub is visible between ff. 79 and 80.</note>
+                              3, stub after 5
+                            </item>
+                            <item xml:id="q11" n="11">
+                              <dim unit="leaf">8</dim>
+                              <locus from="82" to="89"></locus>
+                              <note>Stubs appear between ff. 83 and 84 and between ff. 86 and 87.</note>
+                              6, stub after 2
+                              3, stub after 5
+                            </item>
+                            <item xml:id="q12" n="12">
+                              <dim unit="leaf">6</dim>
+                              <locus from="90" to="95"></locus>
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">12</dim>
+                           <dim type="bottom" atLeast="33" atMost="38">33-38</dim>
+                           <dim type="right" atLeast="11" atMost="15">11-15</dim>
+                           <dim type="left" atLeast="5" atMost="8">5-8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="22 25">
+                         <locus from="1r" to="91v"></locus>
+                         <locus from="93r" to="93v"></locus>
+                       </layout>
+                       <layout columns="1" writtenLines="22 25">
+                         <locus from="92r" to="92v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Four Coptic chain stitches attached with bridle attachments to rough-hewn boards. The front board is split in two directions and in danger of breaking; it has been sewn together at two places. In the center of the inside cover, a small rectangle (52 x 30 mm) of wood has been carved out of the cover to hold a mirror or some such. The binding appears to have some original elements as well as some secondary.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-14" who="JS">Added quire desc, margin dim, binding desc, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
