@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 19</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,91 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">97</measure>
+                           <measure unit="quire">11</measure>
                            <dimensions type="outer" unit="mm">
                               <height>195</height>
                               <width>134</width>
                               <depth>57</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–10 balanced; quire 11 unbalanced. Navigation system: various colored string sewn into corners of ff. 15, 33, 43, 59, 70, and 81 to mark content divisions.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50"></locus>
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60"></locus>
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="61" to="68"></locus>
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">6</dim>
+                              <locus from="69" to="74"></locus>
+                            </item>
+                            <item xml:id="q9" n="9">
+                              <dim unit="leaf">10</dim>
+                              <locus from="75" to="84"></locus>
+                              <note>Folio 75 is cut off about 1 cm from the center.</note>
+                            </item>
+                            <item xml:id="q10" n="10">
+                              <dim unit="leaf">10</dim>
+                              <locus from="85" to="94"></locus>
+                            </item>
+                            <item xml:id="q11" n="11">
+                              <dim unit="leaf">3</dim>
+                              <locus from="95" to="97"></locus>
+                              <note>Remnants of cut folios appear visible between ff. 96 and 97 and between 97 and the back cover. These are not folio stubs and the architecture of the final quire is not clear.</note>
+                              1, no stub
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="20" atMost="25">20-25</dim>
+                           <dim type="bottom" atLeast="40" atMost="43">40-43</dim>
+                           <dim type="right" atLeast="20" atMost="25">20-25</dim>
+                           <dim type="left" atLeast="5" atMost="10">5-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="15 16"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Four Coptic chain stitches attached with bridle attachments to rough-hewn boards. The back board is broken top to bottom in three places. The outer piece is missing; the remaining two are stitched together. The front board is also broken and repaired with three stitches. Tooled leather covers the spine and ca. 60 mm of the boards. Neither headband nor tailband are visible, but the tops and bottoms of the folios are stitched into the spine in such a way as to accomplish the same purpose</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +152,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+        <change when="2018-06-16" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
