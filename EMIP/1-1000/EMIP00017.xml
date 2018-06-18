@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 13</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,93 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">iii + 85 </measure>
+                           <measure unit="quire">Protection quire + 9</measure>
                            <dimensions type="outer" unit="mm">
                               <height>207</height>
                               <width>143</width>
                               <depth>48</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <signatures>Quires 2-8 numbered</signatures>
+                          <note>Quire descriptions: quires 1–9 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">3</dim>
+                              <locus from="i" to="iii"></locus>
+                              <note>Protection Folio</note>
+                              <note>A folio stub is visible between ff. ii and iii.</note>
+                              2, stub after 2
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50"></locus>
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60"></locus>
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="61" to="70"></locus>
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">9</dim>
+                              <locus from="71" to="79"></locus>
+                              <note>Quires 8 and 9 have been sewn together with green string using a stab stitch. A folio stub is visible between ff. 72 and 73.</note>
+                              7, stub after 2
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">6</dim>
+                              <locus from="80" to="85"></locus>
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">21</dim>
+                           <dim type="bottom" atLeast="40" atMost="42">40-42</dim>
+                           <dim type="right">25</dim>
+                           <dim type="left">10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="20 35">
+                         <locus from="ir" to="iir"></locus>
+                         <locus from="82v" to="85r"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="20 35">
+                         <locus from="1r" to="82r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Four Coptic repaired chain stitches attached with bridle attachments to rough-hewn boards (front board not square, back repaired).</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/></decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">twentieth  century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +154,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-15" who="JS">Added quire desc, margin dim, binding desc, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
