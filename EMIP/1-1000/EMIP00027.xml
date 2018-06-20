@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 6</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -49,15 +50,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">i + 129 </measure>
+                           <measure unit="leaf">i + 129</measure>
+                           <measure unit="quire">18</measure>
                            <dimensions type="outer" unit="mm">
                               <height>145</height>
                               <width>129</width>
                               <depth/>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Rebound, reinforcement strips around most of the quires, making  analysis of the architecture of quires 1-16 impossible.</note>
+                          <note>Navigation systems: 1) black thread sewn into corners of <locus target="#4 #35 #53 #76 #104 #105 #124 #125"/> to mark the location of miniatures; 2) various colored string sewn into corners of <locus target="#15 #20 #23 #25 #28 #41 #45 #52 #66 #87 #100 #110"/> to mark content divisions. Single-slip case without strap.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"></locus>
+                              <note><locus target="#i"/> is from a different source than the others.</note>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="116" to="125"></locus>
+                              Quire 17
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">4</dim>
+                              <locus from="126" to="129"></locus>
+                              <note>Quire 18 also has a reinforcement strip</note>
+                              Quire 18
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout columns="1" writtenLines="15">
+                         <locus from="126r" to="129r"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="15">
+                         <locus from="iv" to="125v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to repaired rough-hewn boards.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
@@ -78,6 +120,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+        <change when="2018-06-20" who="JS">Added quire desc, binding desc, columns/lines</change>
       </revisionDesc>
    </teiHeader>
    <text>
