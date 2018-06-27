@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 21</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,14 +51,90 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">iv + 66 </measure>
+                           <measure unit="quire">Protection quire + 7</measure>
                            <dimensions type="outer" unit="mm">
                               <height>143</height>
                               <width>125</width>
                               <depth>47</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–3, 5–7 balanced; quire 4 unbalanced. Navigation systems: 1) crimson yarn sewn into corners of folios 1, 13, 34, 54, 65 to mark the location of miniatures;  2) various colored string sewn into corners of folios 6, 16, 58 to mark content divisions.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">5</dim>
+                              <locus from="i" to="iv"></locus>
+                              <locus target="#1"/>
+                              <note>The protection quire construction is secondary. A single folio has been stitched to the back of the quire.</note>
+                              Protection Quire:
+                              5 added
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="2" to="9"></locus>
+                              <note>Quire 1's construction is secondary. The quire has been stitched together at three points in a round stitch (one that goes in one side of the quire about a half centimeter from the gutter fold and comes out the other side) at three points, head, middle and foot of the spine edge, thus making it impossible to verify the inner construction of the quire. </note>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="10" to="17"></locus>
+                              <note>Quire 2's construction is secondary. The quire has been stitched together at two points in a round stitch at two points, middle and foot of the spine edge, thus making it impossible to verify the inner construction of the quire. Thus, the image is imprecise, e.g., ff. 14/15 are one sheet.</note>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="18" to="27"></locus>
+                              <note>Quire 3's construction is secondary if not tertiary. There is evidence of not one but two non-original gathering strategies:  1) ff. 18–24 have three small reinforcement strips sewn around them, suggesting a first repair; 2) The current full quire includes the folio constituted by ff. 18–24. The entire folio has been stitched together at three points in a round stitch at three points, head, middle and foot of the spine edge, thus making it impossible to verify the inner construction of the quire. The image is imprecise.</note>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">7</dim>
+                              <locus from="28" to="34"></locus>
+                              <note>Quire 4's construction is secondary. The quire has been stitched together at three points in a round stitch at three points, head, middle and foot of the spine edge, thus making it impossible to verify the inner construction of the quire. Thus, the image may be imprecise.</note>
+                              Quire 4:
+                              1 added
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">6</dim>
+                              <locus from="35" to="40"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">14</dim>
+                              <locus from="41" to="54"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">12</dim>
+                              <locus from="55" to="66"></locus>
+                              Quire 7
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">23</dim>
+                           <dim type="bottom">33</dim>
+                           <dim type="right">17</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="14">
+                         <locus from="iiv" to="65v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, three of four Coptic chain stitches attached with bridle attachments to rough-hewn replacement boards (front repaired).</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
@@ -78,6 +155,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-27" who="JS">Added quire desc, binding desc, margin dim, columns/lines</change>
       </revisionDesc>
    </teiHeader>
    <text>
