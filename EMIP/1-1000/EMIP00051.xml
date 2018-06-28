@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 26 (Weiner Codex 150)</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">101</measure>
+                           <measure unit="quire">11</measure>
                            <dimensions type="outer" unit="mm">
                               <height>176</height>
                               <width>128</width>
                               <depth>45</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <signatures>Quires 1-5 numbered</signatures>
+                          <note>Quire descriptions: quires 1, 3-11 balanced; quire 2 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">9</dim>
+                              <locus from="9" to="17"></locus>
+                              <note>Stubs appear between <locus target="#11 #12"/> and two between <locus target="#16 #17"/>.</note>
+                              Quire 2:
+                              8, stub after 3
+                              2, stub before 9
+                              3, stub after 8
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="18" to="27"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="28" to="37"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="38" to="47"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="48" to="57"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="58" to="67"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">14</dim>
+                              <locus from="68" to="81"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q9" n="9">
+                              <dim unit="leaf">6</dim>
+                              <locus from="82" to="87"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q10" n="10">
+                              <dim unit="leaf">10</dim>
+                              <locus from="88" to="97"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q11">
+                              <dim unit="leaf">4</dim>
+                              <locus from="98" to="101"></locus>
+                              Quire 11
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout columns="1">
+                         <locus from="70r" to="101v"></locus>
+                       </layout>
+                       <layout columns="2">
+                         <locus from="1r" to="69v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="unknown">
+                      <decoNote xml:id="b1">Parchment. The cover appears to have been made off the book and attached not in the usual bridle attachment of the chain stitches to the boards. The boards were prepared to receive attachment; holes for the bridle attachment are visible on the inside. However, the orientation of the holes is backwards from the usual. Likewise, the holes have no strings in them and are oriented backwards: the holes come through the side edge and come out the inside cover. The cover is attached to the quires by sewing string through the gutter of the quires and through the spine of the cover. A line of stitches is visible at both head and tail of the spine and look very much like the stitches that hold head and tail pieces in place. However there are no head and tail pieces.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1900">nineteenth/twentieth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1999">nineteenth/twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+          <change when="2018-06-27" who="JS">Added quire desc, binding desc, columns, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
