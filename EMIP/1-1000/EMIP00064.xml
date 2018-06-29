@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 34</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,114 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 120 </measure>
+                           <measure unit="quire">Protection quire + 12</measure>
                            <dimensions type="outer" unit="mm">
                               <height>157</height>
                               <width>123</width>
                               <depth>55</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <signatures>Quire 2 numbered</signatures>
+                          <note>Quire descriptions: quires 1–12 balanced. Navigation systems: 1) crimson yarn sewn into corners of <locus target="#1 #20 #40 #60 #80 #100 #118"/> to mark the location of miniatures;  2) red colored string sewn into corner of <locus target="#12"/> to mark content division. Double-slip case with a strap of leather.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              Protection Quire
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="61" to="70"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">10</dim>
+                              <locus from="71" to="80"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">10</dim>
+                              <locus from="81" to="90"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">10</dim>
+                              <locus from="91" to="100"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">10</dim>
+                              <locus from="101" to="110"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">10</dim>
+                              <locus from="111" to="120"></locus>
+                              Quire 12
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">17</dim>
+                           <dim type="bottom">35</dim>
+                           <dim type="right" atLeast="18" atMost="22">18-22</dim>
+                           <dim type="left">5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="12 15">
+                         <locus from="ir" to="120v"></locus>
+                         <note>6 lines on <locus target="#1r"/> and 4 lines on <locus target="#119r"/>.</note>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 157 x 123 x 55 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards covered with tooled leather, headband and tailband.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1800">eighteenth/nineteenth  century</origDate>
+                     <origDate notBefore="1700" notAfter="1899">eighteenth/nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +175,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-29" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
