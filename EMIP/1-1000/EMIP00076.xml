@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 2</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,104 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 88 </measure>
+                           <measure unit="quire">Protection quire + 10</measure>
                            <dimensions type="outer" unit="mm">
                               <height>213</height>
                               <width>170</width>
                               <depth>47</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1, 3–5, 7–10 balanced; quire 6 adjusted balanced; quire 2 complex composite. Navigation system: various colored string sewn into corners of <locus target="#21 #26 #31 #57 #69 #74 #77"/> to mark content divisions.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              Protection Quire
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">16</dim>
+                              <locus from="9" to="24"></locus>
+                              <note>This is a complex, composite quire. Two sheets (<locus target="#9 #24"/> and <locus target="#10 #23"/>) wrap around two smaller quires. The first quire is made of two sheets (<locus target="#11 #14"/> and <locus target="#12 #13"/>); the second quire is made of four sheets (<locus target="#15 #22"/>, <locus target="#16 #21"/>, <locus target="#17 #20"/> and <locus target="#18 #19"/>). Therefore, the diagram for this quire is misleading.</note>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="41" to="48"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="49" to="56"></locus>
+                              <note>Stubs appear between <locus target="#51 #52"/> and between <locus target="#54 #55"/>.</note>
+                              Quire 6:
+                              3, stub after 6
+                              6, stub after 3
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="57" to="64"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="65" to="72"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="73" to="80"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="81" to="88"></locus>
+                              Quire 10
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">28</dim>
+                           <dim type="bottom" atLeast="40" atMost="42">40-42</dim>
+                           <dim type="right" atLeast="18" atMost="23">18-23</dim>
+                           <dim type="left" atLeast="8" atMost="13">8-13</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="18 19"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 213 x 170 x 47 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards covered with tooled leather, headband and tailband.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +165,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-30" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>

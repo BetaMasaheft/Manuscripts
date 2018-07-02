@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Delamarter Codex 2</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">i + 23 </measure>
+                           <measure unit="quire">3</measure>
                            <dimensions type="outer" unit="mm">
                               <height>69</height>
                               <width>53</width>
                               <depth/>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1, 2 balanced; quire 3 adjusted balanced. Leather amulet case cut open at center.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="i" to="7"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="8" to="15"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="16" to="23"></locus>
+                              <note>A stub appears between <locus target="#18 #19"/> and between <locus target="#21 #22"/>.</note>
+                              Quire 3:
+                              3, stub after 6
+                              6, stub after 3
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout columns="1" writtenLines="4 5">
+                         <locus from="1r" to="22r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, two Coptic chain stitches attached with bridle attachments to rough-hewn boards covered with tooled leather over decorative linen patches visible inside the turn-ins on front and back cover.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                        <material key="textile"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1975">late-twentieth  century</origDate>
+                     <origDate notBefore="1950" notAfter="1999">late-twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +119,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-30" who="JS">Added quire desc, binding desc, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
