@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 9</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -56,12 +57,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <depth>27</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <signatures>Folios numbered consecutively without recto or verso.</signatures>
+                          <note>This is an accordion-fold book.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="5" atMost="10">5-10</dim>
+                           <dim type="bottom">8</dim>
+                           <dim type="right">8</dim>
+                           <dim type="left">6</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="9 11"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, accordion-fold codex, 85 x 75 x 27 mm, accordion fold codex made of two parchment strips sewn together and attached to the end boards.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">twentieth  century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +103,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-07-02" who="JS">Added binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
