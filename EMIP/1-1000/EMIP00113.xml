@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 22</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,134 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">i + 110 </measure>
+                           <measure unit="quire">Protection sheet + 14</measure>
                            <dimensions type="outer" unit="mm">
                               <height>204</height>
                               <width>147</width>
                               <depth>63</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 2–13 balanced; protection sheet and quire 14 adjusted balanced; quire 1 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"></locus>
+                              <note>A folio stub is visible between <locus target="#i #1"/>.</note>
+                              Protection Sheet:
+                              1, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">9</dim>
+                              <locus from="1" to="9"></locus>
+                              <note>A folio stub is visible between <locus target="#6 #7"/> and two stubs are visible between <locus target="#8 #9"/>. <locus target="#7 #8"/> are actually two parts of one sheet sewn onto the two stubs before <locus target="#9"/> with a stab stitch.</note>
+                              Quire 1:
+                              2, stub after 8
+                              3, stub after 8
+                              4, stub after 6
+                              7 added
+                              8 added
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">4</dim>
+                              <locus from="10" to="13"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="14" to="21"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="22" to="29"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">6</dim>
+                              <locus from="30" to="35"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="36" to="45"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="46" to="55"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">6</dim>
+                              <locus from="56" to="61"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="62" to="69"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="70" to="77"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">8</dim>
+                              <locus from="78" to="85"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">10</dim>
+                              <locus from="86" to="95"></locus>
+                              Quire 12
+                            </item>
+                            <item xml:id="q14" n="13">
+                              <dim unit="leaf">8</dim>
+                              <locus from="96" to="103"></locus>
+                              Quire 13
+                            </item>
+                            <item xml:id="q15" n="14">
+                              <dim unit="leaf">7</dim>
+                              <locus from="104" to="110"></locus>
+                              <note>A folio stub is visible between <locus target="#106 #107"/>.</note>
+                              Quire 14:
+                              4, stub after 3
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">15</dim>
+                           <dim type="bottom" atLeast="32" atMost="35">32-35</dim>
+                           <dim type="right">20</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="24 27">
+                         <locus target="#110v"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="24 27">
+                         <locus from="1r" to="110v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 204 x 147 x 63 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century (reign of Menelik)</origDate>
+                     <origDate notBefore="1865" notAfter="1913">nineteenth century (reign of Menilek [II, 1889-1913])</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +195,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-07-06" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
