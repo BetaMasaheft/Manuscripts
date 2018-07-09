@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 18</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,38 +43,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <locus from="1r" to="86r"></locus>
                      <title type="complete" ref="LIT2701Dawit"></title>
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
 
                   <msItem xml:id="ms_i1.1">
                     <locus from="1r" to="86r"></locus>
                     <title type="complete" ref="LIT2000Mazmur"></title>
-                    <textLang mainLang="gez">Gə‘əz</textLang>
-                    <note>F. 47r: A small red and black symbol in the upper margin marks the midpoint of the Psalms.</note>
-                    <note>Columetric layout of text: ff. 85v-86r (Ps. 150)</note>
+                    <note>Columetric layout of text: <locus from = "#85v" to = "#86r"/> (Ps. 150)</note>
                   </msItem>
                   <msItem xml:id="ms_i1.2">
                     <locus from="86r" to="95r"></locus>
                     <title type="complete" ref="LIT1828Mahale"></title>
-                    <textLang mainLang="gez">Gə‘əz</textLang>
-                    <note>Columetric layout of text: ff. 92r–93r (tenth biblical canticle).</note>
+                    <note>Columetric layout of text: <locus from = "#92r" to = "#93r"/> (tenth biblical canticle).</note>
                   </msItem>
                   <msItem xml:id="ms_i1.3">
                     <locus from="95r" to="100v"></locus>
                     <title type="complete" ref="LIT2362Songof"></title>
-                    <textLang mainLang="gez">Gə‘əz</textLang>
                     <note>Common version</note>
                   </msItem>
                   <msItem xml:id="ms_i1.4">
                     <locus from="100v" to="107v"></locus>
                     <title type="complete" ref="LIT2509Weddas"></title>
                     <textLang mainLang="gez">Gə‘əz</textLang>
-                    <note>Arranged for the days of the week</note>
+                    <note>Arranged for the days of the week
+                      (Monday, <locus target = "#100v"/>; Tuesday, <locus target = "#101r"/>; Wednesday, <locus target = "#102v"/>;
+                      Thursday, <locus target = "#103v"/>; Friday, <locus target = "#105r"/>; Saturday, <locus target = "#105v"/>; Sunday, <locus target = "#106v"/>)
+                    </note>
                   </msItem>
                   <msItem xml:id="ms_i1.5">
                     <locus from="107r" to="110r"></locus>
                     <title type="complete" ref="LIT1113Anqasa"></title>
-                    <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
+                </msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -206,8 +206,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </layoutDesc>
                   </objectDesc>
                   <decoDesc>
-                    <decoNote xml:id="d1">Decorative designs: ff. 1r, 25v, 32r, 36v, 42v, 50v, 56r, 59v, 67r, 77r, 86r, 100v (haräg using black and red); ff. 6r, 11v, 36v, 37r, 47r, 81v, 102v (small haräg using black and/or red drawn next to or over text); ff. 11v, 17v, 75r, 95r, 107r (dotted line using alternating black and red); f. 75r (additional drawing in black and red).</decoNote>
+                    <decoNote type = "frame" xml:id="d1">
+                      Decorative designs: <locus target = "#1r #25v #32r #36v #42v #50v #56r #59v #67r #77r #86r #100v"/>(<foreign xml:lang = "gez">ሐረግ፡</foreign> using black and red);
+                      <locus target = "#6r #11v #36v #37r #47r #81v #102v"/> (small <foreign xml:lang = "gez">ሐረግ፡</foreign> using black and/or red drawn next to or over text);
+                      <locus target = "#11v #17v #75r #95r #107r"/> (dotted line using alternating black and red);
+                      <locus target = "#75r"/> (additional drawing in black and red)
+                    </decoNote>
+                    <decoNote type = "miniature" xml:id="d2">
+                      <desc>
+                        <locus target = "#110r"/>Drawing of Jesus Christ in black and red, with uplifted hands and an unfinished head <ref type="authFile" corresp="AT1085JesusChrist"></ref>
+                        </desc>
+                    </decoNote>
                   </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc><locus target = "#47r"/> A small red and black symbol in the upper margin marks the midpoint of the Psalms.</desc>
+                      </item>
+                      <item xml:id = "a2">
+                        <desc>
+                        <locus target = "#iv"/> Hymn to the Archangel Michael, in pencil in a crude hand; insufficiently legible
+                        </desc>
+                      </item>
+                      <item xml:id = "a3">
+                        <desc>
+                        <locus target = "#47r"/>: A small red and black symbol in the upper margin marks the midpoint of the Psalms (?)
+                        </desc>
+                      </item>
+                      <item xml:id = "a4">
+                        Overlooked words of text are written interlinearly (ff. <locus target = "#87r #103v #109r"/>)
+                      </item>
+                      <item xml:id = "e1">
+                        <desc>
+                        <locus target = "#ii #110v"/> blank save for some scrawl
+                        </desc>
+                      </item>
+                      <item xml:id = "e2">
+                        The scribe regularly has to complete a line of text on another line. Much of the problem is addressed through the selection of an appropriate aspect ratio for the codex combined with an appropriate script size. But, where the line of text is still too long, the scribe completes the line of text above the end of the line (throughout). This scribe will also reduce the font size at the end of lines to avoid having to go onto the next line (throughout)
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Four Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
@@ -234,10 +272,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
         <change when="2018-06-08" who="JS">Added works, phys/quire descriptions, notes</change>
         <change when="2018-06-13" who="JS">Corrected quire notes</change>
+        <change when="2018-07-09" who="RL">Corrected items, added notes and varia</change>
       </revisionDesc>
    </teiHeader>
    <text>
