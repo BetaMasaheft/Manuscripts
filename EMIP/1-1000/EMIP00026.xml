@@ -11,11 +11,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 5</title>
+            <editor key ="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
-            <p>The initial version of this file was created from data kindly
-                                        provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+            <p>The initial version of this file was created from data kindly provided by the Ethiopic Manuscript Imaging Project
+              directed by Steve Delamarter</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,9 +38,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Anaphora of Our Lady Mary by Cyriacus of Bəhənsa, ቅዳሴ፡ ማርያም፡, Image of Mary, መልክአ፡ ማርያም፡, Image of Jesus Christ, መልክአ፡  ኢየሱስ፡, Image of Michael, መልክአ፡ ሚካኤል፡</summary>
-                  <msItem xml:id="ms_i1">
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+
+                     <msItem xml:id="ms_i1">
+                       <locus from = "1r" to = "29v"/>
+                       <title type = "complete" ref = "LIT1099Anapho"/>
+                       <note>Cf. EMIP 27</note>
+                     </msItem>
+
+                     <msItem xml:id="ms_i2">
+                       <locus from = "29v" to = "47r"/>
+                       <title type = "complete" ref="LIT4112Salam"/>
+                       <note>Chaîne, Répertoire, no. 220; MG 59, pp. 735ff.; EMIP 25, f. 1r</note>
+                     </msItem>
+
+                     <msItem xml:id="ms_i3">
+                       <locus from = "47r" to = "63r"/>
+                       <title type = "complete" ref="LIT4131Salam"/>
+                       <incipit xml:lang = "gez">
+                         ሰላም፡ ለዝክረ፡ ስምከ፡ ስመ፡ መሐላ፡ ዘኢይሔሱ። ዘአንበረ፡ ቅድመ፡ እግዚአብሔር፡ በአትሮሱ። ኢየሱስ፡ ክርስቶስ፡ ለዳዊት፡ ባሕርየ፡ ከርሡ።
+                       </incipit>
+                       <note>Chaîne, Répertoire, no. 123; MG 59, pp. 757ff; EMIP, 25, f. 25r</note>
+                     </msItem>
+
+                     <msItem xml:id="ms_i4">
+                       <locus from = "63r" to = "77r"/>
+                       <title type = "complete" ref = "LIT1860Malkea"/>
+                       <note>Chaîne, Répertoire, no. 119; MG 59, pp. 290ff.; EMIP 16, f. 92v</note>
+                     </msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -142,6 +169,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type = "frame" xml:id="d1">
+                      Decorative designs: <locus target = "#1r"/> (<foreign xml:lang = "gez">ሐረግ፡</foreign> using multiple colors);
+                      <locus target = "#1r #29v #47r #63r #77r"/> (dotted line using alternating black and red);
+                      <locus target = "54v"/> (cross using black)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc>
+                        <locus target = "#96r #96v"/> isolated names and words
+                        </desc>
+                      </item>
+                      <item xml:id = "a2">
+                        <desc>
+                        Overlooked words are added interlinearly (<locus target = "#2r #6v #8v #15v #16r #61r #62v #73v"/>),
+                        as is an overlooked line (<locus target = "#72r"/>, ).
+                        On <locus target = "#54v"/>, overlooked lines of text are written in the upper margin and a symbol (+) markes the location where the text is to be inserted
+                        </desc>
+                      </item>
+                      <item xml:id = "a3">
+                        <desc>
+                        Copied for <foreign xml:lang = "gez">ወልደ፡ አቢብ፡</foreign>, <locus target = "#77r"/>
+                        </desc>
+                      </item>
+                      <item xml:id = "e1">
+                        <desc>
+                        <locus target = "#ir #iiv"/> and <locus from = "#77v" to ="#95v"/> blank
+                        </desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="partly">
                       <decoNote xml:id="b1">Parchment, three repaired Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
@@ -169,9 +229,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-06-20" who="JS">Added quire desc, binding desc, columns/lines, dating info</change>
+         <change when="2018-07-09" who="RL">Added items, and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>

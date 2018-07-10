@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 7</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -36,11 +37,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection>EMIP</collection>
                   <idno facs="EMIP/Codices/28/">Eliza Codex 7</idno>
                </msIdentifier>
+
                <msContents>
                   <summary>Psalter, <foreign xml:lang = "gez">ዳዊት፡</foreign></summary>
                   <msItem xml:id="ms_i1">
                      <locus from="1r" to="142v"></locus>
                      <title type="complete" ref="LIT2701Dawit"></title>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
 
                   <msItem xml:id="ms_i1.1">
                     <locus from="1r" to="108r"></locus>
@@ -250,8 +253,72 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </layoutDesc>
                   </objectDesc>
                   <decoDesc>
-                    <decoNote xml:id="d1">Decorative designs: open space, possibly left for a haräg: <locus target ="#1r #7r #13v #20v #29v #36v #41v0 #49v #59v #67r #72r #83v #94v #97r #102v #108v #120r #128r #143r"/>.</decoNote>
+                    <decoNote type = "frame" xml:id="d1">
+                      Decorative designs: open space, possibly left for a <foreign xml:lang = "gez">ሐረግ፡</foreign> <locus target ="#1r #7r #13v #20v #29v #36v #41v0 #49v #59v #67r #72r #83v #94v #97r #102v #108v #120r #128r #143r"/>
+                    </decoNote>
                   </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc>
+                          <locus target = "#ir"/>: Prayer of Əssetä Mika’el to Mary that she may give her the faculty of eloquence to praise her
+                        </desc>
+                      </item>
+                      <item xml:id = "a2">
+                        <desc>
+                          <locus target = "#iv"/> Record of purchase of the manuscript in <date calendar="ethiopian" when="1899" when-custom="1906/7" evidence="internal">፺፱፡ አመተ፡ ምሕረት፡ እንዘ፡ ወንጌላዊ፡ ሉቃስ፡</date>
+                        </desc>
+                      </item>
+                      <item xml:id = "a3">
+                        <desc>
+                        <locus target = "#iir"/> Prayer to Mary asking her to intercede with her Son “so that he may protect us from a wicked day"
+                        </desc>
+                      </item>
+                      <item xml:id = "a4">
+                        <desc>
+                        <locus target = "#iiv"/>
+                        Prayer to <persName ref = "PRS9150TaklaHa"/> asking him to intercede with Jesus “so that he may preserve our life.”
+                        </desc>
+                      </item>
+                      <item xml:id = "a5">
+                        <desc>
+                        <locus from  = "#iiir" to = "#ivv"/> One miracle of the Trinity. See also <title ref = "EMIP00007"/> f. 6v
+                        </desc>
+                      </item>
+                      <item xml:id = "a6">
+                        <desc>
+                          <locus target = "#157v #158r"/> Prayer to God for forgiveness
+                        </desc>
+                      </item>
+                      <item xml:id = "a7">
+                        <desc>
+                          <locus target = "#158v"/> <foreign xml:lang = "gez">ቅኔ፡</foreign> poem that some one claimed to have heard in his dream on
+                          <date calendar="ethiopian" when="1894" when-custom="1902" evidence="internal"> <foreign xml:lang = "gez">፲፰፺፬፡ ዓመተ፡ ምሕረት፡ በዘ፡ ማርቆስ፡ በሚያዝያ፡ አቦ፡</foreign> (4/13/1902)
+                        </date>
+                        </desc>
+                      </item>
+                      <item xml:id = "a8">
+                        <desc>
+                          The name <foreign xml:lang = "gez">ወርቁ፡ ተስፋየ፡</foreign>, <locus target = "#158v"/>
+                        </desc>
+                      </item>
+                      <item xml:id = "a9">
+                        <desc>
+                          Overlooked words of text are written interlinearly (<locus target = "#21r #31v #35r #101v #103v #104r #121r #126r #129v #130r #132v #134r #135v #137r"/>);
+                          and overlooked lines of text are written interlinearly (<locus target = "#24r #99r #101 #112v"/>).
+                        </desc>
+                      </item>
+                      <item xml:id = "e1">
+                        <desc>
+                          The scribe’s chosen aspect ratio for the codex combined with the script size forces the scribe to reduce the
+                          font size at the end of lines to avoid having to go onto the next line throughout the codex (see
+                          <locus target = "#1r #1v #2r #2v"/> for examples) But, where the line of text is still too long,
+                          the scribe completes the line of text above the end of the line
+                          (<locus target = "#5v #6r #8v #15v #36v #38v #45v #48r #57r #68r #71v #95r #115r"/>)
+                        </desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Four Coptic chain stitches attached with bridle attachments to rough-hewn boards covered with tooled leather, headband and tailband.</decoNote>
@@ -284,6 +351,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-06-14" who="RL">Standardised titles, added incipits for works without standard titles, added target folios</change>
          <change when="2018-06-15" who="RL">Corrected title entries</change>
         <change who="DR" when="2018-07-04">Updated ID LIT2891RepCh172</change>
+        <change when="2018-07-10" who="RL">Added varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>
