@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Alwan Codex 16</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,104 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">83</measure>
+                           <measure unit="quire">11</measure>
                            <dimensions type="outer" unit="mm">
                               <height>166</height>
                               <width>113</width>
                               <depth/>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–11 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">9</dim>
+                              <locus from="1" to="9"></locus>
+                              <note><locus target="#1"/> is a loose folio; there is no stub visible after <locus target="#9"/>.</note>
+                              Quire 1:
+                              1, no stub
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="10" to="17"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="18" to="25"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="26" to="33"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">6</dim>
+                              <locus from="34" to="39"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="40" to="47"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="48" to="55"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="56" to="63"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q9" n="9">
+                              <dim unit="leaf">10</dim>
+                              <locus from="64" to="73"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q10" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="74" to="81"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q11" n="11">
+                              <dim unit="leaf">2</dim>
+                              <locus from="82" to="83"></locus>
+                              Quire 11
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">18</dim>
+                           <dim type="bottom">32</dim>
+                           <dim type="right">18</dim>
+                           <dim type="left">10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="12">
+                         <locus from="1r" to="83v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 166 x 113 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, covered with red and yellow linen.</decoNote>
+                      <decoNote xml:id="b2">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="textile"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1650">seventeenth century</origDate>
+                     <origDate notBefore="1600" notAfter="1699">seventeenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +165,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-07-11" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
