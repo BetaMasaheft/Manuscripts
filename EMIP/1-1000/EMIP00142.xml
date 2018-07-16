@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 37</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,103 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">iii + 62 </measure>
+                           <measure unit="quire">Protection sheet + 7</measure>
                            <dimensions type="outer" unit="mm">
                               <height>194</height>
                               <width>167</width>
                               <depth>45</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–7 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"/>
+                              Sheet around Quires (front):
+                              1, no stub
+                            </item>
+                            <item xml:id="q2" n="b">
+                              <dim unit="leaf">2</dim>
+                              <locus from="ii" to="iii"></locus>
+                              <note>The folios comprising the protection sheet have been cut a centimeter from the gutter with writing still visible.</note>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q3" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="iv" to="9"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q4" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="10" to="19"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q5" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="20" to="29"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q6" n="4">
+                              <dim unit="leaf">7</dim>
+                              <locus from="30" to="36"></locus>
+                              <note>There is a cut-off page between <locus target="#30 #31"/>.</note>
+                              Quire 4:
+                              6, stub after 1
+                            </item>
+                            <item xml:id="q7" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="37" to="46"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q8" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="47" to="56"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q9" n="7">
+                              <dim unit="leaf">5</dim>
+                              <locus from="57" to="61"></locus>
+                              <note>There is a cut-off page between <locus target="#59 #60"/>.</note>
+                              Quire 7:
+                              3, no stub
+                            </item>
+                            <item xml:id="q10" n="c">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#62"/>
+                              Sheet around Quires (back):
+                              1, no stub
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">29</dim>
+                           <dim type="bottom">42</dim>
+                           <dim type="right">18</dim>
+                           <dim type="left">14</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="18">
+                         <locus from="1r" to="59r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 194 x 167 x 45 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, headband and tailband.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +164,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-07-13" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
