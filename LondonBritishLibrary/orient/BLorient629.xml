@@ -2,11 +2,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient628" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient629" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Taʾammǝra ʾIyasus, Legend of Abgar</title>
+                <title>Taʾammǝra ʾIyasus</title>
                 <editor key="DR"/>
                 <editor role="generalEditor" key="AB"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,12 +29,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msIdentifier>
                         <repository ref="INS00001BL"/>
                         <collection>Oriental</collection>
-                        <idno>BL Oriental 628</idno>
+                        <idno>BL Oriental 629</idno>
                         <altIdentifier>
-                            <idno>Wright cat. LXIX</idno>
+                            <idno>Wright cat. LXX</idno>
                         </altIdentifier>
                         <altIdentifier>
-                            <idno>Wright 69</idno>
+                            <idno>Wright 70</idno>
                         </altIdentifier>
                     </msIdentifier>
 
@@ -47,12 +47,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <note>This manuscript contains 42 miracles.</note> 
                         </msItem>
                         
-                        <msItem xml:id="ms_i2">
-                            <locus from="104r"/>
-                            <title type="complete" ref="LIT2382Taamme#Abgar"/>
-                            <textLang mainLang="gez"/>
-                        </msItem>
-                        
                     </msContents>
 
                     <physDesc>
@@ -62,59 +56,73 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">108</measure>
-                                    <measure unit="leaf" type="blank">2, one at each end.</measure>
+                                    <measure unit="leaf">136</measure>
+                                    <measure unit="leaf" type="blank">One unnumbered blank leaf at the end.</measure>
                                     <dimensions type="outer" unit="in">
-                                        <height>10</height>
-                                        <width>9.25</width>
+                                        <height>10.75</height>
+                                        <width>9.34</width>
                                     </dimensions>
                                 </extent>
                             </supportDesc>
                             <layoutDesc>
-                                <layout columns="3" writtenLines="21 22"/>
+                                <layout columns="2" writtenLines="20 23"/>
                             </layoutDesc>
 
                         </objectDesc>
 
                         <handDesc>
                             <handNote script="Ethiopic" xml:id="h1">
+                                <locus from="1" to="8"/>
                                 <date notBefore="1700" notAfter="1799"/>
-                                <desc>Written in a good hand.</desc>
+                            </handNote>
+                            <handNote script="Ethiopic" xml:id="h2">
+                                <locus from="9" to="136"/>
+                                <date notBefore="1700" notAfter="1799"/>
                             </handNote>
                         </handDesc>
+                        
+                        <decoDesc>
+                            <decoNote xml:id="d1" type="miniature">
+                                <locus target="#134v"/>
+                                <desc>Picture</desc>
+                            </decoNote>
+                            
+                            <decoNote xml:id="d2" type="miniature">
+                                <desc>Picture</desc>
+                            </decoNote>
+                            
+                            <decoNote xml:id="d3" type="miniature">
+                                <locus target="#135"/>
+                                <desc>Picture</desc>
+                            </decoNote>
+                        </decoDesc>
                         
                         <additions>
                             <list>   
                                 <item xml:id="a1">
-                                    <desc type="OwnershipNote">At the end, on the same page as <ref target="#e3"/>. The last six words are an alteration.</desc>
+                                    <locus target="#136v"/>
+                                    <desc type="GuestText"><title ref="LIT3058RepCh338" type="incomplete"/>. It is not clear from the catalogue whether this is a later addition or not.</desc>
                                     <q xml:lang="gez">ዝመጽሐፍ፡ <add place="overstrike">ዘ<placeName ref="INS0506DM">ደብረ፡ መድኃኒት፡</placeName> እንተ፡ አቡነ፡ ዓቢየ፡ እግዚእ፡</add></q>
                                 </item>
                                 
-                                <item xml:id="a2">
-                                    <locus target="#1r"/>
-                                    <desc type="OwnershipNote"/>
-                                    <q xml:lang="gez">ተአምረ፡ ኢየሱስ፡ ዘ<placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName></q>
-                                </item>
-                                
                                 <item xml:id="e1">
-                                    <locus target="#1r #108r"/>
-                                    <desc>One of the first owners was <persName ref="PRS12175WaldaY" role="owner"/>.</desc> 
-                                    <q xml:lang="gez"/>
-                                </item>
-                                
-                                <item xml:id="e2">
-                                    <locus target="#10r #108r"/>
-                                    <desc>One of the first owners was <persName ref="PRS12176FessehaG" role="owner"/>.</desc> 
-                                    <q xml:lang="gez"/>
-                                </item>
-                                
-                                <item xml:id="e3">
-                                    <desc>The prayer at the end mentions <persName ref="PRS12177WaldaM" role="scribe"><certainty locus="value" match="../@role" cert="low"></certainty></persName>, 
-                                        probably the scribe.</desc> 
+                                    <locus target="#1r"/>
+                                    <desc>The owner was <persName ref="PRS12179BatraG" role="owner"/>.</desc> 
                                     <q xml:lang="gez"/>
                                 </item>
                             </list>
                         </additions>
+                        
+                        <bindingDesc>
+                            <binding contemporary="true" xml:id="binding">
+                                <decoNote xml:id="b1">In the original boards, lined with cloth and covered with stamped leather.</decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                    <material key="textile"/>
+                                </decoNote>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
 
                     <history>
@@ -136,7 +144,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <listBibl type="catalogue">
                                         <bibl>
                                             <ptr target="bm:Wright1877BM"/>
-                                            <citedRange unit="page">44ab</citedRange>
+                                            <citedRange unit="page">44b</citedRange>
                                         </bibl>
                                     </listBibl>
                                 </source>
@@ -158,6 +166,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <term key="ApocryphaPseudoepigrapha"/>
                     <term key="Miracle"/>
                     <term key="ChristianLiterature"/>
+                    <term key="Poetry"/>
                 </keywords>
             </textClass>
 
@@ -168,7 +177,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
         </profileDesc>
         <revisionDesc>
-            <change who="DR" when="2018-07-25">Created record</change>
+            <change who="DR" when="2018-07-26">Created record</change>
         </revisionDesc>
     </teiHeader>
     <text>
