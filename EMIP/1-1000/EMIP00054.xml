@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 29</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Anaphora of Our Lady Mary by Cyriacus of Bəhənsa, ቅዳሴ፡ ማርያም፡, Prayer of the Blessed Virgin Mary at Golgotha, incomplete, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡, Mystagogia, ትምህርተ፡ ኅቡዓት፡, Calendar of the Apostles and Evangelists</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from = "1r" to = "36v"/><title type = "complete" ref = "LIT1099Anapho"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from = "37r" to = "69r"/><title type = "complete" ref = "LIT2246salotz"/>
+                  <note>Incomplete at the end</note>
+                </msItem>
+                  <msItem xml:id="ms_i3"><locus from = "70r" to = "81r"/><title type = "complete" ref = "LIT2444Temher"/></msItem>
+                  <msItem xml:id="ms_i4"><locus from = "81r" to = "81v"/><title>Calendar of the Apostles and Evangelists</title></msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -123,6 +130,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        <layout columns="1" writtenLines="12 13"/>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#ir"/><desc>Image of <persName ref =  "PRS6387Luke"/>  <ref type = "authFile" corresp ="AT1014Evangelists"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#4r"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#28r"/><desc>Angel brandishing a sword <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#56v"/><desc>Saint George and the Dragon, <ref type="authFile" corresp="AT1069GeorgeandDragon"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d05"><locus target="#81r"/><desc>The Last Supper, <ref type="authFile" corresp="AT1067LastSupper"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d06"><locus target="#101r"/><desc>A miniature of Moses and the Ten Commandments <ref type="authFile" corresp="AT1024MosesLaw"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d07"><locus target="#119v"/><desc>The Resurrection, raising Adam and Eve, <ref type="authFile" corresp="AT1008Descent"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d08"><locus target="#120r"/><desc>The Ascension, <ref type="authFile" corresp="AT1033Ascension"></ref></desc></decoNote>
+                    <decoNote type = "frame" xml:id="d09">Decorative designs: <locus target = "#37r"/> (<foreign xml:lang = "gez">ሐረግ፡</foreign> using black)</decoNote>
+
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc><locus target = "#iv #iir"/> <foreign xml:lang = "gez">አስማት፡</foreign> prayer to protect domestic animals from wild animals</desc>
+                      </item>
+                      <item xml:id = "a2">
+                        <desc type = "ReceiptNote"><locus target = "#iir"/> Receipt of the purchase of the manuscript</desc>
+                      </item>
+                      <item xml:id = "a3">
+                        <desc><locus target = "#1r"/> The title of the Anaphora of Our Lady by Cyriacus of Bəhənsa</desc>
+                      </item>
+                      <item xml:id = "a4">
+                        <desc type = "ScribalNoteCommissioning">Copied for <foreign xml:lang = "gez">ገብራ፡ መድኅን፡ አበበ፡</foreign>, <locus target = "#81r"/></desc>
+                      </item>
+                      <item xml:id = "a5">
+                        <desc>Overlooked words of text are written interlinearly (<locus target = "#4r #5v #6r #29v #30r #31v #32r #33r #33v #37v #47r #61v #63r #68v #75v"/>);
+                        and overlooked lines of text are written interlinearly (<locus target = "#71v"/>)</desc>
+                      </item>
+
+                      <item xml:id = "e1">
+                        <desc><locus target = "#1r"/> blank</desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to rough-hewn boards. Inside the back cover, a portion of the wood has been scraped lower than the rest, forming an area 70 x 60 mm. It looks to have held a mirror at some time though now all that appears to remain is the residue of old glue.</decoNote>
@@ -150,9 +193,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-06-28" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-06" who="RL"></change>
       </revisionDesc>
    </teiHeader>
    <text>
