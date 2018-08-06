@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 37</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -56,12 +57,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <depth>75</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Most of the original binding for Marwick codex 37 has been removed or is worn and broken. The codex has been rebound with the ubiquitous use of the stab stitch. The resultant state makes quire analysis impossible.</note>
+                          <note>Navigation system: blue yarn is sewn into the fore edge of <locus target="#113 #123"/> to mark content.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">25</dim>
+                           <dim type="bottom">32</dim>
+                           <dim type="right">26</dim>
+                           <dim type="left">15</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="17 19">
+                         <locus from="1r" to="165v"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="17 19">
+                         <locus from="166r" to="181v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, 171 x 164 x 75 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1775">late-eighteenth  century</origDate>
+                     <origDate notBefore="1750" notAfter="1799">late-eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +108,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-08-03" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
