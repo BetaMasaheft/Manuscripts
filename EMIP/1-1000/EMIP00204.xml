@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 42</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,108 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">i + 85 </measure>
+                           <measure unit="quire">Protection sheet + 9</measure>
                            <dimensions type="outer" unit="mm">
                               <height>194</height>
                               <width>175</width>
                               <depth>53</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 2, 4–5 and 7–9 balanced; protection sheet adjusted balanced; quires 1, 3 and 6 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"/>
+                              <note>A folio stub is visible after <locus target="#i"/>.</note>
+                              Protection Sheet:
+                              1, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">9</dim>
+                              <locus from="1" to="9"></locus>
+                              <note><locus target="#1"/> is a single folio that is attached using a stab stitch.</note>
+                              Quire 1:
+                              1 added
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="10" to="19"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="20" to="29"></locus>
+                              <note><locus target="#20 #29"/> are single folios that are attached using a stab stitch. These folios appear to have been part of this quire and were subsequently repaired.</note>
+                              Quire 3:
+                              1 added
+                              10 added
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="30" to="39"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="40" to="47"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">12</dim>
+                              <locus from="48" to="59"></locus>
+                              <note><locus target="#48 #49 #50 #59"/> are single folios that are attached using a stab stitch.</note>
+                              Quire 6:
+                              1 added
+                              2 added
+                              3 added
+                              12 added
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="60" to="69"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="70" to="77"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="78" to="85"></locus>
+                              Quire 9
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">21</dim>
+                           <dim type="bottom">37</dim>
+                           <dim type="right">22</dim>
+                           <dim type="left">11</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="18 19">
+                         <locus from="1r" to="85v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 194 x 175 x 53 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1700">late-seventeenth / early-eighteenth  century</origDate>
+                     <origDate notBefore="1650" notAfter="1750">late-seventeenth/early-eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +169,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-08-12" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
