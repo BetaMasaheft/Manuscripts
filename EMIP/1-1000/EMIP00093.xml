@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 23</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Bandlet of Righteousness</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from = "1r" to = "25v"/><title type = "complete" ref = "LIT1758Lefafa"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from = "25v" to = "35v"/>
+                  <title>Prayer for the journey to heaven, part of <title  ref = "LIT1758Lefafa"/></title></msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -106,6 +110,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        <layout columns="1" writtenLines="8 9"/>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#iv(erso)"/><desc>Angel with <term key = "sword"/> <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#iir"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#34r"/><desc>Jesus debating (?) <ref type = "authFile" corresp ="AT1084JesusChrist"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#34r"/><desc>Jesus Carrying the Cross, <ref type="authFile" corresp="AT1065RoadtoCalvary"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d05"><locus target="#36r"/><desc>Angel with <term key = "sword"/> <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc type = "OwnershipNote">Note of ownership by <foreign xml:lang = "gez">ወለተ፡ ሥላሴ፡</foreign>, <locus target = "#23r"/> and passim</desc>
+                      </item>
+
+                      <item xml:id = "e1">
+                        <desc>The general condition of the vellum is quite clean and relatively unworn</desc>
+                      </item>
+                      <item xml:id = "e2">
+                        <desc><locus target = "#ir #iiv #36v"/> blank.</desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, 75 x 58 x 24 mm, two Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
@@ -133,9 +158,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-07-02" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-13" who="RL">Added items, miniatures and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>
