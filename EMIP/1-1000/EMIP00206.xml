@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 44</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,119 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">156</measure>
+                           <measure unit="quire">14</measure>
                            <dimensions type="outer" unit="mm">
                               <height>180</height>
                               <width>120</width>
                               <depth>75</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–14 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">14</dim>
+                              <locus from="41" to="54"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">12</dim>
+                              <locus from="55" to="66"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">12</dim>
+                              <locus from="67" to="78"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">10</dim>
+                              <locus from="79" to="88"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q9" n="9">
+                              <dim unit="leaf">12</dim>
+                              <locus from="89" to="100"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q10" n="10">
+                              <dim unit="leaf">12</dim>
+                              <locus from="101" to="112"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q11" n="11">
+                              <dim unit="leaf">14</dim>
+                              <locus from="113" to="126"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q12" n="12">
+                              <dim unit="leaf">12</dim>
+                              <locus from="127" to="138"></locus>
+                              Quire 12
+                            </item>
+                            <item xml:id="q13" n="13">
+                              <dim unit="leaf">10</dim>
+                              <locus from="139" to="148"></locus>
+                              Quire 13
+                            </item>
+                            <item xml:id="q14" n="14">
+                              <dim unit="leaf">8</dim>
+                              <locus from="149" to="156"></locus>
+                              Quire 14
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">13</dim>
+                           <dim type="bottom">20</dim>
+                           <dim type="right">11</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines=" 21 22">
+                         <locus from="1r" to="137v"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="21 22">
+                         <locus from="138r" to="155r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 180 x 120 x 75 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1900">nineteenth/twentieth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1999">nineteenth/twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +180,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-08-13" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
