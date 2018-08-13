@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 6</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Antiphonary for the year, ድጓ፡, Mə‘raf, chants, ምዕራፍ፡, Zəmmare, incomplete, ዝማሬ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from = "1r" to = "83r"/><title type = "complete" ref = "LIT3178Deggwa"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from = "84r" to = "107r"/><title type = "complete" ref = "LIT3186Meeraf"/></msItem>
+                  <msItem xml:id="ms_i3"><locus from = "109r" to = "112r"/><title type = "complete" ref = "LIT2610Zemmar"/></msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -171,6 +175,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <summary>Miniatures, all in the late twentieth-century hand of the “speckled garment artist”</summary>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#4r"/><desc>David playing the harp, <ref type="authFile" corresp="AT1066DavidHarp"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#30r"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#68r"/><desc><persName ref = "PRS4585Georgeo"/> and the <term key = "Dragon"/>, <ref type="authFile" corresp="AT1035HolyMan"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#68r"/><desc>Mary Enthroned, <ref type ="authFile" corresp="AT1062CoronationMary"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d05"><locus target="#83v"/><desc>Angel <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d06"><locus target="#95r"/><desc>The Burial of Jesus  <ref type = "authFile" corresp ="AT1112JesusBurial"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d07"><locus target="#102r"/><desc>The Crucifixion <ref type="authFile" corresp="AT1005Crucifixion"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d08"><locus target="#114v"/><desc>The Last Supper, <ref type="authFile" corresp="AT1067LastSupper"></ref></desc></decoNote>
+                    <decoNote type = "frame" xml:id="d09">
+                      Decorative designs:
+                      <locus target = "#45r"/> (<foreign xml:lang = "gez">ሐረግ፡</foreign>-like feature using black and red);
+                      <locus target = "#3r #4v #7r #8r #10r #10v #13r #16r #17v #20v #22v #23v #25v #28r #29v #30v #31v #32r #32v #33r #34r #35r #35v #36v #38r #39r #41r #43r #45r #47r #47v #48r #48v #49v #50r #50v #51v #52v #53v #55v #57r #57v #59r #60v #62v #63v #66r #67r #67v #69r #70v #71v #73v #74r #74v #75r #76r #77v #79v #83r #85v #94r #94v #105r"/> (dotted line using alternating black and red);
+                      <locus target = "#20v #96v"/> (dotted line using black);
+                      <locus target = "#85v #89v"/> (stops connected by lines);
+                      <locus target = "#86v"/> (red bars outlined in black)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc>Overlooked words of text are written interlinearly (<locu starget = "#70v #78v #87v #88v #94r"/>, etc.)</desc>
+                      </item>
+
+                      <item xml:id = "e1">
+                        <desc>
+                          This is one of the manuscripts that EMML/HMML had microfilmed. The pagination in stamped blue ink points in this direction.
+                          There is also a section of <locus target = "#113"/> that has been cut out. This area corresponds with the possible location
+                          of the signature stamp of the EMML project.
+                        </desc>
+                      </item>
+                      <item xml:id = "e2"><desc>Columetric layout of text: <locus from = "#80v" to = "#83r"/></desc></item>
+                      <item xml:id = "e3"><desc><locus target = "#40r #40v #45r #45v #107v #108r #108v"/> blank</desc></item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="partly">
                       <decoNote xml:id="b1">Parchment, 235 x 190 x 68 mm, four altered Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
@@ -198,9 +238,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-07-02" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-13" who="RL">Added items, miniatures, and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>
