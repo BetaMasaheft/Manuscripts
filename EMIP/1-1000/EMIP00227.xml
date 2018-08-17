@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Subers Codex 2</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,85 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">74</measure>
+                           <measure unit="quire">6</measure>
                            <dimensions type="outer" unit="mm">
                               <height>140</height>
                               <width>134</width>
                               <depth>36</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1 and 5 balanced; quires 2–4 and 6 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                              <note><locus target="#q1"/> is actually two quires held together by a reinforcement strip surrounding both, but originally <locus target="#1 #2"/> were likely a protection quire.</note>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">7</dim>
+                              <locus from="11" to="17"></locus>
+                              <note>Folio 11 is loose.</note>
+                              Quire 2:
+                              1 added
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">15</dim>
+                              <locus from="18" to="32"></locus>
+                              <note>The folios comprising <locus target="#q3"/> are held together by a reinforcement strip surrounding them all, but were originally two quires with a single sheet between the quires.</note>
+                              Quire 3:
+                              9 added
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">17</dim>
+                              <locus from="33" to="49"></locus>
+                              <note>The folios comprising <locus target="#q4"/> are held together by a reinforcement strip surrounding them all, but were originally two quires with a single sheet between the quires.</note>
+                              Quire 4:
+                              9 added
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="50" to="57"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">17</dim>
+                              <locus from="58" to="74"></locus>
+                              <note>The folios comprising <locus target="#q6"/> are held together by a reinforcement strip surrounding them all, but were originally two quires with a single sheet between the quires.</note>
+                              Quire 6:
+                              9 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">11</dim>
+                           <dim type="bottom">28</dim>
+                           <dim type="right">18</dim>
+                           <dim type="left">7</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="15">
+                         <locus from="1v" to="74v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, 140 x 134 x 36 mm, thick leather cover with a three string binding (rebound).</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">mid-nineteenth  century</origDate>
+                     <origDate notBefore="1825" notAfter="1875">mid-nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-08-17" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>
