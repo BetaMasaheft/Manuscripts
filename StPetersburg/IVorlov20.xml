@@ -40,6 +40,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <desc>Regular, by a well-trained hand</desc>
                           </handNote>
                           <handNote script="Ethiopic" xml:id="h3" corresp="#a2"></handNote>
+                          <handNote script="Ethiopic" xml:id="h4"/>
+                          <handNote script="Ethiopic" xml:id="h5"/>
                       </handDesc>
 
                       <bindingDesc>
@@ -141,12 +143,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <title type="complete" ref="LIT4982ListCan"></title>
                               <textLang mainLang="gez"/>
                             </msItem>
-                            <msItem xml:id="p1_i11">
+                            <msItem xml:id="p1_i11" >
                               <locus target="#7v"></locus>
-
                               <title type="complete" ref="LIT4983ListDabra"></title>
                               <textLang mainLang="gez"/>
-                              <note>The names ኅርያቆስ፡ ቃለ፡ አዋዲ፡ ጸጋ፡ ክርስቶስ፡ ዮሐንስ፡ are written in a different hand</note>
+                                <msItem  xml:id="p1_i11.1" >
+                                    <title type="incomplete" ref="LIT4983ListDabra"></title>
+                              </msItem>
+                                <msItem  xml:id="p1_i11.2" corresp="#h4">
+                                    <title type="incomplete" ref="LIT4983ListDabra"></title>
+                                </msItem>
+                                <listRelation>
+                                    <relation active="IVorlov20#UniProd1"  name="SdC:undergoesTransformation" passive="IVorlov20#tr1"/>
+                                    <relation active="IVorlov20#tr1"  name="SdC:produces" passive="IVorlov20#UniProd2"/>
+                                    <relation active="IVorlov20#tr1"  name="SdC:resultsIn" passive="IVorlov20#UniCirc1"/>
+                                    <relation active="IVorlov20#tr1"  name="SdC:hasTransformationModel" passive="SdC:A2"/> <!--addition of content only p. 64-->
+                                    <relation active="IVorlov20#UniProd2"  name="skos:exactMatch" passive="IVorlov20#p1_i11.2" />
+                                    <relation active="IVorlov20#UniProd2"  name="SdC:constituteUnit" passive="IVorlov20#UniCont" />
+                                    <relation active="IVorlov20#UniProd2"  name="SdC:constituteUnit" passive="IVorlov20#UniMain" />
+                                </listRelation>
                             </msItem>
                             <msItem xml:id="p1_i12">
                               <locus target="#8r"></locus>
@@ -160,14 +175,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <title ref="LIT3143Ledata" cert="medium"></title>
                                 <textLang mainLang="gez"/>
                             </msItem>
+                            
                             <msItem xml:id="p1_i14">
                               <locus target="#9v"></locus>
 
                               <title ref="LIT4952History" cert="medium"></title>
                               <textLang mainLang="gez"/>
-                              <note>Extends till <persName ref="PRS5616IyasuI"></persName>. Starting from <persName ref="PRS10303Yekunno"></persName> till <persName ref="PRS5616IyasuI"></persName> the text is written in another hand.
+                                <msItem  xml:id="p1_i14.1" >
+                                    <title type="incomplete" ref="LIT4952History"></title>
+                                    <note>Extends till <persName ref="PRS5616IyasuI"></persName></note>
+                                </msItem>
+                                <msItem  xml:id="p1_i14.2" corresp="#h5">
+                                    <title type="incomplete" ref="LIT4952History"></title>
+                                </msItem>
+                              <note>Starting from <persName ref="PRS10303Yekunno"></persName> 
+                                  till <persName ref="PRS5616IyasuI"></persName> the text is written in another hand.
                             </note>
+                                
+                                <listRelation>
+                                    <relation active="IVorlov20#UniProd1"  name="SdC:undergoesTransformation" passive="IVorlov20#tr2"/>
+                                    <relation active="IVorlov20#tr2"  name="SdC:produces" passive="IVorlov20#UniProd3"/>
+                                    <relation active="IVorlov20#tr2"  name="SdC:resultsIn" passive="IVorlov20#UniCirc2"/>
+                                    <relation active="IVorlov20#tr2"  name="SdC:hasTransformationModel" passive="SdC:A2"/> <!--addition of content only p.64-->
+                                    <relation active="IVorlov20#UniProd3"  name="skos:exactMatch" passive="IVorlov20#p1_i14.2" />
+                                    <relation active="IVorlov20#UniProd3"  name="SdC:constituteUnit" passive="IVorlov20#UniCont" />
+                                    <relation active="IVorlov20#UniProd3"  name="SdC:constituteUnit" passive="IVorlov20#UniMain" />
+                                </listRelation>
                             </msItem>
+                            
                             <msItem xml:id="p1_i15">
                               <locus target="#10r"></locus>
                               <title type="complete" ref="LIT4990Found" xml:lang="gez">፲ወ፪፡ መሰረታቲሃ፡</title>
