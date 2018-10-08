@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 84</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,78 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 58</measure>
+                           <measure unit="quire">Protection sheet + 4</measure>
                            <dimensions type="outer" unit="mm">
                               <height>200</height>
                               <width>173</width>
                               <depth>50</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1 and 4 balanced; quire 2 adjusted balanced; quire 3 unbalanced.</note>
+                          <note><locus from="24" to="58"/> have been assembled in no discernable quire pattern utilizing various stab stitches. This makes an accurate map of the codex impossible to determine.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">4</dim>
+                              <locus from="1" to="4"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="5" to="12"></locus>
+                              <note><locus target="#5 #12"/> are stitched onto the same vellum strap wrapped around the spine of the quire.</note>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">7</dim>
+                              <locus from="13" to="19"></locus>
+                              <note>Unbalanced quire (Quire 3) has been repaired.</note>
+                              Quire 3:
+                              1 added
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">4</dim>
+                              <locus from="20" to="23"></locus>
+                              Quire 4
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">22</dim>
+                           <dim type="bottom">39</dim>
+                           <dim type="right">32</dim>
+                           <dim type="left">10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="21">
+                         <locus from="1r" to="4r"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="16">
+                         <locus from="5r" to="58r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, 200 x 173 x 50 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, rebound in disorder.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1650">seventeenth century</origDate>
+                     <origDate notBefore="1600" notAfter="1699">seventeenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +139,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-09-16" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>

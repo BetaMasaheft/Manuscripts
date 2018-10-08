@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Trinity Western University Codex 2</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Image of the Archangel Michael, መልክአ፡ ሚካኤል፡,  Image of Jesus Christ, መልክአ፡  ኢየሱስ፡, Image of Mary, መልክአ፡ ማርያም፡, Image of Gabriel, መልክአ፡ ገብርኤል፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from = "1r" to = "19r"/><title type = "complete" ref = "LIT1860Malkea"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from = "21r" to = "41r"/><title type = "complete" ref="LIT4131Salam"/></msItem>
+                  <msItem xml:id="ms_i3"><locus from = "41r" to = "62v"/><title type = "complete" ref="LIT4112Salam"/></msItem>
+                  <msItem xml:id="ms_i4"><locus from = "63r" to = "71r"/><title type = "complete" ref = "LIT2965RepCh246"/>
+                  <incipit xml:lang = "gez">
+                    በሰላመ፡ ገብርኤል፡ መልአክ፡ በላዕለ፡ ማርያም፡ ዘአ፡ ዘአዕረፈ። ከመ፡ እዜኑ፡ ኅዳጠ፡ ወአኮ፡ ትሩፈ።
+                  </incipit>
+                </msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -118,6 +127,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type = "frame" xml:id="d01">
+                      Decorative designs: <locus target = "#1r"/> (<foreign xml:lang="gez">ሐረግ፡</foreign> using black);
+                      <locus target = "#19r #62v"/> (dotted line using alternating black and red);
+                      <locus target = "#41r"/> (row of full-stop symbols)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a1">
+                        <desc><locus target = "#iv"/> Note that the promised vow is one curtain</desc>
+                      </item>
+                      <item xml:id="a2">
+                        <desc><locus target = "#iiv"/> Note on the vow to kill a cow for <foreign xml:lang = "gez">ሓራ፡ መድኃኔ፡ አለም፡</foreign> church if the person who vowed and his/her daughter are healed from the cough</desc>
+                      </item>
+                      <item xml:id="a3">
+                        <desc><locus target = "#19r #19v"/> Personal prayer (of <foreign xml:lang = "gez">አስካለ፡ ጽዮን፡</foreign>) to the Lord for salvation</desc>
+                      </item>
+                      <item xml:id = "a4">
+                        <desc><locus target = "#72r"/>Record of an unidentified incident that happened to the writer of the note on <date calendar = "ethiopian" when = "1935" when-custom = "1943">የካቲት፡ ፳፭፡ ፲፱፻፴፭፡ (March 4, 1943 AD)</date></desc>
+                      </item>
+                      <item xml:id="a5">
+                        <desc><locus from = "#63r" to = "#71v"/> purple ink used instead of red</desc>
+                      </item>
+                      <item xml:id="a6">
+                        <desc>Prayer for <foreign xml:lang = "gez">አስካለ፡ ጽዮን፡</foreign>, <locus target = "#71r"/></desc>
+                      </item>
+                      <item xml:id="a7">
+                        <desc>Overlooked lines of text are written interlinearly (<locus target = "#56v"/>)</desc>
+                      </item>
+
+                      <item xml:id="e1">
+                        <desc><locus target = "#ir #iir #20r #20v #71v #72v"/> blank</desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding>
                       <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
@@ -133,6 +178,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <origDate notBefore="1800" notAfter="1899"></origDate>
                      <origDate notBefore="1900" notAfter="1999">nineteenth and twentieth centuries (<locus from="63r" to="71r"/> 20th c.) (composite)</origDate>
                   </origin>
+                  <provenance>
+                    This codex was donated to Trinity Western University by Robert N. Thompson, who spent some years immediately following World War II in Ethiopia working with the Ministry of Education.
+                    Later, he served with the mission organization, SIM (then “Sudan Interior Mission,” now “Serving In Ministry”)
+                  </provenance>
                </history>
             </msDesc>
          </sourceDesc>
@@ -146,9 +195,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
         <change when="2018-06-28" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+        <change when="2018-08-20" who="RL">Added items, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Eliza Codex 18</title>
+            <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,9 +39,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of the Covenant, ጸሎተ፡ ኪዳን፡, Supplications, መስተብቍዕ, incomplete, The different Litanies, incomplete, Ordinary of the Mass, incomplete, ሥርዓተ፡ ቅዳሴ፡, Praises of Mary, ውዳሴ፡ ማርያም፡, Gate of Light</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from = "1r" to = "8v"/><title type = "complete" ref = "LIT2260salota"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from = "8v" to = "23v"/><locus from = "29r" to = "36v"/><title>The different supplications, <foreign xml:lang = "gez">መስተብቍዓት፡</foreign></title><note>Incomplete; includes the supplication for Mary, containing the expression condemned at the Boru Meda Council of 1878, and the Cross</note></msItem>
+                  <msItem xml:id="ms_i3"><locus from = "24r" to = "29r"/><title type = "complete" ref = "LIT3188Liton"/><note>Incomplete</note></msItem>
+                  <msItem xml:id="ms_i4"><locus from = "37r" to = "43r"/><title type = "complete" ref = "LIT1960Mashaf#SerataQeddase"/><note>Incomplete at the end, erased to make room for the forged picture</note></msItem>
+                  <msItem xml:id="ms_i5"><locus from = "46r" to = "71v"/><title type = "complete" ref = "LIT2509Weddas"/><note>Arranged for days of the week (Wednesday, <locus target = "#49r"/>; Thursday, <locus target = "#57v"/>; Friday, <locus target = "#63r"/>; Saturday, <locus target = "#66r"/>; Sunday, <locus target = "#68v"/>)</note></msItem>
+                  <msItem xml:id="ms_i6"><locus from = "71r" to = "75v"/><title type = "complete" ref = "LIT1113Anqasa"/><note>Incomplete in the middle (to make room for forgery) and at the end</note></msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -50,18 +56,145 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 75 </measure>
+                           <measure unit="quire">Protection quire + 8</measure>
                            <dimensions type="outer" unit="mm">
                               <height>193</height>
                               <width>110</width>
                               <depth>40</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–4, 6–7 balanced; quire 8 adjusted balanced; quire 5 unbalanced. Navigation systems: 1) brown yarn sewn into corners of <locus target="#i #ii #43 #44 #45 #74"/> to mark the location of miniatures.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              Protection Quire
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                              <note>Quire one has been rebound with two round stitches holding the quire together at top and bottom.</note>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                              <note>Quire three is intact, though the outer sheet (<locus target="#21 #30"/>) is worn through at the spine and as a consequence <locus target="#21 #30"/> are loose.</note>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">5</dim>
+                              <locus from="41" to="45"></locus>
+                              <note>A folio stub is visible between <locus target="#45 #46"/>.</note>
+                              Quire 5:
+                              1, stub after 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="46" to="55"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="56" to="65"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">10</dim>
+                              <locus from="66" to="75"></locus>
+                              <note>This quire includes two loose folios (<locus target="#69 #73"/>).</note>
+                              Quire 8
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="15" atMost="25">15-25</dim>
+                           <dim type="bottom" atLeast="35" atMost="42">35-42</dim>
+                           <dim type="right" atLeast="12" atMost="25">12-25</dim>
+                           <dim type="left" atLeast="8" atMost="10">8-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="18">
+                         <locus target="#ir"/>
+                         <locus from="46r" to="75v"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="16 22">
+                         <locus from="1r" to="43r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <summary>Miniatures, all in a late twentieth-century hand akin to the “speckled garment artist,” painted over text</summary>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#iv"/><desc>The Annunciation, <ref type ="authFile" corresp="AT1002Annunciation"/>, combined with <ref target = "#d02"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#iir"/><desc><term key = "angel"/> speaking to Mary, <ref type = "authFile" corresp ="AT1099Mary"/>, combines with <ref target = "#d01"/> to form an image of <ref type ="authFile" corresp="AT1002Annunciation"/>  </desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#ivv"/><desc><persName ref = "PRS4306GabraMa"/> <ref type = "authFile" corresp ="AT1035HolyMan"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#43v"/><desc>The Crucifixion <ref type="authFile" corresp="AT1005Crucifixion"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d05"><locus target="#44r"/><desc>Resurrection, Christ Displays His Wounds <ref type = "authFile" corresp ="AT1049Resurrection"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d06"><locus target="#44v"/><desc><persName ref = "PRS4585Georgeo"/> and the <term key = "Dragon"/>, <ref type="authFile" corresp="AT1035HolyMan"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d07"><locus target="#45r"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d08"><locus target="#74v"/><desc>A haloed saint with beard stands holding a book in his left hand and pointing with index finger of his right hand toward the heavens <ref type = "authFile" corresp ="AT1035HolyMan"/></desc></decoNote>
+                    <decoNote type = "frame" xml:id="d09">
+                      Decorative designs:
+                      <locus target="#46r"/> (<foreign xml:lang="gez">ሐረግ፡</foreign> using black and red);
+                      <locus target="#46r"/>1r"/>, (<foreign xml:lang="gez">ሐረግ፡</foreign> using black);
+                      <locus target="#53r"/> (row of full-stop symbols)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc><locus target="#ir"/> Hymn to Mary, “Peace to you, Mary,” <foreign xml:lang = "gez">ሰላም፡ ለኪ፡ እንዘ፡ ንሰግድ፡ ንብለኪ፡</foreign></desc>
+                        </item>
+                        <item xml:id="a2">
+                          <desc type = "ScribalNoteBequeathing">
+                            <locus target = "#ir"/> Will of <foreign xml:lang="gez">አባ፡ ወልደ፡ መድኅን፡</foreign> to <foreign xml:lang="amh">መምሬ፡ ተገኝ፡</foreign>
+                          </desc>
+                        </item>
+                        <item xml:id="a3">
+                          <desc type = "RecordTransaction">
+                            <locus target = "#ir"/> bottom: Record of payment in grain to <foreign xml:lang="gez">ወልደ፡ ጊዮርጊስ፡</foreign> for prescribing medicine (<foreign xml:lang="gez">ልበ፡ ሠይ፡</foreign>) to catch a thief, in a crude hand
+                          </desc>
+                        </item>
+                        <item xml:id="a4">
+                          <desc>
+                            Overlooked words of text are written interlinearly (<locus target = "#18r #31v #75v"/>);
+                            and in the upper margin with a symbol (I) marking the location where the text is to be inserted
+                            (<locus target = "#72r"/>, line 4)
+                          </desc>
+                        </item>
+
+                        <item xml:id="e1">
+                          <desc><locus target = "#45v"/> blank</desc>
+                        </item>
+                    </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, 193 x 110 x 40 mm. The binding is secondary and has come loose at several points. Remains of weavings are visible along all four points in the spine, though none of the weavings is complete. The binding is in a bad state of repair. Attached to rough-hewn boards (the front made of the traditional wood, the back from a different, wide-grained wood).</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1862">reign of Tewodros (1855-1868)</origDate>
+                     <origDate notBefore="1855" notAfter="1868">Late-nineteenth century (reign of Tewodros, <locus target="#12r #22v"/>, and passim.</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -76,8 +209,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-08-11" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-27" who="RL">Added items, miniatures, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>

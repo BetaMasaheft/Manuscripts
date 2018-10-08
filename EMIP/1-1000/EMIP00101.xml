@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 15</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,8 +39,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from = "4r" to = "155v"/><title type = "complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Incomplete and the end</note>
+
+                  <msItem xml:id="ms_i1.1"><locus from = "4r" to = "127v"/><title type = "complete" ref="LIT2000Mazmur"/>
+                    <note>
+                      Psalm 118 contains the spiritual meanings of the Hebrew letters; each section is numbered
+                      Columetric layout of text: <locus target = "#126r #126v"/> (Ps. 148)
+                    </note></msItem>
+                  <msItem xml:id="ms_i1.2"><locus from = "128r" to = "140r"/><title type = "complete" ref= "LIT1828Mahale"/>
+                    <note>Columetric layout of text: 136rv (tenth biblical canticle)</note>
+                    </msItem>
+                  <msItem xml:id="ms_i1.3"><locus from = "140r" to = "147r"/><title type = "complete" ref = "LIT2362Songof"/><note>Common version</note></msItem>
+                  <msItem xml:id="ms_i1.4"><locus from = "148r" to = "155v"/><title type = "complete" ref = "LIT2509Weddas"/>
+                    <note>
+                      Only to the first half of Thursday. Arranged for the days of the week (
+                      Monday, <locus target = "#148r"/>;
+                      Tuesday, <locus target = "#149r"/>;
+                      Wednesday, <locus target = "#151v"/>;
+                      Thursday, <locus target = "#154r"/>)
+                    </note>
+                    </msItem>
+
                   </msItem>
                </msContents>
                <physDesc>
@@ -188,8 +211,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type = "frame" xml:id="d01">
+                      Decorative designs:
+                      <locus target = "#4r"/> (<foreign xml:lang="gez">ሐረግ፡</foreign> using black and red, extending across top and down fore edge margin and gutter margin);
+                      <locus target = "#46r #88r #128r #140r #148r"/> (haräg using black);
+                      <locus target = "#11r #19r #27v #63r #74v"/>, (dotted line using alternating black and red);
+                      <locus target = "#16v #38r #66v #82v #101v #105r #113r #116r"/>, (line[s] of black dots);
+                      <locus target = "#69r"/> (row of eight, red four-dot patterns [as though incomplete full-stop symbol])
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a1">
+                        <desc><locus target = "#69r"/>: The midpoint of the Psalms is indicated by two lines of text written entirely in red ink (lines 12 and 14)
+                        and a row of partially completed full-stop symbols (line 16)</desc>
+                        </item>
+                        <item xml:id="a2">
+                          <desc type = "OwnershipNote">Note of ownership by <foreign xml:lang="gez">አለቃ፡ አድሔና፡ በርሔ፡</foreign>, <locus target = "#156v"/></desc>
+                        </item>
+                        <item xml:id = "a3">
+                          <desc><locus target = "#2r #3v #8v #147v #156r #157r #157v #158r"/> blank, mostly by erasure</desc>
+                        </item>
+                        <item xml:id="a4">
+                          <desc>Overlooked words of text are written interlinearly (<locus target = "#7r #14r #37v #40v #90r #129v"/>, etc.)</desc>
+                        </item>
+                        <item xml:id="a5">
+                          <desc>The scribe’s chosen aspect ratio for the codex combined with the script size forces the scribe to complete the line of text above the end of the
+                            line (throughout)</desc>
+                        </item>
+
+                        <item xml:id="e1">
+                          <desc>Image for <locus target = "#126r"/> is missing</desc>
+                        </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
+
                       <decoNote xml:id="b1">Parchment, 162 x 142 x 74 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
                       <decoNote xml:id="b2" type="bindingMaterial">
                         <material key="parchment"></material>
@@ -215,9 +274,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-07-04" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-13" who="RL">Added items, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>

@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 24</title>
             <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                    <msItem xml:id="ms_i1"><locus from = "1r" to = "138r"/><title type = "complete" ref="LIT2701Dawit"/>
+
+                      <msItem xml:id="ms_i1.1"><locus from = "1r" to = "110v"/><title type = "complete" ref="LIT2000Mazmur"/></msItem>
+                      <msItem xml:id="ms_i1.2"><locus from = "111r" to = "124r"/><title type = "complete" ref= "LIT1828Mahale"/></msItem>
+                      <msItem xml:id="ms_i1.3"><locus from = "124r" to = "130r"/><title type = "complete" ref = "LIT2362Songof"/><note>Common version with musical notation</note></msItem>
+                      <msItem xml:id="ms_i1.4"><locus from = "130r" to = "137v"/><title type = "complete" ref = "LIT2509Weddas"/>
+                        <note>arranged for the days of the week (
+                          Monday,  <locus target = "#130r"/>;
+                          Tuesday,  <locus target = "#130v"/>;
+                          Wednesday,  <locus target = "#132r"/>;
+                          Thursday,  <locus target = "#133v"/>;
+                          Friday,  <locus target = "#135r"/>;
+                          Saturday,  <locus target = "#136r"/>;
+                          Sunday,  <locus target = "#137r"/>"
+                        </note>
+                      </msItem>
+                      <msItem xml:id="ms_i1.5"><locus from = "138r" to = "141r"/><title type = "complete" ref = "LIT1113Anqasa"/><note>With musical notation</note></msItem>
+
                   </msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -164,6 +184,149 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id = "h1" script = "Ethiopic">
+                    <seg type = "rubrication">
+                      <ref target = "#ms_i1.1"/>
+                      <foreign xml:lang = "gez">እግዚአብሔር</foreign>
+                      <ref target = "#ms_i1.2"/>
+                      <foreign xml:lang = "gez">እግዚአብሔር</foreign>
+                      <ref target = "#ms_i1.3"/>
+                      <foreign xml:lang = "gez">እግዚአብሔር</foreign>
+                      <note>Rubrication of the word <foreign xml:lang = "gez">እግዚአብሔር</foreign> often written in alternating letters of red and black ink</note>
+                      <ref target = "#ms_i1.4"/>
+                      <foreign xml:lang = "gez">ማርያም</foreign>
+                      <ref target = "#ms_i1.5"/>
+                      <foreign xml:lang = "gez">ማርያም</foreign>
+                      </seg>
+                      </handNote>
+                  </handDesc>
+
+                  <decoDesc>
+
+                    <decoNote type="miniature" xml:id="d01"><locus target="#ir"/><desc>Crude drawing of a face</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#iiiv(erso)"/><desc>Angel <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#ivr"/><desc></desc>Reclining figure</decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#120v"/><desc>Angel with <term key = "sword"/> uplifted (A piece of cloth is sewn to the top of the folio to provide cover for the miniature) <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d05"><locus target="#142v"/><desc><persName ref = "PRS4585Georgeo"/> and the <term key = "Dragon"/>, <ref type="authFile" corresp="AT1035HolyMan"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d06"><locus target="#143r"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref>, two pieces of cloth (one akin to cheesecloth, the other red) are sewn to the top of the folio to provide cover for this miniature and protection for the one on the facing folio</desc></decoNote>
+                    <decoNote type = "frame" xml:id="d07">
+                      Decorative designs:
+                      <locus target = "#130r #141r"/> (multiple full-stop symbols);
+                      <locus target = "#1r"/> (two parallel lines of red dots)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a1">
+                        <desc><locus target = "#ir(ecto)"/>, col. 1: Excerpt from <title type = "complete" ref = "LIT2509Weddas"/></desc>
+                      </item>
+                      <item xml:id="a2">
+                        <desc><locus target = "#ir(ecto)"/>", col. 2: First few lines of the <title ref = "LIT1455GadlaG"/></desc>
+                      </item>
+                      <item xml:id="a3">
+                        <desc>
+                          <locus target = "#iv(erso) #iir(ecto)"/> One Miracle of Ewosṭatewos, from <title ref = "LIT4315Miracles"/>,
+                          How the people of Armenia took his body and buried it and put precious stones on his grave;
+                          how the governor tried to take the precious stones; and how God protected the grave of the saint, with incipit
+                          <foreign xml:lang = "gez">
+                            ተአምሪሁ፡ ለአቡነ፡፡ኤዎስጣቴዎስ፡...ዘኮነ፡ ተአምረ፡ ወመንክረ፡ በብሔረ፡ አርማንያ፡...
+                          </foreign>
+                        </desc>
+                      </item>
+                      <item xml:id = "a4">
+                        <desc><locus target = "#iir(ecto)"/>" The Angels Praise Her, <title type = "complete" ref = "LIT3108RepCh388"/></desc>
+                      </item>
+                      <item xml:id = "a5">
+                        <desc><locus target = "#iiv(erso)"/> Amharic poem, with incipit
+                          <foreign xml:lang="amh">
+                            ሰላም፡ ብየ፡ ገና፡ ስዠምር፡ ሰላምታ፡...
+                          </foreign>
+                        </desc>
+                      </item>
+                      <item xml:id="a6">
+                        <desc><locus target = "#iiir"/>, bottom: Hymn for feast of Transfiguration, with musical notation, with incipit
+                        <foreign xml:lang="gez">
+                          በ፪፡ አሣ፡ ወ(በ)፭፡ ኅብስት፡ አጽገቦሙ፡ ኢየሱስ፡...
+                        </foreign>
+                        </desc>
+                      </item>
+                      <item xml:id="a7">
+                        <desc><locus target = "#ivr(ecto)"/>" Introductory hymn for the book of Psalms</desc>
+                      </item>
+                      <item xml:id="a8">
+                        <desc><locus target = "#141r"/>, col. 2, top and middle: Medical prescription</desc>
+                      </item>
+                      <item xml:id="a9">
+                        <desc><locus target = "#141r"/>, col. 2, bottom: Hymn for Saint Mary, with incipit
+                        <foreign xml:lang="gez">ማርያም፡ ድንግል፡ እመ፡ ረከብኩኪ፤ ሀዘነ፡ ብነየ፡ እነግረኪ፡...</foreign>
+                        </desc>
+                      </item>
+                      <item xml:id="a10">
+                        <desc><locus target = "#141v"/>: Feast days of the Apostles</desc>
+                      </item>
+                      <item xml:id="a11">
+                        <desc><locus target = "#142r"/> Concluding prayer of Psalter, with a prayer for protection of cattle from wild animals interwoven, with incipit <lb/>
+                        <foreign xml:lang="gez">
+                          ስብሐት፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ለዓለም፡ ወለዓለመ፡ ዓለም፡ ሰአሊ፡ ለነ፡ ቅድስት፡ <lb/>
+                          ድንግል፡ ማርያም፡ ምሕረተ፡ ክርስቶስል ወልድኪ፡ የሃውፀነ፡ እማርያም፡ ሰአል፡ ለነ፡ ዳዊት፡ ቅድመ፡ <lb/>
+                          መንበሩ፡ ለጸባዖት፡ አምላከ፡ ዳዊት፡ አድኅኖሙ፡ [እም]ዕለት፡ እኪት፡ ወባልሖሙ፡ <lb/>
+                          እምኵሉ፡ መንሱት፡ ዕቀቦሙ፡ ወአድኅኖሙ፡ እምድብ፡ ለአልህምት፡ ኦ፡ አምላከ፡ ዳዊት፡ <lb/>
+                          ዕቀቦ፡ ወአድኅኖ፡ እምድብ፡ ለላህም፡ ዕቀቦ፡ ወድኅና፡ እምድን፡ ለፈረስ፡ ዕቀቦሙ፡ <lb/>
+                          ወአድኅኖሙ፡ ለፍራሰ፡...
+                        </foreign>
+                        </desc>
+                      </item>
+                      <item xml:id="a12">
+                        <desc><locus target = "#143v"/> Medical prescription</desc>
+                      </item>
+                      <item xml:id="a13">
+                        <desc type = "RecordTransaction"><locus target = "#iiv(erso)"/>", in purple ink: Record of transaction, insufficiently legible</desc>
+                      </item>
+                      <item xml:id="a14">
+                        <desc><locus target = "#ir(ecto)"/>" Date when the manuscript was started: <date calendar = "ethiopian" when = "1613"><foreign xml:lang = "gez">ኅዳር፡ ፲፬፡ ፲፮፻፲፫፡ ዓመተ፡ [ ]</foreign></date>.
+                        This note is in another hand and appears not to be contemporaneous with the origin of the book</desc>
+                      </item>
+                        <item xml:id="a15">
+                          <desc type = "ScribalNoteCompleting">
+                            <locus target = "#141r"/>, col. 1, lower margin:
+                            <foreign xml:lang="gez">
+                              ዝንቱ፡ መጽሐፍ፡ ዘጸሐፎ፡ አባ፡፡ኂሩት፡ ወልደ፡ ሐና፡ በ፲፮፲፫፡ ዓም፡ ዘምረ፡ ተጻፈ፡
+                            </foreign>
+                            “This book was written by Abba Ḫirut Wäldä Ḥanna. Copied in <date calendar = "ethiopian" when = "1613">1613 EC</date>.”
+                            This note is in another hand and appears not to be contemporaneous with the origin of the book
+                          </desc>
+                        </item>
+                        <item xml:id="a16">
+                          <desc>Some folios contain marginal notations about the situation in which the Psalm should be read</desc>
+                        </item>
+                        <item xml:id="a17">
+                          <desc>
+                            Scribal intervention: words of text are written interlinearly (<locus target = "#17v #34v #49r #50r"/> etc.);
+                            and lines of text are written interlinearly (<locus target = "#15r #40r #41r #44v #45r"/>, etc.);
+                            and in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target = "#41r"/>, line 12; <locus target = "#59r"/>, line 8; <locus target = "#104r"/>, line 16);
+                            erasure markings are visible (<locus target = "#45r"/>);
+                            text has been removed (<locus target = "#83r #85r"/>, etc.)
+                          </desc>
+                        </item>
+                        <item xml:id="a18">
+                          <desc>
+                            <locus target = "#119r"/> line 12: two words have lines drawn above and below to signal erasure in order to correct homoeoteleuton
+                          </desc>
+                        </item>
+                        <item xml:id="a19">
+                          <desc>
+                            This scribe has avoided the problem of lines of text too long to fit on one line by adopting an aspect ratio that leaves ample room
+                            for the width of most lines. Occasionally a line is too long and has to be completed above or below the end of the line
+                            (e.g., <locus target = "#4r #15r #15v #16r"/>)
+                          </desc>
+                        </item>
+
+                        <item xml:id="e1">
+                          <desc><locus target = "#ivv(erso)"/> blank</desc>
+                        </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, 204 x 147 x 63 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered by tooled leather with the traditional patterns, headband and tailband.</decoNote>
@@ -192,9 +355,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-07-06" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-22" who="RL">Added items, miniatures, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>
