@@ -46,7 +46,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"/>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/2"/>
+                           <objectType xml:lang="fr"
+                              ref="https://www.eagle-network.eu/voc/objtyp/lod/189"
+                              >Pierre</objectType>
                         </support>
                         <extent>
                            <dimensions type="outer" unit="mm">
@@ -64,7 +67,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                         <condition key="good"/>
                      </supportDesc>
+                     
                      <layoutDesc>
+                        <layout>
+                           <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/> 
+                        </layout>
                         <layout writtenLines="15"/>
                      </layoutDesc>
                   </objectDesc>
@@ -85,8 +92,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         the wall of the church <placeName ref="INS0346DL"/>
                      </origPlace>
                      <origDate when="0873">
-                        <date>23 December 873</date> according to <!--<bibl><ptr
-                              target="bm:Kropp1999Gluecklich"/></bibl>-->
+                        <note><date when="0873-12-23">23 December 873</date> according to <bibl><ptr
+                              target="bm:Kropp1999Gluecklich"/></bibl>
+                        </note>
                      </origDate>
                   </origin>
                </history>
@@ -138,6 +146,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <revisionDesc>
          <change who="ES" when="2016-01-23">Created catalogue entry</change>
          <change when="2017-01-30" who="ES">updated entry</change>
+         <change when="2018-10-15" who="PL">Added EAGLE URIs, fixed markup for bibl in origDate</change>
 
       </revisionDesc>
    </teiHeader>
