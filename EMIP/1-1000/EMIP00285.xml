@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 108</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,18 +51,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">i + 107</measure>
+                           <measure unit="quire">Sheet around spine + 8</measure>
                            <dimensions type="outer" unit="mm">
                               <height>240</height>
                               <width>185</width>
                               <depth>75</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <signatures>Quires 1, 5-14 numbered</signatures>
+                          <note>Quire descriptions: quires 1–2 and 5–8 balanced; quire 3 adjusted balanced; quire 4 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"/>
+                              Sheet around Spine:
+                              1, no stub
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24"></locus>
+                              <note>Folio stubs are visible between <locus target="#19 #20"/> and <locus target="#22 #23"/>.</note>
+                              Quire 3:
+                              3, stub after 6
+                              6, stub after 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">5</dim>
+                              <locus from="25" to="29"></locus>
+                              <note><locus target="#29"/> has been attached to <locus target="#28"/> using a stab stitch.</note>
+                              Quire 4:
+                              5 added
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">6</dim>
+                              <locus from="30" to="35"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="36" to="43"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="44" to="51"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">2</dim>
+                              <locus from="52" to="53"></locus>
+                              <note>This codex has been extensively repaired using numerous stab stitches. It is impossible to determine the organization of the quires and is, therefore, impossible to map further than quire 8. However, quire numbers are visible on <locus target="#60r #68r #76r #84r #92r #104r"/>.</note>
+                              Quire 8
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">26</dim>
+                           <dim type="bottom">43</dim>
+                           <dim type="right">26</dim>
+                           <dim type="left">12</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="19 21">
+                         <locus from="1r" to="106r"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 240 x 185 x 75 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, covered in untooled red leather, linen shows between the paste downs in front and back, headband and tailband.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                        <material key="textile"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1875">late-nineteenth  century</origDate>
+                     <origDate notBefore="1850" notAfter="1899">late-nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -78,6 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-09-29" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
    <text>

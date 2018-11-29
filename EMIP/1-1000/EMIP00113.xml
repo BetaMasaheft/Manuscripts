@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 22</title>
+            <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +39,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Missal, መጽሐፈ፡ ቅዳሴ፡, with musical notation</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from = "1r" to = "109v"/><title type = "complete" ref = "LIT1960Mashaf"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1.1"><locus from = "1r" to = "9v"/><title>Office Prayer</title></msItem>
+                  <msItem xml:id="ms_i1.2"><locus from = "10r" to = "35v"/><title type = "complete" ref = "LIT1960Mashaf#SerataQeddase"/></msItem>
+                  <msItem xml:id="ms_i1.3"><locus from = "36r" to = "45r"/><title type = "complete" ref = "LIT1960Mashaf#AnaphoraApostles"/></msItem>
+                  <msItem xml:id="ms_i1.4"><locus from = "45r" to = "47v"/><title type = "complete" ref = "LIT1100Anapho"/></msItem>
+                  <msItem xml:id="ms_i1.5"><locus from = "47v" to = "55v"/><title type = "complete" ref = "LIT1099Anapho"/><note>Columetric layout of text: <locus target = "#51r #51v"/></note></msItem>
+                  <msItem xml:id="ms_i1.6"><locus from = "55v" to = "58r"/><title type = "complete" ref = "LIT1960Mashaf#AnaphoraDioscorus"/></msItem>
+                  <msItem xml:id="ms_i1.7"><locus from = "58v" to = "66r"/><title type = "complete" ref = "LIT1960Mashaf#AnaphoraJohn"/></msItem>
+                  <msItem xml:id="ms_i1.8"><locus from = "66r" to = "74v"/><title type = "complete" ref = "LIT2040Naakkw"/></msItem>
+                  <msItem xml:id="ms_i1.9"><locus from = "74v" to = "78v"/><title type = "complete" ref = "LIT1960Mashaf#AnaphoraJacobSerug"/></msItem>
+                  <msItem xml:id="ms_i1.10"><locus from = "78v" to = "85r"/><title type = "complete" ref = "LIT1103Anapho"/></msItem>
+                  <msItem xml:id="ms_i1.11"><locus from = "85r" to = "89r"/><title type = "complete" ref = "LIT1960Mashaf#AnaphoraEpiphanius"/></msItem>
+                  <msItem xml:id="ms_i1.12"><locus from = "89v" to = "97v"/><title type = "complete" ref = "LIT1960Mashaf#AnaphoraAthanasius"/></msItem>
+                  <msItem xml:id="ms_i1.13"><locus from = "97v" to = "103v"/><title type = "complete" ref = "LIT1098Anapho"/></msItem>
+                  <msItem xml:id="ms_i1.14"><locus from = "103r" to = "106r"/><title type = "complete" ref = "LIT1569habeka"/></msItem>
+                  <msItem xml:id="ms_i1.15">
+                    <locus from = "106r" to = "109v"/>
+                    <title type = "complete" ref = "LIT2037Naakkw"/>
+                    <incipit xml:lang="gez">ነአኵተከ፡ አምላክነ፡ በፍቁር፡ ወልድከ፡ እግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ እንበለ፡ ተፈልጦ፡...</incipit>
+                    <note>Attributed ot Gergory the Wonder Worker</note>
+                  </msItem>
+
                   </msItem>
                </msContents>
                <physDesc>
@@ -50,18 +75,194 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">i + 110 </measure>
+                           <measure unit="quire">Protection sheet + 14</measure>
                            <dimensions type="outer" unit="mm">
                               <height>204</height>
                               <width>147</width>
                               <depth>63</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 2–13 balanced; protection sheet and quire 14 adjusted balanced; quire 1 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"></locus>
+                              <note>A folio stub is visible between <locus target="#i #1"/>.</note>
+                              Protection Sheet:
+                              1, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">9</dim>
+                              <locus from="1" to="9"></locus>
+                              <note>A folio stub is visible between <locus target="#6 #7"/> and two stubs are visible between <locus target="#8 #9"/>. <locus target="#7 #8"/> are actually two parts of one sheet sewn onto the two stubs before <locus target="#9"/> with a stab stitch.</note>
+                              Quire 1:
+                              2, stub after 8
+                              3, stub after 8
+                              4, stub after 6
+                              7 added
+                              8 added
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">4</dim>
+                              <locus from="10" to="13"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="14" to="21"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="22" to="29"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">6</dim>
+                              <locus from="30" to="35"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="36" to="45"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="46" to="55"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">6</dim>
+                              <locus from="56" to="61"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="62" to="69"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="70" to="77"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">8</dim>
+                              <locus from="78" to="85"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">10</dim>
+                              <locus from="86" to="95"></locus>
+                              Quire 12
+                            </item>
+                            <item xml:id="q14" n="13">
+                              <dim unit="leaf">8</dim>
+                              <locus from="96" to="103"></locus>
+                              Quire 13
+                            </item>
+                            <item xml:id="q15" n="14">
+                              <dim unit="leaf">7</dim>
+                              <locus from="104" to="110"></locus>
+                              <note>A folio stub is visible between <locus target="#106 #107"/>.</note>
+                              Quire 14:
+                              4, stub after 3
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">15</dim>
+                           <dim type="bottom" atLeast="32" atMost="35">32-35</dim>
+                           <dim type="right">20</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="24 27">
+                         <locus target="#110v"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="24 27">
+                         <locus from="1r" to="110v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id = "h1" script = "Ethiopic">
+                    <seg type = "rubrication">
+                      <ref target = "#ms_i1"/>
+                      <foreign xml:lang = "gez">ማርያም፡ </foreign>
+                      </seg>
+                      </handNote>
+                      </handDesc>
+                  <decoDesc>
+                    <summary>Miniatures: (1–3 are painted over text; 4 appears to be original to the codex)</summary>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#12v"/><desc>Angel with <term key = "sword"/> <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#13r"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#13v"/><desc><persName ref = "PRS4585Georgeo"/> and the <term key = "dragon"/>, <ref type="authFile" corresp="AT1035HolyMan"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#38v"/><desc>The Cross, drawn with elaborate geometric patterns, a nine panel box with four additional boxes:
+                    a small square on top, one on either side and one on the bottom; in the four outside boxes, a face shows in the top box, hands in the outer boxes and feet in the lower box
+                    <ref type ="authFile" corresp="AT1071Cross"/></desc></decoNote>
+                    <decoNote type = "frame" xml:id="d05">
+                      Decorative designs:
+                      <locus target = "#35v #85r #100v #101r"/> (alternating red and black dots);
+                      <locus target = "#109v"/> (multiple full stops connected with red and black lines)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id = "a1">
+                        <desc>Supplication to the Cross and the Blessed Virgin, with musical notation, with incipit
+                          <foreign xml:lang = "gez">
+                            ወካዕበ፡ ናስተብቁዖ፡ ለዕፀ፡ ቅዱስ፡ መስቀል፡...
+                          </foreign>
+                        </desc>
+                        <note>On this controversial supplication, see ጌታቸው፡ ኃይሌ፥ ደቂቀ፡ እስጢፋኖስ፥ (Collegeville MN: HMML, 1996 EC) 36–41</note>
+                      </item>
+                      <item xml:id="a2">
+                        <desc><locus target = "#110r"/> Excerpt from John 6</desc>
+                      </item>
+                      <item xml:id = "a3">
+                        <desc type = "Inventory">
+                          <locus target = "#110v"/> List of church property (books, censers, cross, etc.), <foreign xml:lang="gez">እጽሕፍ፡ ኁልቆ፡ መጻሕፍት፡ ዘአቡነ፡ ገብረ፡ [ህይወት፡] ፩፡ ወንጌል፡ ፪ ቅዳሴ፡ ፪፡ ሳታት፡ ፪፡ ጾመ፡ [ድጓ፡]...</foreign>
+                        </desc>
+                      </item>
+                      <item xml:id = "a4">
+                        <desc type = "OwnershipNote"><locus target = "#47v"/> and passim: name of owner: <foreign xml:lang="gez">ወልደ፡ ማርያም፡</foreign></desc>
+                      </item>
+                      <item xml:id="a5">
+                        <desc><locus target = "#6v"/> Prayer for <persName ref = "PRS7006Menilek"/></desc>
+                      </item>
+                      <item xml:id = "a6">
+                        <desc><locus target = "#66r"/> name of owner: <foreign xml:lang="gez">ሊባኖስ፡</foreign></desc>
+                      </item>
+                      <item xml:id="a7">
+                        <desc>
+                          Scribal intervention: words of text are written interlinearly (<locus target = "#43r #97v"/>)
+                        </desc>
+                      </item>
+
+                      <item xml:id="e1">
+                        <desc><locus target = "#ir"/> blank</desc>
+                      </item>
+                    </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 204 x 147 x 63 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century (reign of Menelik)</origDate>
+                     <origDate notBefore="1865" notAfter="1913">nineteenth century (reign of Menilek [II, 1889-1913])</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -76,8 +277,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-07-06" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2018-08-22" who="RL">Added items, miniatures, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text>

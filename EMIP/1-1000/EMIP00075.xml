@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 1 </title>
+            <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +39,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Asmat prayer against evil eye and charm, The Legend of Susənyos and the witch Wurzəlya, (accordion-fold book)</summary>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
                   <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                    <locus from = "1r" to = "7r"/>
+                    <title>Asmat prayer against evil eve and charm</title>
+                    <incipit xml:lang = "gez">
+                      በስመ፡ አብ፡...ጸሎት፡ በእንተ፡ ዓይነ፡ ጥላ፡ ገርጋሪያ፡ ዓይነ፡ ባርያ፡ ወሌጌዎን፡ ዓይነ፡ ቡዳ፡ ወዓይነ፡ ጠቢብ፡ ዓይነ፡ መቅኛ፡ ወዓይነ፡ ወትንኰልኛ፡ መንኛ፡ ወጕሥምት፡ ወለሕማመ፡ አስወንውንውን፡ ወለሽንትምፅ፡ ወጐርኍሆ፡ ወጊርባ፡ ጀርባ፡...
+                    </incipit>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                    <locus from = "7v" to = "14r"/>
+                    <title type = "complete" ref = "LIT1763Legend"/>
+                    <incipit xml:lang = "gez">
+                      በስመ፡ አብ፡...ጸሎት፡ በእንተ፡ ሕማመ፡ ዓይን፡ ሾትላይ፡ ወሀሎ፡ ፩ዱ፡ አምላክ፡ ብእሲ፡ ዘስሙ፡ ሱስንዮስ፡...
+                    </incipit>
                   </msItem>
                </msContents>
                <physDesc>
@@ -56,12 +71,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <depth>35</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <signatures>Folios numbered consecutively without reference to recto and verso.</signatures>
+                          <note>This is an accordion-fold book.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top" atLeast="5" atMost="8">5-8</dim>
+                           <dim type="bottom" atLeast="10" atMost="12">10-12</dim>
+                           <dim type="right" atLeast="8" atMost="10">8-12</dim>
+                           <dim type="left" atLeast="8" atMost="10">8-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="12 13"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#1"/><desc><term key = "cross"/> shape in a black box </desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#3"/><desc>Angel brandishing a <term key = "sword"/> <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#5"/><desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#5"/><desc>Angel brandishing a <term key = "sword"/> <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d05"><locus target="#8"/><desc>Ethiopian Saint holding a <term key = "prayerstaff"/> and a book <ref type = "authFile" corresp ="AT1035HolyMan"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d06"><locus target="#11"/><desc><persName ref = "PRS7049Michael"/> and Saraphim <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d07"><locus target="#12"/><desc><persName ref = "PRS4377Gabriel"/> and Cherubim <ref type="authFile" corresp="AT1082Angel"></ref></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d08"><locus target="#14"/><desc>A panel with geometric shapes with the head of the watching guardian angel in a square box in the center <ref type="authFile" corresp="AT1082Angel"/></desc></decoNote>
+                  </decoDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, 93 x 94 x 35 mm, accordion-fold codex, comprised of two strips sewn together and stitched to the end-boards; the back cover has three stitches so as to hold the broken board together and the parchment to the cover.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1900">nineteenth/twentieth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1999">nineteenth/twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -76,8 +125,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2018-06-30" who="JS">Added binding desc, columns/lines, dating info</change>
+         <change when="2018-08-10" who="RL">Added items and miniatures</change>
       </revisionDesc>
    </teiHeader>
    <text>
