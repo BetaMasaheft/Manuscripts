@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:lang="en"
@@ -10,7 +10,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss">
    <teiHeader>
       <fileDesc>
-         <titleStmt> 
+         <titleStmt>
             <title>Dāwit</title>
             <editor key="DR"/>
             <editor key="DN"/>
@@ -36,15 +36,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <idno>٩٤٠</idno>
                      </altIdentifier>
                   </msIdentifier>
-               
+
                <msContents>
                   <summary/>
-                     
+
                   <msItem xml:id="ms_i1">
                         <locus from="1r" to="8v"/>
                      <title type="incomplete" ref="LIT2000Mazmur"/>
                         <textLang mainLang="gez"/>
-                     <note>Contains Psalms 1-17, according to the Arabic description without Psalm 7.</note>
+                     <note>Contains Psalms 1-6 and 8-17; Psalm 7 is missing.
+                     Numeration of Psalms is not consequent. Nummer 1 is used two times;
+                   Psalms 5, 6, 8, 9, 11 have no numbers. Recent numbers written
+                   in pencil, Eastern Arabic numerals, are added to all Psalms.</note>
                      <incipit xml:lang="gez">
                         <locus target="#1r"/>
                         <lb n="1"/><hi rend="rubric"> ፩ ፍካሬ፡ ዘጻድቃን፡ ወዘኃጥአን፡</hi>
@@ -68,23 +71,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </explicit>
                   </msItem>
                   </msContents>
-                     
+
                <physDesc>
-                  <objectDesc form="Codex"> 
+                  <objectDesc form="Codex">
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">8</measure> 
+                           <measure unit="leaf">8</measure>
                            <dimensions type="outer" unit="mm">
                              <height>185</height>
                               <width>134</width>
                               <depth>5</depth>
                            </dimensions>
-                     
+
                      </extent>
-                        
+
                         <collation>
                            <list>
                               <item xml:id="q1" n="1">
@@ -94,12 +97,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </list>
                         </collation>
                      </supportDesc>
-                     
+
                      <layoutDesc>
                         <layout columns="1">
                            <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus
                               target="#4r"/>.</note>
-                           <dimensions unit="mm" xml:id="textarea"> 
+                           <dimensions unit="mm" xml:id="textarea">
                               <height>83</height>
                               <width>70</width>
                            </dimensions>
@@ -112,26 +115,29 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </layout>
                      </layoutDesc>
                   </objectDesc>
-                  
+
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script"></seg>
                      </handNote>
                   </handDesc>
-                  
+
                   <decoDesc>
                      <decoNote type="band" xml:id="d1">
                         <locus target="#1r"/>
-                        <desc>Ornamental band</desc>
+                        <desc>Fine ornamental band (possibly unfinished,
+                          only yellow has been applied).</desc>
                      </decoNote>
                   </decoDesc>
-                  
+
                   <additions>
                      <list>
                         <item xml:id="e1">
-                           <desc>The psalms have been numerated in pencil.</desc>
+                           <desc> Eastern Arabic numerals have been added in pencil, in
+                             recent hand, to numerate 
+                             Psalms.</desc>
                         </item>
-                        
+
                         <item xml:id="e2">
                            <locus target="#1r"/>
                            <desc>Arabic title.</desc>
@@ -139,20 +145,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </item>
                      </list>
                   </additions>
-                  
-                  
+
+
                   <bindingDesc>
                      <binding xml:id="binding">
                         <decoNote xml:id="b1">The leaves are held together with tackets (twisted strips of parchment) on both sides.</decoNote>
                      </binding>
                   </bindingDesc>
-                  
+
                </physDesc>
-                  
+
                <history>
-                  <provenance>According to the Arabic description, this manuscript is from <placeName ref="LOC2991Eritre"/>.</provenance>
+                  <provenance>According to the Arabic description, this manuscript
+                    is from <placeName ref="LOC2991Eritre"/>.</provenance>
                </history>
-               
+
             </msDesc>
          </sourceDesc>
       </fileDesc>
