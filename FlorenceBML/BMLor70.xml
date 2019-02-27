@@ -45,7 +45,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <idno>BML 2</idno>
                      </altIdentifier>
                   </msIdentifier>
-               <msContents></msContents>
+
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -63,9 +63,64 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <width>165</width>
                            </dimensions>
                         </extent>
+                        <foliation>
+                           <list>
+                              <item xml:id="f1">
+                                 Penned numbers added on the right top corner from a european hand.
+                              </item>
+                           </list>
+                        </foliation>
+                        </supportDesc>
+                     
+                  </objectDesc>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">European</decoNote>
+                        <decoNote type="bindingMaterial" xml:id="b2">
+                           <material key="parchment"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate notBefore="1501" notAfter="1600">XVI c.</origDate>
+                  </origin>
+               </history>
+                  <additional>
+                     <adminInfo>
+                        <recordHist>
+                           <source>
+                              <listBibl type="catalogue">
+                                 <bibl>
+                                 <ptr target="bm:Marrassini1986Laurenziana"/>
+                                 <citedRange unit="page">88-91</citedRange>
+                              </bibl>
+                              </listBibl>
+                           </source>
+                        </recordHist>
+                        </adminInfo>
+                     <listBibl type="secondary">
+                        <bibl>
+                        <ptr target="bm:Bausi2015Wansleben"/>
+                        <citedRange unit="page">230</citedRange>
+                     </bibl>
+                     </listBibl>
+                  </additional>
+            <msPart xml:id="p1">
+               <msIdentifier/>
+               <msContents>
+                  <msItem xml:id="p1_i1">
+                     <title type="incomplete" ref="LIT3505PaulineEpis"/>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
                         <collation>
                            <note><bibl><ptr target="bm:Marrassini1986Laurenziana"/><citedRange unit="page">88</citedRange></bibl>
-                           says that the ethiopic quire numbers are always on the first carta, but from the photos this does not seam to be systematic, although often true. See e.g. <ref target="#q3" type="quire"/> which has the Ethiopic numeral on <locus target="#17r"  facs="021"/> or
+                              says that the ethiopic quire numbers are always on the first carta, but from the photos this does not seam to be systematic, although often true. See e.g. <ref target="#q3" type="quire"/> which has the Ethiopic numeral on <locus target="#17r"  facs="021"/> or
                               <ref target="#q5" type="quire"/> whose ethiopic number (<num value="5">፭</num>) is on <locus target="#38r"  facs="043"/> the last folio of the previous quire.</note>
                            <list>
                               <item xml:id="q1">
@@ -88,10 +143,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <locus from="26r" to="38v" facs="031"/>
                                  3 added
                               </item>
-<!--                              The numbering in @facs is increased due to 030 and 031 being both fotos of the opening with 25v and 26r-->
+                              <!--                              The numbering in @facs is increased due to 030 and 031 being both fotos of the opening with 25v and 26r-->
                               <item xml:id="q5">
                                  <dim unit="leaf">9</dim>
-<!--                                 From the photos. Marrassini saus there are 19 quinterni-->
+                                 <!--                                 From the photos. Marrassini saus there are 19 quinterni-->
                                  <locus from="39r" to="47v" facs="044"/>
                                  9, no stub
                               </item>
@@ -149,7 +204,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <dim unit="leaf">10</dim>
                                  <locus from="168r" to="177v" facs="174"/>
                               </item>
-<!--                              a piece of paper between 176v and 177r caused two extra photos to be in the count-->
+                              <!--                              a piece of paper between 176v and 177r caused two extra photos to be in the count-->
                               <item xml:id="q19">
                                  <dim unit="leaf">10</dim>
                                  <locus from="178r" to="187v" facs="186"/>
@@ -162,43 +217,92 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <item xml:id="q21">
                                  <dim unit="leaf">7</dim>
                                  <locus from="199r" to="205v" facs="208"/>
-                                <note><locus target="#203 #204" facs="213"/> misplaced, should have been before <locus target="#201" facs="211"/>.</note>
-                              5 added
-                               </item>
+                                 <note><locus target="#203 #204" facs="213"/> misplaced, should have been before <locus target="#201" facs="211"/>.</note>
+                                 5 added
+                              </item>
                            </list>
                         </collation>
+                        
                      </supportDesc>
                      <layoutDesc>
                         <layout writtenLines="21" columns="2"/>
                      </layoutDesc>
+                     
                   </objectDesc>
-                  
+                  <handDesc>
+                     <handNote script="Ethiopic" xml:id="h1">
+                        <desc>Not nice</desc>
+                        <date notBefore="1501" notAfter="1600">XVI c.</date>
+                        <locus from="1r" to="203v" facs="005"></locus>
+                     </handNote>
+                     <handNote script="Ethiopic" xml:id="h2">
+                        <desc>Not nice</desc>
+                        <date>more recent than <ref target="#h1" type="hand"/>.</date>
+                        <locus target="#204r" facs="214"></locus>
+                     </handNote>
+                     <handNote script="Ethiopic" xml:id="h4">
+                        <desc>European hand which added chapters numbers by pen</desc>
+                        <date notBefore="1501" notAfter="1600">XVI</date> or <date notBefore="1601" notAfter="1700">XVII</date> c.
+                     </handNote>
+                     <handNote script="Ethiopic" xml:id="h5">
+                        <desc>European hand which added some numbers quickly, sometimes only graffiti on the margins, cyclically from 1 to 16, certainly in preparation of a print edition, of which some drafts are attached at the end of the manuscript (<locus target="#206" facs="216"/>)</desc>
+                        <date cert="low" notBefore="1501" notAfter="1600">perhaps of the same date of the manuscript</date>
+                     </handNote>
+                  </handDesc>
                </physDesc>
-               <history>
-                  <origin>
-                     <origDate notBefore="1501" notAfter="1600">XVI c.</origDate>
-                  </origin>
-               </history>
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              <listBibl type="catalogue">
-                                 <bibl>
-                                 <ptr target="bm:Marrassini1986Laurenziana"/>
-                                 <citedRange unit="page">88-91</citedRange>
-                              </bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                        </adminInfo>
-                     <listBibl type="secondary">
-                        <bibl>
-                        <ptr target="bm:Bausi2015Wansleben"/>
-                        <citedRange unit="page">230</citedRange>
-                     </bibl>
-                     </listBibl>
-                  </additional>
+            </msPart>
+               <msPart xml:id="p2">
+                  <msIdentifier/>
+                  <msContents>
+                     <msItem xml:id="p2_i1">
+                        <title type="incomplete" ref="LIT3505PaulineEpis"/>
+                        <msItem xml:id="p2_i1.1">
+                           <locus target="#206v" facs="217"/>
+                           <msItem  xml:id="p2_i1.1.1">
+                              <title ref="LIT3519Epistle" type="incomplete"/>
+                              <note><ref cRef="urn:dts:betmas:LIT3519Epistle:6.18">Eph. 6:18</ref> corresponding to <locus from="124r" to="126r" facs="131"/>.</note>
+                              </msItem>
+                           <msItem  xml:id="p2_i1.1.2">
+                              <title ref="LIT3520Epistle" type="incomplete"/>
+                              <note><ref cRef="urn:dts:betmas:LIT3520Epistle:1-12">Phil. 1-12</ref> corresponding to <locus from="124r" to="126r" facs="131"/>.</note>
+                           </msItem>
+                        </msItem>
+                        <msItem xml:id="p2_i1.2">
+                        <locus target="#207r" facs="217"/>
+                           <msItem  xml:id="p2_i1.2.1">
+                              <title ref="LIT3519Epistle" type="incomplete"/>
+                              <note><ref cRef="urn:dts:betmas:LIT3519Epistle:4.6-31">Eph. 4:6-31</ref> corresponding to <locus from="118v" to="120v" facs="124"/>.</note>
+                           </msItem>
+                           <msItem  xml:id="p2_i1.2.2">
+                              <title ref="LIT3521Epistle" type="incomplete"/>
+                              <note><ref cRef="urn:dts:betmas:LIT3521Epistle:4.18">Col. 4:18</ref> corresponding to <locus from="140v" to="142r" facs="147"/></note>
+                           </msItem>
+                     </msItem>
+                        <msItem xml:id="p2_i1.3">
+                           <locus target="#208v" facs="219"/>
+                           <title ref="LIT3522Epistle" type="incomplete"/>
+                           <note><ref cRef="urn:dts:betmas:LIT3522Epistle:4.12">1 Thess. 4:12</ref>-<ref cRef="urn:dts:betmas:LIT3522Epistle:5.17">5:17</ref> 
+                              corresponding to <locus from="146r" to="148r" facs="152"/>.</note>
+                        </msItem>
+                        <msItem xml:id="p2_i1.4">
+                           <locus target="#209r" facs="219"/>
+                           <title ref="LIT3522Epistle" type="incomplete"/>
+                           <note><ref cRef="urn:dts:betmas:LIT3522Epistle:2.5">1 Thess. 2:5</ref> corresponding to <locus from="140v" to="142r" facs="147"/>.</note>
+                        </msItem>
+                     </msItem>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <extent>
+                              <measure>two</measure> double folios of printed drafts
+                              </extent>
+                           <foliation>
+                              <list><item xml:id="f2"><locus target="#207r" facs="217"/> numbered 209, <locus target="#209r" facs="219"/> numbered 215</item></list></foliation>
+                        </supportDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
