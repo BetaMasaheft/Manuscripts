@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:lang="en"
      xml:id="BLorient817"
@@ -27,7 +32,7 @@
                   <collection>Oriental</collection>
                   <idno>BL Oriental 817</idno>
                   <altIdentifier>
-                     <idno>Wright cat. CCCXCIIi</idno>
+                     <idno>Wright cat. CCCXCIII</idno>
                   </altIdentifier>
                   <altIdentifier>
                      <idno>Wright 393</idno>
@@ -79,7 +84,7 @@
                      <locus from="20v"/>
                      <title type="complete" ref="LIT2341serata#SMIV">ሥርዓት፡ ዘቤተ፡ ንጉሥ፡ ዘይቀድሙ፡ ለምክር፡</title>
                      <textLang mainLang="gez"/>
-                     <incipit xml:lang="gez">መቅድመ፡ ኵሉ፡ ይመክር፡ የሺ፡ አለቃ፡ ዘደል፡ ጭፍራ። ወበላዕሌሁ፡ ይመክር፡ የ<supplied xml:lang="gez"></supplied>ሺ፡ 
+                     <incipit xml:lang="gez">መቅድመ፡ ኵሉ፡ ይመክር፡ የሺ፡ አለቃ፡ ዘደል፡ ጭፍራ። ወበላዕሌሁ፡ ይመክር፡ የሺ፡ 
                         አለቃ፡ ዘተሠርዓ፡ ጭፍራ፡ በሀገር፡ በበመዓርጊሁ፡ ወበበጾታሁ፤ ወበላዕሌሁ፡ይመ፡ ጸጅ፡ አዛዢ፤ ወበላዕሌሁ፡ ይመ፡ ሊቀ፡ መኳስ፤
                      </incipit>
                   </msItem>
@@ -195,13 +200,6 @@
                      
                      
                   </msItem>
-                  <msItem xml:id="ms_i3.3">
-                     <locus from="28r"/>
-                     <title type="complete" ref="LIT5187Chronologyofmonks">ታሪክ፡ ዘመነኮሳት፡</title>
-                     <textLang mainLang="gez"/>
-                     <note>The name of the scribe <persName role="scribe" ref="PRS12447KidanaMaryam"/> is written in the explicit at <locus from="30v"></locus>. </note>
-                     
-                  </msItem>
                   
                   
                   
@@ -219,8 +217,8 @@
                         <extent>
                            <measure unit="leaf">31</measure>
                            <dimensions type="outer" unit="mm">
-                              <height>110</height>
-                              <width>65</width>
+                              <height>203</height>
+                              <width>146</width>
                            </dimensions>
                         </extent>
                         
@@ -228,30 +226,72 @@
                      </supportDesc>
                      
                      <layoutDesc>
-                        <layout columns="3" writtenLines="22" cert="high"></layout>
+                        <layout columns="1" writtenLines="22" cert="high"></layout>
                      </layoutDesc>
                   </objectDesc>
                   
                   <handDesc>
-                     <handNote> 
-                        <date when="1851" resp="PRS10171Wright"/>
-                        <seg type="ink">black, red</seg>
+                 
+                        <handNote script="Ethiopic" xml:id="h1">
+                           <desc>The manuscript is well written of the later part of the<date>18th century.</date>
+                           </desc>
+                           <date notBefore="1750" notAfter="1800" resp="PRS10171Wright"></date>  
+                   
+                       
                      </handNote>
                   </handDesc>         
                   
                   <additions>
                      <list>
-                        <item xml:id="e1">
-                           <desc/>
+                        <item xml:id="a1">
+                           <locus target="3r"></locus>
+                           <desc>The list of Ethiopian kings from <persName ref="PRS7437Naakkwe">ነአኵቶ፡ ለአብ፡</persName> to <persName ref="PRS10198Yaeqob"/></desc>
+                           
+                        </item>
+                     </list>
+                     <list><item xml:id="a2"><locus target="3v" to="4v"></locus>
+                        <desc>The list of  Ethiopian kings from <persName ref="PRS7005Menilek">እብነ፡ እልሐኪም፡</persName>king <persName ref="PRS9153TaklaHa"/></desc>
+                        
+                     </item>
+                        
+                     </list>
+                     <list>
+                        <item xml:id="a3">
+                           <locus target="28r"></locus>
+                           <desc>We find , in the same hand,<title  type="complete" ref="LIT5187Chronologyofmonks">ታሪክ፡ ዘመነኮሳት፡</title>
+                              beginning with <persName ref="PRS1962Anthony"/>.</desc>
+                           <list>
+                              <item xml:id="a4">
+                                 <locus target="30v"></locus>
+                                 <desc>The name of the scribe <persName role="scribe" ref="PRS12448KidanaMaryam"/> is written.</desc>
+                              </item>
+                              
+                           </list>
                         </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                     <binding contemporary="true" xml:id="binding">
+                        
+                        <decoNote xml:id="b1" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                           
+                        </decoNote>
+                        
+                     </binding>
+                  </bindingDesc>
+                  
                </physDesc>
                
                <history>
                   <origin>
                      <origDate/>
                   </origin>
+                  <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> 
+                     expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
+                  </provenance>
+                  
                </history>
                
                <additional>

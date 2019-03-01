@@ -2,6 +2,8 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
      xml:id="BLorient481"
@@ -172,7 +174,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </bibl>
                         </listBibl>
                          
-                        <listBibl type="editions">
+                        <listBibl type="secondary">
                            <bibl> 
                            <ptr target="bm:Fell1871Canones"/>
                         </bibl>
@@ -212,7 +214,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <title ref="LIT2669Statut71"/>
                            <note>72 orders</note>
                            <incipit xml:lang="gez">ሲኖዶስ ፡ ዘአበው ፡ ሐዋርያት ፡ ዘሠርዑ ፡ ለአርትዖ ፡ ቤተ ፡ ክርስቲያን ።</incipit>
-                           <listBibl type="editions">
+                           <listBibl type="secondary">
                               <bibl>
                               <ptr target="bm:Ludolf1691Commentarius"/>
                               <citedRange unit="page">314-315</citedRange>
@@ -587,7 +589,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <decoDesc>           
                         <summary>The manuscript is exceptionally rich in its decorations. It features headpieces, <term key="interlace">interlace</term> bands, 
                            and illustrations depicting Old and New Testament figures. The decorations accurately imitate the style and iconography 
-                           of the earlier Octateuch kept in  <placeName key="LOC1391AmbaGe"/> and  painted in the <term key="ThirdSolomonicStyle"/>.
+                           of the earlier Octateuch kept in  <placeName ref="LOC1391AmbaGe"/> and  painted in the <term key="ThirdSolomonicStyle"/>.
                            The New Testament scenes follow the <term key="LongCycle">long cycle</term> iconography attested in earlier
                           Gospel manuscripts.</summary>
                                                
@@ -672,7 +674,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                       
                         <decoNote type="miniature" xml:id="d16">
                         <locus target="#101r"/>
-                           <desc><ref type="authFile" corresp="AT1039Magi"/>are introduced to <persName ref="PRS6819Mary"/> and the 
+                           <desc><ref type="authFile" corresp="AT1039Magi"/> are introduced to <persName ref="PRS6819Mary"/> and the 
                               infant <persName ref="PRS5684JesusCh"/>
                               by an <term key="angel">angel</term> who performs a 
                            <term key="gesturewitnessing"> pointing gesture</term> and holds a <term key="cross">cross</term></desc>
@@ -986,9 +988,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </note>
                            </item>
                            
-                           <item xml:id="a15" corresp="LIT2665SD">
+                           <item xml:id="a15">
                               <locus target="#92r"/>
-                              <desc type="Letter">A letter of <persName ref="PRS8550sardaDe">Śarḍa Dǝngǝl</persName> and his mother, queen <persName ref="PRS1429AdmasMo">Śǝllus Ḫayle</persName>, 
+                              <desc type="Letter">A <title ref="LIT2665SD">letter</title> of <persName ref="PRS8550sardaDe">Śarḍa Dǝngǝl</persName> and his mother, queen <persName ref="PRS1429AdmasMo">Śǝllus Ḫayle</persName>, 
                                  appointing ʾabba <persName ref="PRS10764SegeDengel">Ṣǝge Dǝngǝl</persName>, son of <persName ref="PRS10766ZenaG">Zena Gabrǝʾel</persName>, 
                                  to be mamhǝr in <placeName ref="LOC1391AmbaGe">Gǝšǝn</placeName>. </desc>
                               <q xml:lang="gez"/>
@@ -1078,7 +1080,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </note> 
                            </item>
                            
-                           <item xml:id="a25" corresp="LIT2664Ezel">
+                           <item xml:id="a25">
                               <desc type="Poem">
                               <title ref="LIT2664Ezel">ʿƎzǝl for Good Friday</title> 
                            </desc>
@@ -1168,9 +1170,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <q xml:lang="gez"/>
                            </item>
                            
-                           <item xml:id="a36" corresp="LIT2665SD">
+                           <item xml:id="a36">
                               <locus target="#209r"/>
-                              <desc type="Letter">Letter of <persName ref="PRS8550sardaDe">Śarḍa Dǝngǝl</persName>
+                              <desc type="Letter"> <title ref="LIT2665SD">Letter</title> of <persName ref="PRS8550sardaDe">Śarḍa Dǝngǝl</persName>
                            </desc>
                               <q xml:lang="gez"/>
                            </item>
@@ -1213,6 +1215,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                   </physDesc>
                   <history>
+                     
                      <origin>
                         <origPlace>
                         <placeName ref="INS0101MadhaneAlam"/>
@@ -1237,11 +1240,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </source>
                         </recordHist>
                      </adminInfo>
-                     <listBibl type="editions">
+                
+                     <listBibl type="secondary">
                         <bibl>
-                        <ptr target="bm:Dillmann1853Octateuch"/>
+                           <ptr target="bm:Kropp2017Erbbesitz"/>
+                           <citedRange unit="page">366-373</citedRange>
                      </bibl>               
                      </listBibl>
+                    
                   </additional>
             </msDesc>
          </sourceDesc>
