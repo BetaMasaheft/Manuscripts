@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
-?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE189" type="mss">
-   <teiHeader>
+?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" 
+   xml:lang="en" xml:id="RIE189" type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu" >
       <fileDesc>
          <titleStmt>
             <title>RIÉ 189 </title>
@@ -27,7 +26,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-
                <msIdentifier>
                   <repository ref="INS0344AksumS"/>
                   <collection>RIÉ</collection>
@@ -36,17 +34,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <idno type="TM">102467</idno>
                   </altIdentifier>
                </msIdentifier>
-
-
-
                <physDesc>
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"
-                              ref="https://www.eagle-network.eu/voc/material/lod/57"/>
-                           <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/1996"
-                              >Throne</objectType>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
+                           <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/1996">Throne</objectType>
                         </support>
                         <extent>
                            <dimensions type="outer" unit="mm">
@@ -55,14 +48,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <depth/>
                            </dimensions>
                         </extent>
-                        <foliation/>
-
-
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <rs type="execution" cert="low"
-                              ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                           <rs type="execution" cert="low" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
                         </layout>
                         <layout writtenLines="52"/>
                      </layoutDesc>
@@ -73,10 +62,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <date>4th century</date>
                      </handNote>
                   </handDesc>
-
-
-
-
                </physDesc>
 
                <history>
@@ -120,26 +105,30 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <encodingDesc>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
+            <p>All internal references are given without a prefix only with the ID and can be expanded by prepending the base URL https://betamasaheft.eu/.</p>
          </projectDesc>
+         <xi:include href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+         <xi:include href="https://raw.githubusercontent.com/BetaMasaheft/Authority-Files/master/taxonomy.xml">
+               <xi:fallback>
+                  <p>Beta maṣāḥǝft taxonomy.</p>
+               </xi:fallback>
+            </xi:include>
+         
+         
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-
-
-               <person role="other"/>
-            </listPerson>
-         </particDesc>
+         
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="LegalDocument"/>
-
             </keywords>
          </textClass>
          <langUsage>
             <language ident="gez">Gǝʿǝz</language>
-
-
          </langUsage>
       </profileDesc>
       <revisionDesc>
@@ -148,21 +137,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
       </revisionDesc>
    </teiHeader>
-   <text xml:lang="gez">
+   <text xml:lang="gez" xml:base="https://betamasaheft.eu" >
 
       <body>
          <div type="edition" xml:lang="gez">
             
-               <ab>በኀይለ፡ እግዚአ፡ ሰማይ፡ ዘበ፡ ሰማይ፡ ወምድር፡ መዋኢ፡ ሊተ፡ አነ፡ ዔዛና፡ ወልደ፡ እሌ፡ ዐሚዳ፡ ብእስየ፡ <placeName
-                     ref="ETH2262halen">ሐልን፡ </placeName>ንጉሠ፡ <placeName ref="LOC1310Aksum">አክሱም፡
-                  </placeName>ወዘ፡ <placeName ref="LOC3868Himyar">ሕሜር፡ </placeName>ወዘ፡ <placeName
-                     ref="LOC5333Raydan">ረይዳን፡ </placeName>ወዘ፡ <placeName ref="LOC5395Saba">ሰበእ፡
-                  </placeName>ወዘ፡ <placeName ref="LOC5491Salhen">ሰልሔን፡ </placeName>ወዘ፡ <placeName
-                     ref="ETH2065seyamo">ጽያሞ፡ </placeName>ወዘ፡ <placeName ref="ETH2263bega">ብጋ፡
+               <ab>በኀይለ፡ እግዚአ፡ ሰማይ፡ ዘበ፡ ሰማይ፡ ወምድር፡ መዋኢ፡ ሊተ፡ አነ፡ ዔዛና፡ ወልደ፡ እሌ፡ ዐሚዳ፡ ብእስየ፡ <placeName ref="ETH2262halen">ሐልን፡ </placeName>ንጉሠ፡ <placeName ref="LOC1310Aksum">አክሱም፡
+                  </placeName>ወዘ፡ <placeName ref="LOC3868Himyar">ሕሜር፡ </placeName>ወዘ፡ <placeName ref="LOC5333Raydan">ረይዳን፡ </placeName>ወዘ፡ <placeName ref="LOC5395Saba">ሰበእ፡
+                  </placeName>ወዘ፡ <placeName ref="LOC5491Salhen">ሰልሔን፡ </placeName>ወዘ፡ <placeName ref="ETH2065seyamo">ጽያሞ፡ </placeName>ወዘ፡ <placeName ref="ETH2263bega">ብጋ፡
                   </placeName>ወዘ፡ <placeName ref="ETH1768Kasu-K">ካሱ፡ </placeName>ንጉሠ፡ ነገሥት፡ ወልደ፡ እሌ፡
                   ዐሚዳ፡ ዘአይትመዋእ፡ ለፀር፡ በኀይለ፡ እግዚአ፡ ሰማይ፡ ዘወሀበኒ፡ እግዚአ፡ ኵሉ፡ ዘቦቱ፡ አመንኩ፡ ንጉሥ፡ ዘአይትመዋ፡ ለፀር፡
-                  ቅድሜየ፡ አይቁም፡ ፀር፡ ወድኅሬየ፡ አይትሉ፡ ፀር፡ በኀይለ፡ እግዚአ፡ ኵሉ፡ ፀበእኩ፡ <placeName
-                     ref="LOC5004Noba">ኖባ፡ ኖባ፡ </placeName>ሶቤ፡ አፅረረ፡ እሕዛበ፡ ሶቤ፡ ተመከሐ፡ ወኢይፈልስ፡ እምተከዚ፡
+                  ቅድሜየ፡ አይቁም፡ ፀር፡ ወድኅሬየ፡ አይትሉ፡ ፀር፡ በኀይለ፡ እግዚአ፡ ኵሉ፡ ፀበእኩ፡ <placeName ref="LOC5004Noba">ኖባ፡ ኖባ፡ </placeName>ሶቤ፡ አፅረረ፡ እሕዛበ፡ ሶቤ፡ ተመከሐ፡ ወኢይፈልስ፡ እምተከዚ፡
                   ይቤ፡ እሕዛበ፡ ሶቤ፡ ገፍዐ፡ እሕዛበ፡ <placeName ref="ETH2276Mangurto">መንጉርቶ፡ </placeName>
                   <placeName ref="ETH1660Hasa">ወኀሳ፡ </placeName>
                   <persName ref="PRS11578Barya">ወባርያ፡ </persName>ወጸሊመ፡ ፀብአ፡ ቀይሕ፡ ፀብእ፡ ወአማሰነ፡ ከዕበ፡
@@ -174,37 +159,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   ወዘሐሠር፡ ወይበረብሩ፡ እክሎ፡ ወብርቶ፡ ወኀጺኖ፡ ወ▧▧ሶ፡ ወያማስኑ፡ ሥዕለ፡ አብያቲሁ፡ ወመዛግብተ፡ እክል፡ ወጡጥ፡ ወያጸድፍዎ፡
                   ውስተ፡ ፈለገ፡ <placeName ref="LOC5626Seda">ሴዳ፡ </placeName>ወብዙኅ፡ ዘሞተ፡ በውስተ፡ ማይ፡
                   ዘኢያአምር፡ ኍልቆ፡ ወእንዘ፡ እሕማሪሆሙ፡ ያሰጥሙ፡ እንዘ፡ ምልአ፡ ሰብእ፡ ውስቴቱ፡ አንስት፡ ወዕድ፡ ወፄወውኩ፡ መገብተ፡
-                  ክልኤተ፡ ፪፡ እለ፡ መጽኡ፡ አዕይንተ፡ እንዘ፡ ይጸዐኑ፡ አርኩባተ፡ ወአስማቲሆሙ፡ <persName ref="PRS11398Yesaka"
-                     >ይሰካ፡ </persName>፩፡ <persName ref="PRS11399Butale">ቡታሌ፡ </persName>፩፡ ወእንገበናዌ፡
+                  ክልኤተ፡ ፪፡ እለ፡ መጽኡ፡ አዕይንተ፡ እንዘ፡ ይጸዐኑ፡ አርኩባተ፡ ወአስማቲሆሙ፡ <persName ref="PRS11398Yesaka">ይሰካ፡ </persName>፩፡ <persName ref="PRS11399Butale">ቡታሌ፡ </persName>፩፡ ወእንገበናዌ፡
                   ካብረ፡ ፩፡ ወእለ፡ ሞቶ፡ መገብት፡ <persName ref="PRS11400Danokwe">ደኖኴ፡ </persName>፩፡
-                     <persName ref="PRS11401Dagale">ደገሌ፡ </persName>፩፡ <persName ref="PRS11402Anak"
-                     >አነኴ፡ </persName>፩፡ <persName ref="PRS11403Haw">ሐዋሬ፡ </persName>፩፡ <persName
-                     ref="PRS11404Kar">ከርካራ፡ </persName>፩፡ ማሪሆሙ፡ ፩፡ ▧▧ሰሉ፡ ወሰለብዎ፡ ቅዳደ፡ ብሩር፡ ወሕቀተ፡
+                     <persName ref="PRS11401Dagale">ደገሌ፡ </persName>፩፡ <persName ref="PRS11402Anak">አነኴ፡ </persName>፩፡ <persName ref="PRS11403Haw">ሐዋሬ፡ </persName>፩፡ <persName ref="PRS11404Kar">ከርካራ፡ </persName>፩፡ ማሪሆሙ፡ ፩፡ ▧▧ሰሉ፡ ወሰለብዎ፡ ቅዳደ፡ ብሩር፡ ወሕቀተ፡
                   ወርቅ፡ ኮኑ፡ መገብት፡ እለ፡ ሞቱ፡ ፭፡ ወማሪ፡ ፩፡ ወበጸሕኩ፡ <placeName ref="ETH1768Kasu-K">ካሱ፡
                   </placeName>እንዘ፡ እቀትሎሙ፡ ወእፄውዎሙ፡ በመኅበርተ፡ አፍላግ፡ <placeName ref="LOC5626Seda">ዘሲዳ፡
-                  </placeName>ወተከዚ፡ ወበሳኒተ፡ በጸሕኩ፡ ፈነውኩ፡ መራደ፡ ሰርዌ፡ መሐዛ፡ ወሰርዌ፡ ሐራ፡ <placeName
-                     ref="ETH2270Damawa">ወደመወ፡ </placeName>
+                  </placeName>ወተከዚ፡ ወበሳኒተ፡ በጸሕኩ፡ ፈነውኩ፡ መራደ፡ ሰርዌ፡ መሐዛ፡ ወሰርዌ፡ ሐራ፡ <placeName ref="ETH2270Damawa">ወደመወ፡ </placeName>
                   <placeName ref="ETH2268Falh">ወፈልሐ፡ </placeName>
-                  <placeName ref="ETH2269Sera">ወጽራእ፡ </placeName>መለዕልተ፡ <placeName ref="LOC5626Seda"
-                     >ሲዳ፡ </placeName>እህጉረ፡ ንድቅ፡ ወዘ፡ ሐሠር፡ አስማተ፡ እህጉሪሁ፡ ዘንድቅ፡ <placeName
-                     ref="LOC1362Alwa">አልዋ፡ </placeName>፩፡ <placeName ref="LOC2564Daro">ደሮ፡
+                  <placeName ref="ETH2269Sera">ወጽራእ፡ </placeName>መለዕልተ፡ <placeName ref="LOC5626Seda">ሲዳ፡ </placeName>እህጉረ፡ ንድቅ፡ ወዘ፡ ሐሠር፡ አስማተ፡ እህጉሪሁ፡ ዘንድቅ፡ <placeName ref="LOC1362Alwa">አልዋ፡ </placeName>፩፡ <placeName ref="LOC2564Daro">ደሮ፡
                   </placeName>፩፡ ወቀተሉ፡ ወፄወዉ፡ ወአጽደፉ፡ ውስቴተ፡ ማይ፡ ወዳኅነ፡ አተዉ፡ አፍሪሆሙ፡ ፀሮሙ፡ ወመዊኦሙ፡ በኀይለ፡
                   እግዚአ፡ ብሔር፡ ወእምኔሁ፡ ፈነውኩ፡ ሰርዌ፡ <placeName ref="ETH2262halen">ሐሌን፡ </placeName>ወሰርዌ፡
-                     <placeName ref="ETH2266Laken">ሉኬን፡ </placeName>ወሰርዌ፡ <placeName
-                     ref="ETH2267Sabarat">ሰበራት፡ </placeName>
+                     <placeName ref="ETH2266Laken">ሉኬን፡ </placeName>ወሰርዌ፡ <placeName ref="ETH2267Sabarat">ሰበራት፡ </placeName>
                   <placeName ref="ETH2268Falh">ወፈልሐ፡ </placeName>
-                  <placeName ref="ETH2269Sera">ወጽራእ፡ </placeName>መተሕተ፡ <placeName ref="LOC5626Seda"
-                     >ሲዳ፡ </placeName>እህጉረ፡ <placeName ref="LOC5004Noba">ኖባ፡ </placeName>ዘሐሠር፡ ፬፡
-                     <placeName ref="LOC6600Negwase">ንጐሴ፡ </placeName>፩፡ እህጉረ፡ ነደቅ፡ <placeName
-                     ref="ETH1768Kasu-K">ዘካሱ፡ </placeName>
+                  <placeName ref="ETH2269Sera">ወጽራእ፡ </placeName>መተሕተ፡ <placeName ref="LOC5626Seda">ሲዳ፡ </placeName>እህጉረ፡ <placeName ref="LOC5004Noba">ኖባ፡ </placeName>ዘሐሠር፡ ፬፡
+                     <placeName ref="LOC6600Negwase">ንጐሴ፡ </placeName>፩፡ እህጉረ፡ ነደቅ፡ <placeName ref="ETH1768Kasu-K">ዘካሱ፡ </placeName>
                   ዘኖባ፡ ነሥአ፡ <placeName ref="LOC5836Tabito">ተቢቶ፡
                   </placeName>፩፡ <placeName ref="LOC6602Fert">ፍርቶቲ፡ </placeName>፩፡ ወበጽሑ፡ እስከ፡ ደወለ፡
                      ኖባ፡ ቀይሕ፡ ወዳኅነ፡ አተዉ፡ እሕዛቢየ፡ ፄውዎሙ፡ ወቀቲሎሙ፡ ወመህሪኮሙ፡
                   በኀይለ፡ እግዚአ፡ ሰማይ፡ ወተከልኩ፡ መንበረ፡ ውስቴተ፡ መኅበርተ፡ አፍላግ፡ <placeName ref="LOC5626Seda">ዘሲዳ፡
                   </placeName>ወዘተከዚ፡ አንጻረ፡ ሀገረ፡ ንድቅ፡ ዘውስጠ፡ ዛደሴት፡ ዘወሀበኒ፡ እግዚአ፡ ሰማይ፡ ፄዋ፡ ዕድ፡ ፪፻፲፬፡ ፄዋ፡
                   አንስት፡ ፬፻፲፭፡ ኮነ፡ ፮፻፳፱፡ ወቅትለ፡ ዕድ፡ ፮፻፪፡ ቅትለ፡ አንስት፡ ወደቂቅ፡ ፻፶፮፡ ኮነ፡ ፯፻፶፰፡ ወኮነ፡ ፄዋ፡
-                  ወቅትል፡ ፲፻፫፻፹፯፡ ወምህርካ፡ ለህም፡ ፼፭፻፷፡ ወበግዕ፡ ፭፼፲፻፶፡ ወተከልኩ፡ መንበረ፡ በዝየ፡ <placeName
-                     ref="LOC6597Sado">በሠዶ፡ </placeName>በኀይለ፡ እግዚአ፡ ሰማይ፡ ዘውእቱ፡ አርደአኒ፡ ወወሀበኒ፡ መግንሥተ፡
+                  ወቅትል፡ ፲፻፫፻፹፯፡ ወምህርካ፡ ለህም፡ ፼፭፻፷፡ ወበግዕ፡ ፭፼፲፻፶፡ ወተከልኩ፡ መንበረ፡ በዝየ፡ <placeName ref="LOC6597Sado">በሠዶ፡ </placeName>በኀይለ፡ እግዚአ፡ ሰማይ፡ ዘውእቱ፡ አርደአኒ፡ ወወሀበኒ፡ መግንሥተ፡
                   እግዚአ፡ ሰማይ፡ የጽንዕ፡ መንግሥትየ፡ ወከመ፡ ዮም፡ ሞአ፡ ሊተ፡ ፀርየ፡ ለይማእ፡ ሊተ፡ ወእደ፡ ሖርኩ፡ ከመ፡ ዮም፡ ሞአ፡ ሊተ፡
                   ወአግነየ፡ ሊተ፡ ፀርየ፡ በጽድቅ፡ ወበርትዕ፡ እንዘ፡ ኢእዔምፅ፡ እሕዛበ፡ ወአመሕፀንኩ፡ ዘመንበረ፡ ዘተከልኩ፡ ለእግዚአ፡ ሰማይ፡
                   ዘአንገሠነ፡ ወለምድር፡ ዘይጸውሮ፡ ለእመቦ፡ ዘነቀሎ፡ ወአማሰኖ፡ ወነሠቶ፡ ውእቱ፡ ወዘመዱ፡ ይሠረው፡ ወይትነቀል፡ እብሔር፡
