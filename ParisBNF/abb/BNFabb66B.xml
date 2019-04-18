@@ -2791,6 +2791,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </msItem>
                   </msItem>
                </msContents>
+               
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -2798,14 +2799,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"></measure>
-                           <measure unit="leaf" type="blank"></measure>
+                           <measure unit="leaf">149</measure>
                            <dimensions type="outer" unit="mm">
                               <height>425</height>
                               <width>28</width>
                               <depth>95</depth>
                            </dimensions>
                         </extent>
+                        <foliation>
+                           <list>
+                              <item xml:id="fol1">
+                                 First foliation in the upper right corner with a pen. This foliation has been striked through.
+                              </item>
+                              
+                              <item xml:id="fol2">
+                                 New foliation carried out when the leaves were rearranged according to the 
+                                 original order of the manuscript and the manuscript was rebound, see
+                                 <bibl><ptr
+                                    target="bm:Colin1988Etat"/><citedRange unit="page"
+                                       >289</citedRange><citedRange unit="note">60</citedRange></bibl>. When no longer 
+                                 relevant, <ref target="#fol1"/> has been striked through and the new number been added next to it.
+                                 This is the foliation followed in this description when not indicated otherwise.
+                              </item>
+                           </list>
+                        </foliation>
+                        <condition key="other">All leaves are loose and have been glued to a support and rebound. The general condition of the leaves is good. Many leaves have
+                        holes, the outer margins are blackened by use and occasionally damaged. The text is in general well preserved.</condition>
                      </supportDesc>
                      
                      <layoutDesc>
@@ -2823,15 +2842,222 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">15</dim>
                            </dimensions>
+                           <ab type="ruling">Ruling is visible.</ab>
+                           <ab type="pricking">Pricking is visible</ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"/>
+                        <seg type="script"></seg>
+                        <seg type="ink">Black, red.</seg>
+                        <seg type="rubrication">Numerals, beginnings of commemorations (<foreign xml:lang="gez">ወበዛቲ፡ ዕለት፡</foreign>, <foreign xml:lang="gez">ወበዛቲ፡ ዕለት፡ ካዕበ፡</foreign>
+                           or first line), beginnings of days (two to four rubricated lines alternating with non-rubricated lines, from <locus target="#266rb"/> on often two consecutive rubricated lines), 
+                           one supplication on <locus target="#193ra"/>, the middle and four outer dots, or only the middle dot,
+                           of ፨, the date written on the top of the page, </seg>
                      </handNote>
                   </handDesc>
+                  
+                  <decoDesc>
+                     <decoNote xml:id="d1" type="ornamentation">
+                        <locus target="#184r"/>
+                        <desc>Ornamental band in black and red at the top of the page.</desc>
+                     </decoNote>
+                     
+                     <decoNote xml:id="d2" type="drawing">
+                        <locus target="#207r"/>
+                        <desc>Crude drawing in the margin.</desc>
+                     </decoNote>
+                     
+                     <decoNote xml:id="d3" type="drawing">
+                        <locus target="#262r"/>
+                        <desc>Drawing in black of an <term key="angel">angel</term>, identified by the caption 
+                           <foreign xml:lang="gez">መልአክ፡ ክቡር፡ ሚካኤል፡</foreign> as <persName ref="PRS7049Michael"/>.</desc>
+                     </decoNote>
+                     
+                     <decoNote xml:id="d4" type="drawing">
+                        <locus target="#262v"/>
+                        <desc>Drawing in black of an <term key="saint">saint</term>, surroundedn by seven smaller crudely drawn human figures.
+                        The page contains many scribbles.</desc>
+                     </decoNote>
+                     
+                     <decoNote xml:id="d5" type="ornamentation">
+                        <locus target="#333r"/>
+                        <desc>Pen-work divider in black and red after the end of the main text.</desc>
+                     </decoNote>
+                     
+                     <decoNote xml:id="d6" type="drawing">
+                        <locus target="#333v"/>
+                        <desc>Crude drawings in black of <persName ref="PRS5650Jacob"/>, <persName ref="PRS5578Isaac"/>, Joseph and <persName ref="PRS1269Abraham"/>, identified by their captions as 
+                           <foreign xml:lang="gez">ወያዕቆብ</foreign>, <foreign xml:lang="gez">ይስሐቅ</foreign>, <foreign xml:lang="gez">ዮሴፍ</foreign>
+                           and <foreign xml:lang="gez">አብርሃም</foreign>.</desc>
+                     </decoNote>
+                  </decoDesc>
+                  
+                  <additions>
+                     <list>
+                        <!--person records to be created-->
+                        <item xml:id="a1" rend="marginal">
+                           <locus target="#200vb"/>
+                           <desc type="CommemorativeNote">Commemorative notice for <persName ref="PRS9850Walatta"/> added in the upper margin.</desc>
+                           <q xml:lang="gez">፳ወ፭
+                              በዛቲ፡ ዕለት፡ አእረፈት፡ <persName ref="PRS9850Walatta">ወለተ፡ ቅዱሳን፡</persName> ወለተ፡ ንጉሥ፡ <persName ref="PRS6229LebnaDe">ልብነ፡ ድንግል፡</persName> ወተቀብረት፡ ውስተ፡ መንፈሳዊት፡ መቅደስ፡ እንተ፡ ትሰመይ፡ ዳጋ።</q>
+                        </item>
+                        
+                        <item xml:id="a2" rend="marginal">
+                           <locus target="#218ra"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Walatta Ṣǝyon added in the upper margin.</desc>
+                           <q xml:lang="gez">፲ወ፮
+                              ወበዛቲ፡ ዕለት፡ ካዕበ፡ አእረፈት፡ ወለተ፡ ጽዮን፡ ወለተ፡ ንጉሥ፡ <del rend="erasure"/>
+                              ወተቀብረት፡ ውስተ፡ መቅደሰ፡ ዳጋ፡ ጸሎታ፡ ወበረከታ፡ የሃሉ፡ ምስሌነ፡ አሜን።</q>
+                        </item>
+                        
+                        <item xml:id="a3" rend="marginal">
+                           <locus target="#219rb"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Śarḍa Krǝstos added in the upper margin.</desc>
+                           <q xml:lang="gez">፳
+                              በዛቲ፡ ዕለት፡ ካዕበ፡ አዕረፈ፡ ሠርፀ፡ ክርስቶስ፡ ወዓሌ፡ ንጉሥ፡ ርቱዓ፡ ሃይማኖት፡ <persName ref="PRS8550sardaDe">ሠርፀ፡ ድንግል፡</persName> 
+                              ወተቀብረ፡ ውስተ፡ መቅደሰ፡ ዳጋ።</q>
+                        </item>
+                        
+                        <item xml:id="a4" rend="marginal">
+                           <locus target="#241vb"/>
+                           <desc type="CommemorativeNote">Commemorative notice for ʾAmata Ṣǝyon added in the upper margin.</desc>
+                           <q xml:lang="gez">አመ፡ ፲ወ፭፡ ለግንቦት።
+                              በዛቲ፡ ዕለት፡ ካዕበ፡ አዕረፈት፡ ቅድስት፡ አመተ፡ ጽዮን፡ ወለተ፡ ንጉሥ፡ ናኦድ፡ ወኮነ፡ መቃብራ፡ ውስተ፡ ደሴት፡ እንተ፡ ትሰመይ፡ ዳጋ፡ ጸሎታ፡ የሀሉ፡ ምስሌነ፡ አሜን።</q>
+                        </item>
+                        
+                        <item xml:id="a5" rend="marginal">
+                           <locus target="#252va"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Gabra Mikāʾel added in the upper margin.</desc>
+                           <q xml:lang="gez">፳ወ፯፡ ለግንቦት።
+                              በዛቲ፡ ዕለት፡ አዕረፈ፡ ገብረ፡ ሚካኤል፡ መኰንን፡ ወተቀብረ፡ ውስተ፡ መቃብረ፡ ጻድቃን፡ ዳጋ፡ እግዚአብሔር፡ ይምሐረነ፡ በጸሎቱ፡ አሜን።</q>
+                        </item>
+                        
+                        <item xml:id="a6" rend="marginal">
+                           <locus target="#274ra"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Yostenā added in the upper margin.</desc>
+                           <q xml:lang="gez">፳ወ፭ 
+                              ወበዛቲ፡ ዕለት፡ ካዕበ፡ አዕረፈት፡ ዮስቴና፡ ወለተ፡ ንጉሥ፡ <persName ref="PRS7102Minas">ሚናስ፡</persName> ወተቀብረት፡ ው<add place="above">ስ</add>ተ፡ ደብር፡ ዘይብልዋ፡ ዳጋ፡ እግዚአብሔር፡ ይምሐረነ፡ በትንብልናሃ፡ አሜን።</q>
+                        </item>
+                        
+                        <item xml:id="a7" rend="marginal">
+                           <locus target="#291vb"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Fiqṭor added in the upper margin.</desc>
+                           <q xml:lang="gez">፲፬
+                              በዛቲ፡ ዕለት፡ ካዕበ፡ አዕረፈ፡ ፊቅጦር፡ ትሩፈ፡ ምግባር፡ ወፈካሬ፡ መጻሕፍት፡ ወልደ፡ ንጉሥ፡ <persName ref="PRS7102Minas">ሚናስ።</persName> ወተቀብረ፡ ውስተ፡ መቅደሰ፡ ዳጋ፡ በክብር፡ ወዕበይ፡
+                              እግዚአብሔር፡ ይምሐረነ፡ ለገቢረ፡ ተዝካሩ፡ እለ፡ ተጋባእነ፡ አሜን።</q>
+                        </item>
+                        
+                        <item xml:id="a8" rend="marginal">
+                           <locus target="#297rb"/>
+                           <!--f. 297bis as msPart-->
+                           <desc type="CommemorativeNote">Commemorative notice for Gabra Krǝstos added in the upper margin.</desc>
+                           <q xml:lang="gez">
+                              <hi rend="rubric">ወበዛቲ፡ ዕለት፡ አእረፈ፡</hi> አቡነ፡ ገብረ፡ <hi rend="rubric">ክርስቶስ፡</hi> መምሕረ፡ ዳጋ፡ ወኵሎሰ፡ ትሩፋቲሁ፡ ሁሎ፡ ለክሙ፡ ተጽሒፎ፡ በጽንፉ፡ ለዝ፡ ስንክሳር፡ አንብብዎ</q>
+                        </item>
+                        
+                        <item xml:id="a9" rend="marginal">
+                           <locus target="#306ra"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Zǝḥawāryāt added in the upper margin.</desc>
+                           <q xml:lang="gez">አመ፡ ፴ለሐምሌ
+                                 በዛቲ፡ ዕለት፡ አዕረፈ፡ ዝሐዋርያት፡ ወልደ፡ ንጉሥ፡ <persName ref="PRS7102Minas">ሚናስ፡</persName> ወተቀብረ፡ ውስተ፡ ዛቲ፡ ደብር፡ ዘስማ፡ ዳጋ።</q>
+                        </item>
+                        
+                        <item xml:id="a10" rend="marginal">
+                           <locus target="#311ra"/>
+                           <desc type="CommemorativeNote">Commemorative notice for Ḫirut added in the upper margin.</desc>
+                           <q xml:lang="gez">ወበዛቲ፡ ዕለት፡ ካዕበ፡ አዕረፈ፡ አቡነ፡ ኂሩት፡ መምሕረ፡ ዳጋ፡ ጸሎቱ፡ ወበረ<gap reason="illegible"/>ቱ፡ የሐሉ፡ ምስሌነ፡ አሜን።</q>
+                        </item>
+                        
+                        <item xml:id="a11">
+                           <locus target="#333va"/>
+                           <desc type="Directive"></desc>
+                           <q xml:lang="gez">ዝስንክሳር፡ ዘደብረ፡ <del rend="erasure"/>
+                           ዘይትነበብ፡ ለለ፡ ወርኁ፡ ነገሥት፡ በመስከረም። ሰሎሞን፡ ወሲራክ፡ በጥቅምት። ኤርምያስ፡ በኅዳር። ኢሳይያስ፡ በታዕሣሥ። ሄኖክ፡ በጥር። ኦሪት፡ በሰለስት። በነግህ፡ ይሳይስ። በቀትር፡ ዲድስቅ<add place="above">ል</add>ያ። ሲኖዶስ፡ በተስዓት።
+                           ዜና፡ አበው፡ ወነብዩድ<hi rend="rubric">፨</hi> በመዋዕለ፡ ጾም<hi rend="rubric">፨</hi> ሕፁፃን፡ በጰጠቈስቴ፡ አንከሪጦስ፡ በስኔ። ቄርሎስ፡ በኀምሌ፡ ኢዮብ፡ በነሐሴ<hi rend="rubric">፨</hi>
+                              ወለካልኣንሂ፡ ነቢያት፡ በዕለተ፡ ትዝካሮሙ። ይትነበብ፨</q>
+                        </item>
+                        
+                        <item xml:id="a12">
+                           <locus target="#333va"/>
+                           <desc type="Unclear"></desc>
+                           <q xml:lang="gez">ኈልቈ፡ ሣዕር፡ ዘተለቅሑ፡ ሰብአ፡ ደቅ፡ ፬፻፲ወ፯። ፪፻፳ወ፫ ተረፉ። ዘውስጥ፡ ዝብድ፡ ፻፲፩፡ ገንዘቡ፡ ፶ወ፭ተረፉ። ወዘአፍአ፡ ዝብድ፡ ወሰቅለጥ፡ ፫፻፡ ፴ወ፪፡ ፻፶፡ ስድስቱ፡ ተረፉ፡ ወኵሉ፡ ድሙር፡
+                           ፱፻፡ ፵፰፡ ገንዘቡ፡ ፬፻፱</q>
+                        </item>
+                        
+                        <item xml:id="a13">
+                           <locus target="#333vb"/>
+                           <desc type="DonationNote"></desc>
+                           <q xml:lang="gez">ለዛቲ፡ መጽሐፍ፡ ዘተሣየጥኩ፡ በንዋይየ፡ በወቂት፡ እላድ፡ አነ፡ ገብረ፡ እግዚአብሔር፡ ማዕቀበ፡ እግዚእ፡ ከመ፡ ይኩንኒ፡ ለመድኃኒተ፡ ነፍስየ፡ ወሥጋየ፡ ከመ፡ ይኩን፡ ዝክረ፡ ለትውልደ፡ ትውልድ፡ ዘክርስቶስ፡
+                           አምኃ፡ ጊዮርጊስ፡ ዘዮሐንስ፡ ዘወሀብኩ፡ ለታቦተ፡ ጽዮን። ከመ፡ ኢያውጽኡ፡ እምዛቲ፡ መቅደስ፡ እመሂ፡ ስዩመ፡ ሀገር፤ እመሂ፡ ቄሰ፡ ገበዝ፤ ወእመሂ፡ ሊቀ፡ ዲያቆን፤ ወእመሂ፡ ሊቀ፡ ሀገር፤ እመሂ፡ ቀሳውስት፡ ወዲያቆናት፤ በሥልጣነ፡
+                           ጴጥሮስ፡ ወጳውሎስ፡ በሥልጣነ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ውጉዘ፡ ለይኩን። ወኢይደምሰስ፡ ለዓለመ፡ ዓለም፡ 
+                           ውጉዘ፡ ለይኩን። </q>
+                        </item>
+                        
+                        <item xml:id="e1">
+                           <desc>Throughout the manuscript, cues for rubrication (numerals and a sign consisting of three dots and one dash at the right) referring to
+                              numerals and punctuation marks are consistently
+                              indicated in the margin left to the column.</desc>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <desc>The date of each day is written in red ink in the top margin of the respective column.</desc>
+                        </item>
+                        
+                        <item xml:id="e3">
+                           <locus target="#186"/>
+                           <desc>Sewed parchment repair at the bottom.</desc>
+                        </item>
+                        
+                        <item xml:id="e4">
+                           <locus target="#194"/>
+                           <desc>Sewed parchment repair at the top.</desc>
+                        </item>
+                        
+                        <item xml:id="e5">
+                           <locus target="#219"/>
+                           <desc>Sewed parchment repair at the top and bottom.</desc>
+                        </item>
+                        
+                        <item xml:id="e6">
+                           <locus target="#223"/>
+                           <desc>Sewed parchment repair at the bottom.</desc>
+                        </item>
+                        
+                        <item xml:id="e7">
+                           <locus target="#224"/>
+                           <desc>Sewed parchment repair at the top.</desc>
+                        </item>
+                        
+                        <item xml:id="e8">
+                           <locus target="#287"/>
+                           <desc>Sewed parchment repair.</desc>
+                        </item>
+                        
+                        <item xml:id="e9">
+                           <locus target="#288"/>
+                           <desc>Sewed parchment repair.</desc>
+                        </item>
+                        
+                        <item xml:id="e10">
+                           <locus target="#291"/>
+                           <desc>Sewed parchment repair at the bottom.</desc>
+                        </item>
+                        
+                        <item xml:id="e11">
+                           <locus target="#302"/>
+                           <desc>Sewed parchment repair at the bottom.</desc>
+                        </item>
+                        
+                        <item xml:id="e12">
+                           <locus target="#322"/>
+                           <desc>Sewed parchment repair at the bottom.</desc>
+                        </item>
+                     </list>
+                  </additions>
+                 
                </physDesc>   
             </msDesc>
             
