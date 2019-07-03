@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr413"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Magical prayers, Salām, miracles of Mary, miracle of Samu'el of Gadāma Wāli, miracles of Jesus</title>
@@ -126,8 +126,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="1" writtenLines="16">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#15r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#15r"/>.</note>
                                 <locus from="3" to="37"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>120</height>
@@ -147,8 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </ab>
                               </layout>
                               <layout columns="1" writtenLines="15">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#47r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#47r"/>.</note>
                                 <locus from="38r" to="59v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>117</height>
@@ -169,8 +167,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               </layout>
                               <!--Perhaps the mss. could be divided in msPart. The last bifolium is much smaller then the rest. -->
                               <layout columns="1" writtenLines="23">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#60r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#60r"/>.</note>
                                 <locus from="69r" to="61v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>113</height>
@@ -193,8 +190,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -211,7 +207,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with boards in stiff leather.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="leather"/></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               The boards are made of coarse stiff dark brown leather.
                               The board attachment follows the traditional found on wooden boards: two holes perpendicular to the inner border and one hole in the inner edge of the board.
@@ -251,7 +249,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -274,7 +278,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

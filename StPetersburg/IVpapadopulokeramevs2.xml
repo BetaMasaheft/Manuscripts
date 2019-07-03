@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVpapadopulokeramevs2"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Psalter</title>
@@ -109,7 +109,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <handNote xml:id="h1" script="Ethiopic">
                         <date notBefore="1800" notAfter="1888"/>
                         <seg type="ink">Black, red</seg>
-                        <desc><persName ref="PRS9602Turaev"/> neither describes nor dates the
+                        <desc>
+                           <persName ref="PRS9602Turaev"/> neither describes nor dates the
                       hand.</desc>
                      </handNote>
                   </handDesc>
@@ -128,7 +129,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                           <locus target="#1r"/>
                           <desc type="Unclear">
                            </desc>
-                             <q xml:lang="amh"></q>
+                             <q xml:lang="amh"/>
                              <note>The text of the note is half-erased.</note>
                           </item>
 
@@ -220,6 +221,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
 
@@ -253,7 +260,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DN" when="2017-08-28">Created catalogue entry</change>
         </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="RIE180"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="RIE180"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>RIÉ 180</title>
@@ -62,9 +62,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <origin>
                             <origPlace ref="LOC1142AddiGa"> The inscription from <placeName ref="LOC1142AddiGa"/>.
                             </origPlace>
-                            <origDate ></origDate>
+                            <origDate/>
                         </origin>
-                        <provenance type="found"><date notBefore="1953" notAfter="1954"></date></provenance>
+                        <provenance type="found">
+                     <date notBefore="1953" notAfter="1954"/>
+                  </provenance>
                     </history>
                     
                     
@@ -95,12 +97,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="Other" ref="https://www.eagle-network.eu/voc/typeins/lod/137" cert="low"/>
-<!--                    This type of inscription is inferred from the interpretations presented in Marrassini 2014 and the consideration of the similarity with these type of inscription on objects which are thrown to the enemy and carry a message of conquest or humiliation-->
+                    <term key="Other"
+                     ref="https://www.eagle-network.eu/voc/typeins/lod/137"
+                     cert="low"/>
+               <!--                    This type of inscription is inferred from the interpretations presented in Marrassini 2014 and the consideration of the similarity with these type of inscription on objects which are thrown to the enemy and carry a message of conquest or humiliation-->
                     <term key="LegalDocument"/>
                     <term key="Aks"/>
                 </keywords>
@@ -113,14 +123,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2017-07-18" who="PL">created entry</change>
             </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         
         <body>
             <div type="edition">
                 <ab>
                     <lb n="1"/>gdr<g type="worddivider"/> ngśy<g type="worddivider"/> ʾksm<g type="worddivider"/> 
                     tbʾl <g type="worddivider"/> mzlt<g type="worddivider"/> lʾrg<g type="worddivider"/> wllmq<g type="worddivider"/>
-            </ab></div>
+            </ab>
+         </div>
         </body>
         
     </text>

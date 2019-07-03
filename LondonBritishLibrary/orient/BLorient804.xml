@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient804"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient804"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Fǝtḥa nagaśt</title>
@@ -46,32 +44,32 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <summary/>
                         <msItem xml:id="ms_i1">
                             <locus from="3r"/>
-                            <title type="complete" ref="LIT1395Fethan#Introduction"></title>
+                            <title type="complete" ref="LIT1395Fethan#Introduction"/>
                             <textLang mainLang="gez"/>
                             
                         </msItem>
                         <msItem xml:id="ms_i2">
                             <locus from="6r"/>
-                            <title type="complete" ref="LIT1395Fethan#IndexPart1"></title>
+                            <title type="complete" ref="LIT1395Fethan#IndexPart1"/>
                             <textLang mainLang="gez"/>
                             
                         </msItem>
                         
                         <msItem xml:id="ms_i3">
                             <locus from="7r"/>
-                            <title type="complete" ref="LIT1395Fethan#Part1"></title>
+                            <title type="complete" ref="LIT1395Fethan#Part1"/>
                             <textLang mainLang="gez"/>
                             
                         </msItem>
                         <msItem xml:id="ms_i4">
                             <locus from="65r"/>
-                            <title type="complete" ref="LIT1395Fethan#Part2"></title>
+                            <title type="complete" ref="LIT1395Fethan#Part2"/>
                             <textLang mainLang="gez"/>
                             
                         </msItem>
                         <msItem xml:id="ms_i5">
                             <locus from="140v"/>
-                            <title type="complete" ref="LIT1395Fethan#Appendix"></title>
+                            <title type="complete" ref="LIT1395Fethan#Appendix"/>
                             <textLang mainLang="gez"/>
                             
                         </msItem>
@@ -93,7 +91,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">140</measure>
@@ -125,22 +123,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800"></date>
+                                <date notBefore="1700" notAfter="1800"/>
                                 
                             </handNote>
                             
                         </handDesc>   
                         <additions>
-                            <list><item xml:id="a1">
+                            <list>
+                        <item xml:id="a1">
                                 <locus target="#4r"/>
                                 <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                     <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                <q xml:lang="gez">ፍትሐ፡ ነገሥት፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                <q xml:lang="gez">ፍትሐ፡ ነገሥት፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                             </item>
                                 <item xml:id="e1">
                                     <locus target="#3r"/>
                                     <desc> The names of the owner of the manuscript was <persName ref="PRS12666WaldaMaryam"/>, is 
-                                        mentioned at <locus target="#140v"></locus>. and the scribe <persName ref="PRS12667WaldaMaryam"/>
+                                        mentioned at <locus target="#140v"/>. and the scribe <persName ref="PRS12667WaldaMaryam"/>
                                         </desc>
                                     
                                 </item>
@@ -210,11 +210,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term key="CanonLaw"></term>
+                    <term key="CanonLaw"/>
                     
                 </keywords>
             </textClass>
@@ -231,35 +237,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

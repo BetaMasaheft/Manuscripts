@@ -7,11 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="mss"
      xml:lang="en"
      xml:id="EMIP00202">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 40</title>
-            <editor key="JS"></editor>
+            <editor key="JS"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -62,19 +62,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <note>Quire descriptions: protection sheets and quires 1–3 balanced.</note>
                           <note>Three sheets run around the three inner quires that make up the codex. They serve both as protection quires as well as covers.</note>
                           <list>
-                            <item xml:id="q1" n="1">
-                              <dim unit="leaf">8</dim>
-                              <locus from="1" to="8"></locus>
+                              <item xml:id="q1" n="1">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="1" to="8"/>
                               Quire 1
                             </item>
-                            <item xml:id="q2" n="2">
-                              <dim unit="leaf">8</dim>
-                              <locus from="9" to="16"></locus>
+                              <item xml:id="q2" n="2">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="9" to="16"/>
                               Quire 2
                             </item>
-                            <item xml:id="q3" n="3">
-                              <dim unit="leaf">2</dim>
-                              <locus from="17" to="18"></locus>
+                              <item xml:id="q3" n="3">
+                                 <dim unit="leaf">2</dim>
+                                 <locus from="17" to="18"/>
                               Quire 3
                             </item>
                           </list>
@@ -82,25 +82,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </supportDesc>
                      <layoutDesc>
                        <layout>
-                         <dimensions type="margin" unit="mm">
-                           <dim type="top">2</dim>
-                           <dim type="bottom">7</dim>
-                           <dim type="right">2</dim>
-                           <dim type="left">3</dim>
-                         </dimensions>
+                           <dimensions type="margin" unit="mm">
+                              <dim type="top">2</dim>
+                              <dim type="bottom">7</dim>
+                              <dim type="right">2</dim>
+                              <dim type="left">3</dim>
+                           </dimensions>
                        </layout>
                        <layout columns="1" writtenLines="12">
-                         <locus from="1r" to="19r"></locus>
+                           <locus from="1r" to="19r"/>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
-                      <decoNote xml:id="b1">Parchment, 73 x 73 x 15 mm, parchment stitching and a vellum cover.</decoNote>
-                      <decoNote xml:id="b2" type="bindingMaterial">
-                        <material key="parchment"></material>
-                        <material key="leather"></material>
-                      </decoNote>
+                        <decoNote xml:id="b1">Parchment, 73 x 73 x 15 mm, parchment stitching and a vellum cover.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="parchment"/>
+                           <material key="leather"/>
+                        </decoNote>
                     </binding>
                   </bindingDesc>
                </physDesc>
@@ -112,6 +112,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -126,7 +134,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-08-12" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

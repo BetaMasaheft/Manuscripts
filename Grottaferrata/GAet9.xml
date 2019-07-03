@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet9"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Wǝddāse Māryām, ʾAnqaṣa bǝrhān, Sālam for the Virgin Mary</title>
@@ -116,8 +116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="1" writtenLines="12 13">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#32r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#32r"/>.</note>
                                 <locus from="3r" to="56v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>87</height>
@@ -129,9 +128,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1"
-                               corresp="#ms_i1 #ms_i2 #ms_i3">
+                          <handNote script="Ethiopic" xml:id="h1" corresp="#ms_i1 #ms_i2 #ms_i3">
                             <seg type="ink">Black, red</seg>
                             <date>19th-cent.</date>
                           </handNote>
@@ -151,7 +148,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <additions>
                           <list>
                           <item xml:id="a1">
-                            <desc type="Unclear"></desc>
+                            <desc type="Unclear"/>
                             <locus from="1v" to="2v"/>
                           </item>
                           <item xml:id="a2">
@@ -198,7 +195,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -221,7 +224,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

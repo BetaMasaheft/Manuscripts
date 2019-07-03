@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="RIE268"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="RIE268"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>RIÉ 268</title>
@@ -41,9 +41,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <supportDesc>
                                 <support>
                                     <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/2"/>
-                                    <objectType xml:lang="fr"
-                                        ref="https://www.eagle-network.eu/voc/objtyp/lod/189"
-                                        >bloc de pierre</objectType>
+                                    <objectType xml:lang="fr" ref="https://www.eagle-network.eu/voc/objtyp/lod/189">bloc de pierre</objectType>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
@@ -63,7 +61,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 Site 24 B in Winkler rock Drawings from Southern Upper Egypt, vol. I 1938. 
                               in the Wadi Menih on the road to Berenice.
                             </origPlace>
-                            <origDate ></origDate>
+                            <origDate/>
                             
                         </origin>
                         <provenance type="found">Among the papers of Dr. Winkler from <date when="1936">1936 and 1937</date>
@@ -90,7 +88,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
@@ -105,10 +109,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2018-10-15" who="PL">created entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="edition">
-                <ab></ab>
+                <ab/>
             </div>
         </body>
     </text>

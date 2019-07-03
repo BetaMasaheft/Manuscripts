@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient606"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient606"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Discourses for the Festivals of the blessed Virgin Mary</title>
@@ -57,11 +55,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">154</measure>
-                                    <measure unit="blank">5<note> 3 leaves at the beginning and 2 at the end</note></measure>
+                                    <measure unit="blank">5<note> 3 leaves at the beginning and 2 at the end</note>
+                           </measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>333</height>
                                         <width>276</width>
@@ -72,7 +71,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="3" writtenLines="27 28" cert="high"></layout>
+                                <layout columns="3" writtenLines="27 28" cert="high"/>
                                 
                             </layoutDesc>
                         </objectDesc>
@@ -84,7 +83,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -142,12 +141,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Liturgy"></term>
+                    <term key="Liturgy"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -163,26 +168,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

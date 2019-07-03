@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient521"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Gospel of John, Salāms, Maṣḥafa qǝddāse</title>
@@ -172,7 +172,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <desc type="DonationNote">List of articles presented by <persName ref="PRS9931WaldaLe"/>
                                         to the Church of <placeName ref="INS0451QeddusYohannes"/>.</desc>
                                     <q xml:lang="gez">ኍልቈ፡ ግምጃ፡ ወምንጻፍ፡ ዘወሀቡ፡ 
-                                        <persName ref="PRS9931WaldaLe"><roleName type="title">ራስ፡</roleName> ወልደ፡ ልዑል፡</persName>
+                                        <persName ref="PRS9931WaldaLe">
+                                 <roleName type="title">ራስ፡</roleName> ወልደ፡ ልዑል፡</persName>
                                         ለ<placeName ref="INS0451QeddusYohannes">ቅዱስ፡ ዮሐንስ፡</placeName> 
                                         በሢመተ፡ አዛዠ፡ ቴዎዶስ።
                                     </q>
@@ -236,7 +237,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -265,7 +272,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_521_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

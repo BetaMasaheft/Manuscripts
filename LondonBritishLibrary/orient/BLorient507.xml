@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient507"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Four Gospels</title>
@@ -168,7 +168,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                         who bought this manuscript for a church of <persName type="tabot" ref="PRS7049Michael">St Michael</persName>.
                                     </desc>
                                     <q xml:lang="gez">ዝመጽሐፍ ፡ <persName ref="PRS11650MahtamaKrestos">ዘማኅተመ ፡ ክርስቶስ ።</persName> ዘአጥረዮ ፡ በነዋዩ ፡ 
-                                        ለ<persName ref="PRS7049Michael">ታበተ ፡ ሚካኤል ።</persName></q>
+                                        ለ<persName ref="PRS7049Michael">ታበተ ፡ ሚካኤል ።</persName>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a2">
@@ -188,7 +189,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <desc type="OwnershipNote">
                                         Subsequently the ms belonged to one <persName type="owner" ref="PRS11652Matewos">Mātewos</persName> and his son   
                                          
-                                        <persName type="owner" ref="PRS11653KenfaM"><roleName type="title">ʾabbā</roleName> Kǝnfa Mikāʾel</persName>.
+                                        <persName type="owner" ref="PRS11653KenfaM">
+                                 <roleName type="title">ʾabbā</roleName> Kǝnfa Mikāʾel</persName>.
                                         
                                     </desc>
                                     <q xml:lang="gez">ዝመጽሐፍ ፡ ዘማቴዎስ ፡ ወለውሉዱ ፡ አባ ፡ ክንፈ ፡ ሚካኤል ። </q>
@@ -276,7 +278,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
@@ -298,7 +306,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_507_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

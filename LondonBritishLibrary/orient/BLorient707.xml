@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient707"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient707"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Acts of Fasilādas</title>
@@ -63,7 +61,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">94</measure>
@@ -77,7 +75,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="13 21" cert="high"></layout>
+                                <layout columns="2" writtenLines="13 21" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -88,7 +86,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -100,9 +98,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ገድለ፡ ፋሲለደስ፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ገድለ፡ ፋሲለደስ፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
-                                <item xml:id="a2" >
+                                <item xml:id="a2">
                                     <locus target="#1r"/>
                                     <desc type="Inventory">List of furnitures, books, etc.</desc> 
                                     <q xml:lang="gez">እቃ፡ የ ፋሲለደስ፡
@@ -112,7 +111,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 
                            
                             <item xml:id="e1">
-                                <desc>The name of scribe <persName ref="PRS12486TaklaMikael"  role="scribe"></persName> is mentioned <locus from="94r"></locus>.</desc>
+                                <desc>The name of scribe <persName ref="PRS12486TaklaMikael" role="scribe"/> is mentioned <locus from="94r"/>.</desc>
                             </item>
                                 
                             </list>
@@ -166,7 +165,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -187,19 +192,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-

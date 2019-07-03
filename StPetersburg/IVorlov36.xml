@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="IVorlov36"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="IVorlov36"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Mǝʿǝrāf</title>
@@ -53,7 +51,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <msItem xml:id="ms_i1.1">
                                  <locus from="2r"/>
                                  <title type="complete" ref="LIT3186Meeraf#Wazema">ዋዜማ</title>
-                                 <incipit xml:lang="gez"></incipit>
+                                 <incipit xml:lang="gez"/>
                                 <note>The common order of the night service wāzemā.</note>
                                </msItem>
 
@@ -79,20 +77,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                                  <msItem xml:id="ms_i1.5">
                                     <locus from="83r"/>
-                                    <title type="complete" ref="LIT3186Meeraf#Saints" xml:lang="gez"></title>
+                                    <title type="complete" ref="LIT3186Meeraf#Saints" xml:lang="gez"/>
                                     <note>Common chants for the saints.</note>
                                  </msItem>
 
                                  <msItem xml:id="ms_i1.6">
                                     <locus from="86r"/>
-                                    <title type="complete" ref="LIT3186Meeraf#Litanies" xml:lang="gez"></title>
+                                    <title type="complete" ref="LIT3186Meeraf#Litanies" xml:lang="gez"/>
                                     <note>Litanies and other texts.</note>
                                  </msItem>
 
 
                                  <msItem xml:id="ms_i1.7">
                                     <locus from="93r"/>
-                                    <title type="complete" ref="LIT2509Weddas" xml:lang="gez"></title>
+                                    <title type="complete" ref="LIT2509Weddas" xml:lang="gez"/>
                                     <note>Wǝddāse Māryām for each day of the week starting
                                       from Sunday.</note>
                                  </msItem>
@@ -141,7 +139,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <msItem xml:id="ms_i1.14">
                                     <locus from="127r"/>
                                     <title type="complete"
-                                      ref="LIT3186Meeraf#LiturgicalPrescriptions" xml:lang="gez">
+                               ref="LIT3186Meeraf#LiturgicalPrescriptions"
+                               xml:lang="gez">
                                     </title>
                                     <incipit>ንጽሕፍ᎓ ነገረ᎓ ወግዕ᎓ ከመ᎓ ይትቀነዩ᎓ ቦቱ᎓ እምዮሐንስ᎓ እስከ᎓ ዮሐንስ᎓</incipit>
                                     <note>Liturgical prescriptions.</note>
@@ -160,9 +159,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                     <note>The parchment is thick, recent.</note>
-                                    <measure unit="leaf" type="blank">1 <locus target="#128"></locus></measure>
+                                    <measure unit="leaf" type="blank">1 <locus target="#128"/>
+                           </measure>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">128</measure>
@@ -176,7 +176,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
 
                             <layoutDesc>
-                                <layout columns="2" writtenLines="18"></layout>
+                                <layout columns="2" writtenLines="18"/>
                             </layoutDesc>
                         </objectDesc>
 
@@ -187,7 +187,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  as not fine, recent.
                                 </desc>
                                 <seg type="ink">Black, red</seg>
-                                <date  notBefore="1855" notAfter="1868"></date>
+                                <date notBefore="1855" notAfter="1868"/>
 
                             </handNote>
 
@@ -214,7 +214,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                           <origPlace>
                    </origPlace>
                           <origDate notBefore="1855" notAfter="1868" cert="medium"/>
-                          <note><persName ref="PRS9430Tewodros">King Tewodros II</persName>,
+                          <note>
+                        <persName ref="PRS9430Tewodros">King Tewodros II</persName>,
                           Ethiopian Metropolitan <persName ref="PRS8388SalamaI">Metropolitan Salāmā III</persName>
                           and Coptic Metropolitan <persName ref="PRS11721PeterVIIAlex">Peter</persName>
                           are mentioned in the formulas (e.g., fol. 80v).
@@ -258,7 +259,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -282,7 +289,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

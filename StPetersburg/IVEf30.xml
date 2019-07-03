@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVEf30" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="IVEf30"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>History of the royal genealogy</title>
@@ -37,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <msItem xml:id="ms_i1">
                             <title type="complete" ref="LIT2352ShortC" cert="high"/>
                             <textLang mainLang="gez"/>
-                            <note>The text extends till <date when="1889"></date> (till the accession of <persName ref="PRS7006Menilek"></persName>). The text resembles that of <ref type="mss" corresp="BNFet142"></ref> but is shorter.</note>
+                            <note>The text extends till <date when="1889"/> (till the accession of <persName ref="PRS7006Menilek"/>). The text resembles that of <ref type="mss" corresp="BNFet142"/> but is shorter.</note>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -72,7 +77,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate when="1902">The manuscript was copied by <persName ref="PRS6160Lamlam"></persName> who was employed by <persName ref="PRS7146MondonV"></persName></origDate>
+                            <origDate when="1902">The manuscript was copied by <persName ref="PRS6160Lamlam"/> who was employed by <persName ref="PRS7146MondonV"/>
+                     </origDate>
                             <desc> The manuscript was acquired by Koriander during his stay in Ethiopia.
                           </desc>
                         </origin>
@@ -103,7 +109,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -128,9 +140,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2019-01-31" who="DE">Changed idno, added bibliography</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

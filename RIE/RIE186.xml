@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="RIE186"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="RIE186"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>RIÉ 186 </title>
@@ -42,22 +42,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <supportDesc>
                                 <support>
                                     <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
-                                    <objectType
-                                        ref="https://www.eagle-network.eu/voc/objtyp/lod/1996"
-                                        >Throne</objectType>
+                                    <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/1996">Throne</objectType>
                                 </support>
                                 <extent>
                                     <dimensions xml:id="Rightpart" type="outer" unit="mm">
                                         <height atMost="795" atLeast="770">770-795</height>
-                                        <width >320</width>
+                                        <width>320</width>
                                     </dimensions>
                                     <dimensions xml:id="Leftpart" type="outer" unit="mm">
                                         <height>1050</height>
-                                        <width >180</width>
+                                        <width>180</width>
                                     </dimensions>
                                     <dimensions xml:id="total" type="outer" unit="mm" cert="low">
                                         <height>1200</height>
-                                        <width >500</width>
+                                        <width>500</width>
                                     </dimensions>
                                 </extent>
                                 <foliation/>
@@ -66,8 +64,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                <rs type="execution" cert="low"
-                                    ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                                <rs type="execution"
+                               cert="low"
+                               ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
                             </layout>
                                 <layout writtenLines="40"/>
                             </layoutDesc>
@@ -86,12 +85,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <history>
                         <origin>
-                            <origPlace><placeName ref="LOC1310Aksum"/>
+                            <origPlace>
+                        <placeName ref="LOC1310Aksum"/>
                             </origPlace>
                             <origDate notBefore="0300" notAfter="0400"/>
                             
                         </origin>
-                        <provenance type="found"><date when="1841"></date></provenance>
+                        <provenance type="found">
+                     <date when="1841"/>
+                  </provenance>
                     </history>
                     
                     <additional>
@@ -117,7 +119,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -144,7 +152,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="gez">
+    <text xml:lang="gez" xml:base="https://betamasaheft.eu/">
         
         <body>
             <div type="edition" xml:lang="gez">
@@ -160,4 +168,3 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         
     </text>
 </TEI>
-

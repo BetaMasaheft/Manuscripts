@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVorlov19" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="IVorlov19"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Four Gospels</title>
@@ -78,7 +83,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                            <msItem xml:id="ms_i1.1.4">
                                <locus from="13v" to="14r"/>
-                                   <title type="complete" ref="LIT1560Gospel#IntroductionGessawe"></title>
+                                   <title type="complete" ref="LIT1560Gospel#IntroductionGessawe"/>
                            </msItem>
 
 
@@ -179,7 +184,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       <handDesc>
                         <handNote script="Ethiopic" xml:id="h1" corresp="#p1">
                           <date>18th-century handwriting</date>
-                          <desc></desc>
+                          <desc/>
                          </handNote>
 
                       </handDesc>
@@ -188,7 +193,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                                 <item xml:id="a1">
                                   <locus target="#2r"/>
-                                  <desc type="RecordTransaction"></desc>
+                                  <desc type="RecordTransaction"/>
                                   <q xml:lang="gez">በመምሕር᎓ ወልደ᎓ ኢየሱስ᎓ ዘመን᎓ በኦሪት᎓ የተለወጠ᎓ ፬ወንጌል᎓ </q>
                                   <quote xml:lang="eng">In the time of  <persName ref="PRS12646WaldaIyasus">mamhər Walda Iyasus</persName>,
                                     the Four Gospels (book) was exchanged for an Octateuch.</quote>
@@ -251,7 +256,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -275,8 +286,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="Bible"/>
                     <term key="NewTestament"/>
-                    <term key="Paks2"></term>
-                    <term key="ChristianLiterature"></term>
+                    <term key="Paks2"/>
+                    <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -291,7 +302,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
           <ab/>
         </body>

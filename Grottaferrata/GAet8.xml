@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet8"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Psalter, Maḥālǝya nabiyāt, Maḥālǝya za-Salomon, Wǝddāse Māryām, ʾAnqaṣa bǝrhān</title>
@@ -237,7 +237,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <bindingDesc>
                           <binding contemporary="true" xml:id="binding">
                             <decoNote xml:id="b1">The book is sewn on four sewing stations (two pairs) linked to wooden boards with a leather half cover.</decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"/></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                        </decoNote>
                             <decoNote xml:id="b4" type="Cover">
                               The book has half cover of brown-reddish leather decorated with blind tooled motifs. <term key="singleStraightLine">Single straight lines</term> divide the space in squares where they cross, forming a "X".
                               On the right board, a <term key="singleCircle">single circle</term> is placed at the intersections.
@@ -283,7 +286,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -306,7 +315,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

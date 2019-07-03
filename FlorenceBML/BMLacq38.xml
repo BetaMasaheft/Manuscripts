@@ -5,10 +5,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BMLacq38"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BMLacq38"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title/>
@@ -35,7 +35,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msIdentifier>
                         <repository ref="INS0339BML"/>
                         <collection>Acquisizioni e doni</collection>
-                        <idno  facs="Laurenziana/BML_013/BML_013-" n="176">BML Acq. e doni 38</idno>
+                        <idno facs="Laurenziana/BML_013/BML_013-" n="176">BML Acq. e doni 38</idno>
                         <altIdentifier>
                             <idno>Marrassini ms. 13</idno>
                         </altIdentifier>
@@ -63,7 +63,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language ident="en">English</language>
@@ -75,7 +81,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="PL" when="2019-02-21">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

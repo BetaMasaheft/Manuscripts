@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="FSUffhludolfII22"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Collectanea Aethiopica: Bibliorium Aethiopic. fragmenta</title>
@@ -70,7 +70,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <msItem xml:id="ms_i6">
                             <locus from="128" to="142"/>
-                            <title type="incomplete">Fragments from <ref type="work" corresp="LIT1696Joshua"/> and <ref type="work" corresp="LIT1700Judges"/></title>
+                            <title type="incomplete">Fragments from <ref type="work" corresp="LIT1696Joshua"/> and <ref type="work" corresp="LIT1700Judges"/>
+                     </title>
                             <textLang mainLang="gez"/>
                         </msItem>
                         
@@ -82,7 +83,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <msItem xml:id="ms_i8">
                             <locus from="146" to="160"/>
-                            <title type="incomplete">Fragments from <ref type="work" corresp="LIT2697Sam"/> and <ref type="work" corresp="LIT2698Sam"/></title>
+                            <title type="incomplete">Fragments from <ref type="work" corresp="LIT2697Sam"/> and <ref type="work" corresp="LIT2698Sam"/>
+                     </title>
                             <textLang mainLang="gez"/>
                         </msItem>
                         
@@ -274,7 +276,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -303,7 +311,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5411278"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
          <ab/>
         </body>

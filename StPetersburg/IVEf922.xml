@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVEf922" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="IVEf922"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Letter to Russian doctors</title>
@@ -32,7 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
-                            <title type="complete" xml:lang="en">Letter from <persName ref="PRS9345taytuBe"></persName> to Russian doctors.</title>
+                            <title type="complete" xml:lang="en">Letter from <persName ref="PRS9345taytuBe"/> to Russian doctors.</title>
                             <textLang mainLang="am"/>
                             </msItem>
                     </msContents>
@@ -61,18 +66,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <item xml:id="e1">
                               <desc type="StampExlibris">A grey cast of a round stamp.
                                 The stamp depicts an Ethiopic letter <foreign xml:lang="gez">ጣ</foreign> depicted as the Sun.
-                                The legend reads <foreign xml:lang="gez">ዝማኅተም፡ ዘእቴገ፡ ጣይቱ፡ ብርሃን፡ ዘኢትዮጵያ።</foreign></desc>
+                                The legend reads <foreign xml:lang="gez">ዝማኅተም፡ ዘእቴገ፡ ጣይቱ፡ ብርሃን፡ ዘኢትዮጵያ።</foreign>
+                           </desc>
                             </item>
                           </list>
                         </additions>
                     </physDesc>
                     <history>
                       <origin>
-                    <origDate when="1903-03-12" evidence="internal-date"></origDate>
+                    <origDate when="1903-03-12" evidence="internal-date"/>
                   </origin>
                         <provenance/>
                         <acquisition>
-                        In <date>1904</date> the letter was handed over to <ref type="place" corresp="INS0301IV"></ref> by <persName ref="PRS12477Koriander"></persName>.</acquisition>
+                        In <date>1904</date> the letter was handed over to <ref type="place" corresp="INS0301IV"/> by <persName ref="PRS12477Koriander"/>.</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
@@ -99,7 +105,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -108,8 +120,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
 
-                    <term key="AmharicLiterature"></term>
-                    <term key="Letter"></term>
+                    <term key="AmharicLiterature"/>
+                    <term key="Letter"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -127,13 +139,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2019-02-26" who="DE">Added note on acquisition.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-          <div type="edition" corresp="#ms_i1" xml:lang="am"> <ab>የተላከ፡ ከእቴጌ፡ ጣይቱ፡ ብርሃን፡ ዘኢትዮጵያ። ይድረስ፡ ከመስኮብ፡ ሐኪሞች። ሰላም፡ ለናንተ፡ ይሁን።
-            የራስ፡ ወልደ፡ ጊዮርጊስ፡ ሕመም፡ እንደምን፡ ነው፡ ይሆን፡ ነገሩን፡ ለይታችሁ፡ አውቃችሁታል። እስቲ፡ ሕመሙን፡ ይህ፡ ይህ፡ ነው፡ ብላችሁ፡ ላኩብኝ፡ <date calendar="ethiopian" when="1903-03-12" when-custom="1895-07-03" evidence="internal"> መጋቢት፡ ፫ቀን፡ ፲፰፻፺፭ ዓመት፡ </date> <placeName ref="LOC1216AddisA">አዲስ፡ አበባ፡</placeName> ተጻፈ።
+          <div type="edition" corresp="#ms_i1" xml:lang="am"> 
+            <ab>የተላከ፡ ከእቴጌ፡ ጣይቱ፡ ብርሃን፡ ዘኢትዮጵያ። ይድረስ፡ ከመስኮብ፡ ሐኪሞች። ሰላም፡ ለናንተ፡ ይሁን።
+            የራስ፡ ወልደ፡ ጊዮርጊስ፡ ሕመም፡ እንደምን፡ ነው፡ ይሆን፡ ነገሩን፡ ለይታችሁ፡ አውቃችሁታል። እስቲ፡ ሕመሙን፡ ይህ፡ ይህ፡ ነው፡ ብላችሁ፡ ላኩብኝ፡ <date calendar="ethiopian"
+                     when="1903-03-12"
+                     when-custom="1895-07-03"
+                     evidence="internal"> መጋቢት፡ ፫ቀን፡ ፲፰፻፺፭ ዓመት፡ </date> 
+               <placeName ref="LOC1216AddisA">አዲስ፡ አበባ፡</placeName> ተጻፈ።
 </ab>
           </div>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

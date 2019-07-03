@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BNFet45"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Pauline Epistles</title>
@@ -538,6 +538,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -568,7 +574,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2017-04-01">Created msFrag</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
             <div type="textpart"
@@ -652,23 +658,53 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </div>
          </div>
          <listRelation>
-            <relation active="BNFet45#UniCirc1" name="dcterms:hasPart" passive="BNFet45#p1 BNFet45#f2"/>
-            <relation active="BNFet45#UniCirc1" name="sdc:undergoesTransformation" passive="BNFet45#tr1"/>
-            <relation active="BNFet45#UniCirc1" name="sdc:hasCertainty" passive="sdc:certain"/>
-            <relation active="BNFet45#tr1" name="sdc:hasTransformationModel" passive="sdc:D2"/>
-            <relation active="BNFet45#tr1" name="sdc:produces" passive="BNFet45#UniProd1i"/>
-            <relation active="BNFet45#tr1" name="sdc:produces" passive="BNFet45#UniProd1ii"/>
-            <relation active="BNFet45#UniProd1ii" name="sdc:constituteUnit" passive="BNFet45#UniCirc2"/>
-            <relation active="BNFet45#tr1" name="sdc:isPartOfTransformation" passive="BNFet45#tr3"/>
-            <relation active="BNFet45#UniCirc2" name="dcterms:hasPart" passive="BNFet45#UniProd1ii"/>
+            <relation active="BNFet45#UniCirc1"
+                      name="dcterms:hasPart"
+                      passive="BNFet45#p1 BNFet45#f2"/>
+            <relation active="BNFet45#UniCirc1"
+                      name="sdc:undergoesTransformation"
+                      passive="BNFet45#tr1"/>
+            <relation active="BNFet45#UniCirc1"
+                      name="sdc:hasCertainty"
+                      passive="sdc:certain"/>
+            <relation active="BNFet45#tr1"
+                      name="sdc:hasTransformationModel"
+                      passive="sdc:D2"/>
+            <relation active="BNFet45#tr1"
+                      name="sdc:produces"
+                      passive="BNFet45#UniProd1i"/>
+            <relation active="BNFet45#tr1"
+                      name="sdc:produces"
+                      passive="BNFet45#UniProd1ii"/>
+            <relation active="BNFet45#UniProd1ii"
+                      name="sdc:constituteUnit"
+                      passive="BNFet45#UniCirc2"/>
+            <relation active="BNFet45#tr1"
+                      name="sdc:isPartOfTransformation"
+                      passive="BNFet45#tr3"/>
+            <relation active="BNFet45#UniCirc2"
+                      name="dcterms:hasPart"
+                      passive="BNFet45#UniProd1ii"/>
             <relation active="BNFet45#UniCirc2" name="skos:exactMatch" passive="BNFet45"/>
-            <relation active="BNFet45#UniProd1i" name="skos:exactMatch" passive="BNFet45#f2"/>
-            <relation active="BNFet45#UniProd1ii" name="skos:exactMatch" passive="BNFet45#p1"/>
-            <relation active="BNFet45#UniProd1i" name="sdc:undergoesTransformation" passive="BNFet45#tr2"/>
-            <relation active="BNFet45#tr2" name="sdc:hasTransformationModel" passive="sdc:A4"/>
+            <relation active="BNFet45#UniProd1i"
+                      name="skos:exactMatch"
+                      passive="BNFet45#f2"/>
+            <relation active="BNFet45#UniProd1ii"
+                      name="skos:exactMatch"
+                      passive="BNFet45#p1"/>
+            <relation active="BNFet45#UniProd1i"
+                      name="sdc:undergoesTransformation"
+                      passive="BNFet45#tr2"/>
+            <relation active="BNFet45#tr2"
+                      name="sdc:hasTransformationModel"
+                      passive="sdc:A4"/>
             <relation active="BNFet45#tr2" name="skos:exactMatch" passive="BNFet165#tr1"/>
-            <relation active="BNFet45#tr2" name="sdc:isPartOfTransformation" passive="BNFet45#tr3"/>
-            <relation active="BNFet45#tr3" name="sdc:hasTransformationModel" passive="sdc:MA1"/>
+            <relation active="BNFet45#tr2"
+                      name="sdc:isPartOfTransformation"
+                      passive="BNFet45#tr3"/>
+            <relation active="BNFet45#tr3"
+                      name="sdc:hasTransformationModel"
+                      passive="sdc:MA1"/>
          </listRelation>
       </body>
   </text>

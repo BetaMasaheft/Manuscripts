@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr407"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Dǝrsāna Mika’el, collection of salām, magic prayer</title>
@@ -49,8 +49,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <extent>
                                     <measure unit="leaf">200</measure>
                                     <measure unit="leaf" type="blank">
-                                      <locus target="#1rv #2r #3v #92v #104r #112r #144v #159v #167r #180v"></locus>
-                                      <locus from="194" to="200"></locus>
+                                      <locus target="#1rv #2r #3v #92v #104r #112r #144v #159v #167r #180v"/>
+                                      <locus from="194" to="200"/>
                                     </measure>
                                     <measure unit="quire">21</measure>
                                     <dimensions type="outer" unit="mm">
@@ -164,8 +164,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <layoutDesc>
                               <layout columns="2" writtenLines="21">
                                 <note corresp="#pricked ruled">
-                                  Data on dimension are taken from <locus
-                                target="#65r"/>.</note>
+                                  Data on dimension are taken from <locus target="#65r"/>.</note>
                                 <locus from="5v" to="193v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>170</height>
@@ -189,8 +188,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -199,7 +197,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote type="miniature" xml:id="d1">
                               <locus target="#2v"/>
                               <desc>
-                                The miniature, set within a red frame, shows the <ref type="authFile" corresp="AT1030Trinity"></ref>.
+                                The miniature, set within a red frame, shows the <ref type="authFile" corresp="AT1030Trinity"/>.
                                 Three bearded haloed men hold a globe on their left hand and perform a <term key="gestureblessing"/> with the right.
                                 The scene is surrounded by the <term key="tetramorph">Tetramorph</term>.
                                </desc>
@@ -208,7 +206,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote type="miniature" xml:id="d2">
                               <locus target="#3r"/>
                               <desc>
-                                The miniature depicts the <ref type="authFile" corresp="AT1031VirginAndChild"></ref>. The Child holds a <term key="codex"/> on his left hand
+                                The miniature depicts the <ref type="authFile" corresp="AT1031VirginAndChild"/>. The Child holds a <term key="codex"/> on his left hand
                                 and with the right holds the mother's veil.
                                 To her right <persName ref="PRS7049Michael"/>, identified by the caption <foreign xml:lang="gez">ሚካኤል፡</foreign>
                                 and to her left <persName ref="PRS4377Gabriel"/>, identified by the caption <foreign xml:lang="gez">ወገብርኤል፡</foreign>,
@@ -269,7 +267,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Fine Ethiopic bookbinding with tooled leather cover preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Two thick and heavy wooden boards.
                             </decoNote>
@@ -337,7 +338,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -360,7 +367,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

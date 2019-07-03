@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BLadd16189"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Proverbs, Admonition of Solomon, Ecclesiastes, Wisdom of Solomon, Job, Minor Prophets</title>
@@ -191,7 +191,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#1"/>
                                     <desc>Note written by <persName ref="PRS5592Isenberg"/>. It states that the book once belonged to 
                                         <persName ref="PRS10780Bersen">Bere'sanâï</persName> and that it was purchased by Isenberg from  
-                                        <persName ref="PRS10781Habtas"><roleName type="title">dabtarā</roleName> Hábta Selâsieh</persName> in <date>1839</date>.</desc>
+                                        <persName ref="PRS10781Habtas">
+                                 <roleName type="title">dabtarā</roleName> Hábta Selâsieh</persName> in <date>1839</date>.</desc>
                                 </item>
                                 <item xml:id="e1">
                                     <locus target="#2"/>
@@ -255,7 +256,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -284,7 +291,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="MV" when="2016-05-24">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

@@ -7,11 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="mss"
      xml:lang="en"
      xml:id="EMIP00224">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Delamarter Codex 5</title>
-            <editor key="JS"></editor>
+            <editor key="JS"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -39,8 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <msContents>
                   <summary>Fragment of Horologium</summary>
                   <msItem xml:id="ms_i1">
-                     <locus from="1r" to="11v"></locus>
-                     <title type = "incomplete" ref = "LIT3575Mashaf"/>
+                     <locus from="1r" to="11v"/>
+                     <title type="incomplete" ref="LIT3575Mashaf"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
@@ -63,18 +63,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <collation>
                           <note>Quire descriptions: quire 1 adjusted balanced; quire 2 unbalanced.</note>
                           <list>
-                            <item xml:id="q1" n="1">
-                              <dim unit="leaf">6</dim>
-                              <locus from="1" to="6"></locus>
-                              <note>A reinforcement strip precedes <locus target="#1"/>. Folio stubs are visible between <locus target="#2 #3"/> and between <locus target="#5 #6"/>.</note>
+                              <item xml:id="q1" n="1">
+                                 <dim unit="leaf">6</dim>
+                                 <locus from="1" to="6"/>
+                                 <note>A reinforcement strip precedes <locus target="#1"/>. Folio stubs are visible between <locus target="#2 #3"/> and between <locus target="#5 #6"/>.</note>
                               Quire 1:
                               2, stub after 5
                               5, stub after 2
                             </item>
-                            <item xml:id="q2" n="2">
-                              <dim unit="leaf">5</dim>
-                              <locus from="7" to="11"></locus>
-                              <note><locus from="7" to="11"></locus> are attached using a stab stitch.</note>
+                              <item xml:id="q2" n="2">
+                                 <dim unit="leaf">5</dim>
+                                 <locus from="7" to="11"/>
+                                 <note>
+                                    <locus from="7" to="11"/> are attached using a stab stitch.</note>
                               Quire 2:
                               1, no stub
                               1 added
@@ -88,15 +89,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </supportDesc>
                      <layoutDesc>
                        <layout>
-                         <dimensions type="margin" unit="mm">
-                           <dim type="top">18</dim>
-                           <dim type="bottom">38</dim>
-                           <dim type="right">27</dim>
-                           <dim type="left">4</dim>
-                         </dimensions>
+                           <dimensions type="margin" unit="mm">
+                              <dim type="top">18</dim>
+                              <dim type="bottom">38</dim>
+                              <dim type="right">27</dim>
+                              <dim type="left">4</dim>
+                           </dimensions>
                        </layout>
                        <layout columns="2" writtenLines="18">
-                         <locus from="1r" to="11v"></locus>
+                           <locus from="1r" to="11v"/>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -109,6 +110,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -124,7 +133,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-10-31" who="JS">Added ms contents</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

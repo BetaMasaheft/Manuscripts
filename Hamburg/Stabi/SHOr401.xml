@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr401"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Psalter, Maḥālǝya nabiyāt, Maḥālǝya za-Salomon, Wǝddāse Māryām</title>
@@ -156,8 +156,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="1" writtenLines="22">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#42r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#42r"/>.</note>
                                 <locus from="3r" to="132v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>119</height>
@@ -177,8 +176,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </ab>
                               </layout>
                               <layout columns="1" writtenLines="24">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#134r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#134r"/>.</note>
                                 <locus from="133r" to="136v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>108</height>
@@ -197,8 +195,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </ab>
                               </layout>
                               <layout columns="2" writtenLines="24">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#138r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#138r"/>.</note>
                                 <locus from="137r" to="138v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>108</height>
@@ -219,8 +216,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </ab>
                               </layout>
                               <layout columns="2" writtenLines="21 24">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#144r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#144r"/>.</note>
                                 <locus from="139r" to="148v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>108</height>
@@ -242,8 +238,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -276,10 +271,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <item xml:id="e1">
                             <desc>Pen trials</desc>
                             <locus from="1r" to="2v"/>
-                            <locus target="#149v #150r #152r"></locus>
+                            <locus target="#149v #150r #152r"/>
                           </item>
                           <item xml:id="a2">
-                            <desc type="MagicText"></desc>
+                            <desc type="MagicText"/>
                             <locus from="150v" to="150r"/>
                           </item>
 
@@ -291,7 +286,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with plain wooden boards and a colorful textile chemise, preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="textile"></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="textile"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Both boards are carved from a yellow wood.</decoNote>
                             <decoNote xml:id="b4" type="Cover">
@@ -342,7 +340,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -365,7 +369,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

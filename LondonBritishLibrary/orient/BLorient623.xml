@@ -2,8 +2,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient623" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient623"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra ʾIyasus</title>
@@ -82,13 +85,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ተአምረ፡ ኢየሱስ፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ተአምረ፡ ኢየሱስ፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="e1">
                                     <locus target="#3r"/>
                                     <desc>The name of the owner was <foreign xml:lang="gez"> ሣህለ፡ ሥላሴ፡</foreign>, 
-                                        possibly <persName ref="PRS8346sahlase" role="owner"><certainty locus="value" match="../@PRS8346sahlase" cert="low"/></persName>.</desc> 
+                                        possibly <persName ref="PRS8346sahlase" role="owner">
+                                 <certainty locus="value" match="../@PRS8346sahlase" cert="low"/>
+                              </persName>.</desc> 
                                     <q xml:lang="gez"/>
                                 </item>
                             </list>
@@ -113,8 +119,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <origin>
                             <origDate notBefore="1750" notAfter="1799" evidence="lettering"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                     </history>
 
@@ -140,7 +145,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -160,7 +171,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-07-27">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

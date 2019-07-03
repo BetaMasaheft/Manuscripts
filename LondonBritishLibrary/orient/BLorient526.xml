@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient526"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Pauline Epistles, Acts of the Apostles, Revelation of St John, Catholic Epistles</title>
@@ -55,7 +55,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus from="3r"/>
                                 <title type="complete" ref="LIT4664Introduction"/>
                                 <textLang mainLang="gez"/>
-                                <incipit xml:lang="gez">መቅድ<choice><sic resp="DR">ም</sic><corr resp="DR">መ</corr></choice>፡
+                                <incipit xml:lang="gez">መቅድ<choice>
+                              <sic resp="DR">ም</sic>
+                              <corr resp="DR">መ</corr>
+                           </choice>፡
                                     ጳውሎስ፡ ሐዋርያ። ምክንያተ፡ መልእክቱ፡ ለሮማያን፡ በብዙኅ፡ ግብር፡ እስመ፡ በሮሜ፡ ነበሩ፡ አይሁድ፡ ወአረሚ፡ ኅቡረ፡ ወ፪ሆሙ፡ 
                                     ተወክፉ፡ አሚነ፡ ክርስቶስ፡ ወድኅሬሁ፡ ተቀሐዉ፡ በበይናቲሆሙ፡ ወተዓበየ፡ ፩፡ ላዕለ፡ ካልዑ፡ ወኮኑ፡ ይብሉ፡ አይሁድ፡ ንሐነሰ፡ ሕዝቡ፡ 
                                     ለእግዚአብሔር፡ እምቀዳሚ፡ ኮነ፡ ንትዓቀብ፡ ታሕተ፡ ጽላሎተ፡ ዚአሁ፡ ወንትሜገብ፤</incipit>
@@ -148,7 +151,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <msItem xml:id="ms_i2">
                             <locus from="53r"/>
-                            <title type="complete" ref="LIT1019Actsof" xml:lang="gez"><supplied reason="undefined" resp="PRS10171Wright">መጽሐፈ፡</supplied> 
+                            <title type="complete" ref="LIT1019Actsof" xml:lang="gez">
+                        <supplied reason="undefined" resp="PRS10171Wright">መጽሐፈ፡</supplied> 
                                 ግብረ፡ ልዑካን፡ ዝውእቱ፡ ዜና፡ ሐዋርያት፡ ንጹሓን፡</title>
                             <textLang mainLang="gez"/> 
                         </msItem>
@@ -251,7 +255,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus from="3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ሐዲሳት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ሐዲሳት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                             </list>
                         </additions>
@@ -297,7 +302,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -323,7 +334,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_526_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

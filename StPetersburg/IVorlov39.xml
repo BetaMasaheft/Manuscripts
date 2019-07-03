@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-      xml:lang="en"
-      xml:id="IVorlov39"
+     xml:lang="en"
+     xml:id="IVorlov39"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Maṣḥafa gǝnzat</title>
@@ -88,8 +88,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                             <msItem xml:id="ms_i1.7">
                                 <locus from="38v"/>
-                                <title ref="LIT1931Mashaf#Men" cert="low"
-                                  xml:lang="gez">አርእስተ᎓ ምንባብ᎓ ዘይትነበብ፡ ላዕለ፡ ዕደው፡ ወራዙት፡</title>
+                                <title ref="LIT1931Mashaf#Men" cert="low" xml:lang="gez">አርእስተ᎓ ምንባብ᎓ ዘይትነበብ፡ ላዕለ፡ ዕደው፡ ወራዙት፡</title>
                                 <note>Funeral ritual for adult men.</note>
                             </msItem>
 
@@ -234,12 +233,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                     <history>
                         <origin>
-                            <origDate notBefore="1800"
-                              notAfter="1899">
+                            <origDate notBefore="1800" notAfter="1899">
                             </origDate>
                             </origin>
-                        <provenance></provenance>
-                        <acquisition></acquisition>
+                        <provenance/>
+                        <acquisition/>
 
                     </history>
                     <additional>
@@ -270,7 +268,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -296,7 +300,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DN" when="2019-05-27">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

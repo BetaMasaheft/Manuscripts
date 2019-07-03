@@ -7,11 +7,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="mss"
      xml:lang="en"
      xml:id="EMIP00031">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Earl Codex</title>
-            <editor key="JS"></editor>
+            <editor key="JS"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -61,39 +61,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <collation>
                           <note>Quire descriptions: quires 1–4 balanced; quires 5, 6 unbalanced.</note>
                           <list>
-                            <item xml:id="q1" n="1">
-                              <dim unit="leaf">10</dim>
-                              <locus from="1" to="10"></locus>
+                              <item xml:id="q1" n="1">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="1" to="10"/>
                               Quire 1
                             </item>
-                            <item xml:id="q2" n="2">
-                              <dim unit="leaf">10</dim>
-                              <locus from="11" to="20"></locus>
+                              <item xml:id="q2" n="2">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="11" to="20"/>
                               Quire 2
                             </item>
-                            <item xml:id="q3" n="3">
-                              <dim unit="leaf">10</dim>
-                              <locus from="21" to="30"></locus>
+                              <item xml:id="q3" n="3">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="21" to="30"/>
                               Quire 3
                             </item>
-                            <item xml:id="q4" n="4">
-                              <dim unit="leaf">10</dim>
-                              <locus from="31" to="40"></locus>
+                              <item xml:id="q4" n="4">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="31" to="40"/>
                               Quire 4
                             </item>
-                            <item xml:id="q5" n="5">
-                              <dim unit="leaf">7</dim>
-                              <locus from="41" to="47"></locus>
-                              <note>Two stubs appear between <locus target="#41 #42"/>; a folio stub is visible between <locus target="#44 #45"/>.</note>
+                              <item xml:id="q5" n="5">
+                                 <dim unit="leaf">7</dim>
+                                 <locus from="41" to="47"/>
+                                 <note>Two stubs appear between <locus target="#41 #42"/>; a folio stub is visible between <locus target="#44 #45"/>.</note>
                               Quire 5:
                               6, stub before 2
                               5, stub after 1
                               2, stub after 4
                             </item>
-                            <item xml:id="q6" n="6">
-                              <dim unit="leaf">7</dim>
-                              <locus from="48" to="54"></locus>
-                              <note>Stubs appear between <locus target="#48 #49"/>, between <locus target="#49 #50"/> and between <locus target="#52 #53"/>.</note>
+                              <item xml:id="q6" n="6">
+                                 <dim unit="leaf">7</dim>
+                                 <locus from="48" to="54"/>
+                                 <note>Stubs appear between <locus target="#48 #49"/>, between <locus target="#49 #50"/> and between <locus target="#52 #53"/>.</note>
                               Quire 6:
                               6, stub after 1
                               5, stub after 2
@@ -104,20 +104,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </supportDesc>
                      <layoutDesc>
                        <layout>
-                         <dimensions type="margin" unit="mm">
-                           <dim type="top">22</dim>
-                           <dim type="bottom">36</dim>
-                           <dim type="right">16</dim>
-                           <dim type="left">8</dim>
-                         </dimensions>
+                           <dimensions type="margin" unit="mm">
+                              <dim type="top">22</dim>
+                              <dim type="bottom">36</dim>
+                              <dim type="right">16</dim>
+                              <dim type="left">8</dim>
+                           </dimensions>
                        </layout>
-                       <layout columns="1" writtenLines="13"></layout>
+                       <layout columns="1" writtenLines="13"/>
                      </layoutDesc>
                   </objectDesc>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
-                      <decoNote xml:id="b1">Four repaired Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
-                      <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/></decoNote>
+                        <decoNote xml:id="b1">Four repaired Coptic chain stitches attached with bridle attachments to rough-hewn boards.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                        </decoNote>
                     </binding>
                   </bindingDesc>
                </physDesc>
@@ -129,6 +131,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -143,7 +153,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2018-06-25" who="JS">Added quire desc, binding desc, margin dim, columns/lines</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

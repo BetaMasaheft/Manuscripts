@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="FSUor133"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Prayers, Ethiopic Psalter, ʾArgānona Dǝngǝl</title>
@@ -673,7 +673,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus target="#viii"/>
                                 <desc>An illustration of <ref type="authFile" corresp="AT1066DavidHarp"/>, 
                                     who is identified by the caption
-                                    <foreign xml:lang="gez"><persName ref="PRS3417David">ዳዊት፡</persName> ንጉሥ።</foreign>. Below him, in proskynesis, is a <term key="donordepiction"/> of
+                                    <foreign xml:lang="gez">
+                                 <persName ref="PRS3417David">ዳዊት፡</persName> ንጉሥ።</foreign>. Below him, in proskynesis, is a <term key="donordepiction"/> of
                                     <persName ref="PRS5332hezqeyas"/>, who has laid his <term key="crown"/> on the ground and is also identified by a caption.
                                     <q xml:lang="gez">ዘከመ፡ ተማኅፀነ፡ ንጉሠ፡ <persName ref="PRS5332hezqeyas">ሕዝቅያስ።</persName>
                               </q>
@@ -881,7 +882,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -913,7 +920,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
       <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5248411"/>
    </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
          <div type="edition">
              <div type="textpart" xml:id="PatriarchList" corresp="#p3_i1">

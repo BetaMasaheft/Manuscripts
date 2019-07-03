@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESktm011" xml:lang="en" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESktm011"
+     xml:lang="en"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Maṣḥafa krǝstǝnnā “Book of the Christening”</title>
@@ -55,8 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <material key="parchment"/>
                         </support>
                         <extent>Made of <measure unit="leaf">40.0</measure> folios, of which
-                              <measure unit="leaf" type="blank"/> blank <locus target="#1r"
-                              >1r</locus>, 1v, 40v, in <measure unit="quire">5.0</measure> quires .
+                              <measure unit="leaf" type="blank"/> blank <locus target="#1r">1r</locus>, 1v, 40v, in <measure unit="quire">5.0</measure> quires .
                               <dimensions type="outer">
                               <height unit="mm">145</height>
                               <width unit="mm">105</width>
@@ -209,14 +213,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
             <listPerson>
                <person>
                   <persName role="owner" ref="PRS0000">Takla Hāymānot (s. Additio 1); he and Nǝgǝśtä
-                     Māryām are also mentioned in the supplication formula on <locus target="#39v"
-                        >39v</locus>.</persName>
+                     Māryām are also mentioned in the supplication formula on <locus target="#39v">39v</locus>.</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -244,7 +253,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

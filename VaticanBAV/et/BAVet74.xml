@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BAVet74"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Maṣḥafa gǝnzat</title>
@@ -288,7 +288,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            ወዘተልእኩ፡ በውእቱ፡ ንዋይ፡ መዝገበ፡ ሥላሴ፡ ገብረ፡ ጻድቅ፡ ገብረ፡ ጊዮርጊስ፡
                            <note>The note mentions <persName role="scribe" ref="PRS11543GabraWahed">Gabra Wāhǝd</persName> as the scribe of the book, 
                               <persName role="patron" ref="PRS11542ZaManfasQ">Zamanfas Qǝddus</persName> as the patron, 
-                              <persName role="donor" ref="PRS11552Darso"><roleName type="title">daǧǧāzmāč</roleName>Darso</persName>  
+                              <persName role="donor" ref="PRS11552Darso">
+                                 <roleName type="title">daǧǧāzmāč</roleName>Darso</persName>  
                               as the one who financed the book and donated it to the church of Mikāʾel Za-Baʿāti.
                               <!-- Unidentified church -->
                               The note also mentions other individuals: <persName ref="PRS11549MazgabaS">Mazgaba Śǝllāse</persName>, 
@@ -824,25 +825,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
                         <msItem xml:id="ms_i1.36.4">
                            <locus from="95r" to="100v"/>
-                           <title>Excerpts from <ref type="work"
-                              corresp="LIT2000Mazmur#Ps50"/><ref type="work"
-                                 corresp="LIT2000Mazmur#Ps4"/><ref type="work"
-                                    corresp="LIT2000Mazmur#Ps6"/><ref type="work"
-                                       corresp="LIT2000Mazmur#Ps8"/><ref type="work"
-                                          corresp="LIT2000Mazmur#Ps31"/><ref type="work"
-                                             corresp="LIT2000Mazmur#Ps24"/><ref type="work"
-                                                corresp="LIT2000Mazmur#Ps53"/><ref type="work"
-                                                   corresp="LIT2000Mazmur#Ps60"/><ref type="work"
-                                                      corresp="LIT2000Mazmur#Ps63"/><ref type="work"
-                                                         corresp="LIT2000Mazmur#Ps65"/><ref type="work"
-                                                            corresp="LIT2000Mazmur#Ps85"/><ref type="work"
-                                                               corresp="LIT2000Mazmur#Ps101"/><ref type="work"
-                                                                  corresp="LIT2000Mazmur#Ps120"/><ref type="work"
-                                                                     corresp="LIT2000Mazmur#Ps129"/><ref type="work"
-                                                                        corresp="LIT2000Mazmur#Ps130"/><ref type="work"
-                                                                           corresp="LIT2000Mazmur#Ps140"/><ref type="work"
-                                                                              corresp="LIT2000Mazmur#Ps5"/><ref type="work"
-                                                                                 corresp="LIT2000Mazmur#Ps19"/>, <ref type="work" corresp="LIT2265salota"/>, <ref type="work" corresp="LIT1812GospelLuke"/> 1, 45-55.</title>
+                           <title>Excerpts from <ref type="work" corresp="LIT2000Mazmur#Ps50"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps4"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps6"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps8"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps31"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps24"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps53"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps60"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps63"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps65"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps85"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps101"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps120"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps129"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps130"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps140"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps5"/>
+                              <ref type="work" corresp="LIT2000Mazmur#Ps19"/>, <ref type="work" corresp="LIT2265salota"/>, <ref type="work" corresp="LIT1812GospelLuke"/> 1, 45-55.</title>
                         </msItem>
                         <msItem xml:id="ms_i1.36.5">
                            <locus from="100v" to="102v"/>
@@ -1369,6 +1369,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -1401,7 +1407,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="MV" when="2017-04-06">Created catalogue entry</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
     
       <body>
          <ab/>

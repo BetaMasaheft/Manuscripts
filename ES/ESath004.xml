@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESath004" xml:lang="en" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESath004"
+     xml:lang="en"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Maṣḥafa krǝstǝnnā “Book of the Christening”</title>
@@ -43,12 +48,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </msItem>
                   <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
                   <msItem xml:id="ms_i2">
-                     <note>- Text I is called Maṣḥafa ṭǝmqat on <locus target="#1r"
-                        >1r</locus>.</note>
+                     <note>- Text I is called Maṣḥafa ṭǝmqat on <locus target="#1r">1r</locus>.</note>
                      <note>- Text I contains an embedded colophon (<locus target="#25v">25v</locus>)
                         which mentions the Coptic, Arabic and Gǝʿǝz languages (but it is unclear,
-                        probably corrupted) and possibly the name of the scribe, <persName
-                           role="scribe" ref="PRS12060AsfaKrestos">ʾAṣfa Krǝstos</persName>.</note>
+                        probably corrupted) and possibly the name of the scribe, <persName role="scribe" ref="PRS12060AsfaKrestos">ʾAṣfa Krǝstos</persName>.</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,8 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">25.0</measure> folios, in <measure
-                              unit="quire">4.0</measure> quires . <dimensions type="outer">
+                        <extent>Made of <measure unit="leaf">25.0</measure> folios, in <measure unit="quire">4.0</measure> quires . <dimensions type="outer">
                               <height unit="mm">150</height>
                               <width unit="mm">140</width>
                               <depth unit="mm">20</depth>
@@ -83,8 +85,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </collation>
                         <condition key="deficient">The Ms. is worn. Some folios are damaged by water
                            (esp. fols. 2, 3, 4, 5).&#xD; The Ms. has been resewn. Empty holes are
-                           visible in the centrefold of quire II (s. <locus from="9v" to="10r"
-                              >9v-10r</locus>).</condition>
+                           visible in the centrefold of quire II (s. <locus from="9v" to="10r">9v-10r</locus>).</condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="2" writtenLines="11">
@@ -120,11 +121,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Mediocre, irregular</seg>
-                        <seg type="ink">Black, vivid red.</seg> The scribe was possibly <persName
-                           role="scribe" ref="PRS12060AsfaKrestos">ʾA[ṣ]fa Krǝstos</persName> who is
+                        <seg type="ink">Black, vivid red.</seg> The scribe was possibly <persName role="scribe" ref="PRS12060AsfaKrestos">ʾA[ṣ]fa Krǝstos</persName> who is
                         mentioned on <locus target="#25vb">25vb</locus> in the colophon of the work.
-                        The angular hand is similar in style to <persName ref="PRS11077Zadengel"
-                           >Za-Dǝngǝl</persName> of MR-040.<date>19th century.</date>
+                        The angular hand is similar in style to <persName ref="PRS11077Zadengel">Za-Dǝngǝl</persName> of MR-040.<date>19th century.</date>
                         <list type="abbreviations">
                            <item>ይካ፡ for ይብል፡ ካህን፡</item>
                            <item>ይዲ፡ for ይብል፡ ዲያቆን፡</item>
@@ -186,6 +185,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -214,7 +219,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

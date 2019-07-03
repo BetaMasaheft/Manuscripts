@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient701"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient701"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Acts of Cyrus (Kiros), Acts of Gabra Manfas Qǝdus</title>
@@ -59,7 +57,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
                         
                         <msItem xml:id="ms_i2">
-                            <title ref="LIT1119DossierQMQ"></title>
+                            <title ref="LIT1119DossierQMQ"/>
                         <msItem xml:id="ms_i2.1">
                             <locus from="57r"/>
                             <title type="complete" ref="LIT1451GadlaG"/>
@@ -97,7 +95,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">125</measure>
@@ -111,7 +109,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="20 21" cert="high"></layout>
+                                <layout columns="2" writtenLines="20 21" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -122,12 +120,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     the rest is of much later date.
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
                         </handDesc>  
-                        <decoDesc><decoNote xml:id="d1" type="miniature">
+                        <decoDesc>
+                     <decoNote xml:id="d1" type="miniature">
                             <locus from="55" to="56r"> pictures of saints</locus>
                             
                            
@@ -141,12 +140,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#2r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ገድለ፡ ኪሮስ፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ገድለ፡ ኪሮስ፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 <item xml:id="e1">
                                     <desc>The name of the first owner was <persName ref="PRS12491Fesehagiyorgis"/>, who has been substituted with  
-                                        on <locus from="108v"></locus> , <locus from="109v"></locus>  that of <persName ref="PRS12496HaylaGiyorgis"/> 
-                                        who presented  the book to a church of <placeName ref="INS0905GabraManfas"></placeName> </desc>
+                                        on <locus from="108v"/> , <locus from="109v"/>  that of <persName ref="PRS12496HaylaGiyorgis"/> 
+                                        who presented  the book to a church of <placeName ref="INS0905GabraManfas"/> 
+                           </desc>
                                     <g xml:lang="gez">ለዝንቱ፡ መጽሐፍ፡ ዘወሀቦ፡ ቦኸር፡ ኃይል፡ ጊዮርጊስ፡ ለአቡነ፡ ገብረ፡ መንፈ፡  ቅዱስ፡ ከመ፡ ይኩኖ፡ ለመድኃኒተ፡ ሥጋ፡ ወነፍስ።</g>
                                 </item>
                                 
@@ -206,7 +207,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -227,17 +234,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2019-06-27" who="ES">assigned proper work IDs</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-

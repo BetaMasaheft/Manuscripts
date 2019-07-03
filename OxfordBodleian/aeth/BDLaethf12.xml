@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BDLaethf12"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Protective Prayers</title>
@@ -153,6 +153,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -175,18 +181,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-04-03">Updated</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
          <listRelation>
-            <relation active="BDLaethf12#UniCirc1" name="sdc:undergoesTransformation" passive="BDLaethf12#tr1"/>
-            <relation active="BDLaethf11#UniCirc1" name="skos:exactMatch" passive="BDLaethf12#UniCirc1"/>
-            <relation active="BDLaethf12#tr1" name="skos:exactMatch" passive="BDLaethf11#tr1"/>
-            <relation active="BDLaethf12#tr1" name="sdc:hasTransformationModel" passive="sdc:D3"/>
-            <relation active="BDLaethf12#UniCirc1" name="dcterms:hasPart" passive="BDLaethf11 BDLaethf12"/>
-            <relation active="BDLaethf12#tr1" name="sdc:resultsIn" passive="BDLaethf12#UniCirc2 BDLaethf12#UniCirc3"/>
-            <relation active="BDLaethf12#UniCirc2" name="skos:exactMatch" passive="BDLaethf11"/>
-            <relation active="BDLaethf12#UniCirc3" name="skos:exactMatch" passive="BDLaethf12"/>
+            <relation active="BDLaethf12#UniCirc1"
+                      name="sdc:undergoesTransformation"
+                      passive="BDLaethf12#tr1"/>
+            <relation active="BDLaethf11#UniCirc1"
+                      name="skos:exactMatch"
+                      passive="BDLaethf12#UniCirc1"/>
+            <relation active="BDLaethf12#tr1"
+                      name="skos:exactMatch"
+                      passive="BDLaethf11#tr1"/>
+            <relation active="BDLaethf12#tr1"
+                      name="sdc:hasTransformationModel"
+                      passive="sdc:D3"/>
+            <relation active="BDLaethf12#UniCirc1"
+                      name="dcterms:hasPart"
+                      passive="BDLaethf11 BDLaethf12"/>
+            <relation active="BDLaethf12#tr1"
+                      name="sdc:resultsIn"
+                      passive="BDLaethf12#UniCirc2 BDLaethf12#UniCirc3"/>
+            <relation active="BDLaethf12#UniCirc2"
+                      name="skos:exactMatch"
+                      passive="BDLaethf11"/>
+            <relation active="BDLaethf12#UniCirc3"
+                      name="skos:exactMatch"
+                      passive="BDLaethf12"/>
          </listRelation>
       </body>
    </text>

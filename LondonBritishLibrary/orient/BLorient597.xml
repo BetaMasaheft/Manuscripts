@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient597"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient597"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Gǝbra Ḥǝmāmāt
@@ -58,10 +56,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">262 <note>Some leaves are slightly stained and torn</note></measure>
+                                    <measure unit="leaf">262 <note>Some leaves are slightly stained and torn</note>
+                           </measure>
                                     
                                    
                                     <dimensions type="outer" unit="mm">
@@ -74,7 +73,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="29 34"></layout>
+                                <layout columns="2" writtenLines="29 34"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -84,7 +83,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscripts is written in a fine hand, of the <date>15th century</date>.
                                 </desc>
                                 
-                                <date notBefore="1400" notAfter="1500"></date>
+                                <date notBefore="1400" notAfter="1500"/>
                                 
                             </handNote>
                             
@@ -105,7 +104,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             The manuscript was then sent to the Royal Library at Windsor and 
                             presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
                             <listBibl type="secondary">
-                                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
+                                <bibl>
+                           <ptr target="bm:Wright1877BM"/>
+                           <citedRange unit="page">iv</citedRange>
+                        </bibl>
                             </listBibl>
                         </provenance>
                         
@@ -134,7 +136,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -157,22 +165,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-

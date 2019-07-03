@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet10"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Sayfa Śǝllāse “Sword of the Trinity”</title>
@@ -126,12 +126,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <item xml:id="a1">
                               <locus from="1r" to="2r"/>
                               <desc>Amharic text.</desc>
-                              <q xml:lang="am"></q>
+                              <q xml:lang="am"/>
                             </item>
                             <item xml:id="a2">
                               <locus target="#62v"/>
                               <desc>Colophon.</desc>
-                              <q xml:lang="ge"></q>
+                              <q xml:lang="ge"/>
                             </item>
                             <item xml:id="e1">
                               <locus target="#77v"/>
@@ -188,7 +188,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -211,7 +217,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

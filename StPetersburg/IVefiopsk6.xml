@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVefiopsk6"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title> Gospel of John </title>
@@ -156,7 +156,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <item xml:id="a7">
                            <desc type="MagicText"/>
                            <locus target="#121r"/>
-                           <title type="complete" ref="LIT1716Kidanz"/> <!--is this really LIT1716Kidanz? DR 2018-01-24-->
+                           <title type="complete" ref="LIT1716Kidanz"/> 
+                           <!--is this really LIT1716Kidanz? DR 2018-01-24-->
                            <bibl>
                               <ptr target="bm:Turaev1899Orationes"/>
                               <citedRange unit="page">249-250</citedRange>
@@ -237,6 +238,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
       
@@ -259,7 +266,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </revisionDesc>
   </teiHeader>
   
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
         <div type="edition">
             <div type="textpart"

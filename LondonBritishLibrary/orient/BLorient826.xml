@@ -4,12 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient826"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient826"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Life of Alexander the Great</title>
@@ -74,7 +73,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">148</measure>
@@ -88,7 +87,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="24 26" cert="high"></layout>
+                                <layout columns="2" writtenLines="24 26" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -98,22 +97,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is clearly written of the <date>19th century.</date>
                                 </desc>
                                 
-                                <date notBefore="1800" notAfter="1900" resp="PRS10171Wright"></date>
+                                <date notBefore="1800" notAfter="1900" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
                         </handDesc>   
                         <additions>
-                            <list><item xml:id="a1">
+                            <list>
+                        <item xml:id="a1">
                                 <locus target="#2r"/>
                                 <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                     <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                <q xml:lang="gez">ዜና፡ እስክንድር፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                <q xml:lang="gez">ዜና፡ እስክንድር፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                             </item>
                             </list>
-                            <list><item xml:id="a2">
+                            <list>
+                        <item xml:id="a2">
                                 
-                                <desc type="OwnershipNote">The name of the owner,<persName ref="PRS12485Abraham"></persName>
+                                <desc type="OwnershipNote">The name of the owner,<persName ref="PRS12485Abraham"/>
                                     occurs at <locus target="147a"/>. </desc>
                                 
                             </item>
@@ -139,7 +141,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <history>
                         <origin>
-                            <origPlace><placeName ref="LOC2246DabraB"></placeName></origPlace>
+                            <origPlace>
+                        <placeName ref="LOC2246DabraB"/>
+                     </origPlace>
                             <origDate/>
                         </origin>
                         <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> 
@@ -171,7 +175,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -194,17 +204,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-

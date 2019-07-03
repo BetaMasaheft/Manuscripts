@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient756"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient756"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Works of Mār Yǝṣhāq
@@ -66,7 +64,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">60</measure>
@@ -91,15 +89,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is well written of the earlier part of the  <date>18th century.</date>.
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1750" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1750" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
                         </handDesc>   
                         <additions>
-                            <list><item xml:id="e1">
+                            <list>
+                        <item xml:id="e1">
                                 <locus target="#1r, #60v"/>
-                                <desc >The name of the owner is <persName ref="PRS12645Isayas"/>. 
+                                <desc>The name of the owner is <persName ref="PRS12645Isayas"/>. 
                                 </desc>
                                 
                             </item> 
@@ -147,7 +146,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -168,17 +173,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="SG" when="2019-04-29">Complete description</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-

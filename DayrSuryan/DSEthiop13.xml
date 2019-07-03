@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="DSEthiop13"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Maṣḥafa zǝq</title>
@@ -66,8 +66,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <incipit xml:lang="gez">
                         <locus target="#3r"/>
                         <hi rend="rubric">በስመ፡ አብ፡ ወወልድ፡ ወመንፈ<supplied reason="lost" resp="DR">ስ፡ ቅ</supplied>ዱስ፡ ፩አምላክ፡ ን<supplied resp="DR" reason="lost">ቀ</supplied>ድም፡
-                           <gap reason="lost"/></hi> ዝቅ፡ ዘወጽአ፡ እምጐንድር፡ እምዮሐንስ፡ እስከ፡ ሁሐንስ<hi rend="rubric">፨</hi> ለገቢዋቲክሙ፡ መዋ፡  <hi rend="rubric"><gap reason="lost"/>
-                              ኒ፡ ሐፃን፡ ነቢየ፡ ልዑ<gap reason="lost"/></hi>
+                           <gap reason="lost"/>
+                        </hi> ዝቅ፡ ዘወጽአ፡ እምጐንድር፡ እምዮሐንስ፡ እስከ፡ ሁሐንስ<hi rend="rubric">፨</hi> ለገቢዋቲክሙ፡ መዋ፡  <hi rend="rubric">
+                           <gap reason="lost"/>
+                              ኒ፡ ሐፃን፡ ነቢየ፡ ልዑ<gap reason="lost"/>
+                        </hi>
                         መ፡ ተሐውር፡ ቅድመ፡ እግዚአብሔር፡ ከመ፡ ተጸሕ፡ ፍኖቶ<hi rend="rubric">፨</hi>
                         <hi rend="rubric">ሰላ፡ ለአብ፡ ገባ<supplied reason="lost" resp="DR">ሬ</supplied>፡</hi>
                         ኵሉ፡  ዛቲ፡ ያ፡ እቲ፡ ትንቢቶሙ፡ ለነቢያት፡ ስብከቶሙ፡ ለሐዋርያት፡ እሞሙ፡ ለሰማእት፡ ወእኅቶሙ፡ ለመላእክት። ዓዲ፡ ግነዩ፡ አርያ፡ ሃሌ፡ ሉያ፡ ለአብ፡ ቃለ፡ ዓዋዲ፡ ዘይሰብክ፡ በገዳም፡ <hi rend="rubric">ሃሌ፡
@@ -102,7 +105,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <depth>14</depth>
                            </dimensions>
 
-                     </extent>
+                        </extent>
                         <collation>
                            <list>
                               <item xml:id="q1" n="1">
@@ -117,7 +120,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <dim unit="leaf">8</dim>
                                  <locus from="21r" to="28v"/>
                               </item>
-                        <!--unclear then-->
+                              <!--unclear then-->
                            </list>
                         </collation>
                      </supportDesc>
@@ -125,8 +128,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <layoutDesc>
                         <layout columns="1">
                            <note corresp="#textarea #margin">
-                             Data on text area and margin dimensions taken from <locus
-                              target="#4r"/>.</note>
+                             Data on text area and margin dimensions taken from <locus target="#4r"/>.</note>
                            <dimensions unit="mm" xml:id="textarea">
                               <height>83</height>
                               <width>70</width>
@@ -143,7 +145,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"></seg>
+                        <seg type="script"/>
                      </handNote>
                   </handDesc>
 
@@ -152,7 +154,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <item xml:id="a1">
                            <locus target="#iv"/>
                            <desc type="OwnershipNote">Crude ownership note in pencil.</desc>
-                           <q xml:lang="gez">መጽሐፍ ዘ<persName ref="PRS12136GabraM" role="owner"><roleName type="title">አባ፡</roleName> ገብረ፡ ሚካኤል፡</persName></q>
+                           <q xml:lang="gez">መጽሐፍ ዘ<persName ref="PRS12136GabraM" role="owner">
+                                 <roleName type="title">አባ፡</roleName> ገብረ፡ ሚካኤል፡</persName>
+                           </q>
                         </item>
 
                         <item xml:id="a2">
@@ -242,12 +246,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <history>
 
                      <origin>
-                         <origDate notBefore="1850"
-                           notAfter="1950">
+                         <origDate notBefore="1850" notAfter="1950">
                          </origDate>
                          </origin>
-                     <provenance></provenance>
-                     <acquisition></acquisition>
+                     <provenance/>
+                     <acquisition/>
                </history>
 
             </msDesc>
@@ -257,7 +260,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-       </encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
        <profileDesc>
            <particDesc>
                <listPerson>
@@ -285,7 +294,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-06-15">Added text, collation, additions and extras</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

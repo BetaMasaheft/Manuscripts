@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="IVorlov3"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="IVorlov3"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Maṣḥafa zenāhomu la-ʾabaw, Gannata manakosāt </title>
@@ -50,8 +48,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                               <msItem xml:id="ms_i2">
                               <locus from="126r"/>
-                              <title type="complete" ref="LIT1406Gadlaa"
-                              xml:lang="gez">ገነተ፡ መነኮሳት፡ ዝንቱ፡ መጽሐፈ፡ ዘቅዱስ፡ ሶፍሮንዮስ።</title>
+                              <title type="complete" ref="LIT1406Gadlaa" xml:lang="gez">ገነተ፡ መነኮሳት፡ ዝንቱ፡ መጽሐፈ፡ ዘቅዱስ፡ ሶፍሮንዮስ።</title>
                             </msItem>
 
                             <msItem xml:id="ms_i3">
@@ -71,10 +68,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                     <note>The parchment is yellowish,
                                       leaves are of different thickness.</note>
-                                    <measure unit="leaf" type="blank">1<locus target="#1"></locus></measure>
+                                    <measure unit="leaf" type="blank">1<locus target="#1"/>
+                           </measure>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">165</measure>
@@ -88,24 +86,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
 
                             <layoutDesc>
-                                <layout columns="2" writtenLines="18"></layout>
+                                <layout columns="2" writtenLines="18"/>
                             </layoutDesc>
                         </objectDesc>
 
                         <handDesc>
 
                             <handNote script="Ethiopic" xml:id="h1">
-                              <seg type="script"></seg>
-                                  <desc> <persName ref="PRS9602Turaev">Turaev</persName>
+                              <seg type="script"/>
+                                  <desc> 
+                           <persName ref="PRS9602Turaev">Turaev</persName>
                                   describes the handwriting as "fine" but does
                                   not propose any dating.</desc>
                                   <seg type="ink">Black, red</seg>
                                   <seg type="rubrication">Rubrication is not executed on fols. 4-41.</seg>
-                                  <date notBefore="1800" notAfter="1899" cert="low"></date>
+                                  <date notBefore="1800" notAfter="1899" cert="low"/>
 
                               </handNote>
                         </handDesc>
-                        <additions></additions>
+                        <additions/>
 
                         <bindingDesc>
                             <binding contemporary="true" xml:id="binding">
@@ -124,7 +123,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                           <origPlace>
                    </origPlace>
                           <origDate notBefore="1800" notAfter="1899" cert="low"/>
-                          <note><persName ref="PRS9602Turaev">Turaev</persName> does not propose
+                          <note>
+                        <persName ref="PRS9602Turaev">Turaev</persName> does not propose
                           any dating for the manuscript.</note>
                         </origin>
                         <provenance>The name of the original owner has been erased everywhere.
@@ -165,7 +165,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
           <particDesc>
              <listPerson>
@@ -196,7 +202,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

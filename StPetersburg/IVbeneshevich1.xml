@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVbeneshevich1"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Prayers</title>
@@ -80,8 +80,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                         <width>76</width>
                                         </dimensions>
                                 </extent>
-                                <foliation></foliation>
-                                <collation></collation>
+                                <foliation/>
+                                <collation/>
 
 
                             </supportDesc>
@@ -115,7 +115,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                     <history>
                         <origin>
-                            <origPlace></origPlace>
+                            <origPlace/>
                             <origDate notBefore="1800" notAfter="1900"/>
                         </origin>
                         <provenance>The manuscript was bought by <persName ref="PRS12692VladimirBeneshevich"> Vladimir Beneshvich </persName>
@@ -156,12 +156,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
 
           <particDesc>
              <listPerson>
-               <person></person>
+               <person/>
                 <person>
                    <persName ref="PRS12692VladimirBeneshevich" role="owner"/>
                 </person>
@@ -188,7 +194,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DN" when="2019-04-12">Correction</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

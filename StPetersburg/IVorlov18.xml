@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVorlov18"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Maṣḥafa qǝddāse</title>
@@ -52,7 +52,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <title type="complete" ref="LIT1716Kidanz">ኪዳን᎓ ዘነግህ᎓</title>
                                 <textLang mainLang="gez"/>
                                 <note>Morning prayers.</note>
-                                <notatedMusic><desc>Musical notation signs over the main text</desc>
+                                <notatedMusic>
+                           <desc>Musical notation signs over the main text</desc>
                                 </notatedMusic>
                             </msItem>
 
@@ -94,7 +95,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <textLang mainLang="gez"/>
                               <note>Supplications elsewhere in the masnucripts ascribed
                                 to <persName ref="PRS10245Yared">St Yāred
-                              </persName></note>
+                              </persName>
+                        </note>
                             </msItem>
 
                             <msItem xml:id="ms_i1.7">
@@ -123,8 +125,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                             <msItem xml:id="ms_i3">
                                 <locus from="31r" to="107"/>
-                                <title type="complete" xml:lang="gez"
-                                  ref="LIT1960Mashaf#Anaphoras"></title>
+                                <title type="complete" xml:lang="gez" ref="LIT1960Mashaf#Anaphoras"/>
                                 <textLang mainLang="gez"/>
 
 
@@ -188,8 +189,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                                 <msItem xml:id="ms_i3.10">
                                     <locus from="90v" to="94v"/>
-                                    <title type="complete"
-                                      ref="LIT1960Mashaf#AnaphoraFirstGregoryNyssa"/>
+                                    <title type="complete" ref="LIT1960Mashaf#AnaphoraFirstGregoryNyssa"/>
                                     <textLang mainLang="gez"/>
                                 </msItem>
 
@@ -230,8 +230,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                         <width>210</width>
                                     </dimensions>
                                 </extent>
-                                <foliation></foliation>
-                                <collation></collation>
+                                <foliation/>
+                                <collation/>
 
 
                             </supportDesc>
@@ -266,9 +266,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                     <history>
                         <origin>
-                            <origPlace></origPlace>
+                            <origPlace/>
                             <origDate notBefore="1872" notAfter="1889" cert="medium"/>
-                            <note><persName ref="PRS10378Yohanne">King Yoḥannǝs IV</persName> (f.6),
+                            <note>
+                        <persName ref="PRS10378Yohanne">King Yoḥannǝs IV</persName> (f.6),
                             Coptic Patriach Peter and
                             Ethiopian <persName ref="PRS8388SalamaI">Metropolitan Salāmā III</persName>,
                              are mentioned in the prayers (for instance, f. 19v).
@@ -314,12 +315,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
 
           <particDesc>
              <listPerson>
-               <person></person>
+               <person/>
                 <person>
                    <persName ref="PRS7674Orlov" role="owner"/>
                 </person>
@@ -353,7 +360,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DN" when="2019-04-12">Correction</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

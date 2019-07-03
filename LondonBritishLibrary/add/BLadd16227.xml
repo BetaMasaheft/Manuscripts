@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BLadd16227"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Mawāśǝʾǝt</title>
@@ -383,7 +383,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#46v"/>
                                     <q xml:lang="gez">ዝንቱ፡ መጽሐፍ፡ ዘወልደ፡ ጊዮርጊስ፡ ወመምህሩ፡ ሶፎንያስ፡</q>
                                     <note>The note states that <persName role="owner" ref="PRS11058WaldaG">Walda Giyorgis</persName> is the owner of the manuscript. 
-                                        The note also mentions <persName ref="PRS11059Sofonya"><roleName type="title">mamhǝr</roleName> Sofonyās</persName>.</note>
+                                        The note also mentions <persName ref="PRS11059Sofonya">
+                                 <roleName type="title">mamhǝr</roleName> Sofonyās</persName>.</note>
                                 </item>
                                 <item xml:id="a2">
                                     <desc type="Poem"/>
@@ -428,7 +429,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -452,7 +459,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="MV" when="2016-08-22">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

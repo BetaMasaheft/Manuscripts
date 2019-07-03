@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BDLbruce92"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Chronicles</title>
@@ -57,7 +57,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <msItem xml:id="ms_i1.1">
                         <locus from="1" to="2"/>
                         <title type="complete" xml:lang="gez">ንጽሕፍ፡ ሕገ፡ ወሥርዓተ፡ መንግሥት፡ ዘወጽአ፡ እምኢየሩሳሌም፡
-                           ምስለ፡ <persName ref="PRS7005Menilek">እብነ፡ ሐኪም፡</persName> ወልደ፡ <persName ref="PRS8925Solomon">ሰሎሞን፡ </persName> ዘውእቱ፡ <persName ref="PRS7005Menilek">ምንይልክ፡</persName></title>
+                           ምስለ፡ <persName ref="PRS7005Menilek">እብነ፡ ሐኪም፡</persName> ወልደ፡ <persName ref="PRS8925Solomon">ሰሎሞን፡ </persName> ዘውእቱ፡ <persName ref="PRS7005Menilek">ምንይልክ፡</persName>
+                        </title>
                         <textLang mainLang="gez"/> 
                         <note>Description of the functions of the royal residence and kingdom, stating the titles and
                         functions of the highest dignitaries.</note>
@@ -162,7 +163,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                      <msItem xml:id="ms_i2.2">
                         <locus target="#8"/>
-                        <title type="complete" xml:lang="gez">ታሪክ፡ ዘ<persName ref="PRS1857Amdase"><roleName type="title">ሐፄ፡</roleName> ዓምደ፡ ጽዮን፡</persName> </title> 
+                        <title type="complete" xml:lang="gez">ታሪክ፡ ዘ<persName ref="PRS1857Amdase">
+                              <roleName type="title">ሐፄ፡</roleName> ዓምደ፡ ጽዮን፡</persName> 
+                        </title> 
                         <!--ID-->
                         <textLang mainLang="gez"/> 
                      </msItem>
@@ -228,8 +231,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <msItem xml:id="ms_i2.11">
                         <locus from="21" to="31"/>
                         <title type="complete" xml:lang="gez" ref="LIT3950ChronIyasu">ታሪክ፡ ዘ
-                           <persName ref="PRS5616IyasuI"><roleName type="title">ንጉሠ፡ ነገሥት፡</roleName>  ኢያሱ፡</persName> ዘስመ፡ መንግሥቱ፡ 
-                           <persName ref="PRS5616IyasuI">አድያም፡ ሰገድ፡</persName> </title>
+                           <persName ref="PRS5616IyasuI">
+                              <roleName type="title">ንጉሠ፡ ነገሥት፡</roleName>  ኢያሱ፡</persName> ዘስመ፡ መንግሥቱ፡ 
+                           <persName ref="PRS5616IyasuI">አድያም፡ ሰገድ፡</persName> 
+                        </title>
                         <textLang mainLang="gez"/> 
                      </msItem>
                      
@@ -403,6 +408,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -424,7 +435,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="SG" when="2018-05-29">Markup persons and titles</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

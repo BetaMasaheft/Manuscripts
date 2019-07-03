@@ -3,8 +3,11 @@
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE188" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="en"
+     xml:id="RIE188"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>RIÉ 188 </title>
@@ -44,10 +47,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <supportDesc>
 
                         <support>
-                           <material key="stone"
-                              ref="https://www.eagle-network.eu/voc/material/lod/57"/>
-                           <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/1996"
-                              >Throne</objectType>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
+                           <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/1996">Throne</objectType>
                         </support>
                         <extent>
                            <dimensions type="outer" unit="mm">
@@ -62,8 +63,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <rs type="execution" cert="low"
-                              ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                           <rs type="execution"
+                               cert="low"
+                               ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
                         </layout>
                         <layout writtenLines="30"/>
                      </layoutDesc>
@@ -82,8 +84,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                <history>
                   <origin>
-                     <origPlace> It was seen by the DAE in a private house in <placeName
-                           ref="LOC1310Aksum"/>
+                     <origPlace> It was seen by the DAE in a private house in <placeName ref="LOC1310Aksum"/>
                      </origPlace>
                      <origDate notBefore="0300" notAfter="0400"/>
                   </origin>
@@ -118,6 +119,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -145,37 +152,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
       </revisionDesc>
    </teiHeader>
-   <text xml:lang="gez">
+   <text xml:lang="gez" xml:base="https://betamasaheft.eu/">
 
       <body>
 
          <div type="edition" xml:lang="gez">
             <ab>
                <persName ref="PRS3938Ezana">ዔዛና፡  </persName>ወልደ፡ <persName ref="PRS3729ellaAm">እሌ፡ 
-                  ዐሚዳ፡ </persName>ብእስየ፡ <persName ref="PRS5011halen">ሐሌን፡  </persName>ንጉሠ፡ <placeName
-                  ref="LOC1310Aksum">አክሱም፡  </placeName>ወዘ፡ <placeName ref="LOC3868Himyar">ሕሜር፡ 
-                  </placeName>ወዘ፡ <placeName ref="LOC5333Raydan">ረይዳን፡  </placeName>ወዘ፡ <placeName
-                  ref="LOC5395Saba">ሰበእ፡  </placeName>ወዘ፡ <placeName ref="LOC5491Salhen">ሰልሔን፡ 
-                  </placeName>ወዘ፡ <placeName ref="ETH2065seyamo">ጽያሞ፡  </placeName>ወዘ፡ <placeName
-                  ref="ETH2263bega">ብጋ፡  </placeName>ወዘ፡ <placeName ref="ETH1768Kasu-K">ካሱ፡ 
+                  ዐሚዳ፡ </persName>ብእስየ፡ <persName ref="PRS5011halen">ሐሌን፡  </persName>ንጉሠ፡ <placeName ref="LOC1310Aksum">አክሱም፡  </placeName>ወዘ፡ <placeName ref="LOC3868Himyar">ሕሜር፡ 
+                  </placeName>ወዘ፡ <placeName ref="LOC5333Raydan">ረይዳን፡  </placeName>ወዘ፡ <placeName ref="LOC5395Saba">ሰበእ፡  </placeName>ወዘ፡ <placeName ref="LOC5491Salhen">ሰልሔን፡ 
+                  </placeName>ወዘ፡ <placeName ref="ETH2065seyamo">ጽያሞ፡  </placeName>ወዘ፡ <placeName ref="ETH2263bega">ብጋ፡  </placeName>ወዘ፡ <placeName ref="ETH1768Kasu-K">ካሱ፡ 
                   </placeName>ወልደ፡ <persName ref="PRS6521Mahrem">መሕርም፡ 
                   </persName>ዘአይትመዋእ፡ ለፀር፡ ፀብኡ፡ <placeName ref="ETH2271Sarane">ጸረኔ፡ 
                   </placeName>መንግሥቶሙ፡ <placeName ref="LOC6595Afan">አፋን፡ 
-                  </placeName>ሶቤ፡ ገፍዐን፡ ወቀተል፡ ነጋዲ▧፡ ወእምዝ፡ ፀበእናሁ፡ ወእምቀዳ፡ ፈነውነ፡ ሰራዊተ፡ ሰርዌ፡ መሐዛ፡ ወሰርዌ፡ <placeName
-                  ref="ETH2265Daken">ዳኴን፡  </placeName>ወሰርዌ፡ ሐራ፡ ወለሊነ፡ ተለውነ፡ ወኀደርነ፡ ምግባአ፡ መራድ፡ <placeName
-                  ref="LOC6596Ala">ዓላሃ፡  </placeName>ወአውፈርነ፡ ሰራዊተነ፡ ወቀተልዎ፡ ወፄወውዎ፡ ወመህረክዎ፡ ወቀተልነ፡ <placeName
-                  ref="ETH2272Sane">ሰዕኔ፡  </placeName>
+                  </placeName>ሶቤ፡ ገፍዐን፡ ወቀተል፡ ነጋዲ▧፡ ወእምዝ፡ ፀበእናሁ፡ ወእምቀዳ፡ ፈነውነ፡ ሰራዊተ፡ ሰርዌ፡ መሐዛ፡ ወሰርዌ፡ <placeName ref="ETH2265Daken">ዳኴን፡  </placeName>ወሰርዌ፡ ሐራ፡ ወለሊነ፡ ተለውነ፡ ወኀደርነ፡ ምግባአ፡ መራድ፡ <placeName ref="LOC6596Ala">ዓላሃ፡  </placeName>ወአውፈርነ፡ ሰራዊተነ፡ ወቀተልዎ፡ ወፄወውዎ፡ ወመህረክዎ፡ ወቀተልነ፡ <placeName ref="ETH2272Sane">ሰዕኔ፡  </placeName>
                <placeName ref="ETH2273Sawante">ወጸወንቴ፡  </placeName>
                <placeName ref="ETH2274Gema">ወጌማ፡  </placeName>
-               <placeName ref="ETH2275Zahtan">ወዘሕተን፡  </placeName>አርበዕቱ፡ አንጋደ፡ ወአኀዝነ፡ <persName
-                  ref="PRS11396Alita">አሊታሃ፡  </persName>ምስሌ፡ ክልኤ፡ ደቁ፡ ወኮነ፡ ቅትለ፡ ዕድ፡ <placeName
-                  ref="LOC6595Afan">ዘአፋን፡ 
-                  </placeName>፭፻፫፡ ወአንስት፡ ፪፻፪፡ ወኮነ፡ ፯፻፭፡ ፄዋ፡ ዕድ፡ ወአንስት፡ ዘሕዝበ፡ ገዐዛ፡ ዕድ፡ ፵፡ ወአንስት፡ ወደቂቅ፡ ፻፷፭፡ ወኮነ፡ ፪፻፭፡ ምህርካ፡ ለህም፡ ፫፼፲፻፱፻፶፯፡ እንስሳ፡ ዐውድ፡ ፰፻፳፯፡ ወተመይጡ፡ ዳኅነ፡ ምስሌ፡ አሕዛቢሆሙ፡ ወተከሉ፡ መንበረ፡ በዝየ፡ <placeName
-                  ref="LOC6597Sado">በሠዶ፡  </placeName>ወአመሐፀንዎ፡ <persName ref="PRS2175Astar">ለዐስተር፡  </persName>
+               <placeName ref="ETH2275Zahtan">ወዘሕተን፡  </placeName>አርበዕቱ፡ አንጋደ፡ ወአኀዝነ፡ <persName ref="PRS11396Alita">አሊታሃ፡  </persName>ምስሌ፡ ክልኤ፡ ደቁ፡ ወኮነ፡ ቅትለ፡ ዕድ፡ <placeName ref="LOC6595Afan">ዘአፋን፡ 
+                  </placeName>፭፻፫፡ ወአንስት፡ ፪፻፪፡ ወኮነ፡ ፯፻፭፡ ፄዋ፡ ዕድ፡ ወአንስት፡ ዘሕዝበ፡ ገዐዛ፡ ዕድ፡ ፵፡ ወአንስት፡ ወደቂቅ፡ ፻፷፭፡ ወኮነ፡ ፪፻፭፡ ምህርካ፡ ለህም፡ ፫፼፲፻፱፻፶፯፡ እንስሳ፡ ዐውድ፡ ፰፻፳፯፡ ወተመይጡ፡ ዳኅነ፡ ምስሌ፡ አሕዛቢሆሙ፡ ወተከሉ፡ መንበረ፡ በዝየ፡ <placeName ref="LOC6597Sado">በሠዶ፡  </placeName>ወአመሐፀንዎ፡ <persName ref="PRS2175Astar">ለዐስተር፡  </persName>
                <persName ref="PRS2622Beher">ወለብሔር፡  </persName>
                <persName ref="PRS6973Medr">ወለምድር፡ 
-                  </persName>ለእመ፡ ቦዘ፡ ነሠቶ፡ ወነቀሎ፡ ውእቱ፡ ወብሔሩ፡ ወዘመዱ፡ ለይትነቀል፡ ወይትነሠት፡ እብሔሩ፡ ለይሢእ፡ ወቀፍኡ፡ አኮቴተ፡ <persName
-                  ref="PRS6521Mahrem">ለመሕርም፡  </persName>ዘወለዶሙ፡ ለህም፡ ፻፡ ወፄዋ፡ ፶፡ </ab>
+                  </persName>ለእመ፡ ቦዘ፡ ነሠቶ፡ ወነቀሎ፡ ውእቱ፡ ወብሔሩ፡ ወዘመዱ፡ ለይትነቀል፡ ወይትነሠት፡ እብሔሩ፡ ለይሢእ፡ ወቀፍኡ፡ አኮቴተ፡ <persName ref="PRS6521Mahrem">ለመሕርም፡  </persName>ዘወለዶሙ፡ ለህም፡ ፻፡ ወፄዋ፡ ፶፡ </ab>
          </div>
       </body>
 

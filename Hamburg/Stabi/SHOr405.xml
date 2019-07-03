@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr405"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Mǝssālǝyāta Salomon, Ṭǝbaba Salomon, Maṣḥafa makbǝb, Song of Songs</title>
@@ -147,8 +147,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="19">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#28"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#28"/>.</note>
                                 <locus from="1" to="63"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>152</height>
@@ -171,8 +170,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -204,7 +202,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with plain wooden boards preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="paper"></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="paper"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               The boards, smaller than the bookblock, could have been reused from another codex.
                               The inner surface of the boards is plain and well smoothed while on the outer side the signs of the tool are visible.
@@ -225,7 +226,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               The book is kept inside its two-parts slip case, made of stiff leather.
                             </decoNote>
                             <decoNote xml:id="b13" type="other">
-                              Various red threads are sewn into the corners of <locus target="#1r #30r #48r #50r"></locus> while on fols. <locus target="#26 #56 #59"></locus> just the holes are left.
+                              Various red threads are sewn into the corners of <locus target="#1r #30r #48r #50r"/> while on fols. <locus target="#26 #56 #59"/> just the holes are left.
                               A white thread is looped around the first chain-stitch on the spine and used as bookmark.</decoNote>
                           </binding>
                         </bindingDesc>
@@ -255,7 +256,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -278,7 +285,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

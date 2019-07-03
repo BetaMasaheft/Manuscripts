@@ -4,12 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient822"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient822"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The History of the Jews</title>
@@ -62,7 +61,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <msItem xml:id="ms_i1.2">
                            <locus from="22r"/>
                             <title type="complete" ref="LIT2598Yosipp#Kefl2">begins with king <persName ref="PRS12452Antiochus"/>
-                                and ends with the reign of <persName ref="PRS1666Alexande">Alexander</persName></title>
+                                and ends with the reign of <persName ref="PRS1666Alexande">Alexander</persName>
+                     </title>
                               </msItem>
                         
                         <msItem xml:id="ms_i1.3">
@@ -115,7 +115,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">136</measure>
@@ -129,7 +129,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="24 25" cert="high"></layout>
+                                <layout columns="2" writtenLines="24 25" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -151,7 +151,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ዜና፡ አይሁድ፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ዜና፡ አይሁድ፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                             </list>
                         
@@ -159,8 +160,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     </physDesc>
                     
                     <history>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                            >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                         
                     </history>
@@ -188,7 +188,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -211,16 +217,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-

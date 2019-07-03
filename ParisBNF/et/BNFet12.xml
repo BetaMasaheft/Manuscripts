@@ -3,8 +3,11 @@
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BNFet12" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="en"
+     xml:id="BNFet12"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Psalms, Canticles, Prayers of the Hours, Wǝddāse Māryām</title>
@@ -68,13 +71,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <msItem xml:id="ms_i1.4">
                         <locus from="123ra" to="151va" facs="f251"/>
                         <title type="complete" ref="LIT3946Salotat"/>
-                        <incipit xml:lang="gez">በስመ፡ አብ፡ <gap reason="omitted" extent="unknown"
-                              resp="PRS10747Zotenbe"/> ንቀድም፡ <gap reason="omitted" extent="unknown"
-                              resp="PRS10747Zotenbe"/> በእንተ፡ ጽሒፈ፡ ጸሎታት፡ ዘሰዓታት፡ ዘሌሊት፡
+                        <incipit xml:lang="gez">በስመ፡ አብ፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/> ንቀድም፡ <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/> በእንተ፡ ጽሒፈ፡ ጸሎታት፡ ዘሰዓታት፡ ዘሌሊት፡
                            ወዘመዓልት።</incipit>
-                        <note>These prayers correspond probably to the ones in <ref type="mss"
-                              corresp="BNFet9#ms_i3"/> and are different from the ones in <ref
-                              type="mss" corresp="BNFet11#ms_i3"/>.</note>
+                        <note>These prayers correspond probably to the ones in <ref type="mss" corresp="BNFet9#ms_i3"/> and are different from the ones in <ref type="mss" corresp="BNFet11#ms_i3"/>.</note>
                         <note>
                            <ref type="work" corresp="LIT3198Prayer"/> includes an invocation on
                               <locus target="#125v"/> for <persName ref="PRS10626ZaraY"/>.</note>
@@ -151,8 +150,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <p>Between <locus target="#55" facs="f116"/> and <locus target="#56" facs="f117"/> one leaf is
                               missing.</p>
                            <p>
-                              <locus target="#159" facs="f323"/> has to be placed after <locus target="#156" facs="f319"
-                              />.</p>
+                              <locus target="#159" facs="f323"/> has to be placed after <locus target="#156" facs="f319"/>.</p>
                            <p>After <locus target="#159" facs="f324"/>, two leaves are missing.</p>
                         </condition>
                      </supportDesc>
@@ -181,8 +179,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </origin>
                   <provenance> Belonged to <persName ref="PRS8700Seguier"/>, after whose death it
                      was kept at the library of <placeName ref="INS0305SGP"/> and came to the
-                        <placeName ref="INS0303BNF"/> during the French Revolution <date
-                        notBefore="1790" notAfter="1795"/>.</provenance>
+                        <placeName ref="INS0303BNF"/> during the French Revolution <date notBefore="1790" notAfter="1795"/>.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -205,6 +202,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -238,7 +241,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-11-22">Added loci and facs</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

@@ -6,7 +6,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient531"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Catholic Epistles, Revelation, Acts of the Apostles, Pauline Epistles</title>
@@ -238,7 +238,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus from="2r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ሐዲሳት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ <supplied reason="undefined" resp="PRS10171Wright">ዓለም።</supplied></placeName></q>
+                                    <q xml:lang="gez">ሐዲሳት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ <supplied reason="undefined" resp="PRS10171Wright">ዓለም።</supplied>
+                              </placeName>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a2">
@@ -289,7 +291,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -310,7 +318,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-02-13">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

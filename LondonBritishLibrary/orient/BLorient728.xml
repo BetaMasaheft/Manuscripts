@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient728"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient728"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Life and Acts of Takla Haymānot and Acts of Filǝṗṗos </title>
@@ -52,23 +50,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             
                             
                             <msItem xml:id="ms_i1.1">
-                            <locus from="3r" to="133v"></locus>
+                            <locus from="3r" to="133v"/>
                             <title type="complete" ref="LIT3973GadlaT">The Life and Acts of Takla Haymānot</title>
-                                <explicit xml:lang="gez"><locus target="#133v"></locus><note>According to the explicit, the MS was written by one Qirqos, for one Minas, in the reign of King Iyāsu II</note></explicit>
+                                <explicit xml:lang="gez">
+                           <locus target="#133v"/>
+                           <note>According to the explicit, the MS was written by one Qirqos, for one Minas, in the reign of King Iyāsu II</note>
+                        </explicit>
                                 <!-- this information from the catalogue was completely lacking; names must be linked -->
                         </msItem>
                         <msItem xml:id="ms_i1.2">
-                            <locus from="134r"></locus>
+                            <locus from="134r"/>
                             <title type="complete" ref="LIT3971Taamme">Miracles of Takla Haymānot, 20 in number</title>
                         </msItem>
                         </msItem>
                         <msItem xml:id="ms_i2">
-                            <locus from="150r"></locus>
+                            <locus from="150r"/>
                             <title type="complete" ref="LIT1445GadlaF">The Acts of Filǝṗṗos </title>
                            <msItem xml:id="ms_i2.1">
-                               <locus target="#147r"></locus>
+                               <locus target="#147r"/>
                                <title>A service in honour of Filǝṗṗos</title>
-                               <notatedMusic><desc>The service is with musical notation</desc></notatedMusic>
+                               <notatedMusic>
+                           <desc>The service is with musical notation</desc>
+                        </notatedMusic>
                            </msItem>
                         </msItem>
                       
@@ -87,7 +90,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">199</measure>
@@ -101,19 +104,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="20 23" cert="high"></layout>
+                                <layout columns="2" writtenLines="20 23" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
                         <handDesc>
                             
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The first part of this manuscript <locus target="#3" > </locus> to <locus target="#145"/> is written in a fine hand, towards the middle of <date>18th century</date>; 
+                                <desc>The first part of this manuscript <locus target="#3"> </locus> to <locus target="#145"/> is written in a fine hand, towards the middle of <date>18th century</date>; 
 
                                     the second part, <locus target="#147"/>  to <locus target="#199"/> somewhat later.
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                         </handDesc>   
@@ -131,13 +134,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <additions>
                             <list>
                                 <item xml:id="a1">
-                                <locus target="#3r"></locus>
+                                <locus target="#3r"/>
                                 <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                     <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                <q xml:lang="gez">ገድለ፡ ተክለ፡ ሃይማኖት፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                <q xml:lang="gez">ገድለ፡ ተክለ፡ ሃይማኖት፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 
                                 
-                            </item></list>
+                            </item>
+                     </list>
                             
                         </additions>
                         <bindingDesc>
@@ -145,7 +150,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <decoNote xml:id="b1">In the metal covers of copper gilt, with three crosses on each</decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
                                    <material key="metal"/>
-                                    <material key="other"></material>
+                                    <material key="other"/>
                                 </decoNote>
                             </binding>
                         </bindingDesc>
@@ -191,7 +196,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -217,28 +228,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_728_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

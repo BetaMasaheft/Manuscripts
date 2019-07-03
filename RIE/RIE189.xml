@@ -1,9 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
-?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-   xml:lang="en" xml:id="RIE189" type="mss" xml:base="https://betamasaheft.eu/" >
-   <teiHeader >
+     xml:lang="en"
+     xml:id="RIE189"
+     type="mss"
+     xml:base="https://betamasaheft.eu/">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>RIÉ 189 </title>
@@ -51,7 +56,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <rs type="execution" cert="low" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                           <rs type="execution"
+                               cert="low"
+                               ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
                         </layout>
                         <layout writtenLines="52"/>
                      </layoutDesc>
@@ -107,7 +114,83 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <p>Encoded according to TEI P5 Guidelines.</p>
             <p>All internal references are given without a prefix only with the ID and can be expanded by prepending the base URL https://betamasaheft.eu/.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"  href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <listPrefixDef xml:base="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml"
+                        xml:lang="">
+            <prefixDef ident="bm"
+                       matchPattern="([a-zA-Z0-9]+)"
+                       replacementPattern="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm:$1">
+    </prefixDef>
+            <prefixDef ident="pleiades"
+                       matchPattern="(\d{5-8})"
+                       replacementPattern="https://pleiades.stoa.org/places/$1">
+    </prefixDef>
+            <prefixDef ident="sdc"
+                       matchPattern="([a-zA-Z0-9]+)"
+                       replacementPattern="https://w3id.org/sdc/ontology#$1">
+    </prefixDef>
+            <prefixDef ident="wd"
+                       matchPattern="([a-zA-Z0-9]+)"
+                       replacementPattern="https://www.wikidata.org/entity/$1">
+    </prefixDef>
+            <prefixDef ident="snap"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://data.snapdrgn.net/ontology/snap#$1">
+    </prefixDef>
+            <prefixDef ident="saws"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://purl.org/saws/ontology#$1">
+    </prefixDef>
+            <prefixDef ident="skos"
+                       matchPattern="([a-za-zA-Z]+)"
+                       replacementPattern="http://www.w3.org/2004/02/skos/core#$1">
+    </prefixDef>
+            <prefixDef ident="gn"
+                       matchPattern="([a-zA-Z0-9]+)"
+                       replacementPattern="http://www.geonames.org/ontology#$1">
+    </prefixDef>
+            <prefixDef ident="dcterms"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1">
+    </prefixDef>
+            <prefixDef ident="lawd"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://lawd.info/ontology/$1">
+    </prefixDef>
+    
+            <prefixDef ident="gn"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://www.geonames.org/ontology#$1">
+    </prefixDef>
+            <prefixDef ident="syriaca"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://syriaca.org/documentation/relations.html#$1">
+    </prefixDef>
+    
+            <prefixDef ident="agraleon"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://d-nb.info/standards/elementset/agrelon.owl#$1">
+    </prefixDef>
+            <prefixDef ident="rel"
+                       matchPattern="([a-zA-Z]+)"
+                       replacementPattern="http://purl.org/vocab/relationship/$1">
+    </prefixDef>
+            <prefixDef ident="em"
+                       matchPattern="(\d+)"
+                       replacementPattern="https://www.eagle-network.eu/voc/material/lod/$1">
+    </prefixDef>
+    
+            <prefixDef ident="eo"
+                       matchPattern="(\d+)"
+                       replacementPattern="https://www.eagle-network.eu/voc/objtyp/lod/$1">
+    </prefixDef>
+    
+            <prefixDef ident="ew"
+                       matchPattern="(\d+)"
+                       replacementPattern="https://www.eagle-network.eu/voc/writing/lod/$1">
+    </prefixDef>
+         </listPrefixDef>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -131,7 +214,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
       </revisionDesc>
    </teiHeader>
-   <text xml:lang="gez">
+   <text xml:lang="gez" xml:base="https://betamasaheft.eu/">
 
       <body>
          <div type="edition" xml:lang="gez">

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESam015"
      xml:lang="en"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Fragments of three various manuscripts</title>
@@ -202,7 +202,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </objectDesc>
                   <additions>
                      <list>
-                        <item xml:id="e1"><desc type="Correction">Corrections written over erasures, in the main hand: fols. 10v, 11r, 12v, 14v, 25v, 26v, 31r, 33v, 38v, 45r, 52r, 63r, 64r, 64v, 65v, 66v, 82v, 88r.</desc></item>
+                        <item xml:id="e1">
+                           <desc type="Correction">Corrections written over erasures, in the main hand: fols. 10v, 11r, 12v, 14v, 25v, 26v, 31r, 33v, 38v, 45r, 52r, 63r, 64r, 64v, 65v, 66v, 82v, 88r.</desc>
+                        </item>
                      </list>
                   </additions>
                   <bindingDesc>
@@ -585,6 +587,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Encoded according to TEI P5 Guidelines.</p>
             
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          
@@ -611,7 +619,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2019-04-25">added missing extras from domlib</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESagm003"
      xml:lang="en"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Four Gospels</title>
@@ -158,7 +158,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            </dimensions>
                         </extent>
                         <foliation><!--2016-10-18+02:00 Updated AGM-003 from DomLib--></foliation>
- <collation>
+                        <collation>
                            <list>
                               <item xml:id="q1">
                                  <dim unit="leaf">1</dim>{A(s.l. 1, stub after 1/fol. 1)} (older leaf turned sidewards)</item>
@@ -242,7 +242,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <locus from="178r" to="179v"/> XXVI(2/fols. 178r-179v)
                                  </item>
                            </list>
-   <note> Quires A, I and II consist of single leaves only (fol. 3 is
+                           <note> Quires A, I and II consist of single leaves only (fol. 3 is
     misplaced here from its proper position between fols. 137 and 138),
     to which parchment strips were attached. &#xD; The only leaf of
     quire A is inserted sideways.</note>
@@ -313,8 +313,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </decoDesc>
                   <additions>
                      <list>
-                        <item xml:id="e1"><desc>Fols. 6v, 56r, 137v (in the upper margin): Crude notes.</desc></item> 
-                        <item xml:id="e2"><desc>Fol. 1 (quire I) is a leaf from a different, more recent manuscript (18th cent.?) with a non-identified text (theological treatise?) written in three columns.</desc></item>
+                        <item xml:id="e1">
+                           <desc>Fols. 6v, 56r, 137v (in the upper margin): Crude notes.</desc>
+                        </item> 
+                        <item xml:id="e2">
+                           <desc>Fol. 1 (quire I) is a leaf from a different, more recent manuscript (18th cent.?) with a non-identified text (theological treatise?) written in three columns.</desc>
+                        </item>
                      </list>
                   </additions>
                   <bindingDesc>
@@ -371,6 +375,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
 
@@ -398,7 +408,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-04-26" who="ES">split extras</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

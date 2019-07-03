@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient829" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient829"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Fragments</title>
@@ -38,8 +41,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     </msIdentifier>
 
                     <history>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
                         </provenance>
                     </history>
@@ -122,14 +124,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <item xml:id="a1">
                                         <locus target="#5r"/>
                                         <desc type="ScribalSignature"> The name of the scribe,
-                                                <persName role="scribe" ref="PRS11647TaklaHaymanot"
-                                            /> at the foot of the page. </desc>
+                                                <persName role="scribe" ref="PRS11647TaklaHaymanot"/> at the foot of the page. </desc>
                                     </item>
                                     <item xml:id="a2">
                                         <locus target="#5r"/>
                                         <desc type="OwnershipNote"> The name of later owner,
-                                                <persName role="owner" ref="PRS11648WalattaSerael"
-                                                >ወለተ፡ <choice>
+                                                <persName role="owner" ref="PRS11648WalattaSerael">ወለተ፡ <choice>
                                                   <sic resp="PRS10171Wright">ስ</sic>
                                                   <corr resp="DR">እስ</corr>
                                                 </choice>ራኤል፡</persName>, at the top of the page.
@@ -320,7 +320,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         
         <profileDesc>
             <textClass>
@@ -341,7 +347,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-11-07">Changed msFrag to msPart and added p3</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

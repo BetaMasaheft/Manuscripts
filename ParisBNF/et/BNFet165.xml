@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BNFet165"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Fragments of chants, Exodus, the Pauline Epistles, Prayers, <foreign xml:lang="gez">Wǝddāse Māryām</foreign>
@@ -456,6 +456,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -477,17 +483,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2016-11-21">Created catalogue entry</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
      <body>
         <listRelation>
-           <relation active="BNFet165#UniCirc1" name="dcterms:hasPart" passive="BNFet165#p1 BNFet165#p2 BNFet165#p3 BNFet165#p5 BNFet165#p6"/>
-           <relation active="BNFet165#UniCirc1" name="sdc:undergoesTransformation" passive="BNFet165#tr1"/>
-           <relation active="BNFet165#p4" name="sdc:undergoesTransformation" passive="BNFet165#tr1"/>
-           <relation active="BNFet165#tr1" name="sdc:hasTransformationModel" passive="sdc:A4"/>
+           <relation active="BNFet165#UniCirc1"
+                      name="dcterms:hasPart"
+                      passive="BNFet165#p1 BNFet165#p2 BNFet165#p3 BNFet165#p5 BNFet165#p6"/>
+           <relation active="BNFet165#UniCirc1"
+                      name="sdc:undergoesTransformation"
+                      passive="BNFet165#tr1"/>
+           <relation active="BNFet165#p4"
+                      name="sdc:undergoesTransformation"
+                      passive="BNFet165#tr1"/>
+           <relation active="BNFet165#tr1"
+                      name="sdc:hasTransformationModel"
+                      passive="sdc:A4"/>
            <relation active="BNFet165#tr1" name="skos:exactMatch" passive="BNFet45#tr2"/>
-           <relation active="BNFet165#tr1" name="sdc:resultsIn" passive="BNFet165#UniCirc2"/>
-           <relation active="BNFet165#UniCirc2" name="dcterms:hasPart" passive="BNFet165#p1 BNFet165#p2 BNFet165#p3 BNFet165#p4 BNFet165#p5 BNFet165#p6"/>
-           <relation active="BNFet165#UniCirc2" name="skos:exactMatch" passive="BNFet165"/>           
+           <relation active="BNFet165#tr1"
+                      name="sdc:resultsIn"
+                      passive="BNFet165#UniCirc2"/>
+           <relation active="BNFet165#UniCirc2"
+                      name="dcterms:hasPart"
+                      passive="BNFet165#p1 BNFet165#p2 BNFet165#p3 BNFet165#p4 BNFet165#p5 BNFet165#p6"/>
+           <relation active="BNFet165#UniCirc2"
+                      name="skos:exactMatch"
+                      passive="BNFet165"/>           
            <relation active="BNFet165#p4" name="skos:exactMatch" passive="BNFet45#f2"/>
         </listRelation>
          <ab/>

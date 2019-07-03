@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="mss"
      xml:lang="en"
      xml:id="DabraDammoSenodos">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">
@@ -34,13 +34,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <collection/>
                   <idno>DD unnumbered</idno>
                </msIdentifier>
-               <msContents><msItem xml:id="ms_i1">
+               <msContents>
+                  <msItem xml:id="ms_i1">
                   
-                  <title type="complete" ref="LIT2317Senodo"/>
-               </msItem></msContents>
+                     <title type="complete" ref="LIT2317Senodo"/>
+                  </msItem>
+               </msContents>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -53,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

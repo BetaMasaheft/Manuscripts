@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="fiaccadori2007"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="fiaccadori2007"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Fiaccadori 2007</title>
@@ -39,7 +39,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Inscription">
                             <supportDesc>
                                 <support>
-                                    <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/735"></material>
+                                    <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/735"/>
                                     <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/250">Stele</objectType>
                                 </support>
                                 </supportDesc>
@@ -59,9 +59,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <history>
                         <origin>
-                            <origDate notBefore="0401" notAfter="0600"></origDate>
+                            <origDate notBefore="0401" notAfter="0600"/>
                         </origin>
-                        <provenance type="found"><date notBefore="2005" notAfter="2005"></date> <placeName ref="LOC3642Gumale"/></provenance>
+                        <provenance type="found">
+                     <date notBefore="2005" notAfter="2005"/> 
+                     <placeName ref="LOC3642Gumale"/>
+                  </provenance>
                     </history>
                     
                     
@@ -87,7 +90,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
@@ -103,21 +112,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2018-12-14" who="PL">Created entry from Fiaccadori article</change>
             </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         
         <body>
             <div type="edition" xml:lang="grc">
                 <ab>
-                    <lb n="1"/><g type="cross">+</g>
+                    <lb n="1"/>
+               <g type="cross">+</g>
                     <lb n="2"/> Ἐνθάδε
-                    <lb n="3"/> κεῖτε Κυρι<lb break="no" 
-                        n="4"/>ακὸς ζήσ<lb break="no" 
-                            n="5"/>ας <date type="age-at-death" dur="P10Y">ἤτῃ 
+                    <lb n="3"/> κεῖτε Κυρι<lb break="no" n="4"/>ακὸς ζήσ<lb break="no" n="5"/>ας <date type="age-at-death" dur="P10Y">ἤτῃ 
                     <num value="10">ι</num> 
-                    <expan><abbr>μ<lb break="no" 
-                        n="6"/></abbr><supplied 
-                            reason="lost"><abbr>ῆν</abbr><ex>ας</ex></supplied></expan></date><gap 
-                            reason="lost" extent="3" unit="character"/>
+                    <expan>
+                     <abbr>μ<lb break="no" n="6"/>
+                     </abbr>
+                     <supplied reason="lost">
+                        <abbr>ῆν</abbr>
+                        <ex>ας</ex>
+                     </supplied>
+                  </expan>
+               </date>
+               <gap reason="lost" extent="3" unit="character"/>
             </ab>
             </div>
         </body>

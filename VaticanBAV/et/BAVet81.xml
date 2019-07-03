@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BAVet81"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Four Gospels</title>
@@ -104,7 +104,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <date>1923-24 AD</date>, ten years after king <persName ref="PRS7006Menilek">Mǝnilǝk</persName>'s 
                            death and in the seventh year of reign of his daughter <persName ref="PRS10671Zawditu">Zawditu</persName>, while 
                            <persName ref="PRS5226haylase">Rās Tafari Ḫayla Śǝllāse</persName> was king. The colophon also mentions the name of the patron, 
-                           <persName role="patron" ref="PRS9942WaldaMa"><roleName type="title">ṣaḥāfe tǝʾǝzāz</roleName> Malʾaka Salām Walda Masqal</persName>, 
+                           <persName role="patron" ref="PRS9942WaldaMa">
+                                 <roleName type="title">ṣaḥāfe tǝʾǝzāz</roleName> Malʾaka Salām Walda Masqal</persName>, 
                            and that of the scribe of the manuscript <persName role="scribe" ref="PRS11621WaldaRu">Walda Rufāʾel</persName> from 
                            <placeName ref="LOC1464Ankoba">ʾAnkobar</placeName>.
                         </note>
@@ -324,6 +325,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -357,7 +364,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="MV" when="2017-05-04">Created catalogue entry</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

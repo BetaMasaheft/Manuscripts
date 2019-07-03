@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVefiopsk18"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
      <fileDesc>
         <titleStmt>
            <title>The Spiritual Elder</title>
@@ -56,7 +56,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <msItem xml:id="ms_i1.1">
                         <locus from="4r" to="108v"/>
                         <title type="complete" ref="LIT3989Aragawi#Homilies">36 homilies</title>
-                   </msItem>
+                     </msItem>
 
                         <msItem xml:id="ms_i1.2">
                            <locus from="109r" to="161v"/>
@@ -124,7 +124,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                         <condition key="deficient">
                            <note>The manuscript is damaged by water</note>
-                           <note>The text of <ref target ="#ms_i1.6">has been erased with the exception of the first word</ref></note>
+                           <note>The text of <ref target="#ms_i1.6">has been erased with the exception of the first word</ref>
+                           </note>
                         </condition>
                      </supportDesc>
                      <layoutDesc>
@@ -145,10 +146,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        </handNote>
 
                      <handNote xml:id="h2" script="Ethiopic">
-                        <seg type="script"></seg>
+                        <seg type="script"/>
                         <seg type="ink">Black</seg>
-                      <date>Posterior to the main text</date>
-                        <note>The hand of the corections or commentaries <ref target="#e6"></ref></note>
+                        <date>Posterior to the main text</date>
+                        <note>The hand of the corections or commentaries <ref target="#e6"/>
+                        </note>
                      </handNote>
                   </handDesc>
 
@@ -157,33 +159,39 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <item xml:id="a1">
                            <desc type="GuestText"> Beginning of the same work, <title type="incomplete" ref="LIT3989Aragawi"/>, ʾAragāwi manfasāwi</desc>
                            <locus from="1r" to="3r"/>
-                           <q xml:lang="gez"></q>
-                             <note>The repeated part is that on <locus from="4r" to="6r"></locus></note>
+                           <q xml:lang="gez"/>
+                             <note>The repeated part is that on <locus from="4r" to="6r"/>
+                           </note>
                            </item>
 
                         <item xml:id="e1">
-                           <locus target="#4r"></locus>
-                           <desc>Indication for the reading on Monday, <locus from="4r" to="28v">, written probably in the upper margin </locus></desc>
+                           <locus target="#4r"/>
+                           <desc>Indication for the reading on Monday, <locus from="4r" to="28v">, written probably in the upper margin </locus>
+                           </desc>
                            </item>
 
                         <item xml:id="e2">
-                           <locus target="#28r"></locus>
-                           <desc>Indication for the reading on Tuesday, <locus from="28r" to="52r">, written probably in the upper margin </locus></desc>
+                           <locus target="#28r"/>
+                           <desc>Indication for the reading on Tuesday, <locus from="28r" to="52r">, written probably in the upper margin </locus>
+                           </desc>
                         </item>
 
                         <item xml:id="e3">
-                           <locus target="#52r"></locus>
-                           <desc>Indication for the reading on Wednesday, <locus from="52r" to="75v">, written probably in the upper margin </locus></desc>
+                           <locus target="#52r"/>
+                           <desc>Indication for the reading on Wednesday, <locus from="52r" to="75v">, written probably in the upper margin </locus>
+                           </desc>
                         </item>
 
                         <item xml:id="e4">
-                           <locus target="#76r"></locus>
-                           <desc>Indication for the reading on Thursday, <locus from="76r" to="105v">, written probably in the upper margin </locus></desc>
+                           <locus target="#76r"/>
+                           <desc>Indication for the reading on Thursday, <locus from="76r" to="105v">, written probably in the upper margin </locus>
+                           </desc>
                         </item>
 
                         <item xml:id="e5">
-                           <locus target="#106r"></locus>
-                           <desc>Indication for the reading on Friday, <locus from="106r" to="126v">, written probably in the upper margin </locus></desc>
+                           <locus target="#106r"/>
+                           <desc>Indication for the reading on Friday, <locus from="106r" to="126v">, written probably in the upper margin </locus>
+                           </desc>
                         </item>
 
                         <item xml:id="e6">
@@ -244,6 +252,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
 
@@ -272,7 +286,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change when="2018-05-07" who="ES">Corrections</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

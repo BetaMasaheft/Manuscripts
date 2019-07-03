@@ -4,14 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient726
-    "
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient726"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Life and Acts of Takla Hāymānot</title>
@@ -72,7 +69,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <locus from="133v"/>
                             <title type="complete" ref="LIT2774RepCh58">An invocation of Takla Hāymānot and other saints</title>
                             <!-- note that the incipit and ID were provided in 721, see reference in the catalogue -->
-                            <textLang mainLang="gez"></textLang>
+                            <textLang mainLang="gez"/>
                             <incipit xml:lang="gez">ሰላም፡ ለከ፡ አበ፡ አዕላፍ፡ በጸጋ፡ ተከለ፡ ሃይማኖት፡ ፍጹም፤ በሥራኅ፡ ወጻማ፡ ወብዙኅ፡ ቀቂም።</incipit>
                         </msItem>
                         </msItem>
@@ -87,7 +84,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">135</measure>
@@ -101,7 +98,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="23 24" cert="high"></layout>
+                                <layout columns="2" writtenLines="23 24" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -112,7 +109,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -123,13 +120,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="e1">
                                     <desc>The name of the owner of the manuscript is <persName ref="PRS12531ZawaldaMaryam" role="owner">ዘወልደ፡ ማርያም፡</persName>
                                         and the name of the scribe is <persName ref="PRS12532WaldaAragay">ወልደ፡ አረጋይ፡</persName>
-                                        <locus target="#101v"></locus></desc>
+                                        <locus target="#101v"/>
+                           </desc>
                                      </item>
                                 <item xml:id="a1">
                                 <locus target="#5r"/>
                                 <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                     <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                <q xml:lang="gez">ገድለ፡ ተክለ፡ ሃይማኖት፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                <q xml:lang="gez">ገድለ፡ ተክለ፡ ሃይማኖት፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                             </item>
                             </list>
                             
@@ -185,7 +184,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -206,21 +211,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-

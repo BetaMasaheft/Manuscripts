@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient755"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient755"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Works of Mār Yǝṣhāq
@@ -66,7 +64,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">56</measure>
@@ -91,7 +89,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is written in a fair hand, of the  <date>18th century.</date>.
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -102,18 +100,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#2r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ማር፡ ይስሐቅ፡ዘ<placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ማር፡ ይስሐቅ፡ዘ<placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 <item xml:id="a12">
                                     <locus target="#2r"/>
                                     <desc type="Excerpt"> A short notice of <persName ref="PRS5581Isaacof"/> in Amharic. </desc>
-                                    <q xml:lang="gez">የ <persName ref="PRS5581Isaacof"><roleName type="title">ማር፡</roleName> ይስሐቅ፡</persName>  ሀገረ፡ ሙላዱ፡ ብሔረ፡ ነገዱ፡ 
+                                    <q xml:lang="gez">የ <persName ref="PRS5581Isaacof">
+                                 <roleName type="title">ማር፡</roleName> ይስሐቅ፡</persName>  ሀገረ፡ ሙላዱ፡ ብሔረ፡ ነገዱ፡ 
                                         <placeName ref="LOC5833Syria">ሶርያ፡ </placeName> ነው። </q>
                                 </item>
                                 
                                 <item xml:id="e1">
                                 <locus target="#1r, #56rv"/>
-                                <desc >The name of the owner is <persName ref="PRS12647WaldaAmlak"/>. 
+                                <desc>The name of the owner is <persName ref="PRS12647WaldaAmlak"/>. 
                                 </desc>
                                 
                             </item> 
@@ -161,7 +161,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -182,13 +188,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="SG" when="2019-04-29">Complete description</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-

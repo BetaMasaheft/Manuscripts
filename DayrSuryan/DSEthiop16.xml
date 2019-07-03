@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="DSEthiop16"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt> 
             <title>Excerpt from the preface to the miracles of Mary</title>
@@ -44,7 +44,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <locus from="1r" to="6v"/>
                      <title type="incomplete" ref="LIT1968Mashaf">Unidentified text, probably an excerpt from the preface of the Miracles of Mary</title>
                         <textLang mainLang="gez"/>
-                 <note>The beginning and end is missing.</note>
+                     <note>The beginning and end is missing.</note>
                      
                         <!--see ES am 003-->
                      
@@ -96,7 +96,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <depth>2</depth>
                            </dimensions>
                      
-                     </extent>
+                        </extent>
                         
                         <collation>
                            <list>
@@ -111,8 +111,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                      <layoutDesc>
                         <layout columns="1">
-                           <note corresp="#margin">Data on margin dimensions taken from <locus
-                              target="#1r"/>.</note>
+                           <note corresp="#margin">Data on margin dimensions taken from <locus target="#1r"/>.</note>
                            <dimensions type="margin" unit="mm" xml:id="margin">
                               <dim type="top">23</dim>
                               <dim type="bottom">29</dim>
@@ -126,7 +125,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"></seg>
+                        <seg type="script"/>
                         <seg type="ink">Black, red.</seg>
                         <seg type="rubrication">ማርያም፡, parts of punctuation signs and numerals, structuring elements 
                            (on <locus target="#4v"/> ጽዮን፡, ወኢይምስሎ<supplied reason="omitted" resp="DR">፡</supplied>, እስመ፡ ክቡር፡;
@@ -136,10 +135,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <additions>
                      <list>
-                      <item xml:id="e1">
-                         <locus target="#2r #3r #3v"/>
-                         <desc>Omitted words and characters have been added above the line.</desc>
-                      </item> 
+                        <item xml:id="e1">
+                           <locus target="#2r #3r #3v"/>
+                           <desc>Omitted words and characters have been added above the line.</desc>
+                        </item> 
                      </list>
                   </additions>
                   
@@ -163,6 +162,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -183,9 +188,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-06-19">Added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
-       <ab/>
+         <ab/>
       </body>
    </text>
 </TEI>

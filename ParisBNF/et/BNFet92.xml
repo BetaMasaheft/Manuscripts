@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BNFet92"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Collection of chants</title>
@@ -230,7 +230,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <locus target="#37"/>
                            <title type="complete">Hymn for Lent</title>
                            <textLang mainLang="gez"/>
-                           <note><foreign xml:lang="gez">ዘአምላኪየ፡</foreign></note> 
+                           <note>
+                              <foreign xml:lang="gez">ዘአምላኪየ፡</foreign>
+                           </note> 
                            <!--mark up antiphon type-->
                         </msItem>
               
@@ -439,6 +441,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -460,10 +468,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2017-03-27">Text added</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
-            <div type="textpart" corresp="#ms_i1" xml:id="IncipitHymn" xml:lang="gez">
+            <div type="textpart"
+                 corresp="#ms_i1"
+                 xml:id="IncipitHymn"
+                 xml:lang="gez">
                <note>The following is the incipit of a hymn:</note>
                <ab>
           ዘሂ፡ በዜማሁ፡ ሃሌሉያ፡ ለአብ፡ ጸለየ፡ <persName ref="PRS2296Azariah">አዛርያ፡</persName> ሃሌሉያ፡ ለወልድ፡ በማእከለ፡ እቶነ፡ እሳት።
@@ -472,7 +483,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </ab>
             </div>
       
-            <div type="textpart" corresp="#ms_i1.2" xml:id="HymnZahima" xml:lang="gez">
+            <div type="textpart"
+                 corresp="#ms_i1.2"
+                 xml:id="HymnZahima"
+                 xml:lang="gez">
                <ab>
                   <locus from="17r"/>
                   <hi rend="rubric">ዘሂመ፡ በዜማሁ፡</hi> በ፬፡ <hi rend="rubric">ሃሌሉያ</hi>። ዘይገለብቦ፡ ለሰማይ፡ በደመና፡ ወያስተዴሉ፡ ክረምተ፡ ለምድር፡ 
@@ -493,7 +507,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </ab>
             </div>
       
-            <div type="textpart" corresp="#ms_i1.10" xml:id="HymnSerayu" xml:lang="gez">
+            <div type="textpart"
+                 corresp="#ms_i1.10"
+                 xml:id="HymnSerayu"
+                 xml:lang="gez">
                <ab>
                   <locus from="115v"/>
           ስረዩ፡ ዘሂ፡ በካልእ፡ ዜማ፡ <hi rend="rubric">ሃሌሉያ፡</hi> ለአብ፡ <hi rend="rubric">ሃሌሉያ፡</hi> ለወልድ፡ ሃሌ፡ <hi rend="rubric">ሃሌሉያ፡</hi>

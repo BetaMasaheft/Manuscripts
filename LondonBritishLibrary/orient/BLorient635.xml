@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient635" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient635"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra Māryām</title>
@@ -69,7 +72,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             
                             <msItem xml:id="ms_i1.4">
                                 <locus from="12r"/>
-                                <title type="incomplete" ref="LIT5050Mary16Yakkatit"><certainty locus="value" match="../@ref" cert="low"/></title>
+                                <title type="incomplete" ref="LIT5050Mary16Yakkatit">
+                           <certainty locus="value" match="../@ref" cert="low"/>
+                        </title>
                                 <textLang mainLang="gez"/>
                                 
                                 <msItem xml:id="ms_i1.4.1">
@@ -174,7 +179,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="a1">
                                     <locus target="#1"/>
                                     <desc type="LandGrant">Deed of gifts of various lands by <persName ref="PRS9153TaklaHa"/>. The metropolitan was 
-                                        <persName ref="PRS10450YosabI"/> and the <persName ref="PRS11205TasfaG"><roleName type="office">ʾǝč̣č̣age</roleName></persName> <persName ref="PRS11205TasfaG"/></desc>
+                                        <persName ref="PRS10450YosabI"/> and the <persName ref="PRS11205TasfaG">
+                                 <roleName type="office">ʾǝč̣č̣age</roleName>
+                              </persName> 
+                              <persName ref="PRS11205TasfaG"/>
+                           </desc>
                                     <q xml:lang="gez">ለካሀናተ፡ በአታ፡ ውስተ፡ ቤተ፡ መቅደስ፡ እንተ፡ ተሐንጸት፡ በጽንፈ፡ <placeName ref="LOC3577Gondar">ጎንደር።</placeName>
                                     </q>
                                 </item>
@@ -189,7 +198,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#131r"/>
                                     <desc type="Inventory"/>
                                     <q xml:lang="gez">ኍልቈ፡ ንዋያት፡ ዘወሀበት፡ <persName ref="PRS6642MananAs">
-                                        <certainty locus="start" match="../@ref" assertedValue="PRS6643MananLi" cert="low"/><roleName type="title">እቴጌ፡</roleName> መነን፡</persName> </q>
+                                        <certainty locus="start"
+                                            match="../@ref"
+                                            assertedValue="PRS6643MananLi"
+                                            cert="low"/>
+                                 <roleName type="title">እቴጌ፡</roleName> መነን፡</persName> 
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a4">
@@ -202,7 +216,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus from="2r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of <placeName ref="INS0101MadhaneAlam"/>.</desc>
                                     <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ 
-                                        መ'፡ ዓለም።</placeName></q>
+                                        መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                             </list>
                         </additions>
@@ -223,8 +238,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <origin>
                             <origDate notBefore="1650" notAfter="1699" evidence="lettering"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                     </history>
 
@@ -250,7 +264,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -271,7 +291,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-08-29">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

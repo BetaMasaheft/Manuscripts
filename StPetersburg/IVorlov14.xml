@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVorlov14"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>ʾArgānona wǝddāse</title>
@@ -30,14 +30,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <msIdentifier>
                   <repository ref="INS0301IV"/>
                   <altIdentifier>
-                  <idno>IV Orlov 14</idno>
-                </altIdentifier>
+                     <idno>IV Orlov 14</idno>
+                  </altIdentifier>
                   <altIdentifier>
                     <idno>IV Ef. 32</idno>
                   </altIdentifier>
                   <altIdentifier>
-                   <idno>Turaev cat. III.32</idno>
-                </altIdentifier>
+                     <idno>Turaev cat. III.32</idno>
+                  </altIdentifier>
                         </msIdentifier>
 
                <msContents>
@@ -45,7 +45,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                   <msItem xml:id="ms_i1">
                     <locus from="5r" to="140v"/>
-                    <title type="incomplete" ref= "LIT1146Argano"/>
+                    <title type="incomplete" ref="LIT1146Argano"/>
                     <note>The part for Sunday is missing</note>
                      <textLang mainLang="gez"/>
 
@@ -91,7 +91,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </support>
                         <extent>
                            <measure unit="leaf">141</measure>
-                           <measure unit="leaf" type="blank">1<locus target="#141"></locus></measure>
+                           <measure unit="leaf" type="blank">1<locus target="#141"/>
+                           </measure>
                            <dimensions type="outer" unit="mm">
                               <height>180</height>
                               <width>175</width>
@@ -114,23 +115,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"><persName ref="PRS9602Turaev">Turaev
+                        <seg type="script">
+                           <persName ref="PRS9602Turaev">Turaev
                         </persName>describes the handwriting as "bold" and "nice";
                         no dating is proposed.</seg>
                         <seg type="ink">Black, red</seg>
-                        <seg type="rubrication"></seg>
+                        <seg type="rubrication"/>
                         <date/>
-                        <desc></desc>
+                        <desc/>
                          </handNote>
                   </handDesc>
 
 
                   <additions>
                       <list>
-                      <item xml:id="a1">
-                        <locus target="#1r"/>
+                        <item xml:id="a1">
+                           <locus target="#1r"/>
                           <desc type="CalendaricNote" xml:lang="amh"/>
-                        <note>Calendar of the feasts and commemoration
+                           <note>Calendar of the feasts and commemoration
                             days of the Apostles.</note>
                           </item>
 
@@ -141,21 +143,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </q>
                               <note>Unidentified prayer over Eucharistic bread and wine.
                               Possibly incomplete, the same as
-                              in <ref type="mss" corresp="EMIP00103">Weiner Codex 17</ref></note>
+                              in <ref type="mss" corresp="EMIP00103">Weiner Codex 17</ref>
+                           </note>
                            </item>
 
                         <item xml:id="a3">
                           <locus target="#2r"/>
                             <locus target="#141v"/>
                            <desc type="GuestText"/>
-                           <title type="complete" ref="LIT2885RepCh166"></title>
+                           <title type="complete" ref="LIT2885RepCh166"/>
                            <note>Malkǝʾ-hymn for Archangel <persName ref="PRS7840Phanuel">Phanuel</persName>.</note>
                            </item>
 
                            <item xml:id="a4">
                              <locus from="2v"/>
                               <desc type="GuestText"/>
-                              <title type="complete" ref="LIT1113Anqasa"></title>
+                              <title type="complete" ref="LIT1113Anqasa"/>
                             </item>
 
                             <item xml:id="a5">
@@ -169,10 +172,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <desc type="Unclear"/>
                               <note>An unidentified prayer over
                                 (Eucharistic?) bread and wine,
-                                possibly related to <ref target="#a2"></ref>.</note>
+                                possibly related to <ref target="#a2"/>.</note>
                             </item>
                           </list>
-                </additions>
+                  </additions>
 
 
                   <bindingDesc>
@@ -192,7 +195,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <history>
                   <origin>
                      <origDate notBefore="1700" notAfter="1800"/>
-                     <note><persName ref="PRS9602Turaev">Turaev
+                     <note>
+                        <persName ref="PRS9602Turaev">Turaev
                      </persName>does not
                    does not propose any dating for the manuscript.</note>
                      </origin>
@@ -236,13 +240,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
 
          <particDesc>
             <listPerson>
                <person>
-                <persName ref="PRS7674Orlov" role="owner"/>
+                  <persName ref="PRS7674Orlov" role="owner"/>
                </person>               
               </listPerson>
              </particDesc>
@@ -265,7 +275,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DN" when="2019-05-17">Created catalogue entry</change>
         </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

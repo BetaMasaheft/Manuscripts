@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient608"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient608"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Discourses for the Festivals of the  Arch-angel Michael</title>
@@ -57,7 +55,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">154</measure>
@@ -72,7 +70,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="12" cert="high"></layout>
+                                <layout columns="2" writtenLines="12" cert="high"/>
                                 
                             </layoutDesc>
                         </objectDesc>
@@ -80,11 +78,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <handDesc>
                             
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is written in a fine character, between  <date notBefore="1716" notAfter="1721"></date>.
+                                <desc>The manuscript is written in a fine character, between  <date notBefore="1716" notAfter="1721"/>.
                                     
                                 </desc>
                                 
-                                <date notBefore="1716" notAfter="1721" resp="PRS10171Wright"></date>
+                                <date notBefore="1716" notAfter="1721" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -142,12 +140,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Liturgy"></term>
+                    <term key="Liturgy"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -163,28 +167,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

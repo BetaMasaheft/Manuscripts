@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVEf928" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="IVEf928"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Letter to Russian doctors</title>
@@ -60,7 +65,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <list>
                             <item xml:id="e1">
                               <desc type="StampExlibris">A blue cast of a round stamp.
-                                The legend reads <foreign xml:lang="gez">ዝማኅተም፡ ዘራስ፡ ወልደ፡ ሥላሴ፡</foreign></desc>
+                                The legend reads <foreign xml:lang="gez">ዝማኅተም፡ ዘራስ፡ ወልደ፡ ሥላሴ፡</foreign>
+                           </desc>
                             </item>
                           </list>
                         </additions>
@@ -68,7 +74,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <history>
                         <provenance/>
                         <acquisition>
-                        In <date>1904</date> the letter was handed over to <ref type="place" corresp="INS0301IV"></ref> by <persName ref="PRS12477Koriander"></persName>.</acquisition>
+                        In <date>1904</date> the letter was handed over to <ref type="place" corresp="INS0301IV"/> by <persName ref="PRS12477Koriander"/>.</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
@@ -95,7 +101,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -104,8 +116,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
 
-                    <term key="AmharicLiterature"></term>
-                    <term key="Letter"></term>
+                    <term key="AmharicLiterature"/>
+                    <term key="Letter"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -122,14 +134,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2019-02-26" who="DE">Added note on acquisition.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-          <div type="edition" corresp="#ms_i1" xml:lang="am"> <ab>የተላከ፡ ከራስ፡ ወልደ፡ ሥላሴ፡ ይድረስ፡ ከወዳጆቸ፡ ከሀኪሞች፡ እንዴት፡ ሰንብታችኋል፡
+          <div type="edition" corresp="#ms_i1" xml:lang="am"> 
+            <ab>የተላከ፡ ከራስ፡ ወልደ፡ ሥላሴ፡ ይድረስ፡ ከወዳጆቸ፡ ከሀኪሞች፡ እንዴት፡ ሰንብታችኋል፡
             እኔ፡ ደህና፡ ነኝ፡ እግዚአብሔር፡ ይመስገን፡ ይህነን፡ ልጅ፡ ዝሆን፡ እግሩን፡ ሰብራብኝ፡ ሲድጃው፡ አለሁና፡ ወንድሞቸ፡ አዳራችሁን፡ አድኑልኝ፡ የኔ፡ ልጅ፡ ነውና፡ አደራ፡ አደራ፡
             ወዳጆቸ፡ እግዚአብሔር፡ በኅይዎት፡ ለመገናኘት፡ ያብቃን፡ <date calendar="ethiopian">በጥቅምት፡ በ፲፰ ቀን፡</date> ተጻፈ።
 </ab>
           </div>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

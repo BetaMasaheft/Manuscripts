@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet7"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Psalter, Maḥālǝya nabiyāt, Maḥālǝya za-Salomon, Wǝddāse Māryām, ʾAnqaṣa bǝrhān</title>
@@ -306,49 +306,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <q xml:lang="it">ALLA / FAMIGLIA BRUSCHETTINI / Pussy / Battaglia dell’Amba Aradam / Il 16 febbraio 1936 XIV.</q>
                           </item>
                           <item xml:id="a2">
-                            <desc type="Record"></desc>
+                            <desc type="Record"/>
                             <locus target="#5r"/>
                             <q xml:lang="it">Amba Aradam 16/2/XIV / ore 17,30 / P. Fabbri (?).</q>
                           </item>
                           <item xml:id="a3">
-                            <desc type="ProtectivePrayer"></desc>
+                            <desc type="ProtectivePrayer"/>
                             <locus target="#173v" n="5"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <q xml:lang="en">Protect me from Dawe's eye and from death, your servant Daqsǝyos.</q>
                           </item>
                           <item xml:id="a4">
-                            <desc type="ProtectivePrayer"></desc>
+                            <desc type="ProtectivePrayer"/>
                             <locus target="#175v" n="6"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                           </item>
                           <item xml:id="a5">
-                            <desc type="DonationNote"></desc>
+                            <desc type="DonationNote"/>
                             <locus target="#192v"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <q xml:lang="en">This book belongs to dabtara Kiros, who donated it to the tābot of (Saint) Mikaʾel. Don't forget me for (the prayer of) "Our Father, Who art in Heaven", (me) whose father was Gabra Maryam, and mother was Walatta Rufaʾel</q>
                           </item>
                           <item xml:id="a6">
-                            <desc type="ProtectivePrayer"></desc>
+                            <desc type="ProtectivePrayer"/>
                             <locus target="#201v"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <desc>Daqsǝyos is mentioned.</desc>
                           </item>
                           <item xml:id="a7">
-                            <desc type="Genealogy"></desc>
+                            <desc type="Genealogy"/>
                             <locus target="#222ra"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <desc>Genealogy of the nǝgus Yoḥannǝs I.</desc>
                           </item>
                           <item xml:id="a8">
-                            <desc type="ProtectivePrayer"></desc>
+                            <desc type="ProtectivePrayer"/>
                             <locus target="#222va" n="3"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <desc>Prayer against snake bites.</desc>
                           </item>
                           <item xml:id="a9">
-                            <desc type="ProtectivePrayer"></desc>
+                            <desc type="ProtectivePrayer"/>
                             <locus target="#222va" n="12"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                           </item>
                           <item xml:id="e1">
                             <locus target="87v" n="13"/>
@@ -356,12 +356,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </item>
                           <item xml:id="e2">
                             <locus target="#175v"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <p>Pen trials.</p>
                           </item>
                           <item xml:id="e3">
                             <locus target="#201v"/>
-                            <q xml:lang="gez"></q>
+                            <q xml:lang="gez"/>
                             <p>Pen trials.</p>
                           </item>
                           </list>
@@ -371,7 +371,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <binding contemporary="partly" xml:id="binding">
                             <decoNote xml:id="b1">The book is sewn on four sewing stations (two pairs) linked to uncovered wooden boards.
                               On the inner side of the left board is pasted a textile inlay and there are traces of a leather cover.</decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="textile"/><material key="silk"/></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="textile"/>
+                           <material key="silk"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               The right board is broken in two halves which are held together by leather strings.
                               The left board is made from <term key="cordiaAfricana">Cordia Africana</term> wood while the right board is made from <term key="ficus">Ficus</term> wood.
@@ -432,7 +436,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -455,7 +465,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

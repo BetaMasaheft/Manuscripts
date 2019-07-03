@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BNFet3"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Octateuch</title>
@@ -336,7 +336,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <seg type="ink">Black</seg>
                         <locus target="#186v"/>
                         <q xml:lang="gez">በ
-                           <persName ref="PRS10303Yekunno"><roleName type="title">አፂ፡</roleName>  ይኩኖ፡ አምላክ፡</persName> መንግሥት፡ ተጽሕፈ፡
+                           <persName ref="PRS10303Yekunno">
+                              <roleName type="title">አፂ፡</roleName>  ይኩኖ፡ አምላክ፡</persName> መንግሥት፡ ተጽሕፈ፡
                   ዝንቱ፡ መጽሐፍ፡ ኦሪት።</q>
                         <date notBefore="1700" notAfter="1900"/> 
                         <!--check-->
@@ -405,6 +406,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -446,7 +453,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2017-03-03">Small changes</change>
       </revisionDesc>
   </teiHeader>
-  <text>  
+  <text xml:base="https://betamasaheft.eu/">  
       <body>
          <div type="edition">
             <div type="textpart"

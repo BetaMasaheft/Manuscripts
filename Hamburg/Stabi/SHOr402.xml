@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr402"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Various prayers, Gospel of John, Māḫleta ṣǝge</title>
@@ -56,7 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                               <collation>
                                 <signatures>
-                                  Quire marks on the upper left corner of fols. <locus target="#19r #27r #35r #43ra #51r #59r #67r #77r"></locus>
+                                  Quire marks on the upper left corner of fols. <locus target="#19r #27r #35r #43ra #51r #59r #67r #77r"/>
                                 </signatures>
                                 <list>
                                   <item xml:id="q1">
@@ -123,8 +123,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="22">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="5r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="5r"/>.</note>
                                 <locus from="1r" to="8v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>138</height>
@@ -156,8 +155,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 to the pricks for horizontal lines, never completed.
                               </layout>
                               <layout columns="2" writtenLines="19">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="39r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="39r"/>.</note>
                                 <locus from="19r" to="84v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>117</height>
@@ -180,8 +178,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -203,7 +200,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with uncovered wooden boards.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Two wooden boards of a dark reddish wood. Additional holes, bigger than the ones used for the sewing, are present:
                               two in the inner edge (head and tale) of both boards and one in the outer lower corner of the upper board.</decoNote>
@@ -246,7 +245,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -269,7 +274,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

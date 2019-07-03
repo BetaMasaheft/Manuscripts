@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="RIE275"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="RIE275"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>RIÉ 275</title>
@@ -44,9 +44,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <supportDesc>
                                 <support>
                                     <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/2"/>
-                                    <objectType xml:lang="fr"
-                                        ref="https://www.eagle-network.eu/voc/objtyp/lod/2"
-                                        >unknown</objectType>
+                                    <objectType xml:lang="fr" ref="https://www.eagle-network.eu/voc/objtyp/lod/2">unknown</objectType>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
@@ -65,7 +63,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <origPlace> 
                                Daqqi Mahari
                             </origPlace>
-                            <origDate ></origDate>
+                            <origDate/>
                             
                         </origin>
                         
@@ -79,7 +77,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                             <ptr target="bm:RIE1"/>
                                             <citedRange unit="page">374</citedRange>
                                         </bibl>
-                                        <bibl><ptr target="bm:marrassini2014Iscrizioni"/><citedRange unit="page">194-196</citedRange></bibl>
+                                        <bibl>
+                                 <ptr target="bm:marrassini2014Iscrizioni"/>
+                                 <citedRange unit="page">194-196</citedRange>
+                              </bibl>
                                     </listBibl>
                                 </source>
                             </recordHist>
@@ -92,12 +93,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="Other" ref="https://www.eagle-network.eu/voc/typeins/lod/86" cert="low"/>
-<!--                    based on the fact that it says -->
+                    <term key="Other"
+                     ref="https://www.eagle-network.eu/voc/typeins/lod/86"
+                     cert="low"/>
+               <!--                    based on the fact that it says -->
                     <term key="Aks"/>
                 </keywords>
             </textClass>
@@ -109,20 +118,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2018-10-15" who="PL">created entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="edition">
                 <ab>
-                    <lb n="1"/>Βασιλεὺς ἐκ βασι<lb break="no" 
-                        n="2"/>λέων Ἀξωμει<lb break="no" 
-                            n="3"/>τῶν μέγας
+                    <lb n="1"/>Βασιλεὺς ἐκ βασι<lb break="no" n="2"/>λέων Ἀξωμει<lb break="no" n="3"/>τῶν μέγας
                     <lb n="4"/>Σεμβρούθης
-                    <lb n="5"/>ἐλθὼν καθεί<lb break="no" 
-                        n="6"/>δρυσε, 
-                    <expan><abbr><am><g 
-                        type="etous"/></am></abbr><ex>ἔτους</ex></expan> <num>κδ</num>
+                    <lb n="5"/>ἐλθὼν καθεί<lb break="no" n="6"/>δρυσε, 
+                    <expan>
+                  <abbr>
+                     <am>
+                        <g type="etous"/>
+                     </am>
+                  </abbr>
+                  <ex>ἔτους</ex>
+               </expan> 
+               <num>κδ</num>
                     <lb n="7"/>Σεμβρούθου μεγάλου
-                    <lb n="8"/><space/> βασιλέως
+                    <lb n="8"/>
+               <space/> βασιλέως
                 </ab>
             </div>
         </body>

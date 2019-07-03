@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="FSUor38"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Ḫāylu Compilation</title>
@@ -465,7 +465,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -487,7 +493,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
       <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5249305"/>
    </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
          <ab/>
         </body>

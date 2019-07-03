@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr411"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Salām to Gabra Manfas Qeddus, Salām to the Dormition of Mary, Treatise on the Eight Thoughts (of Evilness) by ʾAbba Evagrius, magic prayers, Psalmody
@@ -138,8 +138,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="18">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#18"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#18"/>.</note>
                                 <locus from="8r" to="118v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>120</height>
@@ -162,15 +161,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                             <desc>Main hand</desc>
                           </handNote>
-                          <handNote script="Ethiopic"
-                               xml:id="h2">
+                          <handNote script="Ethiopic" xml:id="h2">
                             <seg type="ink">Brown-reddish</seg>
-                            <locus target="#7r #119v"></locus>
+                            <locus target="#7r #119v"/>
                             <desc>Peculiar shade of red ink, perhaps obtained by mixing the red ink with the black one or it could have a different origin.</desc>
                           </handNote>
                         </handDesc>
@@ -197,7 +194,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with tooled leather cover and textile inlay preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"><material key="textile"><material key="metal"></material></material></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather">
+                              <material key="textile">
+                                 <material key="metal"/>
+                              </material>
+                           </material>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Well polished wooden board, carved from a yellowish wood with slightly bevelled edges.
                               On the upper border of the lower board there is a hardly legible ge'ez inscription in pencil.
@@ -211,7 +215,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               The board edges are decorated with double straight line and double circles.
                               The turn-ins are 55 mm wide and an <term key="additionalLeatherPatch">additional leather patch</term> covers the holes for the board attachment.
                               The turn-ins are decorated with double straight lines crossing each other, forming rectangles with a X-form within and a double circle at the intersections.
-                              The <term key="textile"></term> textile inlay seems to be made of silk, a blue brocade with flowers.
+                              The <term key="textile"/> textile inlay seems to be made of silk, a blue brocade with flowers.
                             </decoNote>
                             <decoNote xml:id="b5" type="Endbands">
                               The endbands are not preserved but between fols. 51-52 there is the remain of a tie down.
@@ -260,7 +264,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -283,7 +293,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

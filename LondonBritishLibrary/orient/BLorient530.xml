@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient530" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient530"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Acts of the Apostles, Pauline Epistles</title>
@@ -354,8 +357,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <origin>
                             <origDate notBefore="1600" notAfter="1699" evidence="lettering"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                     </history>
 
@@ -381,7 +383,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -404,7 +412,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-02-14">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

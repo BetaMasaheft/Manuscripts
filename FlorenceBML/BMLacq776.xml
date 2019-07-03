@@ -5,10 +5,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BMLacq776"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BMLacq776"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title/>
@@ -29,7 +29,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msIdentifier>
                         <repository ref="INS0339BML"/>
                         <collection>Acquisizioni e doni</collection>
-                        <idno  facs="Laurenziana/BML_014/BML_014-" n="127">BML Acq. e doni 776</idno>
+                        <idno facs="Laurenziana/BML_014/BML_014-" n="127">BML Acq. e doni 776</idno>
                         <altIdentifier>
                             <idno>Marrassini ms. 14</idno>
                         </altIdentifier>
@@ -37,7 +37,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msContents>
                         <msItem xml:id="ms_i1">
                             
-                            <title ref="LIT1295Dersan"></title>
+                            <title ref="LIT1295Dersan"/>
                         </msItem>
                     </msContents>
                     <history>
@@ -63,7 +63,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language ident="en">English</language>
@@ -75,7 +81,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="PL" when="2019-02-21">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient778"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient778"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>A large theoreticla treatise 
@@ -64,7 +62,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">193</measure>
@@ -92,10 +90,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <handDesc>
                             
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>This manuscript is written in a small, elegant character, between <date notBefore="1563" notAfter="1597"></date>
+                                <desc>This manuscript is written in a small, elegant character, between <date notBefore="1563" notAfter="1597"/>
                                 </desc>
                                 
-                                <date notBefore="1563" notAfter="1597" resp="PRS10171Wright"></date>
+                                <date notBefore="1563" notAfter="1597" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -144,7 +142,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -165,34 +169,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

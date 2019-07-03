@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVkoriander4"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Acts of St Viktor of the city of Antioch, Acts of
@@ -50,7 +50,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <msItem xml:id="ms_i1">
                           <locus from="2r" to="111v"/>
                             <title type="complete" ref="LIT4845Martyr#Gadle" xml:lang="gez">ድርሳን᎓ ዘደረሰ᎓ አቡነ᎓
-                          <gap reason="omitted" resp="PRS9602Turaev"></gap>ህርያቆስ᎓</title>
+                          <gap reason="omitted" resp="PRS9602Turaev"/>ህርያቆስ᎓</title>
                         </msItem>
 
                         <msItem xml:id="ms_i2">
@@ -61,7 +61,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                             <msItem xml:id="ms_i3">
                                 <locus from="115r" to="141v"/>
-                                <title type="complete" ref="LIT5768ActsJohnBaptist" xml:lang="gez"></title>
+                                <title type="complete" ref="LIT5768ActsJohnBaptist" xml:lang="gez"/>
                                   <incipit>ንዌጥን᎓ ገድሎ᎓ ለብጹዕ᎓ ዮሐንስ᎓ ነቢየ᎓ ልዑል᎓ መጥምቀ᎓ ቃል᎓</incipit>
                             </msItem>
 
@@ -69,7 +69,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus from="141r" to="153v"/>
                                 <title type="complete" ref="LIT5770MiraclesVictor" xml:lang="gez"/>
                                 <note>Three unspecified Miracles of <persName ref="PRS9744Victor">
-                                the martyr St Victor</persName></note>
+                                the martyr St Victor</persName>
+                     </note>
 
                                   <msItem xml:id="ms_i4.1">
                                       <title type="complete" ref="LIT5770MiraclesVictor#1Miracle"/>
@@ -85,8 +86,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                             <msItem xml:id="ms_i5">
                                 <locus from="154r" to="157v"/>
-                                <title type="complete" ref="LIT5772CommemorationVictor" cert="medium"
-                                   xml:lang="gez">
+                                <title type="complete"
+                            ref="LIT5772CommemorationVictor"
+                            cert="medium"
+                            xml:lang="gez">
                                   </title>
                                   <note>The Synaxarion commemorative note
                                     and short salām-hymn for St Victor, for 26 Miyāzyā.</note>
@@ -94,7 +97,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                             <msItem xml:id="ms_i6">
                                 <locus from="158r" to="159v"/>
-                                <title type="complete" ref="LIT5773Synaxarion2Maskaram" xml:lang="gez"></title>
+                                <title type="complete" ref="LIT5773Synaxarion2Maskaram" xml:lang="gez"/>
                                 <note>The portion of the Synaxarion readings for 2 Maskaram, encompassing
                                   lives of John the Baptist and Dasya,
                                   short commemorative records for Didymos and Marina.</note>
@@ -133,7 +136,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <handNote xml:id="h1" script="Ethiopic">
                                 <seg type="script" cert="low">18th century </seg>
                                 <seg type="ink">Black, red</seg>
-                                <desc><persName ref="PRS9602Turaev">Turaev</persName>describe
+                                <desc>
+                           <persName ref="PRS9602Turaev">Turaev</persName>describe
                               the handwriting as "bold" and "fine" but does not propose a dating.</desc>
                                 </handNote>
                         </handDesc>
@@ -158,7 +162,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <history>
                         <origin>
                             <origDate notBefore="1700" notAfter="1800"/>
-                            <note><persName ref="PRS9602Turaev">Turaev</persName>
+                            <note>
+                        <persName ref="PRS9602Turaev">Turaev</persName>
                              does not propose any dating for the manuscript.</note>
                         </origin>
                         <provenance>Original owners were <persName ref="PRS12733WaldaKiros">Walda Kiros</persName>
@@ -197,7 +202,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -229,7 +240,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DN" when="2019-03-29">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

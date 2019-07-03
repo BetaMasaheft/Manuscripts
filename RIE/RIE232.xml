@@ -3,8 +3,11 @@
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE232" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="en"
+     xml:id="RIE232"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>RIÉ 232</title>
@@ -36,8 +39,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                <msContents>
                   <summary>
-                     <p>A funeral inscription dedicated to a girl named <persName ref="PRS11407Giho"
-                           >Giḥo</persName>.</p>
+                     <p>A funeral inscription dedicated to a girl named <persName ref="PRS11407Giho">Giḥo</persName>.</p>
                   </summary>
                </msContents>
 
@@ -45,11 +47,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"
-                              ref="https://www.eagle-network.eu/voc/material/lod/2"/>
-                           <objectType xml:lang="fr"
-                              ref="https://www.eagle-network.eu/voc/objtyp/lod/189"
-                              >Pierre</objectType>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/2"/>
+                           <objectType xml:lang="fr" ref="https://www.eagle-network.eu/voc/objtyp/lod/189">Pierre</objectType>
                         </support>
                         <extent>
                            <dimensions type="outer" unit="mm">
@@ -70,8 +69,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                      <layoutDesc>
                         <layout>
-                           <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"
-                           />
+                           <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
                         </layout>
                         <layout writtenLines="15"/>
                      </layoutDesc>
@@ -93,8 +91,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         the wall of the church <placeName ref="INS0346DL"/>
                      </origPlace>
                      <origDate when="0873">
-                        <note><date when="0873-12-23">23 December 873</date> according to <bibl><ptr
-                                 target="bm:Kropp1999Gluecklich"/></bibl>
+                        <note>
+                           <date when="0873-12-23">23 December 873</date> according to <bibl>
+                              <ptr target="bm:Kropp1999Gluecklich"/>
+                           </bibl>
                         </note>
                      </origDate>
                   </origin>
@@ -123,6 +123,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
@@ -153,7 +159,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
       </revisionDesc>
    </teiHeader>
-   <text xml:lang="gez">
+   <text xml:lang="gez" xml:base="https://betamasaheft.eu/">
 
       <body>
          <div type="edition" xml:lang="gez">

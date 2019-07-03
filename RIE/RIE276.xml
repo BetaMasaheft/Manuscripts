@@ -3,8 +3,11 @@
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE276" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="en"
+     xml:id="RIE276"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>RIÉ 276</title>
@@ -34,7 +37,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <idno xml:id="OGIS">OGIS 54</idno>
                         </altIdentifier>
                             <altIdentifier>
-                                <idno>IK Estremo Oriente 451</idno></altIdentifier>
+                                <idno>IK Estremo Oriente 451</idno>
+                  </altIdentifier>
                         <altIdentifier>
                             <idno>PH314864</idno>
                         </altIdentifier>
@@ -59,17 +63,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Inscription">
                             <supportDesc>
                                 <support>
-                                    <material key="stone"
-                                        ref="https://www.eagle-network.eu/voc/material/lod/16"/>
-                                    <objectType
-                                        ref="https://www.eagle-network.eu/voc/objtyp/lod/250"
-                                        >Stele</objectType>
+                                    <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/16"/>
+                                    <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/250">Stele</objectType>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution"
-                                        ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -86,11 +86,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <origPlace ref="LOC1261Adulis"> The inscription according to <persName ref="PRS3204CosmasI"/> was at the entrance of the city from the west side on
                                 the road to <placeName ref="LOC1310Aksum"/>. </origPlace>
                             <origDate notBefore="-0246" notAfter="-0221">Reign of Ptolemy III Euergetes.</origDate>
-                            <origDate when="-0240" resp="#OGIS"></origDate>
-                            <origDate notBefore="-0241" resp="#PH218979"></origDate>
+                            <origDate when="-0240" resp="#OGIS"/>
+                            <origDate notBefore="-0241" resp="#PH218979"/>
                         </origin>
-                        <provenance type="found"><date notBefore="0527" notAfter="0550"
-                            />. Now lost.</provenance>
+                        <provenance type="found">
+                     <date notBefore="0527" notAfter="0550"/>. Now lost.</provenance>
                     </history>
 
 
@@ -108,11 +108,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                             <ptr target="bm:Huntingford1987Historicalgeo"/>
                                             <citedRange unit="page">40-47</citedRange>
                                         </bibl>
-                                        <bibl><ptr target="bm:DAE2"/><citedRange unit="page"
-                                                >66</citedRange></bibl>
+                                        <bibl>
+                                 <ptr target="bm:DAE2"/>
+                                 <citedRange unit="page">66</citedRange>
+                              </bibl>
 
-                                        <bibl xml:id="Cosma"><ptr target="bm:WolskaConusCosma"
-                                                /><citedRange unit="volume">II</citedRange>
+                                        <bibl xml:id="Cosma">
+                                 <ptr target="bm:WolskaConusCosma"/>
+                                 <citedRange unit="volume">II</citedRange>
                                             <citedRange unit="page">58-59</citedRange>
                                         </bibl>
                                     </listBibl>
@@ -128,7 +131,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
@@ -143,10 +152,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2018-07-19" who="PL">created entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
 
         <body>
-            <div type="edition"  xml:lang="grc" corresp="LIT5012MonumentumAdulitanum1"/>
+            <div type="edition"
+              xml:lang="grc"
+              corresp="LIT5012MonumentumAdulitanum1"/>
                 
         </body>
 

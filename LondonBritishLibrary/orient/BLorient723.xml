@@ -4,14 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient723
-    "
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient723"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Life and Acts of Takla Hāymānot</title>
@@ -58,7 +55,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">231</measure>
@@ -72,7 +69,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="3" writtenLines="20 21" cert="high"></layout>
+                                <layout columns="3" writtenLines="20 21" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -83,7 +80,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -105,7 +102,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             The manuscript was then sent to the Royal Library at Windsor and 
                             presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
                             <listBibl type="secondary">
-                                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
+                                <bibl>
+                           <ptr target="bm:Wright1877BM"/>
+                           <citedRange unit="page">iv</citedRange>
+                        </bibl>
                             </listBibl>
                         </provenance>
                         
@@ -134,7 +134,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -158,15 +164,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_723_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-

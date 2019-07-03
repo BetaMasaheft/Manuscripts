@@ -3,8 +3,11 @@
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BNFet102" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="en"
+     xml:id="BNFet102"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>ʾArgānona Māryām</title>
@@ -52,7 +55,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <incipit xml:lang="gez">
                            <locus target="#22ra"/>
                            <hi rend="rubric">ወአንቲሂ፡ ካዕበ፡ ኦእግዝእትየ፡ ቅድስት፡ ድንግል፡</hi>
-                           <add place="above">በክልኤ</add><hi rend="rubric">ማርያም፡</hi>
+                           <add place="above">በክልኤ</add>
+                           <hi rend="rubric">ማርያም፡</hi>
                            ዘበዕ<add place="above">ብ</add>ራይስጢ፡ ማሪሃም፡
                            ወላዲተ፡ አምላክ፡ ተማኅፀንኩ፡ በዝ፡ ተዓንግዶ፡ አምላክ፡ ምስሌኪ
                            <hi rend="rubric">፨</hi> ተዝካረ፡ ፃማኪ፡ በሐዊረ፡ ፍኖት፡ ይቁም፡ ቅድመ፡ ገጹ፡
@@ -126,8 +130,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <list>
                         <item xml:id="e1">
                            <locus target="#102ra" facs="f213"/>
-                           <desc>The name of the owner, <persName role="owner" ref="PRS11160HabtaS"
-                              /> is mentioned in the invocation at the end of the manuscript.</desc>
+                           <desc>The name of the owner, <persName role="owner" ref="PRS11160HabtaS"/> is mentioned in the invocation at the end of the manuscript.</desc>
                         </item>
                      </list>
                   </additions>
@@ -160,6 +163,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -192,7 +201,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-06-16">Added incipit</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

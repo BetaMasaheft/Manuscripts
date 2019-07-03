@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient575"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient575"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Gubāʾe malkǝʾ
@@ -58,7 +56,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">109</measure>
@@ -74,7 +72,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <layoutDesc>
                                 <layout columns="2" writtenLines="17 19" cert="high"> 
                                 </layout>
-                               <layout columns="2" writtenLines="13" cert="high">only for <locus from="65" to="102"></locus></layout>
+                               <layout columns="2" writtenLines="13" cert="high">only for <locus from="65" to="102"/>
+                        </layout>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -82,24 +81,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             
                             <handNote script="Ethiopic" xml:id="h1">
                                 <desc>The manuscript is written by several hands;
-                                    <locus from="65" to="99"></locus>, <date>16th century</date> for 
+                                    <locus from="65" to="99"/>, <date>16th century</date> for 
                                 </desc>
                                 
-                                <date  notBefore="1500" notAfter="1600"></date>
+                                <date notBefore="1500" notAfter="1600"/>
                                 
                             </handNote>
                             <handNote script="Ethiopic" xml:id="h2">
-                                <desc> <locus from="100" to="104r"></locus> and <locus target="#108v"></locus>,  of the latter part of <date>17th century</date>. 
+                                <desc> 
+                           <locus from="100" to="104r"/> and <locus target="#108v"/>,  of the latter part of <date>17th century</date>. 
                                 </desc>
                                 
-                                <date  notBefore="1650" notAfter="1700"></date>
+                                <date notBefore="1650" notAfter="1700"/>
                                 
                             </handNote>
                             <handNote script="Ethiopic" xml:id="h3">
-                                <desc> <locus from="104v" to="109"></locus>, of the <date>18th century</date>. 
+                                <desc> 
+                           <locus from="104v" to="109"/>, of the <date>18th century</date>. 
                                 </desc>
                                 
-                                <date  notBefore="1700" notAfter="1800"></date>
+                                <date notBefore="1700" notAfter="1800"/>
                                 
                             </handNote>
                             
@@ -120,7 +121,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             The manuscript was then sent to the Royal Library at Windsor and 
                             presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
                             <listBibl type="secondary">
-                                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
+                                <bibl>
+                           <ptr target="bm:Wright1877BM"/>
+                           <citedRange unit="page">iv</citedRange>
+                        </bibl>
                             </listBibl>
                         </provenance>
                         
@@ -149,7 +153,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -171,24 +181,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

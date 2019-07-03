@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="BLEthiopic4"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
               <title xml:lang="en" xml:id="t1">The 'Gadla Lālibalā'  collection of  textual units</title>
@@ -40,8 +40,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>          
                                   <msItem xml:id="ms_i1">
                                     <locus from="1r" to="162v"/>
-                                    <title type="complete" ref="LIT1470GadlaL"></title>
-                                    <title type="complete" subtype="margin"><locus target="1r"/></title>
+                                    <title type="complete" ref="LIT1470GadlaL"/>
+                                    <title type="complete" subtype="margin">
+                        <locus target="1r"/>
+                     </title>
                                     <msItem xml:id="ms_i1.1">
                                       <locus from="1r" to="6v"/>
                                       <title type="incomplete" ref="LIT5080TUoneLal"/>
@@ -60,7 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                   </msItem>
                                   <msItem xml:id="ms_i1.4">
                                     <locus from="14v" to="17r"/>
-                                    <title type="incomplete"  ref="LIT5083TUfourLal"/>
+                                    <title type="incomplete" ref="LIT5083TUfourLal"/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.5">
                                     <locus from="17r" to="29r"/>
@@ -70,11 +72,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                   <msItem xml:id="ms_i1.6">
                                     <locus from="29r" to="50v"/>
                                     <title type="incomplete" ref="LIT4922HagVit"/>
-                                    <incipit></incipit>
+                                    <incipit/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.7">
                                     <locus from="50v" to="54v"/>
-                                    <title type="incomplete"  ref="LIT5083TUfourLal"/>
+                                    <title type="incomplete" ref="LIT5083TUfourLal"/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.8">
                                     <locus from="54v" to="59v"/>
@@ -88,7 +90,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                   <msItem xml:id="ms_i1.10">
                                     <locus from="61v" to="140v"/>
                                     <title type="incomplete" ref="LIT4922HagVit"/>
-                                    <incipit></incipit>
+                                    <incipit/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.11">
                                     <locus from="140v" to="142v"/>
@@ -101,24 +103,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                   
                                   <msItem xml:id="ms_i1.13">
                                     <locus from="146r" to="148r"/>
-                                    <title type="complete"  ref="LIT4926HagMir3"></title>
+                                    <title type="complete" ref="LIT4926HagMir3"/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.14">
                                     <locus from="148r" to="151v"/>
-                                    <title type="complete"  ref="LIT4927HagMir4"></title>
+                                    <title type="complete" ref="LIT4927HagMir4"/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.15">
                                     <locus from="151v" to="152r"/>
-                                    <title type="complete"  ref="LIT4928HagMir5"></title>
+                                    <title type="complete" ref="LIT4928HagMir5"/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.16">
                                     <locus from="152r" to="153v"/>
-                                    <title type="complete"  ref="LIT4929HagMir6"></title>
+                                    <title type="complete" ref="LIT4929HagMir6"/>
                                   </msItem>
                                   <msItem xml:id="ms_i1.17">
                                     <locus from="153v" to="162v"/>  
-                                    <title type="complete" ref="LIT4930HagVirt"></title>
-                                    <colophon xml:id="coloph1"></colophon>
+                                    <title type="complete" ref="LIT4930HagVirt"/>
+                                    <colophon xml:id="coloph1"/>
                                   </msItem>
                                 
                       </msContents>
@@ -218,7 +220,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -240,11 +248,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="NV" when="2017-07-26"> encoded with regex the main structure of the word
                 file created while my stay in the BL in February 2016 </change>
-  <change when="2018-11-30" who="NV">added titles</change>
+         <change when="2018-11-30" who="NV">added titles</change>
         </revisionDesc>
     </teiHeader>
 
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
             <!--  -->

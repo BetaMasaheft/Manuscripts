@@ -2,8 +2,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient628" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient628"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra ʾIyasus, Legend of Abgar</title>
@@ -87,13 +90,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <list>   
                                 <item xml:id="a1">
                                     <desc type="OwnershipNote">At the end, on the same page as <ref target="#e3"/>. The last six words are an alteration.</desc>
-                                    <q xml:lang="gez">ዝመጽሐፍ፡ <add place="overstrike">ዘ<placeName ref="INS0506DM">ደብረ፡ መድኃኒት፡</placeName> እንተ፡ አቡነ፡ ዓቢየ፡ እግዚእ፡</add></q>
+                                    <q xml:lang="gez">ዝመጽሐፍ፡ <add place="overstrike">ዘ<placeName ref="INS0506DM">ደብረ፡ መድኃኒት፡</placeName> እንተ፡ አቡነ፡ ዓቢየ፡ እግዚእ፡</add>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a2">
                                     <locus target="#1r"/>
                                     <desc type="OwnershipNote"/>
-                                    <q xml:lang="gez">ተአምረ፡ ኢየሱስ፡ ዘ<placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ተአምረ፡ ኢየሱስ፡ ዘ<placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="e1">
@@ -109,7 +114,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </item>
                                 
                                 <item xml:id="e3">
-                                    <desc>The prayer at the end mentions <persName ref="PRS12177WaldaM" role="scribe"><certainty locus="value" match="../@role" cert="low"></certainty></persName>, 
+                                    <desc>The prayer at the end mentions <persName ref="PRS12177WaldaM" role="scribe">
+                                 <certainty locus="value" match="../@role" cert="low"/>
+                              </persName>, 
                                         probably the scribe.</desc> 
                                     <q xml:lang="gez"/>
                                 </item>
@@ -121,8 +128,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <origin>
                             <origDate notBefore="1700" notAfter="1799" evidence="lettering"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                     </history>
 
@@ -148,7 +154,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -168,7 +180,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-07-25">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

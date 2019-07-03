@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="RIE271and190"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="RIE271and190"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt> 
                 <title>RIÉ 271 and 190</title>
@@ -35,7 +35,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <idno>RIÉ 271 and 190</idno>
                         <altIdentifier>
                             <idno type="TM">104604</idno>
-<!--                            271-->
+                     <!--                            271-->
                         </altIdentifier>
                     </msIdentifier>
                     
@@ -46,16 +46,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <supportDesc>
                                 <support>
                                     <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
-                                    <objectType cert="low"
-                                        ref="https://www.eagle-network.eu/voc/objtyp/lod/1996"
-                                        >Throne</objectType>
+                                    <objectType cert="low" ref="https://www.eagle-network.eu/voc/objtyp/lod/1996">Throne</objectType>
                                 </support>
                                 
                                 <extent>
                                     <dimensions type="outer" unit="cm">
                                         <height>163</height>
                                         <width>60</width>
-                                        <depth >11</depth>
+                                        <depth>11</depth>
                                     </dimensions>
                                 </extent>
                                 <foliation/>
@@ -86,9 +84,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <origPlace ref="LOC1310Aksum"> 
                                 The inscription from <placeName ref="LOC1310Aksum"/>.
                             </origPlace>
-                            <origDate ></origDate>
+                            <origDate/>
                         </origin>
-                        <provenance type="found">Found around <date when="1981">1959</date> with <ref corresp="RIE191" type="mss"/> and <ref corresp="RIE192" type="mss"/> </provenance>
+                        <provenance type="found">Found around <date when="1981">1959</date> with <ref corresp="RIE191" type="mss"/> and <ref corresp="RIE192" type="mss"/> 
+                  </provenance>
                     </history>
                     
                     <additional>
@@ -116,7 +115,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
@@ -132,20 +137,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="PL" when="2018-08-06">Created and encoded  entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         
         <body>
-            <div type="edition" >
+            <div type="edition">
                 
-                <div type="textpart" 
-                    xml:lang="grc"
-                        xml:id="RIE271">
-                    <div 
-                        type="textpart" 
-                        subtype="face" 
-                        xml:id="A" 
-                        n="1"
-                        xml:lang="grc">
+                <div type="textpart" xml:lang="grc" xml:id="RIE271">
+                    <div type="textpart"
+                    subtype="face"
+                    xml:id="A"
+                    n="1"
+                    xml:lang="grc">
                         <ab>
                             <lb n="1"/>
                             <lb n="2"/>
@@ -153,10 +155,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <lb n="4"/>
                             <lb n="5"/>
                             <lb n="6"/>
-                            <lb n="7"/><placeName ref="pleiades:39303"/><placeName ref="pleiades:39350"/>
-                            <lb n="8"/><placeName ref="LOC5333Raydan"/><placeName ref="LOC5395Saba"/>
-                            <lb n="9"/><placeName ref="LOC5491Salhen"/><placeName ref="pleiades:805630"/><placeName type="ethnic" ref="pleiades:40079"/>
-                            <lb n="10"/><placeName ref="pleiades:40338"/>
+                            <lb n="7"/>
+                     <placeName ref="pleiades:39303"/>
+                     <placeName ref="pleiades:39350"/>
+                            <lb n="8"/>
+                     <placeName ref="LOC5333Raydan"/>
+                     <placeName ref="LOC5395Saba"/>
+                            <lb n="9"/>
+                     <placeName ref="LOC5491Salhen"/>
+                     <placeName ref="pleiades:805630"/>
+                     <placeName type="ethnic" ref="pleiades:40079"/>
+                            <lb n="10"/>
+                     <placeName ref="pleiades:40338"/>
                             <lb n="11"/>
                             <lb n="12"/>
                             <lb n="13"/>
@@ -172,32 +182,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <lb n="23"/> τοὺς <placeName ref="LOC5004Noba">Νωβα</placeName>, ὅτι κατέκραξαν κατ᾽αὐτῶν
                             <lb n="24"/>οἱ <placeName ref="ETH2276Mangurto">Μανγαρθω</placeName> καὶ 
                             <placeName ref="ETH1660Hasa">Χασα</placeName> και <placeName>Ἀτιαδιται</placeName>
-                            <lb n="25"/>καὶ <placeName ref="ETH1946Nara">βαρεωται</placeName> λέγοντες ὅτι κατεπόνη<lb break="no" 
-                                n="26"/>σαν ἡμᾶς οἱ <placeName ref="LOC5004Noba">Νωβα</placeName>,
+                            <lb n="25"/>καὶ <placeName ref="ETH1946Nara">βαρεωται</placeName> λέγοντες ὅτι κατεπόνη<lb break="no" n="26"/>σαν ἡμᾶς οἱ <placeName ref="LOC5004Noba">Νωβα</placeName>,
                             <lb n="27"/>
                             <lb n="28"/>
                             <lb n="29"/>
                             <lb n="30"/>
                             <lb n="31"/>
-                            <lb n="32"/>ἔφθασα εἰς <placeName><!--Bernand says this could be a transliteration of my throne manbarya in RIE 190, which has much more details--><certainty locus="name" cert="low"/>Μαμβαριαν</placeName> καὶ ἐκῖθεν ἐσιτἀρχησα
+                            <lb n="32"/>ἔφθασα εἰς <placeName><!--Bernand says this could be a transliteration of my throne manbarya in RIE 190, which has much more details-->
+                        <certainty locus="name" cert="low"/>Μαμβαριαν</placeName> καὶ ἐκῖθεν ἐσιτἀρχησα
                         </ab>
                     </div>
                 </div>
-                <div type="textpart" 
-                    xml:lang="gez"
-                        xml:id="RIE190">
-                    <div 
-                        type="textpart" 
-                        subtype="face" 
-                        xml:id="B" 
-                        n="1">
+                <div type="textpart" xml:lang="gez" xml:id="RIE190">
+                    <div type="textpart" subtype="face" xml:id="B" n="1">
                         <lb rend="right-to-left"/>
                     </div>
                     
-                    <div type="textpart"
-                        n="2"
-                        subtype="face" 
-                        xml:id="C">
+                    <div type="textpart" n="2" subtype="face" xml:id="C">
                         <ab/>
                     </div>
                 </div>

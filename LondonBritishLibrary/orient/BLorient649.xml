@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient649" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient649"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra Māryām</title>
@@ -118,7 +121,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                   <locus target="#4r"/>
                                   <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                       <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                  <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                  <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                               </item>
                                 
                                 <item xml:id="e1">
@@ -146,15 +150,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                     <history>
                         <origin>
-                            <origDate notBefore="1700" notAfter="1750" evidence="lettering" resp="Wright"/>
+                            <origDate notBefore="1700"
+                               notAfter="1750"
+                               evidence="lettering"
+                               resp="Wright"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. The manuscript was then sent to the Royal Library at Windsor and 
                             presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
                             <listBibl type="secondary">
-                                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
-                            </listBibl></provenance>
+                                <bibl>
+                           <ptr target="bm:Wright1877BM"/>
+                           <citedRange unit="page">iv</citedRange>
+                        </bibl>
+                            </listBibl>
+                  </provenance>
                     </history>
 
                     <additional>
@@ -179,7 +189,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -203,7 +219,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_649_fs001v"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

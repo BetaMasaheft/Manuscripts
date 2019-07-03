@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient733"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Amharic Gospels of Matthew and Mark</title>
@@ -117,34 +117,35 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <list>   
                                 <item xml:id="a1">
                                     <locus from="1v"/>
-                                    <desc type="Inventory"></desc>
+                                    <desc type="Inventory"/>
                                     <q xml:lang="am">መቅደላ፡ የተቀመጠ፡ የዓለም፡ በተፈጠረ፡ ታቦታቱ፡ ዕቃ፡ በ<date>፯ሺ፡ ከ፫፻፶፰ዘመናት፡</date> በማርቆስ፡ በሰኔ፡ በ፮ቀን፡</q>
                                 </item>
                                 
                                 <item xml:id="a2">
                                     <locus from="2r"/>
-                                    <desc type="Inventory"></desc>
+                                    <desc type="Inventory"/>
                                     <q xml:lang="am">የ<placeName ref="LOC2808Egziet">መቅደላ፡ ማርያም፡</placeName> ዕቃ።</q>
                                 </item>
                                 
                                 <item xml:id="a3">
                                     <locus from="3r"/>
-                                    <desc type="Inventory"></desc>
+                                    <desc type="Inventory"/>
                                     <q xml:lang="am">በስመ፡ አብ፡ <gap reason="omitted" resp="PRS10171Wright"/>
                                         በ<date calendar="evangelists">ዘመነ፡ ማቴዎስ፡</date> በራስ፡ ዕንግዳ። በቢትወደድ፡ <persName ref="PRS11850WandYerad">ወንድ፡ ይራድ።</persName> 
-                                        በጋይንቴ፡ ቢሠውር፡ እጅ፡ <placeName ref="LOC2385DabraT">ደብረ፡ ታቦር፡</placeName> <!--church or town?--> ወተቀመጠ፡ ዕቃ።</q>
+                                        በጋይንቴ፡ ቢሠውር፡ እጅ፡ <placeName ref="LOC2385DabraT">ደብረ፡ ታቦር፡</placeName> 
+                              <!--church or town?--> ወተቀመጠ፡ ዕቃ።</q>
                                 </item>
                                 
                                 <item xml:id="a4">
                                     <locus from="4v"/>
-                                    <desc type="Record"></desc>
+                                    <desc type="Record"/>
                                     <q xml:lang="am">በስመ፡ አብ፡ <gap reason="omitted" resp="PRS10171Wright"/>
                                     <date calendar="evangelists">በዘመነ፡ ማርቆስ፡ በወርኃ፡ ሠኔ፡</date> የተጣፈ፡ የትግሬ፡ ግብር።</q>
                                 </item>
                                 
                                 <item xml:id="a5">
                                     <locus from="154v"/>
-                                    <desc type="Inventory"></desc>
+                                    <desc type="Inventory"/>
                                     <q xml:lang="am">በስመ፡ አብ፡ <gap reason="omitted" resp="PRS10171Wright"/>
                                         የፍጡሩ፡ የባርያው፡ የንጉሠ፡ ነገሥት፡ <persName ref="PRS9430Tewodros">ቴዎድሮስ፡</persName> ዕቃ፡ <placeName ref="LOC4547Maqdal">መቅደላ፡</placeName> የተቀመጠ፡ 
                                         በዕቃ፡ ቤቶች፡ እጅ፡ የተቈጠረበት። በ፯ሺ፡ ከ፫፻፡ ፶፯፡
@@ -195,7 +196,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -217,7 +224,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-01-25">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

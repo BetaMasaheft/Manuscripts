@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr410"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Commentary by John Chrysostom on the Epistle to the Hebrews</title>
@@ -51,9 +51,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <extent>
                                     <measure unit="leaf">308</measure>
                                     <measure unit="leaf" type="blank">
-                                      <locus from="1r" to="3v"></locus>
-                                      <locus from="4v" to="8v"></locus>
-                                      <locus from="306r" to="308v"></locus>
+                                      <locus from="1r" to="3v"/>
+                                      <locus from="4v" to="8v"/>
+                                      <locus from="306r" to="308v"/>
                                     </measure>
                                     <measure unit="quire">12</measure>
                                     <dimensions type="outer" unit="mm">
@@ -192,8 +192,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="29">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#82r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#82r"/>.</note>
                                 <locus from="9r" to="305v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>230</height>
@@ -218,8 +217,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -237,7 +235,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <list>
                           <item xml:id="e1">
                             <desc>Stamp</desc>
-                            <locus target="#165vb"></locus>
+                            <locus target="#165vb"/>
                             <note>The stamp is hardly legible but two columns, a branch and the latin letters "TAFAR...M" are visible.</note>
                           </item>
                           </list>
@@ -248,7 +246,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with richly tooled leather cover, preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"></material><material key="textile"></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                           <material key="textile"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Two heavy wooden boards carved from a light-brown wood.
                             </decoNote>
@@ -264,7 +266,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               The cross is surrounded by a floral motif, created using <term key="doubleStraightLine">double straight lines</term>, palm shaped motifs representing flowers and leaves.
                               The tools used on the strip of leather added on the spine are different: <term key="tripleStraightLine">triple straight lines</term> and a different criss-cross motif.
                               The spine is decorated with triple straight lines dividing the spine in 6 panels. Double circle are found at intersections.
-                              The turn-ins are wide, an <term key="additionalLeatherPatch">additional leather patch</term> is present so that a central square of 100 x 100 mm is coverd by a <term key="textile"></term> textile inlay.
+                              The turn-ins are wide, an <term key="additionalLeatherPatch">additional leather patch</term> is present so that a central square of 100 x 100 mm is coverd by a <term key="textile"/> textile inlay.
                               The textile is a plain dark blue cloth with vertical narrow yellow lines.
                               The turn-ins are decorated with crossing quadruple lines and rosettes at the intersections. The rosette motif is formed by a central dot surrounded by ten petals.
                             </decoNote>
@@ -323,7 +325,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -346,7 +354,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="FSUor134"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Tārika Walda ʿAmid, Zenā Sarkis za-ʾArmānyā wa-zenā qǝddus Tǝrtāg</title>
@@ -1339,7 +1339,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -1364,7 +1370,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
       <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5248874"/>
    </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
          <div type="edition">
             <div type="textpart" xml:id="WaldaAmidPreface" corresp="#p1_i1.1.1">
@@ -1427,7 +1433,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   ገብርኤል፡ ፺አባ፡ ዮሐንስ፡ ፺ወ፩አባ፡ ገብርኤል፡ ፺ወ፪አባ፡ ሚካኤል፡ ፺ወ፫አባ፡ ዮሐንስ፡ ፺ወ፬አባ፡ ዮሐንስ፡ ፺ወ፭አባ፡ ገብርኤል፡ ዘነበረ፡ 
                   በዘመነ፡ ንጉሥነ፡ <persName ref="PRS6229LebnaDe">ልብነ፡ ድንግል፡ </persName>፺ወ፮አባ፡ ዮሐንስ፡ ፺ወ፯አባ፡ ገብርኤል፡ ዘሀሌ፡ ይእዜ፡ በዘመነ፡
                   ንጉሥነ፡ <persName ref="PRS8550sardaDe">ሠርፀ፡ ደንግል። ።
-                  </persName></ab>
+                  </persName>
+               </ab>
             </div>
           
             <div type="textpart"

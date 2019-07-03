@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient652" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient652"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra Māryām</title>
@@ -78,7 +81,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <date notBefore="1425" notAfter="1450" resp="Uhlig"/>
                                 <locus from="1" to="151r"/>
                                 <desc>Written in a fine character.</desc>
-                                <desc>The script is described in <bibl><ptr target="bm:Uhlig1988Palaographie"/><citedRange unit="page">378-382</citedRange></bibl>.</desc>
+                                <desc>The script is described in <bibl>
+                              <ptr target="bm:Uhlig1988Palaographie"/>
+                              <citedRange unit="page">378-382</citedRange>
+                           </bibl>.</desc>
                             </handNote>
                             
                             <handNote script="Ethiopic" xml:id="h2">
@@ -87,7 +93,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus from="1" to="151r"/>
                                 <desc>Written in a fine character.</desc>
                                 <desc>The script is described in 
-                                    <bibl><ptr target="bm:Uhlig1988Palaographie"/><citedRange unit="page">378-382</citedRange></bibl>. It might slightly
+                                    <bibl>
+                              <ptr target="bm:Uhlig1988Palaographie"/>
+                              <citedRange unit="page">378-382</citedRange>
+                           </bibl>. It might slightly
                                 more ancient than <ref target="#h1"/>.</desc>
                             </handNote>
                         </handDesc>
@@ -109,7 +118,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="a1">
                                     <locus target="#1r"/>
                                     <desc type="DonationNote">Mutilated donation note.</desc>
-                                    <q xml:lang="gez"><gap reason="lost"/><persName ref="PRS12214BelaK">ብዕለ፡ ክርስቶስ።</persName> <gap reason="lost"/>
+                                    <q xml:lang="gez">
+                              <gap reason="lost"/>
+                              <persName ref="PRS12214BelaK">ብዕለ፡ ክርስቶስ።</persName> 
+                              <gap reason="lost"/>
                                         በንዋዩ፡ ሶበ፡ አገበሮ፡ ፍቅረ፡ <supplied reason="undefined" resp="PRS10171Wright">እግዝ</supplied>እትነ፡ ማርያም፡ ከመ፡ ይኩኖ፡ ለመድኃኒተ፡ ነፍሱ፡ ወሥጋሁ። ወድኅረ ኒ፡ ወሀቦ፡ ለታቦተ፡ <gap reason="lost"/>
                                         ዘግሑስ። ወሎቱኒ፡ ኢትርስእዎ፡ በጸሎትክሙ፡ ቅድስት። እስመ፡ ጸሎተ፡ ጻድቅ፡ ትክል፡ ወታሰልጥ።</q>
                                 </item>
@@ -123,7 +135,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                   <locus target="#3r"/>
                                   <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                       <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                  <q xml:lang="gez">፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                  <q xml:lang="gez">፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                               </item>
                                 
                                 <item xml:id="e1">
@@ -170,10 +183,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                     <history>
                         <origin>
-                            <origDate notBefore="1400" notAfter="1499" evidence="lettering" resp="Wright"/>
+                            <origDate notBefore="1400"
+                               notAfter="1499"
+                               evidence="lettering"
+                               resp="Wright"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                     </history>
 
@@ -188,7 +203,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                         </bibl>
                                     </listBibl>
                                     <listBibl type="secondary">
-                                        <bibl xml:id="Uhlig"><ptr target="bm:Uhlig1988Palaographie"/><citedRange unit="page">378-382</citedRange></bibl>
+                                        <bibl xml:id="Uhlig">
+                                 <ptr target="bm:Uhlig1988Palaographie"/>
+                                 <citedRange unit="page">378-382</citedRange>
+                              </bibl>
                                     </listBibl>
                                 </source>
                             </recordHist>
@@ -202,7 +220,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -225,7 +249,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_652_fs001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

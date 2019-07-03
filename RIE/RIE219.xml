@@ -4,10 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="RIE219"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="RIE219"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>RIÉ 219</title>
@@ -41,9 +41,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <supportDesc>
                                 <support>
                                     <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/2"/>
-                                    <objectType xml:lang="fr"
-                                        ref="https://www.eagle-network.eu/voc/objtyp/lod/144"
-                                        >Basin</objectType>
+                                    <objectType xml:lang="fr" ref="https://www.eagle-network.eu/voc/objtyp/lod/144">Basin</objectType>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
@@ -63,9 +61,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <history>
                         <origin>
                             <origPlace ref="LOC4980Nazret"> 
-                                The inscription from <placeName ref="LOC4980Nazret"></placeName>.
+                                The inscription from <placeName ref="LOC4980Nazret"/>.
                             </origPlace>
-                            <origDate ></origDate>
+                            <origDate/>
                         </origin>
                     </history>
                     
@@ -93,7 +91,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
@@ -108,14 +112,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2018-10-15" who="PL">created entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         
         <body>
             <div type="edition">
-                <ab></ab>
+                <ab/>
             </div>
         </body>
         
     </text>
 </TEI>
-

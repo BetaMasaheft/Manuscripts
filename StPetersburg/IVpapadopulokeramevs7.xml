@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVpapadopulokeramevs7"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Psalter</title>
@@ -56,8 +56,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                           መስቀል᎓ በመልዕልተ᎓ ኵሉ᎓ እግዚአብሔር᎓
                         </incipit>
                         <note>Possibly the same text as in manuscript Staatsbibliothek zu Berlin Preußischer Kulturbesitz, Petermann II Nachtr. 32,
-                        ff. 1v-2r, <bibl><ptr target="bm:Dillmann1878Verzeichnis"/><citedRange unit="page">38</citedRange>
-                        </bibl></note>
+                        ff. 1v-2r, <bibl>
+                           <ptr target="bm:Dillmann1878Verzeichnis"/>
+                           <citedRange unit="page">38</citedRange>
+                        </bibl>
+                     </note>
                       </msItem>
 
                </msContents>
@@ -96,13 +99,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <handNote xml:id="h1" script="Ethiopic">
                        <seg type="ink">Black, red</seg>
                        <date notBefore="1700" notAfter="1799"/>
-                    <desc> <persName ref="PRS9602Turaev"/>
+                        <desc> 
+                           <persName ref="PRS9602Turaev"/>
                        does not date the hand.</desc>
                      </handNote>
 
                     <handNote script="Ethiopic" xml:id="h2" corresp="#a1">
-                    <seg type="ink">Black</seg>
-                    <desc> <persName ref="PRS9602Turaev"/>
+                        <seg type="ink">Black</seg>
+                        <desc> 
+                           <persName ref="PRS9602Turaev"/>
                        does describe the hand,
                        only says that it is different from the main hand.</desc>
                     </handNote>
@@ -182,6 +187,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
 
@@ -216,7 +227,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DN" when="2018-12-21">Additions</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

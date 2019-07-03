@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESum012" xml:lang="en" type="mss">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="ESum012"
+     xml:lang="en"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Maṣḥafa gǝnzat “Book of the Funeral Ritual”</title>
@@ -54,8 +59,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <material key="parchment"/>
                         </support>
                         <extent>Made of <measure unit="leaf">122.0</measure> folios, of which
-                              <measure unit="leaf" type="blank"/> blank 1rv, 2r, in <measure
-                              unit="quire">16.0</measure> quires (A+15). <dimensions type="outer">
+                              <measure unit="leaf" type="blank"/> blank 1rv, 2r, in <measure unit="quire">16.0</measure> quires (A+15). <dimensions type="outer">
                               <height unit="mm">285</height>
                               <width unit="mm">238</width>
                               <depth unit="mm">62</depth>
@@ -142,8 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <item>ሃ፡ ሉ፡ or ሃሌ፡ ሉ፡ for ሃሌ፡ ሉያ፡</item>
                            <item>ሃ፡ ሃ፡ ሃ፡ for threefold ሃሌ፡ ሉያ፡</item>
                            <item>
-                              <abbr>ፍ፡ ረ፡ or ፍቱ፡ ረ፡</abbr> for <expan>ፍቱሐ፡ ረስያ፡ </expan> (cp. <locus
-                                 target="#18r">18r</locus>, 18v, 19r passim).</item>
+                              <abbr>ፍ፡ ረ፡ or ፍቱ፡ ረ፡</abbr> for <expan>ፍቱሐ፡ ረስያ፡ </expan> (cp. <locus target="#18r">18r</locus>, 18v, 19r passim).</item>
                         </list>
                         <seg type="rubrication">Nomina sacra; incipits of the texts; directives for
                            the ministers; the word ሃሌ፡ ሉያ፡; names of the donors (cp. fols. 11rb,
@@ -155,7 +158,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <decoDesc>
                      <decoNote type="miniature" xml:id="d1"/>
                   </decoDesc>
-                  <additions><list>
+                  <additions>
+                     <list>
                         <item xml:id="a1">
                            <locus target="#2v">f. 2v</locus>
                            <desc>: Ownership note. </desc>
@@ -172,13 +176,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            Gǝnbot 28"): <locus target="#2r">2r</locus>. &#xD; - Minor notes in the
                            upper margin: <locus target="#8r">8r</locus>, 11v, 13v, 17v, 20v, 24r,
                            37r, 42r, 46r, 48r, 49r, 55v, 58v, 60v, 65v, 71v.</item>
-                        <item xml:id="e2"
-                              ><!--2019-04-02+02:00 Updated UM-012 
-            from DomLib --><desc
-                              type="findingAid">- (Recent?) coloured threads and strips of textile
+                        <item xml:id="e2"><!--2019-04-02+02:00 Updated UM-012 
+            from DomLib -->
+                           <desc type="findingAid">- (Recent?) coloured threads and strips of textile
                               are inserted in the upper corners of some fols. (e.g., fols. 58,
-                              65).</desc></item>
-                     </list></additions>
+                              65).</desc>
+                        </item>
+                     </list>
+                  </additions>
                   <bindingDesc>
                      <binding contemporary="true">
                         <decoNote xml:id="b1">Two wooden boards, originally covered with brown
@@ -229,14 +234,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <particDesc>
             <listPerson>
                <person>
                   <persName role="owner" ref="PRS0000">Walda Krǝstos, Walda Mikāʾel, Tasfā Mikāʾel
-                     (s. supplication formulas on <locus from="76v" to="77r"
-                     >76v-77r</locus>).</persName>
+                     (s. supplication formulas on <locus from="76v" to="77r">76v-77r</locus>).</persName>
                   <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
                                         Person/persName should only contain the person name, not all the paragraph.-->
                </person>
@@ -270,7 +280,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

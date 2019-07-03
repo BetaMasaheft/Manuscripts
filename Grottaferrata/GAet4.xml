@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet4"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Enarratio ad duodecim Discipulos, Litany Baʾǝnta Māryām walāditǝka</title>
@@ -96,14 +96,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <condition key="good"/>
                             </supportDesc>
                             <layoutDesc>
-                              <layout columns="1" writtenLines="17 18"></layout>
+                              <layout columns="1" writtenLines="17 18"/>
                             </layoutDesc>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1"
-                               corresp="#ms_i1 #ms_i2">
+                          <handNote script="Ethiopic" xml:id="h1" corresp="#ms_i1 #ms_i2">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -122,7 +120,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               Prayer against the headache.
                             </item>
                             <item xml:id="a1">
-                              <desc type="ScribalNoteCompleting"></desc>
+                              <desc type="ScribalNoteCompleting"/>
                               <locus target="#49v"/>
                               <q xml:lang="eng">This book was completed on Tuesday, in 7 nights during the day 17, in the day of Stephen, archdeacon and protomartyr, amen.</q>
                             </item>
@@ -159,7 +157,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -182,7 +186,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="BDLaethe14"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Maṣḥafa bǝrhān, 1 John</title>
@@ -298,7 +298,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <colophon xml:id="coloph2">
                             <locus target="#34v"/>
                             <note>The colophon states that this manuscript was written by  
-                                <persName role="scribe" ref="PRS11474GabraM"><roleName type="title">ʾalaqā</roleName></persName> <persName role="scribe" ref="PRS11474GabraM"/> in the town
+                                <persName role="scribe" ref="PRS11474GabraM">
+                              <roleName type="title">ʾalaqā</roleName>
+                           </persName> 
+                           <persName role="scribe" ref="PRS11474GabraM"/> in the town
                                 of <placeName ref="LOC4519Mandaf"/>.</note>
                         </colophon>
                         </msItem>
@@ -380,7 +383,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -408,7 +417,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2017-06-13">Changes</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

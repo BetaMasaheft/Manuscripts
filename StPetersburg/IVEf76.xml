@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVEf76" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="IVEf76"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en">Explanation of the Sign of the Faith, Hymn to Jesus Christ</title>
@@ -32,15 +37,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
-                          <locus from="1r" to="9v"></locus>
-                          <title type="incomplete" ref="LIT5684Explanation"></title>
-                          <textLang mainLang="am"></textLang>
+                          <locus from="1r" to="9v"/>
+                          <title type="incomplete" ref="LIT5684Explanation"/>
+                          <textLang mainLang="am"/>
                           <note>The text is incomplete, the beginning is lacking.</note>
                         </msItem>
                         <msItem xml:id="ms_i2">
-                          <locus from="9v" to="10v"></locus>
-                          <title type="complete" ref="LIT5685Hymn"></title>
-                          <textLang mainLang="gez"></textLang>
+                          <locus from="9v" to="10v"/>
+                          <title type="complete" ref="LIT5685Hymn"/>
+                          <textLang mainLang="gez"/>
                         <incipit xml:lang="gez">ሰላም፡ ለኪ፡ ኦርእስ፡ ዘቤዛዊነ፡ ኢየሱስ፡ ክርስቶስ፡</incipit>
                         </msItem>
                     </msContents>
@@ -58,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>130</width>
                                     </dimensions>
                                 </extent>
-                                <condition key="deficient">The <locus target="#1"></locus> is damaged. No binding.
+                                <condition key="deficient">The <locus target="#1"/> is damaged. No binding.
                                 </condition>
                             </supportDesc>
                             <layoutDesc>
@@ -77,9 +82,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </additions>
                     </physDesc>
                     <history>
-                      <acquisition>The manuscript was acquired by <persName ref="PRS9602Turaev"></persName> in <ref type="place" corresp="LOC2804Egypt">Egypt</ref>.
-                      Later it was handed over to <ref type="place" corresp="INS0301IV"></ref> in <date>1920</date>
-                      as a part of the collection of <persName ref="PRS9602Turaev"></persName>.</acquisition>
+                      <acquisition>The manuscript was acquired by <persName ref="PRS9602Turaev"/> in <ref type="place" corresp="LOC2804Egypt">Egypt</ref>.
+                      Later it was handed over to <ref type="place" corresp="INS0301IV"/> in <date>1920</date>
+                      as a part of the collection of <persName ref="PRS9602Turaev"/>.</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
@@ -106,7 +111,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
 
             <creation/>
@@ -116,9 +127,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
 
-                    <term key="ChristianLiterature"></term>
-                <term key="Poetry"></term>
-                <term key="AmharicLiterature"></term>
+                    <term key="ChristianLiterature"/>
+                <term key="Poetry"/>
+                <term key="AmharicLiterature"/>
 
                 </keywords>
             </textClass>
@@ -135,9 +146,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

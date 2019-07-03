@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr403"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Liturgical texts, magical prayers, Nagara Māryām, Anaphora of Our Lady by St. Cyriacus of Behnesā, Anaphora of Our Lady, Māḫleta ṣǝge, Salām and prayers </title>
@@ -43,8 +43,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <extent>
                                     <measure unit="leaf">189</measure>
                                     <measure unit="leaf" type="blank">
-                                      <locus from="1r" to="4v"></locus>
-                                      <locus from="187v" to="189v"></locus>
+                                      <locus from="1r" to="4v"/>
+                                      <locus from="187v" to="189v"/>
                                     </measure>
                                     <measure unit="quire">20</measure>
                                     <dimensions type="outer" unit="mm">
@@ -157,8 +157,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="20">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#91r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#91r"/>.</note>
                                 <locus from="5r" to="187r"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>142</height>
@@ -181,8 +180,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -192,7 +190,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with wooden boards and a plain textile chemise, preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="textile"></material>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="textile"/>
                             </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               The upper board is broken in two halves held togheter by loops of thread passing through the holes done into the boards.
@@ -244,7 +244,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -267,7 +273,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient486"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Old Testament books</title>
@@ -197,7 +197,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <desc type="OwnershipNote">The note at the end of item 3 giving the name of the owner, 
                                         <persName ref="PRS11361Kanafera" role="owner">Kanāfǝra Krǝstos</persName>.</desc>
                                     <q xml:lang="gez">ተፈጸመ ፡ በዝየ ፡ መጽሐፈ ፡ ጥበቡ ፡ ለኢያሱ ፡ ወልደ ፡ ሲራክ። ጸሎቱ ፡ 
-                                        ወበረከቱ ፡ የሀሉ ፡ ምስለ ፡ ፍቁሩ ። <persName ref="PRS11361Kanafera" role="owner">ከናፍረ፡ ክርስቶስ።</persName> </q>
+                                        ወበረከቱ ፡ የሀሉ ፡ ምስለ ፡ ፍቁሩ ። <persName ref="PRS11361Kanafera" role="owner">ከናፍረ፡ ክርስቶስ።</persName> 
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a3">
@@ -255,7 +256,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -279,7 +286,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2017-01-05" who="ES">Completed catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

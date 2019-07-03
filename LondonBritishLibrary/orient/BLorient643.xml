@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient643" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient643"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra Māryām</title>
@@ -132,7 +135,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                           </item>
                                 
                                 <item xml:id="a2">
@@ -141,14 +145,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </item>
                                 
                                 <item xml:id="e1">
-                                    <desc>The names of the first owners, <persName ref="PRS3485DelbaIy" role="owner"><certainty locus="value" match="../@ref" cert="low"/>ድል፡ በኢየሱስ፡</persName> and
-                                        <persName ref="PRS9836Walatta" role="owner"><certainty locus="value" match="../@ref" cert="low"/>ወለተ፡ <gap reason="lost"/>ት።</persName>,
+                                    <desc>The names of the first owners, <persName ref="PRS3485DelbaIy" role="owner">
+                                 <certainty locus="value" match="../@ref" cert="low"/>ድል፡ በኢየሱስ፡</persName> and
+                                        <persName ref="PRS9836Walatta" role="owner">
+                                 <certainty locus="value" match="../@ref" cert="low"/>ወለተ፡ <gap reason="lost"/>ት።</persName>,
                                     are everywhere erased.</desc>
                                 </item>
                                 
                                 <item xml:id="e2">
-                                    <desc>Later owners are <persName ref="PRS5621Iyasu" role="owner"><certainty locus="value" match="../@ref" cert="low"/></persName> 
-                                        and <persName ref="PRS9827Walatta" role="owner"><certainty locus="value" match="../@ref" cert="low"/></persName>.</desc>
+                                    <desc>Later owners are <persName ref="PRS5621Iyasu" role="owner">
+                                 <certainty locus="value" match="../@ref" cert="low"/>
+                              </persName> 
+                                        and <persName ref="PRS9827Walatta" role="owner">
+                                 <certainty locus="value" match="../@ref" cert="low"/>
+                              </persName>.</desc>
                                 </item>
                                 
                                 <item xml:id="e3">
@@ -179,8 +189,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <origin>
                             <origDate notBefore="1708" notAfter="1711" evidence="reign"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                     </history>
 
@@ -206,7 +215,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -230,7 +245,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_643_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

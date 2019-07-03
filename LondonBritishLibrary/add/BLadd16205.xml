@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BLadd16205"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Maṣḥafa faws manfasāwi</title>
@@ -93,7 +93,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                         <msItem xml:id="ms_i6">
                             <locus target="#25"/>
-                            <title type="complete" ref="LIT4982ListCan"></title>
+                            <title type="complete" ref="LIT4982ListCan"/>
                             <note>
                                 <q xml:lang="gez">
                                     <lb/>ዘፍጥረት። ዘፀአት። ዘሌዋውያን። ዘኍልቍ። ዘዳግም፡ ሕግ። ዘኢያሱ፡ ወልደ፡ ነዌ። ዘመሳፍንት። ዘሩት። ዘነገሥት፡ ፬። ዘእዝራ፡ ትራፋተ፡ ነገሥት፡ ፪። ዘኢዮብ። ዘአስቴር።
@@ -180,7 +180,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -206,7 +212,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2018-06-27" who="DE">Added reference to the work in ms_i6</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

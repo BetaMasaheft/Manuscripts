@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient492"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Old Testament books</title>
@@ -196,13 +196,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <decoDesc>
                             <decoNote xml:id="d1" type="drawing">
                                 <locus target="#5v"/>
-                                <desc>An added rude picture in outline, <foreign xml:lang="am">ሥልጣኑን ፡ እንደ ፡ ተሻረ ፡ ዲብሎስ ።</foreign></desc>
+                                <desc>An added rude picture in outline, <foreign xml:lang="am">ሥልጣኑን ፡ እንደ ፡ ተሻረ ፡ ዲብሎስ ።</foreign>
+                        </desc>
                             </decoNote>
                             
                             <decoNote xml:id="d2" type="miniature">
                                 <locus target="#139v"/>
                         <desc>A picture, representing <persName ref="PRS8567Saul">Saul</persName> 
-                            among the prophets, <foreign xml:lang="gez">በከመ ፡ ተብህለ ፡ <persName ref="PRS8567Saul">ሳኦል</persName>ኒ ፡ ዉስተ ፡ ነቢያትኑ።</foreign></desc>
+                            among the prophets, <foreign xml:lang="gez">በከመ ፡ ተብህለ ፡ <persName ref="PRS8567Saul">ሳኦል</persName>ኒ ፡ ዉስተ ፡ ነቢያትኑ።</foreign>
+                        </desc>
                             </decoNote>
                         </decoDesc>
                         
@@ -339,7 +341,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -368,7 +376,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2017-05-16" who="ES">explicit type subscription introduced</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

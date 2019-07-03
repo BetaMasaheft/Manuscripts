@@ -5,11 +5,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-   xml:lang="en"
-   xml:id="ONBAeth4"
-   type="mss">
+     xml:lang="en"
+     xml:id="ONBAeth4"
+     type="mss">
     <!-- This is an expanded miniMs record: many fields are still unfilled (MV 2018-02-15) -->
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
              <title>Zenāhu la-Gāllā, Homily on St Fiqṭor, Miracles of Fiqṭor, Prayer to St Fiqṭor; Physiologus, Raʾǝya Sinodā</title>
@@ -126,12 +126,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msContents>
                      <msItem xml:id="p2_i1">
                         <locus from="89v" to="98r"/>
-                         <title ref="LIT4915PhysA"></title>
+                         <title ref="LIT4915PhysA"/>
                          <textLang mainLang="gez"/>
                      </msItem>
                      <msItem xml:id="p2_i2">
                         <locus from="98r" to="103r"/>
-                         <title ref="LIT2215RaeyaS"></title>
+                         <title ref="LIT2215RaeyaS"/>
                          <textLang mainLang="gez"/>
                      </msItem>
                   </msContents>
@@ -209,6 +209,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -222,7 +228,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="MV" when="2018-02-15">Created catalogue entry</change>
       </revisionDesc>
    </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

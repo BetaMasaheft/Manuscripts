@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient534"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient534"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>A hymn to the holy Cross, Mazmura Krǝstos, Another Mazmura Krǝstos,  hymn to angel Gabriel, slautations to the Saints and Martyrs,
@@ -60,7 +58,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">185</measure>
@@ -77,7 +75,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 
                             </supportDesc>
                             <layoutDesc>
-                                <layout columns="2" writtenLines="22"> only for <note><locus from="4" to="12"></locus> and <locus from="138" to="184"></locus>. On <locus from="13" to="137"></locus>
+                                <layout columns="2" writtenLines="22"> only for <note>
+                              <locus from="4" to="12"/> and <locus from="138" to="184"/>. On <locus from="13" to="137"/>
                                     space has  been left apparently for Amharic translation.</note>
                                 </layout>
                             </layoutDesc>
@@ -88,10 +87,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <handDesc>
                             
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is very neatly written of the <date when="1582"></date>.
+                                <desc>The manuscript is very neatly written of the <date when="1582"/>.
                                 </desc>
                                 
-                                <date when="1582" resp="PRS10171Wright"></date>
+                                <date when="1582" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -140,11 +139,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term key="Prayers"></term>
+                    <term key="Prayers"/>
                     
                 </keywords>
             </textClass>
@@ -161,17 +166,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-

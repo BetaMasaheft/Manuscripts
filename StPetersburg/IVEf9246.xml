@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVEf9246" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="IVEf9246"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Letter to Russisn doctors</title>
@@ -29,7 +34,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
-                            <title type="complete" xml:lang="en">Letter from <persName ref="PRS7006Menilek"></persName> to <persName ref="PRS12406Gudzenko">ሙሴ፡ ጉደኒስኮ፡</persName>.</title>
+                            <title type="complete" xml:lang="en">Letter from <persName ref="PRS7006Menilek"/> to <persName ref="PRS12406Gudzenko">ሙሴ፡ ጉደኒስኮ፡</persName>.</title>
                             <textLang mainLang="gez"/>
                             </msItem>
                     </msContents>
@@ -52,7 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <additions>
                           <list>
                             <item xml:id="e1">
-                              <desc type="StampExlibris"></desc>
+                              <desc type="StampExlibris"/>
                             </item>
                           </list>
                         </additions>
@@ -60,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <history>
                         <provenance/>
                         <acquisition>
-                        The letter was handed over to <ref type="place" corresp="INS0301IV"></ref> by <persName ref="PRS12406Gudzenko"></persName>.</acquisition>
+                        The letter was handed over to <ref type="place" corresp="INS0301IV"/> by <persName ref="PRS12406Gudzenko"/>.</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
@@ -81,7 +86,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -105,11 +116,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DE" when="2019-02-26">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography">
 
-            </div><!---->
+            </div>
+         <!---->
         </body>
     </text>
 </TEI>

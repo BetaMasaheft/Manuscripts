@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet5"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Psalter, Maḥālǝya nabiyāt, Maḥālǝya za-Salomon, Wǝddāse Māryām, ʾAnqaṣa bǝrhān</title>
@@ -225,7 +225,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <item xml:id="a2">
                             <desc type="ScribalNoteCommissioning">Aläqa Wäldä Sǝllase commissioned the book for Lǝǧǧ Abärra Nǝguse.</desc>
                             <locus target="#156rv"/>
-                            <q xml:lang="am"></q>
+                            <q xml:lang="am"/>
                           </item>
                           <item xml:id="e1">
                             <locus target="#2rv"/>
@@ -241,7 +241,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <bindingDesc>
                           <binding contemporary="true" xml:id="binding">
                             <decoNote xml:id="b1">The book is sewn on four sewing stations (two pairs) linked to wooden boards covered with blind-tooled leather.</decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"/></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                        </decoNote>
                             <decoNote xml:id="b4" type="Cover">
                               The cover is made of a brown-reddish leather decorated with blind tooled motifs. The design shows a central latin cross surrounded by three rectangular frames.
                               The cross is composed by the repetition of the <term key="motherOfWater">mother of water</term> motif. The outer and the inner frames are composed by the impression of a <term key="XForm">X-Form</term> tool.
@@ -287,7 +290,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -310,7 +319,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

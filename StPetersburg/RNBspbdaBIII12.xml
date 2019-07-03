@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RNBspbdaBIII12" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="RNBspbdaBIII12"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en">Liturgy</title>
@@ -38,25 +43,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <note>Verses from Psalms with musical notation (<foreign xml:lang="gez">ዕዝል፡</foreign> and <foreign xml:lang="gez">ግዕዝ፡</foreign>).</note>
                         </msItem>
                         <msItem xml:id="ms_i2">
-                          <locus from="7v"></locus>
-                          <title type="incomplete" ref="LIT2000Mazmur"></title>
+                          <locus from="7v"/>
+                          <title type="incomplete" ref="LIT2000Mazmur"/>
                           <note>Verses from Psalms with musical notation with a refrain "Hallelujah".</note>
                         </msItem>
                         <msItem xml:id="ms_i3">
-                          <locus from="11v"></locus>
-                          <title type="incomplete" ref="LIT3178Deggwa" cert="medium"></title>
+                          <locus from="11v"/>
+                          <title type="incomplete" ref="LIT3178Deggwa" cert="medium"/>
                           <note>Antiphons with musical notation for several feasts. The identity of the text is not clear</note>
                           <colophon xml:lang="gez" xml:id="coloph1">
                   ተፈጸመ፡ <date>፫በዕለተ፡ ዓርብ፡ በወርኃ፡ ነሐሴ፡ በዘመነ፡ ዮሐንስ፡ ወንጌላዊ፡</date> በ፳ወ፫መዓልት፡ በ፳ወ፮ሌሊት፡ በሰላመ፡ እግዚአብሔር፡ አሜን፡
                </colophon>
                         </msItem>
                         <msItem xml:id="ms_i4">
-                          <locus from="18v"></locus>
+                          <locus from="18v"/>
                           <title type="incomplete" ref="LIT3178Deggwa" cert="medium">አርያም፡ እምዮሐንስ፡</title>
                           <note>Antiphons with musical notation for some feasts. The identity of the text is not clear.</note>
                         </msItem>
                         <msItem xml:id="ms_i5">
-                          <locus from="22r"></locus>
+                          <locus from="22r"/>
                           <title type="complete" ref="LIT2301Sebhat">ምዕራፍ፡ ዘስብሐተ፡ ነግህ፡</title>
                           <note>The text has musical notation at the biginning.</note>
                         </msItem>
@@ -84,19 +89,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
                             </handNote>
-                            <handNote script="Cyrillic" xml:id="h2" corresp="#a1"></handNote>
+                            <handNote script="Cyrillic" xml:id="h2" corresp="#a1"/>
                         </handDesc>
                         <additions>
                           <list>
                             <item xml:id="a1">
-                              <desc type="Comment"></desc>
-                              <locus target="#1r"></locus>
+                              <desc type="Comment"/>
+                              <locus target="#1r"/>
                               <q xml:lang="ru">Kal"-tymryt" dlya učenikov" i učitelej.</q>
                             </item>
                           </list>
                           <list>
                             <item xml:id="e1">
-                              <desc>Spaces for rubrics are left unfilled in <ref target="#ms_i5"></ref>.</desc>
+                              <desc>Spaces for rubrics are left unfilled in <ref target="#ms_i5"/>.</desc>
                             </item>
                           </list>
                         </additions>
@@ -114,7 +119,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                     </physDesc>
                     <history>
-                      <acquisition>The manuscript was acquired by <persName ref="PRS12311Aleksandr"></persName> in <date calendar="julian">1896</date>
+                      <acquisition>The manuscript was acquired by <persName ref="PRS12311Aleksandr"/> in <date calendar="julian">1896</date>
                       during his stay in <placeName ref="LOC3010Ethiop">Ethiopia</placeName> with the mission of the Red Cross.</acquisition>
                     </history>
                     <additional>
@@ -142,7 +147,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -151,7 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Chants"></term>
+                    <term key="Chants"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -168,9 +179,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change when="2019-02-04" who="DE">Corrected idno, added bibliography</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

@@ -1,8 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RNBEfns23" xml:lang="en" type="mss">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="RNBEfns23"
+     xml:lang="en"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title xml:lang="en">Synaxarium</title>
@@ -32,13 +37,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
-                          <locus from="2r" to="192v"></locus>
+                          <locus from="2r" to="192v"/>
                           <title type="incomplete" ref="LIT2375Synaxa">Ethiopic Synaxarium for the first half of the year</title>
-                          <textLang mainLang="gez"></textLang>
+                          <textLang mainLang="gez"/>
                           <note>The life of Saints are often accompanied by Salām-hymns.</note>
 
-<colophon xml:id="coloph1" xml:lang="gez">
-  <locus target="#291v"></locus>
+                     <colophon xml:id="coloph1" xml:lang="gez">
+                        <locus target="#291v"/>
   ዝንቱ፡ መጽሐፍ፡ <persName ref="PRS12511DaligawY" role="owner">ዘደሊገው፡ ዮሐንስ።</persName>
   ዘአጽሐፎ፡ <persName ref="PRS12512HaylaI" role="donor">ኃይለ፡ ኢየሱስ፤</persName>
   ጸሐፊ፡ ኃጥእ፡ ወምኑን፡ <persName ref="PRS12513WaldaM" role="author">ወልደ፡ ማርያም፡</persName>
@@ -55,7 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <extent>
                                     <measure unit="leaf">193</measure>
                                     <measure unit="leaf" type="blank">3</measure>
-                                    <locus target="#1 #163 #193"></locus>
+                                    <locus target="#1 #163 #193"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>365</height>
                                         <width>290</width>
@@ -74,14 +79,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </handDesc>
                         <decoDesc>
                           <decoNote xml:id="d1" type="ornamentation">
-                            <locus target="#49v"></locus>
+                            <locus target="#49v"/>
                             <desc>Small ornamentation.</desc>
                           </decoNote>
                         </decoDesc>
                         <additions>
                           <list>
                             <item xml:id="a1">
-                              <locus target="#192v"></locus>
+                              <locus target="#192v"/>
                               <desc type="Condemnation" xml:lang="gez">ኻያ፡ ለደን፡ እህል፡ ዘገበው፡ ዘሠረቆ፡ ወዘፈሐቆ፡ በሥልጣነ፡ ጴጥሮስ፡ ውጉዝ፡ ለይኩን፡</desc>
                             </item>
                           </list>
@@ -91,15 +96,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <decoNote xml:id="b1"/>
                                 <decoNote xml:id="b2" type="bindingMaterial">
                                     <material key="wood"/>
-                                    <material key="leather"></material>
-                                    <material key="textile"></material>
+                                    <material key="leather"/>
+                                    <material key="textile"/>
                                     <note>Wooden boards with tooled red leather. A leather slipcase with belts.</note>
                                 </decoNote>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                      <acquisition>The manuscript was acquired by <ref type="place" corresp="INS0508RNB"></ref> in <date>1914</date> as part of the colletion of <persName ref="PRS3073cemerzin"></persName>.</acquisition>
+                      <acquisition>The manuscript was acquired by <ref type="place" corresp="INS0508RNB"/> in <date>1914</date> as part of the colletion of <persName ref="PRS3073cemerzin"/>.</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
@@ -129,7 +134,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -153,9 +164,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DE" when="2019-03-12">Created entity, added physical description and content.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
+         <!---->
         </body>
     </text>
 </TEI>

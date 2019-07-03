@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient693"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient693"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Acts of Aaron</title>
@@ -52,12 +50,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             
 
                         <msItem xml:id="ms_i1.1">
-                            <locus target="#53r"></locus>
+                            <locus target="#53r"/>
                             <title type="complete" ref="LIT1423GadlaA#hymn">በመሠረተ፡ ቃል፡ አንበርኩ፡ ለማኅፈደ፡ ዝክረከ፡  ስሞ፡ ላዕላአ፡ ልሳን፡ ወልድከ፡ በጽሒቅ፡ አስተኃምሞ።</title>
                         </msItem>
                         
                         <msItem xml:id="ms_i1.2">
-                            <locus target="#58"></locus>
+                            <locus target="#58"/>
                             <title type="complete" ref="LIT1423GadlaA#hymn">contains part of another hymn to various saints</title>
                         </msItem>
                         </msItem>
@@ -75,7 +73,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">59</measure>
@@ -89,18 +87,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="16 19" cert="high"></layout>
+                                <layout columns="2" writtenLines="16 19" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
                         <handDesc>
                             
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is written in good hand: <locus from="14" to="58"></locus> are written of the earlier part of the <date>18 century</date>, 
+                                <desc>The manuscript is written in good hand: <locus from="14" to="58"/> are written of the earlier part of the <date>18 century</date>, 
                                     the rest is of much later date.
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -113,8 +111,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 
                                 <item xml:id="e1">
                                     <desc>The name of scribe <persName ref="PRS12487Falatawos" role="scribe"/> and 
-                                        name of owner <persName ref="PRS12488TalaweKrestos" role="owner"></persName> is mentioned <locus from="44v"></locus>. 
-                                        The name of the a later possesor was <persName ref="PRS12490Yohannes"></persName></desc>
+                                        name of owner <persName ref="PRS12488TalaweKrestos" role="owner"/> is mentioned <locus from="44v"/>. 
+                                        The name of the a later possesor was <persName ref="PRS12490Yohannes"/>
+                           </desc>
                                 </item>
 
                                 <item xml:id="e2">
@@ -163,7 +162,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -184,15 +189,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient713"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient713"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Acts of George, Maṣḥafa  ʾAḫǝbro</title>
@@ -77,8 +73,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <textLang mainLang="gez"/>
                             <colophon xml:id="coloph1">
                          
-                                <note>The colophon contains the names of the <persName ref="PRS12580FessehaSeyon "></persName> and 
-                                    his father <persName ref="PRS12581Anorewos"/> and his mother <persName ref="PRS12584Aqelesya"></persName></note>.     </colophon>
+                                <note>The colophon contains the names of the <persName ref="PRS12580FessehaSeyon "/> and 
+                                    his father <persName ref="PRS12581Anorewos"/> and his mother <persName ref="PRS12584Aqelesya"/>
+                        </note>.     </colophon>
                             
                         </msItem>
                         
@@ -94,7 +91,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">195</measure>
@@ -108,7 +105,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="22 24" cert="high"></layout>
+                                <layout columns="2" writtenLines="22 24" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -118,7 +115,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is written in a good hand, of the earlier part of the <date>18th century</date>. 
                                     
                                 </desc>
-                                <date notBefore="1700" notAfter="1750" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1750" resp="PRS10171Wright"/>
                                 
                                 
                                 
@@ -132,11 +129,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#4r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ገድለ፡ ጊዮርጊስ፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ገድለ፡ ጊዮርጊስ፡  ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 <item xml:id="e1">
-                                <locus target="#81v"></locus>
-                                <desc> The name of the first owner was <persName ref="PRS12580FessehaSeyon " role="owner"></persName>, for whose name have been substituted those of 
+                                <locus target="#81v"/>
+                                <desc> The name of the first owner was <persName ref="PRS12580FessehaSeyon " role="owner"/>, for whose name have been substituted those of 
                                     <persName ref="PRS12582WaldaAragawi"/> and <persName ref="PRS12583WaldaAragawi"/>.</desc>
                                   
                           
@@ -169,7 +167,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             The manuscript was then sent to the Royal Library at Windsor and 
                             presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
                             <listBibl type="secondary">
-                                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
+                                <bibl>
+                           <ptr target="bm:Wright1877BM"/>
+                           <citedRange unit="page">iv</citedRange>
+                        </bibl>
                             </listBibl>
                         </provenance>
                         
@@ -198,7 +199,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -222,24 +229,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_713_fs001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

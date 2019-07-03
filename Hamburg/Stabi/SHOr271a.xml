@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr271a"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Book of Enoch</title>
@@ -33,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <idno>Scrinio 130</idno>
                         </altIdentifier>
                         <altIdentifier>
-                          <idno></idno>
+                          <idno/>
                         </altIdentifier>
                     </msIdentifier>
 
@@ -125,8 +125,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="24">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#38r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#38r"/>.</note>
                                 <locus from="2r" to="63v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>137</height>
@@ -148,8 +147,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </ab>
                               </layout>
                               <layout columns="2" writtenLines="26 27">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#68r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#68r"/>.</note>
                                 <locus from="64r" to="69v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>145</height>
@@ -174,8 +172,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                           </handNote>
                         </handDesc>
@@ -223,7 +220,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with fine tooled leather cover.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Two boards of the same light brown wood.
                               The space between the turn-ins on the inner surface of the boards is left uncovered.
@@ -286,7 +286,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -309,7 +315,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

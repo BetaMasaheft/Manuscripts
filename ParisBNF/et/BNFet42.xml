@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BNFet42"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Catholic Epistles, Acts of the Apostles</title>
@@ -134,14 +134,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </msItem>
                   
                   <msItem xml:id="ms_i3">
-         <colophon xml:id="coloph1">
-           <note> The final note states that this manuscript was produced 
+                     <colophon xml:id="coloph1">
+                        <note> The final note states that this manuscript was produced 
                   for the convent of the Apostles at     <placeName ref="INS0308DQ"/>
                   by two monks of the house of <persName ref="PRS11232HouseSam"/>, 
                   <persName ref="PRS9197Taklase" cert="low"/> and <persName ref="PRS10997Galawdeyos"/>
                   (<foreign xml:lang="gez">
-                     <persName ref="PRS11232HouseSam">ደቂቀ፡ አባ፡ ሳሙኤል፡ ዘበዲመ፡ ዋሊ፡</persName>
-                  </foreign>)</note></colophon>
+                              <persName ref="PRS11232HouseSam">ደቂቀ፡ አባ፡ ሳሙኤል፡ ዘበዲመ፡ ዋሊ፡</persName>
+                           </foreign>)</note>
+                     </colophon>
                   </msItem>
                </msContents>
           
@@ -278,6 +279,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
    
       <profileDesc>
@@ -313,7 +320,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-05-29">Corrected addition to colophon</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
             <div type="textpart"

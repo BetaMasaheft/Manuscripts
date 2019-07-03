@@ -5,10 +5,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-   xml:lang="en"
-   xml:id="BNFmon19"
-   type="mss">
-   <teiHeader>
+     xml:lang="en"
+     xml:id="BNFmon19"
+     type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
              <title>Maṣḥafa Falāsfā Ṭabibān, Physiologus, Excerpts of Ethiopian history, Ṭǝbāba Sābelā, Sentences of the wise philosophers, Fǝkkāre ʾIyasus, Biblical chronology, Baralām wa-Yǝwāsǝf</title>
@@ -34,7 +34,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <collection>Collection Mondon-Vidailhet</collection>
                     <idno>BnF Mondon-Vidailhet 19</idno>
                     <altIdentifier>
-                        <idno></idno>
+                        <idno/>
                     </altIdentifier>
                 </msIdentifier>
                
@@ -48,7 +48,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <msItem xml:id="ms_i2">
                         <locus from="16va" to="21rc"/>
-                        <title type="incomplete" ref="LIT4916PhysB"></title>
+                        <title type="incomplete" ref="LIT4916PhysB"/>
                         <textLang mainLang="gez"/>
                     </msItem>
                     
@@ -147,7 +147,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </decoNote>
                         <decoNote type="miniature" xml:id="d10">
                             <locus target="#70v"/>
-                            <desc>Colorful miniature of the marriage of king <persName ref="PRS7006Menilek">Mǝnilǝk</persName></desc>
+                            <desc>Colorful miniature of the marriage of king <persName ref="PRS7006Menilek">Mǝnilǝk</persName>
+                        </desc>
                         </decoNote>
                         <decoNote type="miniature" xml:id="d11">
                             <locus target="#70v"/>
@@ -155,7 +156,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </decoNote>
                         <decoNote type="miniature" xml:id="d12">
                             <locus from="71v" to="72v"/>
-                            <desc>Colorful miniatures of the battle of <placeName ref="LOC4637Matamm">Matammā</placeName></desc>
+                            <desc>Colorful miniatures of the battle of <placeName ref="LOC4637Matamm">Matammā</placeName>
+                        </desc>
                         </decoNote>
                     </decoDesc>
                 </physDesc>
@@ -192,6 +194,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -205,7 +213,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
            <change who="MV" when="2018-02-15">Created catalogue entry</change>
        </revisionDesc>
    </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr404"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Fǝtḥa nagaśt</title>
@@ -161,8 +161,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="31">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#30r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#30r"/>.</note>
                                 <locus from="5r" to="187v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>140</height>
@@ -188,8 +187,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                             <date>17th-century script</date>
                           </handNote>
@@ -200,13 +198,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Ethiopic bookbinding with tooled leather cover and textile inlay, preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"/><material key="textile"/></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                           <material key="textile"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Both boards are carved from a light brown wood.
                             </decoNote>
                             <decoNote xml:id="b4" type="Cover">
                               Light brown leather cover with wide turn-ins (up to 80 mm) and <term key="additionalLeatherPatch">additional leather patch</term>.
-                              Among the turn-ins is pasted a <term key="textile"></term>textile inlay with yellow, red and black vertical lines on a red background.
+                              Among the turn-ins is pasted a <term key="textile"/>textile inlay with yellow, red and black vertical lines on a red background.
                               The blind-tooling decoration of the cover is imprecise and asymmetrical. The patterns on the front and back cover differ slightly.
                               The decorative pattern shows a latin cross surrounded by a frame. The cross occupies almost the entire central panel of the cover
                               and is formed by the repetition of <term key="XForm">X-Form</term> motifs within <term key="tripleStraightLine">triple straight lines</term>.
@@ -234,8 +236,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                     <history>
                       <origin>
-                          <origDate notBefore="1651" notAfter="1700"
-                            />
+                          <origDate notBefore="1651" notAfter="1700"/>
                       </origin>
                     </history>
 
@@ -257,7 +258,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -280,7 +287,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

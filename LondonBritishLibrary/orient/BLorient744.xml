@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient744"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient744"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Qerlos,works of Epiphanius of Cyprus, 
@@ -59,7 +57,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">170</measure>
@@ -76,7 +74,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="3" writtenLines="28" cert="high"></layout>
+                                <layout columns="3" writtenLines="28" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -86,15 +84,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is written in a fine hand, of the earlier part of the <date>18th century</date>.
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
                         </handDesc>   
                         <additions>
-                            <list><item xml:id="e1">
+                            <list>
+                        <item xml:id="e1">
                                 <locus target="#3r"/>
-                                <desc> The name of the owner was <persName ref="PRS12640Abeselom"/></desc>
+                                <desc> The name of the owner was <persName ref="PRS12640Abeselom"/>
+                           </desc>
                                 
                             </item>
                             </list>
@@ -151,7 +151,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -172,18 +178,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-

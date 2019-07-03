@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="GAet6"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Psalter, Mazmura Dāwit, Maḥālǝya nabiyāt, Maḥālǝya za-Salomon, Wǝddāse Māryām, ʾAnqaṣa bǝrhān</title>
@@ -144,7 +144,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <bindingDesc>
                             <binding xml:id="binding">
                               <decoNote xml:id="b1">The book is sewn on four sewing stations (two pairs) linked to wooden boards covered by a textile wrapping.</decoNote>
-                              <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="textile"/></decoNote>
+                              <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="textile"/>
+                        </decoNote>
                               <decoNote xml:id="b3" type="Boards">
                                 The boards are broken in two halves which are held together by a metal wire.
                               </decoNote>
@@ -230,23 +233,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                           <layoutDesc>
                           <layout columns="1" writtenLines="17 18">
-                            <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                            target="#30r"/>.</note>
-                            <locus from="1" to="133"/>
-                            <dimensions unit="mm" rend="pricked ruled">
-                              <height>120</height>
-                              <width>123</width>
-                            </dimensions>
-                            <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C</ab>
+                              <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#30r"/>.</note>
+                              <locus from="1" to="133"/>
+                              <dimensions unit="mm" rend="pricked ruled">
+                                 <height>120</height>
+                                 <width>123</width>
+                              </dimensions>
+                              <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C</ab>
                           </layout>
                           <layout columns="1" writtenLines="20 22">
-                            <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#136r"/>.</note>
-                            <locus from="134" to="138"/>
-                            <dimensions unit="mm" rend="pricked ruled">
-                              <height>110</height>
-                              <width>120</width>
-                            </dimensions>
-                            <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C</ab>
+                              <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#136r"/>.</note>
+                              <locus from="134" to="138"/>
+                              <dimensions unit="mm" rend="pricked ruled">
+                                 <height>110</height>
+                                 <width>120</width>
+                              </dimensions>
+                              <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C</ab>
                           </layout>
                         </layoutDesc>
                         </objectDesc>
@@ -266,8 +268,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <list>
                             <item xml:id="a1">
                               <locus target="#138r"/>
-                              <desc type="OwnershipNote"></desc>
-                              <q xml:lang="gez"></q>
+                              <desc type="OwnershipNote"/>
+                              <q xml:lang="gez"/>
                             </item>
                           </list>
                         </additions>
@@ -309,8 +311,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="18">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#141v"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#141v"/>.</note>
                                 <locus from="139" to="157"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>120</height>
@@ -329,14 +330,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <additions>
                           <list>
                           <item xml:id="a2">
-                            <desc type="Condemnation"></desc>
-                            <locus target="#157va"/>
-                            <q xml:lang="gez"></q>
+                              <desc type="Condemnation"/>
+                              <locus target="#157va"/>
+                              <q xml:lang="gez"/>
                           </item>
                           <item xml:id="a3">
                             Prayer for the Virgin Mary.
                             <locus target="#157va"/>
-                            <q xml:lang="gez"></q>
+                              <q xml:lang="gez"/>
                           </item>
                           </list>
                         </additions>
@@ -350,7 +351,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -373,7 +380,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

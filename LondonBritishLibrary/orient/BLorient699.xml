@@ -4,14 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    
-    xml:lang="en"
-    xml:id="BLorient699"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient699"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The History of Baralām 
@@ -64,7 +61,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus target="#130r"/>
                                 <note>The colophon states that the text was translated from Arabic into Gǝʿǝz during the reign of 
                                     King <persName ref="PRS4428Galawdew"/> under his personal order in <date>1552</date>.</note>
-                                ተተርጐመ፡ ዝንቱ፡ መጽሐፍ፡ እምልሳነ፡ ዓረቢ፡ ለግዕዝ፡ በትእዛዘ፡ <persName ref="PRS4428Galawdew"><roleName type="title">ንጉሥ</roleName>ነ፡  </persName>
+                                ተተርጐመ፡ ዝንቱ፡ መጽሐፍ፡ እምልሳነ፡ ዓረቢ፡ ለግዕዝ፡ በትእዛዘ፡ <persName ref="PRS4428Galawdew">
+                           <roleName type="title">ንጉሥ</roleName>ነ፡  </persName>
                                 መፍቀሬ፡ እግዚአብሔር፡ 
                                 <persName ref="PRS4428Galawdew"> ገላውዴዎስ፡</persName>ወኮነ፡ ፍጻሜሁ፡ አመ፡ ፯ለወርኃ፡ ግንቦት፡ በ፸፻ወ፵ወ፭እምዓመተ፡ ኲነኔ፡ በዘመነ፡ ማቴዎስ፡ 
                                 ወንጌላዊ፡ እንዘ፡ ዓበቅቴ፡ ወርኅ፡ ፬ወዓበቅቴ፡ ፀሐይ፡ ፯ለምልክያል፡ በዘመነ፡ ዕብሬቱ፡ እንዘ
@@ -109,7 +107,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">131</measure>
@@ -123,7 +121,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="23" cert="high"></layout>
+                                <layout columns="2" writtenLines="23" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -132,18 +130,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is written in fine hand between <date>1746</date> and <date>1755</date>
                                 </desc>
                                 
-                                <date notBefore="1746" notAfter="1755" resp="PRS10171Wright"></date>
+                                <date notBefore="1746" notAfter="1755" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
                         </handDesc>   
                         
                         <additions>
-                            <list><item xml:id="a1">
+                            <list>
+                        <item xml:id="a1">
                                 <locus target="#4r"/>
                                 <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                     <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                <q xml:lang="gez">በረላም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                <q xml:lang="gez">በረላም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                             </item>
                             </list>
                             
@@ -166,8 +166,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                            >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. </provenance>
                         
                     </history>
@@ -202,7 +201,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -228,17 +233,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_699_f001r"/>
     </facsimile>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-

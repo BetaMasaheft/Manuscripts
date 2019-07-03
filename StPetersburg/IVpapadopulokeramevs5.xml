@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVpapadopulokeramevs5"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Psalter</title>
@@ -113,8 +113,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                    <date notBefore="1700" notAfter="1800"/>
-                        <desc><persName ref="PRS9602Turaev"/>
+                        <date notBefore="1700" notAfter="1800"/>
+                        <desc>
+                           <persName ref="PRS9602Turaev"/>
                            does not date the hand.
                  </desc>
                      </handNote>
@@ -167,7 +168,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <origin>
                      <origDate notBefore="1700" notAfter="1799"/>
                       </origin>
-                      <provenance> <persName ref="PRS12387PapadopuloKeramevs">
+                      <provenance> 
+                     <persName ref="PRS12387PapadopuloKeramevs">
                         Papadopulo-Keramevs</persName> bought the manuscript from
                         <persName ref="PRS12574Scapellato"> Giusseppe Scapellato </persName>
                         in Jerusalem, on <date>18 January 1888</date>.</provenance>
@@ -205,6 +207,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
 
@@ -224,7 +232,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <keywords>
                <term key="Bible"/>
                <term key="OldTestament"/>
-               <term key="Paks2"></term>
+               <term key="Paks2"/>
                <term key="Poetry"/>
             </keywords>
          </textClass>
@@ -239,7 +247,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DN" when="2018-12-21">Additions</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

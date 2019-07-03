@@ -4,8 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:id="BLorient655" xml:lang="en">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="mss"
+     xml:id="BLorient655"
+     xml:lang="en">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Taʾammǝra Māryām, Taʾammǝra Gabrǝʾel</title>
@@ -140,18 +143,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                   <locus target="#4r"/>
                                   <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                       <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                  <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                  <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                               </item>
                                 
                                 <item xml:id="a2" corresp="#h2">
                                     <locus from="4r" to="6v"/>
-                                    <desc type="GuestText"><title ref="LIT1968Mashaf" type="complete"/></desc>
+                                    <desc type="GuestText">
+                              <title ref="LIT1968Mashaf" type="complete"/>
+                           </desc>
                                     <q xml:lang="gez"/>
                                 </item>
                                 
                                 <item xml:id="a3" corresp="#h2">
                                     <locus from="226v"/>
-                                    <desc type="GuestText"><title ref="LIT3012RepCh292" type="complete"/></desc>
+                                    <desc type="GuestText">
+                              <title ref="LIT3012RepCh292" type="complete"/>
+                           </desc>
                                     <q xml:lang="gez">ስብሐተ፡ ፍቁር፡ ዘእግዝእትነ፡ ማርያም፡ ብፅዕት፡ አንቲ፡ ወንግሥተ፡ ጽድቅ፡</q>
                                 </item>
                                 
@@ -161,7 +169,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 
                                 <item xml:id="e2">
                                     <locus target="#2v"/>
-                                    <desc>The name of a later owner is <persName ref="PRS12343TaklaH" role="owner"></persName>.</desc>
+                                    <desc>The name of a later owner is <persName ref="PRS12343TaklaH" role="owner"/>.</desc>
                                 </item>
                                 
                                 <item xml:id="e3">
@@ -186,15 +194,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                     <history>
                         <origin>
-                            <origDate notBefore="1700" notAfter="1750" evidence="lettering" resp="PRS10171Wright"/>
+                            <origDate notBefore="1700"
+                               notAfter="1750"
+                               evidence="lettering"
+                               resp="PRS10171Wright"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier"
-                                >Napier</persName> expedition in <date>1868</date> from the church
+                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date> from the church
                             of <placeName ref="INS0101MadhaneAlam"/>. The manuscript was then sent to the Royal Library at Windsor and 
                             presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
                             <listBibl type="secondary">
-                                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
-                            </listBibl></provenance>
+                                <bibl>
+                           <ptr target="bm:Wright1877BM"/>
+                           <citedRange unit="page">iv</citedRange>
+                        </bibl>
+                            </listBibl>
+                  </provenance>
                     </history>
 
                     <additional>
@@ -219,7 +233,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -239,18 +259,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-11-06">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
             <listRelation>
-                <relation active="BLorient655#UniProd1"  name="skos:exactMatch" passive="BLorient655#ms_i1 BLorient655#ms_i2" />
-                <relation active="BLorient655#UniCirc1"  name="skos:exactMatch" passive="BLorient655#UniProd1"/>
-                <relation active="BLorient655#UniProd1"  name="sdc:undergoesTransformation" passive="BLorient655#tr1"/>
-                <relation active="BLorient655#tr1"  name="sdc:hasTransformationModel" passive="sdc:A2"/>
-                <relation active="BLorient655#tr1"  name="sdc:produces" passive="BLorient655#UniProd2"/>
-                <relation active="BLorient655#tr1"  name="sdc:resultsIn" passive="BLorient655#UniCirc2"/>
-                <relation active="BLorient655#UniProd2"  name="skos:exactMatch" passive="BLorient655#a2 BLorient655#a3" />
-                <relation active="BLorient655#UniCirc2"  name="skos:exactMatch" passive="BLorient655"/>
+                <relation active="BLorient655#UniProd1"
+                      name="skos:exactMatch"
+                      passive="BLorient655#ms_i1 BLorient655#ms_i2"/>
+                <relation active="BLorient655#UniCirc1"
+                      name="skos:exactMatch"
+                      passive="BLorient655#UniProd1"/>
+                <relation active="BLorient655#UniProd1"
+                      name="sdc:undergoesTransformation"
+                      passive="BLorient655#tr1"/>
+                <relation active="BLorient655#tr1"
+                      name="sdc:hasTransformationModel"
+                      passive="sdc:A2"/>
+                <relation active="BLorient655#tr1"
+                      name="sdc:produces"
+                      passive="BLorient655#UniProd2"/>
+                <relation active="BLorient655#tr1"
+                      name="sdc:resultsIn"
+                      passive="BLorient655#UniCirc2"/>
+                <relation active="BLorient655#UniProd2"
+                      name="skos:exactMatch"
+                      passive="BLorient655#a2 BLorient655#a3"/>
+                <relation active="BLorient655#UniCirc2"
+                      name="skos:exactMatch"
+                      passive="BLorient655"/>
             </listRelation>
         </body>
     </text>

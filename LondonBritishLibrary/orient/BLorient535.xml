@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient535"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient535"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>A hymn to ʾAbib, hymn to Kiros, Psalms accompanied to Mazmura Dǝngǝl, Canticles or Biblical hymn , slautations to the Saints and Martyrs,
@@ -60,7 +58,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">231</measure>
@@ -69,19 +67,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                     
                                     <dimensions type="outer" unit="mm">
-                                        <height></height>
-                                        <width></width>
+                                        <height/>
+                                        <width/>
                                     </dimensions>
                                 </extent>
                                 
                                 
                             </supportDesc>
                             <layoutDesc>
-                                <layout columns="1" writtenLines="22"><note><locus from="5" to="208"></locus>, a space having been left for a translation, which has been subsquently added; 
-                                    and <locus from="209" to="225"></locus>. </note>
+                                <layout columns="1" writtenLines="22">
+                           <note>
+                              <locus from="5" to="208"/>, a space having been left for a translation, which has been subsquently added; 
+                                    and <locus from="209" to="225"/>. </note>
                                    
                                 </layout>
-                                <layout columns="2" writtenLines="19"><note><locus from="209" to="225"></locus></note></layout>
+                                <layout columns="2" writtenLines="19">
+                           <note>
+                              <locus from="209" to="225"/>
+                           </note>
+                        </layout>
                             </layoutDesc>
                             
                             
@@ -93,7 +97,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is written inh a large , elegant hand , of the <date>17th century.</date>.
                                 </desc>
                                 
-                                <date notBefore="1600" notAfter="1700" resp="PRS10171Wright"></date>
+                                <date notBefore="1600" notAfter="1700" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -142,11 +146,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term key="Prayers"></term>
+                    <term key="Prayers"/>
                     
                 </keywords>
             </textClass>
@@ -163,18 +173,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-

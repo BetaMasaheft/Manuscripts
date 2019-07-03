@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="IVorlov33"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Malḥǝq</title>
@@ -472,15 +472,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                    <dimensions type="outer" unit="mm">
                                       <height>250</height>
                                       <width>196</width>
-                                      <depth></depth>
+                                      <depth/>
                                    </dimensions>
                                 </extent>
-                                  <collation><note>A few leaves are missing between fol. 118 and fol. 119.</note></collation>
+                                  <collation>
+                           <note>A few leaves are missing between fol. 118 and fol. 119.</note>
+                        </collation>
                                 <condition key="good"/>
                             </supportDesc>
 
                             <layoutDesc>
-                                <layout columns="2" writtenLines="39"></layout>
+                                <layout columns="2" writtenLines="39"/>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -535,7 +537,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="a3">
                                   <locus target="#184v"/>
                                     <desc type="GuestText">
-                                    <title type="incomplete" ref="LIT3188Liton"></title>
+                                    <title type="incomplete" ref="LIT3188Liton"/>
                                   </desc>
                                   <q xml:lang="gez">ወካዕበ᎓ ናስተበቍዕ᎓</q>
                                 <note>Litanies with musical notation.</note>
@@ -550,7 +552,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="a5">
                                     <locus target="#186r"/>
                                     <desc type="GuestText">
-                                    <title type="complete" ref="LIT5674NagaraWag"></title>
+                                    <title type="complete" ref="LIT5674NagaraWag"/>
                                   </desc>
                                     <note>Prescriptions for the liturgical service during the
                                       fasting periods.</note>
@@ -559,7 +561,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <item xml:id="a6">
                                     <locus target="#186r"/>
                                     <desc type="GuestText">
-                                    <title type="complete" ref="LIT5675SerataAswam"></title>
+                                    <title type="complete" ref="LIT5675SerataAswam"/>
                                   </desc>
                                     <note>Prescriptions concerning the Lent.</note>
                                 </item>
@@ -575,7 +577,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#187v"/>
                                     <desc type="MixedNote">
                                     </desc>
-                                    <q xml:lang="gez">>ሚካኤል᎓ ሚካኤል᎓ ሰአል᎓ ወጸሊ᎓ በእንቲአነ᎓</q>
+                                    <q xml:lang="gez">&gt;ሚካኤል᎓ ሚካኤል᎓ ሰአል᎓ ወጸሊ᎓ በእንቲአነ᎓</q>
                                     <note>Prayers to <persName ref="PRS7049Michael">St Michael the Archangel
                                     </persName>.</note>
                                 </item>
@@ -631,7 +633,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -655,7 +663,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DN" when="2019-04-29">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

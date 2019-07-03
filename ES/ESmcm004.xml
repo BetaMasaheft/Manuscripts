@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="ESmcm004"
      xml:lang="en"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Gadla ḥawāryāt, Apocryphal Acts of the Apostles</title>
@@ -225,8 +225,11 @@ Ruled lines have been left empty at the bottom: <locus target="#15r">15r</locus>
                         </layout>
                         <layout>
                            <ab type="CruxAnsata"> 
-                          <locus target="#13v"/></ab>
-                           <ab type="coronis"> <locus target="#13v"/></ab>
+                              <locus target="#13v"/>
+                           </ab>
+                           <ab type="coronis"> 
+                              <locus target="#13v"/>
+                           </ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -346,6 +349,12 @@ Ruled lines have been left empty at the bottom: <locus target="#15r">15r</locus>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          
@@ -368,7 +377,7 @@ Ruled lines have been left empty at the bottom: <locus target="#15r">15r</locus>
          <change who="PL" when="2019-04-25">added missing extras from domlib</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

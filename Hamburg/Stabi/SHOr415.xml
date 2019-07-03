@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      xml:id="SHOr415"
      xml:lang="en"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Five Pillars of Mystery, Hymn to Jesus Christ, Salām to Maria</title>
@@ -122,8 +122,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <layoutDesc>
                               <layout columns="2" writtenLines="13">
-                                <note corresp="#pricked ruled">Data on dimension are taken from <locus
-                                target="#59r"/>.</note>
+                                <note corresp="#pricked ruled">Data on dimension are taken from <locus target="#59r"/>.</note>
                                 <locus from="3r" to="78v"/>
                                 <dimensions unit="mm" rend="pricked ruled">
                                   <height>83</height>
@@ -147,8 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
 
                         <handDesc>
-                          <handNote script="Ethiopic"
-                               xml:id="h1">
+                          <handNote script="Ethiopic" xml:id="h1">
                             <seg type="ink">Black, red</seg>
                             <desc>Two kinds of red ink have been used: an orange one and an intense red one.</desc>
                           </handNote>
@@ -166,14 +164,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <decoNote xml:id="b1">
                               Fine Ethiopic bookbinding with tooled leather cover, preserved in its slip case.
                             </decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial"><material key="wood"/><material key="leather"></material><material key="textile"></material></decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                           <material key="textile"/>
+                        </decoNote>
                             <decoNote xml:id="b3" type="Boards">
                               Two boards carved from a light brown wood.</decoNote>
                             <decoNote xml:id="b4" type="Cover">
                               Brown-reddish leather cover decorared with blind tooled motifs. The decoration of the front and the back cover is similar.
                               The edges and the turn-ins are decorated too. An <term key="additionalLeatherPatch">additional leather patch</term> of a lighter color is pasted under the turn-ins of the cover,
                               hiding the board attachment.
-                              A <term key="textile"></term> textile inlay shows blue flower with a yellow stelo and leaves on a red background.
+                              A <term key="textile"/> textile inlay shows blue flower with a yellow stelo and leaves on a red background.
                               On the front cover, three frames, enclosed in <term key="singleStraightLine">single straight lines</term> surround a central latin cross.
                               The external frame is composed by <term key="straightStrapwork">straight strapwork elements</term>. The middle frame is filled with groups of four or five (at the corners) <term key="doubleCircle">double circles</term>.
                               The inner frame is composed by a <term key="XForm">X-form</term> motif.
@@ -237,7 +239,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -260,7 +268,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="EDS" when="2018-01-10">Created entity</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <div type="bibliography"/>
         </body>

@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BLadd16251"
      type="mss">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Maṣḥafa gizeyāt</title>
@@ -47,7 +47,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <msItem xml:id="ms_i1">
                             <locus from="1" to="334"/>
-                            <title type="complete" ref="LIT1961Mashaf" evidence="conjecture" xml:lang="gez">መጽሐፈ፡ ጊዜያት፡</title>
+                            <title type="complete"
+                            ref="LIT1961Mashaf"
+                            evidence="conjecture"
+                            xml:lang="gez">መጽሐፈ፡ ጊዜያት፡</title>
                             <note>
                                 The book contains prayers, hymns and readings for the single hours of the day and of the night. Rubrics are often omitted or illegible due to faded ink.
                             <q xml:lang="gez">
@@ -117,7 +120,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <particDesc>
                 <listPerson>
@@ -141,7 +150,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="MV" when="2016-08-29">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>

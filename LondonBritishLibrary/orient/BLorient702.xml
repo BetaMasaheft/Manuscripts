@@ -4,13 +4,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient702"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient702"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Gadla ʾEwosṭātewos, A discourse on Isaac or Garimā, Gadla ʾAbib (Bulā), history and miracles of Gabra ʾƎndrǝyās, </title>
@@ -149,7 +147,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">183</measure>
@@ -163,7 +161,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="14 18" cert="high"></layout>
+                                <layout columns="2" writtenLines="14 18" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -174,7 +172,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            
                                 </desc>
                                 
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"></date>
+                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
                                 
                             </handNote>
                             
@@ -185,12 +183,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus target="#3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ገድለ፡ ኤዎስጣቴዎስ፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ገድለ፡ ኤዎስጣቴዎስ፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a2">
                                     <locus target="#143r"/>
-                                    <desc type="GuestText"> It contains apparently the end of a tract called <title type="incomplete"  ref="LIT1919Mashaf">Maṣḥafa bāḥrǝy, The Book of the Pearl</title>.
+                                    <desc type="GuestText"> It contains apparently the end of a tract called <title type="incomplete" ref="LIT1919Mashaf">Maṣḥafa bāḥrǝy, The Book of the Pearl</title>.
                                     </desc>
                                     <q xml:lang="gez">ተፈጸመ፡ ባሕርይ፡ ዘይትነበብ፡ በርእሰ፡ ዓውደ፡ ዓመት፡ አመ፡ ፩ለወርኃ፡ 
                                         ሴብቴብሮስ፡ ዘውእቱ፡ መስከረም፡ ወተርጐምነ፡ እመዛግብተ፡ ኅቡኣቲሁ፡ ለእግዚአብሔር፡ 
@@ -267,7 +266,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -288,19 +293,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="SG" when="2019-04-04">Complete record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-

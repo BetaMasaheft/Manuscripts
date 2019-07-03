@@ -7,7 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="BNFet141"
      type="mss">
-  <teiHeader>
+  <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Short Chronicle</title>
@@ -165,7 +165,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <persName ref="PRS10626ZaraY" xml:lang="gez">ዘርአ፡ ያዕቆብ፡</persName> reigned for 34 years and two months. 
                        <q xml:lang="en">Under his reign there was a controversy about religion:
                          
-                          <persName ref="PRS4709Giyorgis"><roleName type="title">ʾabbā</roleName></persName> <persName ref="PRS4709Giyorgis"/>
+                          <persName ref="PRS4709Giyorgis">
+                                       <roleName type="title">ʾabbā</roleName>
+                                    </persName> 
+                                    <persName ref="PRS4709Giyorgis"/>
                           had a discussion with a European and then wrote 
                          <ref type="work" corresp="LIT1952Mashaf"/>. Furthermore, a heathen from the land of <placeName ref="LOC1095Adal"/> called
                           <persName ref="PRS11953Badlay" xml:lang="gez">በድላይ፡</persName>, who completely ressembled <persName ref="PRS11293Goliath"/> the Philistine,
@@ -427,6 +430,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -449,7 +458,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2016-11-03">Changes</change>
       </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

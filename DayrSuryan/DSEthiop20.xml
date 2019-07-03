@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      xml:lang="en"
      xml:id="DSEthiop20"
      type="mss">
-   <teiHeader>
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Anaphora of Mary</title>
@@ -73,7 +73,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <width>130</width>
                               <depth>1</depth>
                            </dimensions>
-                     </extent>
+                        </extent>
 
                         <collation>
                            <note>One paper double leaf, one singleton inside.</note>
@@ -94,15 +94,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </handNote>
                   </handDesc>
 
-              <additions>
-                 <list>
-                    <item xml:id="e1">
-                       <locus target="#1r"/>
-                       <desc>Arabic title added in pencil.</desc>
-                       <q xml:lang="ar">جزء من قداس العذراء مريم (مرد للشماس)</q>
-                    </item>
-                 </list>
-              </additions>
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <locus target="#1r"/>
+                           <desc>Arabic title added in pencil.</desc>
+                           <q xml:lang="ar">جزء من قداس العذراء مريم (مرد للشماس)</q>
+                        </item>
+                     </list>
+                  </additions>
 
                   <bindingDesc>
                      <binding xml:id="binding" contemporary="unknown">
@@ -124,6 +124,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
       </encodingDesc>
       <profileDesc>
          <textClass>
@@ -144,7 +150,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-06-29">Added text</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
       </body>

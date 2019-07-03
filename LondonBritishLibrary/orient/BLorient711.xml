@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xml:lang="en"
-    xml:id="BLorient711"
-    type="mss">
-    <teiHeader>
+     xml:lang="en"
+     xml:id="BLorient711"
+     type="mss">
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>The Acts of Gabra Manfas Qǝdus</title>
@@ -60,7 +55,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"></material>
+                                    <material key="parchment"/>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">102</measure>
@@ -74,7 +69,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="17 22" cert="high"></layout>
+                                <layout columns="2" writtenLines="17 22" cert="high"/>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -84,7 +79,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <desc>The manuscript is written in a good hand, of the latter half of the <date>15th century</date>. 
                                     
                                 </desc>
-                                <date notBefore="1450" notAfter="1500" resp="PRS10171Wright"></date>
+                                <date notBefore="1450" notAfter="1500" resp="PRS10171Wright"/>
                                 
                                 
                                 
@@ -132,7 +127,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -153,23 +154,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

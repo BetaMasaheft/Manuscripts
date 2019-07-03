@@ -8,7 +8,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
      type="mss"
      xml:id="BLorient527"
      xml:lang="en">
-    <teiHeader>
+    <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title>Pauline Epistles, Catholic Epistles, Acts of the Apostles, Revelation</title>
@@ -229,20 +229,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus from="3r"/>
                                     <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
-                                    <q xml:lang="gez">ሐዲሳት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName></q>
+                                    <q xml:lang="gez">ሐዲሳት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅ'፡ መ'፡ ዓለም።</placeName>
+                           </q>
                                 </item>
                                 
                                 <item xml:id="a2">
                                     <locus from="71v"/>
                                     <desc type="DonationNote">The note states that the manuscript belonged to
-                                        <persName ref="PRS11871DemdaM" role="donor"/>, who donated it to a <foreign xml:lang="gez">ታቦተ፡ ፍልስታ፡</foreign></desc>
+                                        <persName ref="PRS11871DemdaM" role="donor"/>, who donated it to a <foreign xml:lang="gez">ታቦተ፡ ፍልስታ፡</foreign>
+                           </desc>
                                     <q xml:lang="gez"/>
                                 </item>
                                 
                                 <item xml:id="a3">
                                     <locus from="1v" to="2r"/>
-                                    <desc type="GuestText"><title ref="LIT3171Commen" type="incomplete"/>
-                                        Excerpts from <ref type="work" corresp="LIT3171Commen"/></desc>
+                                    <desc type="GuestText">
+                              <title ref="LIT3171Commen" type="incomplete"/>
+                                        Excerpts from <ref type="work" corresp="LIT3171Commen"/>
+                           </desc>
                                     <q xml:lang="gez"/>
                                 </item>
                                 
@@ -288,7 +292,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-        </encodingDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:fallback>
+               <p>Definitions of prefixes used.</p>
+            </xi:fallback>
+         </xi:include>
+      </encodingDesc>
         <profileDesc>
             <textClass>
                 <keywords>
@@ -310,7 +320,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-02-13">Created record</change>
         </revisionDesc>
     </teiHeader>
-    <text>
+    <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
