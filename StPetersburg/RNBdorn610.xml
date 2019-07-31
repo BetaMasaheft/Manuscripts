@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:lang="en"
-     xml:id="IVvostochn610"
+     xml:id="RNBdorn610"
      type="mss">
   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -31,8 +31,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0301IV"/>
-                  <idno>IV Vostočn. 610</idno>
+                  <repository ref="INS0508RNB"/>
+                  <idno>RBN Dorn 610</idno>
+                  <altIdentifier>
+                     <idno>IV Vostochn. 610</idno>
+                  </altIdentifier>
+
                   <altIdentifier>
                      <idno>Turaev cat. I.2</idno>
                   </altIdentifier>
@@ -41,21 +45,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                <msContents>
                   <summary> </summary>
-
                   <msItem xml:id="ms_i1">
                      <locus from="2r" to="12v"/>
                      <title type="complete" ref="LIT2362Songof"/>
                      <textLang mainLang="gez"/>
-                     <rubric>up to f. 45 rubrication present </rubric>
+                     <rubric>Rubrication only up to f. 45</rubric>
                      <note/>
                   </msItem>
                   <msItem xml:id="ms_i2">
                      <locus from="13r" to="22v"/>
                      <title type="complete" ref="LIT2000Mazmur#Ps118"/>
                      <textLang mainLang="gez"/>
-                     <rubric>incipit is rubricated</rubric>
+                     <rubric>The incipit is rubricated</rubric>
                      <incipit xml:lang="gez">አሌፍ፡ ብሂል፡ አብ፡ ፈጣሬ፡ ኵሉ፡ ዓለም፡ ብሂል፡</incipit>
                      <note/>
+
                   </msItem>
                   <msItem xml:id="ms_i3">
                      <locus from="23r" to="27v"/>
@@ -98,10 +102,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        ዘይትማሃለሉ፡ ቦቱ፡ ክርስቲያን፡ በጊዜ፡ ምንዳቤሆሙ፡
                        <foreign>This is the praise for the Beloved One,
                 with which the Christians supplicate during trouble
-         </foreign>
-                     </incipit>
-
+         </foreign> </incipit>
                      <note/>
+
                   </msItem>
                   <msItem xml:id="ms_i5">
                      <locus from="37r" to="58v"/>
@@ -144,8 +147,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <seg type="script">15th-century</seg>
                         <seg type="ink">Black, red</seg>
                         <date notBefore="1400" notAfter="1500"/>
-                        <desc>The handwriting is defined by <persName ref="PRS9602Turaev"/>
-                        as fine.</desc>
+                        <desc>The handwriting is described by <persName ref="PRS9602Turaev"/>
+                        as "fine".</desc>
                         <desc/>
 
                      </handNote>
@@ -184,12 +187,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </additions>
                   <bindingDesc>
                      <binding contemporary="false" xml:id="binding">
-                        <decoNote xml:id="b1">The binding is not Ethiopian.</decoNote>
+                        <decoNote xml:id="b1">Non-Ethiopian binding,
+                          leather with gold tooling.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"> </material>
-                           <material key="leather">Leather cover</material>
+                           <material key="leather">Gold stamped leather</material>
                         </decoNote>
-                        <decoNote xml:id="b3">Gold stamped leather</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -209,6 +212,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <citedRange unit="page">10-11</citedRange>
                               </bibl>
                            </listBibl>
+                           <listBibl type="secondary">
+                             <bibl>
+                                <ptr target="bm:Platonov2017RukKniga"/>
+                                <citedRange unit="page">184</citedRange>
+                             </bibl>
+                           </listBibl>
+
                         </source>
                      </recordHist>
                      <custodialHist>
@@ -234,9 +244,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person role="donor"/>
-               <person role="scribe"/>
-               <person role="other"/>
+                  <listPerson>
+                    <person>
+                       <persName ref="PRS9691Uspenski" role="donor"/>
+                    </person>
+                </listPerson>
+
             </listPerson>
          </particDesc>
          <textClass>
@@ -253,7 +266,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="SG" when="2016-04-25">Created catalogue entry</change> 
+         <change who="SG" when="2016-04-25">Created catalogue entry</change>
          <!--DN probably? DR 2018-05-16-->
       </revisionDesc>
   </teiHeader>
