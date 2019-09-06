@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Alwan Codex 17</title>
             <editor key="JS"/>
+         <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -39,7 +40,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <msContents>
                   <summary>Vision of Mary, ራዕየ፡ ማርያም፡, in Amharic</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang>Amharic</textLang>
+                     <locus from = "1r" to = "25v"/>
+                    <title type = "complete" ref = "LIT1124Apocal"/>
+                    <incipit xml:lang="amh">
+                      ‎በስመ፡ አብ፡ ወወልድ፡...
+                      ንዌጥን፡ በረድኤተ፡ እግዚአብሔር፡፡ ጽሒፈ፡ ‎‎መጽሐፈ፡ ራዕይ፡ ዘርእየት፡ እግዝእትነ፡ ማርያም፡...፡፡
+                      ማርያም፡ ለዮሐንስ፡ ‎‎እንዲህ፡ አለችው፡ ስማኝ፡ ልንገርህ፡ ረቂቅ፡ ምሥጢር፡ በልቡና፡ የማይታወቅ፡ ‎‎ጌታዬ፡ ፈጣሪዬ፡ ልጄ፡ የገለጸልኝን: . . .‎
+                    </incipit>
+                    <textLang>Amharic</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -111,13 +119,54 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ማርያም</foreign>
+                           </seg>
+                    </handNote>
+                  </handDesc>
+               <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#ir(ecto)"/><desc>Man standing </desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#Back_cover"/><desc>Face</desc></decoNote>
+                    <decoNote type="frame" xml:id="d03">Decorative designs: <locus target="#1r"/> (haräg)</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a1">
+                        <desc><locus target = "#25v #26r"/> Prayer on the Suffering of Our Lord Jesus Christ</desc>
+                      </item>
+                      <item xml:id="a2">
+                        <desc><locus target = "#ir"/> Pen trial</desc>
+                      </item>
+                      <item xml:id="a3">
+                        <desc><locus target = "#iv(erso)"/>Scrawls</desc>
+                      </item>
+                      <item xml:id="a4">
+                        <desc type = "ScribalSignature"><locus target = "#ir"/>Gäbrä Yoḥanǝs, <foreign xml:lang="gez">ገብረ፡ ዮሐንስ፡</foreign></desc>
+                      </item>
+                      <item xml:id="a5">
+                        <desc type = "OwnershipNote"><locus target = "#ir"/>Gäbrä Ḥǝywät, <foreign xml:lang="gez">ገብረ፡ ሕይወት፡</foreign></desc>
+                        </item>
+                        <item xml:id="a6">
+                          <desc type = "OwnershipNote"><locus target = "#ir"/>(in blue ink) This book belongs to Gäbrä Iyäsus, <foreign xml:lang="gez">ገብረ፡ ኢየሱስ፡</foreign></desc>
+                          </item>
+                      <item xml:id="a7">
+                        <desc>
+                          Scribal intervention:
+                          words of text are written interlinearly <locus target = "#13r #23r"/>);
+                          erasure markings are visible <locus target = "#11v #14r"/>)
+                          </desc>
+                          </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
-                        <decoNote xml:id="b1">Parchment, 147 x 83 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
-                        <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="parchment"/>
-                           <material key="wood"/>
-                        </decoNote>
+                      <decoNote xml:id="b1">Parchment, 147 x 83 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
                     </binding>
                   </bindingDesc>
                </physDesc>
@@ -149,6 +198,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-07-11" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+      <change when="2019-09-03" who="RL">Added items, varia, notes, miniatures</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
