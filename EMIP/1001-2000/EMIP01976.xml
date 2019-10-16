@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 027</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>The initial version of this file was created from data kindly provided by the Ethiopic Manuscript Imaging Project directed by Steve Delamarter.</p>
+
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,8 +41,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡, with Images, and A List of the Canon of the Bible</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="191r"/><title type="complete" ref="LIT2701Dawit"/>
+                  <textLang/>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +61,78 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                  <desc>The word God is not rubricated in the first three works</desc>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word Mary is rubricated in the final two works</desc>
+                  <desc>There is no columetric layout of text</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#97r"/><desc> Ornate <ref type ="authFile" corresp="AT1071Cross"/></desc></decoNote>
+                    <decoNote type="frame" xml:id="d02">
+                      Decorative designs:
+                      <locus target="#1r #17r #26r #38r #47r #54v #65v #80r #90v #114r #129v #140v"/> (haräg);
+                      <locus target="#ivv(erso) #191v"/> (multiple full stops);
+                        <locus target="#148v #164v #174r #186r #191r #191v"/> (line of alternating red and black dots)</decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a01">
+                    <desc type="GuestText">
+                    <locus target="#ir(ecto) #iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto) #ivv(erso)"/>": <title type="complete" ref="LIT2285Saqoqa"/>
+                    </desc>
+                    </item>
+                    <item xml:id="a02">
+                      <desc type="GuestText">
+                      <locus target="#ivv(erso)"/>: <title type="incomplete" ref="LIT2733RepCh17"/>
+                      incomplete at the end
+                      Incipit: <foreign xml:lang="gez">ማኅበረ: ምእመናን: ወምዕመናት: እለ: ኪያከ: ተአምኑ:</foreign>
+                      </desc>
+                      </item>
+                      <item xml:id="a03">
+                      <desc type="GuestText">
+                      <locus target="#174v"/>: Assignment of the Zodiak for each month
+                      </desc>
+                      </item>
+                      <item xml:id="a04">
+                      <desc type="GuestText">
+                      <locus target="#174v"/>: List of the Fruit of the Spirit and Works of the Flesh, from Galatians 5
+                      </desc>
+                      </item>
+                      <item xml:id="a05">
+                      <desc>
+                      <locus target="#191v #192r #192v"/>: <title type="incomplete" ref="LIT4112Salam"/>
+                      incomplete at the end
+                      Incipit: <foreign xml:lang="gez">ሰላም፡ ሰላም፡ ለኵሎን፡ መልክዕኪ፡</foreign>
+                      </desc>
+                      </item>
+                      <item xml:id="e01">
+                      <desc>
+                      <locus target="#73r"/>: the mid-point of the Psalms is marked with a small Roman cross
+                      </desc>
+                      </item>
+                      <item xml:id="e02">
+                      <desc>
+                      Identified in the insurance hand list as Psalter 11
+                      </desc>
+                      </item>
+                      <item xml:id="e03">
+                      <desc>
+                      Navigation system: red string is sewn into the fore edge of <locus target="#17"/>; blue yarn is sewn into the fore edge of <locus target="#80 #90 #97 #133 #148 #164"/>
+                      </desc>
+                      </item>
+                      <item xml:id="e04">
+                      <desc>
+                      Psalm 118 does not contain the spiritual meanings of the Hebrew letters
+                      </desc>
+                      </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +161,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-10-14" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
