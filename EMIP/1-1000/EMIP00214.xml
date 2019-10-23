@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 52</title>
             <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Homiliary in Honor of the Archangel Michael, ድርሳነ፡ ሚካኤል፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="103r"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <title type="complete" ref="LIT1295Dersan"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from="109v" to="136r"/><title>Twelve Miracles of Michael, ተአምረ፡ ሚካኤል፡, arranged by a later ‎hand for the months</title>
+                    <incipit xml:lang="gez">‎በስመ፡ አብ፡ ወወልድ፡...ንወጥን፡ በረድኤተ፡ እግዚአብሔር፡ ወበሠናይ ሀብቱ፡ ‎‎ጽሒፈ፡ ተአምራቲሁ፡ ለመልአክ፡ ክቡር፡ ኃይለ፡ ሰማያት፡ ሊቀ፡ መላእክት፡ ‎‎ሚካኤል፡.... ‎</incipit>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -182,6 +186,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ሚካኤል፡</foreign><foreign xml:lang="gez">ማርያም፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d01">
+                      Decorative designs: <locus target="#17r #26r #50r #73r #77v #80r #88r #94v # 103v #109v #114v #115v #116v #118r #119v #121r #126v #129r #132v #134r #135v #136"/>" (lines of full stops and alternating red dots);
+                      <locus target="#40v #99r #123v #131r"/> (a line of alternating red and black dots); f. 72v (multiple full stops</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a01"><desc type="GuestText"><locus target="#136v–138v"/>
+                        <title type="complete" ref="LIT2835RepCh119"/>
+                        Incipit: <foreign xml:lang="gez">‎ምስለ፡ ስመ፡ ልዑል፡ ዘተሳተፈ፡. ‎</foreign>
+                          </desc>
+                        </item>
+                      <item xml:id="a02"><desc><locus target="#ir(ecto)"/>, upper right: “Saint Michael, the Archangel.” Note, in black ink written perpendicular to the lines and prickings: “Our father, Qäñazmač Arkä śadǝq took monastic vows on 1936 (EC), during the year of John [the evangelist], Sane 17 and died Saturday, Nahase 27</desc></item>
+                      <item xml:id="e01"><desc><locus target="#iv(erso)"/> the text is effaced and illegible</desc></item>
+                      <item xml:id="a03"><desc type="OwnershipNote"><locus target="#ii r(ecto)"/> name erased. Lower portion contains a copy of the note from <locus target="#ir(ecto)"/></desc></item>
+                      <item xml:id="a04"><desc type="DonationNote"><locus target="#ii v(erso), red ink"/> “Ḫayle Täsfa Sellasie gave this Dersan in 1988 (EC) to Čäbäta Mika’el [a church].” </desc></item>
+                      <item xml:id="a05"><desc><locus target="#136v"/>, bottom margin, stamp Ḫayle Täsfa, lawyer, district court house, address: Meta Robi</desc></item>
+                      <item xml:id="e02"><desc>Numbered quires 2–10 and 12–19</desc></item>
+                      <item xml:id="e03"><desc>
+                        words of text are written interlinearly (<locus target="#10r #12r #45r #47r"/>, etc.);
+                        and lines of text are written interlinearly (<locus target="#1r #57v"/>);
+                        and in the upper margin with a symbol (+) marking the location where the text is to be inserted
+                        (<locus target="#3r"/>, col. 1, line 16);
+                        erasure markings are visible (<locus target="#85r"/>);
+                        text has been removed (e.g., <locus target="#1v #42r #135v"/>).</desc></item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                         <decoNote xml:id="b1">Parchment, 210 x 183 x 75 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, covered with tooled leather.</decoNote>
@@ -218,9 +250,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-08-14" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2019-10-08" who="RL">Added ms contents, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
