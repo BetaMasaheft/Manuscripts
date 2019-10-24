@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 30</title>
             <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Anaphora of Mary attributed to Cyriacus of Bǝhǝnsa, ቅዳሴ፡ ማርያም፡; Prayer of the Covenant, ጸሎተ፡ ኪዳን፡; Liṭon, ሊጦን፡; Absolution of the Son, ፍትሐት፡ ዘወልድ፡</summary>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
                   <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                    <locus from="1r" to="24v"/>
+                  <title type="complete" ref="LIT1099Anapho"/>
+                </msItem>
+
+                  <msItem xml:id="ms_i2"><locus from="24v" to="37v"/><title>Office Prayer‎</title>
+                  <msItem xml:id="ms_i2.1"><locus from="24v" to="31v"/><title type="complete" ref="LIT2260salota"/></msItem>
+                  <msItem xml:id="ms_i2.2"><locus from="31v" to="37v"/><title type="complete" ref="LIT3188Liton"/></msItem>
                   </msItem>
+                  <msItem xml:id="ms_i3"><locus from="37v" to="40r"/><title type="complete" ref="LIT1398Fethat"/></msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -129,6 +138,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+
+                  <decoDesc>
+                    <decoNote xml:id="d01">
+                      ‎Decorative designs:
+                      <locus target="#1r"/> (simple haräg);
+                      <locus target="#24v"/> (a line of red and ‎black dots);
+                      <locus target="#40r"/> (red and black symbols)‎
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a01">
+                      <desc type="GuestText">
+                      <locus target="#iv(erso) #iir(eecto) #iiv(erso) #40r #40v #41r"/> Excerpt from Image of ‎Communion, Mälk‘a Qurǝban, መልክአ፡ ቍርባን፡, a hymn usually sung ‎after holy communion, incomplete at the end‎
+                      </desc>
+                      </item>
+                      <item xml:id="e01">
+                      <desc>
+                      <locus target="#ir(ecto)"/> scrawl‎
+                      </desc>
+                      </item>
+                      <item xml:id="a02">
+                      <desc>
+                      <locus target="#‎3v"/> Prayer for Metropolitan Matewos (metropolitan from 1889–‎‎1926) and Bishop Lukas (1881–1901)‎
+                      </desc>
+                      </item>
+                      <item xml:id="e02">
+                      <desc>
+                      <locus target="#‎41v"/> blank‎
+                      </desc>
+                      </item>
+                      <item xml:id="e03">
+                      <desc>
+                      words of text are written interlinearly (<locus target="#‎iiv(erso) #8v #22v #26v #27r"/>, etc.);
+                      text has been removed (e.g., <locus target="#8r"/>)‎
+                      </desc>
+                      </item>
+
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                         <decoNote xml:id="b1">Parchment, 120 x 84 x 33 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
@@ -164,9 +220,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-08-01" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating</change>
+         <change when="2019-09-30" who="RL">Added ms contents, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
