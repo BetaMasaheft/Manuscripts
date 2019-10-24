@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 037</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+<p>The initial version of this file was created from data kindly provided by the Ethiopic Manuscript Imaging Project directed by Steve Delamarter.</p>
+<p>Dedicated to Cain Hope Felder</p>
+
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,8 +41,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="68r"/><title type="complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +61,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word God is rubricated in the first three works; the word Mary is rubricated in the final two works. Occasionally, the word God is written in alternating red and black letters (e.g., <locus target="#19r"/>)</desc>
+                  <desc>Columetric layout of text: <locus target="#113v #114r"/> (Ps. 150); <locus target="#122v #123r"/> (tenth Biblical Canticle)</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote xml:id="d01">
+                    Decorative designs:
+                    <locus target="#1r #7r #31r"/> (haräg);
+                    <locus target="#1r #21r #38r #52r #99r #108r #114r #126r #150r"/> (line of alternating red and black dots);
+                    <locus target="#75r"/> (multiple full stops)
+                  </decoNote>
+                </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a01">
+                    <desc type="OwnershipNote">
+                    <locus target="#ivv(erso)"/>": Note of secondary ownership, in red ink
+                    </desc>
+                    </item>
+                    <item xml:id="a02">
+                    <desc>
+                    <locus target="#150r"/>: Name of scribe, Gäbrä Maryam
+                    </desc>
+                    </item>
+                    <item xml:id="e01">
+                    <desc>
+                    <locus target="#ir(ecto) #iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto)"/>", <locus target="#150v #151r #151v #152r #152v"/>: blank
+                    </desc>
+                    </item>
+                    <item xml:id="e02">
+                    <desc>
+                    Identified in the insurance hand list as Psalter 21
+                    </desc>
+                    </item>
+                    <item xml:id="e03">
+                    <desc>
+                    Numbered quires: quire 5
+                    </desc>
+                    </item>
+                    <item xml:id="e04">
+                    <desc>
+                    Psalm 118 contains the spiritual meanings of the Hebrew letters
+                    </desc>
+                    </item>
+                    <item xml:id="e05">
+                    <desc>
+                    Scribal intervention:
+                    words of text are written interlinearly (<lolcus target="#107r #111r #115r #125r"/>);
+                    and lines of text are written interlinearly (<locus target="#109v"/>);
+                    text has been removed (<locus target="#18r #55r #86v #96r #110v"/>, etc.)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +149,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-10-21" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
