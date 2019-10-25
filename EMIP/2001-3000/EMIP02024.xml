@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 075</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,9 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Anaphora of Our Lady Mary attributed to Cyriacus of Bəhənsa, Qǝddase Maryam Gwäs’a, ቅዳሴ፡ ማርያም፡; Asmat prayer against fear and nightmare, ጸሎተ: ድንጋፄ: here called ጸሎት፡ በእንተ፡ ድንናጋዝ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="49v"/><title type="complete" ref="LIT1099Anapho"/><textLang mainLang="gez">Gə‘əz</textLang></msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -57,6 +57,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ማርያም፡</foreign></seg>
+                  <desc><locus target="#20r #20v #21r #21v"/> columentric layout of the Trinitarian Formula</desc>
+                </handNote></handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#ir"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#iir"/><desc><ref type ="authFile" corresp="AT1062CoronationMary"/> surrounded by the Holy Trinity</desc></decoNote>
+                  <decoNote type="frame" xml:id="d3"> Decorative designs: <locus target="#1r #50v"/> (haräg); <locus target="#20r"/> (multiple full stops)</decoNote>
+                </decoDesc>
+                <additions><list>
+                <item xml:id="a1"><desc type="Asmat"><locus target="#50rv"/> Asmat prayer against fear and nightmare, <foreign xml:lang="gez">ጸሎተ፡ ድንጋፄ፡ Here called ጸሎት፡ በእንተ፡ ድንናጋዝ፡</foreign>, written in a later hand</desc></item>
+                <item xml:id="e1"><desc><locus target="#iv #iiv"/> blank</desc></item>
+                <item xml:id="a2"><desc type="OwnershipNote"><locus target="#1v"/> and passim, the name of the owner is Gäbrä Śǝllase. Secondary owners are also named, Gäbrä Maryam and Wäldä Täklä</desc></item>
+                <item xml:id="a3"><desc><locus target="# 3v–4r"/> mentions Coptic Pope Qerǝlos (V, 1874–1927) and <persName ref="PRS6876Matewos"/></desc></item>
+                <item xml:id="e2"><desc>Identified in the insurance hand list as Liturgical 9</desc></item>
+                <item xml:id="e3"><desc>Numbered quires: quire 5</desc></item>
+                <item xml:id="e4"><desc>
+                  words of text are written interlinearly (<locus target="#19v #22v"/>)</desc></item>
+                </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +101,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-25" who="RL"></change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
