@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,12 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 090</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
-         </editionStmt>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cane Hope Felder</p>
+       </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -37,9 +39,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Chants called Ziq, መጽሐፈ፡ ዚቅ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="109v"/>
+                  <title type="complete" ref="LIT1979Mashaf"/>
+                  <textLang mainLang="gez">Gə'əz</textLang>
+                  <incipit xml:lang="gez">ናሁ፡ ወጠንኩ፡ ጽሒፈ፡ ዚቅ፡ ዘአስተጋ[ብ]ዕዎ፡ ሊቃውንተ፡ ጐንደር፡ እምፀዋትወ፡ ዜማሁ፡ ለአቡነ፡ ያሬድ፡ ቢጸ፡ ሱራፌል፡ ጸሎቱ፡ ወበረከቱ፡ <gap reason="omitted"></gap></incipit></msItem>
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -57,6 +61,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ማርያም፡</foreign></seg></handNote></handDesc>
+
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#iir"/><desc><ref type="authFile" corresp ="AT1035HolyMan"/> <persName ref="PRS10245Yared"/> with prayer staff and sistrum near a tree with three birds sitting on a branch with caption <q>“Saint Yared”</q></desc></decoNote>
+                    <decoNote type="frame" xml:id="d2"> Decorative designs: lines of alternating red and black dots are used as section dividers throughout the codex</decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="e1"><desc><locus target="#ir ȉv #iiv #110r #111r #111v"/> blank</desc></item>
+                  <item xml:id="a1"><desc><locus target="#109v"/> An errata (overlooked section)</desc></item>
+                  <item xml:id="a2"><desc type="GuestText"><locus target="#110v"/> An excerpt from <title type="complete" ref="LIT1979Mashaf"/>, written in black pen</desc></item>
+                  <item xml:id="e2"><desc><locus target="#"/>Identified in the insurance hand list as Case C8</desc></item>
+                  <item xml:id="e3"><desc>
+                    words of text are written interlinearly and in the margins throughout the codex ; and lines of text are written interlinearly (<locus target="#75v"/>);
+                    and in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#29r"/>, col. 1, line 6);
+                    text has been removed (<locus target="#6v"/>)</desc></item>
+                  </list></additions>
+
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +91,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +104,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-30" who="RL">Added ms items, miniatres and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
