@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 048</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>The initial version of this file was created from data kindly provided by the Ethiopic Manuscript Imaging Project directed by Steve Delamarter.</p>
+<p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,8 +40,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡, incomplete at the end</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="7r"/><title type="incomplete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Due to the damage to the end of this codex, it is impossible to decipher further where the major works begin and end</note>
+                  </msItem>
+                  <msItem xml:id="ms_i1.1"><locus from="7r" to="12r"/><title type="complete" ref="LIT2000Mazmur"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i1.2"><locus from="12r" to="15r"/><title type="complete" ref= "LIT1828Mahale"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i1.3"><locus from="15v" to="18v"/><title type="complete" ref="LIT2362Songof"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i1.4"><locus from="18v" to="24v"/><title type="incomplete" ref="LIT2509Weddas"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +73,61 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word God is not rubricated in the first three works. The final two works are not sufficiently visible to determine if the word Mary is rubricated in the final two works</desc>
+                  <desc>There is no columetric layout of text</desc>
+                  </handNote>
+                  </handDesc>
+                  <descDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#8r #16r #24v #35v #43v #50v #60r"/>, etc. (line of alternating red and black dots);
+                  <locus target="#88v #133r"/> (multiple full stops between lines of red and black dots).
+                  </decoNote>
+                  </descDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#68r"/>: the midpoint of the Psalms is marked with the words “and this is its half.”
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    The end of this codex is badly damaged and many of the pages were not separated at the time of digitization to prevent further damage
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    Identified in the insurance hand list as Psalter 32
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    Navigation system:
+                    red string is sewn into the fore edge of <loucs target="#8"/>;
+                    brown string is sewn into the fore edge of <locus target="#16, 24, 35, 43, 50, 73, 88, 103, 126"/>
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    Psalm 118 does not contain the spiritual meanings of the Hebrew letters, but space is left to include them
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    Scribal intervention:
+                    words of text are written interlinearly (<locus target="#20v #27r #35r"/>);
+                    text has been removed (<locus target="#64r #66r #89r #110r #128r"/>, etc.).
+                    </desc>
+                    </item>
+                  </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +156,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change who="ABe" when="2019-10-25">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

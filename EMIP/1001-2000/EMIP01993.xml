@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 044</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>The initial version of this file was created from data kindly provided by the Ethiopic Manuscript Imaging Project directed by Steve Delamarter.</p>
+<p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,8 +40,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="7r"/><title type="complete" ref="LIT2260salota"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +60,72 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word God is rubricated in the first three works; the word Mary is rubricated in the final two works</desc>
+                  <desc>There is no columetric layout of text</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#1r #8r #16r #24v #43r"/> (haräg);
+                  <locus target="#35v #43r #49r #58r #64v #69v #79r #85r #100r #115v #122r #154r"/> (line of alternating red and black dots);
+                  <locus target="#128v #140v"/> (multiple full stops and lines of red and black dots).
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#iiir(ecto)"/>": Excerpt from the <title type="complete" ref="LIT3575Mashaf"/> for the Night Hours, <foreign xml:lang="gez">ሰዓታት፡ ሌሊት፡</foreign>, written in purple ink
+                    Incipit: <foreign xml:lang="gez">ኵሎሙ፡ ሠራዊተ፡ መላእክት፡</foreign>
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto) #iv(erso) #iir(ecot) #ii v(erso)"/>": scrawls and pentrials
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#iiiv(erso)"/>": blank
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#64v"/>: the mid-point of the Psalms is marked with a line of alternating red and black dots
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    <locus target="#156v"/>, bottom of column two: scrawls in purple ink and pencil
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    Identified in the insurance hand list as Psalter 28
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    Psalm 118 does not contain the spiritual meanings of the Hebrew letters
+                    </desc>
+                    </item>
+                    <item xml:id="e7">
+                    <desc>
+                    Scribal intervention:
+                    words of text are written interlinearly (<locus target="#74v #96v #103r #105v #108v"/>, etc.);
+                    and lines of text are written interlinearly (<locus target="#101r"/>);
+                    text has been removed (<locus target="#45v #95v #112r"/>).
+                    </desc>
+                    </item>
+                  </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +154,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-10-24" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
