@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 079</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,10 +39,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Antiphonary for the Whole Year, Dǝggwa, ድጓ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="3r" to="87v"/><title type="complete" ref="LIT3178Deggwa"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from="89r" to="92v"/><title>Variations of Hallelujah, <foreign xml:lang="gez">አንቀጸ፡ ሃሌታ፡</foreign></title></msItem>
+                  <msItem xml:id="ms_i3"><locus from="93r" to="194r"/><title type="complete" ref="LIT3178Deggwa"/>
+                    <msItem xml:id="ms_i3.1"><locus from="93r" to="141v"/><title>Antiphonary for the Easter Season, <foreign xml:lang="gez">ዘፋሲካ፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.2"><locus from="142r" to="154v"/><title>Antiphonary called Mäzmur for the rainy season, <foreign xml:lang="gez">መዝሙር፡ ዘዘመነ፡ ክረምት፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.3"><locus from="154v" to="166v"/><title>Addendum of overlooked text (<foreign xml:lang="gez">ዘተረሥዓ፡)</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.4"><locus from="166v" to="170v"/><title>Antiphonary called Mäzmur for the season of teaching, <foreign xml:lang="gez">መዝሙር፡ ዘአስተምሕሮ፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.5"><locus from="170v" to="173v"/><title>Antiphonary called Mäzmur for the season of Advent, <foreign xml:lang="gez">መዝሙር፡ ዘስብከት፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.6"><locus from="173v" to="182v"/><title>Antiphonary for the Sundays in the season following Christmas, <foreign xml:lang="gez">ዘሰናብት፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.7"><locus from="182v" to="185r"/><title>Antiphonary for Palm Sunday, <foreign xml:lang="gez">ዘሆሣዕና፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.8"><locus from="185r" to="189v"/><title>Antiphonary for the Passion Week, <foreign xml:lang="gez">መዝሙር፡ ዘሰሙነ፡ ሕማማት፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.9"><locus from="190v" to="192r"/><title>Antiphonary for the Great Saturday, <foreign xml:lang="gez">ዘሰንበተ፡ አይሁድ፡</foreign></title></msItem>
+                    <msItem xml:id="ms_i3.10"><locus from="193r" to="194r"/><title>Antiphonary for Easter Sunday, <foreign xml:lang="gez">ዘትንሣኤ፡</foreign></title><note>incomplete at the end</note></msItem>
+                </msItem>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -57,6 +71,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1"> Decorative designs: lines of alternating red and black dots are used as section dividers throughout</decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="a1"><desc type="GuestText"><locus target="#vir"/> Excerpt from <title type="incomplete" ref="LIT3178Deggwa"/> on the Hymn to Qirqos, without musical notation</desc></item>
+                  <item xml:id="a2"><desc type="GuestText"><locus target="#1r"/> Excerpt from <title type="incomplete" ref="LIT3178Deggwa"/>, with musical notation</desc></item>
+                  <item xml:id="a3"><desc type="GuestText"><locus target="#1v #2v"/> Excerpt from <title type="incomplete" ref="LIT3178Deggwa"/>, with musical notation</desc></item>
+                  <item xml:id="e1"><desc><locus target="#ir #iv #iir #iiv #iiir #iiiv #ivr #ivv #vr #vv #viv #88r #88v #118r #118v #190r #192v #194v #195r #195v #196r #196v #197r #197v #198r #198v #199r #199v #200r #200v #201r #201v #202r #202v #203r #203v #204r #204v #205r #205v"/> blank</desc></item>
+                  <item xml:id="e2"><desc><locus target="#143v #144r #144v #145r"/> are duplicate shots</desc></item>
+                  <item xml:id="a4"><desc type="GuestText"><locus target="#189v"/> copy of the hymn for passion week, written in pencil</desc></item>
+                  <item xml:id="e3"><desc>Identified in the insurance hand list as Liturgical 13</desc></item>
+                  <item xml:id="e4"><desc>Scribal intervention: text has been removed (<locus target="#31v"/>)</desc></item>
+                  </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +97,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +110,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-25" who="RL">Added ms items, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

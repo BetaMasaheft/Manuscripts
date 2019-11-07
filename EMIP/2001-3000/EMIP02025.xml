@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,12 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 076</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
-         </editionStmt>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
+                                      </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -37,10 +39,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Praises of Mary, ውዳሴ፡ ማርያም፡; Gate of Light, አንቀጸ፡ ብርሃን፡; Image of Michael, መልክአ፡ ሚካኤል፡; Image of Sinoda, መልክአ፡ ሲኖዳ፡, produced in the Government Scriptorium</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="33r"/><title type="complete" ref="LIT2509Weddas"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from="33v" to="46v"/><title type="complete" ref="LIT1113Anqasa"/></msItem>
+                  <msItem xml:id="ms_i3"><locus from="47r" to="58v"/><title type="complete" ref="LIT2835RepCh119"/></msItem>
+                  <msItem xml:id="ms_i4"><locus from="59r" to="66v"/><title>Image of Sinoda, <foreign xml:lang="gez">መልክአ፡ ሲኖዳ፡</foreign></title><incipit xml:lang="gez">ወልደ፡ ነጐድጓድ፡ ዮሐንስ፡ ወለእለ፡ ኬፋ፡ አቢያጺሁ፡ <gap reason="omitted"/> ሰላም፡ ለዝክረ፡ ስምከ፡ በትርሲተ፡ጸጋ፡ ወሞገስ፡</incipit></msItem>               </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -57,6 +60,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ሚካኤል፡</foreign><foreign xml:lang="gez">ማርያም፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1">
+                      Decorative designs: <locus target="#1r #4r #9v #15r #21v #26r #29v #33v #47r #59r"/> (haräg); <locus target="#25v #46v"/> (multiple full stops); </decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="e1"><desc>Several of the characteristics of this book make it clear that it was produced in or near the government scriptorium: two-toned head and tail bands, tooled Moroccan leather, the distinctive harags, etc</desc></item>
+                  <item xml:id="e2"><desc><locus target="#ir #iv #67r #67v 68r #68v"/> blank</desc></item>
+                  <item xml:id="a1"><desc type="OwnershipNote"><locus target="#66v"/> owner’s name is Habtä Wäld</desc></item>
+                  <item xml:id="e3"><desc>Identified in the insurance hand list as Liturgical 10</desc></item>
+                  <item xml:id="e4"><desc>Navigation system: blue string is sewn into the fore edge of ff. 34, 47, 59</desc></item>
+                  <item xml:id="e5"><desc>Numbered quires: quires 2–7</desc></item>
+                  <item xml:id="e6"><desc>words of text are written interlinearly (<locus target="#16v #22v #55v"/>)</desc></item>
+                  </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +87,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +100,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-25" who="RL">Added ms items, varia and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
