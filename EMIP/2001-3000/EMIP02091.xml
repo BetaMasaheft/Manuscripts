@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 142</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,8 +39,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Fragment of Book of Hours of Abba Giyorgis, መጽሐፈ፡ ሰዓታት፡ ዘአባ፡ ጊዮርጊስ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="27v"/><title type="complete" ref="LIT3575Mashaf"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Fragment of Book of Hours of Abba Giyorgis</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +60,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word Mary is rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#2r #13v"/> (line of alternating purple and black dots)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto) #28r #28v"/>: pentrials
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#iv(erso) #18v #19v #20r #20v #21r #21v #22r #22v #23r #23v"/>: blank
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#18r"/>: note, written in blue ink
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    <locus target="#19r"/>: pen trial, written in red ink
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    Rather than red, the secondary ink color is purple
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    Identified in the insurance hand list as Case 67/21
+                    </desc>
+                    </item>
+                    <item xml:id="e7">
+                    <desc>
+                    Scribal intervention: words of text are written interlinearly (<locus target="#7r #13r"/>); and lines of text are written interlinearly (<locus target="#5r"/>); erasure markings are visible (<locus target="#2v"/>)
+                    </desc>
+                    </item>
+                  </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +141,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-07" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
