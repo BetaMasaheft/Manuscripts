@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 007</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,9 +39,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of Moses which saved him from Pharoah, ጸሎተ፡ ሙሴ፡; Prayer when entering Battle; Prayer of David about Conflict, ጸሎተ፡ ዳዊት፡ በእንተ፡ ኵናት፡ ወፀብዕ፡; Anaphora of Our Lady Mary attributed to Cyriacus of Bəhənsa, ቅዳሴ፡ ማርያም፡; Image of Saint George, መልክአ፡ ጊዮርጊስ፡.</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="21v"/><title>Prayer of Moses which saved him from Pharoah, ጸሎተ፡ ሙሴ።</title><incipit xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡<gap reason="omitted"/>  ንነግረክሙ፡ ንሕነ፡ በዘድኅነ፡ ሙሴ፡ እምእዴሁ፡ ለፈርዖን፡ ጸሎት፡ ወስእለት፡ ለሙሴ፡ ዘወሀቦ፡ እግዚአብሔር፡</incipit></msItem>
+                  <msItem xml:id="ms_i2"><locus from="21v" to="22v"/><title>Prayer when entering battle</title><incipit xml:lang="gez">ወሶበ፡ ትበውእ፡ ውስተ፡ ቀትል፡ አንብብ፡ ዘንተ፡ ጸሎተ፡ <gap reason="omitted"/> </incipit></msItem>
+                  <msItem xml:id="ms_i3"><locus from="22v" to="24v"/><title>Prayer of David about Conflict, ጸሎተ፡ ዳዊት፡ በእንተ፡ ኵናት፡ ወፀብዕ።</title><incipit xml:lang="gez">ጸሎተ፡ ዳዊት፡ በእንተ፡ ኵናት፡ ወፀብዕ፡ ዘምሥራቅ፡</incipit></msItem>
+                  <msItem xml:id="ms_i4"><locus from="27r" to="57v"/><title type="complete" ref="LIT1099Anapho"/></msItem>
+                  <msItem xml:id="ms_i5"><locus from="59r" to="63v"/><title type="complete" ref="LIT2927RepCh208"/><incipit xml:lang="gez">ሰላም፡ ለጽንሰትከ፡ ወለልደትከ፡ ቡሩክ፡ ....</incipit></msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -57,6 +62,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication">
+                    <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                    <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                    <foreign xml:lang="gez">ማርያም፡</foreign>
+                    <foreign xml:lang="gez">ጊዮርጊስ፡</foreign>
+                  </seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#24v"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/>  in pencil </desc></decoNote>
+                    <decoNote type="frame" xml:id="d02">
+                      Decorative designs: <locus target="#1r"/> (haräg); <locus target="#24v #57v #63v"/> (multiple full stops</decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="e01"><desc><locus target="#ir #iv #iiv(erso) #25v #26r #26v #58v #65r #66r #66v"/> blank</desc></item>
+                  <item xml:id="e02"><desc><locus target="#iir(ecto)"/> scrawls, in blue ink</desc></item>
+                  <item xml:id="a01"><desc type="OwnershipNote"><locus target="#5v"/> and passim, owner’s name is Wäldä Śǝllase.</desc></item>
+                  <item xml:id="e03"><desc><locus target="#25r"/>scrawls</desc></item>
+                  <item xml:id="a02"><desc><locus target="#30r"/> mentions <persName ref="PRS7830Petros"/>, <persName ref="PRS6876Matewos"/></desc></item>
+                  <item xml:id="e04"><desc><locus target="#57v #58r"/> illegible</desc></item>
+                  <item xml:id="a03"><desc><locus target="#64r"/> Notes on an important date (illegible).</desc></item>
+                  <item xml:id="e05"><desc><locus target="#64v"/> pen trial</desc></item>
+                  <item xml:id="e06"><desc><locus target="#"/>Identified in the insurance hand list as Religio-Magical 7</desc></item>
+                  <item xml:id="e07"><desc>
+                    words of text are written interlinearly (<locus target="#4r #5rv #7v #9v #10r"/>, etc.)</desc></item>
+                  </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -83,8 +112,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-17" who="RL">Added ms items, miniatures and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

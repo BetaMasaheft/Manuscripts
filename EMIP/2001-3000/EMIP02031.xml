@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,12 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 082</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
-         </editionStmt>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
+                                      </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -37,10 +39,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Antiphonary for the Whole Year, abbreviated Dǝggwa, ድጓ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="66v"/><title type="incomplete" ref="LIT3178Deggwa"/><note>abbreviated</note></msItem>
+                  <msItem xml:id="ms_i2"><locus from="66v" to="71v"/><title type="incomplete" ref="LIT2610Zemmar"/><note>for selected feast days of the year</note></msItem>
+                  <msItem xml:id="ms_i3"><locus from="71v" to="72r"/><title type="incomplete" ref="LIT3186Meeraf"/><note>for fast days‎</note></msItem>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -57,6 +60,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ማርያም፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1"> Decorative designs: lines of alternating red and black dots are used as section dividers throughout; <locus target="#49r #58v #62v #66v"/> (multiple full stops)</decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="e1"><desc>Quire 9 is upside-down</desc></item>
+                  <item xml:id="e2"><desc><locus target="#72v"/> Pen trials</desc></item>
+                  <item xml:id="e3"><desc>Identified in the insurance hand list as Liturgical 16</desc></item>
+                  <item xml:id="e4"><desc>
+                    words of text are written in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#16r"/>, col. 2, line 17; <locus target="#20r"/>, col. 1, line 3; <locus target="#37v"/>, col. 1, line 15; <locus target="#45v"/>, col. 2, line 9);
+                    text has been removed (<locus target="#32v #35v #36v #42r #46r"/>, etc.)</desc></item>
+                  </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +85,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +98,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-25" who="RL">Added ms items, and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,12 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 091</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
-         </editionStmt>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cane Hope Felder</p>
+     </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -37,10 +39,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Mäwaś‘ǝt Chants, መዋሥዕት።</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <textLang mainLang="gez">Gə'əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="52v"/><title type="complete" ref="LIT1990Mawase"/></msItem>
+
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -57,6 +59,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#Inside front cover"/><desc>Sketch of a church (top), sketch of church (bottom), sketches of people a sketch of Alaqä Kahnu, under an umbrella, with a student nearby with caption <q>"Däbra Ḍäḥay," “He learned from Qoma (a well-known church) and taught at Däbra Ḍäḥay,” “student”</q></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#ir"/><desc>A soldier with a rifle with caption <q>“Kidanä Wäldä Täklu”</q></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d3"><locus target="#52v"/><desc>Hand-Drawn Seal of the owner: Sign of the Cross with the name of Kahnu written into the sign</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d4"><locus target="#53r"/><desc>Drawing of the church, in pencil</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d5"><locus target="#53v"/><desc>Drawing of the church, in pencil with caption <q>“This is the Church of Saint George,” “The painter is Lǝj Śahǝlu Kidanä Wäld”</q></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d6"><locus target="#54r"/><desc>Drawing of the teacher and his students, in pencil</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d7"><locus target="#Inside back cover"/><desc>sketches of the church</desc></decoNote>
+                    <decoNote type="frame" xml:id="d8"> Decorative designs: <locus target="#11r #29r #46v #49r #52v"/> (line of alternating red and black dots)</decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="e1"><desc><locus target="#iv"/> beginning formula of an Amharic letter</desc></item>
+                  <item xml:id="e2"><desc><locus target="#iir"/> scrawls in purple ink</desc></item>
+                  <item xml:id="a1"><desc><locus target="#iiv"/> Inscription from a teacher to a student: “‘Kahnu, May God keep you from all evil,’ said his father (i.e., his teacher), teacher of Qoma. And he said, ‘Alaqä Kahnu, judge of Däbrä Tabor, called son of Täklä Haymanot, Amen and Amen.’”</desc></item>
+                  <item xml:id="e3"><desc><locus target="#54v"/> blank</desc></item>
+                  <item xml:id="e4"><desc>Identified in the insurance hand list as Case C4</desc></item>
+                  <item xml:id="e5"><desc>Numbered quires: quires 2–7</desc></item>
+                  <item xml:id="e6"><desc>
+                    words of text are written interlinearly and in the margins throughout the codex; and in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#32v"/>, col. 1, line 12);
+                    text has been removed (<locus target="#1r #1v #2r #4v #5r"/>, etc</desc></item>
+                  </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +93,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +106,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-30" who="RL">Added ms items, miniatures and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

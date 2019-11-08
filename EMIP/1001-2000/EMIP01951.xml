@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,12 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 002</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
-         </editionStmt>
+                                        <p>Dedicated to Cain Hope Felder</p>
+                                      </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
             <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -37,8 +39,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of Saint Peter, ጸሎተ፡ ጴጥሮስ፡, arranged for the days of the week</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <msItem xml:id="ms_i1"><locus from="1r" to="76r"/>
+                    <title>Prayer of Saint Peter, ጸሎተ፡ ጴጥሮስ።‎</title>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
+                    <incipit xml:lang="gez">
+                      ‎በስመ፡ ወወልድ፡ ጸሎቱ፡ ለጴጥሮስ፡ ዝንቱ፡ ውእቱ፡ ዘየዓቢ፡ ‎‎እምሐዋርያቲሁ፡ ወዘኃረዮ፡ ክርስቶስ፡ ወልደ፡ እግዚአብሔር፡ ሕያው፡ ‎‎እምቅድመ፡ ኵሎሙ፡ ሐዋርያቲሁ፡ ወጸውዖሙ፡ ለኵሎሙ፡ ሐዋርያቲሁ፡ ‎‎ወነበረ፡ ምስሌሆሙ፡ ወባረኮሙ <gap reason="omitted"/>‎
+                    </incipit>
+                    <note>arranged for the days of the week: Monday (<locus target="#1r"/>), Tuesday (<locus target="#11v"/>), ‎Wednesday (<locus target="#22r"/>), Thursday (<locus target="#38v"/>), Friday (<locus target="#51v"/>), Saturday (<locus target="#59r"/>), ‎Sunday (<locus target="#66r"/>), Daily (<locus target="#72r"/>)‎</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +64,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication">
+                    <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
+                    <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                    <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#iv(erso)"/><desc>crude drawing of a figure with arms upraised, in blue ink with caption <q>In the name of the Father.....</q></desc></decoNote>
+                    <decoNote type="frame" xml:id="d02">
+                      Decorative designs: <locus target="#1r #11v #22r #38v #51v #66r"/> (haräg);
+                      multiple full stops are used as section dividers througho</decoNote>
+                    </decoDesc>
+                    <additions><list>
+                    <item xml:id="a01"><desc><locus target="#ir(ecto)"/> blank</desc></item>
+                    <item xml:id="a02"><desc><locus target="#iir(ecto)"/> list of names</desc></item>
+                    <item xml:id="e01"><desc><locus target="#iiv(erso)"/> note that has been crossed out with blue ink.</desc></item>
+                    <item xml:id="a03"><desc type="OwnershipNote"><locus target="#9r"/> and passim owner is named, Gäbrä Śǝllase</desc></item>
+                    <item xml:id="a04"><desc><locus target="#51r"/> Notes on a dream by the owner</desc></item>
+                    <item xml:id="a05"><desc type="Genealogy"><locus target="#58v #59r"/>, lower margin, Geneological notes</desc></item>
+                    <item xml:id="a06"><desc><locus target="#65v"/> Note about when the owner became a governmental administrator, in blue ink</desc></item>
+                    <item xml:id="a07"><desc><locus target="#71v"/> Scribe is mentioned, Kidana Maryam, and note of birthday and baptismal day of the owner, in blue ink</desc></item>
+                    <item xml:id="a08"><desc type="OwnershipNote"><locus target="#75v #76r"/> mentions the owner, Gäbrä Śǝllase, his wife, Wäläta Mika’el, and his children</desc></item>
+                    <item xml:id="a09"><desc><locus target="#76r"/> the scribe’s given name is mentioned, Asfaw Tägäñe Gondär</desc></item>
+                    <item xml:id="a10"><desc><locus target="#76r"/> names and birth dates of family members, in blue ink</desc></item>
+                    <item xml:id="a11"><desc><locus target="#76v"/> Notes on a dream, in blue ink</desc></item>
+                    <item xml:id="e02"><desc>Identified in the insurance hand list as Religio-Magical 2</desc></item>
+                    <item xml:id="e03"><desc><locus target="#"/> quires 1–9.</desc></item>
+                    <item xml:id="e04"><desc>
+                      words of text are written interlinearly (<locus target="#15r #30v #36r #72v #73v"/>)</desc></item>
+                    </list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -83,8 +119,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-15" who="RL">Added ms item, miniature, and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
