@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 002</title>
             <editor key="RL"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -55,14 +56,92 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 76</measure>
+                           <measure unit="quire">Protection quire + 10</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>151</height>
+                              <width>112</width>
+                              <depth>42</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–7 and 9–10 balanced; protection sheet and quire 8 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              <note>Folio stubs are visible between <locus target="#i #ii"/> and <locus target="#ii #1"/>.</note>
+                              Protection Quire:
+                              1, stub after 2
+                              2, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">6</dim>
+                              <locus from="9" to="14"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="15" to="22"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="23" to="30"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="31" to="38"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="39" to="46"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="47" to="56"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="57" to="64"></locus>
+                              <note>Folio stubs are visible between <locus target="#59 #60"/> and <locus target="#62 #63"/>.</note>
+                              Quire 8:
+                              3, stub after 6
+                              6, stub after 3
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="65" to="72"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">4</dim>
+                              <locus from="73" to="76"></locus>
+                              Quire 10
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">18</dim>
+                           <dim type="bottom">32</dim>
+                           <dim type="right">16</dim>
+                           <dim type="left">12</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="12 14"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication">
                     <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
@@ -93,10 +172,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <item xml:id="e04"><desc>
                       words of text are written interlinearly (<locus target="#15r #30v #36r #72v #73v"/>)</desc></item>
                     </list></additions>
+                    <bindingDesc>
+                      <binding xml:id="binding" contemporary="true">
+                        <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to particle-board covered with tooled leather.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                          <material key="parchment"></material>
+                          <material key="wood"></material>
+                          <material key="leather"></material>
+                        </decoNote>
+                      </binding>
+                    </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -121,6 +210,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2019-10-15" who="RL">Added ms item, miniature, and notes</change>
+         <change when="2019-11-14" who="JS">Added quire map, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
