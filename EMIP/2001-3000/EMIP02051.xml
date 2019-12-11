@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 102</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2051/">Tweed Codex 102</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2051/" n="72">Tweed Codex 102</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2051</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of Our Lady Mary at Golgotha, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡; Asmat Prayer for Vanquishing the Enemy, መግረሬ፡ ጸር፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="32v"/>
+                     <title type="complete" ref="LIT2246salotz"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="33r" to="35v"/>
+                     <title>Asmat Prayer for Vanquishing the Enemy, <foreign xml:lang="gez">መግረሬ፡ ጸር፡</foreign>
+                     </title>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                     <note>where a miniature has painted over the conclusion of the text</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +72,85 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                        <desc>The word Mary is rubricated</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                        <locus target="#iv(erso)"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1031VirginAndChild"/>
+                        </desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d2">
+                        <locus target="#7v"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1030Trinity"/>
+                        </desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d3">
+                        <locus target="#17v"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/>
+                        </desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d4">
+                        <locus target="#32v"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1005Crucifixion"/>
+                        </desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d5">
+                        <locus target="#35v"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1008Descent"/>, and leaving the evil ones (showing one eye) in the ground</desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d6">
+                        <locus target="#36v"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1033Ascension"/>
+                        </desc>
+                     </decoNote>
+                    <decoNote type="frame" xml:id="d7">
+                    Decorative designs:
+                    <locus target="#1r"/> (haräg)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="OwnershipNote">
+                              <locus target="#14v"/> and passim: The name of the owner is <foreign xml:lang="gez">ገብረ፡ ሕይወት፡</foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                              <locus target="#ir(ecto) #37v"/>: scrawls and pen trial (the Trinitarian formula).
+                    </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                              <locus target="#36r #37r"/>: blank
+                    </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                    Identified in the insurance hand list as Case 67/8
+                    </desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                    Scribal intervention: words of text are written interlinearly (<locus target="#3r #8r #9v #10r #10v"/>, etc.); and in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#17r"/>, line 1).
+                    </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +179,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-10-31" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

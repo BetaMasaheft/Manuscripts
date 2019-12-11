@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 115</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2064/">Tweed Codex 115</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2064/" n="91">Tweed Codex 115</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2064</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Praises of Mary, ውዳሴ፡ ማርያም፡; Gate of Light, አንቀጸ፡ ብርሃን፡; Angels Praise Her, ይዌድስዋ፡ መላእክት፡ ለማርያም፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="34v"/>
+                     <title type="complete" ref="LIT2509Weddas"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="35r" to="50v"/>
+                     <title type="complete" ref="LIT1113Anqasa"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="50v" to="55r"/>
+                     <title type="complete" ref="LIT3108RepCh388"/>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +75,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                        <desc>The words Jesus Christ and Mary are rubricated</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#1r"/> (haräg);
+                  <locus target="#27r"/> (multiple full stops);
+                  <locus target="#50v #55r"/> (multiple full stops and a line of alternating red and black dots)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="OwnershipNote">
+                              <locus target="#55r"/>: an owner’s name is written in a later ink, <foreign xml:lang="gez">ወልደ፡ ተክለ፡ ሃይማኖት፡</foreign>. The original scribe is mentioned, <foreign xml:lang="gez">ወልደ፡ ስማዕት፡</foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                    Identified in the insurance hand list as Marian Works 7
+                    </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                    Navigation system:
+                    purple yarn is sewn into the fore edge of <locus target="#4 #22"/>;
+                    blue yarn is sewn into the fore edge of <locus target="#9 #27 #31"/>;
+                    yellow and blue yarn is sewn into the fore edge of <locus target="#35"/>;
+                    red yarn is sewn into the fore edge of <locus target="#40"/>
+                           </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                    Scribal intervention: words of text are written interlinearly (<locus target="#3r #5v #8v #14r #20v"/>, etc.); and lines of text are written interlinearly (ff. ); and interlinearly with a symbol (+) marking the location where the text is to be inserted (<locus target="#18v"/>), and in another case where the symbol (┬) is used (<locus target="#47v"/>, line 9; <locus target="#53v"/>, line 2); erasure markings are visible (<locus target="#34v"/>); text has been removed (<locus target="#7r #19r #22r #23v #32v"/>, etc.)
+                    </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +148,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-04" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

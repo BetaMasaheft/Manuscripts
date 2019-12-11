@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 74</title>
             <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,11 +39,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Antiphonary for the Whole Year, Däggwa, ድጓ፡</summary>
-                  <msItem xml:id="ms_i1">
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
-               </msContents>
-               <physDesc>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="117r"/><title type="complete" ref="LIT3178Deggwa"/></msItem>
+                  <msItem xml:id="ms_i2"><locus from="117v" to="118v"/><title>Table of melodic variations for the Hallelujah, አንቀጽ: ሃሌታ:</title></msItem>
+                  <msItem xml:id="ms_i3"><locus from="119r"/><title>Mnemonic for distinguishing between the melodies of the hymns</title></msItem>
+                  <msItem xml:id="ms_i4"><locus from="119v" to="120r"/><title>Additional hymn with musical notation</title></msItem>
+                  <msItem xml:id="ms_i5"><locus from="121r"/><title>Additional hymn, with musical notation</title></msItem>
+                  </msContents>
+                  <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
                         <support>
@@ -170,6 +174,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ማርያም፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#22r"/><desc><ref type ="authFile" corresp="AT1062CoronationMary"/> interacts with four men</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#64v"/><desc><ref type="authFile" corresp ="AT1099StMary"/> with arms folded across her chest stands under a canopy arch; a man, below, sleeps while an angel hovers over him and holds the shoulders of another man</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#120v"/><desc><ref type="authFile" corresp ="AT1035HolyMan"/> an Equestrian Saint trampling an enemy</desc></decoNote>
+                  </decoDesc>
+                  <additions><list>
+                  <item xml:id="e01"><desc><locus target="#ir(ecto) #iiv(erso)"/> blank</desc></item>
+                  <item xml:id="a01"><desc type="GuestText"><locus target="#iv(erso) #iir(ecto)"/> Insertion of Deggwa for Aragawi, with musical notation. </desc></item>
+                  <item xml:id="e02"><desc type="StampExlibris"><locus target="# 119v"/> Stamp: outer line says “Mäggabi (title of religious authority), authority of the Zəmmare Mäwasə’t.” Inner line says, “Märǝ‘awi [unidentified last name].  This sort of seal is usually used to certify the accuracy of a student’s work.  It probably is intended to do so in this case as well, even though this codex contains the Deggwa rather than the Zəmmare Mäwasə’t. </desc></item>
+                  <item xml:id="a02"><desc><locus target="#121v"/> an unreadable note in Amharic. </desc></item>
+                  <item xml:id="e03"><desc>
+                    words of text are written interlinearly (<locus target="#10v #21v #22v #25r"/>, etc.);
+                    and lines of text are written interlinearly (<locus target="#58r"/>);
+                    and in the upper margin with a symbol (+) marking the location where the text is to be inserted
+                    (<locus target="#13r"/>, col. 1, line 17; <locus target="#86v"/>, col. 2, line 6; <locus target="#116r"/>, col. 1, line 3);
+                    text has been removed (e.g., <locus target="#73r"/>)</desc></item>
+                  </list></additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                         <decoNote xml:id="b1">Parchment, 203 x 153 x 55 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood and a protection sheet around the spine.</decoNote>
@@ -205,9 +227,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-08-19" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2019-10-10" who="RL">Added ms items, miniatures and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

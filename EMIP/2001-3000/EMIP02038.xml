@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 089</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cane Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,16 +33,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2038/">Tweed Codex 089</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2038/" n="172">Tweed Codex 089</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2038</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Mə‘raf Chants, ምዕራፍ፡</summary>
+                  <textLang mainLang="gez">Gə'əz</textLang>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="102v"/>
+                     <title type="complete" ref="LIT3186Meeraf"/>
+                     <incipit xml:lang="gez">ንዌጥን፡ ጽሒፈ፡ ምዕራፍ፡ በረድኤተ፡ እግዚአብሔር፡ ተፀዊነነ፡ ቦቱ፡ ሎቱ፡ ሰብሖታ፡ እስከ፡ ፩ አሜን፨ ዘይትቀነዩ፡ ቦቱ፡ በበዘመኑ፡ ዘእምዮሐንስ፡ እስከ፡ ዮሐንስ፡ በጥዑም፡ ዜማ፡ ኪዳን በግዕዝ። ቅዱስ፡ እግዚአብሔር፡ <gap reason="omitted"/>
+                     </incipit>
                   </msItem>
-               </msContents>
+                  <msItem xml:id="ms_i2">
+                     <locus from="89r" to="93v"/>
+                     <locus from="98r" to="98r"/>
+                     <title type="complete" ref="LIT2509Weddas"/>
+                  </msItem>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -57,6 +72,87 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                        <locus target="#iiiv"/>
+                        <desc>Chart of the Fraction of the Host</desc>
+                     </decoNote>
+                    <decoNote type="frame" xml:id="d2"> Decorative designs: <locus target="#ivr #1r"/> (haräg);
+                    multiple full stops and lines of alternating red and black dots are used as section dividers throughout</decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                          <locus target="#iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto)"/>
+                           <desc type="GuestText">
+                              <title type="complete" ref="LIT2444Temher"/>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                          <locus target="#iiir(ecto)"/>
+                           <desc type="GuestText">
+                              cols. 2–3: Excerpt from an account of how the Virgin Mary asked Jesus Christ about his name, written in a later hand
+                            </desc>
+                        </item>
+                        <item xml:id="a3">
+                          <locus target="#ivr(ecto) #ivv(erso)"/>
+                           <desc type="GuestText">
+                              <title type="incomplete" ref="LIT2260salota"/>, for the Morning Hours
+                            </desc>
+                        </item>
+                        <item xml:id="a4">
+                          <locus target="#94r #94v #95r #95v #96r #96v #97r #97v"/> <locus from="94r" to="96r"/><locus from="96v" to="97r"/>
+                           <desc type="GuestText">
+                              A quire from another book containing Variations of Hallelujah, <foreign xml:lang="gez">አንቀጸ፡ ሃሌታ፡</foreign> (94r-96r), and an excerpt from <title type="incomplete" ref="LIT3186Meeraf"/>(96v-97r)
+                            </desc>
+                        </item>
+                        <item xml:id="e1">
+                          <locus target="#ir(ecto)"/>
+                           <desc>
+                              Pen trials
+                            </desc>
+                        </item>
+                        <item xml:id="e2">
+                          <locus target="#97v #103r"/>
+                           <desc>
+                              blank
+                            </desc>
+                        </item>
+                        <item xml:id="e3">
+                          <locus target="#103v"/>
+                           <desc>
+                              Pen trials
+                            </desc>
+                        </item>
+                        <item xml:id="e4">
+                          <locus target="#103"/>
+                           <desc>
+                              the folio extends beyond the bottom edge of the codex and was, perhaps, intended as a protection for the bottom of the codex in much the same way that a spine strap protects the spine
+                            </desc>
+                        </item>
+                        <item xml:id="e5">
+                           <desc>
+                             Identified in the insurance hand list as Liturgical 23
+                           </desc>
+                        </item>
+                        <item xml:id="e6">
+                           <desc>
+                             Numbered quires: quire 2
+                           </desc>
+                        </item>
+                        <item xml:id="e7">
+                           <desc>
+                             Scribal intervention:
+                            text has been removed (<locus target="#12r #29v #33v #47r"/>)
+                          </desc>
+                          </item>
+                          <item xml:id="e8">
+                          <desc>
+                            There is marginal text throughout the codex
+                          </desc>
+                          </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +166,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +179,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-30" who="RL">Added ms items, miniature, and notes</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

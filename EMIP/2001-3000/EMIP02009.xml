@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 060</title>
+            <editor key="RL"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,16 +34,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2009/">Tweed Codex 060</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2009/" n="74">Tweed Codex 060</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2009</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Gospel of John, ወንጌል፡ ዘዮሐንስ፡; Table Prayer, “We beseech you,” ሰአልናከ፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="47r"/>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
+                    <title type="complete" ref="LIT1693John"/>
+                    <note>at <locus target="#46v #47r"/>‎</note>
+                    <explicit xml:lang="gez">መልዓ፡ ጽሕፈተ፡ ብስራቱ፡ ለዮሐንስ፡ ሐዋርያ፡ ዘጸሐፎ፡ በልሳን፡ ዮናናዊ፡ ለሰብአ፡ ኤፌሶን፡ እምድኅረ፡ ዕርገቱ፡ ለእግዚአነ፡ በሥጋ፡ ውስተ፡ ሰማይ፡ . . .</explicit>
                   </msItem>
-               </msContents>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -48,19 +59,144 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 48</measure>
+                           <measure unit="quire">Protection sheet + 6</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>115</height>
+                              <width>85</width>
+                              <depth>27</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–6 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="41" to="48"></locus>
+                              Quire 6
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">11</dim>
+                           <dim type="bottom">19</dim>
+                           <dim type="right">11</dim>
+                           <dim type="left">6</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="22 23"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d01">
+                      Decorative designs: <locus target="#1r #12r #47r"/> (multiple full stops)</decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                          <locus target="#47r #48v"/>
+                           <desc type="GuestText">
+                              Table Prayer, “We beseech you,” ሰአልናከ፡, written in purple ink.
+                              Incipit: <foreign xml:lang="gez">ሰአል፡ናከ፡ ፈጣሪ፡ ሰአልናከ፡ ገባሪ፡ ሰአልናከ፡ መሐሪ፡ ሥሉስ፡ ዘኢይፈለጥ፡ ወዘኢይትሌለይ፡ ዘሰአሉከ፡ በተአምሮ፡ ወለብዎ፡ የማንከ፡ ነቅዓ፡ ሕይወት፡ ወመድኃኒት፡<gap reason="omitted"/>
+                              </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                            <locus target="#ir(ecto)"/>
+                           <desc type="OwnershipNote">
+                            Trinitarian formula, in blue ink. Note of secondary ownership, Wärqǝnäš Gäbǝre, in black ink; see also <locus target="#8r"/>, top margin, and passim. <locus target="#22r"/> mentions probable family members</desc>
+                        </item>
+                        <item xml:id="e1">
+                          <locus target="#iv(erso) #iiv(erso)"/>
+                           <desc>
+                              blank
+                            </desc>
+                        </item>
+                        <item xml:id="e02">
+                          <locus target="#iir(ecto)"/>
+                           <desc>
+                              scrawls
+                            </desc>
+                        </item>
+                        <item xml:id="a3">
+                          <locus target="#47r #47v #48v"/>
+                           <desc>
+                              unidentified prayer to God  in blue pen, incipit: <foreign xml:lang="gez">ሰአልናከ፡ ፈጣሪ፡ ሰአልናከ፡ ከባሪ፡ ሰአልናከ፡ መሐሪ፡ ሥሉስ፡ ዘኢይትፈለጥ፡<gap reason="omitted"/>
+                              </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                             Identified in the insurance hand list as Gospel of John 2
+                           </desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                             Numbered quires: quires 2–6
+                           </desc>
+                        </item>
+                        <item xml:id="e5">
+                          <locus target="#5v #6r #7r #15v #26r"/>
+                           <desc>
+                             Scribal intervention:
+                             words of text are written interlinearly (here and etc.)
+                            </desc>
+                          </item>
+                        <item xml:id="e6">
+                          <locus target="#2v #15r #17v #18r #30r"/>
+                          <desc>
+                           text has been removed (here and etc.)
+                         </desc>
+                         </item>
+                         </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood half-bound with untooled leather, headband and tailband.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -83,8 +219,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-22" who="RL">Added ms items, varia and notes</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2019-12-06" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
