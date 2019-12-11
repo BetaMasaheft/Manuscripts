@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 116</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2065/">Tweed Codex 116</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2065/" n="78">Tweed Codex 116</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2065</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Image of Mary, መልክአ፡ ማርያም፡, Image of Jesus Christ, መልክአ፡  ኢየሱስ፡; Image of Saint George zä-Säläda Mogäs, መልክአ፡ ጊዮርጊስ፡ ዘሰሌዳ፡ ሞገስ።; Hymn to Saint George, “O who is quick for help,” ኦ፡ ፍጡነ፡ ረድኤት፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="16v"/>
+                     <title type="complete" ref="LIT2891RepCh172"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="17r" to="32v"/>
+                     <title type="complete" ref="LIT2839RepCh123"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="47r" to="48r"/>
+                     <title type="complete" ref="LIT3100RepCh380"/>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +75,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                           <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                        </seg>
+                        <desc>4.	The words Mary, Jesus Christ, and George are rubricated. Occasionally, the name Jesus Christ is written in alternating red and black letters (e.g., <locus target="#20v 321r"/>)</desc>
+                     </handNote>
+                  </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="OwnershipNote">
+                              <locus target="#16v"/> and passim: the name of the owner is <foreign xml:lang="gez">ዘወልደ፡ ማርያም፡</foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                              <locus target="#ir(ecto) #iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #48v #49r #49v"/>: blank
+                    </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                    Identified in the insurance hand list as Marian Works 8
+                    </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                    Scribal intervention: words of text are written interlinearly (<locus target="#13v"/>); and interlinearly with a symbol (┴) marking the location where the text is to be inserted (<locus target="#9r"/>, line 7; <locus target="#16v"/>, line 10; <locus target="#26r"/>, line 7; <locus target="#47v"/>, line 13); erasure markings are visible (<locus target="#2v #20v"/>); text has been removed (<locus target="#8v #16v #26r"/>)
+                    </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +136,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-04" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 099</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cane Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,16 +33,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2048/">Tweed Codex 099</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2048/" n="122">Tweed Codex 099</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2048</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Acts of Gäbrä Mänfäs Qəddus, ገድለ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡; Miracles of Gäbrä Mänfäs Qəddus, ተአምረ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡</summary>
+                  <textLang mainLang="gez">Gǝʿǝz</textLang>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="56r"/>
+                     <title type="complete" ref="LIT1451GadlaG"/>
+                     <msItem xml:id="ms_i2.1">
+                        <locus from="1r"/>
+                        <title>Monday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.2">
+                        <locus from="6r"/>
+                        <locus from="12v"/>
+                        <title>Tuesday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.3">
+                        <locus from="22v"/>
+                        <title>Wednesday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.4">
+                        <locus from="32r"/>
+                        <title>Thursday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.5">
+                        <locus from="37r"/>
+                        <title>Friday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.6">
+                        <locus from="41r"/>
+                        <title>Saturday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.7">
+                        <locus from="46v"/>
+                        <title>Sunday</title>
+                     </msItem>
                   </msItem>
-               </msContents>
+                  <msItem xml:id="ms_i2">
+                     <locus from="56r" to="76v"/>
+                     <title type="complete" ref="LIT3977Taammer"/>
+                  </msItem>
+              </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -57,6 +98,74 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ገብረ፡ መንፈስ፡ ቅዱስ፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                        <locus target="#ir"/>
+                        <desc>crude drawing of man with spear fighting a dragon and other figures, drawn in pencil and ink</desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d2">
+                        <locus target="#iir"/>
+                        <desc> 
+                           <ref type="authFile" corresp="AT1035HolyMan"/> crude drawing of <persName ref="PRS4306GabraMa"/>, a crow and a leopard, in black and red ink</desc>
+                     </decoNote>
+                    <decoNote type="frame" xml:id="d3"> Decorative designs: <locus target="#55v #76v"/> (multiple full stops)</decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="Asmat">
+                              <locus target="#iv #iir"/> Asmat prayer against hail, Ṣälotä bäräd, <foreign xml:lang="gez">ጸሎተ፡ በረድ፡</foreign>.  Incipit: <foreign xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ <gap reason="omitted"/> ጸሎተ፡ በረድ፡ ምግማኤል፡ ፍልፍልናኤ፡ ቱማን፡ ቱማን፡ ቱማን፡ ቁናኤል፡ ዝንቱ፡ አስማት፡ ዘይመይጦ፡ ለመብረቅ፡ ወያጸንዖ፡ ለነጐድጓድ፡ <gap reason="omitted"/>
+                              </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                           <desc type="Asmat">
+                              <locus target="#iiv"/>, cols. 1 and 2: Asmat Prayer against Wild Animals, <foreign xml:lang="gez">ጸሎት፡ በእንተ፡ መስተሃድር፡</foreign>. Incipit: <foreign xml:lang="gez">በስመ፡ አብ፡ በል፡ ጢን፡ በቀጢን፡ ሰለባ፡ ኢትግብ፡ ወኢትቅረብ፡ ለንዋየ፡ ገብርከ፡ ዢብ፡ እግርማ፡ እንበለ፡ ጽጋማማ፡ ነምር፡ ፍራማ፡ ነምርእሞራ፡ ተንዛላይ፡ <gap reason="omitted"/>
+                              </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a3">
+                           <desc type="GuestText">
+                              <locus target="#76v #77r #77v #78r #78v"/> 
+                              <title type="complete" ref="LIT2915RepCh196"/>, written in a later hand. Incipit: <foreign xml:lang="gez">ሰላም: ለጽንሰትከ: መሰረተ: ነገር: ወውጣኔ: </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                              <locus target="#ir"/> pen trials</desc>
+                        </item>
+                        <item xml:id="a4">
+                           <desc type="DonationNote">
+                              <locus target="#iiv"/>, col. 2: Record of gift of this book to the church, written in red ink. “This book [belongs to] Ǝmät Tadäsäč and she gave it for commemoration of Saint Gäbrä Mänfas Qəddus and to be an intercession for her. She bought it for 50 birr and gave it in 1969 EC. Her baptismal name is Ǝḫǝtä Maryam.”</desc>
+                        </item>
+                        <item xml:id="a5">
+                           <desc type="OwnershipNote">
+                              <locus target="#56r"/> and passim: name of secondary owner, Wäldä Giyorgis (written over the top of the original name which is erased). The names Akazǝyas and Wäldä Täklä Haymanot are inserted secondarily</desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                              <locus target="#79r #79v"/> pen trials and scrawls, in purple ink, blue ink, and black ink</desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>Identified in the insurance hand list as Case A6</desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>Numbered quires: quires 2–7</desc>
+                        </item>
+                        <item xml:id="e5">
+                           <desc>
+                    text has been removed (<locus target="#29v #56r #68r"/>)</desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -70,7 +179,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +192,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-31" who="RL">Added ms items, miniatures, varia and notes</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

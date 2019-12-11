@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 008</title>
+            <editor key="RL"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +34,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/1957/">Tweed Codex 008</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/1957/" n="86">Tweed Codex 008</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1957</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of Our Lady Mary at Golgotha, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡; One Miracle of the Virgin Mary:  ተአምረ፡ ማርያም፡How the Virgin Mary Appeared to John, the Monk.</summary>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="50v" facs="005"/>
+                     <title type="complete" ref="LIT2246salotz"/>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="51v" to="52r" facs="056"/>
+                     <title>One Miracle of the Virgin Mary: ተአምረ፡ ማርያም። How the Virgin Mary Appeared to John, the monk</title>
                   </msItem>
                </msContents>
                <physDesc>
@@ -48,19 +61,128 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">iv + 58</measure>
+                           <measure unit="quire">Protection quire + 6</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>85</height>
+                              <width>55</width>
+                              <depth>24</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection quire and quires 1–5 balanced; quire 6 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">4</dim>
+                              <locus from="i" to="iv" facs="001"/>
+                              Protection Quire
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="005"/>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="015"/>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30" facs="025"/>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40" facs="035"/>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50" facs="045"/>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="51" to="58" facs="055"/>
+                              <note>Folio stubs are visible between <locus target="#52 #53" facs="057"/> and between <locus target="#55 #56" facs="060"/>.</note>
+                              Quire 6:
+                              3, stub after 5
+                              6, stub after 2
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">14</dim>
+                           <dim type="bottom">22</dim>
+                           <dim type="right">8</dim>
+                           <dim type="left">4</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="11"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d01"> Decorative designs: <locus target="#52r" facs="056"/>(multiple full stops)</decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                          <locus target="#ir(ecto) #iv(erso)" facs="001 002"/>
+                           <desc type="OwnershipNote">Note of later ownership</desc>
+                        </item>
+                        <item xml:id="e1">
+                          <locus target="#iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto) #52v #53r #53v #54r #54v #55r #55v #56r #56v #57r #57v #58r #58v" facs="002 003 003 004 057 057 058 058 059 059 060 060 061 061 062 062 063"/>
+                           <desc>blank</desc>
+                        </item>
+                        <item xml:id="a2">
+                          <locus target="#vv(erso)" facs="005"/>
+                           <desc>Draft of a letter, in a crude hand</desc>
+                        </item>
+                        <item xml:id="a3">
+                          <locus target="#50v" facs="055"/>
+                           <desc>and passim, name of the scribe is mentioned, Fǝre Sänǝbät</desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>Identified in the insurance hand list as Religio-Magical 8</desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>Numbered quires: quires 1–5</desc>
+                        </item>
+                        <item xml:id="e4">
+                          <locus target="#7v #14r #19v #26v" facs="012 018 024 031"/>
+                           <desc>words of text are written interlinearly</desc>
+                           </item>
+                        <item xml:id="e5">
+                             <locus target="#25r" facs="029"/>
+                             <desc>text has been removed</desc>
+                        </item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -83,8 +205,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-17" who="RL">Added ms items, and notes</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2019-11-18" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2019-11-28" who="RL">Added image links</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

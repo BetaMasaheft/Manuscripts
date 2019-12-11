@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 050</title>
+            <editor key="ABe"></editor>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +34,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/1999/">Tweed Codex 050</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/1999/" n="189">Tweed Codex 050</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1999</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡ with Psalter of the Virgin; Praises of Mary, interwoven with Image of the Praises of Mary, መልክአ፡ ውዳሴ፡; Gate of Light, interwoven with Image of the Gate of Light, መልክዐ፡ አንቀጸ፡ ብርሃን፡; Asmat Prayer</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="125v"/>
+                     <title type="complete" ref="LIT2701Dawit"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -48,19 +57,253 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 129</measure>
+                           <measure unit="quire">Protection sheet + 17</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>280</height>
+                              <width>190</width>
+                              <depth>68</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1, 3, 5–12, 14, and 17 balanced; protection sheet and quires  2, 4, 13, and 15–16 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"></locus>
+                              <note>A folio stub is visible folded back from <locus target="#i"/>.</note>
+                              Protection Sheet:
+                              1, stub before 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">7</dim>
+                              <locus from="9" to="15"></locus>
+                              <note>A folio stub is visible between <locus target="#13 #14"/>.</note>
+                              Quire 2:
+                              3, stub after 5
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">6</dim>
+                              <locus from="16" to="21"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">7</dim>
+                              <locus from="22" to="28"></locus>
+                              <note>A folio stub is visible between <locus target="#26 #27"/>.</note>
+                              Quire 4:
+                              3, stub after 5
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="29" to="36"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="37" to="44"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="45" to="52"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="53" to="60"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="61" to="68"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="69" to="76"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">8</dim>
+                              <locus from="77" to="84"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">8</dim>
+                              <locus from="85" to="92"></locus>
+                              Quire 12
+                            </item>
+                            <item xml:id="q14" n="13">
+                              <dim unit="leaf">7</dim>
+                              <locus from="93" to="99"></locus>
+                              <note>A folio stub is visible between <locus target="#97 #98"/>.</note>
+                              Quire 13:
+                              3, stub after 5
+                            </item>
+                            <item xml:id="q15" n="14">
+                              <dim unit="leaf">8</dim>
+                              <locus from="100" to="107"></locus>
+                              Quire 14
+                            </item>
+                            <item xml:id="q16" n="15">
+                              <dim unit="leaf">9</dim>
+                              <locus from="108" to="116"></locus>
+                              <note>A folio stub is visible between <locus target="#113 #114"/>.</note>
+                              Quire 15:
+                              4, stub after 6
+                            </item>
+                            <item xml:id="q17" n="16">
+                              <dim unit="leaf">9</dim>
+                              <locus from="117" to="125"></locus>
+                              <note>A folio stub is visible between <locus target="#122 #123"/>.</note>
+                              Quire 16:
+                              4, stub after 6
+                            </item>
+                            <item xml:id="q18" n="17">
+                              <dim unit="leaf">2</dim>
+                              <locus from="126" to="127"></locus>
+                              Quire 17
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">19</dim>
+                           <dim type="bottom">41</dim>
+                           <dim type="right">23</dim>
+                           <dim type="left">15</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="27">
+                         <locus from="1r" to="112r"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="27">
+                         <locus from="112v" to="125v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                        <desc>The word God is not rubricated in the first three works; the word Mary is rubricated in the final two works</desc>
+                        <desc>Columetric layout of text: <locus target="#90v #91r"/> (Ps. 129); <locus target="#97v"/> (Ps. 150); <locus target="#104v"/> (ninth Biblical Canticle); <locus target="#104v #105r"/> (tenth Biblical Canticle).</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                        <locus target="#iv(erso)"/>
+                        <desc> crude drawing of a figure</desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d2">
+                        <locus target="#76r"/>
+                        <desc> crude drawing of a talismanic symbol</desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d3">
+                        <locus target="#120v"/>
+                        <desc> top: picture of a priest with prayer stick and sistrum with 
+                       caption <q>“Zion;”</q> Underneath him is a person carrying the ark surrounded by two figures with arms upstretched 
+                       and holding something over the ark. To the left is an image of 
+                       <ref type="authFile" corresp="AT1066DavidHarp"/>, with the caption, <q>“As David the prophet 
+                          prayed, I will pray to you, God, my creator”</q> (an excerpt from God Reigns). Bottom center is a miniature of 
+                       <ref type="authFile" corresp="AT1031VirginAndChild"/> with the two archangels on either side.  To the lower left is an <ref type="authFile" corresp="AT1012Equestrian"/> , presumably Saint George</desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d4">
+                        <locus target="#127v"/>
+                        <desc> crude drawing of a figure</desc>
+                     </decoNote>
+
+                    <decoNote type="frame" xml:id="d5">
+                    	Decorative designs:
+                      <locus target="#6v #120v"/> (haräg);
+                      <locus target="#7r #20v #48v"/> (line of black dots);
+                      <locus target="#13v #20v #29v #36r #67r #86r #93v #98r #118r #121r #122r #125v"/> (multiple full stops between lines of alternating red and black dots).
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="Asmat">
+                              <locus target="#125v"/>: Asmat prayer for help in writing,  <foreign xml:lang="gez">ጸሎት፡ በእንተ፡ ምሥጢረ፡ ድርሰት፡</foreign> , with a drawing which relates to the prayer.
+                    Incipit: <foreign xml:lang="gez">መሐልየ፡ መልያል፡ እብኖዲ፡ አብኖድያል፡ ሐራ፡ ሐራፑናዊ፡ <gap reason="omitted"/> ይቀጽብ፡ በኅቡዕ፡ ተኃባዕ፡ ውስተ፡ ልብየ፡ ማስያስ፡ ተፈታሕ፡ <gap reason="omitted"/> ከማሁ፡ አርእየኒ፡ ምሥጢረ፡ ድርሰት፡ ለገብርከ፡ <gap reason="omitted"/>
+                              </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                           <desc type="GuestText">
+                              <locus target="#126r"/>, lines 3ff.: an extensive version of the concluding prayer for the <title type="complete" ref="LIT2701Dawit"/>
+                           </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                              <locus target="#ir(ecto)"/>": pentrials and scrawls
+                    </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                              <locus target="#126v #127r"/>: blank
+                    </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                    Identified in the insurance hand list as Case 67/12
+                    </desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                    Navigation system:
+                    red string is sewn into the fore edge of <locus target="#20 #29 #36 #41 #48 #56 #67 #86 #89"/>
+                           </desc>
+                        </item>
+                        <item xml:id="e5">
+                           <desc>
+                    Numbered quires: quires 2–5
+                    </desc>
+                        </item>
+                        <item xml:id="e6">
+                           <desc>
+                    Psalm 118 contains the spiritual meanings of the Hebrew letters
+                    </desc>
+                        </item>
+                        <item xml:id="e7">
+                           <desc>
+                    Scribal intervention:
+                    words of text are written interlinearly (<locus target="#2v #4v #5r #7v #10r"/>, etc.);
+                    and lines of text are written interlinearly (<locus target="#2r #4r #26r #28v #34r"/>, etc.);
+                    and in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#12v"/>, line 18; <locus target="#14v"/>, line 9; <locus target="#21v"/>, line 1), and in another case where the symbol (┴) is used (<locus target="#91r"/>, line 1; <locus target="#102v"/>, line 2);
+                    text has been removed (<locus target="#1r #32r #76r #82v #91v"/>, etc.).
+                    </desc>
+                        </item>
+
+
+                  </list>
+                </additions>
+                <bindingDesc>
+                  <binding xml:id="binding" contemporary="true">
+                    <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered with tooled leather and fabric is visible between the turn-ins and wrapped with a double-pocket fabric cover, mirror niche is visible in the front cover.</decoNote>
+                    <decoNote xml:id="b2" type="bindingMaterial">
+                      <material key="parchment"></material>
+                      <material key="wood"></material>
+                      <material key="leather"></material>
+                      <material key="textile"></material>
+                      <material key="other">glass</material>
+                    </decoNote>
+                  </binding>
+                </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1925">early-twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1950">Early-twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -85,6 +328,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-10-28" who="ABe">Added items</change>
+
+                                    <change when="2019-11-11" who="JS">Added quire map, margin dim, columns/lines, binding desc, dating info.</change>
+
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

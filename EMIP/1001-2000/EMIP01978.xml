@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 029</title>
+            <editor key="JS"/>
+            <editor key="ABe"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +35,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/1978/">Tweed Codex 029</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/1978/" n="196">Tweed Codex 029</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1978</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት።, rebound in the late-twentieth century</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="148v"/>
+                     <title type="complete" ref="LIT2701Dawit" facs="005"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -48,19 +58,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">iv + 152</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>178</height>
+                              <width>175</width>
+                              <depth>87</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Codex has been extensively rebound, and the original construction of the manuscript is no longer discernible.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                           <dimensions type="margin" unit="mm">
+                              <dim type="top">18</dim>
+                              <dim type="bottom">29</dim>
+                              <dim type="right">23</dim>
+                              <dim type="left">17</dim>
+                           </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="20">
+                           <locus from="1r" to="137v" facs="005"/>
+                       </layout>
+                       <layout columns="2" writtenLines="20">
+                           <locus from="138r" to="148v" facs="142"/>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                           <desc>The word God is not rubricated in the first three works; the word Mary is rubricated in the final two works</desc>
+                        </seg>
+                        <desc>There is no columetric layout of text</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#8r #16r #24r #34r #42r #48v #58v #70r #79v #85v #97r #106v #114v #120r #131v #137v #138v #139v #141r #142v #144r #144v #145 #148v" facs="012 020 028 038 046 053 063 074 084 090 101 111 119 124 136 142 143 144 145 147 148 149 018 153"/> (line of alternating red and black dots)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                          <locus target="#ir(ecto) #iv(erso) #iir(recto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto) #ivv(erso) #149r #149v #150r #150v #151r #151v #152r #152v" facs="001 002 002 003 003 004 004 005 153 154 154 155 155 156 156 019"/>
+                           <desc>blank</desc>
+                        </item>
+                        <item xml:id="e2">
+                          <locus target="#65r" facs="069"/>
+                           <desc>mid-point of the Psalter is marked with a symbol of one vertical line and three horizontal lines with circles at both ends of the horizontal lines</desc>
+                        </item>
+                        <item xml:id="e3">
+                          <locus target="#145v" facs="150"/>
+                           <desc type="OwnershipNote">upper margin: note of secondary ownership</desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>Identified in the insurance hand list as Psalter 13</desc>
+                        </item>
+                        <item xml:id="e5">
+                           <desc>Rebound and trimmed in the late-twentieth century; stab stitch holes in the upper gutter are visible from an earlier repair</desc>
+                        </item>
+                        <item xml:id="e6">
+                           <desc>Psalm 118 does not contain the spiritual meanings of the Hebrew letters</desc>
+                        </item>
+                        <item xml:id="e7">
+                          <locus target="#1v" facs="006"/>
+                           <desc>words of text are written interlinearly</desc>
+                           </item>
+                        <item xml:id="e8">
+                          <locus target="#53v" facs="058"/>
+                          <desc>erasure markings are visible</desc>
+                          </item>
+                        <item xml:id="e9">
+                          <locus target="#56r #58r" facs="060 062"/>)
+                          <desc>text has been removed</desc>
+                        </item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                     <binding xml:id="binding" contemporary="false">
+                        <decoNote xml:id="b1">Parchment, 178 x 175 x 87 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered with tooled leather, headband and tailband. Rebound in the late-twentieth century.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="parchment"/>
+                           <material key="wood"/>
+                           <material key="leather"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1725">early-eighteenth century</origDate>
+                     <origDate notBefore="1700" notAfter="1750">Early-eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -83,8 +175,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">CreatedXML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-25" who="JS">Added margin dim, columns/lines, binding desc, dating info.</change>
+         <change when="2019-10-14" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2019-12-10" who="RL">Added image links</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

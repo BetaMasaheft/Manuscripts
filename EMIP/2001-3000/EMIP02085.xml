@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 136</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2085/">Tweed Codex 136</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2085/" n="70">Tweed Codex 136</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2085</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of Mary at Golgotha, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡; Introduction to the Miracles of Mary, መቅድመ: ተአምረ: ማርያም: ዘሙዓልቃ:; Prayer of the Covenant, ጸሎተ፡ ኪዳን፡; Litany, ሊጦን፡, arranged for the days of the week</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="26r "/>
+                     <title type="complete" ref="LIT2246salotz"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="26r" to="32v"/>
+                     <title type="complete" ref="LIT2384Taamme"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                     <note>Introduction to the Miracles of Mary. Completed on <locus target="#ir(ecto)"/>"</note>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="33r" to="41v"/>
+                     <title type="complete" ref="LIT2260salota"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="41v" to="48v"/>
+                     <title>Litany, Liṭon, <foreign xml:lang="gez">ሊጦን፡</foreign>
+                     </title>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +82,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                        <desc>The word Mary is rubricated</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                        <locus target="#14r"/>
+                        <desc>crude drawing of a face</desc>
+                     </decoNote>
+                    <decoNote type="frame" xml:id="d2">
+                    Decorative designs:
+                    <locus target="#1r"/> (haräg);
+                    <locus target="#48v"/> (line of black dots)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="GuestText">
+                              <locus target="#ir(ecto) #iv(erso) #iir(ecto)"/>", first column: Excerpt from the introduction to the <title type="complete" ref="LIT2384Taamme"/>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                           <desc type="Asmat">
+                              <locus target="#iir(ecto)"/>": Asmat prayer
+                    </desc>
+                        </item>
+                        <item xml:id="a3">
+                           <desc>
+                              <locus target="#iiv(erso)"/>": In praise of Märigeta Arage (<foreign xml:lang="gez">መሪጌታ፡ አራጌ፡</foreign>)
+                    </desc>
+                        </item>
+                        <item xml:id="a4">
+                           <desc>
+                              <locus target="#48v"/>, bottom, <locus target="#49v #50v"/>: List of names, in crude hand, in blue ink
+                    </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                              <locus target="#49r"/>, scrawl
+                    </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                    Identified in the insurance hand list as Case 67/15
+                    </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                    Scribal intervention: words of text are written interlinearly (<locus target="#6r #31r"/>); erasure markings are visible (<locus target="#35v #36r #41v #43v"/>)
+                    </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +168,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-06" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 131</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2080/">Tweed Codex 131</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2080/" n="84">Tweed Codex 131</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2080</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of the Covenant, ጸሎተ፡ ኪዳን፡; Mystagogia, ትምህርተ፡ ኅቡዓት፡; Absolution of the Son, ፍትሐት፡ ዘወልድ፡; For the sake of peaceful holy things, በእንተ፡ ቅድሳት፡ ሰላማዊት፡; Anaphora of Our Lord, ቅዳሴ፡ እግዚእ፡; God of the Luminaries, እግዚአብሔር፡ ዘብርሃናት፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="14v"/>
+                     <title type="complete" ref="LIT2260salota"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="14v" to="25v"/>
+                     <title type="complete" ref="LIT2444Temher"/>
+                     <incipit xml:lang="gez">በእንተ፡ ትምሕርተ፡ ኅቡዓት፡ ቅድመ፡ ዘትትነገር፡ እምጵርስፎራ፡...</incipit>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="25v" to="30r"/>
+                     <title type="complete" ref="LIT1398Fethat"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="30r" to="35v"/>
+                     <title type="complete" ref="LIT1190Baenta"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i5">
+                     <locus from="35v" to="50r"/>
+                     <title type="complete" ref="LIT1100Anapho"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i6">
+                     <locus from="50r" to="57r"/>
+                     <title type="complete" ref="LIT3083RepCh363"/>
+                     <incipit xml:lang="gez">እግዚአብሔር፡ ዘብርሃናት፡ እግዚአብሔር፡ ዘሥልጣናት፡ እግዚአብሔር፡ ዘአርእስተ፡ መላእክት፡...</incipit>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +92,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                     <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#25v #37v #48v #50r #57r"/> (multiple full stops)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="GuestText">
+                              <locus target="#iv(erso)"/>", upper: excerpt from <title type="complete" ref="LIT2930RepCh211"/>, for protection against wild animals
+                    </desc>
+                        </item>
+                        <item xml:id="a2">
+                           <desc>
+                              <locus target="#29v #31r #31v"/>: mention Abba Qerelos (1929–50) and Abba Petros
+                    </desc>
+                        </item>
+                        <item xml:id="a3">
+                           <desc>
+                              <locus target="#33r"/>: mentions Emperor Ḫaylä Śǝllase (1930-1974)
+                    </desc>
+                        </item>
+                        <item xml:id="a4">
+                           <desc type="OwnershipNote">
+                              <locus target="#57r"/>: note of ownership for <foreign xml:lang="gez">ገብረ፡ ሕይወት፡</foreign>. The name of the scribe is <foreign xml:lang="gez">ተክለ፡ ሥለሴ፡</foreign>, and gives the date of 1925 E.C
+                    </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                              <locus target="#ir(ecto) #ii v(erso) #57v #58r #58v #59r #59v #60r #60v"/>: blank
+                    </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                    Identified in the insurance hand list as Case 67/7
+                    </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                    Navigation system: purple yarn is sewn into the fore edge of <locus target="#1 #14 #25 #29 #36 #50"/>
+                           </desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                    Scribal intervention: words of text are written interlinearly (<locus target="#9r #12r #12v #14v #22v"/>, etc.); and in the upper margin with a symbol (┴) marking the location where the text is to be inserted (<locus target="#32r"/>, line 1); erasure markings are visible (<locus target="#11v #14r #16r #16v #22r"/>, etc.); text has been removed (<locus target="#44r"/>)
+                    </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +170,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-05" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
