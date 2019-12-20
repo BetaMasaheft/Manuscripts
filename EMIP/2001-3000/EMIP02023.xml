@@ -13,6 +13,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t1">Tweed Codex 074</title>
             <editor key="RL"/>
             <editor key="ABe"></editor>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -111,14 +112,93 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 78</measure>
+                           <measure unit="quire">Protection sheet + 11</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>183</height>
+                              <width>140</width>
+                              <depth>45</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–11 balanced; protection sheet unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i"/>
+                              <note>A folio stub is visible before <locus target="#i"/>.</note>
+                              Protection Sheet:
+                              1, stub before 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="41" to="48"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="49" to="56"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="57" to="64"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="65" to="72"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">4</dim>
+                              <locus from="73" to="76"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">2</dim>
+                              <locus from="77" to="78"></locus>
+                              Quire 11
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top"></dim>
+                           <dim type="bottom"></dim>
+                           <dim type="right"></dim>
+                           <dim type="left"></dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="14"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
@@ -213,10 +293,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, originally four Coptic chain stitches attached with bridle attachments to rough hewn boards covered with tooled leather, headband and tailband, repaired with five stitches.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>1810-52 (f. 2r mentions Coptic Pope Peter, presumably VII, 1810-52, as well as an Ethiopian metropolitan Yoḥannəs who remains unknown)</origDate>
+                     <origDate notBefore="1810" notAfter="1852"><locus target="#2r"/> mentions Coptic Pope Peter, presumably VII, 1810-52, as well as an Ethiopian metropolitan Yoḥannəs who remains unknown.</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -244,6 +334,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
          <change when="2019-12-16" who="ABe">Added facs</change>
          <change when="2019-12-19" who="RL">Minor edits to contents and additions</change>
+         <change when="2019-12-20" who="JS">Added quire map, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
