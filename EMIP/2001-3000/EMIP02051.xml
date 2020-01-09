@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 102</title>
             <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -63,14 +64,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 37</measure>
+                           <measure unit="quire">5</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>103</height>
+                              <width>72</width>
+                              <depth>27</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–5 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="i" to="7"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="8" to="17"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">6</dim>
+                              <locus from="18" to="23"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="24" to="31"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">6</dim>
+                              <locus from="32" to="37"></locus>
+                              Quire 5
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">10</dim>
+                           <dim type="bottom">16</dim>
+                           <dim type="right">7</dim>
+                           <dim type="left">5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="11 12"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
@@ -162,10 +205,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -192,6 +244,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2019-10-31" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-08" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
