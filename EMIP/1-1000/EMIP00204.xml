@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 42</title>
             <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,9 +39,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Image of Kiros, መልክዐ፡ ኪሮስ፡; Acts of Gäbrä Mänfäs Qəddus, ገድለ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡, Acts of Abba Kiros, ገድለ፡ ኪሮስ።</summary>
-                  <msItem xml:id="ms_i1">
                      <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="1v"/><title type="incomplete" ref="LIT2860RepCh141"/><note>fragment</note></msItem>
+                  <msItem xml:id="ms_i2"><locus from="2r" to="58r"/><title>Acts of Gäbrä Mänfäs Qəddus, Gädlä Gäbrä Mänfäs Qəddus, ገድለ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ </title>
+                    <msItem xml:id="ms_i2.1"><locus from="2r" to="41r"/><title type="incomplete" ref="LIT1451GadlaG"/><note>incomplete at the beginning</note></msItem>
+                    <msItem xml:id="ms_i2.2"><locus from="41r" to="58r"/><title type="complete" ref="LIT3977Taammer"/>
+                    <note>Thirteen miracles</note>
+                    <incipit xml:lang="gez">
+                      በስመ: አብ: ወወልድ:...ንጽሕፍ: ዜና: ገድሉ: ተአምሪሁ: ነፍሱ: ወሥጋሁ:...
+                    </incipit>
                   </msItem>
+                  </msItem>
+                  <msItem xml:id="ms_i3"><locus from="59r" to="85v"/><title type="complete" ref="LIT5134KirosGeneral"/>
+                  <incipit xml:lang="gez">
+                    በስመ: አብ: ወወልድ:... ንቀድም: በረድኤተ: እግዚአብሔር: ገድል: ዘቅዱስ: ወብፁዕ: አባ: ኪሮስ: ጸሎቱ: ወበረከቱ: የሀሉ: ምስለ: ገብሩ: [lacuna] ለዓለመ: ዓለም: አሜን።
+                  </incipit>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -143,6 +157,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ገብረ፡ መንፈስ፡ ቅዱስ፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d01">
+                      Decorative designs:
+                      <locus target="#41r #44r #53v #54v #58r"/> (multiple full stops); 
+                      <locus target="#58r #85v"/> (lines of alternating red and black dots)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e01">
+                      <desc>
+                      <locus target="#ir(ecto)"/> Alphabet, first four letters
+                      </desc>
+                      </item>
+                      <item xml:id="e02">
+                      <desc>
+                      <locus target="#iv(erso)"/> scrawls
+                      </desc>
+                      </item>
+                      <item xml:id="a01">
+                      <desc type="ScribalSignature">
+                      <locus target="#58r"/> scribe, Gäbrä Mänfäs Qəddus
+                      </desc>
+                      </item>
+                      <item xml:id="a02">
+                      <desc type="OwnershipNote">
+                      <locus target="#58r"/> and passim: “This book belongs to Mika’el, his brother is Kokäb.” A second owner is listed: Amdä Mäsqäl
+                      </desc>
+                      </item>
+                      <item xml:id="e03">
+                      <desc>
+                      <locus target="#58v"/> blank
+                      </desc>
+                      </item>
+                      <item xml:id="e04">
+                      <desc>
+                      words of text are written interlinearly (<locus target="#26r #85v"/>);
+                      text has been removed (e.g., <locus target="#44r #53v #85r"/>)
+                      </desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                         <decoNote xml:id="b1">Parchment, 194 x 175 x 53 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
@@ -178,9 +242,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-08-12" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
+         <change when="2019-10-02" who="RL">Added items and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

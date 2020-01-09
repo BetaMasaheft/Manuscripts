@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 119</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2068/">Tweed Codex 119</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2068/" n="121">Tweed Codex 119</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2068</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Image of Mary, መልክአ፡ ማርያም፡; Image of Jesus Christ, መልክአ፡  ኢየሱስ፡; Image of the Icon, መልክአ፡ ሥዕል፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="31v"/>
+                     <title type="complete" ref="LIT2891RepCh172"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="32r" to="60v"/>
+                     <title type="complete" ref="LIT2839RepCh123"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="36r" to="53r"/>
+                     <title type="complete" ref="LIT2866RepCh147"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="60v" to="60v"/>
+                     <title type="complete" ref="LIT2765RepCh49"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i5">
+                     <locus from="61r" to="74v"/>
+                     <title type="complete" ref="LIT3088RepCh368"/>
+                     <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +85,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                           <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                        </seg>
+                        <desc>The words Mary and Jesus Christ are rubricated</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#1r #61r"/> (haräg);
+                  <locus target="#11v #60v #74v"/> (multiple full stops)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                          <locus target="#1v–iv v(erso) and 74v–76r"/>
+                           <desc type="GuestText">
+                              <title type="incomplete" ref="LIT2915RepCh196"/>
+                              Incipit: <foreign xml:lang="gez">ሰላም: ለጽንሰትከ: መሠረተ: ነገር: ወውጣኔ:</foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                          <locus target="#ir(ecto)"/>
+                           <desc type="GuestText">
+                            Attempt of an untrained scribe: excerpt from Angels Praise Her, written in a crude hand in pencil
+                          </desc>
+                        </item>
+                        <item xml:id="a3">
+                          <locus target="#31v #passim"/>
+                           <desc type="OwnershipNote">
+                              mentions the owner, Wäläta Maryam
+                            </desc>
+                        </item>
+                        <item xml:id="a4">
+                          <locus target="#74v"/>
+                           <desc>
+                              mentions the name of the scribe: Habtä Maryam
+                            </desc>
+                        </item>
+                        <item xml:id="e1">
+                           <desc>
+                            Several features of this codex indicate that it was produced in or around the government scriptorium community: the distinctive harags, the tooled leather (particularly the lines and bird’s eye stamps on the edges of the covers), the cleanly-cut text block, the well-trained hand, etc
+                            </desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>
+                            The inside front and back covers have three interesting characteristics: 1) the turn ins of the leather cover are finely fitted together and trimmed to form an oval-shaped area in the center, through which; 2) multi-colored paper shows (analogous to the colorful fabric that usually adorns this location in de luxe codices); and 3) the paper has areas torn off in ways that indicate there were possibly once mirrors pasted or glued onto the paper
+                            </desc>
+                        </item>
+                        <item xml:id="e3">
+                          <locus target="#76v"/>
+                           <desc>
+                              scrawls in blue ink and in pencil
+                            </desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                            Identified in the insurance hand list as Case B1
+                            </desc>
+                        </item>
+                        <item xml:id="e5">
+                           <desc>
+                            Numbered quires: quires 3–8
+                            </desc>
+                        </item>
+                        <item xml:id="e6">
+                           <desc>
+                            Scribal intervention:
+                            words of text are written interlinearly (<locus target="#9r #10v #14v #21v #24v"/>, etc.)
+                          </desc>
+                          </item>
+                          <item xml:id="e7">
+                          <locus target="#72r"/>
+                          <desc>
+                            (line 5) and in the upper margin with a symbol (┴) marking the location where the text is to be inserted
+                          </desc>
+                          </item>
+                          <item xml:id="e8">
+                          <locus target="#57v #65 #66r #72r"/>
+                          <desc>
+                            erasure markings are visible
+                          </desc>
+                          </item>
+                          <item xml:id="e9">
+                          <locus target="#6v #9r #11v #21r #23v"/>
+                          <desc>
+                            text has been removed (here and etc.)
+                          </desc>
+                          </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +208,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-04" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

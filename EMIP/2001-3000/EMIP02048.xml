@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 099</title>
+            <editor key="RL"/>
+            <editor key="ABe"></editor>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+                                        by Steve Delamarter</p>
+                                        <p>Dedicated to Cane Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,16 +35,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2048/">Tweed Codex 099</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2048/" n="122">Tweed Codex 099</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2048</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Acts of Gäbrä Mänfäs Qəddus, ገድለ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡; Miracles of Gäbrä Mänfäs Qəddus, ተአምረ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡</summary>
+                  <textLang mainLang="gez">Gǝʿǝz</textLang>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="56r" facs="003"/>
+                     <title type="complete" ref="LIT1451GadlaG"/>
+                     <msItem xml:id="ms_i2.1">
+                        <locus from="1r" facs="003"/>
+                        <title>Monday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.2">
+                        <locus from="6r" facs="008"/>
+                        <locus from="12v"/>
+                        <title>Tuesday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.3">
+                        <locus from="22v" facs="025"/>
+                        <title>Wednesday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.4">
+                        <locus from="32r" facs="034"/>
+                        <title>Thursday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.5">
+                        <locus from="37r" facs="039"/>
+                        <title>Friday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.6">
+                        <locus from="41r" facs="043"/>
+                        <title>Saturday</title>
+                     </msItem>
+                     <msItem xml:id="ms_i2.7">
+                        <locus from="46v" facs="049"/>
+                        <title>Sunday</title>
+                     </msItem>
                   </msItem>
-               </msContents>
+                  <msItem xml:id="ms_i2">
+                     <locus from="56r" to="76v" facs="058"/>
+                     <title type="complete" ref="LIT3977Taammer"/>
+                  </msItem>
+              </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -48,19 +91,180 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 79</measure>
+                           <measure unit="quire">Protection sheet + 8</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>176</height>
+                              <width>159</width>
+                              <depth>49</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–7 balanced; quire 8 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="61" to="70"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">9</dim>
+                              <locus from="71" to="79"></locus>
+                              <note>A folio stub is visible between <locus target="#78 #79"/>.</note>
+                              Quire 8:
+                              2, stub after 8
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">29</dim>
+                           <dim type="bottom">42</dim>
+                           <dim type="right">30</dim>
+                           <dim type="left">14</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="18"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ገብረ፡ መንፈስ፡ ቅዱስ፡</foreign>
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                        <locus target="#ir(ecto)" facs="001"/>
+                        <desc>crude drawing of man with spear fighting a dragon and other figures, drawn in pencil and ink</desc>
+                     </decoNote>
+                    <decoNote type="miniature" xml:id="d2">
+                        <locus target="#iir(ecto)" facs="002"/>
+                        <desc>
+                           <ref type="authFile" corresp="AT1035HolyMan"/> crude drawing of <persName ref="PRS4306GabraMa"/>, a crow and a leopard, in black and red ink</desc>
+                     </decoNote>
+                    <decoNote type="frame" xml:id="d3">
+                      Decorative designs:
+                      <locus target="#55v #76v" facs="058 079"/> (multiple full stops)
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                          <locus target="#iv(erso) #iir(ecto)" facs="002"/>
+                           <desc type="Asmat">
+                              Asmat prayer against hail, Ṣälotä bäräd, <foreign xml:lang="gez">ጸሎተ፡ በረድ፡</foreign>.  Incipit: <foreign xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ <gap reason="omitted"/> ጸሎተ፡ በረድ፡ ምግማኤል፡ ፍልፍልናኤ፡ ቱማን፡ ቱማን፡ ቱማን፡ ቁናኤል፡ ዝንቱ፡ አስማት፡ ዘይመይጦ፡ ለመብረቅ፡ ወያጸንዖ፡ ለነጐድጓድ፡ <gap reason="omitted"/>
+                              </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a2">
+                          <locus target="#iiv(erso)" facs="003"> cols. 1 and 2</locus>
+                           <desc type="Asmat">
+                              Asmat Prayer against Wild Animals, <foreign xml:lang="gez">ጸሎት፡ በእንተ፡ መስተሃድር፡</foreign>
+                              Incipit: <foreign xml:lang="gez">በስመ፡ አብ፡ በል፡ ጢን፡ በቀጢን፡ ሰለባ፡ ኢትግብ፡ ወኢትቅረብ፡ ለንዋየ፡ ገብርከ፡ ዢብ፡ እግርማ፡ እንበለ፡ ጽጋማማ፡ ነምር፡ ፍራማ፡ ነምርእሞራ፡ ተንዛላይ፡ <gap reason="omitted"/></foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="a3">
+                          <locus target="#76v #77r #77v #78r #78v" facs="079 080 081"/>
+                           <desc type="GuestText">
+                              <title type="complete" ref="LIT2915RepCh196"/>, written in a later hand. Incipit: <foreign xml:lang="gez">ሰላም: ለጽንሰትከ: መሰረተ: ነገር: ወውጣኔ: </foreign>
+                           </desc>
+                        </item>
+                        <item xml:id="e1">
+                          <locus target="#ir(ecto)" facs="001"/>
+                           <desc>
+                              pen trials
+                            </desc>
+                        </item>
+                        <item xml:id="a4">
+                          <locus target="#iiv(erso)" facs="003"> col. 2</locus>
+                           <desc type="DonationNote">
+                              Record of gift of this book to the church, written in red ink. “This book [belongs to] Ǝmät Tadäsäč and she gave it for commemoration of Saint Gäbrä Mänfas Qəddus and to be an intercession for her. She bought it for 50 birr and gave it in 1969 EC. Her baptismal name is Ǝḫǝtä Maryam.”
+                            </desc>
+                        </item>
+                        <item xml:id="a5">
+                          <locus target="#56r" facs="058"> and passim</locus>
+                           <desc type="OwnershipNote">
+                              name of secondary owner, Wäldä Giyorgis (written over the top of the original name which is erased). The names Akazǝyas and Wäldä Täklä Haymanot are inserted secondarily
+                            </desc>
+                        </item>
+                        <item xml:id="e2">
+                          <locus target="#79r #79v" facs="081 082"/>
+                           <desc>
+                              pen trials and scrawls, in purple ink, blue ink, and black ink
+                            </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                             Identified in the insurance hand list as Case A6
+                           </desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                             Numbered quires: quires 2–7
+                           </desc>
+                        </item>
+                        <item xml:id="e5">
+                          <locus target="#29v #56r #68r" facs="032 058 070"/>
+                           <desc>
+                              text has been removed
+                            </desc>
+                        </item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered with a double-pocket fabric cover.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="textile"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -70,7 +274,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                      href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
-               <p>Definitions of prefixes used.</p>
+               <p>Definitions of prefixes used</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
@@ -83,8 +287,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-10-31" who="RL">Added ms items, miniatures, varia and notes</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2019-12-18" who="ABe">Added facs</change>
+         <change when="2019-12-23" who="RL">Minor edits to format of additions</change>
+         <change when="2020-01-06" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

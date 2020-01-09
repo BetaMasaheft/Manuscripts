@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,11 +11,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 144</title>
+            <editor key="ABe"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
                                         by Steve Delamarter.</p>
+                                        <p>Dedicated to Cain Hope Felder</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -31,14 +33,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Tweed</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/2093/">Tweed Codex 144</idno>
+                  <repository ref="INS0880WHU">Tweed</repository>
+                  <collection>Tweed Collection</collection>
+                  <idno facs="EMIP/Codices/2093/" n="24">Tweed Codex 144</idno>
+                  <altIdentifier>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2093</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>Fragment of Lamentations of the Virgin, ሰቆቃወ፡ ድንግል፡, Continuation of Tweed 143</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <locus from="1r" to="8v"/>
+                     <title type="complete" ref="LIT2987RepCh268"/>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
@@ -57,6 +65,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="rubrication">
+                           <foreign xml:lang="gez">ማርያም፡</foreign>
+                        </seg>
+                        <desc>The word Mary is rubricated. Names are often abbreviated in red ink</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#8v"/> (multiple full stops)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                          <locus target="#8v"/>
+                           <desc type="OwnershipNote">
+                              Owner of the manuscript is mentioned, Wäldä Maryam
+                    </desc>
+                        </item>
+                        <item xml:id="e1">
+                          <locus target="#9r"/>
+                           <desc>
+                              Illigible note, written in faint pencil
+                          </desc>
+                        </item>
+                        <item xml:id="e2">
+                          <locus target="#10r #10v"/>
+                           <desc>
+                              blank
+                          </desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                            Identified in the insurance hand list as Case 67/23
+                            </desc>
+                        </item>
+                        <item xml:id="e4">
+                          <locus target="#1r #2v #3r #5v"/>
+                           <desc>
+                            Scribal intervention:
+                            words of text are written interlinearly
+                          </desc>
+                        </item>
+                        <item xml:id="e5">
+                        <locus target="#5v #6v"/>
+                        <desc>
+                          text has been removed
+                        </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -85,6 +147,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-11-07" who="ABe">Added items</change>
+         <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

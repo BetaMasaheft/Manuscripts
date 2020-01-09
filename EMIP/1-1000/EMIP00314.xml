@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Nairobi Codex 1</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,9 +38,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡, Asmat Prayers</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="178r"/><title type="complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                <incipit xml:lang="gez">ተግሣጽ ለኵሉ: ወአስተናሥኦ: ምግባር:ፍካሬ: ዘጻድቃን: ወዘኃጥአን: መዝሙር: ዘዳዊት።</incipit>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -58,6 +60,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d01"><locus target="#ii v(erso)"/><desc> Drawing, in pencil, of an angel</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d02"><locus target="#178v"/><desc> Crude drawing, in pencil, of an equestrian saint, with caption <q>“Angel.”</q> Also, pen trials.</desc></decoNote>
+                  </decoDesc>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +92,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-09-26" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

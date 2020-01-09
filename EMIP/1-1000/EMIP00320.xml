@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 130</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,9 +38,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1">
+                     <msItem xml:id="ms_i1"><locus from="1r" to="125r"/><title type="complete" ref="LIT2701Dawit"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+                     <note><foreign xml:lang="gez"> Introductory Poem:
+                      መዝሙረ: ዳዊትስ: ገነተ: ይመስል: ይብል።
+                      በእንተ: ዝንቱ: ተሠርዓ: አንብቦቱ: በኵሉ: መዋዕል።
+                      በኈልቈ: ሕዋሳት: ኀምስ: ዘውስተ: አባል።
+                      ጠቢባነ: አይሁድ: ይክፍልዎ: መጽሐፈ: አትናቴዎስ: ይብል።
+                      ወዝውእቱ: ቀዳማዊ: ክፍል።
+                      </foreign>
+                    </note>
+                   </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -58,6 +67,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d01"><locus target="#11r"/><desc><ref type="authFile" corresp ="AT1099StMary"/> <persName ref="PRS6819Mary"/> in a church with an attendant receiving a blessing and the owner of the manuscript taking refuge (on his back before her)</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d02"><locus target="#51r"/><desc>Two figures carrying a reclining figure</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d03"><locus target="#111r"/><desc> Reclining cloaked figure. Above the miniature is a prayer to the Blessed Virgin <persName ref="PRS6819Mary"/> “to keep him (the owner of the manuscript?) from <term key="sword"/> and arrow.”</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d04"><locus target="#125r"/><desc><ref type="authFile" corresp ="AT1012Equestrian"/> spearing an enemy</desc></decoNote>
+                  </decoDesc>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-09-27" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Marwick Codex 57</title>
             <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -38,11 +39,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Missal, መጽሐፈ፡ ቅዳሴ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <locus from="1r" to="45v"/>
-                     <title type="complete" ref="LIT1960Mashaf"/>
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i1"><locus from="1r" to="1v"/><locus from="38r" to="42r"/><title type="incomplete" ref="LIT2260salota"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Fragment</note>
                   </msItem>
+
+                  <msItem xml:id="ms_i2"><locus from="4r" to="5r"/><title type="complete" ref="LIT1960Mashaf"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+
+                  <msItem xml:id="ms_i2.1"><locus from="20r" to="27r"/><title type="complete" ref="LIT1960Mashaf#AnaphoraApostles"/></msItem>
+                  <msItem xml:id="ms_i2.2"><locus from="27r" to="32r"/><title type="complete" ref="LIT1100Anapho"/></msItem>
+                  <msItem xml:id="ms_i2.3"><locus from="32r" to="35v"/><title type="complete" ref="LIT1960Mashaf#AnaphoraDioscorus"/></msItem>
+                  <msItem xml:id="ms_i2.4"><locus from="35v" to="37v"/><title type="complete" ref="LIT1960Mashaf#AnaphoraJohnChrysostom"/></msItem>
+                  <msItem xml:id="ms_i2.5"><locus from="42r" to="45v"/><title>Supplications, መስተብቍዕ, of thanksgiving, for the sick, for travelers, for the rain, for fruit of the earth, the water springs, the king, the dead, and for the catacumen</title></msItem>
+
+                  </msItem>
+
+
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -114,6 +128,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic">
+                    <seg type="rubrication">
+                      <foreign xml:lang="gez">ማርያም፡</foreign></seg>
+                    </handNote>
+                  </handDesc>
+
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d01">
+                      Decorative designs: <locus target="#28r #32r #35v #42r"/> (multiple full stops).
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e01">
+                        <desc>Not well-preserved</desc>
+                      </item>
+                      <item xml:id="a01">
+                        <desc>
+                          <locus target="#18r"/> There is a space for the name of the bishop, but it is left unfilled.  On folio <locus target="#25v"/>, the same thing happens with the name of the king.
+                        </desc>
+                      </item>
+                      <item xml:id="e02">
+                        <desc>
+                          words of text are written interlinearly (<locus target="#14r"/>);
+                          and lines of text are written interlinearly (<locus target="#16v"/>);
+                          and in the upper margin with a symbol (┴) marking the location where the text is to be inserted (<locus target="#37r"/>, col. 2, line 4);
+                          erasure markings are visible (<locus target="#7v #17v #22r #33v"/>)
+                        </desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                         <decoNote xml:id="b1">Parchment, 207 x 135 x 30 mm, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, covered with a linen double pocket cover.</decoNote>
@@ -150,10 +195,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-08-17" who="JS">Added quire desc, binding desc, margin dim, columns/lines, dating info</change>
          <change when="2018-10-31" who="JS">Added ms contents</change>
+         <change when="2019-10-04" who="RL">Added ms items and notes</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
