@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Kaleab Addis Project 44</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +38,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Praise of the Beloved, ስብሐተ፡ ፍቁር፡; Rampart of the Cross, ሐፁረ፡ መስቀል።, including Asmat prayer for binding demons, ጸሎተ: ግዘት: ለአጋንንት:</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="9v"/><title type="complete" ref="LIT2948RepCh229"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2"><locus from="9v" to="23v"/><title type="complete" ref="LIT5696MagicPrayer"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>including Asmat prayer for binding demons, <foreign xml:lang="gez">ጸሎተ: ግዘት: ለአጋንንት:</foreign> (<locus target="#10v #11r #11v #12r"/>)</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -59,6 +64,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word Mary is rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#9v"/> (multiple full stops)
+                  </decoNote>
+                </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <locus target="#24r #24v"/>
+                    <desc type="Asmat">
+                    Asmat Prayer for Winning the Respect of the People, written in a crude hand
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <locus target="#ir(ecto) #iiv(erso)"/>"
+                    <desc>
+                    Blank
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <locus target="#iv(erso) #iir(ecto)"/>"
+                    <desc>
+                    Note, in Amharic, regarding medicinal instructions
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <locus target="#9v"/>
+                    <desc>
+                    mentions the owner, Kǝnfä Mika’el, and the scribe, Habtä Gabri’el
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <locus target="#3v"/>
+                    <desc>
+                    Scribal intervention:
+                    words of text are written interlinearly
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -87,6 +141,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-12-26" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

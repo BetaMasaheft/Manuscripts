@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Kaleab Addis Project 62</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +38,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Mystagogia, ትምህርተ፡ ኅቡዓት፡, Prayer of Mary at Golgotha, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡; Sword of Divinity, ሠይፈ፡ መለኮት፡; Book of the Disciples, መጽሐፈ፡ አርድእት፡; Asmat Prayer for Strength in Travel</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="11v"/><title type="complete" ref="LIT2444Temher"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                </msItem>
+                  <msItem xml:id="ms_i2"><locus from="11v" to="32r"/><title type="complete" ref="LIT2246salotz"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                </msItem>
+                  <msItem xml:id="ms_i3"><locus from="32r" to="32v"/><title type="incomplete" ref="LIT2295Sayfam"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>incomplete at the end</note>
+                </msItem>
+                  <msItem xml:id="ms_i4"><locus from="33r" to="101v"/><title type="complete" ref="LIT1915Mashaf"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                </msItem>
+                <msItem xml:id="ms_i5"><locus from="103r" to="104v"/><title>Asmat prayer for strength in travel</title><incipit xml:lang="gez">ያሽሊሁ: ሸልያ: ያሸሙህሸሊያ: አጅብ: የመድ<gap reason="omitted"/> ጽሂፈ: ከመ: እስር: በ፪: አብራክ: ሶበ: ተሐውር: ኢትድክም: <gap reason="omitted"/></incipit>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>in a different hand</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -58,6 +73,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word Mary is rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#32r"/> (line of alternating red and black dots);
+                  <locus target="#99v"/> (multiple full stops between lines of red and black dots)
+                  </decoNote>
+                </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <locus target="#ir(ecto) #iiv(erso) #102r #102v #105r #105v"/>
+                    <desc>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <locus target="#33 #48 #61 #77 #85 #90 #99"/>
+                    <desc>
+                    Navigation system:
+                    white string is sewn into the top edge
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <locus target="#33r"/>
+                    <desc>
+                    Numbered quires: numbering begins, quires 1–9
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <locus target="#39v #89v"/>
+                    <desc>
+                    Scribal intervention:
+                    words of text are written interlinearly;
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <locus target="#9r #12r #14v #19r #19v"/>
+                    <desc>
+                    (etc.) text has been removed
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +152,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-09" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
