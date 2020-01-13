@@ -5,12 +5,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:lang="en"
-     xml:id="IVpapadopulokeramevs1"
+     xml:id="IVef17"
      type="mss">
   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Psalter</title>
+            <title>Psalter and praises for St. Mary and the Saviour</title>
                <editor key="DN"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,8 +29,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <msDesc xml:id="ms">
                <msIdentifier>
                   <repository ref="INS0301IV"/>
-                  <idno>IV Papadopulokeramevs 1</idno>
-                  <altIdentifier>
+                  <idno>IV Ef. 17</idno>
+                <altIdentifier>
+              <idno>IV Papadopulokeramevs 1</idno>
+            </altIdentifier>
+              <altIdentifier>
                      <idno>Turaev cat. III.7</idno>
                   </altIdentifier>
                         </msIdentifier>
@@ -69,26 +72,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                       <textLang mainLang="gez"/>
                       <note>Starts from Monday.</note>
                     </msItem>
+
                     <msItem xml:id="ms_i1.5">
                       <locus from="129r" to="134v"/>
-                      <title type="complete" ref="LIT2509Weddas"/>
+                      <title type="complete" ref="LIT1113Anqasa"/>
                       <textLang mainLang="gez"/>
-                      <note>Starts from Monday.</note>
-                    </msItem>
+                      </msItem>
 
                     <msItem xml:id="ms_i1.6">
-                      <locus from="137v" to="142v"/>
+                      <locus from="137v" to="142v" cert="low"/>
                       <title type="complete" ref="LIT2807RepCh91"/>
                       <textLang mainLang="gez"/>
-                      <note> Excerpt from the
-                       Maṣḥafa saʿātāt (salām-praises for the Saviour and
-                       St. Mary for the 1st, 3rd and 9th hour).</note>
+                      <incipit xml:lang="gez">ሰላም᎓ ለኪ᎓ ማርያም᎓ ድንግል᎓ መዓዛ᎓ አፍኪ᎓ ኮል᎓ እንተ᎓ ትጸንዊ᎓
+                      በገዳም᎓ ወሐቅል᎓ ወልታ᎓ ረዲኦትየ᎓ በውስተ᎓ ቀትል᎓</incipit>
+                      <note>Excerpts from the
+                       <ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>
+                       (salām-praises for the Saviour and
+                       St Mary for the 1st, 3rd and 9th hours).</note>
                     </msItem>
 
 
                </msContents>
-
-               <!--  numbers of folios are not certain -->
 
                <physDesc>
                   <objectDesc form="Codex">
@@ -99,8 +103,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <extent>
                            <measure unit="leaf">143</measure>
                            <dimensions type="outer" unit="mm">
-                              <height>25</height>
-                              <width>15</width>
+                              <height>250</height>
+                              <width>150</width>
                               <depth/>
                            </dimensions>
                         </extent>
@@ -120,7 +124,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <date notBefore="1700" notAfter="1799"/>
                         <desc>
                            <persName ref="PRS9602Turaev"/>
-                           describes the script as "large" and "nice".
+                           describes the script as "big" and "nice".
                  </desc>
                      </handNote>
                   </handDesc>
@@ -128,11 +132,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <decoDesc>
                      <decoNote type="drawing" xml:id="d1">
                         <locus target="#1r"/>
-                        <desc>Uncoloured depiction of St. George of
-                        Lydda and the donor. Legend above reads <q>ደራጐን</q>,
-                        legend below <q>ደራጎን</q>.
+                        <desc>Drawing of <persName ref="PRS4585Georgeo">George of Lydda</persName> as
+                        <ref type="authFile" corresp="AT1012Equestrian">equestrian saint</ref> slaying the
+                        <term ana="#dragon">dragon</term>, and of the commissioner below.
+                         The caption above reads <foreign xml:lang="gez">ደራጐን፡</foreign>,
+                          and another one below reads <foreign xml:lang="gez">ደራጎን፡</foreign>.
                         A female figure with rosary stands on the left,
-                        the caption reads <q>ዘከመ᎓ ተማኅፀነ᎓ ወለተ᎓ ገብርኤል</q>.
+                        the legend reads <foreign xml:lang="gez">ዘከመ᎓ ተማኅፀነ᎓ <persName ref="PRS12858WalattaGabreel">
+                      ወለተ᎓ ገብርኤል</persName></foreign>.
                       </desc>
                      </decoNote>
 
@@ -160,31 +167,38 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <desc type="GuestText">
                              <title type="complete" ref="LIT2839RepCh123"/>
                            </desc>
-                             <q xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ስመ፡ መሐላ፡ ዘኢይሔሱ
-                             </q>
+                             <q xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ስመ፡ መሐላ፡ ዘኢይሔሱ</q>
                               </item>
 
                               <item xml:id="a2">
                                 <locus from="4r" to="5v"/>
                                  <desc type="GuestText">
-                                   <title type="complete" ref="LIT2444Temher"/>
+                                   <title type="complete" xml:lang="gez"
+                                     ref="LIT2444Temher">በእንተ᎓ ትምህርት᎓ ህቡአት᎓</title>
                            </desc>
-                                 <q xml:lang="gez">በእንተ᎓ ትምህርት᎓ ህቡአት᎓
-                                   </q>
                                     </item>
 
                                     <item xml:id="a3">
+                                      <locus from="6r" to="6v"/>
+                                       <desc type="GuestText">
+                                         <title type="complete" ref="LIT5820ArawitaGadam">አረዊተ᎓ ገዳም᎓</title>
+                                 </desc>
+                                 <note>The reference to the <bibl><ptr target="bm:Turaev1899Orationes"></ptr>
+                                 <citedRange unit="page">253-254</citedRange></bibl> is not clear enough.</note>
+                                          </item>
+
+                                    <item xml:id="a4">
                                       <locus target="#139v"/>
                                       <desc type="GuestText">
                                         <title type="complete" ref="LIT3050RepCh330"/>
                                       </desc>
                                           <q xml:lang="gez">ኢየሱስ᎓ ክርስቶስ᎓ ወልደ᎓ እግዚአብሔር᎓ በዘባነ᎓ ባሕር᎓ ከመ᎓ ትትለሀይ᎓ ሐመር᎓
-                                              መንክር᎓ ተላህይ᎓ ለዘለከ᎓ ፍቅር፨
+                                              መንክር᎓ ተላህያ᎓ ለዘለከ᎓ ፍቅር፨
                                          </q>
                                          <note>The hymn is composed of 15 strophes. </note>
                                           </item>
 
-                              <item xml:id="a4">
+                              <item xml:id="a5">
                                 <locus target="#140"/>
                                 <desc type="GuestText">
                                   <title type="incomplete" ref="LIT2866RepCh147"/>
@@ -198,10 +212,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </additions>
 
                   <bindingDesc>
-                     <binding contemporary="false" xml:id="binding">
-                        <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather </decoNote>
-                        <decoNote xml:id="b2">Possibly two pairs of sewing stations. </decoNote>
-                        <decoNote type="bindingMaterial" xml:id="b3">
+                     <binding contemporary="true" xml:id="binding">
+                        <decoNote xml:id="b1">Two wooden boards.</decoNote>
+                        <decoNote xml:id="b2">Covered with reddish-brown tooled leather.</decoNote>
+                        <decoNote xml:id="b3">Probably two pairs of sewing stations.</decoNote>
+                        <decoNote type="bindingMaterial" xml:id="b4">
                            <material key="wood"/>
                            <material key="leather"/>
                          </decoNote>
@@ -215,11 +230,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <origin>
                      <origDate notBefore="1700" notAfter="1799"/>
                   </origin>
-                  <provenance>The origina owner was <persName ref="PRS12567KidanaMaryam">
-                    Kidana Māryām</persName>. The manuscript was bought by <persName ref="PRS12387PapadopuloKeramevs">
+                  <provenance>The original owner was <persName ref="PRS12567KidanaMaryam">
+                    Kidana Māryām</persName>. The
+                    manuscript was bought by <persName ref="PRS12387PapadopuloKeramevs">
                     Papadopulo-Keramevs</persName> possibly in <placeName ref="wd:Q1218">Jerusalem</placeName>,
                      in <date>1888</date>.</provenance>
-                  <acquisition>The Asian Museum acquired the manuscript from
+                  <acquisition>The Asiatic Museum acquired the manuscript from
                   <persName ref="PRS12387PapadopuloKeramevs">Papadopulo-Keramevs</persName>
                    in <date>1897</date>.</acquisition>
                </history>
@@ -269,6 +285,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                </person>
                <person>
                   <persName ref="PRS12567KidanaMaryam" role="owner"/>
+               </person>
+               <person>
+                  <persName ref="PRS12858WalattaGabreel" role="patron"/>
                </person>
             </listPerson>
          </particDesc>
