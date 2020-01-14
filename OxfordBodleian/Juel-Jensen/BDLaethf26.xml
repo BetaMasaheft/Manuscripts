@@ -37,15 +37,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </altIdentifier>
                     </msIdentifier>
                     
-                    <msContents>
-                        <summary/>
-                        
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
-                        
-                    </msContents>
-                    
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
@@ -54,37 +45,60 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">24</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <measure unit="page" type="blank">9</measure>
+                                    <locus target="#1r #1v #10v #11r #11v #22v #23r #24r #24v"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>135</height>
                                         <width>110</width>
                                         <depth>32</depth>
                                     </dimensions>
                                 </extent>
+                                <foliation>The manuscript is not foliated.</foliation>
+                                <collation>
+                                    <list>
+                                        <item xml:id="q1">
+                                            <dim unit="leaf">2</dim>
+                                            <locus from="1r" to="2v"/>
+                                        </item>
+                                        <item xml:id="q2">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="3r" to="10v"/>
+                                        </item>
+                                        <item xml:id="q3">
+                                            <dim unit="leaf">14</dim>
+                                            <locus from="11r" to="24v"/>
+                                            8, stub after 6
+                                            7, stub after 7
+                                        </item>
+                                    </list>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
                         
-                        <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic">
-                           
-                            </handNote>
-                        </handDesc>
-                        
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
-                        
-                     <!--   <bindingDesc>
+                        <bindingDesc>
                             <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
+                                <decoNote xml:id="b1">Very thick wooden boards. The quires are loosely bound. Tackets (or remains of endbands)
+                                are visible.</decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>
                         </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">2</decoNote>
                             </binding>
-                        </bindingDesc>-->
+                        </bindingDesc>
                         
                     </physDesc>
+                    
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <!--  <listBibl type="secondary">
+                                        <bibl></bibl>
+                                    </listBibl>-->
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                    </additional>
                     
                 <!--    <history>
                         <origin>
@@ -93,18 +107,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <provenance>  </provenance>
                     </history>-->
                     
-                    <additional>
-                        <adminInfo>
-                            <recordHist>
-                                <source>
-                                  <!--  <listBibl type="secondary">
-                                        <bibl></bibl>
-                                    </listBibl>-->
-                                </source>
-                            </recordHist>
-                        </adminInfo>
-                    </additional>
+                    <msPart xml:id="p1">
+                        <msIdentifier>
+                        </msIdentifier>
+                        
+                        <msContents>
+                            <summary/>
+                            
+                       <!--     <msItem xml:id="p1_i1">
+                                <locus from="2r" to=""/>
+                                <title type="" ref=""/>
+                               <textLang xml:lang="gez"/>
+                            </msItem>-->
+                        </msContents>
+                        
+                        
+                    </msPart>
                     
+                    <msPart xml:id="p2">
+                        <msIdentifier>
+                        </msIdentifier>
+                        
+                        <msContents>
+                            <summary/>
+                          <!--  <msItem xml:id="p2_i1">
+                                <locus from="" to=""/>
+                                <title type="" ref=""/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>-->
+                        </msContents>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -125,6 +157,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Poetry"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -134,6 +167,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-13">Created record from metadata provided by Jacopo Gnisci</change>
+            <change who="DR" when="2020-01-14">Added quire structure</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
