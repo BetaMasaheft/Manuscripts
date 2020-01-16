@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 112</title>
             <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -56,14 +57,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 33</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>55</height>
+                              <width>49</width>
+                              <depth>12</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>This is an accordion-fold codex. There are no quires.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">2</dim>
+                           <dim type="bottom">4</dim>
+                           <dim type="right">1</dim>
+                           <dim type="left">1</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="11"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
@@ -94,10 +109,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, six parchment strips sewn together.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -124,6 +147,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2019-11-04" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-15" who="JS">Added margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
