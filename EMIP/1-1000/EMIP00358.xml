@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Delamarter Codex Fragment 11</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,9 +38,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="2v"/><title type="complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Fragment of a Psalter</note>
+                  <msItem xml:id="ms_i1.1"><locus from="1r" to="1v"/><title type="complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Fragment of the Psalms, chapters 30–31</note>
+                </msItem>
+                  <msItem xml:id="ms_i1.2"><locus from="2r" to="2v"/><title type="complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Fragment of the Psalms, chapters 51–53</note>
                   </msItem>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -58,6 +68,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#1v"/> (a line of alternating red and black dots marks the section division between Psalms 30 and 31)
+                  </decoNote>
+                </decoDesc>
+                <additions>
+                <list>
+                  <item xml:id="e1">
+                  <locus target="#1v"/>
+                  <desc>
+                  This scribe has avoided the problem of lines of text too long to fit on one line by adopting an aspect ratio that leaves ample room for the width of most lines. The line would have been too long and the scribe finishes the end of the line with words written smaller so as to avoid leftover text
+                  </desc>
+                  </item>
+                  <item xml:id="a1">
+                  <desc type="RecordTransaction">
+                  Provenance: Purchased from Mohamad Yassine on March 6, 2008 with Delamarter Fragment 12, Delamarter Fragment 13, Delamarter Arabic Fragment 5, and Delamarter Arabic Fragment 6.
+                  </desc>
+                  </item>
+                </list>
+              </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +117,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-16" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

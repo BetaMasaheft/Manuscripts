@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Delamarter Codex Fragment 10</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +38,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Image of Jesus Christ, መልክአ፡  ኢየሱስ፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="1v"/><title type="complete" ref="LIT2839RepCh123"/>
+                    <textLang mainLang="gez">Gə‘əz</textLang>
+                    <note>Fragment of the Image of Jesus Christ</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -58,10 +60,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                  </seg>
+                  <desc>The words Jesus and Christ are rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <desc type="RecordTransaction">
+                    Provenance: Purchased from Mohamad Yassine on August 25, 2007 with Delamarter Arabic Fragment 4
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1925">early-twentieth  century</origDate>
+                     <origDate when="1925">early-twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -86,6 +105,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-16" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
