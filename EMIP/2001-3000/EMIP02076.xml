@@ -12,6 +12,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 127</title>
             <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -108,14 +109,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 29</measure>
+                           <measure unit="quire">3</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>144</height>
+                              <width>108</width>
+                              <depth>24</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–3 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="i" to="9" facs="001"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="10" to="19" facs="011"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="20" to="29" facs="021"></locus>
+                              Quire 3
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">18</dim>
+                           <dim type="bottom">22</dim>
+                           <dim type="right">20</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="19 22"/>
+                     </layoutDesc>
                   </objectDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">
@@ -175,10 +208,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </item>
                            </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -205,6 +247,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2019-11-05" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-24" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
