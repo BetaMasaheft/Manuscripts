@@ -46,12 +46,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <!--  can the msItems/work IDs be arranged better?-->
                   
                   <msItem xml:id="ms_i1">
-                     <locus from="1" to="75"/>
+                     <locus from="1r" to="75" corresp="#fol1"/>
+                     <locus from="3r" to="77vb" corresp="#fol2"/>
                      <title type="incomplete" ref="LIT1560Gospel"/>
                      <textLang mainLang="gez"/> 
                         
                         <msItem xml:id="ms_i1.1">
-                           <locus from="1" to="41"/>
+                           <locus from="1r" to="41va" corresp="#fol1"/>
+                           <locus from="3r" to="43va" corresp="#fol2"/>
                            <title type="complete" ref="LIT2713Luke" xml:lang="gez">ብስራተ፡ አብ፡ ትሩፍ፡ ሉቃስ፡ ወንጌላዊ፡ ፩እምሰብዓ፡ 
                               ወክልኤቱ፡ አርድእት።
                               ጸሎቱ፡ ወበረከቱ፡ ወሀብተ፡ ረድኤቱ፡ የሀሉ፡ ምስለ፡ ፍቁሩ፡ 
@@ -65,13 +67,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
                         
                         <msItem xml:id="ms_i1.2">
-                           <locus from="41" to="42"/>
+                           <locus from="41va" to="42rb" corresp="#fol1"/>
+                           <locus from="43va" to="44rb" corresp="#fol2"/>
                            <title type="complete" ref="LIT1693John#BioJohn"/>
                            <textLang mainLang="gez"/> 
                         </msItem>
                   
                      <msItem xml:id="ms_i1.3">
-                        <locus from="43" to="75"/>
+                        <locus from="43r" to="75vb" corresp="#fol1"/>
+                        <locus from="45r" to="77vb" corresp="#fol2"/>
                         <title type="complete" ref="LIT2715John" xml:lang="gez">ብስራተ፡ አብ፡ ትሩፍ፡ ረድእ፡ ትናጋሪ፡ በመለኮት፡ ዮሐንስ፡ ፍቁረ፡ 
                            እግዚእነ፡
                            ኢየሱስ፡ ክርስቶስ። በረከተ፡ ጸጋሁ፡ የሃሉ፡ ምስለ፡ ፍቁሩ፡ <gap reason="omitted" extent="unknown" resp="PRS3562Dillmann"/>
@@ -100,80 +104,133 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">75</measure>
+                           <measure unit="leaf">80</measure>
                            <note>formae 4<hi rend="apices">ae</hi> magnae</note>
-                           <!--<dimensions type="outer" unit="mm">
-                              <height></height>
-                              <width></width>
-                              <depth></depth>
+                           <dimensions type="outer" unit="mm">
+                              <height>327</height>
+                              <width>249</width>
+                              <depth>39</depth>
                            </dimensions>
-                           <measure type="weight" unit="g"></measure>-->
+                           <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                              <height>320</height>
+                              <width>243</width>
+                           </dimensions>
+                           <note corresp="#leafdim">
+                              Data on leaves dimensions taken from <locus target="#23r"/>.
+                           </note>
+                           <measure type="weight" unit="g">2105</measure>
                         </extent>
-                        <!-- <foliation></foliation>
+                         <foliation>
+                            <list>
+                               <item xml:id="fol1">
+                                  The foliation refered to in  <bibl>
+                                     <ptr target="bm:Dillmann1848Catalogus"/>
+                                     <citedRange unit="page">15b–17b</citedRange>
+                                  </bibl> is not visible in the manuscript anymore. It counted the first folio containing text as 1, the current <locus target="#3"/>
+                               </item>
+                               <item xml:id="fol2">
+                                  <locus from="1r" to="80v" corresp="#fol2"/>
+                                  The manuscript is foliated in pencil in the upper right corner, beginning with 1 on the first blank leaf.
+                                  The paper fly-leaves, one each at the beginning and end of the manuscript, are not foliated.
+                               </item>
+                            </list>
+                         </foliation>
                         <collation>
-                           <signatures></signatures>
+                           <signatures>
+                              All quire marks are written in black ink if not indicated otherwise:
+                              ፪ in the central upper margin of <locus target="#11r"/>;
+                              ፫ in the central upper margin of <locus target="#19r"/>;
+                              ፬ in the central upper margin of <locus target="#27r"/>;
+                              ፭ in the central upper margin of <locus target="#35r"/>;
+                              remains of 6 in the upper left corner of <locus target="#41r"/>, cut off;
+                              ፩, written in red, in the upper left corner of <locus target="#45r"/>;
+                              ፪, decorated, in the upper left corner of <locus target="#53r"/>;
+                              ፫, decorated, in the upper left corner of <locus target="#61r"/>;
+                              ፬, decorated, in the upper left corner of <locus target="#69r"/>;
+                           </signatures>
                            <list>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q1" n="A">
+                                 <dim unit="leaf">2</dim>
+                                 <locus from="1r" to="2v" corresp="#fol2"/>
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q2" n="1">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="3r" to="10v" corresp="#fol2"/>
+                                 3, stub after 5
+                                 6, stub after 2
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q3" n="2">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="11r" to="18v" corresp="#fol2"/>
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q4" n="3">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="19r" to="26v" corresp="#fol2"/>
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q5" n="4">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="27r" to="34v" corresp="#fol2"/>
+                                 3, stub after 5
+                                 6, stub after 2
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q6" n="5">
+                                 <dim unit="leaf">6</dim>
+                                 <locus from="35r" to="40v" corresp="#fol2"/>
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q7" n="6">
+                                 <dim unit="leaf">4</dim>
+                                 <locus from="41r" to="44v" corresp="#fol2"/>
+                                 2, stub after 3
+                                 3, stub before 3
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q8" n="7">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="45r" to="52v" corresp="#fol2"/>
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q9" n="8">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="53r" to="60v" corresp="#fol2"/>
+                                 3, stub after 6
+                                 6, stub after 3
                               </item>
-                              <item xml:id="q" n="">
-                                 <dim unit="leaf"></dim>
-                                 <locus from="" to=""/>
+                              <item xml:id="q10" n="9">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="61r" to="68v" corresp="#fol2"/>
+                                 3, stub after 6
+                                 6, stub after 3
                               </item>
-                        <condition key=""></condition>-->
+                              <item xml:id="q11" n="10">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="69r" to="76v" corresp="#fol2"/>
+                                 3, stub after 5
+                                 6, stub after 2
+                              </item>
+                              <item xml:id="q12" n="11">
+                                 <dim unit="leaf">4</dim>
+                                 <locus from="77r" to="80v" corresp="#fol2"/>
+                              </item>
+                           </list>
+                        </collation>
+                        <condition key="good">Parchment repair on <locus target="#18" corresp="#fol2"/>.</condition>
                      </supportDesc>
                      
                      <layoutDesc>
-                        <layout columns="2"/>
-                     </layoutDesc>
-                     <!--<layout columns="" writtenLines="">
-                        <note corresp="#margin #textarea">Data on text area and margin dimensions taken from <locus target="#"/>.</note>
+                     <layout columns="2" writtenLines="25">
+                        <note corresp="#margin #textarea">Data on text area and margin dimensions taken from <locus target="#25r"/>.</note>
                         <dimensions unit="mm" xml:id="textarea"> 
-                           <height></height>
-                           <width></width>
+                           <height>241</height>
+                           <width>195</width>
                         </dimensions>
                         <dimensions type="margin" unit="mm" xml:id="margin">
-                           <dim type="top"></dim>
-                           <dim type="bottom"></dim>
-                           <dim type="right"></dim>
-                           <dim type="left"></dim>
-                           <dim type="intercolumn"></dim>
+                           <dim type="top">31</dim>
+                           <dim type="bottom">49</dim>
+                           <dim type="right">27</dim>
+                           <dim type="left">22</dim>
+                           <dim type="intercolumn">10</dim>
                         </dimensions>
-                        <ab type="ruling"></ab>
-                     </layout>-->
+                        <ab type="ruling">Pricking and ruling are visible.</ab>
+                     </layout>
+                     </layoutDesc>
                      
                   </objectDesc>
                   
@@ -184,7 +241,35 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </handNote>
                   </handDesc>
                   
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <desc type="StampExlibris">Ex libris of <persName ref="PRS2916Bruce"/> glued on the inner front board, containing
+                              shelfmarks of the manuscript: 77. Aeth. Cat. 2.
+                              Bruce of Kinnaird Nº 2</desc>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <desc>A pagemark of blue textile is sewn to the headband. </desc>
+                        </item>
+                     </list>
+                  </additions>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">European binding, red leather with gilded borders. Printed on the spine: New Testame. Tom II
+                           Cover of the inner board and first fly-leaf gilded and imprinted with floral pattern. 
+                           The edges of the manuscript have been gilded. 
+                           One paper fly leaf each, on which a watermark consisting of a geometrical pattern is visible, at the front and back.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                           <material key="paper"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
+                  
                </physDesc>
+               
                
                <history>
                   <origin>
@@ -244,6 +329,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2017-04-25">Additions</change>
          <change who="DR" when="2017-06-23">Changes</change>
          <change who="SG" when="2017-08-29">correction to fidal</change>
+         <change who="DR" when="2020-02-01">Updated with codicological information (collation, foliation, layout, condition, extras)
+            during consultation of the manuscript.</change> 
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
@@ -269,13 +356,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                  xml:id="IntroductionJohn"
                  xml:lang="gez">
                <ab>
-                  <locus from="41" to="42"/>
+                  <pb n="41v" corresp="#fol1"/><pb n="43v" corresp="#fol2"/><cb n="a"/>
             በስመ፡ እግዚአብሔር፡ ዘይትወሐድ፡ በመለኮት፡ ወይሤለስ፡ በአካላት፡ መቅድመ፡ ወንጌሉ፡ ለዮሐንስ፡ ፈጻሜ፡ ብስራት፡ ዝንቱሰ፡ ዮሐንስ፡
             ፩እም፡ ፲ወ፪ሐዋርያት፡ ስማ፡ ለእሙ፡ ባውፍልያ፡ ወካዕበ፡ ተሰምየት፡ ማርያም፡ ወውእቱ፡ እምነገደ፡ ዛብሎን፡ ወእምነ፡ ቤተ፡ ሳይዳ፡ ጸሐፈ፡ 
             ወንጌሎ፡ በልሳነ፡ ዮናናውያን፡ በ፷ዓመት፡ እመንግሥተ፡ ኔሮን፡ ወልደ፡ 
             አቅሎንድዮስ፡ ዘቀተሎሙ፡ ለጴጥሮስ፡ ወጳውሎስ፡ በ፲ወ፫ዓመተ፡ መንግሥቱ፡ እምድኅረ፡ ዕርገቱ፡ ለእግዚእነ፡ ፴ወ፭ዓመት፡ ወሰበከ፡ በሀገረ፡ 
             እስያ፡ ወእምዝ፡ በሀገረ፡ ኤፌሶን፡ ወነበረ፡ ባቲ፡ ፳ወ፱ዓመተ፡ ወክፍል፡ 
-            እምኔሃ፡ ተፍጻሜተ፡ መንግሥተ፡ ኔሮን፡ ፯ዓመተ፡ መንግሥተ፡ አስባስያኖስ፡ ፲ዓመተ፡ ወመንግሥተ፡ ጢጦስ፡ ወልዱ፡ ፪ዓመተ፡ ወሶበ፡ ነግሠ፡ 
+            እምኔሃ፡ ተፍጻሜተ፡ መንግሥተ፡ <cb n="b"/> ኔሮን፡ ፯ዓመተ፡ መንግሥተ፡ አስባስያኖስ፡ ፲ዓመተ፡ ወመንግሥተ፡ ጢጦስ፡ ወልዱ፡ ፪ዓመተ፡ ወሶበ፡ ነግሠ፡ 
             ድምጥያኖስ፡ ነበረ፡ ዮሐንስ፡ ፯ዓመተ።
             ወእምዝ፡ ሰደዶ፡ ኀበ፡ ደሴት፡ እንተ፡ ትሰመይ፡ በጥሞስ፡ ወነበረ፡ ባቲ፡ ፯ዓመተ፡ እስከ፡ አመ፡ አዕረፈ፡ ድምጥርያኖስ፡ ወነግሠ፡ እምድኅሬሁ፡ 
             ኔሮን፡ ዘይንእስ፡ ወሜጦ፡ ውስተ፡ ኤፌሶን፡
@@ -283,7 +370,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             ምስሌሁ፡ ፫እምአርዳኢሁ፡
             <sic resp="PRS3562Dillmann">ለአግናጥዮስ፡</sic> ዘኮነ፡ ሊቀ፡ ጳጳሳት፡ ዘአንጾኪያ፡ ወተውህበ፡ ለአንበሳ፡ በሮሜ፡ ወፎልፎርዮስ፡ ዘኮነ፡ 
             ሰማዕተ፡ በሱምርያ፡ ወኮነ፡ ሰማዕተ፡ በእሳት፡ ወፎጊር፡ ዘኃደጎ፡ በኤፌሶን፡ ወሶበ፡ ነግሠ፡
-            ጠራያኖ፡ ነበረ፡ ዮሐንስ፡ በመዋዕሊሁ፡ ፯ዓመተ፡ በኤፌሶን፡ ወሞተ፡ አመ፡ ፬ለወርኀ፡ ጥር፡ ወተቀብረ፡ ውስቴታ፡ ወኮነ፡ ኵሉ፡ መዋዕለ፡ ሕይወቱ፡ ፻ወ፩ዓመት።
+            ጠራያኖ፡ ነበረ፡ ዮሐንስ፡ በመዋዕሊሁ፡ ፯ዓመተ፡ በኤፌሶን፡ ወሞተ፡ <pb n="44r" corresp="#fol2"/><pb n="42r" corresp="#fol1"/><cb n="b"/>አመ፡ ፬ለወርኀ፡ ጥር፡ ወተቀብረ፡ ውስቴታ፡ ወኮነ፡ ኵሉ፡ መዋዕለ፡ ሕይወቱ፡ ፻ወ፩ዓመት።
             ወእምኔሁ፡ ዕርገተ፡ እግዚእነ፡
             ፴ዓመት። ወእምድኅረ፡ ዕርገተ፡ እግዚእነ፡ ፸ወ፩ዓመት። ወእምዝ፡ አዘዞ፡ ለፉጊር፡ ረድኡ፡ ከመ፡ ኢይክሥት፡ መካነ፡ መቃብሪሁ፡ ከመ፡ ኢያአምር፡ መኑሂ፡ 
             ወአልቦ፡ ዘየአምር፡
