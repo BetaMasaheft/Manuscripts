@@ -13,6 +13,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <title xml:id="t1">Tweed Codex 140</title>
             <editor key="ABe"/>
             <editor key="RL"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -121,14 +122,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 17</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>110</height>
+                              <width>85</width>
+                              <depth>12</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Loose folios have been stab-stitched together.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top"></dim>
+                           <dim type="bottom"></dim>
+                           <dim type="right"></dim>
+                           <dim type="left"></dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="16 19">
+                         <locus from="1r" to="14r" facs="002"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="23 30">
+                         <locus from="14v" to="16v" facs="016"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
@@ -191,10 +211,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -221,6 +250,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-11-06" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
          <change when="2020-01-29" who="RL">Edited and corrected additions and extras, added image links</change>
+         <change when="2020-01-30" who="JS">Added margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
