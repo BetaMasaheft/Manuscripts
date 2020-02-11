@@ -50,12 +50,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf"></measure>
+                                    <measure unit="leaf">60</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>184</height>
                                         <width>168</width>
                                         <depth>21</depth>
                                     </dimensions>
+                                    <dimensions type="folio" unit="mm">
+                                        <height>184</height>
+                                        <width>168</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#1r"/>.</note>
                                     <measure type="weight" unit="g">390</measure>
                                 </extent>
                                 <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay 
@@ -89,6 +94,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
                             </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="1" writtenLines="18">
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#1r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>120</height>
+                                        <width>133</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">24</dim>
+                                        <dim type="bottom">40</dim>
+                                        <dim type="right">27</dim>
+                                        <dim type="left">8</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                            
                         </objectDesc>
                         
                         <!--<bindingDesc>
@@ -152,6 +174,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-22">Created record from metadata provided by Jacopo Gnisci</change>
+            <change who="DR" when="2020-02-11">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
