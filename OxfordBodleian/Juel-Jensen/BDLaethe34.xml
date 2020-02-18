@@ -60,12 +60,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <measure unit="leaf" type="blank"></measure>
                                     <!--<locus target=""/>-->
                                     <dimensions type="outer" unit="mm">
-                                        <height>173</height>
-                                        <width>152</width>
-                                        <depth>5</depth>
+                                        <height>193</height>
+                                        <width>179</width>
+                                        <depth>8</depth>
                                     </dimensions>
                                     <measure type="weight" unit="g">204</measure><!--without case-->
                                     <measure type="weight" unit="g">429</measure><!--with case-->
+                                    <dimensions type="folio" unit="mm">
+                                        <height>163</height>
+                                        <width>151</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#1"/>.</note>
                                 </extent>
                                 <collation>
                                     <list>
@@ -76,6 +81,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
                             </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout>
+                                    <locus from="1v" to="4r"/>
+                                    <note corresp="#paintedarea #margin">Data on painted area and margin dimensions taken from <locus target="#4r"/>.</note>
+                                    <dimensions unit="mm" xml:id="paintedarea">
+                                        <height>130</height>
+                                        <width>130</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">5</dim>
+                                        <dim type="bottom">28</dim>
+                                        <dim type="right">16</dim>
+                                        <dim type="left">4</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
                         </objectDesc>
                         
                         <handDesc>
@@ -149,6 +171,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-13">Created record</change>
             <change who="DR" when="2020-01-23">Added collation and weight</change>
+            <change who="DR" when="2020-02-18">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

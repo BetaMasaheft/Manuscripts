@@ -59,6 +59,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <depth>80</depth>
                                     </dimensions>
                                     <measure type="weight" unit="g">984</measure><!--weighted without modern documents placed inside the MS-->
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <height>188</height>
+                                        <width>170</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#12r"/>.</note>
                                 </extent> 
                                 <collation>
                                     <list>
@@ -167,6 +172,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 glued together.</condition>
                             </supportDesc>
                            
+                            <layoutDesc>
+                                <layout columns="2" writtenLines="17">
+                                    <locus from="2ra" to="87v"/>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#12r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>123</height>
+                                        <width>128</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">23</dim>
+                                        <dim type="bottom">44</dim>
+                                        <dim type="right">30</dim>
+                                        <dim type="left">13</dim>
+                                        <dim type="intercolumn">15</dim>
+                                    </dimensions>
+                                </layout>
+                                
+                                <layout columns="2" writtenLines="16 20">
+                                    <locus from="88r" to="90va"/>
+                                    <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#89r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea2">
+                                        <height>127</height>
+                                        <width>134</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin2">
+                                        <dim type="top">18</dim>
+                                        <dim type="bottom">32</dim>
+                                        <dim type="right">17</dim>
+                                        <dim type="left">8</dim>
+                                        <dim type="intercolumn">12</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                           
                         </objectDesc>
                         
                         <handDesc>
@@ -238,6 +277,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-16">Created record</change>
+            <change who="DR" when="2020-02-18">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

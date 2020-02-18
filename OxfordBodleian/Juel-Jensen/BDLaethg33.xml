@@ -59,6 +59,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <depth>37</depth>
                                     </dimensions>
                                     <measure type="weight" unit="g">162</measure>
+                                    <dimensions type="folio" unit="mm">
+                                        <height>93</height>
+                                        <width>77</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#59r"/>.</note>
                                 </extent>
                                 
                                 <collation>
@@ -109,6 +114,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </collation>
                                 
                             </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="1" writtenLines="16">
+                                    <locus from="1v" to="4v"/>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#3r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>61</height>
+                                        <width>64</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">10</dim>
+                                        <dim type="bottom">23</dim>
+                                        <dim type="left">5</dim>
+                                    </dimensions>
+                                    <note>The outer margin has been damaged and its original dimension not be taken from the 
+                                    manuscript anymore.</note>
+                                </layout>
+                                
+                                <layout columns="1" writtenLines="11">
+                                    <locus from="5r" to="84r"/>
+                                    <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#59r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea2">
+                                        <height>61</height>
+                                        <width>64</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin2">
+                                        <dim type="top">8</dim>
+                                        <dim type="bottom">22</dim>
+                                        <dim type="right">9</dim>
+                                        <dim type="left">11</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                            
                         </objectDesc>
                         
                         <handDesc>
@@ -180,6 +219,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-14">Created record</change>
+            <change who="DR" when="2020-02-18">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
