@@ -61,7 +61,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>340</width>
                                         <depth>79</depth>
                                     </dimensions>
-                                    <measure type="weight" unit="g"></measure>
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <height>395</height>
+                                        <width>332</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#52r"/>.</note>
                                 </extent>
                                 <collation>
                                     <list>
@@ -163,6 +167,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
                             </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="3" writtenLines="20">
+                                    <locus from="4ra" to="162vc"/>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#52r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>266</height>
+                                        <width>255</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">50</dim>
+                                        <dim type="bottom">91</dim>
+                                        <dim type="right">60</dim>
+                                        <dim type="left">25</dim>
+                                        <dim type="intercolumn">25</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                            
                         </objectDesc>
                         
                         <handDesc>
@@ -234,6 +257,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-13">Created record from metadata provided by Jacopo Gnisci</change>
+            <change who="DR" when="2020-02-21">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
