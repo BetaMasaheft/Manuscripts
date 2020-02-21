@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 170</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +38,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Homiliary in Honor of the Archangel Michael, ድርሳነ፡ ሚካኤል፡</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="109v"/><title type="incomplete" ref="LIT1507GadlaT"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>incomplete at the beginning</note>
+                  </msItem>
+                  <msItem xml:id="ms_i2"><locus from="109v" to="111r"/><title>Genealogy of Abunä Täklä Haymanot, <foreign xml:lang="gez">መጽሐፈ፡ ልደቱ፡ ለአቡነ፡ ተክለ፡ ሃይማኖት፡</foreign></title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i3"><locus from="111r" to="115v"/><title type="complete" ref="LIT3971Taamme"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>Eleven Miracles of <persName ref="PRS11112TaklaH"/></note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -58,6 +67,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  </seg>
+                  <desc>The words Michael and Täklä Haymanot are rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#21v"/><desc><ref type="authFile" corresp ="AT1035HolyMan"/><persName ref="PRS11112TaklaH"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#47r"/><desc>Abunä Samu'el <ref type="authFile" corresp ="AT1118AbunaSamuel"/>, riding a lion</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d3"><locus target="#92r"/><desc><ref type ="authFile" corresp="AT1035HolyMan"/> <name ref="PRS4306GabraMa"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d4"><locus target="#116v"/><desc><ref type="authFile" corresp="AT1082Angel"/> with a <term key="sword"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d5"><locus target="#117r"/><desc>crude drawing with caption <q>Abunä Täklä Haymanot of Däbrä Libanos</q></desc></decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <locus target="#116r #116v"/>
+                    <desc type="GuestText">
+                    excerpt of <title type="complete" ref="LIT2930RepCh211"/>
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <locus target="#117v"/>
+                    <desc>
+                    Blank
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    marginal notation to mark arrangement
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <locus target="#16r #17r #36r #38v"/>
+                    <desc>
+                    (etc.) words of text are written interlinearly;
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <locus target="#15v #23r #36v #39v #44r"/>
+                    <desc>
+                    (etc.) erasure markings are visible;
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <locus target="#25r #31r #98r"/>"
+                    <desc>
+                    text has been removed
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +148,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2019-12-27" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

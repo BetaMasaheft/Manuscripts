@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Chiara Codex 1</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Prayer of Mary at Golgotha, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡</summary>
-                  <msItem xml:id="ms_i1">
+                  <msItem xml:id="ms_i1"><locus from="1r" to="30v"/><title type="complete" ref="LIT2246salotz"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
@@ -58,6 +59,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The words Mary and Jesus Christ are rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <locus target="#ir(ecto) #iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto) #iv(verso) #31r #31v #32r #32v #33r #33v #34r #34v"/>
+                    <desc>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <locus target="#19r"/>
+                    <desc>
+                    words of text are written interlinearly
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <locus target="#14r"/>
+                    <desc>
+                    erasure markings are visible
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +117,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-09" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

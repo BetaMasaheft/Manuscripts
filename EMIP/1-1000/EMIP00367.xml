@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Delamarter Codex Fragment 17</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +38,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Image of Märqorewos, Image of Honorable Saints, </summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="1v"/><title>Fragment of Image of Märqorewos, <foreign xml:lang="gez">መልክአ፡ መርቆሬዎስ፡</foreign></title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>(illumination of two angels with drawn swords is painted over most of <locus target="#1v"/>)</note>
+                </msItem>
+                  <msItem xml:id="ms_i2"><locus from="2r" to="2v"/><title>Fragment of Image of Honorable Saints, <foreign xml:lang="gez">መልክአ: ቅዱሳን: ኄራን:</foreign></title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>(illumination of Madonna and Child is painted over most of <locus target="#2r"/>)</note>
+                </msItem>
+                  <msItem xml:id="ms_i3"><locus from="3r" to="3v"/><title>Fragment of Image of Tewodros, Mälk‘a Tewodros</title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>(illumination of Madonna and Child is painted over most <locus target="#3v"/>)</note>
+                </msItem>
+                  <msItem xml:id="ms_i4"><locus from="4r" to="4v"/><title>Fragment of Image of Ewosṭatewos <foreign xml:lang="gez">መልክአ፡ ኤዎስጣቴዎስ።</foreign></title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>(illumination of Saint George and the Dragon is painted over most of <locus target="#4r"/>)</note>
+                </msItem>
+                  <msItem xml:id="ms_i5"><locus from="5r" to="6v"/><title>Fragment of Unknown Image (on Repentance and the Soul)</title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>(illumination of Madonna and Child is painted over most of <locus target="#5v"/> and an illumnination of Saint George and the Dragon is painted over most of <locus target="#6r"/>)</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -58,6 +76,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#1r"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#2v"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/></desc></decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <desc>
+                    Provenance: Received in Addis from Demeke Berhane, May, 2004.
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <locus target="#3r #5r"/>
+                    <desc>
+                    text is written in the upper margin with symbol () marking the location where it is to be inserted
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <locus target="#6v"/>
+                    <desc>
+                    a correction to the text is inserted between the columns and a mark between column 2, lines 26 and 27 indicates the section to which the insertion belongs
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +129,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-16" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

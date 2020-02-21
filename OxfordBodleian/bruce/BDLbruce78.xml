@@ -44,24 +44,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <summary/>
                   
                   <!--  can the msItems/work IDs be arranged better?-->
+                  <!-- correct msItem loci to be checked with images-->
                   
                   <msItem xml:id="ms_i1">
-                     <locus from="1" to="81"/>
+                     <locus from="1ra" to="81ra"/>
                      <title type="incomplete" ref="LIT1560Gospel"/>
                      <textLang mainLang="gez"/> 
                      
                      <msItem xml:id="ms_i1.1">
-                        <locus from="1" to="12"/>
+                        <locus from="1ra" to="12rb"/>
                         <title type="complete" ref="LIT1560Gospel#IntroductionGospels"/>
                         <textLang mainLang="gez"/> 
                         
                         <msItem xml:id="ms_i1.1.1">
-                           <locus from="1"/>
+                           <locus from="1ra" to="7va"/>
                            <title type="complete" ref="LIT1560Gospel#IntroductionMaqdema"/>
                            <textLang mainLang="gez"/>
                         </msItem>
                         
                         <msItem xml:id="ms_i1.1.2">
+                           <locus target="#7vb"/>
+                           <locus from="4ra" to="4rb"/>
                            <title type="complete" ref="LIT1349EpistlEusebius"/>
                            <textLang mainLang="gez"/> 
                         </msItem>
@@ -77,6 +80,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
                         
                         <msItem xml:id="ms_i1.1.5">
+                           <locus from="9ra" to="11rb"/>
                            <title type="incomplete" ref="LIT1560Gospel#IntroductionCanons"/>
                            <textLang mainLang="gez"/>  
                            <note>There are only four canon tables.</note>
@@ -85,7 +89,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                      
                      <msItem xml:id="ms_i1.2">
-                        <locus from="13" to="56"/>
+                        <locus from="13ra" to="56ra"/>
                         <title type="complete" ref="LIT2709Matthew" xml:lang="gez">ወንጌል፡ ዘማቴዎስ፡</title>
                         <textLang mainLang="gez"/> 
                         <note>The text of this Gospel is filled to such an extent with glosses that it resembles more a paraphrase
@@ -93,7 +97,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </msItem>
                         
                         <msItem xml:id="ms_i1.3">
-                           <locus from="56"/>
+                           <locus from="56ra" to="56va"/>
                            <title type="complete" ref="LIT1882MarkGo#BiographyMark"/>
                            <textLang mainLang="gez"/> 
                            <note>The various divisions of the Gospel of Mark and the 48 sections into which the
@@ -101,14 +105,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
                         
                         <msItem xml:id="ms_i1.4">
-                           <locus from="57" to="80"/>
+                           <locus from="57ra" to="80rb"/>
                            <title type="complete" ref="LIT2711Mark" xml:lang="gez">ወንጌል፡ ዘማርቆስ፡</title>
                            <textLang mainLang="gez"/> 
                            <note>There are many glosses, but less than in <ref target="#ms_i1.2"/>.</note>
                         </msItem>
                         
                         <msItem xml:id="ms_i1.5">
-                           <locus from="80" to="81"/>
+                           <locus from="80rb" to="81ra"/>
                            <title type="complete" ref="LIT1812GospelLuke#BiographyLuke"/>
                            <textLang mainLang="gez"/> 
                            <note>The 84 chapters, into which <ref type="work" corresp="LIT1812GospelLuke"/> is divided, are added after
@@ -124,20 +128,153 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
+                           <note><locus target="#iii"/> and <locus target="#iv"/> are of a different kind of parchment, which is whiter and lighter,
+                              probably European.
+                              Both contain an impression, possibly from the manufacturer  (CASTRE visible).</note>
                         </support>
                         <extent>
-                           <measure unit="leaf">81</measure>
+                           <measure unit="leaf">iii + 81 + iv</measure>
                            <note>formae 4<hi rend="apices">ae</hi> 
                            </note>
+                           <dimensions type="outer" unit="mm">
+                              <height>302</height>
+                              <width>278</width>
+                              <depth>43</depth>
+                           </dimensions>
+                           <dimensions type="leaf" unit="mm"  xml:id="leafdim">
+                              <height>294</height>
+                              <width>279</width>
+                           </dimensions>
+                           <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#21r"></locus>.</note>
+                           <measure type="weight" unit="g">2125</measure>
                         </extent>
+                         <foliation>The manuscript is foliated in pencil in the upper right corner. Two fly-leaves each at the beginning and end are not foliated.
+                         Three blank leaves at the beginning and one at the end are foliated with Roman numerals. </foliation>
+                        
                         <collation>
+                           <signatures>
+                              All quires from <ref target="#q1"/> to <ref target="#q13"/> are marked by quire marks in black ink written by a European hand:
+                               1 in the upper left corner of <locus target="#1r"/>, cut off;
+                              remains of 2 in the upper left corner of <locus target="#9r"/>;
+                              3 in the upper left corner of <locus target="#13r"/>, cut off;
+                              4 in the upper left corner of <locus target="#21r"/>, cut off;
+                              5 in the upper left corner of <locus target="#29r"/>, cut off;
+                              remains of a numeral, probably 6, in the upper left corner of <locus target="#37r"/>, cut off;
+                             7 in the upper left corner of <locus target="#45r"/>, cut off;
+                              remains of 8 in the upper left corner of <locus target="#53r"/>, cut off;
+                              9 in the upper left corner of <locus target="#61r"/>, cut off;
+                              remains, possibly of 10, in the upper left corner of <locus target="#69r"/>, cut off;
+                              remains of a numeral in the upper left corner of <locus target="#78r"/>, cut off;
+                              remains of a numeral, possibly containing 2, in the upper left corner of <locus target="#78r"/>, cut off;
+                              remains of a numeral in the upper left corner of <locus target="#80r"/>, cut off.
+                           </signatures>
                            <note>
                               <locus target="#4r"/> has been misplaced at binding and should be placed after <locus target="#7"/>.</note>
+                           <list>
+                              <item xml:id="q1" n="A">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="i" to="iii"/>
+                                 3, stub before 1
+                              </item>
+                              
+                              <item xml:id="q2" n="1">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="1r" to="8v"/>
+                                 <note>The quire structure cannot be clearly observed.</note>
+                                 <note>Stub between <locus target="#1"/> and <locus target="#2"/>, 
+                                 stub between <locus target="#6"/> and <locus target="#7"/>, <locus target="#7"/> sewn on a stub.</note>
+                              </item>
+                              
+                              <item xml:id="q3" n="2">
+                                 <dim unit="leaf">4</dim>
+                                 <locus from="9r" to="12v"/>
+                                 3, stub after 1
+                                 2 sewn to stub
+                              </item>
+                              
+                              <item xml:id="q4" n="3">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="13r" to="20v"/>
+                              </item>
+                              
+                              <item xml:id="q5" n="4">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="21r" to="28v"/>
+                              </item>
+                              <item xml:id="q6" n="5">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="29r" to="36v"/>
+                              </item>
+                              <item xml:id="q7" n="6">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="37r" to="44v"/>
+                              </item>
+                              <item xml:id="q8" n="7">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="45r" to="52v"/>
+                              </item>
+                              <item xml:id="q9" n="8">
+                                 <dim unit="leaf">9</dim>
+                                 <locus from="53r" to="60v"/>
+                              </item>
+                              <item xml:id="q10" n="9">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="61r" to="68v"/>
+                              </item>
+                              <item xml:id="q11" n="10">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="69r" to="76v"/>
+                              </item>
+                              <item xml:id="q12" n="11">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="77r" to="79v"/>
+                                 <note>The structure of <ref target="#q12"/> is not completely observable from the manuscript. It is possible that it did
+                                 not constitute an original quire, as also indicated by the remains of a quire signature on <locus target="#78"/>.</note>
+                              </item>
+                              <item xml:id="q13" n="12">
+                                 <dim unit="leaf">2</dim>
+                                 <locus from="80r" to="81v"/>
+                              </item>
+                              <note><locus target="#iv"/> was added during the binding.</note>
+                           </list>
                         </collation>
+                        <condition key="good"/>
                      </supportDesc>
                      
                      <layoutDesc>
-                        <layout columns="2"/>
+                        <layout columns="2" writtenLines="24">
+                           <locus from="1ra" to="8vb"/>
+                           <note corresp="#margin1 #textarea1">Data on text area and margin dimensions taken from <locus target="#6r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea1"> 
+                              <height>231</height>
+                              <width>220</width>
+                           </dimensions>
+                           <dimensions type="margin" unit="mm" xml:id="margin1">
+                              <dim type="top">32</dim>
+                              <dim type="bottom">38</dim>
+                              <dim type="right">42</dim>
+                              <dim type="left">10</dim>
+                              <dim type="intercolumn">16</dim>
+                           </dimensions>
+                           <ab type="ruling">Ruling and pricking are visible.</ab>
+                        </layout>
+                        
+                     <layout columns="2" writtenLines="24">
+                        <locus from="13ra" to="81ra"/>
+                        <note corresp="#margin2 #textarea2">Data on text area and margin dimensions taken from <locus target="#21r"/>.</note>
+                        <dimensions unit="mm" xml:id="textarea2"> 
+                           <height>211</height>
+                           <width>223</width>
+                        </dimensions>
+                        <dimensions type="margin" unit="mm" xml:id="margin2">
+                           <dim type="top">29</dim>
+                           <dim type="bottom">52</dim>
+                           <dim type="right">31</dim>
+                           <dim type="left">20</dim>
+                           <dim type="intercolumn">15</dim>
+                        </dimensions>
+                        <ab type="ruling">Ruling and pricking are visible.</ab>
+                     </layout>
                      </layoutDesc>
                      
                   </objectDesc>
@@ -158,9 +295,32 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <item xml:id="e2" corresp="#ms_i1.4" rend="marginal">
                            <desc>The chapter numbers of the Gospel harmony, amounting to 235, are indicated in the margins.</desc>
                         </item>
+                        
+                        <item xml:id="e3">
+                           <desc type="StampExlibris">Ex libris of <persName ref="PRS2916Bruce"/> glued on the inner front board, containing
+                              shelfmarks of the manuscript: 78. Aeth. Cat. 2.
+                              Bruce of Kinnaird Nº 2</desc>
+                        </item>
+                        
+                        <item xml:id="e4">
+                           <desc>A pagemark of blue textile is sewn to the headband. </desc>
+                        </item>
                      </list>
                      
                   </additions>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">European binding, red leather with gilded borders. Imprinted on the spine: New Testam.
+                           Cover of the inner board and first fly-leaf gilded paper with floral pattern.
+                           The textblock has been trimmed and its edges were gilded.
+                           One paper fly leaf each, containing watermarks, at the front and back.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                           <material key="paper"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
                   
                </physDesc>
                
@@ -224,6 +384,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2017-04-25">Created catalogue entry</change> 
          <change who="DR" when="2017-04-26">Additions</change> 
          <change who="DR" when="2017-06-26">Changes</change> 
+         <change who="DR" when="2020-02-01">Updated with codicological information during consultation of the manuscript.</change> 
+         <change who="DR" when="2020-02-05">Improved binding according to proposal by Denis Nosnitsin</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

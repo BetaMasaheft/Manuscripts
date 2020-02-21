@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 179</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +38,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Lectionary Readings from the New Testament, ግጽው: ዘወንጌል: (f<locus target="#1r"/>-52r) Lectionary Readings from the Epistles and Acts (f<locus target="#53r"/>-64v), incomplete at the end</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="52r"/><title>Lectionary Readings from the Gospels, <foreign xml:lang="gez">ግጽው: ዘወንጌል:.</foreign></title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                </msItem>
+                  <msItem xml:id="ms_i2"><locus from="53r" to="64v"/><title>Lectionary Readings from the Epistles and Acts, <foreign xml:lang="gez">ግጽው:</foreign></title>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <note>incomplete at the end</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -58,6 +63,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word Mary is rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#52r"/> (lines of alternating red and black dots)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <locus target="#52r"/>
+                    <desc type="OwnershipNote">
+                    Note of ownership, <foreign xml:lang="gez">እምባየ፡ ምስጉን፡ ዓዱ፡ ማራ፡ ደቂ፡ አካለ[፡]ጉዛይ፡ ሸመጀና፡.</foreign> Translation: Ǝmbayä Mǝsgun, from (lit. son of) Akalä Guzay Šämäjäna (in Eritrea)
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <locus target="#52v"/>
+                    <desc>
+                    Writing exercise: Ethiopic numbers
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <locus target="#2r #6v #8r #10r #12v"/>
+                    <desc>
+                    (etc.) words of text are written interlinearly;
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <locus target="#4r"/>
+                    <desc>
+                    lines of text are written interlinearly
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +133,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-09" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

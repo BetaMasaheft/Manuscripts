@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      type="mss"
@@ -11,6 +11,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Harper Codex</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,7 +38,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Canticle of the Flower, ማሕሌተ፡ ጽጌ፡ (f<locus target="#1r"/>-57v); Hymn to Mary, “All the Numerous Hosts of Angels Praise You,” ኩሎሙ ሠራዊተ: መላእክት: አዕላፍ: (no Chaîne, Répertoire number) (f<locus target="#57v"/>-58v)</summary>
-                  <msItem xml:id="ms_i1">
+                  <msItem xml:id="ms_i1"><locus from="1r" to="57v"/><title type="complete" ref="LIT1834Mahlet"/>
+                  <textLang mainLang="gez">Gə‘əz</textLang>
+                </msItem>
+                  <msItem xml:id="ms_i2"><locus from="57v" to="58v"/><title>Hymn to Mary, “All the Numerous Hosts of Angels Praise You,” <foreign xml:lang="gez">ኩሎሙ ሠራዊተ: መላእክት: አዕላፍ:</foreign></title>
                      <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
@@ -58,6 +62,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The words Mary, God and Gabriel are rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#3r"/><desc><ref type="authFile" corresp="AT1082Angel"/></desc></decoNote>
+                    <decoNote type="frame" xml:id="d2">
+                    Decorative designs:
+                    <locus target="#1r #42r #58v"/> (ḥaräg);
+                    <locus target="#1v #41v"/> (multiple full stops);
+                    <locus target="#57r"/> (line of alternating red and black dots).
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e1">
+                      <desc>
+                      marginal notation to mark readings
+                      </desc>
+                      </item>
+                      <item xml:id="e2">
+                      <locus target="#8v #9r #27v"/>
+                      <desc>
+                      words of text are written interlinearly;
+                      </desc>
+                      </item>
+                      <item xml:id="e3">
+                      <locus target="#34v"> f. 34v, line 3</locus><locus target="#48r"> f. 48r, line 1</locus>
+                      <desc>
+                      words of text are written in the upper margin with a symbol (┴) marking the location where the text is to be inserted;
+                      </desc>
+                      </item>
+                      <item xml:id="e4">
+                      <locus target="#15r #20r"/>
+                      <desc>
+                      erasure markings are visible
+                      </desc>
+                      </item>
+                    </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -86,6 +135,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-23" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

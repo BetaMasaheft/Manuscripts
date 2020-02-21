@@ -12,6 +12,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 144</title>
             <editor key="ABe"/>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -44,8 +46,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <msContents>
                   <summary>Fragment of Lamentations of the Virgin, ሰቆቃወ፡ ድንግል፡, Continuation of Tweed 143</summary>
                   <msItem xml:id="ms_i1">
-                     <locus from="1r" to="8v"/>
-                     <title type="complete" ref="LIT2987RepCh268"/>
+                     <locus from="1r" to="8v" facs="001"/>
+                     <title type="incomplete" ref="LIT2987RepCh268"/>
                     <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                </msContents>
@@ -56,64 +58,101 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">10</measure>
+                           <measure unit="quire">1</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>184</height>
+                              <width>120</width>
+                              <depth>2</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quire 1 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="001"></locus>
+                              Quire 1
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">13</dim>
+                           <dim type="bottom">30</dim>
+                           <dim type="right">23</dim>
+                           <dim type="left">12</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="16"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="rubrication">
                            <foreign xml:lang="gez">ማርያም፡</foreign>
                         </seg>
-                        <desc>The word Mary is rubricated. Names are often abbreviated in red ink</desc>
+                        <desc>Names are often abbreviated in red ink</desc>
                      </handNote>
                   </handDesc>
                   <decoDesc>
                      <decoNote type="frame" xml:id="d1">
                   Decorative designs:
-                  <locus target="#8v"/> (multiple full stops)
+                  <locus target="#8v" facs="009"/> (multiple full stops)
                   </decoNote>
                   </decoDesc>
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <desc type="OwnershipNote">
-                              <locus target="#8v"/>: Owner of the manuscript is mentioned, Wäldä Maryam
-                    </desc>
+                          <locus target="#8v" facs="009"/>
+                           <desc type="OwnershipNote">Owner of the manuscript is mentioned, Wäldä Maryam</desc>
+                        </item>
+                        <item xml:id="a2">
+                          <locus target="#9v" facs="010"/>
+                          <desc>Note on the measurement of the land, written above in faint pencil ‎and below in black ink‎</desc>
                         </item>
                         <item xml:id="e1">
-                           <desc>
-                              <locus target="#9r"/>: Illigible note, written in faint pencil
-                    </desc>
+                          <locus target="#9r" facs="009"/>
+                           <desc>Illigible note, written in faint pencil</desc>
                         </item>
                         <item xml:id="e2">
-                           <desc>
-                              <locus target="#10r #10v"/>: blank
-                    </desc>
+                          <locus target="#10r #10v" facs="010 011"/>
+                           <desc>blank</desc>
                         </item>
                         <item xml:id="e3">
-                           <desc>
-                    Identified in the insurance hand list as Case 67/23
-                    </desc>
+                           <desc>Identified in the insurance hand list as Case 67/23</desc>
                         </item>
                         <item xml:id="e4">
-                           <desc>
-                    Scribal intervention: words of text are written interlinearly (<locus target="#1r #2v #3r #5v"/>); text has been removed (<locus target="#5v #6v"/>)
-                    </desc>
+                          <locus target="#1r #2v #3r #5v" facs="001 003 003 006"/>
+                           <desc>Words of text are written interlinearly</desc>
                         </item>
-
+                        <item xml:id="e5">
+                        <locus target="#5v #6v" facs="006 007"/>
+                        <desc>Text has been removed</desc>
+                        </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, this quire was once part of a larger work and now is unbound.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>nineteenth century</origDate>
-                  </origin>
+                     <origDate notBefore="1800" notAfter="1899">Nineteenth century</origDate>
+                     <listRelation>
+                       <relation active="EMIP02093#UniCirc1" name="sdc:undergoesTransformation" passive="EMIP02093#tr1"/>
+                       <relation active="EMIP02093#UniCirc1" name="sdc:hasCertainty" passive="sdc:Hypothetique"/>
+                       <relation active="EMIP02093#tr1" name="sdc:produces" passive="EMIP02093"/>
+                       <relation active="EMIP02093#tr1" name="sdc:produces" passive="EMIP02092"/>
+                       </listRelation>
+                   </origin>
                </history>
             </msDesc>
          </sourceDesc>
@@ -135,10 +174,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2019-11-07" who="ABe">Added items</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-11-07" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-31" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2020-02-07" who="RL">Added image links, added on item to additions, minor edits to additions and extras</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
