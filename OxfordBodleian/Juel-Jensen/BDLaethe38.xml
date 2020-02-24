@@ -64,6 +64,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>129</width>
                                         <depth>56</depth>
                                     </dimensions>
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <height>180</height>
+                                        <width>127</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#31r"/>.</note>
                                     <measure unit="g" type="weight">785</measure>
                                 </extent>
                                 <foliation><locus from="1" to="9"/> and <locus from="80" to="81"/> are not foliated. A protective bifolium has been glued to
@@ -115,6 +120,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
                             </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="2" writtenLines="15 17">
+                                    <locus from="11ra" to="80rb"/>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#31r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>116</height>
+                                        <width>96</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">19</dim>
+                                        <dim type="bottom">43</dim>
+                                        <dim type="right">19</dim>
+                                        <dim type="left">11</dim>
+                                        <dim type="intercolumn">9</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                            
                         </objectDesc>
                         
                         <handDesc>
@@ -187,6 +211,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-13">Created record</change>
             <change who="DR" when="2020-01-22">Added weight and collation</change>
+            <change who="DR" when="2020-02-24">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

@@ -58,6 +58,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>57</width>
                                         <depth>25</depth>
                                     </dimensions>
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <height>62</height>
+                                        <width>55</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#1r"/>.</note>
                                     <measure type="weight" unit="g">61</measure><!--without box-->
                                     <measure type="weight" unit="g">111</measure><!--with box-->
                                 </extent> 
@@ -97,6 +102,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </list>
                                 </collation>
                             </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="1" writtenLines="9 10">
+                                    <locus from="1r" to="46v"/>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#1r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>36</height>
+                                        <width>41</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">9</dim>
+                                        <dim type="bottom">17</dim>
+                                        <dim type="right">9</dim>
+                                        <dim type="left">5</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
                            
                         </objectDesc>
                         
@@ -169,6 +191,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-17">Created record</change>
+            <change who="DR" when="2020-02-24">Added dimensions and layout</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
