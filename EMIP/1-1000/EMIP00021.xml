@@ -36,13 +36,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <textLang mainLang="gez">Gə‘əz</textLang>
 
                   <msItem xml:id="ms_i1">
-                    <locus from="1r" to="20v"/>
+                    <locus from="1r" to="20v" facs="001"/>
                     <title type="complete" ref="LIT2509Weddas"/>
-                  </msItem>	
+                  </msItem>
                   <msItem xml:id="ms_i2">
-                     <locus from="20v" to="27v"/>
-                     <locus from="29r" to="29v"/>
-                     <locus from="31r" to="31v"/>
+                     <locus from="20v" to="27v" facs="021"/>
+                     <locus from="29r" to="29v" facs="029"/>
+                     <locus from="31r" to="31v" facs="031"/>
                      <title type="complete" ref="LIT1113Anqasa"/>
                   </msItem>
 
@@ -69,22 +69,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                           <list>
                               <item xml:id="q1" n="1">
                                  <dim unit="leaf">11</dim>
-                                 <locus from="1" to="11"/>
+                                 <locus from="1" to="11" facs="001"/>
                                  <note>
-                                    <locus target="#11"/> is sewn onto folio 10.</note>
+                                    <locus target="#11" facs="011"/> is sewn onto folio 10.</note>
                               Quire 1:
                               11 added
                             </item>
                               <item xml:id="q2" n="2">
                                  <dim unit="leaf">8</dim>
-                                 <locus from="12" to="19"/>
+                                 <locus from="12" to="19" facs="012"/>
                               Quire 2
                             </item>
                               <item xml:id="q3" n="3">
                                  <dim unit="leaf">13</dim>
-                                 <locus from="20" to="32"/>
+                                 <locus from="20" to="32" facs="020"/>
                                  <note>
-                                    <locus from="28" to="32"/> seem to be separate sheets sewn onto quire 3.</note>
+                                    <locus from="28" to="32"  facs="028 029 030 031 032"/> seem to be separate sheets sewn onto quire 3.</note>
                               Quire 3
                               9 added
                               10 added
@@ -108,43 +108,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </layoutDesc>
                   </objectDesc>
                   <decoDesc>
-                    <decoNote type="miniature" xml:id="d01">
-                      Front cover: Crude drawing in pencil
+                    <decoNote type="miniature" xml:id="d1">
+                      <locus target="#Inside front cover"  facs="001"/>
+                      <desc>Crude drawing in pencil</desc>
                     </decoNote>
-                    <decoNote type="miniature" xml:id="d02">
-                      Back cover: Crude drawing of talisman face on back cover (upside down)
+                    <decoNote type="miniature" xml:id="d2">
+                      <locus target="#Inside back cover" facs="033"/>
+                      <desc>Crude drawing of talisman face</desc>
                     </decoNote>
-                    <decoNote type="frame" xml:id="d03">
-                      Decorative designs: <locus target="#1r #2v"/> (<foreign xml:lang="gez">ሐረግ፡</foreign> using black and red)
+                    <decoNote type="frame" xml:id="d3">
+                      <desc>Decorative designs: <locus target="#1r #2v" facs="001 003"/> (<foreign xml:lang="gez">ሐረግ፡</foreign> using black and red)</desc>
                     </decoNote>
                   </decoDesc>
                   <additions>
                     <list>
-                        <item xml:id="a1">
-                           <desc>
-                              <locus target="#3v #4r"/> Practice on how to write a letter
-                        </desc>
+                        <item xml:id="e1">
+                          <locus target="#3v #4r" facs="004"/>
+                           <desc>Practice on how to write a letter</desc>
                         </item>
                         <item xml:id="a2">
-                           <desc>
-                              <locus from="13v" to="16r"/> Isolated sentence from Song 1
-                        </desc>
+                          <locus target="#13v #14r #14v #15r #15v #16r" facs="014 015 016"/>
+                           <desc type="GuestText">Isolated sentence from <title type="incomplete" ref="LIT2362Songof#Chp1"/></desc>
                         </item>
                         <item xml:id="a3">
-                           <desc>
-                              <locus target="#32r"/> Words and sentences copied from the Wəddase Maryam, in crude hands
+                          <locus target="#32r" facs="032"/>
+                           <desc type="GuestText">Words and sentences copied from <title type="incomplete" ref="LIT2509Weddas"/>, in crude hands
                         </desc>
                         </item>
-                        <item xml:id="a4">
-                           <desc>
-                          Overlooked words of text are written interlinearly (<locus target="#10r #16r #23r"/>)
-                        </desc>
-                        </item>
-                        <item xml:id="e1">
-                        Rebound in some disorder. The general condition of the vellum is dirty
-                      </item>
                         <item xml:id="e2">
-                           <locus target="#32v"/> blank
+                          <locus target="#10r #16r #23r" facs="010 016 023"/>
+                           <desc>Overlooked words of text are written interlinearly</desc>
+                        </item>
+                        <item xml:id="e3">
+                        <desc>Rebound in some disorder. The general condition of the vellum is dirty</desc>
+                      </item>
+                        <item xml:id="e4">
+                           <locus target="#32v" facs="033"/>
+                              <desc>blank</desc>
                       </item>
                     </list>
                   </additions>
@@ -179,6 +179,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2018-06-16" who="JS">Added quire desc, margin dim, binding desc, columns/lines, dating info</change>
          <change when="2018-07-09" who="RL">Added items, miniatures, and extras</change>
+         <change when="2020-03-27" who="RL">Added image links, minor reformatting of additions and extras</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
