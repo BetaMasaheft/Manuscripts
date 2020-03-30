@@ -527,8 +527,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="page">6+124+2</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <measure unit="leaf" type="blank">13</measure>
+                                <locus target="#iv #iir #iiv #iiir #iiiv #ivr #ivv #vr #vir #viv #124 #125 #126"/>
+                                    <!-- Is it convenient to keep Roman numbers for the first pages? Confusion with r/v? -->
                                     <dimensions type="outer" unit="mm">
                                         <height>158</height>
                                         <width>128</width>
@@ -541,6 +542,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#19"/>.</note>
                                     <measure unit="g" type="weight">126</measure>
                                 </extent>
+                                <foliation>The manuscript has been paginated on the upper outer corner.</foliation>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -567,38 +569,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <seg type="script"/>
                                 <seg type="ink">Black, red</seg>
                                 <date notBefore="1950" notAfter="1960">mid-20th century</date>
-                                <!-- 
                                 <desc>
-                                    Fine handwriting.
+                                    Fine and sometimes hasty handwriting.
                                 </desc>
                                 <seg type="rubrication">
-                                    Nomina sacra; name of the Fisalgos; two initial lines on the incipit page; elements of the numerals and of the punctuation signs.
-                                </seg>
-                                <list type="abbreviations">
-                                    <item>
-                                        <abbr>እ(ስ)</abbr> for <expan>እስመ፡</expan> (e.g., <locus target="#104r"/>)
-                                    </item>
-                                    </item>
-                                </list>
-                                 -->
+                                    Divine names; name of the Fisalgos; two initial lines on the incipit page; elements of the numerals and of the punctuation signs.
+                                </seg>                               
                             </handNote>
                         </handDesc>
                         
                        <!-- <decoDesc>
-                         
                         </decoDesc>-->
                         
                         <additions>
                             <list>
                                 <item xml:id="a1">
-                                    <desc type=""/>
-                                    <locus from=""/>
+                                    <desc type="AcquisitionNote">Note on the acquisition of the manuscript</desc>
+                                    <locus target="#1r"/>
                                     <note>
-                                        Note on the production of the manuscript, written in English by <persName ref="PRS5782JuelJen"/>
+                                        The note is written in English by <persName ref="PRS5782JuelJen"/>. It states that the manuscript was donated in March 
+                                        <date calendar="gregorian">1982</date> by <persName ref="PRS8774sergewh"/>.
                                         <q xml:lang="en">
-                                            
+                                            I received this MS of the Ethiopic <foreign xml:lang="gez">ፊሳልጎስ</foreign> - Fisalgos, the early Ghe'ez version of Physiologus, in March 1982. Dr Sergew Hable Selassie 
+                                            very kindly has had it copied for me. This is one of the most difficult texts of the Ethiopic canon to obtain, and the only approximation to a herbal bestiary in Ghe'ez. 
+                                            Bent Juel-Suensen. For contents see: ... Ethiopia MSS in the BM 1877, pp. 313-315.
                                         </q>.
                                     </note>
+                                </item>
+                                <item xml:id="a2">
+                                    <desc type="Unclear"></desc>
+                                    <locus target="#vv"/>
+                                    <note>
+                                        The note is written upside down in the low margin of the page, perhaps in the same hand as that of the main text.
+                                        <q xml:lang="gez">
+                                            የዓሥሮ፡ እስከ፡ ፫ሰዓት፡ ይከዑ፡ አፍአ፡ ኵሎ፡ ማየ፡ ዘሰረበ፡ ብእሲ፡
+                                        </q>.
+                                    </note>
+                                </item>
+                                <item xml:id="e1">
+                                    <locus target=""/>
+                                    <desc></desc>
                                 </item>
                             </list>
                         </additions>
@@ -640,10 +650,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </bibl> 
                                         <bibl>
                                             <ptr target="bm:Weninger2005EAEFisalgos"/>
-                                        </bibl>
-                                        <bibl>
-                                            <ptr target=""/>
-                                        </bibl>
+                                        </bibl>                                       
                                     </listBibl>
                                 </source>
                             </recordHist>
@@ -684,6 +691,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-01-15">Created record</change>
             <change who="DR" when="2020-02-27">Added dimensions and layout</change>
             <change who="MV" when="2020-03-27">Added textual description</change>
+            <change who="MV" when="2020-03-30">Updated description (additiones, varia, etc.)</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
