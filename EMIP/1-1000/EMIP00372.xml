@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Rudulph Codex 5</title>
             <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -116,13 +117,76 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 66</measure>
+                           <measure unit="quire">Protection sheet + 6</measure>
                            <dimensions type="outer" unit="mm">
                               <height>215</height>
                               <width>164</width>
                               <depth>37</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 3–5 balanced; quires 1–2 adjusted balanced; quire 6 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">17</dim>
+                              <locus from="1" to="17" facs="003"></locus>
+                              <note>Folio stubs are visible between <locus target="#2 #3" facs="004 005"/>, <locus target="#3 #4" facs="005 006"/>, <locus target="#14 #15" facs="016 017"/>.</note>
+                              Quire 1:
+                              15, stub after 2
+                              14, stub after 3
+                              3, stub after 14
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="18" to="27" facs="020"></locus>
+                              <note>Folio stubs are visible between <locus target="#20 #21" facs="022 023"/> and <locus target="#23 #24" facs="025 026"/>.</note>
+                              Quire 2:
+                              4, stub after 6
+                              7, stub after 3
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="28" to="37" facs="030"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">9</dim>
+                              <locus from="38" to="46" facs="040"></locus>
+                              <note>A loose folio was found inserted in the incorrect place in the codex. It belongs between <locus target="#42v #44r" facs="045"/>.</note>
+                              Quire 4:
+                              6 added
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="47" to="56" facs="049"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">11</dim>
+                              <locus from="57" to="67" facs="059"></locus>
+                              <note>A single folio is attached at the end of quire 6 that may have been attached to a loose folio in quire 2.</note>
+                              Quire 6:
+                              11 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">12-20</dim>
+                           <dim type="bottom">45</dim>
+                           <dim type="right">25-27</dim>
+                           <dim type="left">7-12</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="21"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                   <handNote xml:id="h1" script="Ethiopic">
@@ -200,10 +264,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </item>
                   </list>
                 </additions>
+                <bindingDesc>
+                  <binding xml:id="binding" contemporary="partly">
+                    <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough hewn wood boards, front and back cover boards have been broken, back board has been repaired.</decoNote>
+                    <decoNote xml:id="b2" type="bindingMaterial">
+                      <material key="parchment"></material>
+                      <material key="wood"></material>
+                    </decoNote>
+                  </binding>
+                </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">Nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -224,6 +297,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2020-01-20" who="ABe">Added items</change>
                                     <change when="2020-03-27" who="ABe">Updated rubrication</change>
+                                    <change when="2020-03-30" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
