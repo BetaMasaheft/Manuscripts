@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 141</title>
-            <editor key="ABe"/>
+            <editor key="ABe"></editor>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -56,13 +57,82 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 63</measure>
+                           <measure unit="quire">Protection sheet + 9</measure>
                            <dimensions type="outer" unit="mm">
                               <height>148</height>
                               <width>110</width>
                               <depth>35</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–8 balanced; quire 9 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="11" to="18" facs="013"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="19" to="26" facs="021"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="27" to="34" facs="029"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">4</dim>
+                              <locus from="35" to="38" facs="037"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">4</dim>
+                              <locus from="39" to="42" facs="041"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="43" to="50" facs="045"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="51" to="58" facs="053"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">5</dim>
+                              <locus from="59" to="63" facs="061"></locus>
+                              <note>A folio stub is visible between <locus target="#62 #63" facs="064 065"/>.</note>
+                              Quire 9:
+                              2, stub after 4
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">10-12</dim>
+                           <dim type="bottom">25-27</dim>
+                           <dim type="right">10-15</dim>
+                           <dim type="left">5-7</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="15"/>
+                     </layoutDesc>
                   </objectDesc>
                   <decoDesc>
                     <decoNote type="miniature" xml:id="d1"><locus target="#ir(etco)"/><desc><ref type="authFile" corresp="AT1099StMary"/> The Assumption of Mary. <persName ref="PRS6819Mary"/> stands with arms folded over her chest in the midst of a crowd. <persName ref="PRS9496Thomas"/>, holding handkerchief given to him by Mary, kneels at the left</desc></decoNote>
@@ -150,10 +220,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </item>
                   </list>
                 </additions>
+                <bindingDesc>
+                  <binding xml:id="binding" contemporary="true">
+                    <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to wooden boards covered with tooled leather, headband and tailband.</decoNote>
+                    <decoNote xml:id="b2" type="bindingMaterial">
+                      <material key="parchment"></material>
+                      <material key="wood"></material>
+                      <material key="leather"></material>
+                    </decoNote>
+                  </binding>
+                </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1939">1929 - 50</origDate>
+                     <origDate notBefore="1929" notAfter="1950">1929-50 (Metropolitanate of Yoḥannəs mentioned on <locus target="#39r" facs="041"/>).</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -174,6 +254,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2019-10-02" who="ABe">Added items</change>
                                     <change when="2020-01-14" who="ABe">Added items</change>
+                                    <change when="2020-03-17" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
