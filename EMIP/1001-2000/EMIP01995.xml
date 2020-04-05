@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP01995">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP01995">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -49,8 +43,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <locus from="1r" to="165r" facs="004"/>
                      <title type="complete" ref="LIT2701Dawit"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                     <note>Psalms of David, opening with a prayer from the <title type="complete" ref="LIT3985Mazmura"/>
-                     </note>
+                     <msItem xml:id="ms_i1.1">
+                       <title type="incomplete" ref="LIT3985Mazmura"> opening prayer only</title>
+                     </msItem>
                   </msItem>
                </msContents>
                <physDesc>
@@ -202,9 +197,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <decoDesc>
                     <decoNote type="miniature" xml:id="d1">
                         <locus target="#166v" facs="170"/>
-                        <desc>
-                           <ref type="authFile" corresp="AT1031VirginAndChild"/> in red ink with caption <q>“Our Lady Mary with her Beloved Son.”</q>
-                        </desc>
+                        <desc><ref type="authFile" corresp="AT1031VirginAndChild"/> in red ink with caption <q>“Our Lady Mary with her Beloved Son.”</q></desc>
                      </decoNote>
                     <decoNote type="frame" xml:id="d2">
                     Decorative designs:
@@ -215,19 +208,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <desc type="GuestText">
-                              <locus target="#iir #iiv"/>: A beginning to the <title type="complete" ref="LIT2000Mazmur"/> with an opening prayer from the <ref type="authFile" corresp="AT1031VirginAndChild"/>. Discontinued after one psalm
-                    </desc>
+                           <desc type="GuestText"><locus target="#iir(ecto) #iiv(erso)"/>: A beginning to the <title type="incomplete" ref="LIT2000Mazmur"/> with an opening prayer from <title type="incomplete" ref="LIT3985Mazmura"/>. Discontinued after one psalm</desc>
                         </item>
                         <item xml:id="a2">
                           <locus target="#iiv(erso) #iiir(ecto)" facs="003"/>
-                           <desc type="GuestText">
-                              Spiritual Rewards (fruits) for reciting the Lord’s Prayer and the Psalms
-                    Incipit: <foreign xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ <gap reason="omitted"/> ንዑ፡ ስምዑኒ፡ ወእንግርክሙ፡ ዘወሀበክሙ፡ እግዚአብሔር፡ መፍቀሬ፡ ሰብእ፡ ለውሉደ፡ አዳም፡ <gap reason="omitted"/> ከመዝ፡ ይከውን፡ ፍሬሁ፡ ለአቡነ፡ ዘበሰማያት፡ ዘይጼሊ፡ በቤተ፡ ክርስቲያን፡</foreign>
+                           <desc type="GuestText">Spiritual Rewards (fruits) for reciting the Lord’s Prayer and the Psalms
+                             Incipit: <foreign xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ <gap reason="omitted"/> ንዑ፡ ስምዑኒ፡ ወእንግርክሙ፡ ዘወሀበክሙ፡ እግዚአብሔር፡ መፍቀሬ፡ ሰብእ፡ ለውሉደ፡ አዳም፡ <gap reason="omitted"/> ከመዝ፡ ይከውን፡ ፍሬሁ፡ ለአቡነ፡ ዘበሰማያት፡ ዘይጼሊ፡ በቤተ፡ ክርስቲያን፡</foreign>
                            </desc>
                         </item>
                         <item xml:id="e1">
-                          <locus target="#ir #iv #166r #167r #168r #168v" facs="001 002 169 170 171 172"/>
+                          <locus target="#ir(ecto) #iv(erso) #166r #167r #168r #168v" facs="001 002 169 170 171 172"/>
                            <desc>blank</desc>
                         </item>
                         <item xml:id="e2">
@@ -294,20 +284,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
@@ -315,6 +299,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-11-10" who="JS">Added quire maps, margin dim, columns/lines, binding desc, dating info.</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
          <change when="2019-12-23" who="RL">Added image links</change>
+         <change when="2020-01-27" who="ABe">Minor location edits</change>
+         <change when="2020-02-20" who="RL">Corrected ms contents, and contents of addition a1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

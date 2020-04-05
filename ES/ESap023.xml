@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="ESap023"
-     xml:lang="en"
-     type="mss">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESap023" xml:lang="en" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Gadla Gabra Manfas Qǝddus “Vita of Gabra Manfas Qǝddus” / Taʾāmra Gabra Manfas
-               Qǝddus “Miracles of Gabra Manfas Qǝddus”</title>
+            <title>Vita and Miracles of Gabra Manfas Qǝddus</title>
             <editor role="cataloguer" key="SA"/>
             <editor key="DN"/>
             <editor role="generalEditor" key="AB"/>
@@ -42,13 +35,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      Qǝddus “Miracles of Gabra Manfas Qǝddus”: 13 miracles (fols.
                      52va-67rb).</summary>
                   <msItem xml:id="ms_i1">
-
-                     <incipit>Test<foreign xml:lang="en"/>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
-                     <note/>
+                     <title ref="LIT1119DossierQMQ"/>
+                     <msItem xml:id="ms_i1.1">
+                        <locus from="3ra" to="52rb"/>
+                        <title ref="LIT1451GadlaG"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.2">
+                        <locus from="52rb" to="67rb"/>
+                        <title ref="LIT3977Taammer">Taʾāmra Gabra Manfas Qǝddus “Miracles of
+                           Gabra Manfas Qǝddus”: 13 miracles</title>
+                     </msItem>
+                     
                   </msItem>
                </msContents>
                <physDesc>
@@ -99,7 +96,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <locus from="67r" to="68v"/> IX(2/fols. 67r-68v).</item>
                            </list>
                         </collation>
-                        <condition key="good">Problem ???</condition>
+                        <condition key="good"></condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout/>
@@ -110,8 +107,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Mediocre</seg>
                         <seg type="ink">Black; red.</seg>
-                        <date>Second half of the 20th century.</date>
-                        <seg type="rubrication">Nomina sacra; name of the protagonist; names of the
+                        <date notBefore="1950" notAfter="2000">Second half of the 20th century.</date>
+                        <seg type="rubrication">Holy names; name of the protagonist; names of the
                            donors; groups of lines (alternating with black lines) in the incipit
                            pages of Texts I-II; incipits of sections/miracles; elements of the
                            punctuation signs; elements of Ethiopic numbers.</seg>
@@ -135,11 +132,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0030AP">ʿAddäqaḥarsi Ṗaraqliṭos / AP</placeName>
+                        <placeName ref="INS0030AP"></placeName>
                      </origPlace>
                      <origDate notBefore="1950" notAfter="2000">Second half of the 20th
                         century.</origDate>
                   </origin>
+                  <provenance>Various names of donors and owners are mentioned: Walatta Ḥawāryāt (s. <locus target="#6rb">6rb</locus>); Walatta Māryām (s. <locus target="#15ra">15ra</locus>);
+                     Walatta Śǝllāse (s. <locus target="#15ra">15ra</locus>); Ḫāyla Māryām (s.
+                     <locus target="#18vb">18vb</locus>); <roleName type="title">ʾabuna</roleName> Gabra Śǝllāse (s. <locus target="#27vb">27vb</locus>);
+                     ʾAmata Māryām (s. <locus target="#27vb">27vb</locus>); ʾArʾaya Śǝllāse (s.
+                     <locus target="#38va">38va</locus>); Gabra Ṣādǝq, Walatta ʾƎgziʾ, Walda
+                     Gabrǝʾel (s. <locus target="#67ra">67ra</locus>).</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -166,48 +169,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-               <person>
-                  <persName role="owner" ref="PRS0000">Walatta Ḥawāryāt (s. <locus target="#6rb">6rb</locus>); Walatta Māryām (s. <locus target="#15ra">15ra</locus>);
-                     Walatta Śǝllāse (s. <locus target="#15ra">15ra</locus>); Ḫāyla Māryām (s.
-                        <locus target="#18vb">18vb</locus>); <roleName type="title">ʾabuna</roleName> Gabra Śǝllāse (s. <locus target="#27vb">27vb</locus>);
-                     ʾAmata Māryām (s. <locus target="#27vb">27vb</locus>); ʾArʾaya Śǝllāse (s.
-                        <locus target="#38va">38va</locus>); Gabra Ṣādǝq, Walatta ʾƎgziʾ, Walda
-                     Gabrǝʾel (s. <locus target="#67ra">67ra</locus>).</persName>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
-               <person>
-                  <persName ref="PRS00000"/>
-                  <!--other-->
-               </person>
-            </listPerson>
-         </particDesc>
+         
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Hagiography"/>
             </keywords>
          </textClass>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="it">Italian</language>
-            <language ident="gez" xml:id="Lan05">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="DN" when="2010-05-04">Ethio-SPaRe team photographed the manuscript</change>
          <change who="SA" when="2010-10-21">catalogued</change>
          <change who="DN" when="2014-08-25">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change when="2020-03-24" who="ES">adjusted to schema split msitems provided IDs (no IDs for persons created)</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

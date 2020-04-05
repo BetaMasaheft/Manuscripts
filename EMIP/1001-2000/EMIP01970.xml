@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP01970">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP01970">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -74,8 +68,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <locus from="i" to="iii" facs="001"/>
                               <note>Folio stubs are visible before <locus target="#i" facs="001"/> and between <locus target="#i #ii" facs="002"/> and <locus target="#ii #iii" facs="003"/>.</note>
                               Protection Quire:
-                              1, stub after 2
-                              3, stub before 1
+                             <!-- 1, stub after 2
+                              3, stub before 1-->
+                               1, stub before 2
+                               2, stub before 3
+                               3, stub before 1
                             </item>
                             <item xml:id="q2" n="1">
                               <dim unit="leaf">10</dim>
@@ -210,7 +207,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <item xml:id="a2">
                           <locus target="#142v" facs="146"/>
                            <desc>Days in the year on which heaven is open to receive prayers, <foreign xml:lang="gez">ርኅወ፡ ሰማይ፡</foreign>
-                           Incipit: <foreign xml:lang="gez">ከመ፡ ታእምር፡ ርኅወ፡ ሰማይ፡ ዘይጼልዩ፡ ቦቱ፡ ጸሎት፡ ዘላእለ፡ ማያት፡ ወእምዝ፡ ይጠመቁ፡ በውእቱ፡ ማይ፡ ወይሰትዩ፡ እምኔሁ፡ ለትፈውሶ፡ ወለረድኤት፡ ወይከውን፡ ዝንቱ፡ አመ፡ ፳ ለጥቅምት፡ <gap reason="omitted"></gap></foreign>
+                           Incipit: <foreign xml:lang="gez">ከመ፡ ታእምር፡ ርኅወ፡ ሰማይ፡ ዘይጼልዩ፡ ቦቱ፡ ጸሎት፡ ዘላእለ፡ ማያት፡ ወእምዝ፡ ይጠመቁ፡ በውእቱ፡ ማይ፡ ወይሰትዩ፡ እምኔሁ፡ ለትፈውሶ፡ ወለረድኤት፡ ወይከውን፡ ዝንቱ፡ አመ፡ ፳ ለጥቅምት፡ <gap reason="omitted"/></foreign>
                            </desc>
                         </item>
                         <item xml:id="e1">
@@ -243,8 +240,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <desc>lines of text are written interlinearly</desc>
                         </item>
                         <item xml:id="e9">
-                          <locus target="#60r #125v" facs="063 129"/>
-                          <desc>lines 2 and 18 respectively: in the upper margin with a symbol (┴) marking the location where the text is to be inserted, and in another case where the symbol (+) is used</desc>
+                          <locus target="#60r" facs="063">f. 60r line 2</locus>
+                          <locus target="#125v" facs="129">f. 125v line 18</locus>
+                          <desc>lines of text are written in the upper margin with a symbol (┴) marking the location where the text is to be inserted, and in another case where the symbol (+) is used</desc>
                           </item>
                         <item xml:id="e10">
                           <locus target="#5v #8r #28v #59v #131r" facs="009 011 032 063 134"/>
@@ -275,20 +273,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">CreatedXML record from EMIP Collection Metadata.xsls</change>
@@ -297,6 +289,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-10-19" who="JS">Added margin dim, columns/lines, binding desc, dating.</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
          <change when="2019-12-06" who="RL">Added image links</change>
+         <change when="2020-02-12" who="RL">Corrected locus statement</change>
+         <change when="2020-03-19" who="PL">Fixes for issue https://github.com/BetaMasaheft/Documentation/issues/1332</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP02085">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02085">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 136</title>
             <editor key="ABe"/>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -44,23 +40,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <msContents>
                   <summary>Prayer of Mary at Golgotha, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡; Introduction to the Miracles of Mary, መቅድመ: ተአምረ: ማርያም: ዘሙዓልቃ:; Prayer of the Covenant, ጸሎተ፡ ኪዳን፡; Litany, ሊጦን፡, arranged for the days of the week</summary>
                   <msItem xml:id="ms_i1">
-                     <locus from="1r" to="26r "/>
+                     <locus from="1r" to="26r " facs="003"/>
                      <title type="complete" ref="LIT2246salotz"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                   <msItem xml:id="ms_i2">
-                     <locus from="26r" to="32v"/>
-                     <title type="complete" ref="LIT2384Taamme"/>
+                     <locus from="26r" to="32v" facs="028"/>
+                     <title type="incomplete" ref="LIT2384Taamme#Introduction"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                     <note>Introduction to the Miracles of Mary. Completed on <locus target="#ir(ecto)"/>"</note>
+                     <note>Introduction, completed on <locus target="#ir(ecto)" facs="001"/>"</note>
                   </msItem>
                   <msItem xml:id="ms_i3">
-                     <locus from="33r" to="41v"/>
+                     <locus from="33r" to="41v" facs="035"/>
                      <title type="complete" ref="LIT2260salota"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
                   <msItem xml:id="ms_i4">
-                     <locus from="41v" to="48v"/>
+                     <locus from="41v" to="48v" facs="044"/>
                      <title>Litany, Liṭon, <foreign xml:lang="gez">ሊጦን፡</foreign>
                      </title>
                      <textLang mainLang="gez">Gə‘əz</textLang>
@@ -73,116 +69,167 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 50</measure>
+                           <measure unit="quire">Protection sheet + 7</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>98</height>
+                              <width>82</width>
+                              <depth>28</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–7 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"/>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="003"/>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="011"/>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="019"/>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32" facs="027"/>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40" facs="035"/>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="41" to="48" facs="043"/>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">2</dim>
+                              <locus from="49" to="50" facs="051"/>
+                              Quire 7
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">5</dim>
+                           <dim type="bottom">17</dim>
+                           <dim type="right">8</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="12 17"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="rubrication">
                            <foreign xml:lang="gez">ማርያም፡</foreign>
                         </seg>
-                        <desc>The word Mary is rubricated</desc>
                      </handNote>
                   </handDesc>
                   <decoDesc>
                     <decoNote type="miniature" xml:id="d1">
-                        <locus target="#14r"/>
+                        <locus target="#14r" facs="016"/>
                         <desc>crude drawing of a face</desc>
                      </decoNote>
                     <decoNote type="frame" xml:id="d2">
                     Decorative designs:
-                    <locus target="#1r"/> (haräg);
-                    <locus target="#48v"/> (line of black dots)
+                    <locus target="#1r" facs="003"/> (haräg);
+                    <locus target="#48v" facs="051"/> (line of black dots)
                     </decoNote>
                   </decoDesc>
                   <additions>
                      <list>
                         <item xml:id="a1">
-                          <locus target="#ir(ecto) #iv(erso) #iir(ecto)"/>
+                          <locus target="#ir(ecto) #iv(erso) #iir(ecto)" facs="001 002"> f. ir(ecto), iv(erso), iir(ecto), first column</locus>
                            <desc type="GuestText">
-                              first column: Excerpt from the introduction to the <title type="complete" ref="LIT2384Taamme"/>
+                              Completion of excerpt from the introduction to the <title type="incomplete" ref="LIT2384Taamme#Introduction"/>, <locus target="#ms_i2"/>
                            </desc>
                         </item>
                         <item xml:id="a2">
-                          <locus target="#iir(ecto)"/>
+                          <locus target="#iir(ecto)" facs="002"/>
                            <desc type="Asmat">
                               Asmat prayer
                             </desc>
                         </item>
                         <item xml:id="a3">
-                            <locus target="#iiv(erso)"/>
-                           <desc>
-                            In praise of Märigeta Arage (<foreign xml:lang="gez">መሪጌታ፡ አራጌ፡</foreign>)
-                          </desc>
+                            <locus target="#iiv(erso)" facs="003"/>
+                           <desc>In praise of Märigeta Arage (<foreign xml:lang="gez">መሪጌታ፡ አራጌ፡</foreign>)</desc>
                         </item>
                         <item xml:id="a4">
-                          <locus target="#48v"/>
-                           <desc>
-                              bottom, <locus target="#49v #50v"/>: List of names, in crude hand, in blue ink
-                            </desc>
+                          <locus target="#48v 49v #50v" facs="051 052 053"/>
+                           <desc>List of names, in crude hand, in blue ink</desc>
                         </item>
                         <item xml:id="e1">
-                          <locus target="#49r"/>
-                           <desc>
-                              scrawl
-                            </desc>
+                          <locus target="#49r" facs="051"/>
+                           <desc>scrawl</desc>
                         </item>
                         <item xml:id="e2">
-                           <desc>
-                            Identified in the insurance hand list as Case 67/15
-                            </desc>
+                          <locus target="#50r" facs="052"/>
+                          <desc>Mentions the date, Yäkkatit 13, 1948‎</desc>
                         </item>
                         <item xml:id="e3">
-                          <locus target="#6r #31r"/>
-                           <desc>
-                            Scribal intervention:
-                            words of text are written interlinearly
-                          </desc>
+                           <desc>Identified in the insurance hand list as Case 67/15</desc>
+                        </item>
+                        <item xml:id="e4">
+                          <locus target="#6r #31r" facs="008 033"/>
+                           <desc>Words of text are written interlinearly</desc>
                       </item>
-                      <item xml:id="e4">
-                      <locus target="#35v #36r #41v #43v"/>
-                      <desc>
-                        erasure markings are visible
-                      </desc>
+                      <item xml:id="e5">
+                      <locus target="#35v #36r #41v #43v" facs="038 044 046"/>
+                      <desc>Erasure markings are visible</desc>
                       </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"/>
+                        <material key="wood"/>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>early-twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1950">Early-twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2019-11-06" who="ABe">Added items</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-11-06" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-28" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2020-02-06" who="RL">Added image links, added one item to extras, and minor edits to additions and extras</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP02061">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02061">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 112</title>
             <editor key="ABe"/>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -44,7 +40,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <msContents>
                   <summary>Miniature Codex of Bandlet of Righteousness, ልፋፈ፡ ጽድቅ፡</summary>
                   <msItem xml:id="ms_i1">
-                     <locus from="1r" to="33v"/>
+                     <locus from="1r" to="33v" facs="002"/>
                      <title type="complete" ref="LIT1758Lefafa"/>
                     <textLang mainLang="gez">Gə‘əz</textLang>
                   </msItem>
@@ -56,19 +52,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 33</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>55</height>
+                              <width>49</width>
+                              <depth>12</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>This is an accordion-fold codex. There are no quires.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">2</dim>
+                           <dim type="bottom">4</dim>
+                           <dim type="right">1</dim>
+                           <dim type="left">1</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="11"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="rubrication">
                            <foreign xml:lang="gez">ማርያም፡</foreign>
+                           <foreign xml:lang="gez">ሚካኤል፡</foreign>
                         </seg>
                         <desc>The words Mary and Michael are rubricated</desc>
                      </handNote>
@@ -76,13 +87,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <additions>
                      <list>
                         <item xml:id="a1">
-                          <locus target="#18v #passim"/>
-                           <desc>
-                              the owner is mentioned, Wäläta Iyasus
-                            </desc>
+                          <locus target="#18v" facs="021"> f. 18v and passim</locus>
+                           <desc type="OwnershipNote">the owner is mentioned, Wäläta Iyasus</desc>
                         </item>
                         <item xml:id="e1">
-                          <locus target="#Front cover #inside front cover #irv(ecto) #1r #16rv"/>
+                          <locus target="#Front_cover #inside_front_cover #ir(ecto) #1r #16r #16v" facs="036 001 002 017 018"/>
                            <desc>
                               blank
                             </desc>
@@ -94,36 +103,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, six parchment strips sewn together.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"/>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2019-11-04" who="ABe">Added items</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-11-04" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-15" who="JS">Added margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2020-01-23" who="RL">Added image links</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

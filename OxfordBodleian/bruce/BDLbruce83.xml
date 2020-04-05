@@ -1,13 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
-?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:lang="en"
-     xml:id="BDLbruce83"
-     type="mss">
+?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLbruce83" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -599,12 +593,60 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">110</measure>
+                           <measure unit="leaf">iii + 110 + iv</measure>
                            <note>formae 4<hi rend="apices">ae</hi> magnae</note>
+                           <dimensions type="outer" unit="mm">
+                              <height>348</height>
+                              <width>289</width>
+                              <depth>50</depth>
+                           </dimensions>
+                           <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                              <height>341</height>
+                              <width>284</width>
+                           </dimensions>
+                           <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#4r"/>.</note>
+                           <measure type="weight" unit="g">3232</measure>
                         </extent>
+                        
+                         <foliation>
+                            <list>
+                               <item xml:id="fol1">
+                                  The manuscript has been very sporadically foliated in pencil in the upper right corner. The paper flyleaves
+                                  and three blank guard leaves at the beginning are not foliated. Only <locus from="1" to="6"/>, 
+                                  <locus from="99" to="100"/> and <locus from="108" to="110"/> are foliated.
+                               </item>
+                               <item xml:id="fol2">
+                                  The manuscript is foliated in black ink with Ethiopic numerals in the upper left corner, beginning from 
+                                  ፻  on <locus target="#1"/> to ፻፴፯ at the end of <ref target="#ms_i1.2.1"/>.  The foliation the continues with ፩ at the beginning of <ref target="#ms_i1.2.2"/>
+                                  and goes until ፸፩.
+                               </item>
+                            </list>
+                         </foliation>
+                        <collation>
+                           <signatures>
+                             Possibly one quire mark: ፲፩ in the upper left corner on <locus target="#4r"/> above <ref target="#fol2"/>. No other
+                              quire marks could be observed.
+                           </signatures>
+                        </collation>
+                        <condition key="good">Occasional parchment repairs.</condition>
                      </supportDesc>
+                     
                      <layoutDesc>
-                        <layout columns="3"/>
+                     <layout columns="3" writtenLines="37">
+                        <note corresp="#margin #textarea">Data on text area and margin dimensions taken from <locus target="#4r"/>.</note>
+                        <dimensions unit="mm" xml:id="textarea"> 
+                           <height>271</height>
+                           <width>250</width>
+                        </dimensions>
+                        <dimensions type="margin" unit="mm" xml:id="margin">
+                           <dim type="top">33</dim>
+                           <dim type="bottom">36</dim>
+                           <dim type="right">15</dim>
+                           <dim type="left">22</dim>
+                           <dim type="intercolumn">12</dim>
+                        </dimensions>
+                        <ab type="ruling">Ruling and pricking are visible, but pricking has been partly cut off when the manuscript was bound.</ab>
+                     </layout>
                      </layoutDesc>
                   </objectDesc>
                   
@@ -625,6 +667,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <persName ref="PRS11632WaldaE"/>, <persName ref="PRS11633WalattaS"/>,     <persName ref="PRS11634AmataS"/>, <persName ref="PRS11635WalattaS"/>, 
                               <persName ref="PRS11636Marta"/>, <persName ref="PRS11637WaldaG"/>, <persName ref="PRS11638KenfaM"/>.
                            </desc>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <desc type="StampExlibris">Ex libris of <persName ref="PRS2916Bruce"/> glued on the inner front board, containing
+                              shelfmarks of the manuscript: 83. Aeth. Cat. 4.
+                              Bruce of Kinnaird Nº 9</desc>
+                        </item>
+                        
+                        <item xml:id="e3">
+                           <desc>A pagemark of blue textile is sewn to the headband. </desc>
                         </item>
                         
                         <item xml:id="a1" corresp="#ms_i1.1.3">
@@ -664,6 +716,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </item>
                      </list>
                   </additions>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">European very tight binding, red leather with gilded borders. Printed on the spine: Synaxar. Tom II
+                           Cover of the inner board and first fly-leaf gilded and imprinted with geometrical pattern. 
+                          The textblock was trimmed and its edges were gilded.
+                           One paper fly leaf each, on which watermarks are visible,
+                           at the front and back.
+                        </decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                           <material key="paper"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
                </physDesc>
                
                <history>
@@ -694,8 +761,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -708,16 +774,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="Hagiography"/>
             </keywords>
          </textClass>
-         <langUsage>   
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="gez">Gǝʿǝz</language>
-            <language ident="am">Amharic</language>
-            <language ident="la">Latin</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="la">Latin</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-05-05">Created catalogue entry</change>
+         <change who="DR" when="2020-02-04">Updated with codicological information
+            (foliation, layout, condition, binding) during consultation of the manuscript.</change> 
+         <change who="DR" when="2020-02-04">Improved binding description according to proposal by Denis Nosnitsin</change> 
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

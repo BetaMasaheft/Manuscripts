@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP00366">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP00366">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Delamarter Codex Fragment 16</title>
+            <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -37,8 +33,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
                <msContents>
                   <summary>Antiphonary for Lent, ጾመ፡ ድጓ፡</summary>
-                  <msItem xml:id="ms_i1">
+                  <msItem xml:id="ms_i1"><locus from="1r" to="2v"/><title>Fragment of Antiphonary for the Fast of Lent, <foreign xml:lang="gez">ጾመ፡ ድጓ፡</foreign></title>
                      <textLang mainLang="gez">Gə‘əz</textLang>
+                     <note>with musical notation</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -49,7 +46,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">2</measure>
+                           <measure unit="leaf">1</measure>
                            <dimensions type="outer" unit="mm">
                               <height>160</height>
                               <width>120</width>
@@ -57,35 +54,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            </dimensions>
                         </extent>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">5-10</dim>
+                           <dim type="bottom">22-25</dim>
+                           <dim type="right">12</dim>
+                           <dim type="left">7-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="22"/>
+                       <layout columns="2" writtenLines="26"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#1v"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#2r"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/></desc></decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <locus target="#1v #2r"/>
+                    <desc>
+                    Illuminations are painted over the majority of text on
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                <bindingDesc>
+                  <binding xml:id="binding" contemporary="false">
+                    <decoNote xml:id="b1" type="bindingMaterial">
+                      <material key="parchment"></material>
+                    </decoNote>
+                  </binding>
+                </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1900">nineteenth  / twentieth  century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
+                  <provenance>
+                    Provenance: Purchased by Steve Delamarter on the Zege peninsula, across Lake Tana from Bahir Dar, in May, 2004.
+                  </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-01-16" who="ABe">Added items</change>
+                                    <change when="2020-03-26" who="JS">Added margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
