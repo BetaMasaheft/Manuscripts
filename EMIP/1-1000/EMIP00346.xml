@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP00346">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP00346">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Alemu Codex</title>
-            <editor key="ABe"></editor>
+            <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -40,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <summary>Gospel of John, ወንጌል፡ ዘዮሐንስ፡</summary>
                   <msItem xml:id="ms_i1"><locus from="1r" to="89v"/><title type="complete" ref="LIT1693John"/>
                      <textLang mainLang="gez">Gə‘əz</textLang>
-                     <note>Text begins on f. 1r; conclusion (mäl’a), f. 89r.A crude hand has marked in blue ink the days of the week for reading (e.g., ff. 1r, 6v, 7v, 9r, 11v, etc.). Another hand has introduced extensive corrections</note>
+                     <note>Text begins on <locus target="#1r"/>; conclusion (mäl’a), <locus target="#89r"/>.A crude hand has marked in blue ink the days of the week for reading (<locus target="#1r #6v #7v #9r #11v"/> etc.). Another hand has introduced extensive corrections</note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -52,43 +47,244 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </support>
                         <extent>
                            <measure unit="leaf">ii + 90</measure>
+                           <measure unit="quire">Protection sheet + 9</measure>
                            <dimensions type="outer" unit="mm">
                               <height>95</height>
                               <width>65</width>
                               <depth>30</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–6 balanced; quires 7–9 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="013"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30" facs="023"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40" facs="033"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50" facs="043"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60" facs="053"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="61" to="70" facs="063"></locus>
+                              <note>Stubs appear between <locus target="#63 #64" facs="065 066"/> and between <locus target="#68 #69" facs="070 071"/>.</note>
+                              Quire 7:
+                              3, stub after 8
+                              8, stub after 3
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">10</dim>
+                              <locus from="71" to="80" facs="073"></locus>
+                              <note>Stubs appear between <locus target="#73 #74" facs="075 076"/> and between <locus target="#78 #79" facs="080 081"/>.</note>
+                              Quire 8:
+                              3, stub after 8
+                              8, stub after 3
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">10</dim>
+                              <locus from="81" to="90" facs="083"></locus>
+                              <note>Stubs appear between <locus target="#82 #83" facs="084 085"/> and between <locus target="#87 #88" facs="089 090"/>.</note>
+                              Quire 9:
+                              3, stub after 7
+                              8, stub after 2
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">10</dim>
+                           <dim type="bottom">22</dim>
+                           <dim type="right">8</dim>
+                           <dim type="left">5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="17"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                  </seg>
+                  <desc>The word Jesus is rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#1r"/> (red and black haräg);
+                  <locus target="#1r #6v #89r #89v"/> (line of alternating black and red dots);
+                  <locus target="#8r #9r #11v #13r #17r #22r #55r #56v #58r #70v #79v #82r #82v #84v #87v #89r #89v"/> (multiple full stops)
+                  </decoNote>
+                </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <locus target="#i(recto)"/>
+                    <desc>
+                    unintelligible note
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <locus target="#iv(erso) #iir(ecto)"/>
+                    <desc>
+                    blank by erasure
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <locus target="#iiv(erso)"/>
+                    <desc type="OwnershipNote">
+                    Note of ownership with seal:
+                    Text: <foreign xml:lang="gez">ዝ፡ መጽሐፍ፡ ዘመምሕር፡ ገብረ፡ ሕይወት፡ ዘወሀቦ፡ ለመምሕሬ፡ ገብረ፡ ኢየሱስ፡ ፲፱፻፳፬፡ ዓመተ፡ ምሕረት፡ ኅዳር፡ ሶስት፡ ቀን።</foreign>
+                    Translation: This book belongs to owned by Mämhǝr Gäbrä Ḥәywät who gifted it to Mämhǝr Gäbrä Iyyäsus on 3 Ḫәdar, 1924 EC (= 13 Nov., 1931 AD)
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <locus target="#90r"/>
+                    <desc type="RecordTransaction">
+                    Note of transaction of book:
+                    Text: <foreign xml:lang="gez">በ</foreign>14፡ 8፡ 96፡ <foreign xml:lang="gez">ዓም፡ እኔ፡ ዲ. ኃይለ ጊዮርጊስ፡ ወንድሙ፡ ይችን፡ የዮሐንስ፡ ወንጌል፡ የራሴ፡ በመሆኑ፡ ለችግሬ፡ ሸጨላቼዋለሁ፡ ለመሸጤ፡ በፊርማዬ፡ አረጋግጣለሁ።</foreign>
+                    Translation:
+                    [Date:] On Miyazya 14, 1996 (EC = April 22, 2004 AD).
+                    [Owner:] I am Deacon Ḫaylä Giyorgis Wändǝmu.
+                    [Declaration]: Because this <title type="complete" ref="LIT1693John"/> is mine, I sold it to him [an unidentified buyer] [to support] my need and I guarantee the selling with my signature .
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <locus target="#iiv(erso)"/>
+                    <desc>
+                    unidentified stamp
+                    </desc>
+                    </item>
+                    <item xml:id="a3">
+                    <locus target="#1r"> f. 1r and passim</locus>
+                    <desc type="OwnershipNote">
+                    Note of ownership by Wäldä Maryam
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <locus target="#90v"/>
+                    <desc>
+                    unidentified note in a crude hand
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <locus target="#9 #17 #22 #39 #47 #58 #82 #87"/>
+                    <desc>
+                    brown yarn sewn into corners to mark the location of the readings for the days of the week as navigation system
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    Numbered quires: quires 2–9
+                    </desc>
+                    </item>
+                    <item xml:id="e7">
+                    <locus target="#2r #6r #13v #14r #16r"/>
+                    <desc>
+                    (etc.) words of text are written interlinearly;
+                    </desc>
+                    </item>
+                    <item xml:id="e8">
+                    <locus target="#4r #7v #8r #17v #19v"/>
+                    <desc>
+                    (etc.) lines of text are written interlinearly;
+                    </desc>
+                    </item>
+                    <item xml:id="e9">
+                    <locus target="#17r"> f. 17r, col.1, line 4</locus><locus target="#34r"> f. 34r, col. 2, line 5</locus><locus target="#40v"> f. 40v, col 2, line 11</locus><locus target="#44v"> f. 44v, col. 2, line 15</locus><locus target="#56r"> f. 56r, col.1, line 2</locus><locus target="#41r #56v"/>
+                    <locus target="#2v"> f. 2v, col. 1, line 6</locus><locus target="#3r"> f. 3r, col. 2, line 14</locus><locus target="#3v"> f. 3v, col. 1, line 15</locus><locus target="#4r"> f. 4r, col. 1, line 4</locus><locus target="#5r"> f. 5r, col. 1, line 8</locus><locus target="#5v"> f. 5v, col 2, line 17</locus><locus target="#8r"> f. 8r, col. 1, line 13</locus>
+                    <desc>
+                    lines of text are written in the upper margin with a symbol (┴) marking the location where the text is to be inserted (17r; 34r; 40v; 44v; 56r, etc.), and in another case where the symbol (+) is used (41r, 56v, etc.); and in another case interlinearly with the symbol (┴) marking the location where the text is to be inserted (2v; 3r; 3v; 4r; 5r; 5v, etc.);
+                    </desc>
+                    </item>
+                    <item xml:id="e10">
+                    <locus target="#9v #52r #58r #67v"/>
+                    <desc>
+                    (etc.) erasure markings are visible;
+                    </desc>
+                    </item>
+                    <item xml:id="e11">
+                    <locus target="#1v #2r #2v #3r #3v #4r"/>
+                    <desc>
+                    (etc.) text has been removed
+                    </desc>
+                    </item>
+                    <item xml:id="e12">
+                    <desc>
+                    This intervening scribe uses one other approach to intervention that is fairly unique. A first pass has been made through manuscript and notes made in pencil in the margins indicating changes that need to be made. Then the changes themselves were introduced in black ink at the appropriate place in the folios.
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                <bindingDesc>
+                  <binding xml:id="binding" contemporary="true">
+                    <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards covered with tooled leather over decorative linen patches visible inside the turn-ins on front and back cover.</decoNote>
+                    <decoNote xml:id="b2" type="bindingMaterial">
+                      <material key="parchment"></material>
+                      <material key="wood"></material>
+                      <material key="leather"></material>
+                      <material key="textile"></material>
+                    </decoNote>
+                  </binding>
+                </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1650">seventeenth century</origDate>
+                     <origDate notBefore="1600" notAfter="1699">Seventeenth century</origDate>
                   </origin>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2019-10-08" who="ABe">Added items</change>
+                                    <change when="2020-01-16" who="ABe">Added items</change>
+                                    <change when="2020-02-11" who="ABe">Added items</change>
+                                    <change when="2020-03-23" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2020-03-30" who="ABe">Updated foreign code</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

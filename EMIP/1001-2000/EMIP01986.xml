@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP01986">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP01986">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -175,7 +169,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
                            <foreign xml:lang="gez">ማርያም፡</foreign>
                         </seg>
-                        <desc>The word God is rubricated in the first three works; the word Mary is rubricated in the final two works. Occasionally, the word God is written in alternating red and black letters (e.g., <locus target="#19r"/>)</desc>
+                        <desc>The word God is rubricated in the first three works; the word Mary is rubricated in the final two works. Occasionally, the word God is written in alternating red and black letters (e.g., <locus target="#19r" facs="023"/>)</desc>
                         <desc>Columetric layout of text: <locus target="#113v #114r" facs="118"/> (Ps. 150); <locus target="#122v #123r" facs="127"/> (tenth Biblical Canticle)</desc>
                      </handNote>
                   </handDesc>
@@ -189,6 +183,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </decoDesc>
                   <additions>
                      <list>
+                       <item xml:id="e1">
+                         <locus target="#ir(ecto) #iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto) #150v #151r #151v #152r #152v" facs="001 002 003 004 155 156 157"/>
+                         <desc>blank</desc>
+                       </item>
                         <item xml:id="a1">
                           <locus target="#ivv(erso)" facs="005"/>
                            <desc type="OwnershipNote">Note of secondary ownership, in red ink</desc>
@@ -197,15 +195,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <locus target="#150r" facs="154"/>
                            <desc>Name of scribe, Gäbrä Maryam</desc>
                         </item>
-                        <item xml:id="e1">
-                          <locus target="#ir(ecto) #iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivr(ecto) #150v #151r #151v #152r #152v" facs="001 002 003 004 155 156 157"/>
-                           <desc>blank</desc>
-                        </item>
                         <item xml:id="e2">
                            <desc>Identified in the insurance hand list as Psalter 21</desc>
                         </item>
                         <item xml:id="e3">
-                           <desc>Numbered quires: quire 5</desc>
+                           <desc>Numbered quires: quire 5 <locus target="#q5"/></desc>
                         </item>
                         <item xml:id="e4">
                            <desc>Psalm 118 contains the spiritual meanings of the Hebrew letters</desc>
@@ -216,7 +210,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            </item>
                         <item xml:id="e6">
                           <locus target="#109v" facs="114"/>
-                          <desc>and lines of text are written interlinearly</desc>
+                          <desc> lines of text are written interlinearly</desc>
                           </item>
                         <item xml:id="e7">
                           <locus target="#18r #55r #86v #96r #110v" facs="022 059 091 100 115"/>
@@ -244,20 +238,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">CreatedXML record from EMIP Collection Metadata.xsls</change>
@@ -265,6 +253,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-10-21" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
          <change when="2019-12-12" who="RL">Added image links</change>
+         <change when="2020-02-18" who="RL">Minor edits to additions and extras</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
