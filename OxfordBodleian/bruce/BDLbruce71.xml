@@ -1,13 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
-?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:lang="en"
-     xml:id="BDLbruce71"
-     type="mss">
+?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLbruce71" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -44,7 +38,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <summary/>
                   
                   <msItem xml:id="ms_i1">
-                     <locus from="1" to="39"/>
+                     <locus from="1ra" to="39rc"/>
                      <title type="complete" ref="LIT1546Genesi" xml:lang="gez">ኦሪት፡ ዘልደት፡</title>
                      <textLang mainLang="gez"/> 
                      <note>
@@ -108,7 +102,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </msItem>
                   
                   <msItem xml:id="ms_i2">
-                     <locus from="39" to="69"/>
+                     <locus from="39va" to="69vc"/>
                      <title type="complete" ref="LIT1367Exodus"/>
                      <textLang mainLang="gez"/> 
                      <explicit type="subscriptio" xml:lang="gez">ተፈጸመ፡ ኦሪት፡ ዘጸአት፡</explicit>
@@ -143,13 +137,101 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">69</measure>
+                           <measure unit="leaf">iii+69+iv</measure>
+                          <!-- 70 or 69??-->
+                           <note>The first three folios are not foliated.</note>
+                           <note><locus target="#iii"/> (before <locus target="#1"/>) and <locus target="#iv"/> after (<locus target="#70"/>)
+                              are of a different kind of parchment, which is whiter and lighter,
+                              probably European.
+                              Both contain an impression, possibly from the manufacturer (CASTRE visible).</note>
                            <note>formae 4<hi rend="apices">ae</hi> magnae</note>
+                           <dimensions type="outer" unit="mm">
+                              <height>335</height>
+                              <width>300</width>
+                              <depth>40</depth>
+                           </dimensions>
+                           <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                              <height>327</height>
+                              <width>290</width>
+                           </dimensions>
+                           <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#32r"/>.</note>
+                           <measure type="weight" unit="g">2215</measure>
                         </extent>
+                        <foliation>Foliation in pencil in the upper right corner. The first three folios and the last folio (and the flyleaves belonging to the binding) are not foliated.</foliation>
+                        <collation>
+                           <signatures>Decorated quire marks of Ethiopic numerals in the upper left margin of <locus target="#1r"/>, 
+                              <locus target="#9r"/>, <locus target="#17r"/>,  <locus target="#25r"/>, <locus target="#33r"/>,
+                              <locus target="#41r"/>, <locus target="#49r"/>, <locus target="#57r"/>.</signatures>
+                           <note>The structure of <ref target="#q10"/> and <ref target="#q11"/> is not entirely clear.</note>
+                           <list>
+                              <item xml:id="q1" n="1">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="ir" to="iiiv"/>
+                                 3, stub before i
+                              </item>
+                              <item xml:id="q2" n="2">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="1r" to="8v"/>
+                              </item>
+                              <item xml:id="q3" n="3">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="9r" to="16v"/>
+                              </item>
+                              <item xml:id="q4" n="4">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="17r" to="24v"/>
+                              </item>
+                              <item xml:id="q5" n="5">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="25r" to="32v"/>
+                              </item>
+                              <item xml:id="q6" n="6">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="33r" to="40v"/>
+                              </item>
+                              <item xml:id="q7" n="7">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="41r" to="48v"/>
+                              </item>
+                              <item xml:id="q8" n="8">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="49r" to="56v"/>
+                              </item>
+                              <item xml:id="q9" n="9">
+                                 <dim unit="leaf">8</dim>
+                                 <locus from="57r" to="64v"/>
+                              </item>
+                              <item xml:id="q10" n="10">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="65r" to="67v"/>
+                                 1, stub after 3
+                              </item>
+                              <item xml:id="q11" n="11">
+                                 <dim unit="leaf">2</dim>
+                                 <locus from="68r" to="69v"/>
+                              </item>
+                           </list>
+                        </collation>
+                        <condition key="good"><locus target="#24v"/> and <locus target="#25r"/> are stained by a splash of an unidentified 
+                           substance.</condition>
                      </supportDesc>
                      
                      <layoutDesc>
-                        <layout columns="3"/>
+                        <layout columns="3" writtenLines="29">
+                        <note corresp="#margin #textarea">Data on text area and margin dimensions taken from <locus target="#32r"/>.</note>
+                        <dimensions unit="mm" xml:id="textarea"> 
+                           <height>234</height>
+                           <width>227</width>
+                        </dimensions>
+                        <dimensions type="margin" unit="mm" xml:id="margin">
+                           <dim type="top">43</dim>
+                           <dim type="bottom">50</dim>
+                           <dim type="right">49</dim>
+                           <dim type="left">13</dim>
+                           <dim type="intercolumn">17</dim>
+                        </dimensions>
+                        <ab type="ruling">Pricking and ruling are visible.</ab>
+                        </layout>
                         </layoutDesc>
                   </objectDesc>
                   
@@ -161,6 +243,41 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <seg type="rubrication">The beginning of chapters is indicated by rubrications.</seg>
                      </handNote>
                   </handDesc>
+                  
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <desc type="StampExlibris">Ex libris of <persName ref="PRS2916Bruce"/> glued on the inner front board, containing
+                              shelfmarks of the manuscript: 71. Aeth. Cat. 1.
+                              Bruce of Kinnaird Nº 1</desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>A pagemark of blue textile sewn to the headband.</desc>
+                        </item>
+                        <item xml:id="e3">
+                           <desc>There are occasional small marks and strikes in the margins, possibly by a European hand,
+                              for example on <locus target="#33vb"/>, <locus target="#38ra"/>, <locus target="#46vc"/>, <locus target="#69ra"/></desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>There are occasional marginal additions of numerals, possibly by a European hand,
+                              for example on <locus target="#37v"/> ("v.5"), <locus target="#10vb"/> ("17"), <locus target="#5vc"/> ("5").</desc>
+                        </item>
+                     </list>
+                  </additions>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">European binding, red leather with gilded borders. Imprinted on the spine: Old Testam Tom I.
+                           Cover of the inner board and first fly-leaf gilded paper with floral pattern.
+                           The textblock has been trimmed and its edges were gilded. Two paper fly leaves, containing a watermark, at the
+                        front and back.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                           <material key="paper"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
+                 
                </physDesc>
                
                   <history>
@@ -195,8 +312,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -212,13 +328,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="ZaMa" cert="low"/>
             </keywords>
          </textClass>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-04-12">Created catalogue entry</change>
+         <change who="DR" when="2020-01-18">Updated with codicological information during consultation of the manuscript.</change> 
+         <change who="DR" when="2020-02-05">Improved binding according to proposal by Denis Nosnitsin</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

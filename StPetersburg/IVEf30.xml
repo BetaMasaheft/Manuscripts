@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="IVEf30"
-     xml:lang="en"
-     type="mss">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IVEf30" xml:lang="en" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -31,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <repository ref="INS0301IV"/>
                         <idno>IV Ef. 30</idno>
                         <altIdentifier>
-                        <idno>IV Koriander8</idno>
+                        <idno>IV Koriander 8</idno>
                         </altIdentifier>
                         <altIdentifier>
                           <idno>Turaev cat. III.47</idno>
@@ -40,9 +34,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
+                          <locus from="1r" to="30v"/>
                             <title type="complete" ref="LIT2352ShortC" cert="high"/>
                             <textLang mainLang="gez"/>
-                            <note>The text extends till <date when="1889"/> (till the accession of <persName ref="PRS7006Menilek"/>). The text resembles that of <ref type="mss" corresp="BNFet142"/> but is shorter.</note>
+                            <note>The narration continues till
+                              <date when="1889"/> (the year of <persName ref="PRS7006Menilek">Mǝnilǝk's</persName> accession
+                              to the throne as king of Ethiopia).
+                              The text resembles that of <ref type="mss" corresp="BNFet142"/> but is shorter,
+                              of inferior quality.</note>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -52,12 +51,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="paper"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf"/>
+                                  <measure unit="leaf">32</measure>
+                                  <measure unit="leaf" type="blank" cert="medium">2 <locus target="#1 #32"/></measure>
                                     <dimensions type="outer" unit="mm">
                                       <height>192</height>
                                       <width>149</width>
                                     </dimensions>
                                 </extent>
+                                <condition key="other">In the time of purchase,
+                                  the manuscript had no binding.</condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="21"/>
@@ -65,24 +67,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                                <date when="1902"/>
+                                <date notBefore="1891" notAfter="1902"/>
                                 <desc/>
                             </handNote>
                         </handDesc>
                         <bindingDesc>
-                            <binding xml:id="binding">
-                            <condition key="other">No binding.</condition>
-                            </binding>
-                        </bindingDesc>
+
+                             <binding contemporary="false" xml:id="binding">
+                                <decoNote xml:id="b1">A cardboard
+                                  binding of the Asiatic Museum, received after <date>1906</date>.</decoNote>
+                                <decoNote xml:id="b2">One fly-leaf was added at the front, one at the
+                                  end of the textblock (probably left unfoliated).</decoNote>
+                                <decoNote xml:id="b3" type="bindingMaterial">
+                                   <material key="cardboard"/>
+
+                                 </decoNote>
+                               </binding>
+                           </bindingDesc>
+
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate when="1902">The manuscript was copied by <persName ref="PRS6160Lamlam"/> who was employed by <persName ref="PRS7146MondonV"/>
+                            <origDate notBefore="1891" notAfter="1902">The manuscript was copied by
+                              <persName ref="PRS6160Lamlam"/> who was employed by <persName ref="PRS7146MondonV"/>
                      </origDate>
-                            <desc> The manuscript was acquired by Koriander during his stay in Ethiopia.
-                          </desc>
                         </origin>
-                        <provenance/>
+                        <provenance>The manuscript was acquired by
+                          <persName ref="PRS12477Koriander">Aleksandr
+                          Koriander</persName>
+                        during his stay in Ethiopia.</provenance>
+                        <acquisition>The manuscript entered the collection of the
+                        Asiatic Museum in <date>1904</date>.</acquisition>
+
                     </history>
                     <additional>
                         <adminInfo>
@@ -99,6 +115,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        <ptr target="bm:Platonov2017RukKniga"/>
                                          <citedRange unit="page">192</citedRange>
                                     </bibl>
+                                    <bibl>
+                                      <ptr target="bm:Gusarova2018Efiofond"/>
+                                      <citedRange unit="page">173-175</citedRange>
+                                    </bibl>
                                   </listBibl>
                                 </source>
                             </recordHist>
@@ -109,8 +129,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -127,13 +146,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="HistoryAndHistoriography"/>
                 </keywords>
             </textClass>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="ar">Arabic</language>
-                <language ident="it">Italian</language>
-                <language ident="am">Amharic</language>
-                <language ident="gez">Gǝʿǝz</language>
-            </langUsage>
+            <langUsage><language ident="en">English</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2018-07-10">Created entity</change>

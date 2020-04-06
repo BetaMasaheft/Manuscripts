@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP02000">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02000">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 051</title>
-            <editor key="ABe"></editor>
-            <editor key="JS"></editor>
+            <editor key="ABe"/>
+            <editor key="JS"/>
             <editor key="RL"/>
          </titleStmt>
          <editionStmt>
@@ -70,7 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <note>Quire descriptions: quires 3–4, 6–13, and 15–17 balanced; quire 5 adjusted balanced; quires 1–2, 14, and 18 unbalanced.</note>
                           <list>
                             <item xml:id="q1" n="1">
-                              <dim unit="leaf">10</dim>
+                              <dim unit="leaf">11</dim>
                               <locus from="i" to="10" facs="001"/>
                               <note>A folio stub is visible between <locus target="#10 #11"/>.</note>
                               Quire 1:
@@ -211,7 +205,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <additions>
                      <list>
                         <item xml:id="e1">
-                          <locus target="#ir #iv" facs="001 002"/>
+                          <locus target="#ir(ecto) #iv(erso)" facs="001 002"/>
                            <desc>scrawls</desc>
                         </item>
                         <item xml:id="e2">
@@ -254,8 +248,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
                       <decoNote xml:id="b2" type="bindingMaterial">
-                        <material key="parchment"></material>
-                        <material key="wood"></material>
+                        <material key="parchment"/>
+                        <material key="wood"/>
                       </decoNote>
                     </binding>
                   </bindingDesc>
@@ -269,20 +263,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
@@ -290,6 +278,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2019-11-13" who="JS">Added quire maps, margin dim, columns/lines, binding desc, dating info.</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
          <change when="2020-01-03" who="RL">Added image links</change>
+        <change when="2020-03-19" who="PL">Fixes for issue https://github.com/BetaMasaheft/Documentation/issues/1332</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

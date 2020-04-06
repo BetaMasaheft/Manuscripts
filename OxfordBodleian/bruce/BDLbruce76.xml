@@ -1,13 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
-?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:lang="en"
-     xml:id="BDLbruce76"
-     type="mss">
+?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BDLbruce76" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -59,7 +53,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <locus from="1"/>
                            <title type="complete" ref="LIT1560Gospel#IntroductionMaqdema"/>
                            <textLang mainLang="gez"/> 
-                           <incipit xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ አምላክ፡ <gap reason="omitted" extent="unknown" resp="PRS3562Dillmann"/>
+                           <incipit xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ አምላክ፡
+                              <gap reason="omitted" extent="unknown" resp="PRS3562Dillmann"/>
                            ንቀድም፡ በጽሒፈ፡ መቅድመ፡ አርባዕቱ፡ ወንጌላት፡ ቅዱሳት፡ ወ፲አቅማራት፡ በሰላመ፡ እግዚአብሔር፡ አሜን።</incipit>
                            <note>After a longer introduction, the nature (<foreign xml:lang="gez">ግብር፡</foreign>), use (<foreign xml:lang="gez">በቍዔት፡</foreign>),
                               constitution (<foreign xml:lang="gez">ሥርዓት፡</foreign>), name (<foreign xml:lang="gez">ስም፡</foreign>), 
@@ -79,9 +74,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </msItem>
                         
                         <msItem xml:id="ms_i1.1.4">
-                           <title type="complete"
-                                  ref="LIT1560Gospel#IntroductionGessawe"
-                                  xml:lang="gez">ግጻዌ፡
+                           <title type="complete" ref="LIT1560Gospel#IntroductionGessawe" xml:lang="gez">ግጻዌ፡
                            ሥርዓት፡ በእንተ፡ ኅብረተ፡ ቃላት ዘ፩ወንጌላት፡</title>
                            <textLang mainLang="gez"/> 
                         </msItem>
@@ -151,14 +144,123 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">74</measure>
+                           <measure unit="leaf">75</measure>
                            <note>formae 4<hi rend="apices">ae</hi> magnae</note>
+                           <dimensions type="outer" unit="mm">
+                              <height>330</height>
+                              <width>253</width>
+                              <depth>45</depth>
+                           </dimensions>
+                           <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                              <height>320</height>
+                              <width>242</width>
+                           </dimensions>
+                           <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#25"/>.</note>
+                           <measure type="weight" unit="g">2176</measure>
                         </extent>
-               
+                        
+                         <foliation>
+                            <list>
+                               <item xml:id="fol1">
+                                  The foliation refered to in  <bibl>
+                                     <ptr target="bm:Dillmann1848Catalogus"/>
+                                     <citedRange unit="page">12b–15b</citedRange>
+                                  </bibl> is not visible in the manuscript. It counted the first folio
+                                  text as 1, the current <locus target="#3"/>
+                               </item>
+                               <item xml:id="fol2">
+                                  <locus from="1r" to="73r" corresp="#fol2"/>
+                                  The manuscript is foliated in pencil in the upper right corner. The foliation is incomplete, skipping many leaves.
+                               </item>
+                            </list>
+                         </foliation>
+                        
+                        <collation>
+                           <signatures>
+                              Decorated quire mark ፩ on <locus target="#12r"/>.
+                           </signatures>
+                           <list>
+                              <item xml:id="q1" n="A">
+                                 <dim unit="leaf">2</dim>
+                                 <locus from="1r" to="2v"/>
+                              </item>
+                              <item xml:id="q2" n="1">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="3r" to="5v"/>
+                                 2, atub after 2
+                              </item>
+                              <item xml:id="q3" n="2">
+                                 <dim unit="leaf">6</dim>
+                                 <locus from="6r" to="11v"/>
+                              </item>
+                              <!--<item xml:id="q4" n="3">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="12r" to=""/>
+                              </item>
+                              <item xml:id="q" n="">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="" to=""/>
+                              </item>
+                              <item xml:id="q" n="">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="" to=""/>
+                              </item>
+                              <item xml:id="q" n="">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="" to=""/>
+                              </item>
+                              <item xml:id="q" n="">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="" to=""/>
+                              </item>
+                              <item xml:id="q" n="">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="" to=""/>
+                              </item>
+                              <item xml:id="q" n="">
+                                 <dim unit="leaf"></dim>
+                                 <locus from="" to=""/>
+                              </item>-->
+                           </list>
+                        </collation>
+                        
+                        <condition key="good"/>
                      </supportDesc>
-                     
+                    
                      <layoutDesc>
-                        <layout columns="2"/>
+                        <layout columns="2" writtenLines="43">
+                           <locus from="3ra" to="11rb" corresp="#fol2"/>
+                           <note corresp="#margin #textarea">Data on text area and margin dimensions taken from <locus target="#5r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea"> 
+                              <height>257</height>
+                              <width>193</width>
+                           </dimensions>
+                           <dimensions type="margin" unit="mm" xml:id="margin">
+                              <dim type="top">22</dim>
+                              <dim type="bottom">41</dim>
+                              <dim type="right">28</dim>
+                              <dim type="left">20</dim>
+                              <dim type="intercolumn">15</dim>
+                           </dimensions>
+                           <ab type="ruling">Ruling and pricking are visible.</ab>
+                        </layout>
+                        
+                        <layout columns="2" writtenLines="25">
+                           <locus from="12ra" to="73rb" corresp="#fol2"/>
+                           <note corresp="#margin2 #textarea2">Data on text area and margin dimensions taken from <locus target="#41r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea2"> 
+                              <height>240</height>
+                              <width>192</width>
+                           </dimensions>
+                           <dimensions type="margin" unit="mm" xml:id="margin2">
+                              <dim type="top">26</dim>
+                              <dim type="bottom">55</dim>
+                              <dim type="right">31</dim>
+                              <dim type="left">18</dim>
+                              <dim type="intercolumn">15</dim>
+                           </dimensions>
+                           <ab type="ruling">Ruling and pricking are visible.</ab>
+                        </layout>
                      </layoutDesc>
                      
                   </objectDesc>
@@ -170,6 +272,32 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </handNote>
                   </handDesc>
                   
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <desc type="StampExlibris">Ex libris of <persName ref="PRS2916Bruce"/> glued on the inner front board, containing
+                              shelfmarks of the manuscript: 76. Aeth. Cat. 2.
+                              Bruce of Kinnaird Nº  3</desc>
+                        </item>
+                        <item xml:id="e2">
+                           <desc>A pagemark of blue textile sewn to the headband</desc>
+                        </item>
+                     </list>
+                  </additions>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">European binding, red leather with gilded borders. Imprinted on the spine: New Testame. Tom I
+                           Cover of the inner board and first fly-leaf gilded paper with floral pattern.
+                           The textblock has been trimmed and its edges were gilded.
+                           One paper fly-leaf each at the front and back, containing watermarks.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                           <material key="paper"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
+                  
                </physDesc>
                
                <history>
@@ -177,7 +305,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <origDate notAfter="1772">Estimated by <persName ref="PRS3562Dillmann"/> as not predating the
                         time of <persName ref="PRS2916Bruce"/>'s visit by much.</origDate>
                   </origin>
-                  <provenance>This manuscript was bought by <persName ref="PRS2916Bruce" role="owner"/>. It constitutes the first part of <ref type="mss" corresp="BDLbruce77"/>.</provenance>
+                  <provenance>This manuscript was bought by <persName ref="PRS2916Bruce" role="owner"/>.
+                     It constitutes the first part of <ref type="mss" corresp="BDLbruce77"/>.</provenance>
              
                </history>
                
@@ -203,8 +332,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -219,28 +347,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="ZaMa" cert="low"/>
             </keywords>
          </textClass>
-         <langUsage>   
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="gez">Gǝʿǝz</language>
-            <language ident="am">Amharic</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2017-04-24">Created catalogue entry</change> 
          <change who="DR" when="2017-04-25">Changes</change>
          <change who="DR" when="2017-06-23">Changes</change>
+         <change who="DR" when="2020-02-03">Updated with codicological information (collation, foliation, layout, condition, extras)
+            during consultation of the manuscript.</change> 
+         <change who="DR" when="2020-02-05">Improved binding according to proposal by Denis Nosnitsin</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <div type="edition">
       
-            <div type="textpart"
-                 subtype="chapter"
-                 corresp="#ms_i1.1.5"
-                 xml:id="IntroductionMatthew"
-                 xml:lang="gez">
+            <div type="textpart" subtype="chapter" corresp="#ms_i1.1.5" xml:id="IntroductionMatthew" xml:lang="gez">
                <ab>
             ወለማቴዎስ፡ ስሙ፡ ሌዊ፡ ወትርጓሜሁ፡ ኅሩይ፡ ወውእቱ፡ እምነገደ፡ ይሳኮር፡ እምሀገረ፡ ናዝሬት፡ ስመ፡ አቡሁ፡ ዲቁ፡ ወስመ፡ እሙ፡ ካሩትያስ። ወሶበ፡ ተጋብኡ፡
             ጉባኤ፡ ብዙኅ፡ እምአይሁድ፡ ዘጸውዖሙ፡ ወእለሂ፡ አምኑ፡ ወተጠምቁ፡ ወኀሠሡ፡ እምኀቤሁ፡ ከመ፡ ያስተጻንዕ፡ አልባቢሆሙ፡ በቃል፡ ዘአእመኖሙ፡ ቦቱ፡ ወበመጽሐፍ፡
@@ -250,11 +372,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </ab>
             </div>
       
-            <div type="textpart"
-                 subtype="chapter"
-                 corresp="#ms_i1.3"
-                 xml:id="IntroductionMark"
-                 xml:lang="gez">
+            <div type="textpart" subtype="chapter" corresp="#ms_i1.3" xml:id="IntroductionMark" xml:lang="gez">
                <ab>
                   <locus from="49"/>
             በስመ፡ እግዚአብሔር፡ ሕያው፡ እስከ፡ ለዓለም፡ ወበኢየሱስ፡ ክርስቶስ፡ ቀዳማዊ፡ ወመንፈስ፡ ቅዱስ፡ ማኅየዊ። ዝንቱ፡ ማርቆስ፡ ሐዋርያ፡ ሊቀ፡ ጳጳሳት፡ ቅዱስ፡ 
@@ -270,11 +388,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </ab>
             </div>
       
-            <div type="textpart"
-                 subtype="chapter"
-                 corresp="#ms_i1.5"
-                 xml:id="IntroductionLuke"
-                 xml:lang="gez">
+            <div type="textpart" subtype="chapter" corresp="#ms_i1.5" xml:id="IntroductionLuke" xml:lang="gez">
                <ab>
                   <locus from="73"/>
             በስመ፡ አብ፡ <gap reason="omitted" extent="unknown" resp="PRS3562Dillmann"/>

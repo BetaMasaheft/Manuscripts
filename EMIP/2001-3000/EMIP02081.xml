@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     type="mss"
-     xml:lang="en"
-     xml:id="EMIP02081">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02081">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Tweed Codex 132</title>
             <editor key="ABe"/>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,10 +38,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>Prayer of Saint Peter, ጸሎተ፡ ጴጥሮስ</summary>
+                  <summary>Prayer of Saint Peter, <foreign xml:lang="gez">ጸሎተ፡ ጴጥሮስ</foreign></summary>
                   <msItem xml:id="ms_i1">
+                    <locus from="1r" to="40v" facs="003"/>
+                    <title>Prayer of Saint Peter, <foreign xml:lang="gez">ጸሎተ፡ ጴጥሮስ</foreign></title>
                     <textLang mainLang="gez">Gə‘əz</textLang>
-                  </msItem>
+
+                    <msItem xml:id="ms_i1.1"><locus from="1r" facs="003"/><title>Monday</title></msItem>
+                    <msItem xml:id="ms_i1.2"><locus from="6r" facs="008"/><title>Tuesday</title></msItem>
+                    <msItem xml:id="ms_i1.3"><locus from="11v" facs="014"/><title>Wednesday</title></msItem>
+                    <msItem xml:id="ms_i1.4"><locus from="14r" facs="016"/><title>Thursday</title></msItem>
+                    <msItem xml:id="ms_i1.5"><locus from="20v" facs="023"/><title>Friday</title></msItem>
+                    <msItem xml:id="ms_i1.6"><locus from="25v" facs="028"/><title>Saturday</title></msItem>
+                    <msItem xml:id="ms_i1.7"><locus from="32r" facs="034"/><title>Sunday</title></msItem>
+                    <msItem xml:id="ms_i1.8"><locus from="38r" facs="040"/><title>The Daily Prayer is “I Beseech You Lest I die Early,” <foreign xml:lang="gez">ተማኅጸንኩ፡ ከመ፡ ኢይሙት፡ ዘእንበለ፡ ጊዜየ፡</foreign></title></msItem>
+
+                    </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -54,139 +62,183 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 42</measure>
+                           <measure unit="quire">Protection sheet + 6</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>137</height>
+                              <width>101</width>
+                              <depth>24</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–6 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"/>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="003"/>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="011"/>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="019"/>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32" facs="027"/>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40" facs="035"/>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">2</dim>
+                              <locus from="41" to="42" facs="043"/>
+                              Quire 6
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">15</dim>
+                           <dim type="bottom">30</dim>
+                           <dim type="right">17</dim>
+                           <dim type="left">6</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="17"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="rubrication">
                            <foreign xml:lang="gez">ማርያም፡</foreign>
-                           <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                           <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                           <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                           <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
                         </seg>
-                        <desc>The words Mary, Michael, Gabriel, and Jesus Christ are rubricated</desc>
                      </handNote>
                   </handDesc>
                   <decoDesc>
                     <decoNote type="miniature" xml:id="d1">
-                        <locus target="#Inside front cover"/>
+                        <locus target="#Inside front cover" facs="001"/>
                         <desc>crude drawing of figures</desc>
                      </decoNote>
                     <decoNote type="miniature" xml:id="d2">
-                        <locus target="#iir(ecto)"/>
+                        <locus target="#iir(ecto)" facs="003"/>
                         <desc> Behold the Lamb, <ref type="authFile" corresp="AT1084JesusChrist"/> with a Lamb and carrying a processional <term key="cross"/>
                         </desc>
                      </decoNote>
                     <decoNote type="miniature" xml:id="d3">
-                        <locus target="#iiv(erso)"/>
+                        <locus target="#iiv(erso)" facs="003"/>
                         <desc>crude drawing of a creature (lion?)</desc>
                      </decoNote>
                     <decoNote type="frame" xml:id="d4">
                     Decorative designs:
-                    <locus target="#1r"/> (haräg);
-                    <locus target="#11v #38r"/> (multiple full stops)
+                    <locus target="#1r" facs="003"/> (haräg);
+                    <locus target="#11v #38r" facs="014 040"/> (multiple full stops)
                     </decoNote>
                   </decoDesc>
                   <additions>
                      <list>
                         <item xml:id="a1">
-                          <locus target="#41v"/>
-                           <desc type="Asmat">
-                              Asmat prayer against snakebite, <foreign xml:lang="gez">ጸሎተ፡ ዓርዌ፡ ምድር፡</foreign>
-                           </desc>
+                          <locus target="#iv(erso)" facs="002"/>
+                          <desc>Medicinal instruction‎</desc>
                         </item>
                         <item xml:id="a2">
-                          <locus target="#3v #passim"/>
-                           <desc type="OwnershipNote">
-                              original owner’s name has been erased and replaced with <foreign xml:lang="gez">ሣህለ፡ ድንግል፡</foreign>
-                           </desc>
+                          <locus target="#41v" facs="044"/>
+                           <desc type="Asmat">Asmat prayer against snakebite, <foreign xml:lang="gez">ጸሎተ፡ ዓርዌ፡ ምድር፡</foreign></desc>
                         </item>
                         <item xml:id="a3">
-                          <locus target="#34v #passim"/>
-                           <desc type="OwnershipNote">
-                              original owner’s name is <foreign xml:lang="gez">ኪዳነ፡ ወልድ፡</foreign>
-                           </desc>
+                          <locus target="#3v" facs="006"> f. 3v and passim</locus>
+                           <desc type="OwnershipNote">original owner’s name has been erased and replaced with <foreign xml:lang="gez">ሣህለ፡ ድንግል፡</foreign></desc>
+                        </item>
+                        <item xml:id="a4">
+                          <locus target="#34v" facs="037"> f. 34v and passim</locus>
+                           <desc type="OwnershipNote">original owner’s name is <foreign xml:lang="gez">ኪዳነ፡ ወልድ፡</foreign></desc>
+                        </item>
+                        <item xml:id="a5">
+                          <locus target="#42r" facs="048"/>
+                          <desc type="Record">Note of judicial finding‎</desc>
                         </item>
                         <item xml:id="e1">
-                          <locus target="#ir(ecto) #41r #42v"/>
-                           <desc>
-                              pentrials
-                            </desc>
+                          <locus target="#ir(ecto) #41r #42v" facs="001 043 045"/>
+                           <desc>pentrials</desc>
                         </item>
                         <item xml:id="e2">
-                           <desc>
-                          Identified in the insurance hand list as Case 67/9
-                          </desc>
+                           <desc>Identified in the insurance hand list as Case 67/9</desc>
                         </item>
                         <item xml:id="e3">
-                          <locus target="#1 #11 #14"/>
-
-                           <desc>
-                          Navigation system:
-                          gray string is sewn into the fore edge
-                        </desc>
+                          <locus target="#1 #11 #14" facs="003 013 016"/>
+                           <desc>Gray string is sewn into the fore edge as navigation system</desc>
                         </item>
                         <item xml:id="e4">
-                          <locus target="#20 #32 #38"/>
-                        <desc>
-                          blue string is sewn into the fore edge
-                        </desc>
+                          <locus target="#20 #32 #38" facs="022 034 040"/>
+                        <desc>blue string is sewn into the fore edge as navigation system</desc>
                         </item>
                         <item xml:id="e5">
-                           <desc>
-                            Scribal intervention:
-                            words of text are written interlinearly (<locus target="#2r #9v #15r #15v #16r"/>, etc.)
-                          </desc>
+                          <locus target="#2r #9v #15r #15v #16r" facs="004 012 017 018 018"/>
+                           <desc>etc., words of text are written interlinearly</desc>
                           </item>
                           <item xml:id="e6">
-                          <locus target="#10r #16r #19v #35v"/>
-                          <desc>
-                            erasure markings are visible (here and etc.)
-                          </desc>
+                          <locus target="#10r #16r #19v #35v" facs="012 018 022 038"/>
+                          <desc>etc., erasure markings are visible</desc>
                           </item>
                           <item xml:id="e7">
-                          <locus target="#3v #39r #40r"/>
-                          <desc>
-                            text has been removed
-                          </desc>
+                          <locus target="#3v #39r #40r" facs="006 041 042"/>
+                          <desc>text has been removed</desc>
                           </item>
                      </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"/>
+                        <material key="wood"/>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage>
-            <language ident="en">English</language>
-            <language ident="ar">Arabic</language>
-            <language ident="it">Italian</language>
-            <language ident="gez">Gǝʿǝz</language>
-         </langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2019-11-05" who="ABe">Added items</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-11-05" who="ABe">Added items</change>
          <change who="PL" when="2019-11-13">updated msIdentifier for Tweed collection.</change>
+         <change when="2020-01-27" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2020-02-05" who="RL">Added image links, added further additions, and minor edits to additions and extras</change>
+         <change when="2020-02-27" who="RL">Added title to ms i1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
