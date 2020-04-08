@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Bǝsrāta Yoḥannǝs, Miracles of Mary</title>
+            <title>Gospel of John, Miracles of Mary</title>
             <editor key="DR"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -27,10 +27,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <collection>كتب مقدسة</collection>
                       <idno>DS Ethiop. 2</idno>
                      <altIdentifier>
-                        <idno>٩٢٣</idno>
+                        <idno xml:id="idno1" xml:lang="ar">مسلسل ٧١٤</idno> 
                      </altIdentifier>
                      <altIdentifier>
-                        <idno>ملك ٧١٤</idno> 
+                        <idno corresp="#idno1" xml:lang="en">Serial Number 714</idno> 
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:id="idno2" xml:lang="ar">كتب مقدسة ٩٢٣</idno> 
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno corresp="#idno2" xml:lang="en">Sacred Books 923</idno> 
                      </altIdentifier>
                   </msIdentifier>
                
@@ -42,10 +48,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <support>
                            <material key="parchment"/>
                         </support>
-                        
                         <extent>
                            
                            <measure unit="leaf">I-II+84</measure>
+                           <measure unit="quire">A+9</measure>
                            <dimensions type="outer" unit="mm">
                               <height>155</height>
                               <width>110</width>
@@ -120,13 +126,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <bindingDesc>
                      <binding contemporary="true" xml:id="binding">
-                        <decoNote xml:id="b1">Two wooden boards, covered with blind-tooled leather, inner boards 
-                           covered with cloth with floral motif.</decoNote>
+                        <decoNote xml:id="b1">Two wooden boards covered with light brown blind-tooled leather, textile inlays (floral motif).
+                        Mitred turn-ins. The endbands intact.
+                        </decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>
                            <material key="leather"/>
                            <material key="textile"/>
                         </decoNote>
+                        <decoNote xml:id="b3" type="SewingStations">4</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -204,12 +212,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                         <layoutDesc>
                            <layout columns="2" writtenLines="19">
+                              <note>Number of characters per line: <locus target="#13ra"/>: 9-11; <locus target="#23ra"/>: 9-12.</note>
                               <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#11r"/>.</note>
                               <dimensions unit="mm" xml:id="textarea"> 
                                  <height>96</height>
                                  <width>77</width>
                               </dimensions>
-                              <!-- characters in 1 line per column f. 13ra 9-11;  23ra 9-12 -->
                               <dimensions type="margin" unit="mm" xml:id="margin">
                                  <dim type="top">15</dim>
                                  <dim type="bottom">37</dim>
@@ -217,6 +225,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <dim type="left">11</dim>
                               </dimensions>
                               <ab type="pricking">Pricking and ruling are visible.</ab>
+                              <ab type="ruling" subtype="pattern"> Ruling pattern:
+                                 1A-1A-1A1A/0-0/0-0/C.</ab>
                            </layout>
                         </layoutDesc>
                      </objectDesc>
@@ -225,7 +235,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                      <handDesc>
                         <handNote xml:id="h1" script="Ethiopic">
-                           <seg type="script"/>
                            <seg type="ink">Black, red.</seg>
                            <seg type="rubrication">Incipits, chapter titles, ኢየሱስ፡, ክርስቶስ፡, parts of the punctuation sign ፨, days of the week written in the upper margin.</seg>
                         </handNote>
@@ -267,9 +276,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                            <item xml:id="a5">
                               <locus target="#1r"/>
-                              <desc type="OwnershipNote">Arabic Ownership note.</desc>
+                              <desc type="OwnershipNote">Arabic Ownership note stating that this book belongs to <persName ref="PRS11940GabraK"/>.</desc>
                               <q xml:lang="ar">هذا الكتاب ملك
-                              <persName ref="PRS11940GabraK"> 
+                              <persName ref="PRS11940GabraK" role="owner"> 
                                     <roleName type="title">القس</roleName> عبد المسيح الحبشي</persName>
                               </q>
                            </item>
