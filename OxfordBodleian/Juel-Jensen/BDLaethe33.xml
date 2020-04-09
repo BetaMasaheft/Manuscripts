@@ -10,9 +10,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Dāwit</title>
+                <title>Psalms</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
+                <editor key="MV"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -36,11 +37,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <msContents>
                         <summary/>
-                        
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
-                        
+                        <msItem xml:id="ms_i1">
+                            <locus from="1r" to="1v"/>
+                            <title type="incomplete" ref="">Hymn to Giyorgis</title>
+                            <incipit xml:lang="gez">
+                                
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                
+                            </explicit>
+                            <note>Partially erased.
+                            </note>               
+                        </msItem>
+                        <msItem xml:id="ms_i2">
+                            <locus from="2r" to="130v"/>
+                            <title type="incomplete" ref="LIT2000Mazmur"/>
+                            <note>
+                                Text corresponding to Pss 1 and 2 (beginning) is missing. The end of Ps 151 is missing.
+                            </note>               
+                            <incipit xml:lang="gez">
+                                <lb/> ወከመ፡ ንዋየ፡ ለብሐ፡ ትቀጠቅጦ<gap reason="illegible" unit="chars" quantity="1"/>
+                                <lb/> ወይእዜኒ፡ ነገሥት፡ ለብዉ።
+                                <lb/> ወተገሠጹ፡ ኵልክሙ፡ እለ፡ ት<gap reason="illegible" unit="chars" quantity="4"/>፡ ለምድር።
+                                <lb/> ተቀነዩ፡ ለእግዚአብሔር፡ በፍር<gap reason="illegible" unit="chars" quantity="1"/>ት።
+                                <lb/> ወተሐሰዩ፡ ሎቱ፡ በረአድ።
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <lb/> ወቀብአኒ፡ ቅብአ፡ ቅዱሰ።
+                                <lb/> አኀውየሰ፡ ሠናያን፡ ወሊሂቃን።
+                                <lb/> ወኢሠምረ፡ ቦሙ፡ እግዚአብሔር።
+                                <lb/> ወወጻእኩ፡ ለተእኅዞቱ፡ ለሕዝብ፡ ነኪር፡
+                                <lb/> ወረገመኒ፡ በአማልክቲሁ፡
+                            </explicit>
+                        </msItem>
                     </msContents>
                     
                     <physDesc>
@@ -50,8 +79,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">132</measure>
-                                    <note>The foliation goes up to 131. One leaf has been skipped between <locus target="#27"/> and <locus target="#28"/>.</note>
+                                    <measure unit="leaf">131</measure>
+                                    <note>The foliation goes up to 130.
+                                        Due to omission in numbering one leaf before <locus target="#28"/>, the two preceding leaves are numbered <locus target="#27a"/> and <locus target="#27b"/>.
+                                    </note>
                                     <measure unit="leaf" type="blank"></measure>
                                     <!--<locus target=""/>-->
                                     <measure type="weight" unit="g">923</measure><!--without māḫdar-->
@@ -68,7 +99,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#60r"/>.</note>
                                 </extent>
                                 
-                                <foliation>One leaf has been skipped between <locus target="#27"/> and <locus target="#28"/>.</foliation>
+                                <foliation>
+                                    Due to omission in numbering one leaf before <locus target="#28"/>, the two preceding leaves are numbered <locus target="#27a"/> and <locus target="#27b"/>.
+                                </foliation>
                                 
                                 <collation>
                                     <list>
@@ -165,7 +198,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
                                 
-                                <condition key="deficient">The sewing has come loose in many places.    </condition>
+                                <condition key="deficient">The sewing has come loose in many places.</condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -217,23 +250,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </objectDesc>
                         
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic">
-                           
-                            </handNote>
+                          <!--    <handNote xml:id="h1" script="Ethiopic">
+                           ...
+                            </handNote>-->
                         </handDesc>
                         
                        <!-- <decoDesc>
-                         
                         </decoDesc>-->
                         
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
+                        <additions>
+                            <list>
+                                <item xml:id="a1">
+                                    <desc type="GuestText">Prayer against...</desc>
+                                    <locus target="#18r"/>
+                                   <!--   <q xml:lang="gez">
+                                      
+                                    </q>-->
+                                    <note> 
+                                        The note is crudely written and  is incomplete. Many letters are hardly legible.</note>
+                                </item>
+                                                               
+                                <item xml:id="e1">
+                                    <q xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</q>
+                                    <note>A label with the name of <persName ref="PRS5782JuelJen"/>, written in Ethiopic, is glued onto the inner side of the front board.</note>
+                                </item>
+                                <item xml:id="e2">
+                                    <locus target="#19r"/>
+                                    <note>Scribbles erased ...</note>
+                                </item>
+                                <item xml:id="e3">
+                                    <desc>
+                                        <!--  Psalms are all numbered, except for Ps 87 (<locus target="#62v"/>). Psalm ... is erroneously indicated as ... (<locus target=""/>).
+                                        Groups of ten psalms are separated sometimes with one chain of red and black small semicircles (e.g., <locus target=""/>), 
+                                        sometimes with two chains of red and black small semicircles (<locus target=""/>), 
+                                        or sometimes with one single chain of red semicircles (<locus target=""/>). 
+                                        The midpoint of the Psalms of David is indicated with the word <foreign xml:lang="gez">መንፈቁ፡</foreign>, encircled in red ink, 
+                                        on <locus target=""/>.
+                                        --></desc>
+                                </item>
+                            </list>
+                        </additions>
+                        
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Two wooden boards. The spine cover is missing.</decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+                                    <material key="wood"/>  
+                                </decoNote>
                             </binding>
-                        </bindingDesc>-->
+                        </bindingDesc>
                         
                     </physDesc>
                     
@@ -248,9 +313,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <adminInfo>
                             <recordHist>
                                 <source>
-                                  <!--  <listBibl type="secondary">
-                                        <bibl></bibl>
-                                    </listBibl>-->
+                                    <listBibl type="secondary">
+                                        <bibl>
+                                            <ptr target="bm:Bassano1922BiluyKidan"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target=""/> ChaineRep (Hymn to Giyorgis)
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:DegeMueller2015Psalter"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Heldman2010Psalter"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Knibb2000Psalms"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Ludolf1701Psalterium"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Tasfa1966Dawit"/>
+                                        </bibl>
+                                    </listBibl>
                                 </source>
                             </recordHist>
                         </adminInfo>
@@ -276,6 +361,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="OldTestament"/>
+                    <term key="Prayers"/>
+                    <term key="Poetry"/>
+                    <term key="Bible"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -286,6 +375,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-21">Created record</change>
             <change who="DR" when="2020-02-25">Added dimensions and layout</change>
+            <change who="MV" when="2020-04-09">Added keywords, bibl, binding. Started text description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
