@@ -26,10 +26,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <collection>Ethiopic</collection>
                       <idno>DS Ethiop. 5</idno>
                      <altIdentifier>
-                        <idno xml:lang="ar">مسلسل ٧١٥</idno> 
+                        <idno xml:lang="ar" xml:id="idno1">مسلسل ٧١٥</idno> 
                      </altIdentifier>
                      <altIdentifier>
-                        <idno xml:lang="ar">٦١٨  م  طقوس </idno> 
+                        <idno xml:lang="en" corresp="#idno1">Serial Number 715</idno> 
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:lang="ar" xml:id="idno2">٦١٨  ح  طقوس </idno> 
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:lang="en" corresp="#idno2">Liturgy  618</idno> 
                      </altIdentifier>
                   </msIdentifier>
                
@@ -198,7 +204,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </collation>
                         
                         <condition key="good">The manuscript is in good condition, it shows signs of use. Especially the
-                           lower outer corner is often dirty.</condition>
+                           lower outer corner is often dirty (<locus target="#1r #90r"/>). There are stains in the upper outer part of several leaves
+                           (<locus target="#90v #91r #92v"/>).</condition>
                      </supportDesc>
                      
                      <layoutDesc>
@@ -233,97 +240,88 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script"/>
                         <seg type="ink">Black, red.</seg>
-                        <seg type="rubrication">Parts of punctuation signs, numerals and parts of numerals, the name of
-                           <foreign xml:lang="gez">ማርያም</foreign>, <foreign xml:lang="gez">ድንግል፡</foreign>, 
-                           <foreign xml:lang="gez">ጽዮን፡</foreign>, <foreign xml:lang="gez">ሥሉስ፡</foreign>,  <foreign xml:lang="gez">ሥላሴ</foreign>, angels and saints, 
-                         the first word of each stanza, 
-                         the first verse of  <ref type="work" corresp="LIT1834Mahlet#Stanza51"/>,
+                        <seg type="rubrication">Elements of punctuation signs (red x surrounded by dashes on the top and the bottom
+                           (<locus target="#1r"/>), <hi rend="rubric">፨</hi>), 
+                           numerals and elements of numerals, holy names
+                           (<foreign xml:lang="gez">ማርያም</foreign>, <foreign xml:lang="gez">ድንግል፡</foreign>, 
+                           <foreign xml:lang="gez">ጽዮን፡</foreign>, <foreign xml:lang="gez">ሥሉስ፡</foreign>,  
+                           <foreign xml:lang="gez">ሥላሴ</foreign>, names of angels and saints)
+                           the first word of each stanza, 
+                           the first verse of  <ref type="work" corresp="LIT1834Mahlet#Stanza51"/>,
                            which is numbered with <foreign xml:lang="get">፶</foreign>, 
                            <foreign xml:lang="gez">ሚካኤል</foreign> in the name of the owner <persName ref="PRS11957GabraM"/>
-                        in the final supplication.</seg>
-                        punctuation signs used: red x surrounded by dashes on the top and the bottom
-                        (<locus target="#1r"/>), <hi rend="rubric">፨</hi>.
+                           in the final supplication.</seg>
                      </handNote>
                   </handDesc>
                   
                   <decoDesc>
                      
                      <decoNote type="drawing" xml:id="d1">
-                        <locus target="#11v"/>
+                        <locus target="#11v #22r #31r #53v #61v "/>
                         <desc>
-                           <term key="cross"/> drawn with pencil. On this page, stanza 27 according to Grohmann, begins.</desc>
-                     </decoNote>
-                     <decoNote type="drawing" xml:id="d2">
-                        <locus target="#22r"/>
-                        <desc>
-                           <term key="cross"/> drawn with pencil. On this page, stanza 51 according to Grohmann (marked with 50 in the
-                           manuscript), begins.</desc>
-                     </decoNote>
-                     <decoNote type="drawing" xml:id="d3">
-                        <locus target="#31r"/>
-                        <desc>
-                           <term key="cross"/> drawn with pencil. On this page, stanza 72 according to Grohmann, begins.</desc>
-                     </decoNote>
-                     <decoNote type="drawing" xml:id="d4">
-                        <locus target="#53v"/>
-                        <desc>
-                           <term key="cross"/> drawn with pencil. On this page, stanza 125 according to Grohmann, is contained
-                           completely and stanza 126, according to Grohmann, begins.</desc>
-                     </decoNote>
-                     <decoNote type="drawing" xml:id="d5">
-                        <locus target="#61v"/>
-                        <desc>
-                           <term key="cross"/> drawn with pencil. On this page, stanza 145 according to Grohmann, begins.</desc>
+                           A <term key="cross">cross</term> is drawn with pencil on the pages on which
+                           <ref type="work" corresp="LIT1834Mahlet#Stanza27"/>, 
+                           <ref type="work" corresp="LIT1834Mahlet#Stanza51"/>, 
+                           <ref type="work" corresp="LIT1834Mahlet#Stanza72"/>,
+                           <ref type="work" corresp="LIT1834Mahlet#Stanza125"/>,
+                           <ref type="work" corresp="LIT1834Mahlet#Stanza126"/> (on the same page)
+                           and <ref type="work" corresp="LIT1834Mahlet#Stanza145"/> begin.</desc>
                      </decoNote>
                   </decoDesc>
                   
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <locus target="#91r"/>
-                           <desc type="OwnershipNote"/> 
-                           <!--continuity between supplication and ownership note?-->
-                           <q xml:lang="gez">ዝመጽሐፍ፡ ዘ<persName ref="PRS11957GabraM">
+                           <locus from="91r" to="91v"/>
+                           <desc type="OwnershipNote">After the name of the owner, which has been added later in space left originally blank
+                              at the end of the supplication concluding <ref target="#ms_i2"/>,
+                              follows continuously a note in the same hand stating that the manuscript belongs to
+                              <persName ref="PRS11957GabraM"/> from the monastery <placeName ref="INS0352EA"/>
+                              in <placeName ref="LOC3764Hamase"/>.</desc> 
+                           <q xml:lang="gez">
+                              <seg type="supplication"><persName ref="PRS11957GabraM">
+                                 <roleName type="title">አቡነ፡</roleName> ገብረ፡ <hi rend="rubric">ሚካ<pb n="91v"/>ኤል፡</hi>
+                              </persName> ለዓለመ፡ ዓለም፡ አሜን<hi rend="rubric">፨</hi></seg>
+                              ዝመጽሐፍ፡ ዘ<persName ref="PRS11957GabraM" role="owner">
                                  <roleName type="title">አባ፡</roleName> ገብረ፡ <hi rend="rubric">ሚካኤል፡</hi> 
                               </persName>
                               <placeName ref="INS0352EA">እንዳቦና፡</placeName> 
-                              <placeName ref="LOC3764Hamase">ሐመሴን</placeName>
-                              <hi rend="rubric">፨ ፨ ፨ ፨</hi>
+                              <placeName ref="LOC3764Hamase">ሐመሴን</placeName><hi rend="rubric">፨ ፨ ፨ ፨</hi>
                            </q>
                         </item>
        
                         <item xml:id="e1">
                            <locus target="#ir #iir #1r #8v #9r #26v #27r #66v #67r #85v #88v #91v #92v"/>
-                           <desc>Stamp of <placeName ref="INS0478DS"/></desc>
+                           <desc>Stamp of <placeName ref="INS0478DS"/>.</desc>
                            <q xml:lang="ar"/>
                         </item>
                         
                         <item xml:id="e2">
                            <locus target="#ir"/>
-                           <desc>Arabic shelfmark</desc>
+                           <desc>Arabic shelfmark.</desc>
                            <q xml:lang="ar">مسلسل ٧١٥</q>
                         </item>
                         
                         <item xml:id="e3">
                            <locus target="#ir"/>
-                           <desc>Arabic title</desc>
+                           <desc>Arabic title.</desc>
                            <q xml:lang="ar">صلوات عن العذراء</q>
                         </item>
                         
                         <item xml:id="e4">
                            <locus target="#ir"/>
-                           <desc>Arabic shelfmark</desc>
-                           <q xml:lang="ar">٦١٨  م  طقوس </q>
+                           <desc>Arabic shelfmark.</desc>
+                           <q xml:lang="ar">٦١٨  ح  طقوس </q>
                         </item>
                         
                         <item xml:id="e5">
                            <locus target="#10r #21v #25v #26r #27v #32r #40r #50r #56v #71v #72r #80v #89v #90r"/>
-                           <desc>Mistakes erased and overwritten with red lines.</desc>
+                           <desc>Mistakes have been scratched out and overwritten with three red lines throughout the manuscript.</desc>
                         </item>
                         
                         <item xml:id="e6">
                            <locus target="#19r #29v #30v #36r #41r #41v"/>
-                           <desc>Mistakes erased.</desc>
+                           <desc>Mistakes have been scratched out.</desc>
                         </item>
                         
                         <item xml:id="e7">
