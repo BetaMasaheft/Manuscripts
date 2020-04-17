@@ -28,8 +28,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <collection>Ethiopic</collection>
                   <idno>DS Ethiop. 7</idno>
                   <altIdentifier>
-                     <idno>٦١٨ ب</idno>
-                     <note>Painted on the spine with white paint.</note>
+                     <idno xml:lang="ar" xml:id="idno1">مسلسل ٧١٢</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno xml:lang="en" corresp="#idno1">Serial Number 712</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno xml:lang="ar" xml:id="idno2">٦١٨ ب طقوس</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno xml:lang="en" corresp="#idno2">618 B Liturgy</idno>
                   </altIdentifier>
                </msIdentifier>
 
@@ -44,6 +52,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        ወደቁ፡ አቲብየ፡ እትነሣእ፡ በስመ፡ አብ፡
                         ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ኃይለ፡ መሰቀሉ፡ ዕትመረጐዝ፨ ሃ<hi rend="rubric">ሌ፡ ሃሌ፡ ሃሌ፡ ለያ፡</hi>
                         አአትብ፡ ወእትነሣእ፡ በስመ፡ አብ፡ ወወልድ፡ <hi rend="rubric">ወመንፈስ፡</hi> ቅዱስ፡</incipit>
+                     <explicit xml:lang="gez">
+                        
+                     </explicit>
                   </msItem>
 
                   <msItem xml:id="ms_i2">
@@ -213,7 +224,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                that the book was written by <persName ref="PRS11959Pawlos">
                 <roleName type="title">ʾabuna</roleName>
      Ṗāwlos</persName> of <placeName ref="INS0354DB">Dabra Bizan</placeName>,
-      and the date provided is <date calendar="ethiopian">1920 year of mercy
+      and the date provided is <date calendar="ethiopian" when-custom="1920" notBefore="1927" notAfter="1928">1920 year of mercy
       (=1927/28 AD)</date>.</note>
                   </msItem>
                </msContents>
@@ -225,13 +236,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="paper"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">89+I-II</measure>
+                           <measure unit="leaf">I+89+II</measure>
                            <dimensions type="outer" unit="mm">
                               <height>210</height>
                               <width>160</width>
                               <depth>30</depth>
                            </dimensions>
                         </extent>
+                        
+                        <foliation resp="DR DN">Foliation in pencil in the bottom centre of the recto.</foliation>
                      </supportDesc>
 
                      <layoutDesc>
@@ -255,6 +268,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script"/>
+                        <seg type="ink">Black, red.</seg>
                      </handNote>
                   </handDesc>
 
@@ -262,62 +276,86 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <locus target="#ivv"/>
-                           <desc type="OwnershipNote"/>
-                           <q xml:lang="gez">ዝመጽሐፍ፡ ዘኀለቃ፡ <persName ref="PRS12557Barha" cert="medium">በርሄ</persName>
+                           <locus target="#iv"/>
+                           <desc type="OwnershipNote">Note stating the manuscript belongs to <persName ref="PRS12557Barha"/>,
+                           whose name is not written clearly. The ink of the second and third characters is smeared.</desc>
+                           <q xml:lang="gez">ዝመጽሐፍ፡ ዘ<persName ref="PRS12557Barha" role="owner"><roleName type="title">ኀለቃ፡</roleName> በሬሄ</persName>
                            </q>
-                           <note>The name of <persName ref="PRS12557Barha">ḫalaqā Barha</persName>is
-                            written not quite clearly,
-                             the ink of the second and
-                             third letters is smeared. </note>
                         </item>
 
                         <item xml:id="a2">
                            <locus target="#ivv"/>
-                           <desc type="OwnershipNote"/>
+                           <desc type="OwnershipNote">Arabic note of the name of <persName ref="PRS11959Pawlos">Būlus al-Ḥabašī</persName>.</desc>
                            <q xml:lang="ar">الراهب <persName ref="PRS11959Pawlos">بولس
                                  الحبشي</persName>
                            </q>
                         </item>
 
                         <item xml:id="e1">
-                           <locus target="#ivr"/>
-                           <desc>Two Arabic stamps of the library</desc>
+                           <locus target="#ir #iiv"/>
+                           <desc>Stamps of <placeName ref="INS0478DS"/>.</desc>
                            <q xml:lang="ar"/>
                         </item>
 
                         <item xml:id="e2">
-                           <locus target="#ivr"/>
-                           <desc>Arabic shelfmarks</desc>
-                           <q xml:lang="ar"/>
+                           <locus target="#ir"/>
+                           <desc>Arabic shelfmark.</desc>
+                           <q xml:lang="ar">مسلسل ٧١٢</q>
+                        </item>
+                        
+                        <item xml:id="e3">
+                           <locus target="#ir"/>
+                           <desc>Arabic shelfmark.</desc>
+                           <q xml:lang="ar">٦١٨ ب طقوس</q>
                         </item>
 
-                        <item xml:id="e3">
-                           <locus target="#ivr"/>
+                        <item xml:id="e4">
+                           <locus target="#ir"/>
                            <desc>Arabic title</desc>
                            <q xml:lang="ar">صلوات</q>
                         </item>
 
-                        <item xml:id="e4">
-                           <locus target="#ivr"/>
-                           <desc>Arabic scribbles (year dates).</desc>
+                        <item xml:id="e5">
+                           <locus target="#ir"/>
+                           <desc>Arabic scribbles (year dates) in pencil.</desc>
                            <q xml:lang="ar"/>
                         </item>
+                        
+                        <item xml:id="e6">
+                           <locus target="#ir"/>
+                              <desc>Arabic note in pencil.</desc>
+                           <q xml:lang="ar">الراهب <persName ref="PRS11959Pawlos">بولس</persName></q>
+                        </item>
 
-                        <item xml:id="e5">
-                           <locus target="#ivr"/>
+                        <item xml:id="e7">
+                           <locus target="#ir"/>
                            <desc>Ethiopic scribbles.</desc>
                            <q xml:lang="gez"/>
                         </item>
 
-                        <item xml:id="e6">
+                        <item xml:id="e8">
                            <locus target="#89v"/>
                            <desc>Arabic scribbles of the scribe's name and year dates.</desc>
-                           <q xml:lang="ar"> الراهب <persName ref="PRS11959Pawlos">بولس
-                                 الحبشي</persName> الراهب <persName ref="PRS11959Pawlos">بولس
-                                 الحبشي</persName>
+                           <q xml:lang="ar"> الراهب <persName ref="PRS11959Pawlos"><roleName
+                                    type="title">ابونا</roleName> بولس الحبشي</persName> الراهب
+                                 <persName ref="PRS11959Pawlos"><roleName type="title"
+                                    >ابونا</roleName> بولس الحبشي</persName>
+                              ١٩٥٢ ١٩٤٤
+                             ١٩٣٢ ١٩٤٥
                            </q>
                         </item>
+                        
+                        <item xml:id="e9">
+                           <locus target="#iiv"/>
+                           <desc>Ethiopic scribbles.</desc>
+                        </item>
+                        
+                        <item xml:id="e10">
+                           <locus target="#iiv"/>
+                           <desc>Arabic year dates in pencil.</desc>
+                           <q xml:lang="ar">١٩٥٤ ١٩٥٢</q>
+                        </item>
+                        
                      </list>
                   </additions>
 
@@ -325,18 +363,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <binding xml:id="binding">
                         <decoNote xml:id="b1">Written in an industrially produced quire or notebook
                            with blue synthetic cover (the title <foreign xml:lang="it">quaderno</foreign>
-                            is at the end, <locus target="#iiv"/>, upside down).</decoNote>
-                          <decoNote xml:id="b2"> Binding is made of two
+                            is at the end, <locus target="#iiv"/>, upside down). The binding is made of two
                            pieces of soft rectangular whitish leather pieces glued together,
-                           wrapping the text block.</decoNote>
-                           <decoNote xml:id="b3">Lining of the spine and overback made of brown
-                           leather.</decoNote>
-                            <decoNote xml:id="b4"> Endbands.</decoNote>
-                        <decoNote xml:id="b5" type="bindingMaterial">
+                           wrapping the text block. Lining of the spine and overback made of brown
+                           leather. The endbands are intact.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
                           <material key="leather"/>
                           <material key="cardboard"/>
                           <material key="paper"/>
-
                         </decoNote>
                      </binding>
                   </bindingDesc>
@@ -351,8 +385,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      in <placeName ref="LOC2804Egypt">Egypt</placeName> or in <placeName ref="LOC2991Eritre">Eritrea</placeName>.
                      A brief note identifies <persName ref="PRS12557Barha">ḫalaqā Barha</persName> as the owner.
                    </origin>
-                  <provenance/>
+                 
                </history>
+               
+               <additional>
+                  <adminInfo>
+                     <note>A paper sheet containing a modern description of the manuscript in Arabic is placed inside it.
+                        It is stated in the description this manuscript was copied from <persName ref="PRS12557Barha"/> as a
+                        personal copy. On the verso, there is a description of <ref type="mss" corresp="DSEthiop8"/>.</note>
+                  </adminInfo>
+               </additional>
 
             </msDesc>
          </sourceDesc>
@@ -387,11 +429,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="MoPe"/>
             </keywords>
          </textClass>
-         <langUsage><language ident="en">English</language><language ident="ar">Arabic</language><language ident="gez">Gǝʿǝz</language><language ident="ti">Tigrinya</language></langUsage>
+         <langUsage><language ident="en">English</language>
+            <language ident="ar">Arabic</language>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="ti">Tigrinya</language>
+            <language ident="it">Italian</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="DN" when="2018-02-26">Recorded manuscript</change>
          <change who="DR" when="2018-03-01">Created catalogue entry</change>
+         <change who="DR" when="2020-04-17">Continued description</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
