@@ -30,22 +30,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno>GMG-020</idno>
                </msIdentifier>
                <msContents>
-                  <summary>I) Maṣḥafa gǝṣṣawe, Lectionary for the entire year (fols.
+                  <summary>I) Maṣḥafa gǝṣṣāwe, Lectionary for the entire year (fols.
                      1ra-54vb)</summary>
                   <msItem xml:id="ms_i1">
-
-                     <incipit>
-                        <foreign xml:lang="en"/>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
-                     <note/>
+                     <locus from="1ra" to="54vb"/>
+                     <title ref="LIT1932Mashaf"></title>
+                     <incipit type="title"><locus target="#1ra">1ra</locus>
+                        <note>The text is called Maṣḥafa gǝṣṣāwe in the incipit.</note></incipit>
+                     
                   </msItem>
-                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
-                  <msItem xml:id="ms_i2">
-                     <note>The text is called Maṣḥafa gǝṣṣawe in the incipit (<locus target="#1ra">1ra</locus>).</note>
-                  </msItem>
+                  
+                  
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -129,8 +124,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <list type="abbreviations">
                            <item>ይዲ፡ for ይብል፡ ዲያቆን፡</item>
                         </list>
-                        <seg type="rubrication">Nomina sacra; incipit of Text I; directives to the
-                           ministers; abbreviations of the directives yǝbǝl diyaqon “the deacon
+                        <seg type="rubrication">Holy names; incipit of Text I; directives to the
+                           ministers; abbreviations of the directives yǝbǝl diyāqon “the deacon
                            says”; titles of books to be read; notes written in the upper margin;
                            elements of the punctuation signs; elements of Ethiopic numerals.&#xD; On
                            the incipit pages of Text I (fols.1r), a few lines are rubricated
@@ -156,9 +151,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                  48va</locus> ዘደብረ፡ ዘይት: <locus target="#48vb">fol.
                               48vb</locus>.</desc>
                         </item>
-                        <item xml:id="e3"><!--2019-04-25+02:00 Updated ESgmg020 
-            from DomLib domlib_document_00001256-->
-                           <desc>- Title of the work is written in the front board: Gǝṣṣawe - Crude note: <locus target="#55r">fol.  55r</locus>. - Pen trials and doodles: fols. 55r, 55v, 56r, 56v.</desc>
+                        <item xml:id="e3">
+                           <desc>- Title of the work is written in the front board: Gǝṣṣāwe</desc>
+                        </item>
+                        <item xml:id="e4">
+                           <desc>
+                              - Crude note: <locus target="#55r">fol.  55r</locus>.</desc>
+                        </item>
+                        <item xml:id="e5">
+                           <desc> - Pen trials and doodles: fols. 55r, 55v, 56r, 56v.</desc>
                         </item>
                      </list>
                   </additions>
@@ -178,12 +179,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0115GMG">GÃ¤naá¸¥ti QÓ&#x99;ddÓ&#x99;st Māryām /
-                           GMG</placeName>
+                        <placeName ref="INS0115GMG"></placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1850">First half of the 19th
                         cent.</origDate>
                   </origin>
+                  <provenance>Owned by Gabra Māryām (s. supplication formulas on
+                     <locus target="#1ra">1ra</locus>, 3ra, 7ra); Walatta Māryām (s. supplication
+                     formula on <locus target="#55r">55r</locus>)</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -217,21 +220,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-               <person>
-                  <persName role="owner" ref="PRS0000">Gabra Māryām (s. supplication formulas on
-                        <locus target="#1ra">1ra</locus>, 3ra, 7ra); Walatta Māryām (s. supplication
-                     formula on <locus target="#55r">55r</locus>)</persName>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
-               <person>
-                  <persName ref="PRS00000"/>
-                  <!--other-->
-               </person>
-            </listPerson>
-         </particDesc>
+         
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Liturgy"/>
@@ -245,6 +234,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="SH" when="2014-09-09">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
          <change who="PL" when="2019-04-25">added missing extras from domlib</change>
+         <change when="2020-02-23" who="ES">adjusted to schema, introduced msitems - no person ID created</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
