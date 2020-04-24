@@ -43,10 +43,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
-                        
+                        <msItem xml:id="ms_i1">
+                            <locus from="" to=""/>
+                            <title type="complete" ref=""/>
+                            <incipit xml:lang="gez">
+                                <hi rend="rubric"></hi> 
+                            </incipit>
+                            <explicit xml:lang="gez">
+                            </explicit>
+                        </msItem>
                     </msContents>
                     
                     <physDesc>
@@ -58,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <extent>
                                     <measure unit="leaf">81+2</measure>
                                     <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <locus target=""/>
                                     <dimensions type="outer" unit="mm">
                                         <height>183</height>
                                         <width>129</width>
@@ -74,6 +79,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <foliation><locus from="1" to="9"/> and <locus from="80" to="81"/> are not foliated. A protective bifolium has been glued to
                                 the front and back cover and has not been considered in the foliation.</foliation>
                                 <collation>
+                                    <signatures>
+                                        <!--  <note>
+                                            Quire marks are written in the upper inner margin of the first leaf of each quire. [Some of them are barely legible or nearly illegible.]                                                                               
+                                        </note>-->
+                                    </signatures>
                                     <list>
                                         <item xml:id="q1" n="1">
                                             <dim unit="leaf">3</dim>
@@ -106,6 +116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="50r" to="59v"/>
                                         </item>
                                         <item xml:id="q8" n="8">
+                                            <num value="6">፮</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="60r" to="69v"/>
                                         </item>
@@ -119,6 +130,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="good">                   
+                                    <!--  The textblock is affected with humidity, especially towards the end of the manuscript.
+                                    Some leaves are slightly stained with dirt (e.g., on <locus target="#25v #36v #93v"/>) or wax (e.g., <locus target="#108r #111r #114r #117v"/>). 
+                                    The text is occasionally barely legible, e.g., on <locus target="#13v #14r #23r #96r"/>.
+                                    Some letters have been washed away and poorly rewritten in a secondary hand on <locus target="#24v"/>.   
+                                    Traces of intensive use. One folio after <locus target="#136"/> has been cut out at some time after the completion of the writing.-->
+                                </condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -138,27 +156,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                            
                         </objectDesc>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+                                <seg type="script"/>
+                                <seg type="ink">Black, red</seg>
+                                <date notBefore="" notAfter=""></date>
+                                <desc>
+                                    Fine handwriting
+                                </desc>
+                                <seg type="rubrication">
+                                    Divine names; several groups of lines on the incipit pages, alternating with black lines;
+                                    <!-- ... other elements ... -->
+                                    elements of the punctuation signs, text dividers, and numerals, included quire marks.
+                                </seg>
+                                <list type="abbreviations">    
+                                </list>
                             </handNote>
                         </handDesc>
                         
                        <!-- <decoDesc>
-                         
                         </decoDesc>-->
                         
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.
+                                    <!-- two layers of leather cover!! -->
+                                </decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+                                    <material key="wood"/>       
+                                    <material key="leather"/>     
+                                </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                                <decoNote xml:id="b5">Blind tooled ornament on the front and back covers (circles, double circles, double straight lines).</decoNote>
                             </binding>
-                        </bindingDesc>-->
+                        </bindingDesc>
                         
                     </physDesc>
                     
@@ -201,6 +234,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Hagiography"/>
+                    <term key="Miracle"/>
+                    <term key="Homily"/>
+                    <term key="Apocrypha"/>
+                    <term key="Poetry"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -212,7 +250,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-01-13">Created record</change>
             <change who="DR" when="2020-01-22">Added weight and collation</change>
             <change who="DR" when="2020-02-24">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="MV" when="2020-04-24">Added preliminary info on rubrication, binding, keywords, etc</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
