@@ -62,8 +62,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">81+2</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <locus target=""/>
+                                    <measure unit="leaf" type="blank">5</measure>
+                                    <locus target="#2v #3v #4r #9v #81v"/>
+                                    <!-- The protective bifolium at the end is not included (MV 2020-04-24) -->
                                     <dimensions type="outer" unit="mm">
                                         <height>183</height>
                                         <width>129</width>
@@ -80,9 +81,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 the front and back cover and has not been considered in the foliation.</foliation>
                                 <collation>
                                     <signatures>
-                                        <!--  <note>
-                                            Quire marks are written in the upper inner margin of the first leaf of each quire. [Some of them are barely legible or nearly illegible.]                                                                               
-                                        </note>-->
+                                        <note>
+                                            Decorated quire marks are written in the upper inner margin of the first leaf of some quires.                                                                               
+                                        </note>
                                     </signatures>
                                     <list>
                                         <item xml:id="q1" n="1">
@@ -100,18 +101,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="11r" to="20v"/>
                                         </item>
                                         <item xml:id="q4" n="4">
+                                            <num value="2">፪</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="21r" to="30v"/>
                                         </item>
                                         <item xml:id="q5" n="5">
+                                            <num value="3">፫</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="31r" to="40v"/>
                                         </item>
                                         <item xml:id="q6" n="6">
+                                            <num value="4">፬</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="41r" to="49v"/>
                                         </item>
                                         <item xml:id="q7" n="7">
+                                            <num value="5">፭</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="50r" to="59v"/>
                                         </item>
@@ -130,12 +135,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
-                                <condition key="good">                   
-                                    <!--  The textblock is affected with humidity, especially towards the end of the manuscript.
-                                    Some leaves are slightly stained with dirt (e.g., on <locus target="#25v #36v #93v"/>) or wax (e.g., <locus target="#108r #111r #114r #117v"/>). 
-                                    The text is occasionally barely legible, e.g., on <locus target="#13v #14r #23r #96r"/>.
-                                    Some letters have been washed away and poorly rewritten in a secondary hand on <locus target="#24v"/>.   
-                                    Traces of intensive use. One folio after <locus target="#136"/> has been cut out at some time after the completion of the writing.-->
+                                <condition key="good">
+                                    Traces of the former leather cover are clearly visible in the outer side of the front and back boards.
+                                    Some folios, especially at the beginning of the texblock, are severely affected with water, in particular in the upper outer corner (<locus from="1" to="4"/>). 
+                                    Stains, perhaps of wax, on <locus from="15vb" to="16ra"/>. <locus target="#80vb"/> is stained with dirt.
+                                    <locus target="#81"/> is mutilated.
                                 </condition>
                             </supportDesc>
                             
@@ -171,13 +175,44 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <!-- ... other elements ... -->
                                     elements of the punctuation signs, text dividers, and numerals, included quire marks.
                                 </seg>
-                                <list type="abbreviations">    
-                                </list>
                             </handNote>
                         </handDesc>
                         
                        <!-- <decoDesc>
                         </decoDesc>-->
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="a1">
+                                    <desc type="Unclear">  </desc>
+                                    <locus target="#3r"/>
+                                    <q xml:lang="gez amh"> </q>
+                                    <note> <!-- more --> Part of the note is hardly legible due to a stain of water.</note>
+                                </item>
+                                
+                                <item xml:id="e1">
+                                    <q xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</q>
+                                    <note>A label with the name of <persName ref="PRS5782JuelJen"/>, written in Ethiopic, is glued onto the inner side of the front board.</note>
+                                </item>
+                                <item xml:id="e2">
+                                    <note>Aid readings for weekday readings are written in the upper margin within a frame decorated in black and red: 
+                                        <q xml:lang="gez">ዘሠሉስ።</q> (<locus target="#26ra"/>), <q xml:lang="gez">ዘረቡዕ።</q> (<locus target="#35ra"/>), 
+                                        <q xml:lang="gez">ዘሐሙስ።</q> (<locus target="#45rb"/>), <q xml:lang="gez">ዘዓርብ።</q> (<locus target="#54ra"/>), 
+                                        <q xml:lang="gez">ዘቀዳሚት።</q> (<locus target="#60va"/>), <q xml:lang="gez">ዘእሑድ።</q> (<locus target="#66vb"/>), 
+                                    </note>
+                                </item>
+                                <item xml:id="e3">
+                                    <locus target="#26"/>
+                                    <note>A green thread for navigating is inserted on the upper corner of the folio.</note>
+                                </item>
+                                <item xml:id="e4">
+                                    <note>Text written on erasure, e.g. <locus target="#12ra #39rb #44rb"/>.</note>
+                                </item>
+                                <item xml:id="e5">                         
+                                    <note>Erasures marked with thin black lines, e.g. <locus target="#73vb #74va"/>.</note>
+                                </item>
+                            </list>
+                        </additions>
                         
                         <bindingDesc>
                             <binding contemporary="true">
