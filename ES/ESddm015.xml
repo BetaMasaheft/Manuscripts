@@ -33,25 +33,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <summary>I) Maṣḥafa ʾaślǝṭi, Lectionary for the entire year (fols. 1r-21v),
                      incomplete &#xD; &#xD; Additio 1; colophon.</summary>
                   <msItem xml:id="ms_i1">
-
-                     <incipit>
-                        <foreign xml:lang="en"/>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
-                     <note/>
+                     <locus from="5ra" to="58vb"/>
+                     <title ref="LIT1917Mashaf">Maṣḥafa ʾaślǝṭi</title>
+                     <textLang xml:lang="gez"></textLang>
+                     
+                     <colophon xml:id="coloph1">
+                        <locus target="#21v">21v</locus>: ተፈጸመ፡ በስምረተ፡ እግዚአብሔር፡ መጽሐፈ፡ አስሊጥ፡ ዘቤተ፡
+                        ክርስቲያን። በዘመነ፡ ሉቃስ፡ በ፲፻ወ፱፻ወ፲ወ፩፡ ዓመተ፡ ምሕረት። በወርኃ፡ ግንቦት፡ በ፲፮፡ መዓልት፡ በ፳፩፡ ሠርቀ፡ ሌሊት።
+                        በአልቦ፡ ጊዜ፡ ተወጥና፡ ወተፈጸመ። <note>The colophon states that the Ms. has been finished in
+                        <date when="1919">Gǝnbot 16, 1911 year of mercy (= May 24, 1919 A.D.)</date>, in the time when there was
+                        no king in Ethiopia: ba-zamana ʾalbo (nǝguś). </note>
+                        <note>The text is called <title><foreign xml:lang="gez">አስሊጥ፡</foreign> ʾasliṭ</title> in the colophon. </note>
+                     </colophon>
                   </msItem>
-                  <!--The data in the items below refers to other items. please remove this items and move the information to the appropriate place.-->
-                  <msItem xml:id="ms_i2">
-                     <note>Text I is called ʾAsliṭ in the colophon (<locus target="#21v">21v</locus>).</note>
-                  </msItem>
-                  <colophon xml:id="coloph1">
-                     <locus target="#21v">21v</locus>: ተፈጸመ፡ በስምረተ፡ እግዚአብሔር፡ መጽሐፈ፡ አስሊጥ፡ ዘቤተ፡
-                     ክርስቲያን። በዘመነ፡ ሉቃስ፡ በ፲፻ወ፱፻ወ፲ወ፩፡ ዓመተ፡ ምሕረት። በወርኃ፡ ግንቦት፡ በ፲፮፡ መዓልት፡ በ፳፩፡ ሠርቀ፡ ሌሊት።
-                     በአልቦ፡ ጊዜ፡ ተወጥና፡ ወተፈጸመ። The colophon states that the Ms. has been finished in
-                     Gǝnbot 16, 1911 year of mercy (= May 24, 1919 A.D.), in the time when there was
-                     no king in Ethiopia: ba-zamana ʾalbo (nǝguś). </colophon>
+                  
+                  
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -65,7 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <depth unit="mm">30</depth>
                            </dimensions>
                         </extent>
-                        <foliation><!--2016-10-18+02:00 Updated DDM-015 from DomLib--></foliation>
+                        <foliation>Foliation by the Ethio-SPaRe team</foliation>
                         <collation>
                            <list>
                               <item xml:id="q1">
@@ -138,13 +134,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <list>
                         <item xml:id="a1">
                            <locus target="#25r">f. 25r</locus>
-                           <desc>: Unidentified prayer.</desc>
-                           <quote xml:lang="gez"/>
-                           <quote xml:lang="en"/>
+                           <desc type="GuestText">: Unidentified prayer.</desc>
+                           <q xml:lang="gez"/>
+                           
                            <note> Crudely written, partly unintelligible. </note>
                         </item>
-                        <item xml:id="e1">- Doodles and pen trials: <locus target="#22r">22r</locus>, 23v, 25r, 25v, 26r, 27r, 28r, 28v.&#xD; - Smaller script is
-                           used for the bottom line on <locus from="1r" to="6v">1r-6v</locus>
+                        <item xml:id="e1"><desc>- Doodles and pen trials: <locus target="#22r">22r</locus>, 23v, 25r, 25v, 26r, 27r, 28r, 28v.</desc>
+                        </item> 
+                        <item xml:id="e2"><desc>- Smaller script is
+                           used for the bottom line on <locus from="1r" to="6v">1r-6v</locus>;</desc></item>
+                        <item xml:id="e3"><desc>- The name of the owner/donor Walatta Śǝllāse (hardly readable)
+                              is inserted in the supplication formula on <locus target="#11r">11r</locus>.</desc>
                         </item>
                      </list>
                   </additions>
@@ -165,9 +165,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0157DDM">Dändera Dabra Mǝḥrat Mikāʾel / DDM</placeName>
+                        <placeName ref="INS0157DDM"></placeName>
                      </origPlace>
-                     <origDate notBefore="1919" notAfter="1919">The colophon tells that the Ms. has
+                     <origDate when="1919-05-24">The colophon tells that the Ms. has
                         been completed in 16 Gǝnbot 1911 year of mercy (= 24 May 1919
                         A.D.).</origDate>
                   </origin>
@@ -204,20 +204,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-               <person>
-                  <persName role="owner" ref="PRS0000">The name of Walatta Śǝllāse (hardly readable)
-                     is inserted in the supplication formula on <locus target="#11r">11r</locus>.</persName>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
-               <person>
-                  <persName ref="PRS00000"/>
-                  <!--other-->
-               </person>
-            </listPerson>
-         </particDesc>
+         
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Lectionary"/>
@@ -230,6 +217,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="SA" when="2014-10-20">catalogued</change>
          <change who="DN" when="2014-10-30">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change when="2020-04-30" who="ES">adjusted to schema</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
