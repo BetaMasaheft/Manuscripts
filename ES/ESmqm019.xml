@@ -31,17 +31,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </msIdentifier>
                <msContents>
                   <summary>I) Maṣḥafa ʾaślǝṭi, Lectionary for the entire year (fols. 3r-21v)&#xD; -
-                     Barǝkännä ʾǝgziʾo… “Bless us, O Lord…” (Blessing prayer) (fols. 18r-20r)&#xD;
+                     Bārǝkanna ʾǝgziʾo… “Bless us, O Lord…” (Blessing prayer) (fols. 18r-20r)&#xD;
                      &#xD; Additio 1.</summary>
                   <msItem xml:id="ms_i1">
-
-                     <incipit>
-                        <foreign xml:lang="en"/>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
-                     <note/>
+                     <locus from="3r" to="21v"/>
+                     <title>Maṣḥafa ʾaslǝṭi</title>
+                     <msItem xml:id="ms_i1.1">
+                        <locus from="3r" to="17v"/>
+                        <title ref="LIT1917Mashaf">Maṣḥafa ʾaślǝṭi</title>                                                
+                     </msItem>
+                     <msItem xml:id="ms_i1.2">
+                        <locus from="18r" to="20r"/>
+                        <title ref="LIT5655BarekannaEgzio"/>
+                     </msItem>
+                     
                   </msItem>
                </msContents>
                <physDesc>
@@ -108,12 +111,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
-                     <!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Crude, but careful.</seg>
                         <seg type="ink">Black, red.</seg>
                         <date>19th century.</date>
-                        <seg type="rubrication">Nomina sacra; incipit of Texts I; titles of books to
+                        <seg type="rubrication">Holy names; incipit of Texts I; titles of books to
                            be read; elements of the punctuation signs; elements of Ethiopic
                            numerals. &#xD; On the incipit page of Text I (fol. 3r), a few lines are
                            rubricated (alternating with black lines).</seg>
@@ -123,9 +125,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <list>
                         <item xml:id="a1">
                            <locus target="#2v">f. 2v</locus>
-                           <desc>: Unidentified prayer.</desc>
-                           <quote xml:lang="gez"/>
-                           <quote xml:lang="en"/>
+                           <desc type="GuestText">: Unidentified prayer.</desc>
+                           <q xml:lang="gez"/>
+                           
                            <note> The text is hardly readable, the folio is affected by humidity.
                            </note>
                         </item>
@@ -160,7 +162,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0119MQM">Dabra Mäʿar Qǝddǝst Māryām / MQM</placeName>
+                        <placeName ref="INS0119MQM"></placeName>
                      </origPlace>
                      <origDate notBefore="1800" notAfter="1900">19th cent.</origDate>
                   </origin>
@@ -197,14 +199,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-               <person>
-                  <persName ref="PRS00000"/>
-                  <!--other-->
-               </person>
-            </listPerson>
-         </particDesc>
+         
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Lectionary"/>
@@ -217,6 +212,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="SA" when="2013-10-30">catalogued</change>
          <change who="SA" when="2014-09-09">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change when="2020-04-30" who="ES">adjusted to schema</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
