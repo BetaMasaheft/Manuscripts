@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Dāwit</title>
+            <title>Psalter</title>
             <editor key="DR"/>
             <editor key="DN"/>
             <editor key="AB" role="generalEditor"/>
@@ -39,9 +39,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <title type="incomplete" ref="LIT2000Mazmur"/>
                         <textLang mainLang="gez"/>
                      <note>Contains Psalms 1-6 and 8-17; Psalm 7 is missing.
-                     Numeration of Psalms is not consequent. Nummer 1 is used two times;
-                   Psalms 5, 6, 8, 9, 11 have no numbers. Recent numbers written
-                   in pencil, Eastern Arabic numerals, are added to all Psalms.</note>
+                     Numeration of Psalms is not consequent. Number 1 is used two times;
+                     Psalms 5, 6, 8, 9, 11 have no numbers. A recent numeration with Western Arabic numerals written
+                   in pencil, is added to all Psalms.</note>
                      <incipit xml:lang="gez">
                         <locus target="#1r"/>
                         <lb n="1"/>
@@ -83,8 +83,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <width>134</width>
                               <depth>5</depth>
                            </dimensions>
-
                         </extent>
+                        
+                        <foliation>Foliation in pencil in the bottom centre of the recto.</foliation>
 
                         <collation>
                            <list>
@@ -94,6 +95,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </item>
                            </list>
                         </collation>
+                        
+                        <condition key="good">The quire shows slight traces of use, small occasional stains (<locus target="#1r #2r"/>).</condition>
                      </supportDesc>
 
                      <layoutDesc>
@@ -110,20 +113,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <dim type="right">6</dim>
                               <dim type="left">7</dim>
                            </dimensions>
+                           <ab type="pricking">Ruling and pricking are visible.</ab>
+                           <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
 
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"/>
+                        <origDate notBefore="1900" notAfter="1980"/>
+                        <seg type="ink">Black, red.</seg>
+                        <seg type="rubrication">Beginnings of psalms, elements of numerals, elements of punctuation signs, 
+                           the word <foreign xml:lang="gez">እግዚአብሔር፡</foreign>, 
+                        occasionally with the words surrounding it or the entire line in which it is written (e.g. <locus target="#2"/>.</seg>
+                        <!--<desc></desc>-->
                      </handNote>
                   </handDesc>
 
                   <decoDesc>
                      <decoNote type="band" xml:id="d1">
                         <locus target="#1r"/>
-                        <desc>Fine ornamental band (probably unfinished,
+                        <desc>Fine ornamental band, geometric motifs (probably unfinished,
                           only yellow has been applied).</desc>
                      </decoNote>
                   </decoDesc>
@@ -131,14 +141,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <additions>
                      <list>
                         <item xml:id="e1">
-                           <desc> Eastern Arabic numerals have been added in pencil, in
-                             recent hand, to numerate
-                             Psalms.</desc>
+                           <desc> Western Arabic numerals have been added in pencil, in a
+                             recent hand, to numerate the Psalms.</desc>
                         </item>
 
                         <item xml:id="e2">
                            <locus target="#1r"/>
-                           <desc>Arabic title.</desc>
+                           <desc>Arabic title in pencil.</desc>
                            <q xml:lang="ar">مزامير</q>
                         </item>
                      </list>
@@ -147,8 +156,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                   <bindingDesc>
                      <binding xml:id="binding">
-                        <decoNote xml:id="b1">The quire represent a part of the
-                          manuscript in process of making.
+                        <decoNote xml:id="b1">The quire represents a part of the
+                          manuscript in the process of production.
                           No binding; holes in the centrefolds of the
                           quires are made for two pairs of sewing stations.
                           The leaves are held together with tackets (twisted strips of parchment)
@@ -162,11 +171,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                <history>
                   <origin>
-                     <origDate notBefore="1900" notAfter="1980"/>
+                     The manuscript can be dated palaegraphically to the
+                     <origDate notBefore="1900" notAfter="1980" evidence="lettering">early-middle 20th century</origDate>. 
+                     According to the Arabic description placed inside it, this manuscript originates from <placeName ref="LOC2991Eritre"/>
                   </origin>
-                  <provenance>According to the Arabic description, this manuscript
-                    originates from <placeName ref="LOC2991Eritre"/>.</provenance>
                </history>
+               
+               <additional>
+                  <adminInfo>
+                     <note>A paper sheet with a modern Arabic description of the manuscript is placed inside it.</note>
+                  </adminInfo>
+               </additional>
 
             </msDesc>
          </sourceDesc>
@@ -196,6 +211,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DN" when="2018-02-28">Recorded manuscript</change>
          <change who="DR" when="2018-03-28">Created catalogue entry</change>
          <change who="DR" when="2018-06-15">Added provenance, incipit and explicit</change>
+         <change who="DR" when="2020-04-30">Continued description</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
