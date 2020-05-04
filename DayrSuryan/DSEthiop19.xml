@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt> 
-            <title>ʾArgānona Dǝngǝl</title>
+            <title>Organ of Mary</title>
             <editor key="DR"/>
             <editor key="DN"/>
             <editor key="AB" role="generalEditor"/>
@@ -70,7 +70,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <locus from="50v" to="51r"/>
                            እስከ. አመ<hi rend="rubric">፥</hi>
                            <hi rend="rubric">፨</hi> እኔሰሕ. ወአቀርብ. ሎቱ. ፍሬ. ንስሐ<hi rend="rubric">፨</hi>
-                           ዘያ<hi rend="expunctuated">ሥ</hi>ሠምር. ለኂሩተ.
+                           ዘያ<del rend="expunctuated">ሥ</del>ሠምር. ለኂሩተ.
                            ዚአሁ አማኅፀንኩኪ<hi rend="rubric">፨</hi> 
                            <hi rend="rubric">ነፍ</hi>
                            <pb n="51r"/>
@@ -158,10 +158,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            እመናስወ<supplied resp="DR" reason="omitted">፡</supplied> ዓለም<hi rend="rubric">፡</hi> ዘክቡድ. መዋግዲሁ<hi rend="rubric">፨</hi>
                            እማዕበለ<hi rend="rubric">፥</hi> ባሕር<hi rend="rubric">፡</hi> ዘያስጥሞ<hi rend="rubric">፡</hi> ኦድንግል<hi rend="rubric">፡</hi>
                            ወላዲተ<hi rend="rubric">፥</hi>
-                           <hi>እ</hi>
-                           <!--marked by black dashes above and below-->
-                           <add place="above">ዐ</add>ም<hi>እ</hi>
-                           <!--marked by black and red dashes above and below-->ላክ<hi rend="rubric">፡</hi>
+                           <del rend="expunctuated">እ</del>
+                           <add place="above">ዐ</add>ም<del rend="expunctuated">እ</del>ላክ<hi rend="rubric">፡</hi>
                            አሰስሊ<hi rend="rubric">፡</hi> ጺአተ<supplied resp="DR" reason="omitted">፡</supplied> ኃጢአት<hi rend="rubric">፡</hi>
                            እንተ<hi rend="rubric">፡</hi> ኃደረት<hi rend="rubric">፡</hi> ላዕሊየ<hi rend="rubric">፡</hi>
                            <hi rend="rubric">ወይኩን<supplied resp="DR" reason="omitted">፡</supplied> ጸሎትኪ</hi>
@@ -199,10 +197,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <depth>40</depth>
                            </dimensions>
                         </extent>
-                        <foliation>The first folio of each bifolium is numbered in red or black on the bottom right margin, 
-                          <locus target="#101"/> and <locus target="#103"/> are numbered in red and black respectively on the upper right margin. </foliation>
+                        
+                        <foliation>
+                           
+                           <list>
+                              <item xml:id="fol1">
+                                 <desc>The first folio of each bifolio is numbered in red or black on the bottom right margin, 
+                                    <locus target="#101"/> and <locus target="#103"/> are numbered in red and black respectively on the upper right margin. </desc>
+                              </item>
+                              
+                              <item xml:id="fol2" resp="DN DR">
+                                 <desc>Foliation in pencil in the centre bottom of the recto. This foliation is used as reference in this record.</desc>
+                              </item>
+                           </list>
+                           
+                        </foliation>
+                      
                         <collation>
-                           <note>Loose double leaves, not gathered in quires.</note>
+                           <note>Loose bifolia, not gathered in quires.</note>
                         </collation>
                      </supportDesc>
                      
@@ -210,7 +222,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <layout columns="1">
                            <locus from="1r" to="54v"/>
                            <locus from="75r" to="92v"/>
-                           <note corresp="#margin #textarea">Data on text area margin dimensions taken from <locus target="#1r"/>. The text area is delimited by a crude frame.</note>
+                           <note corresp="#margin #textarea">Data on text area margin dimensions taken from <locus target="#1r"/>. 
+                              The text area is delimited by a crude frame.</note>
                            <dimensions unit="mm" xml:id="textarea"> 
                               <height>135</height>
                               <width>70</width>
@@ -248,11 +261,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">The same hand as that of <ref type="mss" corresp="DSEthiop18"/>.
-                        The word divider ፡ is often constitued of one black and one red dot, similarily, the red dot has often not been added and therefore
-                        only one dot is present (marked as . in this record). ፨ is used widely. ፥ is used with the middle dot in red.</seg>
+                        The word divider <foreign xml:lang="gez">፡</foreign> is often constituted of one black and one red dot, 
+                           similarly, the red dot has often not been added and therefore
+                        only one dot is present (marked as . in this record). <foreign xml:lang="gez">፨</foreign> is used widely. 
+                           <foreign xml:lang="gez">፥</foreign> is used with the middle dot in red.</seg>
                         <seg type="ink">Black, red.</seg>
-                        <seg type="rubrication">First words of structuring units, parts of punctuation signs, numerals, the name of
-                           ገብረ፡ ማርያም፡, ማርያም፡. </seg>
+                        <seg type="rubrication">First words of structuring units, elements of punctuation signs, numerals, the name of
+                           <foreign xml:lang="gez">ገብረ፡ ማርያም፡</foreign>, <foreign xml:lang="gez">ማርያም፡</foreign>. </seg>
                      </handNote>
                   </handDesc>
                 
@@ -260,7 +275,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <decoDesc>
                      <decoNote type="band" xml:id="d1">
                         <locus target="#12v"/>
-                        <desc>Crude ornamental band</desc>
+                        <desc>Crude ornamental band.</desc>
                      </decoNote>
                      
                      <decoNote type="band" xml:id="d2">
@@ -310,14 +325,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         
                         <item xml:id="e5">
                            <locus target="#61r"/>
-                           <desc>Added in pencil in the top margin.</desc>
-                           <q xml:lang="gez">صلوات (عن العذراء(</q>
+                           <desc>Arabic title in pencil in the top margin.</desc>
+                           <q xml:lang="ar">صلوات (عن العذراء(</q>
                         </item>
                         
                         <item xml:id="e6">
                            <locus target="#61r"/>
                            <desc>Added in left corner of the top margin.</desc>
-                           <q xml:lang="gez">١</q>
+                           <q xml:lang="ar">١</q>
                         </item>
                         
                         <item xml:id="e7">
@@ -335,8 +350,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </additions>
                   
                   <bindingDesc>
-                     <binding xml:id="binding" contemporary="unknown">
-                        <decoNote xml:id="b1">Loose bifolia.</decoNote>
+                     <binding xml:id="binding">
+                        <decoNote xml:id="b1">No binding and no sewing stations, consists of loose bifolia.</decoNote>
                      </binding>
                   </bindingDesc>
                   
@@ -364,6 +379,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <textClass>
             <keywords>
                <term key="ChristianLiterature"/>
+               <term key="Poetry"/>
             </keywords>
          </textClass>
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
@@ -373,6 +389,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2018-04-04">Created catalogue entry</change>
          <change who="DR" when="2018-06-22">Added text</change>
          <change who="DR" when="2019-02-11">Updated description upon consultation of the manuscript</change>
+         <change who="DR" when="2020-05-04">Continued description</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
