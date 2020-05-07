@@ -7,6 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <titleStmt>
             <title>Marian texts, Homilies, History of St Paul the Hermit</title>
             <editor key="DR"/>
+            <editor key="DN"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -26,7 +27,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <collection>Ethiopic</collection>
                       <idno>DS Ethiop. 11</idno>
                      <altIdentifier>
-                        <idno/>
+                        <idno xml:lang="ar" xml:id="idno1">مسلسل ٧١١</idno>
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:lang="en" corresp="#idno1">Serial Number 711</idno>
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:lang="ar" xml:id="idno2">٢٤٥ م طقوس</idno>
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:lang="en" corresp="#idno2">245 M Liturgy</idno>
                      </altIdentifier>
                   </msIdentifier>
 
@@ -361,7 +371,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                      </explicit>
 
-                     <colophon xml:id="coloph1">
+                     <colophon xml:id="coloph1" xml:lang="gez">
                         <locus target="#276ra"/>
                         ተፈጸመት፡ ዛቲ፡ መጽሐፍ፡ አመ<date calendar="ethiopian">፲፡ወ፩፡ ለመጋቢት፡ በ፲ወ፱፻ወ፲ወ፪ቱ፡ ዓመተ፡ ምሕረት፡ በዘመነ፡ <hi rend="rubric">ዮሐንስ፡
                         ወንጌላዊ</hi></date>፨ በመዋዕሊሁ፡ ለጳጳስነ፡ <hi rend="rubric">ቅዱስ፡ አባ፡ ቄርሎስ</hi>፨ በብሔረ፡ መስር፨
@@ -418,15 +428,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <list>
                               <item xml:id="fol1">
                                  <locus from="1r" to="178r"/>
-                                Pagination in Ethiopic numbers in the top right corner.
+                                Pagination in Ethiopic numerals in the top right corner.
                               </item>
                               <item xml:id="fol2">
                                  <locus from="179r" to="256v"/>
-                                 Pagination in Ethiopic numbers in the top right corner, beginning anew with <foreign xml:lang="gez">፩</foreign> on <locus target="#179r"/>.
+                                 Pagination in Ethiopic numerals in the top right corner, beginning anew with <foreign xml:lang="gez">፩</foreign> on <locus target="#179r"/>.
                               </item>
                               <item xml:id="fol3">
                                  <locus from="1r" to="276r"/>
-                                 Foliation in Arabic numbers in the bottom right corner.
+                                 Foliation in Eastern Arabic numerals in the bottom right corner.
+                              </item>
+                              <item xml:id="fol4">
+                                 <locus from="ir" to="280r"/>
+                                 Foliation in pencil in the centre bottom of the recto. This foliation is used as reference in this record.
                               </item>
                            </list>
                         </foliation>
@@ -452,9 +466,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </objectDesc>
 
                   <handDesc>
-                     <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"/>
-                     </handNote>
+                    <handNote script="Ethiopic" xml:id="h1" corresp="#p1.2 #p1.3 #a4">
+          <seg type="script">First half of the 20th-century script</seg>
+          <seg type="ink">Black, red</seg>
+          <seg type="rubrication"></seg>
+          <persName role="scribe" ref="PRS11958WaldaM">Walda Māryām</persName>
+          <date>First half of the 20th century</date>
+          <desc>The handwriting is careful but not very regular.
+            The letters are bulky; the downstrokes are very thick, the horizontal strokes are
+          very thin; the vowel markers are large, in some cases exaggerated. </desc>
+      </handNote>
                   </handDesc>
 
                   <decoDesc>
@@ -467,21 +488,45 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <additions>
                      <list>
                         <item xml:id="e1">
-                           <locus target="#1r"/>
-                           <desc>Arabic title, shelfmark and remarks</desc>
-                           <q xml:lang="ar"/>
+                           <locus target="#ir"/>
+                           <desc>Arabic title in pencil.</desc>
+                           <q xml:lang="ar"> حياة العذراء وتسبحة </q>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <locus target="#ir"/>
+                           <desc>Arabic shelfmark in pencil.</desc>
+                           <q xml:lang="ar">مسلسل ٧١١ </q>
+                        </item>
+                        
+                        <item xml:id="e3">
+                           <locus target="#ir"/>
+                           <desc>Arabic shelfmark in pencil.</desc>
+                           <q xml:lang="ar">٢٤٥ م طقوس </q>
+                        </item>
+                        
+                        <item xml:id="e4">
+                           <locus target="#ir"/>
+                           <desc>Arabic note in pencil.</desc>
+                           <q xml:lang="ar">٥ ورقات أمامية </q>
                         </item>
 
-                        <item xml:id="e2">
+                        <item xml:id="e5">
                            <locus target="#ir #279v #280v"/>
                            <desc>Stamps of the monastery.</desc>
                            <q xml:lang="ar"/>
                         </item>
 
-                        <item xml:id="e3">
+                        <item xml:id="e6">
                            <locus target="#"/>
                            <desc>Arabic quire marks</desc>
                            <q xml:lang="ar"/>
+                        </item>
+                        
+                        <item xml:id="e7">
+                           <locus target="#280v"/>
+                           <desc>Arabic note in pencil.</desc>
+                           <q xml:lang="ar">٥ ورقات خلفية </q>
                         </item>
                      </list>
                   </additions>
@@ -489,7 +534,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <bindingDesc>
                      <binding xml:id="binding">
                         <decoNote xml:id="b1">Non-Ethiopian binding, cardboard, reddish leather, endbands. One imprinted border, one imprinted
-                        white cross in the centre on each board, يوسف نجده الحبشي imprinted on the spine.</decoNote>
+                        white cross in the centre on each board, the name of the owner
+                       <foreign xml:lang="ar"> يوسف نجده الحبشي</foreign> is imprinted on the spine.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="cardboard"/>
                            <material key="leather"/>
@@ -500,11 +546,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                </physDesc>
 <history>
                <origin>
-                  <origDate when="1920" evidence="internal">According to <ref target="colopho1"/>,
+                  <origDate when="1920" evidence="internal">According to <ref target="#coloph1"/>,
                      the writing was completed on 1 Maggābit 1912 EC (= 20 March 1920 CE), year of John
-                   the Evangelist, during the tenure of Coptic Patriarch Cyril V (1874-1927).</origDate>
+                   the Evangelist, during the tenure of the Coptic Patriarch Cyril V (1874-1927).</origDate>
                    The manuscript was copied in Egypt, by the scribe
                    <persName ref="PRS11958WaldaM" role="scribe">Walda Māryām</persName>.
+
+                  The owner or commissioner of the manuscript might be the person whose name is imprinted on the spine,
+                  cp. <forename xml:lang="ar"> يوسف نجده الحبشي </forename>, that can be interpreted as
+                  the Arabic translation of an Ethiopian name like <persName ref="PRS12972Yosef">Yosef ʾAggazaw ("the Abyssinian")</persName>.
+
                  </origin>
                </history>
 
@@ -527,6 +578,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
               <person>
                  <persName ref="PRS11958WaldaM" role="scribe"/>
               </person>
+
+              <person>
+                 <persName ref="PRS12972Yosef" role="owner"/>
+              </person>
+
 
             </listPerson>
             </particDesc>
