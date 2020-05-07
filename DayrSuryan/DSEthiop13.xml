@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Maṣḥafa zǝq</title>
+            <title>The Book of Ziq of Gʷandar</title>
             <editor key="DR"/>
             <editor key="DN"/>
             <editor key="AB" role="generalEditor"/>
@@ -27,18 +27,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <collection>Ethiopic</collection>
                       <idno>DS Ethiop. 13</idno>
                      <altIdentifier>
-                        <idno>٦١٨ ه
-                           طقوس
-                        </idno>
+                        <idno xml:id="idno1" xml:lang="ar">مسلسل ٧١٩</idno>
                      </altIdentifier>
                      <altIdentifier>
-                        <idno>ملك
-                           ٧١٩</idno>
+                        <idno corresp="#idno1" xml:lang="en">Serial Number 719</idno>
                      </altIdentifier>
                      <altIdentifier>
-                        <idno>٧١٩ ه
-                           طقوس
-                        </idno>
+                        <idno xml:id="idno2" xml:lang="ar">٧١٩ ه طقوس</idno>
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno corresp="#idno2" xml:lang="ar">719 H Liturgy</idno>
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno xml:id="idno3" xml:lang="ar">٦١٨ ه طقوس</idno>
+                     </altIdentifier>
+                     <altIdentifier>
+                        <idno corresp="#idno3" xml:lang="ar">618 H Liturgy</idno>
                      </altIdentifier>
                   </msIdentifier>
 
@@ -48,14 +52,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msItem xml:id="ms_i1">
                         <locus from="1r" to="32r"/>
                      <title type="incomplete" ref="LIT1979Mashaf"/>
-                        <textLang mainLang="gez"/>
-                        <note> Chants for individual
-                      feasts are separated from each other by line of red and black dots
-                      (black starting from f. 23r).</note>
-                     <notatedMusic>
+                        <textLang mainLang="gez" otherLangs="am"/>
+                    <notatedMusic>
                         <desc>The manuscript contains extensive musical notation,
-                          which has not been transcribed here. </desc>
+                          which has not been transcribed here.</desc>
                      </notatedMusic>
+                     <note>The manuscript seems to be an unfinished compilation of excerpts of the work, beginning regularly with
+                        <date ref="ethiocal:Maskaram1">1 Maskaram</date> commemorating <persName ref="PRS5741Johnthe"/>, but continuing
+                        immediately with the commemoration on <date ref="ethiocal:Hedar7">7 Ḫǝdār</date> of Qʷǝsqʷām. As spaces for rubrication have
+                        been left empty in the latter part of the manuscript, dates and section beginnings are partly missing. 
+                        It ends with <foreign xml:lang="gez">zǝmmāre</foreign> chants to Dabra Tābor, Kidāna Mǝḥrat, 
+                        Yoḥannǝs, the church, Masqal, Ṣǝge, Qʷǝsqʷām, beginning with
+                        <foreign xml:lang="gez"> ዘቁስቋም፡  ዘወርቅ፡  ወረቤዛ፡  ይሰውጥ፡  ውስተ፡  አንፍኪ፡  ለቍርባን፡  መዓዛ</foreign>
+                        and Giyorgis, beginning with <foreign xml:lang="gez">ዘጊዮርጊስ፡ ገጹ፡ ብሩካ፡ እምፀሐይ፡
+                           ወእምኵሉ፡ ስነ፡ ሠርጐ፡ ሰማይ፡</foreign>. The final date indication is <foreign xml:lang="gez">ዘህዳር፡</foreign>, after which no
+                        text follows.
+                     </note>
 
                      <incipit xml:lang="gez">
                         <locus target="#3r"/>
@@ -92,37 +104,50 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">38-I-II</measure>
+                           <measure unit="leaf">I-II+38</measure>
                            <dimensions type="outer" unit="mm">
                              <height>115</height>
                               <width>90</width>
                               <depth>14</depth>
                            </dimensions>
-
                         </extent>
+                        
+                        <foliation resp="DR DN">Foliation in pencil in the centre of the bottom of the recto.</foliation>
+                        
                         <collation>
+                           <signatures>No quire marks.</signatures>
                            <list>
-                              <item xml:id="q1" n="1">
+                              <item xml:id="q1" n="A">
+                                 <dim unit="leaf">2</dim>
+                                 <locus from="ir" to="iiv"/>
+                              </item>
+                              <item xml:id="q2" n="1">
                                  <dim unit="leaf">10</dim>
                                  <locus from="1r" to="10v"/>
                               </item>
-                              <item xml:id="q2" n="2">
+                              <item xml:id="q3" n="2">
                                  <dim unit="leaf">10</dim>
                                  <locus from="11r" to="20v"/>
                               </item>
-                              <item xml:id="q3" n="3">
+                              <item xml:id="q4" n="3">
                                  <dim unit="leaf">8</dim>
                                  <locus from="21r" to="28v"/>
                               </item>
-                              <!--unclear then-->
+                              <item xml:id="q5" n="4">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="29r" to="38v"/>
+                              </item>
                            </list>
                         </collation>
+                        
+                        <condition key="good">The manuscript shows traces of use. It is affected by humidity in the upper margin.</condition>
                      </supportDesc>
 
                      <layoutDesc>
-                        <layout columns="1">
+                        <layout columns="1" writtenLines="11 14">
                            <note corresp="#textarea #margin">
-                             Data on text area and margin dimensions taken from <locus target="#4r"/>.</note>
+                             Data on text area and margin dimensions taken from <locus target="#4r"/>. The number of ruled lines is
+                           11, at the beginning of the manuscript, the number of written lines is irregular.</note>
                            <dimensions unit="mm" xml:id="textarea">
                               <height>83</height>
                               <width>70</width>
@@ -133,105 +158,101 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <dim type="right">6</dim>
                               <dim type="left">7</dim>
                            </dimensions>
+                           <ab type="pricking">Pricking and ruling are visible.</ab>
+                           <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
 
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"/>
+                        <date notBefore="1900" notAfter="1950">Early 20th century.</date>
+                        <seg type="ink">Black, red.</seg>
+                        <seg type="rubrication">Elements of punctuation signs, beginnings of sections,
+                           <foreign xml:lang="gez">ማርያም፡</foreign>. At the end of the manuscript, space for rubrication has been left empty.</seg>
+                        <!--<desc></desc>-->
                      </handNote>
                   </handDesc>
+                  
+                  <decoDesc>
+                     <decoNote xml:id="d1" type="ornamentation">
+                        <locus target="#3v #6r #11r #20v #23r"/>
+                        Pen-work dividers between chants (red and black dots,  black dots starting from <locus target="#23r"/>).
+                     </decoNote>
+                  </decoDesc>
 
                   <additions>
                      <list>
                         <item xml:id="a1">
                            <locus target="#iv"/>
-                           <desc type="OwnershipNote">Crude ownership note in pencil.</desc>
-                           <q xml:lang="gez">መጽሐፍ ዘ<persName ref="PRS12136GabraM" role="owner">
+                           <desc type="OwnershipNote">Crude ownership note in pencil stating that the manuscript belongs to 
+                              <persName ref="PRS12002Gabrami"/>.</desc>
+                           <q xml:lang="gez">መጽሐፍ ዘ<persName ref="PRS12002Gabrami" role="owner">
                                  <roleName type="title">አባ፡</roleName> ገብረ፡ ሚካኤል፡</persName>
                            </q>
                         </item>
 
                         <item xml:id="a2">
                            <locus target="#iir"/>
-                           <desc type="OwnershipNote">Arabic ownership note written upside down.</desc>
+                           <desc type="OwnershipNote">Arabic ownership note written upside down, stating that this manuscript belongs to
+                              <persName ref="PRS12002Gabrami">Miḫāʾīl al-Ḥabašī</persName> and possibly signed by Buṭrus Zaḫārī, though the last word
+                              is hardly legible.</desc>
                            <q xml:lang="ar">
-                              <!--incomplete-->
-                              هذا الكتاب
-
-                           القمص مخائل الحبشي
-                           الخاطئ
+                              هذا الكتاب يخص <persName ref="PRS12002Gabrami"><roleName type="title">القمص</roleName> مخائيل الحبشي</persName> كاتب العبد الخاطى 
+     بطرس زخارى
                            </q>
                         </item>
 
                         <item xml:id="e1">
-                           <locus target="#1r"/>
-                           <desc>Arabic shelfmark</desc>
-                           <q xml:lang="ar">٦١٨ ه
-                              طقوس
-                           </q>
+                           <locus target="#ir"/>
+                           <desc>Arabic shelfmark.</desc>
+                           <q xml:lang="ar">٦١٨ ه طقوس </q>
                         </item>
 
                         <item xml:id="e2">
                            <locus target="#iir"/>
-                           <desc>Pen trial</desc>
-                           <q xml:lang="gez"/>
+                           <desc>Pen trial.</desc>
+                           <q xml:lang="gez">ፈሕና፡ ብርዕ</q>
                         </item>
 
                         <item xml:id="e3">
-                           <locus target="#iiv"/>
-                           <desc>Stamp of the Library</desc>
+                           <locus target="#iiv #20v #28v #37v"/>
+                           <desc>Stamp of <placeName ref="INS0478DS"/>.</desc>
                            <q xml:lang="ar"/>
                         </item>
 
                         <item xml:id="e4">
                            <locus target="#1r"/>
-                           <desc>Arabic shelfmark</desc>
-                           <q xml:lang="ar">ملك
-                              ٧١٩
-                           </q>
+                           <desc>Arabic shelfmark.</desc>
+                           <q xml:lang="ar">مسلسل ٧١٩</q>
                         </item>
 
                         <item xml:id="e5">
                            <locus target="#1r"/>
-                           <desc>Arabic shelfmark</desc>
-                           <q xml:lang="ar">٧١٩ ه
-                              طقوس
-                           </q>
+                           <desc>Arabic shelfmark.</desc>
+                           <q xml:lang="ar">٧١٩ ه طقوس</q>
                         </item>
 
                         <item xml:id="e6">
                            <locus target="#1r"/>
-                           <desc>Arabic and English titles written in pencil.</desc>
+                           <desc>Arabic and English title written in pencil.</desc>
                            <q xml:lang="ar">صلوات</q>
-                           <q xml:lang="en">song</q>
+                           <q xml:lang="en">Song</q>
                         </item>
-
+                        
                         <item xml:id="e7">
                            <locus target="#37v"/>
-                           <desc>Stamp of the Library</desc>
-                           <q xml:lang="ar"/>
-                        </item>
-
-                        <item xml:id="e8">
-                           <locus target="#20v"/>
-                           <desc>Stamp of the Library</desc>
-                           <q xml:lang="ar"/>
-                        </item>
-
-                        <item xml:id="e9">
-                           <locus target="#28v"/>
-                           <desc>Stamp of the Library</desc>
-                           <q xml:lang="ar"/>
+                           <desc>Arabic shelfmark, the place for the number has been left empty.</desc>
+                           <q xml:lang="ar">رقم    <space/> طقوس</q>
                         </item>
                      </list>
                   </additions>
 
                   <bindingDesc>
                      <binding xml:id="binding">
-                        <decoNote xml:id="b1">No binding.
+                        <decoNote xml:id="b1">No boards. The quires are held together by the sewing.
                         One pair of sewing stations.</decoNote>
+                        <decoNote xml:id="b2" type="SewingStations">2</decoNote>
                      </binding>
                   </bindingDesc>
 
@@ -240,12 +261,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <history>
 
                      <origin>
-                         <origDate notBefore="1850" notAfter="1950">
-                         </origDate>
+                        The manuscript can be dated palaeographically to the
+                         <origDate notBefore="1900" notAfter="1950" evidence="lettering">
+                            early 20th century
+                         </origDate>. Recent ownership notes mention <persName ref="PRS12002Gabrami"/>.
                          </origin>
                      <provenance/>
                      <acquisition/>
                </history>
+               
+               <additional>
+                  <adminInfo>
+                     <note>A paper sheet containing a modern description of the manuscript in Arabic is placed inside it.</note>
+                  </adminInfo>
+               </additional>
 
             </msDesc>
          </sourceDesc>
@@ -264,7 +293,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
            <particDesc>
                <listPerson>
                    <person>
-                       <persName ref="PRS12136GabraM" role="owner"/>
+                       <persName ref="PRS12002Gabrami" role="owner"/>
                        </person>
                </listPerson>
            </particDesc>
@@ -281,6 +310,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DN" when="2018-02-28">Recorded manuscript</change>
          <change who="DR" when="2018-03-28">Created catalogue entry</change>
          <change who="DR" when="2018-06-15">Added text, collation, additions and extras</change>
+         <change who="DR" when="2020-04-28">Continued description</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
