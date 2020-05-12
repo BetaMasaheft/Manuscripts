@@ -413,6 +413,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">11</dim>
                                         <dim type="intercolumn">9</dim>
                                     </dimensions>
+                                    <note> The characters per line are 6-9.</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -423,13 +427,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <persName ref="PRS12986GabraKr"/>
                                 <seg type="ink">Black, red</seg>
                                 <date notBefore="1775" notAfter="1815"></date>
-                                <desc>
-                                    Fine handwriting
+                                <desc>Fine and regular handwriting, slightly deteriorating towards the end (e.g. <locus from="76v" to="78v"/>).
                                 </desc>
                                 <seg type="rubrication">
-                                    Holy names; several groups of lines on the incipit pages, alternating with black lines;
-                                    <!-- ... other elements ... -->
-                                    elements of the punctuation signs, text dividers, and numerals, included quire marks.
+                                    Holy names and the names of the individuals involved in the production of the book, both in the colophon and in the supplication formulas throughout the
+                                    manuscript. Several groups of lines on the incipit page of <ref target="#i2"/> and of the sections for each weekday, sometimes alternating with black lines. 
+                                    The words <foreign xml:lang="gez">ሰላም፡</foreign> in the colophon (<ref target="#i1"/>) and 
+                                    <foreign xml:lang="gez">ሰላም፡ ለኪ፡</foreign> in <ref target="#i4 #i5"/>. 
+                                    Elements of the punctuation signs, text dividers, and numerals, included quire marks.
                                 </seg>
                                 <list type="abbreviations">
                                     <item>
@@ -476,13 +481,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </note>
                                 </item>
                                 <item xml:id="e4">
-                                    <locus target="#26"/>
-                                    <note>A green thread for navigating is inserted on the upper corner of the folio.</note> <!-- move this to binding -->
-                                </item>
-                                <item xml:id="e5">
                                     <note>Text written on erasure, e.g. <locus target="#12ra #39rb #44rb"/>.</note>
                                 </item>
-                                <item xml:id="e6">                         
+                                <item xml:id="e5">                         
                                     <note>Erasures marked with thin black lines, e.g. <locus target="#73vb #74va"/>.</note>
                                 </item>
                             </list>
@@ -490,18 +491,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <bindingDesc>
                             <binding contemporary="true">
-                                <decoNote xml:id="b1">Two wooden boards covered with reddish-brown tooled leather.
-                                    <!-- two layers of leather cover!! -->
+                                <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards covered with reddish-brown <material key="leather"/>.
+                                    Presence of a reddish-brown tooled <material key="leather"/> overback in correspondence of the spine.
                                 </decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
                                     <material key="wood"/>       
                                     <material key="leather"/>     
                                 </decoNote>
-                                <decoNote xml:id="b3" type="SewingStations">4</decoNote>
-                                <decoNote xml:id="b5">Blind tooled ornament on the front and back covers (circles, double circles, double straight lines).</decoNote>
+                                <decoNote xml:id="b3" type="Cover" color="reddish-brown">Blind-tooling decoration on the overback:
+                                    double lines, double circles.</decoNote>
+                                <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                                <decoNote xml:id="b5" type="Spine">Two pairs of chains of the endband stitches are visible at the spine cover, close to the head and tail.</decoNote>
+                                <decoNote xml:id="b7" type="Other">A green <term key="leafTabMark">leaf tab marker</term> for navigating is inserted on the upper corner of 
+                                    <locus target="#26"/>, incipit page of the reading for Tuesday.</decoNote>
                             </binding>
                         </bindingDesc>
-                        
                     </physDesc>
                     
                 <!--    <history>
