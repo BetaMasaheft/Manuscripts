@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP03237">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 462</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,9 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </msIdentifier>
                <msContents>
                   <summary>Chants called Mawas'et</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                  <msItem xml:id="ms_i1"><title type="complete" ref="LIT1990Mawase"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                  <note>Chants called Mäwaś‘ǝt chants, <foreign xml:lang="gez">መዋሥዕት።</foreign>, organized by the church year</note>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -51,6 +53,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <locus target="#1r #1v #2r #2v" facs="001 002 003"/>
+                    <desc>
+                    Table of melodic variations for the Hallelujah, Anqäṣ Haleta. <foreign xml:lang="gez">አንቀጽ: ሃሌታ:</foreign>
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <locus target="#71r #71v #72r #72v"/>
+                    <desc type="GuestText">
+                    A Table of <title type="complete" ref="LIT1990Mawase"/> Chants for Sunday, for the entire year, written in different format, if not in a different hand
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <locus target="#1r" facs="001"/>
+                    <desc>
+                    Despite the label on the inside cover, the Weiner collection number should be 465 and not 462
+                    </desc>
+                    </item>
+                    <item xml:id="a3">
+                    <locus target="#70v" facs="071"/>
+                    <desc>
+                    Colophon: Scribal Prayer of thanksgiving at the conclusion of writing the book. Prayer of blessing on the scribes teacher, <foreign xml:lang="gez">ኃይለ ጊዮርጊስ ዘርአ ቅዱሳን</foreign>
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -73,6 +103,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-04-29" who="ABe">Added items</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

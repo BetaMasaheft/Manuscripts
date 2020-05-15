@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Kaleab Addis Project 17</title>
             <editor key="ABe"/>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -50,13 +51,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                            <measure unit="leaf">i + 34 </measure>
+                           <measure unit="quire">Protection sheet + 4</measure>
                            <dimensions type="outer" unit="mm">
                               <height>127</height>
                               <width>75</width>
                               <depth>22</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–4 balanced; protection sheet adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i" facs="001"></locus>
+                              <note>A folio stub is visible between <locus target="#i #1" facs="001 002"/>.</note>
+                              Protection Sheet:
+                              1, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="002"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="012"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">12</dim>
+                              <locus from="21" to="32" facs="022"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">2</dim>
+                              <locus from="33" to="34" facs="034"></locus>
+                              Quire 4
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">8</dim>
+                           <dim type="bottom">30</dim>
+                           <dim type="right">4</dim>
+                           <dim type="left">7</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="16"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                   <handNote xml:id="h1" script="Ethiopic">
@@ -101,10 +146,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </item>
                   </list>
                   </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1707">1700-1716 (f. 2v mentions Yohannes of Alexandria, 1676-1718,  and Marqos, ca. 1700-16, the Ethiopian prelate).</origDate>
+                     <origDate notBefore="1700" notAfter="1716">1700-1716 (<locus target="#2v" facs="004"/> mentions Yohannes of Alexandria, 1676-1718,  and Marqos, ca. 1700-16, the Ethiopian prelate).</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -125,6 +179,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2019-12-13" who="ABe">Added items</change>
                                     <change when="2020-04-18" who="RL">Corrected ǝ character</change>
+                                    <change when="2020-05-04" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
     </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
