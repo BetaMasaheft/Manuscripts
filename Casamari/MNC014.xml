@@ -43,7 +43,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msItem xml:id="ms_i1">
                      <locus from="5ra" to="22rb"/>
                      <title type="complete" ref="LIT2866RepCh147">Malkǝʾa Giyorgis</title>
-                     <textLang mainLang="gez"/>
+                     <incipit xml:lang="gez">
+                        <locus from="" to=""/>
+                        <hi rend="rubric"></hi>
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus from="25vb" to="26ra"/>
+                     </explicit>
                   </msItem>
                   <msItem xml:id="ms_i2">
                      <locus from="22rb" to="32vb"/>
@@ -186,34 +192,50 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </list>
                         </collation>
                         <condition key="good">
-                          The lower outer corner of <locus target="#37"/> has been reconstructed.
+                          The lower outer corner of <locus target="#37"/> has been reconstructed <!-- that is? -->.
                         </condition>
                      </supportDesc>
+                     
                      <layoutDesc>
                         <layout columns="2" writtenLines="15 16">
-                           <dimensions>
+                           <locus from="" to=""/>
+                           <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#63r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea">
                               <height>91</height>
                               <width>71</width>
                            </dimensions>
-                           <dimensions type="margin">
+                           <dimensions type="margin" unit="mm" xml:id="margin">
                               <dim type="top">8</dim>
                               <dim type="bottom">30</dim>
                               <dim type="left">9</dim>
                               <dim type="right">13</dim>
                               <dim type="intercolumn">6</dim>
                            </dimensions>
-                           <note>
-                              Data on text area dimensions 
-                              taken from <locus target="#63r"/>.
-                           </note>
-                           <ab type="pricking">Pricking and ruling are visible.</ab>
+                        <note> The characters per line are ....</note>
+                           <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab><!-- check this -->
+                           <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab><!-- check this -->
+                        <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab> <!-- check this -->
                         </layout>
                      </layoutDesc>
                   </objectDesc>
+                  
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
+                        <locus from="3r" to="42v"/>
                         <seg type="script">Fine</seg>
-                        <persName ref=""/>
+                        <persName ref="" role="scribe"/>Takla Hawāryāt
+                        <note>The name of the scribe is mentioned on .</note>
+                        <seg type="ink">Black, red</seg>
+                        <date when="1732">18th century</date>
+                        <desc/>
+                        <seg type="rubrication">
+                           <!-- Add  info -->
+                        </seg>
+                     </handNote>
+                     <handNote xml:id="h2" script="Ethiopic">
+                        <locus from="43r" to="107v"/>
+                        <seg type="script">Fine</seg>
+                        <persName ref="" role="scribe"/>Gabra Krǝstos
                         <note>The name of the scribe is mentioned on .</note>
                         <seg type="ink">Black, red</seg>
                         <date when="1732">18th century</date>
@@ -223,25 +245,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </seg>
                      </handNote>
                   </handDesc>
-                
-                  <bindingDesc>
-                     <binding contemporary="true">
-                        <decoNote xml:id="b1">Two wooden boards. 
-                           Two pairs of sewing stations.
-                        </decoNote>
-                        <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
-                        <decoNote xml:id="b3" type="Endbands"/>
-                        <decoNote xml:id="b4" type="Other"/>
-                     </binding>
-                  </bindingDesc>
+               
+               <bindingDesc>
+                  <binding contemporary="true">
+                     <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards.
+                     </decoNote>
+                     <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"/>      
+                     </decoNote>
+                     <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                  </binding>
+               </bindingDesc>
                </physDesc>
+               
                <history>
                   <origin>
-                     <origDate when="1732"/>
+                     <origDate when="1732" evidence="internal-date"/>
                      <note>
-                     According to the colophon... 
+                     According to <ref target="#coloph1"/>, the manuscript was written ... 
                      </note>
                      <p/>
                   </origin>
@@ -278,9 +299,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <particDesc>
             <listPerson>
                <person role="donor"/>
-               <person>
-                  <persName ref="" role="scribe"/>
-               </person>
                <person role="owner"/>
                <person role="other"/>
             </listPerson>
@@ -292,10 +310,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <term key="ChristianLiterature"/>
             </keywords>
          </textClass>
-         <langUsage/>
       </profileDesc>
      <revisionDesc>
         <change who="MV" when="2018-05-03">Created catalogue entry</change>
+        <change who="MV" when="2020-05-15">Revised layout, binding.</change>
      </revisionDesc>
   </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
