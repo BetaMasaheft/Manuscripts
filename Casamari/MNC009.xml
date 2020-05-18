@@ -240,7 +240,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               Data on leaf dimensions taken from <locus target="#10r"/>.
                            </note>
                         </extent>
-                        <foliation/>
+                        <foliation>The manuscript has been foliated in pencil in the lower margin of each folio.</foliation>
                         <collation>
                            <signatures>
                               <note>
@@ -324,25 +324,29 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            The ink on some leaves is partly faded out, e.g. on <locus target="#97v #101r"/>. Tears amended on <locus target="#2 #92"/>. 
                         </condition>
                      </supportDesc>
+                     
                      <layoutDesc>
                         <layout columns="1" writtenLines="15 18">
-                           <dimensions>
+                           <locus from="3r" to="133v"/>
+                           <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#8r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea">
                               <height>73</height>
                               <width>61</width>
                            </dimensions>
-                           <dimensions type="margin">
+                           <dimensions type="margin" unit="mm" xml:id="margin">
                               <dim type="top">13</dim>
                               <dim type="bottom">24</dim>
                               <dim type="left">8</dim>
                               <dim type="right">12</dim>
                            </dimensions>
-                           <note>
-                              Data on text area dimensions taken from <locus target="#8r"/>.
-                           </note>
-                           <ab type="pricking">Pricking and ruling are visible.</ab>
+                           <note> The characters per line are 13-15.</note>
+                           <ab type="pricking">Ruling and pricking are mostly visible. Both primary and ruling pricks are visible.</ab>
+                           <ab type="ruling" subtype="pattern">Ruling pattern: either 1-1/0/0/C.</ab>
+                           <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
+                  
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Irregular.</seg>
@@ -355,7 +359,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            Holy names. Several groups of lines on the incipit pages, alternating with black lines (e.g., <locus target="#5r #58r"/>). 
                            Refrains and other words in abbreviated form (e.g., <foreign xml:lang="gez">ስብ</foreign> for <foreign xml:lang="gez">ስብሐት፡</foreign> (<locus target="#78r"/>).
                            Elements of the punctuation signs and of the Ethiopic numerals.
-                           <ref target="#i11"/> and <ref target="#i12"/> have not been rubricated.
+                           Texts <ref target="#i11"/> and <ref target="#i12"/> have not been rubricated.
                         </seg>
                         <list type="abbreviations">
                            <item>
@@ -403,17 +407,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <item xml:id="e2">
                            <desc>Erasures and omitted letters or words inserted interlineally throughout the manuscript.</desc>
                         </item>
+                        <item xml:id="e3">
+                           <locus target="#133v"/>
+                           <desc>The inventory number "50434" is written in pencil in the lower margin of the folio.</desc>
+                        </item>
                      </list>
                   </additions>
                         
                   <bindingDesc>
-                     <binding contemporary="true">
-                        <decoNote xml:id="b1">European binding. Two boards covered with reddish-brown leather.</decoNote>
-                        <decoNote xml:id="b3" type="Endbands"/>
+                     <binding contemporary="false">
+                        <decoNote xml:id="b1">European binding. Two boards covered with reddish-brown <material key="leather"/>.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                        </decoNote>
+                        <decoNote xml:id="b3" type="Cover" color="reddish-brown">Modern European covers.</decoNote>
                         <decoNote xml:id="b4" type="SewingStations">6</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
+               
                <history>
                   <origin>
                      <origDate notBefore="1882" notAfter="1889"/>
@@ -422,7 +434,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         King <persName ref="PRS10378Yohanne">Yoḥannǝs IV</persName>, who reigned from <date>1872</date> to 
                         <date>1889</date>, is mentioned on <locus target="#24v"/>.
                      </note>
-                     <p/>
                   </origin>
                </history>
           
