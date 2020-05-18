@@ -107,7 +107,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               Data on leaf dimensions taken from <locus target="#9r"/>.
                            </note>
                         </extent>
-                        <foliation/>
+                        <foliation>The manuscript has been foliated in pencil in the upper right corner of each folio.</foliation>
                         <collation>
                            <signatures>
                               <note>
@@ -148,23 +148,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="1" writtenLines="17">
-                           <dimensions>
+                           <locus from="5r" to="41r"/>
+                           <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#9r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea">
                               <height>95</height>
                               <width>57</width>
                            </dimensions>
-                           <dimensions type="margin">
+                           <dimensions type="margin" unit="mm" xml:id="margin">
                               <dim type="top">8</dim>
                               <dim type="bottom">22</dim>
                               <dim type="left">8</dim>
                               <dim type="right">9</dim>
                            </dimensions>
-                           <note>
-                              Data on text area dimensions taken from <locus target="#9r"/>.
-                           </note>
-                           <ab type="pricking">Pricking and ruling are visible.</ab>
+                           <note> The characters per line are .</note>
+                           <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                           <ab type="ruling" subtype="pattern">Ruling pattern: either 1-1/0/0/C or 1-1/0/0/J.</ab>
+                           <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
+                  
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Fine</seg>
@@ -260,7 +263,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </item>
                         <item xml:id="e4">
                            <locus target="#41v"/>
-                           <desc>The inventory number 50510 is written in pencil in the lower margin of the folio.</desc>
+                           <desc>The inventory number "50510" is written in pencil in the lower margin of the folio.</desc>
                         </item>
                         <item xml:id="e5">
                            <locus from="45r" to="45v"/>
@@ -275,17 +278,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <bindingDesc>
                      <binding contemporary="true">
-                        <decoNote xml:id="b1">Two wooden boards.</decoNote>
+                        <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>
                         </decoNote>
-                        <decoNote xml:id="b3" type="Endbands"/>
-                        <decoNote xml:id="b4" type="Other"/>
-                        <decoNote xml:id="b5">Ornament crudely carved on both boards.</decoNote>
-                        <decoNote xml:id="b6" type="SewingStations">4</decoNote>
+                        <decoNote xml:id="b3" type="Cover" color="brown">Both boards have been crudely decorated with carved ornaments.</decoNote>
+                        <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                        <decoNote xml:id="b5" type="Spine">Holes are visible on the spine folds of the quires close to the head and, occasionally, to the tail.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
+            
                <history>
                   <origin>
                      <origDate notBefore="1881" notAfter="1899"/>
@@ -359,6 +362,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <change who="MV" when="2018-05-03">Created catalogue entry</change>
         <change who="MV" when="2020-04-22">Added incipits, explicits; fixed dating; decoDesc.</change>
         <change who="MV" when="2020-04-23">Fixed extra and persName.</change>
+        <change who="MV" when="2020-05-18">Fixed layout and binding</change>
      </revisionDesc>
   </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
