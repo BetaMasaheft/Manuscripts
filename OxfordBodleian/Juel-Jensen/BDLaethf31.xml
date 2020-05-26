@@ -120,8 +120,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">82</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <measure unit="leaf" type="blank">1</measure>
+                                   <locus target="#1r"/>
                                     <measure type="weight" unit="g">280</measure><!-- without boxes and modern notes placed inside taken out-->
                                     <measure type="weight" unit="g">429</measure><!--with boxes, without modern notes-->
                                     <dimensions type="outer" unit="mm">
@@ -142,7 +142,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <list>
                                         <item xml:id="q1">
                                             <dim unit="leaf">2</dim>
-                                            <!-- quire mark -->
                                             <locus from="1r" to="2v"/>
                                         </item>
                                         <item xml:id="q2">
@@ -213,10 +212,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">8</dim>
                                         <dim type="intercolumn">5</dim>
                                     </dimensions>
-                                    <note> The characters per line are 7-9.</note>
+                                    <note> The characters per line are 7-11.</note>
                                     <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
                                     <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
-                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.
+                                        The vertical ruling has been done crudely, e.g. on <locus target="#39r #40r #41r"/>.
+                                        The last ruled line has not been written on <locus target="#13vb"/>.
+                                    </ab>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -241,15 +243,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <additions>
                             <list>
                                 <item xml:id="a1">
-                                    <desc type="GuestText"><title ref="LIT1931Mashaf#TenthBlessing"/></desc>  
+                                    <desc type="GuestText"><title ref="LIT1931Mashaf#TenthBlessing"/>. The note is written in a careless hand in dark brownish ink.</desc>  
                                     <locus from="1v" to="2v"/>
-                                    <note>The note is written in a careless hand in dark brownish ink. It begins as follows:
+                                    <note>
                                         <q xml:lang="gez"><seg part="I">ይትባረክ፡ ስሙ፡ ለእግዚአብሔር፡ ቡሩክ፡ ይትአኮት፡ እኩት፡ ይትቀደስ፡ ቅዱስ፡ ይሴባሕ፡ ስሙ፡ ለእግዚአብሔር፡ 
                                             ስቡሕ፡ ይዕበይ፡ ስሙ፡ ለእግዚአብሔር፡ ዓቢይ፡ ይትለዓል፡ ስሙ፡ ለእግዚአብሔር፡ ልዑል፡</seg>
-                                        </q> and terminates as follows:  <q xml:lang="gez"><seg part="F">ያግሕስክሙ፡ እግዚአብሔር፡ ለለአሐዱ፡ ትካዘ፡ ይናዝዝ፡ 
-                                            እ<hi rend="ligature">ግዚ</hi>አብሔር፡ ለለአሐዱ፡ መፍቅዶ፡ ይሥራ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡ ወለለአሐዱ፡ ዳዕሮ፡ ወስቃዮ፡ 
-                                            ያንኂ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡</seg>.
-                                        </q>.
+                                        </q>
+                                        <q xml:lang="gez"><seg part="F">ያግሕስክሙ፡ እግዚአብሔር፡ ለለአሐዱ፡ ትካዘ፡ ይናዝዝ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡ ለለአሐዱ፡ 
+                                            መፍቅዶ፡ ይሥራ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡ ወለለአሐዱ፡ ዳዕሮ፡ ወስቃዮ፡ ያንኂ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡</seg>
+                                        </q>
                                     </note>
                                 </item>
                          
@@ -259,9 +261,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         Below is glued an additional sticker, with the signature "Ms 21"printed on it.</desc>
                                 </item>
                                 <item xml:id="e2">
-                                    <locus target=""/>
-                                    <desc></desc> 
+                                    <desc>Some writings in pencil are drawn up on <locus target="#1r"/>: <q xml:lang="en">"Brought from Capt. Sturt from Ethiopia"</q> and 
+                                        <q xml:lang="en">"Gospel of John"</q>. The titles of the manuscript contents are indicated in the same handwriting in pencil in the upper margin of
+                                        <locus target="#3r"/> (<q xml:lang="en">"Gospel of John"</q>) and <locus target="#75v"/> (<q xml:lang="en">"Hymns to the Virgin"</q>).
+                                    </desc>
                                 </item>
+                                <item xml:id="e3">
+                                    <desc>Aids for identifying weekday readings are written in the upper margin within a frame, probably in the same hand as that of <ref target="#a1"/>: 
+                                        <q xml:lang="gez">ዘስኑይ</q> (<locus target="#3r"/>), <q xml:lang="gez"><sic>ዘቀዳም</sic></q> (<locus target="#16vb"/>), 
+                                        <q xml:lang="gez">ዘሠሉስ</q> (<locus target="#20vb"/>), <q xml:lang="gez">ዘረቡዕ</q> (<locus target="#40va"/>), 
+                                        <q xml:lang="gez">ዘሐሙስ</q> (<locus target="#48vb"/>), <q xml:lang="gez">ዘዓርብ</q> (<locus target="#61va"/>), 
+                                        <q xml:lang="gez">ዘእሁድ።</q> (<locus target="#69ra"/>).
+                                    </desc>
+                                </item>
+                               <!--   <item xml:id="e4">
+                                    <desc>Corrections over erasure on <locus target=""/>. 
+                                        Erasures marked with thin black lines are, e.g., on <locus target=""/>.
+                                    </desc>
+                                </item>-->
                             </list>
                         </additions>
                         
@@ -283,7 +300,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     tail.</decoNote>
                                 <decoNote xml:id="b6" type="SlipCase">The manuscript is provided with a dark <material key="leather"/> slip case, on which a sticker with the 
                                     inventory number "23451" is glued.</decoNote>
-                                <!-- check again all binding description -->
+                                <!-- check again all binding description + f. 17r = red LeafStickMark; f. 61 = blue LeafStickMarker -->
                             </binding>
                         </bindingDesc>
                         
@@ -294,7 +311,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <origDate from="1700" to="1799" evidence="lettering"/>
                         </origin>
                         <provenance>According to the Sotheby's auction catalogue, the manuscript was obtained in <date>1871</date> by <persName ref="">Captain Sturt</persName>,
-                            who had brought it from Ethiopia to England in <date>1868</date> after <persName ref="PRS7484Napier"/>'s expedition. 
+                            who had brought it from Ethiopia to England in <date>1868</date> after <persName ref="PRS7484Napier"/>'s expedition (cp. also <ref target="#e2"/>). 
                             The manuscript was then assigned "23451" as an inventory number.
                           It was purchased by <persName ref="PRS5782JuelJen"/> at auction on <date>27 November 1974</date>, according to the Sotheby's sale receipt (lot 642).
                         </provenance>
