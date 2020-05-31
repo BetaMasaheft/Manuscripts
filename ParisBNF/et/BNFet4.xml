@@ -25,7 +25,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <repository ref="INS0303BNF"/>
                   <collection>Manuscrits orientaux</collection>
                   <collection>Fonds éthiopien</collection>
-                  <idno>BnF Éthiopien 4</idno>
+                  <idno facs="https://gallica.bnf.fr/ark:/12148/btv1b100933694">BnF Éthiopien 4</idno>
                   <altIdentifier>
                      <idno>Saint-Germain 512</idno>
                   </altIdentifier>
@@ -35,6 +35,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <summary/>
 
                   <msItem xml:id="ms_i1">
+                     <locus from="1r" to="130r"></locus>
                      <title type="complete" ref="LIT1546Genesi" xml:lang="gez">ኦሪት፡ ዘልደት፡</title>
                      <textLang mainLang="gez"/>
                      <explicit xml:lang="gez">ኦሪት፡ ዘልደት። ይትባረክ፡ እግዚአብሔር፡ ዘአፍጸመኒ፡ ለዝንቱ፡ መጽሐፍ፡ ዘተውልድ።</explicit>
@@ -61,12 +62,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </note>
                   </msItem>
 
-                  <msItem xml:id="ms_i2">
-                     <title type="incomplete" ref="LIT1367Exodus"/>
-                     <!--addition?-->
-                     <textLang mainLang="gez"/>
-                     <note>A fragment of Exodus (20:10-11) on the last page.</note>
-                  </msItem>
+                  
 
                </msContents>
 
@@ -100,7 +96,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <additions>
                      <list>
                         <item xml:id="a1">
-                           <desc type="PurchaseNote">A note added at the end of the volume states
+                           <locus target="#130v"></locus>
+                           <desc type="GuestText">A fragment of <title type="incomplete" ref="LIT1367Exodus"/> (20:10-11)</desc>
+                        </item>
+                        <item xml:id="a2">
+
+                           <locus target="#130r">130r, right column, bottom</locus>
+                           <desc type="PurchaseNote">A note added at the end of the text of the Genesis states
                   that it had been bought by
                   <persName ref="PRS10794Marqos"/> from the Jews for 300 silver coins</desc>
                            <q xml:lang="gez">ዝመጽሐፍ፡
@@ -110,6 +112,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <roleName type="title">አቡነ፡</roleName> መርቆስ፡</persName> በ፫፻፡ ብሩር፡ ወያአምሩ፡ ኵሎሙ፡
                   ነጋድያነ፡ ኢየሩሳሌም፡ ዝክሩኒ፡ በጸሎትክሙ፡ ኢትርሰኡኒ፡ ወትረ፡ ለእመ፡ ነጸርክሙ፡
                   መ<supplied reason="undefined" resp="PRS10747Zotenbe">ጽሐ</supplied>ፈ፡ ኦሪተ።</q>
+                        </item>
+                        <item xml:id="a3">
+                          <locus target="#22v">22v, upper margin</locus>, <locus target="#90v">90v, upper margin</locus>
+                           <desc>Short verses of the Bible in Hebrew written in Ethiopic characters</desc>
+                           <note>As noted by Sophia Dege-Müller in her forthcoming article (2020)</note>
+                        </item>
+                        <item xml:id="e1">
+                           <locus target="#3r"/>
+                           <desc type="StampExlibris"></desc>
+                           <q xml:lang="lat">Ex Bibliotheca MSS. Coisliniana, olim Seguieriana, quam Illust. Henricus du Cambout, Dux de Coislin, Par Franciae, Episcopus Metensis, &amp;c. Monasterio S. Germani à Pratis legavit. An. <date when="1732">M.DCC.XXXII</date>.</q>
                         </item>
                      </list>
                   </additions>
@@ -182,6 +194,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="DR" when="2016-08-31">ID changed</change>
          <change who="DR" when="2016-10-26">foreign added and rubric changed to note</change>
          <change who="DR" when="2017-03-03">Small changes</change>
+         <change when="2020-05-20" who="ES">moved msItem to addition, added extras (on consulting the images) and facs</change>
       </revisionDesc>
   </teiHeader>
   <text xml:base="https://betamasaheft.eu/">
