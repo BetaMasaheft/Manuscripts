@@ -10,7 +10,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Dāwit</title>
+                <title xml:lang="gez" xml:id="title1">መዝሙረ፡ ዳዊት፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Mazmura Dāwit</title>
+                <title xml:lang="en" corresp="#title1">Psalms of David</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
@@ -43,8 +45,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       <locus from="1r" to="60v"/>
                             <title type="incomplete" ref="LIT2000Mazmur"/>
                             <textLang mainLang="gez"/>
+                            <note>
+                                The text terminates abruptly at Ps 70 due to material loss.
+                            </note>               
+                            <incipit xml:lang="gez">
+                                <locus target="#1r"/>
+                                <lb/><hi rend="rubric">ፍካሬ፡ ዘጻድቃን፡ ወዘኃጥአን። መዝሙር፡ ዘዳዊት።
+                                    <lb/>ሃሌ፡ ሉያ።</hi> 
+                                <lb/>ብፁዕ፡ ብእሲ፡ ዘኢሖረ፡ በምክረ፡ ረሲዓን። 
+                                <lb/>ወዘኢቆመ፡ ውስተ፡ ፍኖተ፡ ኃጥአን።
+                                <lb/>ወዘኢነበረ፡ ውስተ፡ መንበረ፡ መስተሣልቃን።
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#60v"/>
+                                <lb/>አንተ፡ ረዳእየ፡ ወኃይልየ። ምላዕ፡ አፉየ፡ ስብሐተከ።
+                                <lb/>ከመ፡ እሰብሕ፡ አኰቴተከ። ወኵሉ፡ አሚረ፡ ዕበየ፡ ስብሐቲከ።
+                                <lb/>ኢትግድፈኒ፡ በመዋዕለ፡ ርስእየ። 
+                                <lb/>ወአመ፡ ኃልቀ፡ ኃይልየ፡ ኢትኅድገኒ፡ አምላኪየ።
+                                <lb/>እስመ፡ ነበቡ፡ ላዕሌየ፡ ጸላእትየ።
+                            </explicit>
                         </msItem>
-                        
                     </msContents>
                     
                     <physDesc>
@@ -52,6 +72,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>A hole, presumably from parchment making, is found on <locus target="#52"/>.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">60</measure>
@@ -67,8 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#1r"/>.</note>
                                     <measure type="weight" unit="g">390</measure>
                                 </extent>
-                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay 
-                                    in January 2020.</foliation>
+                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.</foliation>
                                 <collation>
                                     <list>
                                         <item xml:id="q1" n="1">
@@ -97,6 +117,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="deficient">
+                                    The boards are missing. The manuscript is incomplete: an undetermined number of leaves is missing with loss of text from Ps 70 onwards.
+                                    The lowermost sewing station is damaged.
+                                    The text block is slightly affected with humidity, especially at the beginning of the manuscript. Water stains are attested in the outer or inner margins of
+                                    many leaves, e.g., <locus target="#1r #22r #26v"/>. Wax stains are visible on <locus target="#1r #1v #2v #31v #32r #38r #40r #46r"/>. 
+                                    The parchment is crumpled on <locus target="#17"/>.
+                                </condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -112,43 +139,100 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">27</dim>
                                         <dim type="left">8</dim>
                                     </dimensions>
+                                    <note> The characters per line are 109-23.</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <!-- <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab> -->    
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>                                
                                 </layout>
                             </layoutDesc>
-                            
                         </objectDesc>
                         
-                        <!--<bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key=""/>
-                        </decoNote>
-                                <decoNote xml:id="b3" type="SewingStations"></decoNote>
-                            </binding>
-                        </bindingDesc>-->
                         
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <locus from="1r" to="60v"/>
+                                <seg type="script"/>
+                                <seg type="ink">Black, red</seg>
+                                <date notBefore="" notAfter="">?? century</date>
+                                <desc>
+                                    ...
+                                </desc>
+                                <!-- date MS and describe handwriting -->
+                                <seg type="rubrication">
+                                    Holy names; number and titles of the psalms; stichometry, indicated by the word <foreign xml:lang="gez">ቃሉ፡</foreign> followed by a numeral; 
+                                    elements of the punctuation signs and numerals.
+                                </seg>
+                            </handNote>
+                        </handDesc>
+                        
+                        <!-- 
+                     <decoDesc>
+                        </decoDesc>-->
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="a1">
+                                    <locus target="#1r"/>
+                                    <desc type="GuestText"><title ref="LIT4009Naahab"/>. The text, which often introduces the psalms of David, is written in the upper margin of the folio.
+                                        Some letters are hardly readable due to faded ink.
+                                      </desc>  
+                                    <note> 
+                                        The text starts as follows:
+                                        <q xml:lang="gez"><seg part="I"> ነዓ፡ ኀቤየ፡ ወዳዊት፡ ንጉሠ፡ እስራኤል፡ በዐለ፡ መዝሙር፡ ሠናይ፡ ወጥዑመ፡ ቃል፡ </seg>
+                                        </q>.
+                                    </note>
+                                </item>
+                                
+                                <item xml:id="e1">
+                                    <desc>A white sticker is glued to the lower margin of <locus target="#1r"/>.
+                                        The name of <persName ref="PRS5782JuelJen"/> is printed on it
+                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. e. 33" is written in pencil. 
+                                        An additional sticker, with the signature "Ms 4"printed on it, is glued below it.</desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <desc>
+                                        Scribal corrections are frequent throughout the text, sometimes interlineally (e.g. <locus target="46r"/>), sometimes over erasure in black ink (e.g. <locus target="17v"/>).
+                                        Scribbles in pale or deep black ink are found on <locus target="#21v #22v #25v #26r #29v #30r"/>.
+                                        Pen trials in pale or deep black ink are found on <locus target="#1v #2r #47v #48r #51r"/>.
+                                    </desc>
+                                </item>
+                                <item xml:id="e3">
+                                    <desc>Groups of ten psalms are separated with a chain of red and black dots (<locus target="#8r #16r #24v #36r #45r #52r"/>).
+                                        Stichometry is indicated by the word <foreign xml:lang="gez">ቃሉ፡</foreign> followed by a numeral, e.g. ...
+                                        <!-- finish stichometry -->
+                                    </desc> 
+                                </item>
+                                <item xml:id="e4">
+                                    <desc>Short titles are written in small script in black ink on the upper margin of many leaves, e.g. ... on <locus target="#2r"/> and ... on <locus target="#3v"/>
+                                        Other titles are found on <locus target="#4r #5v #8r #8v #9r #10r #11r #11v #14r #16r #18r #20v #33v #44r #45v #60r"/>.
+                                        <!-- finish titles in the upper margin -->
+                                    </desc> 
+                                </item>
+                                <item xml:id="e5">
+                                    <desc>A note <q xml:lang="en">"... 1973"</q> is written in pencil in the upper inner corner of <locus target="#60v"/>, possibly by <persName ref="PRS5782JuelJen"/>.
+                                    </desc> 
+                                    <!-- interpret pencil note -->
+                                </item>
+                            </list>
+                        </additions>
+                        
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Boards are missing. The manuscript consists of the textblock only.
+                                </decoNote>
+                                <decoNote xml:id="b2" type="SewingStations">4</decoNote>
+                                <decoNote xml:id="b3" type="Other">Crimson <term key="leafTabMark">leaf tab markers</term> for navigating are inserted in the outer margins of 
+                                    <locus target="#16 #24 #36 #45 #52"/>.</decoNote>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     
-                    <additional>
-                        <adminInfo>
-                            <recordHist>
-                                <source>
-                                    <!--  <listBibl type="secondary">
-                                        <bibl></bibl>
-                                    </listBibl>-->
-                                </source>
-                            </recordHist>
-                        </adminInfo>
-                    </additional>
-                    
-                <!--    <history>
-                        <origin>
-                            <origDate when="" evidence=""/>
-                        </origin>
-                        <provenance>  </provenance>
-                    </history>-->
-                    
-                  
+                    <history>
+                        <!--     <origin>
+                            <origDate from="1700" to="1799" evidence="lettering"/>
+                        </origin>     -->
+                        <provenance>Bought by <persName ref="PRS5782JuelJen"/> in <date>1973</date>, according to <ref target="#e5"/>.</provenance>
+                    </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -169,6 +253,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="OldTestament"/>
+                    <term key="Bible"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -180,7 +266,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-01-22">Created record from metadata provided by Jacopo Gnisci</change>
             <change who="DR" when="2020-02-11">Added dimensions and layout</change>
             <change who="DR" when="2020-03-10">Added msItem</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="MV" when="2020-06-16">Added textual contents, binding, addition, condition.</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
