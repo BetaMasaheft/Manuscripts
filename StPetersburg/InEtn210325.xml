@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng"
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="InEtn210325" xml:lang="en" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>First Epistle of John</title>
+                <title>Fidala ḥawāryā</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DE"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
                             Forschungsumgebung / beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </availability>
             </publicationStmt>
             <sourceDesc>
-              <msDesc type="scroll">
+              <msDesc xml:id="ms">
                 <msIdentifier>
                     <repository ref="INS0524InEtn"/>
                     <idno>2103-25</idno>
@@ -29,13 +29,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </altIdentifier>
                 </msIdentifier>
                 <msContents>
-                  <summary>
-                    According to <ref target="#a1"/> the manuscript was used to train reading or copying.
-                  </summary>
                   <msItem xml:id="ms_i1">
-                    <title type="incomplete" ref="LIT3509Epistle"/>
+                    <title type="complete" ref="LIT5905FidalaHawarya"/>
                     <textLang mainLang="gez"/>
-                    <note>First 51 lines of the text (1:1-8).</note>
+                    <note>1 John., 1-8.</note>
                   </msItem>
                 </msContents>
                 <physDesc>
@@ -131,13 +128,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <term key="NewTestament"/>
                     <term key="Bible"/>
                     <term key="Translation"/>
+                    <term key="DidacticMaterial"></term>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language><language ident="am">Amharic</language></langUsage>
+            <langUsage>
+              <language ident="en">English</language>
+              <language ident="gez">Gǝʿǝz</language>
+              <language ident="am">Amharic</language>
+          </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DE" when="2020-03-04">Created entity, added description and content.</change>
             <change when="2020-03-09" who="DE">Continued the description.</change>
+            <change when="2020-04-02" who="DE">Corrected MsDesc element and added language.</change>
+            <change when="2020-04-29" who="DE">Updated the description.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Kaleab Addis Project 39</title>
             <editor key="ABe"/>
+            <editor key="JS"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -28,19 +29,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msIdentifier>
                   <repository ref="INS0447EMIP">Kaleab Addis Project </repository>
                   <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/439/">Kaleab Addis Project 39</idno>
+                  <idno n="32" facs="EMIP/Codices/439/">Kaleab Addis Project 39</idno>
                </msIdentifier>
                <msContents>
                   <summary>Mystagogia, ትምህርተ፡ ኅቡዓት፡</summary>
                   <msItem xml:id="ms_i1"><locus from="1r" to="17r"/><title type="complete" ref="LIT2444Temher"/>
-                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <textLang mainLang="gez">Gǝ‘ǝz</textLang>
                   </msItem>
-                  <msItem xml:id="ms_i2"><locus from="17r" to="18r"/><title>Asmat Prayer of the Archangel Mika’el</title>
-                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i2"><locus from="17r" to="18r"/><title type="complete" ref="LIT5888AsmatPrayer"> Asmat Prayer of the Archangel Mika’el</title>
+                  <textLang mainLang="gez">Gǝ‘ǝz</textLang>
                   <note>which is written on his left and right wings. Often included in Derana Michael in the month of Ḫǝdar</note>
                   </msItem>
-                  <msItem xml:id="ms_i3"><locus from="18v" to="23r"/><title>Asmat prayer against evil eye and demons</title>
-                  <textLang mainLang="gez">Gə‘əz</textLang>
+                  <msItem xml:id="ms_i3"><locus from="18v" to="23r"/><title type="complete" ref="LIT5888AsmatPrayer"> Asmat prayer against evil eye and demons</title>
+                  <textLang mainLang="gez">Gǝ‘ǝz</textLang>
                   <note>written in red ink by a different hand</note>
                   </msItem>
                </msContents>
@@ -53,13 +54,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                            <measure unit="leaf">i + 24</measure>
+                           <measure unit="quire">3</measure>
                            <dimensions type="outer" unit="mm">
                               <height>110</height>
                               <width>85</width>
                               <depth>30</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–2 balanced; quire 3 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="i" to="9" facs="001"/>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="10" to="17" facs="011"/>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">7</dim>
+                              <locus from="18" to="24" facs="019"/>
+                              <note>A folio stub is visible after <locus target="#24" facs="025"/>.</note>
+                              Quire 3:
+                              1, stub after 7
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">13</dim>
+                           <dim type="bottom">25</dim>
+                           <dim type="right">15</dim>
+                           <dim type="left">4</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="14"/>
+                     </layoutDesc>
                   </objectDesc>
                   <decoDesc>
                   <decoNote type="frame" xml:id="d1">
@@ -83,10 +118,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </item>
                   </list>
                 </additions>
+                <bindingDesc>
+                  <binding xml:id="binding" contemporary="true">
+                    <decoNote xml:id="b1">Parchment, 110 x 85 x 30 mm, two Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                    <decoNote xml:id="b2" type="bindingMaterial">
+                      <material key="parchment"/>
+                      <material key="wood"/>
+                    </decoNote>
+                  </binding>
+                </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">twentieth  century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -103,10 +147,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2019-12-26" who="ABe">Added items</change>
-      </revisionDesc>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2019-12-26" who="ABe">Added items</change>
+         <change when="2020-04-18" who="RL">Corrected ǝ character</change>
+         <change when="2020-05-11" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2020-05-21" who="RL">Added Asmat prayer as work</change>
+    </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
