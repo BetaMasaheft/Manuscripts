@@ -3524,7 +3524,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     Slight traces of use: worn at the spine; 
                                     stained by dirt in the lower margin until <locus target="#105r"/>. Occasionally smudged ink, 
                                 e.g. on <locus target="#71v"/>. <locus from="109" to="117"/> are stained by a fluid.
-                                    The first and last folio have been stained by the cover. All edges were trimmed.
+                                    The first and last folio have been stained by the cover. <!--is there a better way to say this?--> All edges were trimmed.
                                 </condition>
                             </supportDesc>
                             
@@ -3551,15 +3551,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
+                                <date notBefore="1600" notAfter="1799"/>
+                                <desc>Fine and regular handwriting. Regularly spaced characters.</desc>
                            <seg type="ink">Black, red.</seg>
                                 <seg type="rubrication">
                                     Incipits (one word to one or several lines, consecutive or alternating with black lines in different groupings), 
                                     elements of punctuation signs, numerals and text dividers,
                                     holy names (<persName ref="PRS6819Mary"/>, <persName ref="PRS4377Gabriel"/>, 
-                                    rarely <persName ref="PRS5684JesusCh"/>), the names of <persName ref="PRS12911KidanaK"/>,
+                                    rarely <persName ref="PRS5684JesusCh"/>), the names of individuals related to the production of 
+                                    the manuscript (<persName ref="PRS12911KidanaK"/>,
                                     <persName ref="PRS13031WaldaA"/>, <persName ref="PRS12964Gorgoryos"/>. 
-                                    <persName ref="PRS13026KenfaM"/>, captions of miniatures.
+                                    <persName ref="PRS13026KenfaM"/>), captions of miniatures.
                                 </seg>
+                                <list type="abbreviations">
+                                    <item><abbr>አ</abbr>, <abbr>አሜ</abbr> for <expan>አሜን</expan> (e.g., on <locus target="#9rb #13ra #93ra #96vb"/>);</item>
+                                    <item><abbr>ሰ፡ ለ፡</abbr> for <expan>ሰላም፡ ለኪ፡</expan> (e.g., on <locus target="#29rb"/>);</item>
+                                    <item><abbr>ዓለ</abbr> for <expan>ዓለመ</expan>, <expan>ዓለም</expan> (e.g., on <locus target="#103ra"/>).</item>
+                                </list>
+                            </handNote>
+                            
+                            <handNote xml:id="h2" script="Ethiopic" corresp="#a1 #a2">
+                                <date notAfter="1868"/>
+                                <seg type="ink">Black.</seg>
                             </handNote>
                         </handDesc>
                         
@@ -3569,7 +3582,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <additions>
                             <list>
-                                <item xml:id="a1">
+                                <item xml:id="a1" corresp="#h2">
                                     <locus target="#5r"/>
                                     <desc type="Inventory">List of liturgical vessels and books belonging to a church of  Madḫāne ʿĀlam.</desc>
                                     <q xml:lang="am">ኍልቈ፡ ንዋዮ፡ ቅድሳት፡ ዘመድኃኔ፡ ዓለም፡
@@ -3578,16 +3591,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     ፩ጠርሙስ፡ ፩ቃጭል፡ ፩የናስ፡ ማብርያ፡
                                     ፩የፍም፡ መጫርያ፡ መረዋት፡
                                     ፩ጁህ፡ በርኖስ፡ ፩ማኅፈድ፡ ፩<ref type="work" corresp="LIT1560Gospel">ወንጌል፡</ref>
-                                        ፩<ref type="work" corresp="LIT1960Mashaf">ቅዳሴ፡</ref> ፩<ref type="work" corresp="LIT2384Taamme">ተአምረ፡ እግዝእትነ፡ ማርያም</ref>፡ ፩መዝገብ፡ ፩የብራና፡ ሥዕል፡
+                                        ፩<ref type="work" corresp="LIT1960Mashaf">ቅዳሴ፡</ref> ፩<ref type="work" corresp="LIT2384Taamme">ተአምረ፡ እግዝእትነ፡ ማርያም</ref>፡ ፩መዝገብ፡ 
+                                        ፩የብራና፡ ሥዕል፡
                                     ፪ቤት፡ ያሹሩት፡ በድሙሩ፡ ፳፩ነው፡
                                     ይህነን፡ የተጻፈውን፡ የሸጠና፡ የሰረቀ፡ የፋቀ፡ በሥልጣነ፡ ጴጥሮ<add place="above">ስ</add>፡ ወጳውሎስ፡
                                     ውጉዘ፡ ይኩንx x x
                                     </q>
                                 </item>
                                 
-                                <item xml:id="a2">
+                                <item xml:id="a2" corresp="#h2">
                                     <locus target="#5r"/>
-                                    <desc type="Inventory">An additional list of objects, separated from
+                                    <desc type="Inventory">An additional list of objects written in the same hand as <ref target="#a1"/>, separated from
                                     <ref target="#a1"/> by a fine line.</desc>
                                     <q xml:lang="am">በ፯ወቄት፡ ከ፫ድሪም፡ የጕልላት፡ መስቀል፡ የተሰራ፡ ቍጽሩ፡
                                     ፲፱ነው፡ ከቃቤት፡ አለ፡</q>
@@ -3595,26 +3609,73 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 
                                 <item xml:id="a3">
                                     <locus target="#7r"/>
-                                    <desc type="OwnershipNote">Note written in pale black ink in the upper corner of the folio, stating that this manuscript belonged to 
+                                    <desc type="OwnershipNote">Note written in pale black ink in the upper inner corner of the folio, stating that this manuscript belonged to 
                                         <placeName ref="INS0101MadhaneAlam"/>.</desc>
                                     <q xml:lang="gez">ተአምረ፡ ማርያም፡ ዘቅዱስ፡ <placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም፡</placeName></q>
+                                </item>
+                                
+                                <item xml:id="e1">
+                                    <locus target="#1r"/>
+                                    <desc>Pen trial in black ink.</desc>
+                                    <q xml:lang="gez">ፈቲነ፡ ብርዕ</q>
+                                </item>
+                                
+                                <item xml:id="e2">
+                                    <locus target="#1v"/>
+                                    <desc>Pen trial in black ink.</desc>
+                                    <q xml:lang="gez">ፈቲነብርዕ</q>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <locus target="#1r"/>
+                                    <desc> A white sticker, with the name of <persName
+                                        ref="PRS5782JuelJen"/> (<foreign xml:lang="gez">ቤንት፡
+                                            ዩውል፡ የንሰን።</foreign>) printed on it, and the signature
+                                        ‘Ms. Aeth. d. 20 = Arch. O’ written in pencil, is  glued
+                                        on <locus target="#1r"/>. Another sticker with the signature ‘Ms 5’ printed on
+                                        it are glued below it.</desc>
+                                </item>
+                                
+                                <item xml:id="e4">
+                                    <locus target="#1r"/>
+                                    <desc>The title of the manuscript in transliteration is written in pencil.</desc>
+                                    <q xml:lang="gez">Ta'amara Maryam</q>
+                                </item>
+                                
+                                <item xml:id="e5">
+                                    <locus target="#122v"/>
+                                    <desc>Note in pencil.</desc>
+                                    <q xml:lang="en">Miracles <!--I cannot read the next word--> <lb/> Blessed Virgin <lb/> XVI-XVII Cent. <lb/> 17 Pages
+                                    <lb/> <!--I cannot read the word or name--></q>
+                                </item>
+                                
+                                <item xml:id="e6">
+                                    <locus target="#123r"/>
+                                    <desc>Written in pencil.</desc>
+                                    <q xml:lang="en">33118</q>
+                                </item>
+                                
+                                <item xml:id="e7">
+                                    <locus target="#1r #44v #69v #96v #123v"/>
+                                    <desc>Stamps, probably of the library.</desc>
                                 </item>
                             </list>
                         </additions>
                         
                         <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1">Two<material key="wood">wooden</material>
-                                    boards that were previously fully covered with reddish-brown blind-tooled <material
-                                        key="leather">leather</material>.</decoNote>
+                            <binding xml:id="binding" contemporary="true">
+                                <decoNote xml:id="b1">Two <material key="wood">wooden</material> covered with reddish-brown blind-tooled <material
+                                        key="leather">leather</material>. The front and back boards are decorated with red velvet inlays.</decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
                                     <material key="wood"/>
                                     <material key="leather"/>
                                     <material key="textile"/>
                                     <material key="wood"/>
                                 </decoNote>
-                             
-                          
+                                <decoNote xml:id="b3" type="Cover" color="reddish brown"
+                                    >Blind-tooling decoration on the full leather cover including
+                                    turn-ins, edges, and spine. The decoration was carefully applied
+                                    using different tools.</decoNote>
                                 <decoNote xml:id="b4" type="SewingStations">4</decoNote>
                             </binding>
                         </bindingDesc>
