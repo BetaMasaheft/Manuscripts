@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02108">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">CUA ICOR Donald J. Lehnus Collection MS 10</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,10 +31,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno n="229" facs="EMIP/Codices/2108/">CUA ICOR Donald J. Lehnus Collection MS 10</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-168v: Psalter, Dawit, ዳዊት፡. The midpoint (<locus target="#67r"/>) is marked with an ornate cross in the right margin. The spiritual meaning of the Hebrew Letters is given with the two letter system, e.g., ጋሜል ዳሌጥ ብሂል ጋዳ ስብሐት ለከ ተስባሕከ በዘወሀብከ ሕገከ, "Gimel Dalet means an offering of praise (gada) to you; you are glorified by the Law you have given". Psalm 151 is the short version with a few words added by a later hand.  The fourth biblical canticle calls Hana a prophetess. Song of Songs is the common version. Front inside cover has a round mirror niche. F. i r: scrawls in an untrained hand. Ff. i v- iii v and 169r: Gǝ‘ǝz grammar, Säwasǝw, ሰዋስወ፡ ግእዝ፡. <locus target="#154v"/> and 169v: Excerpt from Angels Praise Her, written in a later hand. Priases of Mary begins on Monday and culminates on Sunday. </summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                  <summary>
+                    F<locus target="#1r"/>-168v: Psalter, Dawit, ዳዊት፡.
+                    The midpoint (<locus target="#67r"/>) is marked with an ornate cross in the right margin.
+                    The spiritual meaning of the Hebrew Letters is given with the two letter system, e.g., ጋሜል ዳሌጥ ብሂል ጋዳ ስብሐት ለከ ተስባሕከ በዘወሀብከ ሕገከ, "Gimel Dalet means an offering of praise (gada) to you; you are glorified by the Law you have given".
+                    Psalm 151 .
+                    The fourth biblical canticle calls Hana a prophetess.
+                    Song of Songs is the common version.
+                    Priases of Mary . </summary>
+                    <msItem xml:id="ms_i1">
+                      <locus from="1r" to="168v" facs="004"/>
+                      <title type="complete" ref="LIT2701Dawit"/>
+                      <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                      <note><ref type="work" corresp="LIT2000Mazmur#Ps118Spiritual"/></note>
+                      <note><ref type="work" corresp="LIT2000Mazmur#Ps151"/> is the short version with a few words added by a later hand</note>
+                      <note><ref type="work" corresp="LIT2257salota#Hannah"/> calls Hannah a prophetess</note>
+                      <note><ref type="work" corresp="LIT2362Songof"/> is the common version</note>
+                      <note><ref type="work" corresp="LIT2509Weddas"/> begins on Monday and culminates on Sunday</note>
+                    </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -51,6 +66,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e1">
+                        <locus target="#Inside_cover" facs="001"/>
+                        <desc>Round mirror niche</desc>
+                      </item>
+                      <item xml:id="e2">
+                        <locus target="#ir" facs="001"/>
+                        <desc>Scrawls in an untrained hand</desc>
+                      </item>
+                      <item xml:id="a1">
+                        <locus target="#iv #iir #iiv #iiir #iiiv #169r" facs="002 003 004 173"/>
+                        <desc>Gǝ‘ǝz grammar, Säwasǝw, <foreign xml:lang="gez">ሰዋስወ፡ ግእዝ፡</foreign></desc>
+                      </item>
+                      <item xml:id="a2">
+                        <locus target="#154v #169v" facs="159 174"/>
+                        <desc>Excerpt from <title type="incomplete" ref="LIT3108RepCh388"/>, written in a later hand</desc>
+                      </item>
+                    </list>
+                    Front inside cover has a .
+
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -71,8 +108,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2020-08-06" who="RL">Added ms items and additions</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
