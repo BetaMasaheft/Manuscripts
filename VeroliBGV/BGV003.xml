@@ -12,7 +12,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
             <editor key="MV"/>
             <editor key="SH"/>
-            
+            <editor key="ABr"/>
+
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -29,55 +30,86 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <msDesc xml:id="ms">
                <msIdentifier>
                   <repository ref="INS0453Bibl_Giov_Veroli"/>
-                      <idno>BGV-003</idno>
+                  <idno>BGV-003</idno>
                   <altIdentifier>
                      <idno>Zanutto 3</idno>
                   </altIdentifier>
-                           </msIdentifier>
+               </msIdentifier>
 
-               <!--<physDesc>
+               <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
+                           <p>Parchment repair on folia <locus target="#129 #151 #166"/>.</p>
                         </support>
                         <extent>
-                           <measure unit="leaf">148</measure>
-                           <measure unit="folio" type="blank">3</measure>
-                           <locus target="#1v #55v #147r"/>
-                           <dimensions type="outer" unit="in">
-                              <height>10.25</height>
-                              <width>9.25</width>
+                           <measure unit="leaf">169</measure>
+                           <measure unit="folio" type="blank">1</measure>
+                           <locus target="#169v"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>198</height>
+                              <width>182</width>
+                              <depth>71</depth>
                            </dimensions>
                         </extent>
 
+                        <foliation>Foliation in pencil in the lower right corner.</foliation>
+
+                        <condition key="good">The back board is split and kept together with an
+                           animal thread. Traces of leather are visible in the inner side of both
+                           boards and in the outer side of the back board. All edges were trimmed
+                           with loss of text on <locus target="#3v"/>at the tail, and of a few
+                           marginal notes on <locus target="#4ra #23rb"/>. Some folia are slightly
+                           damaged by insects (<locus target="#1 #169"/>). A rectangular piece of
+                           parchment has been cut out from <locus target="#114"/> at the head and
+                           from <locus target="#151"/> at the tail; a burning hole is on <locus
+                              target="#92"/>. </condition>
+
                      </supportDesc>
-                     <layoutDesc>
-                        <layout columns="3" writtenLines="26" cert="low"/>
-                     </layoutDesc>
                   </objectDesc>
 
                   <bindingDesc>
-                     <binding contemporary="true" xml:id="binding">
-                        <decoNote xml:id="b1">Wooden boards, partly covered with leather.</decoNote>
+                     <binding contemporary="false" xml:id="binding">
+                        <decoNote xml:id="b1">Two<material key="wood">wooden</material> boards once
+                           covered with <material key="leather"/>.</decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>
-                           <material key="leather"/>
                         </decoNote>
+                        <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                        <decoNote xml:id="b4" type="Spine">Chains of holes are visible on the spine
+                           folds of the quires close to the head and tail. One chain is at the very
+                           outer edge (at the head almost utterly cut away), the other one is c.20
+                           mm from the head, reespectibely c.30 mm from the tail.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
 
+               <!-- <additions>
+                  <list><item xml:id="e1">
+                     <desc> The Ms was microfilmed according to a note of the library.</desc>
+                     <item xml:id="e2">
+                        <locus target="#1r"> <!-\-and front board-\-></locus>
+                        <desc> 
+                           A small piece of blank paper is glued in the bottom margin of <locus target="#1r"/>;
+                           remnants of a small piece of paper are visible on the inner side of the front board.
+                        </desc>
+                     </item>
+                  </list>-->
+
                <history>
                   <origin>
-                     <origDate notBefore="1650" notAfter="1699" evidence="lettering"/>
+                     <origDate notBefore="1600" notAfter="1850" evidence="lettering"/>
+                     <!--Is there a
+                     terminus ante quem determined by the purchase/entry into the BGV?-->
                   </origin>
-                  <provenance> The manuscript belonged to the church of <placeName
-                        ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName> and was very probably
-                     looted by the British <persName ref="PRS7484Napier">Napier</persName>
-                     expedition in <date>1868</date>. It was purchased by the <placeName
-                        ref="INS0312BDL"/> in <date>1879</date>. </provenance>
+                  <provenance> The manuscript originates from Eritrea according to <bibl>
+                        <ptr target="bm:Zanutto1932Bibliografia"/>
+                        <citedRange unit="page">92</citedRange>
+                        <!--This is true for the whole collection and needs to be stated in the intrudction!-->
+                     </bibl>). </provenance>
                </history>
+
 
                <additional>
                   <adminInfo>
@@ -85,8 +117,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:Ullendorff1951Catalogue"/>
-                                 <citedRange unit="page">1ab</citedRange>
+                                 <ptr target="bm:Zanutto1932Bibliografia"/>
+                                 <citedRange unit="page">93</citedRange>
+                                 <citedRange unit="item">3</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -100,260 +133,130 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <summary/>
 
                      <msItem xml:id="p1_i1">
-                        <locus from="2r"/>
-                        <title type="complete" ref="LIT1688Job"/>
+                        <locus from="1ra" to="3vb"/>
+                        <title type="incomplete"/>
+                        <!--ref="LIT2736RepCh20"-->
+                        <!--new work authority file-->
+                        <note>Two or more lines were cut off, possibly when all edges were trimmed
+                           (<!--see under condition-->). It is also possible that the binder who
+                           incorporated <locus from="1" to="3"/> into the codex, cut of a part of
+                           the bottom margin in order to adjust the size of the folia to the size of
+                           the text block. The ink is partly rubbed off , single characters are
+                           therefore not legible.</note>
                         <textLang mainLang="gez"/>
-                        <note>The text is based on the <ref type="work"
-                              corresp="LIT1219Bible#t6greekLXX">Septuagint</ref> as becomes clear
-                           from additions to the text as well as from slight deviations from the
-                           Masoretic version.</note>
+                        <note> The hymnodic portrait poem praises the Trinity and comprises at least
+                           50 strophes. It is an unknown (?) version of the <foreign xml:lang="gez"
+                              >Malkǝʾa Śǝllāse</foreign>. It clearly differs from the known version
+                              <ref type="work" corresp="LIT2736RepCh20"/> witnessed in many
+                           manuscripts and in printed editions, e.g. <bibl><ptr
+                                 target="bm:1955Malkǝʿa Gubāʾe"/></bibl>.</note>
+                        <incipit xml:lang="gez">
+                           <locus target="#1ra"/>
+                           <pb n="1r"/>
+                           <cb n="a"/>
+                           <hi rend="rubric">ሰላም፡ ለሕላዌክሙ፡ ዘኢርትዓ፡</hi> ዓወቅ፡ ጥንቱ፡ ወኢይትዓመር፡ ትፍጻሜቱ፡
+                           አጋእዝትየ፡ <hi rend="rubric">ሥላሴ፡</hi> ዘኢትመውቱ፡ እንዘ፡ ፫፩ወእንዘ፡ ፩፫ቱ፡ ዕበይክሙ፡
+                           ትፍጻሜ፡ አልቦቱ። <hi rend="rubric">ሰላ፡</hi> ለዝክረ፡ ስምክሙ፡ ዘይጥዕም፡ እምሀሊብ። ወእምነ፡
+                           መዓር፡ ፃማ፡ እደ፡ ገብሩ፡ ለንህብ። </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#3vb"/><hi rend="rubric">ሰ፡</hi> ለቆምክሙ፡ አጋእዝትየ፡ ሥላሴ፡ ዳ<gap
+                              reason="illegible" unit="chars" extent="2"/><!-- ነቢይ፡ እንዘ፡ ይብል፡ ሃሌ፡ ይቤሎ፡
+                           እግዚ፡ ለእግዚእየ፡ ንበር፡ በየማንየ፡ ወልድ፡ ሂል፡ እግዚአብሔር፡ ካዕበ፡ አሪ?አየ። ዕ?ክሙ፡ አጋእዝትየ፡
+                           <hi rend="rubric">ሥ፡</hi> በከመ፡ ሙሴ?፡ በውስተ፡ ኦሪት፡ እንዘ፡ ይብል፡ ተር ብሔር፡ እግዚእ፡ እምቅድመ፡-->
+                           <gap reason="lost" extent="unknown"/></explicit>
+
                      </msItem>
 
-                     <msItem xml:id="p1_i2">
-                        <locus from="21r"/>
-                        <title type="complete" ref="LIT2195Prover"/>
-                        <textLang mainLang="gez"/>
-                        <note>Also according to the <ref type="work"
-                              corresp="LIT1219Bible#t6greekLXX">Septuagint</ref>.</note>
-                     </msItem>
-
-                     <msItem xml:id="p1_i3">
-                        <locus from="34r"/>
-                        <title type="complete" ref="LIT2396Tagsas"/>
-                        <textLang mainLang="gez"/>
-                        <note>Second part of Proverbs, chapter 25 to the end.</note>
-                        <note>This version appears to incorporate some variant readings of the <ref
-                              type="work" corresp="LIT1219Bible#t6greekLXX">Septuagint</ref>.</note>
-                     </msItem>
-
-                     <msItem xml:id="p1_i4">
-                        <locus from="36v"/>
-                        <title type="complete" ref="LIT2516Wisdom"/>
-                        <textLang mainLang="gez"/>
-                     </msItem>
-
-                     <msItem xml:id="p1_i5">
-                        <locus from="49v"/>
-                        <title type="complete" ref="LIT1320Eccles"/>
-                        <textLang mainLang="gez"/>
-                     </msItem>
-
-                     <msItem xml:id="p1_i6">
-                        <locus from="56r"/>
-                        <title type="complete" ref="LIT1672Isaiah"/>
-                        <textLang mainLang="gez"/>
-                     </msItem>
-
-                     <msItem xml:id="p1_i7">
-                        <locus from="94r"/>
-                        <title type="complete" ref="LIT1315Dodeka"/>
-                        <textLang mainLang="gez"/>
-
-                        <msItem xml:id="p1_i7.1">
-                           <locus from="94r"/>
-                           <title type="complete" ref="LIT3144Hosea"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.2">
-                           <locus from="99v"/>
-                           <title type="complete" ref="LIT3145Amos"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.3">
-                           <locus from="103v"/>
-                           <title type="complete" ref="LIT3146Micah"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.4">
-                           <locus from="106r"/>
-                           <title type="complete" ref="LIT1689Joel"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.5">
-                           <locus from="108v"/>
-                           <title type="complete" ref="LIT3147Obadiah"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.6">
-                           <locus from="109r"/>
-                           <title type="complete" ref="LIT1694Jonah"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.7">
-                           <locus from="110v"/>
-                           <title type="complete" ref="LIT2057Bookof"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.8">
-                           <locus from="111v"/>
-                           <title type="complete" ref="LIT1567Bookof"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.9">
-                           <locus from="113v"/>
-                           <title type="complete" ref="LIT3148Zephan"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.10">
-                           <locus from="115r"/>
-                           <title type="complete" ref="LIT3149Haggai"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.11">
-                           <locus from="116v"/>
-                           <title type="complete" ref="LIT3150Zechar"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i7.12">
-                           <locus from="123v"/>
-                           <title type="complete" ref="LIT3151Malachi"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-                     </msItem>
-
-                     <msItem xml:id="p1_i8">
-                        <locus from="126v"/>
-                        <title type="incomplete" ref="LIT3529Daniel"/>
-                        <textLang mainLang="gez"/>
-
-                        <msItem xml:id="p1_i8.1">
-                           <locus from="126v"/>
-                           <title type="complete" ref="LIT3194Susanna"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-
-                        <msItem xml:id="p1_i8.2">
-                           <locus from="127v" to="130v"/>
-                           <locus from="133r"/>
-                           <title type="incomplete" ref="LIT1259Daniel"/>
-                           <textLang mainLang="gez"/>
-                           <note>The text only has the beginning and end of <ref type="work"
-                                 corresp="LIT4300PrayerAzariah"/>, its full text is included in the
-                              addition <ref target="#p2_i1"/>.</note>
-                        </msItem>
-
-                        <msItem xml:id="p1_i8.3">
-                           <locus from="141v"/>
-                           <title type="complete" ref="LIT3195Bel"/>
-                           <textLang mainLang="gez"/>
-                        </msItem>
-                     </msItem>
-
-                     <msItem xml:id="p1_i9">
-                        <locus from="143r"/>
-                        <title type="complete" ref="LIT2362Songof"/>
-                        <textLang mainLang="gez"/>
-
-                        <colophon xml:id="coloph1">
-                           <locus target="#146r"/>
-                           <note>Colophon written in a later hand saying that the book was written
-                              in the year <date>A.D. 1000</date>. If this note has any significance
-                              at all, then it can only refer to the age of the manuscript from which
-                              the present one was copied in the <date>17th century</date>.</note>
-                        </colophon>
-                     </msItem>
-
-                     <msItem xml:id="p1_i10">
-                        <locus target="#146v"/>
-                        <title type="complete">Table of epact</title>
-                        <textLang mainLang="gez"/>
-                     </msItem>
                   </msContents>
 
                   <physDesc>
-                     <objectDesc form="Codex">
+                     <!--<objectDesc form="Codex">-->
+                     <objectDesc form="Leaf">
                         <supportDesc>
                            <support>
                               <material key="parchment"/>
                            </support>
                            <extent>
-                              <measure unit="leaf">146</measure>
-                              <measure unit="folio" type="blank">3</measure>
-                              <locus target="#1v #55v #147r"/>
-                              <dimensions type="outer" unit="in">
-                                 <height>10.25</height>
-                                 <width>9.25</width>
+                              <measure unit="leaf">3</measure>
+                              <locus from="1" to="3"/>
+                              <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                 <height>201</height>
+                                 <width>185</width>
                               </dimensions>
+                              <note corresp="#leafdim">Data on leaves dimensions taken from <locus
+                                    target="#2r"/>.</note>
                            </extent>
 
+                           <collation>
+                              <list>
+                                 <item xml:id="q1">
+                                    <dim unit="leaf">3</dim>
+                                    <locus from="1r" to="3v"/> 3 single leaves with two stubs before
+                                    1, and 1 stub after 1</item>
+                              </list>
+                           </collation>
                         </supportDesc>
+
                         <layoutDesc>
-                           <layout columns="3" writtenLines="26" cert="low"/>
+                           <layout columns="2" writtenLines="19">
+                              <locus from="1r" to="3v"/>
+                              <note corresp="#textarea #margin">Data on text area and margin
+                                 dimensions taken from <locus target="#2r"/> More than 36 lines are
+                                 written on <locus target="#3v"/>.</note>
+                              <dimensions unit="mm" xml:id="textarea">
+                                 <height>155</height>
+                                 <width>146</width>
+                              </dimensions>
+                              <dimensions type="margin" unit="mm" xml:id="margin">
+                                 <dim type="top">17</dim>
+                                 <dim type="bottom">31</dim>
+                                 <dim type="right">30</dim>
+                                 <dim type="left">5</dim>
+                                 <dim type="intercolumn">10</dim>
+                              </dimensions>
+                              <note>The characters per line are 13–17.</note>
+                              <ab type="pricking">Ruling is visible; pricking is visible.</ab>
+                              <ab type="ruling" subtype="pattern">
+                                 <locus from="1r" to="3v"/>Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                              <ab type="pricking">Primary pricks are visible only on <locus
+                                    target="#1r"/>.</ab>
+                              <ab type="pricking">Ruling pricks are mostly visible only on <locus
+                                    target="#1r"/>.</ab>
+                              <ab type="ruling">The upper line is written above the ruling.</ab>
+                              <ab type="ruling">The bottom line is written above the ruling.</ab>
+                           </layout>
                         </layoutDesc>
                      </objectDesc>
 
                      <handDesc>
-                        <handNote xml:id="h1" script="Ethiopic">
-                           <date notBefore="1650" notAfter="1699" evidence="conjecture"/>
-                           <seg type="script">The writing is generally neat, the shape of the
-                              characters makes it fairly certain that the manuscript was written at
-                              the end of the <date>17th century</date>.</seg>
-                        </handNote>
 
-                        <handNote xml:id="h2" script="Ethiopic" corresp="#coloph1">
-                           <date>Later than <ref target="#h1"/>.</date>
+                        <handNote xml:id="h1" script="Ethiopic" corresp="#p1_i1">
+                           <locus from="1ra" to="3vb"/>
+                           <seg type="ink">Black, red</seg>
+                           <date notBefore="1800" notAfter="1850">first half of the 19th
+                              century</date>
+                           <desc>Mediocre. The text was probably written by a professional scribe
+                              who wrote his text without great care for one or the other reason. He
+                              squeezed his text on <locus target="#3v"/> into many more lines und
+                              used also the bottom margin for writing, probably in order to
+                              accommodate the end of the text on this leaf (that was eventually cut
+                              off when trimmming all folia).</desc>
+                           <seg type="rubrication"> The first line in both columns is rubricated on
+                              the incipit page. The words <foreign xml:lang="gez">ሰላም</foreign> and
+                                 <foreign xml:lang="gez">ሥላሴ</foreign>, also in their abbreviated
+                              forms, are written in red ink as well as elements of the punctuation
+                              marks and of the numerals. </seg>
+                           <list type="abbreviations">
+                              <item>
+                                 <abbr>ሰ</abbr> or <abbr>ሰላ</abbr> for <expan>ሰላም </expan>
+                              </item>
+                              <item>
+                                 <abbr>ሥ</abbr> for <expan>ሥላሴ</expan>
+                              </item>
+                           </list>
                         </handNote>
-
-                        <handNote xml:id="h3" script="Ethiopic" corresp="#a3">
-                           <date>Later than <ref target="#h1"/>.</date>
-                        </handNote>
-
-                        <handNote xml:id="h4" script="Ethiopic" corresp="#a2"/>
                      </handDesc>
 
-                     <additions>
-                        <list>
-                           <item xml:id="a1">
-                              <locus target="#1r"/>
-                              <desc type="Unclear">Notes in Amharic</desc>
-                              <q xml:lang="am"/>
-                           </item>
-
-                           <item xml:id="a2">
-                              <locus from="147v" to="148v"/>
-                              <desc type="GuestText">Written in a hand different from that of the
-                                 scribe of the principal part.</desc>
-                              <title type="complete" ref="LIT2851RepCh133"/>
-                              <q xml:lang="gez"/>
-                           </item>
-
-                           <item xml:id="a3">
-                              <desc type="Comment">There are many glosses, interpolations,
-                                 emendations and erasures by a later hand.</desc>
-                              <q xml:lang="gez"/>
-                           </item>
-
-                           <item xml:id="e1">
-                              <locus target="#20v"/>
-                              <locus target="#93"/>
-                              <desc>The name of the owner, <persName ref="PRS11353Constantine"
-                                    role="owner"/>, is mentioned on <locus target="#20v"/> and
-                                    <locus target="#93"/>.</desc>
-                              <q xml:lang="gez"/>
-                           </item>
-
-                           <item xml:id="e2">
-                              <locus target="#93v"/>
-                              <desc type="Unclear">Pen trials in Amharic, <foreign xml:lang="am"
-                                    >ፈቲነ፡ ብርዕ፡</foreign>
-                              </desc>
-                              <!-\-add type for pen trials?-\->
-                              <q xml:lang="am"/>
-                           </item>
-
-                        </list>
-                     </additions>
 
                   </physDesc>
                </msPart>
@@ -365,14 +268,204 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <summary/>
 
                      <msItem xml:id="p2_i1">
-                        <locus from="131" to="132"/>
-                        <title ref="LIT4300PrayerAzariah">Prayer of Azariah and the Song of the
-                           Three Holy Children</title>
+                        <locus from="4ra" to="168rb"/>
+                        <title type="complete" ref="LIT2505Weddas" xml:lang="gez"/>
                         <textLang mainLang="gez"/>
-                        <note>This addition corresponds with LXX Daniel 3:28-88. It includes the
-                           full text of the prayer, while <ref target="#p1_i8.2"/> only has the
-                           beginning and the end.</note>
+                        <note>The text comprises devotional prayers, is arranged for the days of the
+                           week, and serves for edification.</note>
+
+                        <msItem xml:id="p2_i1.1">
+                           <locus target="#4ra"/>
+                           <incipit xml:lang="gez">
+                              <locus target="#4rb"/>
+                              <pb n="4r"/>
+                              <cb n="a"/>
+                              <hi rend="rubric">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐ</hi>ዱ፡ አምላክ። ንወጥን፡
+                              በረድኤተ፡ እግዚአብ<hi rend="rubric">ሔር፡ በጽሒፈ፡ ጸሎታት፡ እንተ፡ ዘሰብዓቱ፡ ዕለ</hi>ታት፡
+                              በሰላመ፡ እግዚአብሔር፡ አሜን። </incipit>
+                           <!-- It is the whole passage, not an incipit in the narrow sense -->
+                        </msItem>
+
+                        <msItem xml:id="p2_i1.2">
+                           <locus from="4ra" to="23rb"/>
+                           <title type="complete" ref="LIT2505Weddas#Monday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus from="4ra" to="4rb"/>ጸሎት፡ ዘይትነበብ፡ በዕለተ፡ ሰኑይ፡ ጸሎቱ፡ ወበረከቱ፡ የሀሉ፡
+                              ምስለ፡ ፍኩሩ፡ <hi rend="rubric">
+                                 <!-- <del rend="erasure" unit="chars" extent="6"><certainty
+                                       locus="value" match="../@extent" assertedValue="8"
+                                 /></del>--></hi>
+                              ለዓለመ፡ ዓለም፡ አሜን። እምቃለ፡ <hi rend="rubric">ቅዱስ፡ <persName
+                                    ref="PRS2546Basilth">ባስልዮስ፡</persName> ትብል፡ ከመዝ፡ ኦእግዚአብሔር፡</hi>
+                              እግዚእየ፡ ኢየሱስ፡ ክር<pb n="4r"/><cb n="b"/><hi rend="rubric">ስቶስ፡ ሰራዬ፡
+                                 ኃጢአትየ፡ አንተ፡ ተአምር፡ ኵሎ፡ </hi>ኃጢአትየ፡ ኅብእተ፡ ዘገበርክዋ፡ ጽሚተ። ወአንተ፡ ውእቱ፡
+                              ዘትሬኢ፡ ምሥጢራተ፡ ዘበጻሕኩ፡ ባቲ፡ እምሕሰመ፡ ምግባራትየ፡ ወእከይየ፡ </incipit>
+                           <explicit xml:lang="gez">
+                              <locus target="#23rb"/> ተወከፍ፡ ስእለትየ፡ ድክምተ፡ ወኅስርተ፡ በዕበየ፡ አፍቅሮትከ፡ እንተ፡
+                              አልባቲ፡ ወሰን። እስመ፡ ለከ፡ ይደሉ፡ ስብሐት፡ ወክብር፡ ወተጋንዮ፡ እምይእዜ፡ ወእስከ፡ ለዓለመ፡ ዓለም፡
+                              አሜን። </explicit>
+                        </msItem>
+
+                        <msItem xml:id="p2_i1.3">
+                           <locus from="23rb" to="53va"/>
+                           <title type="complete" ref="LIT2505Weddas#Tuesday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus from="23rb" to="23va"/>
+                              <hi rend="rubric"> ጸሎት፡ ወስእለት፡ እንተ፡ ዘዕለተ፡ ሠሉስ፡ እምድር</hi>ሳነ፡ ቅዱስ፡
+                                 <persName ref="PRS3827Ephrem"><roleName type="title"
+                                 >ማሪ፡</roleName>ማሪ፡ ኤፍሬም፡ ሶርያዊ፡</persName> አፈ፡ በረከት፡ ወበቍዔት። ጸሎቱ፡
+                              ወበረከቱ፡ የሀሉ፡ ምስለ፡ ፍኩሩ፡ {ዮሐንስ፡  in ras. et eras.} ለዓለመ፡ ዓለም፡ አሜን። ለከ፡
+                              | (f. 23va) ስብሐት፡ ኦመስተዓግሥ፡ ስብሐት፡ ለከ፡ ኦመሓሪ። ስብሐት፡ ለከ፡ ኦጸዋሪ፡ ወጸናሒ። ስብሐት፡
+                              ለከ፡ ኦመስተመይጥ፡ ላዕለ፡ ሰብእ። ስብሐት፡ ለከ፡ ኦኄር። ስብሐት፡ ለከ፡ ኦጠቢብ፡ ባሕቲትከ።</incipit>
+                           <explicit xml:lang="gez">
+                              <locus target="#45rb"/> ወአንጽሕ፡ መንፈስየ። ወእፃእ፡ በፍሥሐ፡ ለቀበላከ፡ እንዘ፡ እሴብሕ፡
+                              ወእባርክ፡ መርዓዌ፡ ዘኢይመውት። እኩን፡ ድልወ፡ ወእኩን፡ ሱታፌ፡ ለቅዱሳን፡ እለ፡ አሥመሩከ፡ እስመ፡ ለከ፡
+                              ይደሉ፡ ስብሐት። እስከ፡ ለዓለመ፡ ዓለም፡ አሜን። </explicit>
+                        </msItem>
+
+                        <msItem xml:id="ms_i1.4">
+                           <locus from="45ra" to="64vb"/>
+                           <title type="complete" ref="LIT2505Weddas#Wednesday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus from="45ra" to="45rb"/>
+                              <hi rend="rubric">ጸሎት፡ ወስእለት፡ ወአስተብቍዖት፡ ዘዕለተ፡ ረቡዕ፡</hi> እምድርሳነ፡ ቅዱስ፡
+                                 <persName ref="PRS3827Ephrem"><roleName type="title">ማሪ፡</roleName>
+                                 ኤፍሬም፡</persName> ካዕበ። ኦእግ<hi rend="rubric">ዚእየ፡ አምላኪየ፡ ኢየሱስ፡ ክርስቶስ።
+                                 ወልደ፡ እግ</hi>ዚአብሔር። ሶበ፡ እዜከር፡ ምጽአተከ፡ ግሩመ፡ ለኰንኖ፡ ፍጥረትከ፡ ወ<pb n="45r"
+                                 /><cb n="b"/><hi rend="rubric">ፍዳ፡ ኵሉ፡ ለለ፩ዱ፡ በከመ፡ ምግባሩ። ትትሀወክ፡
+                                 አዕ</hi>ጽምትየ፡ ወይትመተር፡ ኃይለ፡ ነፍስየ፡ ምስለ፡ ሥ<hi rend="rubric">ጋየ።</hi>
+                           </incipit>
+                           <explicit xml:lang="gez">
+                              <locus target="#64vb"/>ከመ፡ አሥምሮ፡ ለእግዚአብሔር፡ በብሔረ፡ ሕያዋን። ወረስየኒ፡ ድልወ፡ ከመ፡
+                              እስማዕ፡ ቃለ፡ ዘይብል። ዝንቱ፡ ወልድየ፡ ሞተሂ፡ ወሐይወ፡ ተሐጕለሂ፡ ወተረክበ። እስመ፡ ለከ፡ ስብሐት፡
+                              ወክብር፡ ወእዘዝ፡ እስከ፡ ለዓለመ፡ ዓለም፡ አሜን። </explicit>
+                        </msItem>
+
+                        <msItem xml:id="ms_i1.5">
+                           <locus from="65ra" to="89vb"/>
+                           <title type="complete" ref="LIT2505Weddas#Thursday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus target="#65ra"/>
+                              <pb n="65r"/>
+                              <cb n="a"/>
+                              <hi rend="rubric">ጸሎት፡ ራብዕ፡ ዘዕለተ፡ ሐሙስ፡ እንተ፡ ተጋብአት፡</hi> እምቃለ፡ አረጋዊ፡
+                              መንፈሳዊ። ቅዱስ፡ <persName ref="PRS5740JohnSab">ዮሐንስ፡</persName> ጸሎ<hi
+                                 rend="rubric">ቱ፡ ወበረከቱ፡ የሃሉ፡ ምስለ፡ ፍቁሩ፡</hi>
+                              <persName ref="PRS12973Rehr"><hi rend="rubric">ርኅሩኅ፡ ክ
+                                 ር</hi>ስቶስ።</persName> ብሩክ፡ ውእቱ፡ አቡሁ፡ ለእግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ።
+                              ዘከሠተ፡ ምሥጢረ፡ አፍቅሮቱ፡ ለነፍሳቲነ። <sic> ወሥረቀ፡ </sic> ልቡና፡ ጸጋሁ፡ ውስተ፡ አልባቢነ።
+                              ስብሐት፡ ለዘአሥረቀ፡ ስብሐቲሁ፡ ወገብረ፡ ኃይላቲሁ፡ ወምሥጢራቲሁ፡ ለኑዛዜ፡ እለ፡ ይስእልዎ። </incipit>
+                           <explicit xml:lang="gez">
+                              <locus from="89va" to="89vb"/>ወባቲ፡ ይኩን፡ ግብርነ፡ ወአንብቦትነ፡ በዛቲ፡ ዘመን፡ ሙስንት፡
+                                 ዘወሀብከ<sic>ከ</sic>ነ፡ ከመ፡ ትፍትን፡ ግዕዛ<pb n="89v"/><cb n="b"
+                                 />ነ<sic>ነ</sic>፡ ወንብጻሕ፡ ቦቱ፡ በሞገስ፡ ኀቤከ፡ በብዝኃ፡ ምሕረትከ፡ ወሣህልከ። ወበጸሎተ፡
+                              ዝንቱ፡ አረጋዊ። መንፈሳዊ፡ <persName ref="PRS5740JohnSab">ዮሐንስ፡</persName> ዕቀቦ፡
+                              ለገብርከ፡ <persName ref="PRS12973Rehr"><hi rend="rubric">ርኅሩኅ፡
+                                    ክርስቶስ፡</hi></persName> እስመ፡ ለከ፡ ይደሉ፡ ስብሐት፡ ወክብር። ዕበይ፡ ወተጋንዮ፡
+                              ምስለ፡ አቡከ፡ ኄር፡ መሓሪ፡ ወመንፈስ፡ ቅዱስ፡ ማኅየዊ። ይእዜኒ፡ ወዘልፈኒ፡ ወለዓለመ፡ ዓለም፡ አሜን።
+                              ወአሜን፡ ለይኩን፡ ለይኩን።</explicit>
+                        </msItem>
+
+                        <msItem xml:id="ms_i1.6">
+                           <locus from="90ra" to="109rb"/>
+                           <title type="complete" ref="LIT2505Weddas#Friday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus target="#90ra"/>
+                              <pb n="90r"/>
+                              <cb n="a"/>
+                              <hi rend="rubric">ጸሎተ፡ አባ፡ <persName ref="PRS8823Shenute"
+                                    >ሲኖዳ፡</persName> አርሳይ፡ መትርያድስ፡ ዘማኅበር፡</hi> እንተ፡ ይትነበብ፡ ዕለተ፡ ዓርብ።
+                              ጸሎቱ፡ <hi rend="rubric">ወበረከቱ፡ የሀሉ፡ ምስለ፡ ገብሩ፡ <persName
+                                    ref="PRS12973Rehr">ርኅሩኅ፡ ክርስቶስ፡</persName></hi> ለዓለመ፡ ዓለም፡ አሜን።
+                              እግዚኦ፡ በመዓትከ፡ ኢትቅሥፈኒ፡ ወበመቅሠፍትከ፡ ኢትገሥጸኒ። አንሰ፡ እሬኢ፡ በዓይነ፡ ልቡናየ፡ ከመ፡ ዕሩቅ፡
+                              ወክሡት፡ እንዘ፡ እቀውም፡ ቅድመ፡ ዝንቱ፡ መንበር፡ መፍርህ፡ እንዘ፡ እደንን፡ ርእስየ፡ በፍርሃት፡ ወረዓድ፡
+                              በቅድሜከ፡ </incipit>
+                           <explicit xml:lang="gez">
+                              <locus target="#100rb"/>እስመ፡ ናሁ፡ ሰምዓ፡ እግዚአብሔር፡ ቃለ፡ ብካይየ፡ ወሰምዓ፡
+                              እግዚአብሔር፡ ስእለትየ። በርስዓን፡ እግዚአብሔር፡ ተውከፍ፡ ጸሎትየ፡ ይትኃፈሩ፡ ወይኅሠሩ፡ ኵሎሙ፡ ጸላእትየ፡
+                              ወይግብኡ፡ ድኅሬሆሙ፡ ወይትሐፈሩ፡ ፈድፋደ፡ ፍጡነ።</explicit>
+                           <incipit xml:lang="gez">
+                              <locus from="100rb" to="100va"/>
+                              <hi rend="rubric">ጸሎት፡ ዘአባ፡ <persName ref="PRS7696Pachomiu"
+                                    >ጳኵሚስ፡</persName> አበ፡ ግርገታተ፡ እንተ፡ ይእቲ፡ ተ<add place="below"
+                                    >ፍጻሜተ</add></hi>፡ ለዛቲ፡ ዕለት፡ ዐባይ፡ ስብሐት፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ።
+                              ሥላሴ፡ በተዋህዶ፡ ወተዋህዶ፡ በሥላሴ፡ <pb n="100v"/><cb n="a"/> እግዚኦ፡ ሥረይ፡ ሊተ፡ እስመ፡
+                              አበስኩ፡ ለከ፡ ከመ፡ ሰብእ። </incipit>
+                           <explicit xml:lang="gez">
+                              <locus from="109ra" to="109rb"/>ኦአምላኪየ፡ እስእለከ፡ ከመ፡ ት<pb n="109r"/><cb
+                                 n="b"/>ምትር፡ አመክንዮትየ፡ በዘይደሉ፡ <sic>ለአመክንዮከ፡ </sic> በላዕሌየ፡ ከመ፡ ትስረይ፡
+                              ኃጢአትየ፡ ወትትዓደው፡ አበሳየ፡ ወጌጋይየ፡ ሊተ፡ ለኃጥእ፡ ገብርከ፡ <persName
+                                 ref="PRS12973Rehr"><sic>ርኅሩኅ፡</sic></persName> በምሕረትከ፡ ወስብሐት፡
+                              ለእግዚኣብሔር፡ ለዓለም፡ አሜን።</explicit>
+                        </msItem>
+
+                        <msItem xml:id="ms_i1.7">
+                           <locus from="109ra" to="123rb"/>
+                           <title type="complete" ref="LIT2505Weddas#Saturday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus from="109ra" to="109va"/>
+                              <hi rend="rubric">ጸሎት፡ ሳድሲት፡ ዘዕለተ፡ ሰንበተ፡ አይሁድ፡ ዘአስተ</hi>ጋብአ፡ እማኀልየ፡
+                              ቅብጢ፡ አቡነ፡ <persName ref="PRS2209Athanasi">አትናትዮስ፡</persName>
+                              <hi rend="rubric">ሊቀ፡ ጳጳስ፡ ዘሀገረ፡ <placeName ref="LOC1338Alexan">እለ፡
+                                    እስክንድርያ</placeName>። ጸሎቱ፡ ወ</hi>በረከቱ፡ ቅድስት፡ ትኩን፡ ምስለ፡ ገብሩ፡
+                                 <persName ref="PRS12973Rehr">ርኅሩኅ፡ ክርስቶስ፡</persName> ለዓለመ፡ ዓለም፡
+                              አሜን። ወትብል፡ ከመዝ፡ ኃሠሥኩከ፡ <pb n="109r"/><cb n="b"/>
+                              <hi rend="rubric">እማዕምቀ፡ ልብየ። ኦእግዚእየ፡ ኢየሱስ፡ ክርስቶስ፡</hi> ርድአኒ፡ አንተ፡
+                              ውእቱ፡ ረዳኢ ፡ ወፍትሐኒ፡ <hi rend="rubric">እማዕሥረ፡ ኃጢአት። ኦእግዚእየ፡ ኢየሱስ፡
+                                 ክርስቶስ፡</hi> ርድአኒ፡ አንተ፡ ውእቱ፡ ረዳኢ፡ ለአድኅኖትነ፡ ኂሩትከ፡ ይርከበኒ፡ ፍጡነ፡ ወጸልለኒ፡
+                              ታሕተ፡ ጽላሎተ፡ ክነፊከ፡ በሰዱስ፡ <pb n="109v"/>
+                              <cb n="a"/> ዕለት፡ ፈጠርከነ፡ ኵሎ፡ ዓለመ። </incipit>
+                           <explicit xml:lang="gez">
+                              <locus target="#123rb"/>ብሩክ፡ ውእቱ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ሥሉስ፡ ፍጹም።
+                              ንስግድ፡ ሎቱ፡ ወንሰብሖ፡ ሎቱ፡ ይደሉ፡ ስብሐት፡ እምአፈ፡ መላእክት፡ ወሰብእ፡ ወእምአፈ፡ ኵሉ፡ ፍጥረት፡
+                              እለ፡ ሀለው፡ በምድር፡ ወበሰማያት። በባሕርኒ፡ ወበቀላያት፡ ለዓለመ፡ ዓለም፡ አሜን። </explicit>
+                        </msItem>
+
+                        <msItem xml:id="ms_i1.8">
+                           <locus from="123ra" to="139ra"/>
+                           <title type="complete" ref="LIT2505Weddas#Sunday" xml:lang="gez"/>
+                           <incipit xml:lang="gez">
+                              <locus target="#123ra"/>
+                              <hi rend="rubric">ጸሎተ፡ ቅዱስ፡ <persName ref="PRS3255CyrilI">ቄርሎስ፡
+                                 </persName>አቡ</hi>ነ፡ ሊቀ፡ ጳጳሳት፡ ዘሀገረ፡ <placeName ref="LOC1338Alexan"
+                                 > እለ፡ <hi rend="rubric">እስክንድርያ፡</hi></placeName>
+                              <hi rend="rubric">ዘዕለተ፡ ሰን</hi>በት፡ ክርስቲያን፡ በረከቱ፡ ቅድስት፡ ትኩን፡ ምስለ፡ ገብሩ፡
+                                 <persName ref="PRS12973Rehr"><sic>ርኅሩኅ፡</sic></persName> ለዓለመ፡ ዓለም።
+                              ስብሐት፡ ለአብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። ቦሙ፡ አአምን፡ ወእትአመን፡ እስከ፡ ነፍስ፡ ደኃሪት። ስብሐት፡
+                              ለከ፡ ኦእግዚአብሔር፡ <pb n="123r"/>
+                              <cb n="b"/><hi rend="rubric">ስብሐት። አቄርብ፡ ለ</hi>ከ፡ በአማን፡ ዘይደሉ፡ ለዕበ<hi
+                                 rend="rubric">የ፡ ቅድምናከ።</hi>
+                           </incipit>
+                           <explicit xml:lang="gez">
+                              <locus from="138vb" to="139ra"/>>እጽናዕ፡ በፍቅርከ። ወእትወከል፡ በብዝኃ፡ ምሕረትከ።
+                              በጸጋከ፡ ወሣህልከ፡ ኀቤከ፡ እስእል፡ እግዚኦ፡ ከመ፡ ትምርሃኒ፡ ፍኖተ፡ ዘነሐውር፡ ባቲ። እንተ፡ ይእቲ፡
+                              ፍኖተ፡ ጻድቃን፡ ርትዕት። እስከ፡ <pb n="139r"/><cb n="a"/>
+                              <sic>ከ፡</sic> ነፍስ፡ ደኃሪት፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን። </explicit>
+                        </msItem>
+
+                        <note>There is no explicit of the work (<ref type="work"
+                              corresp="LIT2505Weddas#Explicit"/>) as given, e.g. in GCA-005 and
+                           BGV-003.</note>
+                        <!--refer to ids when they exist-->
                      </msItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   </msContents>
 
                   <physDesc>
@@ -384,6 +477,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <extent>
                               <measure unit="leaf">2</measure>
                               <locus from="131" to="132"/>
+                              <measure unit="folio" type="blank">3</measure>
+                              <locus target="#1v #55v #147r"/>
                               <dimensions type="outer" unit="in">
                                  <height>10.25</height>
                                  <width>9.25</width>
@@ -403,7 +498,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </objectDesc>
 
                      <handDesc>
-                        <handNote xml:id="h5" script="Ethiopic">
+                        <handNote xml:id="h2" script="Ethiopic">
+                           <date notBefore="1650" notAfter="1699" evidence="conjecture"/>
+                           <seg type="script">The writing is generally neat, the shape of the
+                              characters makes it fairly certain that the manuscript was written at
+                              the end of the <date>17th century</date>.</seg>
+                        </handNote>
+
+                        <handNote xml:id="h3" script="Ethiopic" corresp="#coloph1">
+                           <date>Later than <ref target="#h1"/>.</date>
+                        </handNote>
+
+                        <handNote xml:id="h4" script="Ethiopic" corresp="#a3">
+                           <date>Later than <ref target="#h1"/>.</date>
+                        </handNote>
+
+                        <handNote xml:id="h5" script="Ethiopic" corresp="#a2"/>
+                        <handNote xml:id="h6" script="Ethiopic">
                            <seg type="script">Written in a more recent hand than the rest of the
                               manuscript.</seg>
                         </handNote>
@@ -420,7 +531,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </additions>
                   </physDesc>
 
-               </msPart>-->
+               </msPart>
 
             </msDesc>
          </sourceDesc>
@@ -448,11 +559,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <langUsage>
             <language ident="en">English</language>
             <language ident="gez">Gǝʿǝz</language>
-                     </langUsage>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="SH" when="2020-05-13">Created catalogue entry</change>
-           </revisionDesc>
+      </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
