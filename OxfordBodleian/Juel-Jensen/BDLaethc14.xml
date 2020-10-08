@@ -289,11 +289,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <width>265</width>
                                             <depth>95</depth>
                                         </dimensions>
-                                        <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <dimensions type="leaf" unit="mm" xml:id="leafdim1">
                                             <height>316</height>
                                             <width>267</width>
                                         </dimensions>
-                                        <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#45r"/>.</note>
+                                        <note corresp="#leafdim1">Data on leaves dimensions taken from <locus target="#45r"/>.</note>
                                         <measure type="weight" unit="g">3858</measure><!--with variances-->
                                         <!-- This must refer to the entire manuscript, not to this single unit p1 -->
                                     </extent>
@@ -445,7 +445,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <handNote xml:id="h1" script="Ethiopic">
                                     <locus from="1ra" to="123vb"/>
                                     <seg type="script"/>
-                                    <seg type="ink">Black, red</seg>
+                                    <seg type="ink">Black, red or deep vermilion</seg>
                                     <date notBefore="1500" notAfter="1600"></date>
                                     <desc>
                                         Fine and trained hand. Characters are regularly spaced.
@@ -486,27 +486,79 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             
                             <additions>
                                 <list>
+                                    <item xml:id="a1">
+                                        <desc type="Supplication">Note crudely written in deep vermilion the upper margin of the leaf.</desc>
+                                        <locus target="#4v"/>
+                                        <q xml:lang="gez"><seg part="I">ተዘከርነ፡ እ<hi rend="ligature">ግዚ</hi>ኦ፡ በሣህልከ፡ ሕዝብከ፡ ወተሰሀለነ፡ በአድህኖትከ፡</seg></q>
+                                    </item>
+                                    <item xml:id="a2">
+                                        <desc type="OwnershipNote">
+                                            Note crudely written in the right margin in Amharic, mentioning <persName ref=""><roleName type="title">ʾabbā</roleName> Walda Śǝllāse</persName> 
+                                            and an unspecified monastery called <placeName ref="">Dabra Mikāʾel</placeName>.
+                                            </desc>
+                                        <locus target="#64rb"/>
+                                        <q xml:lang="am">
+                                            የደብረ፡ ሚካኤል፡ ዛፍ፡ ያለቃ፡ ተሠማ፡ ነው፡ ዙካው፡ <!-- ??? check!! --> አባ፡ ወልደ፡ ሥላሴ፡ ናቸው፡
+                                        </q>
+                                        <note> 
+                                            The text is incomplete: it starts and ends abruptly. It might be the continuation of <ref target="#a2"/>. Some letters are hardly legible.</note>
+                                    </item>
+                                    
                                     <item xml:id="e1">
                                         <desc>A white sticker is glued to the inner side of the front board, on the top. The name of <persName ref="PRS5782JuelJen"/> is printed on it
                                             (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. c. 14" is written in pencil. 
                                             An additional sticker, with the signature "Ms 46"printed on it, is glued on the bottom of the same side.</desc>
                                     </item>
-                                    <!--
-                                <item xml:id="e">
-                                    <locus target=""/>
-                                    <desc></desc>
-                                    <q xml:lang="gez"></q>
-                                </item>
-                                
-                                The numbers and titles of the chapters are written in the upper margin, in correspondence of the beginning of the chapters.
-                                    They are often written in the lower margin, e.g. on <locus target="#24va #25ra #29va #37ra #64vb #68vb #87rb #90rb"/> [their position can't go under rubrication! Extra? It must be decided].
-                                -->
+                                    <item xml:id="e2">
+                                        <desc>The numbers and titles of the gospel chapters are regularly written in red ink in the upper margin, in correspondence of the beginning of the chapters.
+                                            They are sometimes written in the lower margin, e.g. on <locus target="#24va #29va #64vb #90rb"/>. 
+                                            Additional titles are written in the upper margin black ink, in the same hand as that of the main text, e.g.: on <locus target=" #30v #58r #59v #97r"/>.
+                                        </desc>
+                                    </item>
+                                    <item xml:id="e3">
+                                        <desc>Aids for identifying monthly readings are written in the upper margin, sometimes within a frame, probably in the same hand as that of <ref target=""/>: 
+                                            <q xml:lang="gez">ዘጥር፡</q> (<locus target="#4r"/>),
+                                            <q xml:lang="gez">ዘጥር፡ <sic>ዘጌወርጊስ፡</sic></q> in red ink (<locus target="#5r"/>),
+                                            <q xml:lang="gez"><seg part="I">ዘማቴዎስ፡ ምስማክ፡ ዘመጋቢት፡ወዘሐምሌ፡</seg></q> (<locus target="#16v"/>),
+                                            <q xml:lang="gez">ዘሐምሌ፡ ሚካኤል፡ እስመ፡ ለምላእክቲሁ፡ ይኤዝዞሙ፡ በእንቲአከ፡ ከመ፡ ይሰቀቡከ፡ በኵሉ፡ ፍናዊከ፡ ወበእደዊሆሙ፡ ያነሥሆሙ፡ ፈጸሞ፡</q> in purple ink in in the left margin (<locus target="#16va"/>),
+                                            <q xml:lang="gez"><sic>ዘማዝያ፡</sic></q> (<locus target="#46va"/>),
+                                            <q xml:lang="gez">ዘዮሐንስ፡ ዘታሕሣሥ፡</q> (<locus target="#51va"/>),
+                                            <q xml:lang="gez">ምንባብ፡ <sic>ዘጌወርጊስ፡</sic> ዘነሀሴ፡ ዘማርቆስ፡</q> in red ink in the right margin (<locus target="#54rb"/>),
+                                            <q xml:lang="gez">ወንጌል፡ ዘማርቆስ፡ ምንባብ፡ ዘመስከረም፡ ባህ፡ ስርቀ፡ <sic>ዘጌወርጊስ፡</sic></q> in red ink in the right margin (<locus target="#55rb"/>),
+                                            <q xml:lang="gez">ዘግንቦት፡ <sic>ተፍስሁ፡</sic> ጻድቃን፡</q> (<locus target="#55va"/>),
+                                            <q xml:lang="gez">ዘኅዳር፡ ሚካኤል፡ ዓዲ፡ ዘይረስዮሙ፡ በ<supplied reason="omitted">ዓ</supplied>ል፡</q> (<locus target="#79va"/>),
+                                            <q xml:lang="gez"><sic>ዘጌወርጊስ፡</sic> ዘሀምሌ፡ ወንጌል፡ ዘሉቃስ፡</q> crudely written in deep vermilion (<locus target="#82r"/>),
+                                            <q xml:lang="gez"><seg part="I">ወንጌል፡ ዘሉቃስ፡ ዘየካቲት፡ ምስማክ፡</seg></q> (<locus target="#85r"/>),
+                                            <q xml:lang="gez"><seg part="I">ዘመሥከረም፡ ምስማክ፡ ግነዩ፡ ለእ<hi rend="ligature">ግዚ</hi>ብሔር፡</seg></q> (<locus target="#86rb"/>),
+                                            <q xml:lang="gez"><seg part="I">ዘግንቦት። ሕቀ፡ አህበጽኮ፡ እመላእክቲከ፡ ክብረ፡</seg></q> (<locus target="#115r"/>).
+                                        </desc>
+                                    </item>
+                                    <item xml:id="e4">
+                                        <desc>Aids for identifying liturgical readings concerning the crucifixion of Jesus are written in the upper margin in the main hand: 
+                                            <q xml:lang="gez">ጊዜ፡ ፫ሰዓት፡ አኀዝዎ፡ ለኢየሱስ፡ ወወሰድዎ፡ ይስቅልዎ፡</q> (<locus target="#32v"/>),
+                                            <q xml:lang="gez">ጊዜ፡ ፮ሰዓት፡ አልበስዎ፡ አልባሲሁ፡ ወወሰድዎ፡ ይስቅልዎ፡</q> (<locus target="#33r"/>),
+                                            <q xml:lang="gez">ጊዜ፡ ተስዓቱ፡ ሰዓት፡ ጸርኀ፡ ኢየሱስ፡ በቃሉ፡ ወይቤ፡ ኤሎሂ፡ ኤሎሂ፡</q> (<locus target="#33v"/>),                                            
+                                            <q xml:lang="gez">ጊዜ፡ ፫ሰዓት፡ ቀሠፎ፡ ጲላጦስ፡ ለኢየሱስ፡ ወወሰድዎ፡ ይስቅልዎ፡</q> (<locus target="#59r"/>),                                            
+                                            <q xml:lang="gez">ጊዜ፡ ፫ሰዓት፡ አሕየወ፡ ሎሙ፡ በርባንሃ፡ ወ<pb n="98"/>ወሀቦሙ፡ ኢ<supplied reason="omitted">የ</supplied>ሱስሃ፡ ይስቅልዎ፡</q> (<locus from="97v" to="98r"/>),
+                                            <q xml:lang="gez">ጊዜ፡ ፮ሰዓት፡ ሰቀልዎ፡ ለኢየሱስ፡ በ<add place="above">መካን፡</add> ቀራንዮ፡</q> (<locus target="#98r"/>),
+                                            <q xml:lang="gez">ጊዜ፡ ፱ሰዓት፡ ገዓረ፡ ኢየሱስ፡ በቃሉ፡ ወወፅአት፡ መንፈሱ፡ ሶቤሃ።</q> (<locus target="#98v"/>).
+                                            </desc>
+                                    </item>
+                                    <item xml:id="e5">
+                                        <desc>Small writings crudely executed and sometimes poorly legible:
+                                             <q xml:lang="gez"><sic>ክንክሣር፡</sic></q> in blue pen (<locus target="#27vb"/>),
+                                            <q xml:lang="gez">ወ<supplied reason="omitted">ን</supplied>ጌል፡ ዘሉቃስ፡</q> (<locus target="#27vb"/>),
+                                            <q xml:lang="gez">ጻድቃን፡ ይወርስዎ፡ ለምድር፡</q> crudely written in deep vermilion in the lower margin (<locus target="#71r"/>),
+                                            <q xml:lang="gez"><seg part="I">ወንጌል፡ ዘዮሐንስ፡ ምስማክ፡ ሠረገላቲሁ፡ ለእ<hi rend="ligature">ግዚ</hi>ብሔር፡</seg></q> written in a recent hand in the upper margin (<locus target="#119r"/>).
+                                            Other poorly legible small writings in blue or vermilion ink are found in the margins on <locus target="#46v #52rb #82r #86r"/>.
+                                        </desc>
+                                    </item>
                                 </list>
                             </additions>
                         </physDesc>
                         <history>
                             <origin>
-                                <origDate from="1500" to="" evidence="lettering"/>
+                                <origDate from="1500" to="1600" evidence="lettering"/>
                             </origin>
                             <provenance></provenance>
                         </history>
@@ -526,7 +578,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <textLang mainLang="gez"/>
                                     <incipit xml:lang="gez">
                                         <locus target="#124ra"/>
-                                        ...
+                                        አማን፡ አማን፡ እብለክሙ፡ ከመ፡ ትበክዩ፡ ወትላህዉ፡ አንትሙ፡ ወዓለምሰ፡ ይትፈሣሕ፡ ወአንትሙሰ፡ ተኃዝኑ። አላ፡ ኃዘንክሙ፡ ፍሥሐ፡ ይከውነክሙ፡ 
+                                        ለክሙ። በከመ፡ ብእሲት፡ ትቴክዝ፡ ሶበ፡ አልፀቀት፡ ትለድ፡ እስመ፡ በጽሐ፡ ጊዜሃ። ወእምከመ፡ ወለደት፡ እጓለ፡ ኢትዜከሮ፡ እንከ፡ ለሕማማ፡ በእንተ፡ 
+                                        ፍሥሓሐ፡ እስመ፡ ወለደት፡ ብእሴ፡ ውስተ፡ ዓለም፡ ወአንትሙነ፡ ትቴክዙ፡ ይእዜ። 
                                     </incipit>
                                     <explicit xml:lang="gez">
                                         <locus from="130rb" to="130va"/>
@@ -535,7 +589,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         በቅድመ፡ አርዳኢሁ፡ ወባዕደኒ፡ ግብራተ፡ ብዙኃ። ወሶበ፡ ተጽሐፈ፡ <pb n="130v"/><cb n="a"/> ኵሉ፡ በበ፩እምኢያግመሮ፡ ዓለም፡ ጥቀ፡ መጻሕፍቲሁ፡ 
                                         ዘተጽሐፈ፡ አሜን፡ ወአሜን።
                                     </explicit>
-                                    <note>The stichometric note is missing.</note>
+                                    <note>The text begins abruptly from Joh. 16:20. The stichometric note at the end is missing.</note>
                                 </msItem>
                                 <msItem xml:id="ms_i1.4.3">
                                     <locus target="#130va"/>
@@ -554,7 +608,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     ዝመጽሐፍ፡ ዘቅዱስ፡ <hi rend="rubric">ሚካኤል፡</hi> ዘሀገረ፡ ዛቲ፡ ተጽሐፈ፡ በሢመተ፡ አካሉ፡ ጸሐፊሁ፡ 
                                     <persName ref="" role="scribe"><hi rend="rubric">ወልደ፡ ሕፃን፡</hi></persName> ወአጽሐፊሁ፡ 
                                     <persName ref="" role="patron"><hi rend="rubric">ወልደ፡ </hi> ሚካኤል።</persName>
-                                    <note>The colophon is undated. It states that the manuscript belongs to an unspecified church dedicated to St Michael. 
+                                    <note>The colophon is undated. It states that the manuscript belongs to an unspecified church dedicated to St Michael, cp. <placeName ref="">Dabra Mikāʾel</placeName> in <ref target="#a1"/>. 
                                         It also states that the scribe was <persName ref="" role="scribe">Walda Ḥǝḍān</persName> and the patron was <persName ref="" role="scribe">Walda Mikāʾel</persName>.
                                     </note>
                                 </colophon>
@@ -575,12 +629,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>265</width>
                                         <depth>95</depth>
                                     </dimensions>
-                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim2">
                                         <height>316</height>
                                         <width>267</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#45r"/>.</note>
+                                    <note corresp="#leafdim2">Data on leaves dimensions taken from <locus target=""/>.</note>
                                     <measure type="weight" unit="g">3858</measure><!--with variances-->
+                                    <!-- This is referred to the entire ms! -->
                                 </extent>
                                 <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.</foliation>
                                 <collation>
@@ -592,8 +647,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
-                                <condition key="deficient">
-                                    The unit consists of one quire secondarily sewn ...
+                                <condition key="">
+                                    The unit consists of one quire secondarily sewn to the textblock of the first unit.
                                       ...
                                 </condition>
                             </supportDesc>
@@ -629,17 +684,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <locus from="124ra" to="130va"/>
                                 <seg type="script"/>
                                 <seg type="ink">Black, red</seg>
-                                <date notBefore="1500" notAfter=""></date>
+                                <date notBefore="1700" notAfter="1800"></date>
                                 <desc>
-                                    <!-- Fine and trained hand. Characters are regularly spaced. --> 
+                                    Fine and trained hand. Characters are regularly spaced.
                                 </desc>                               
                                 <seg type="rubrication">
-                                    <!-- Rubricated are ...
-                                    Holy names (Jesus Christ, Mary, the Paraclete).
-                                    The incipit of the postscript to the Gospel of John.
-                                     The word <foreign xml:lang="gez">ቁም፡</foreign>, written in a later hand, on <locus target="#127vb"/>.
-                                    Elements of the numerals and of the punctuation signs, including text dividers.
-                                    --> 
+                                    Rubricated are the holy names, the incipit of few chapters and of the postscript, the word <foreign xml:lang="gez">ቁም፡</foreign>, written in a later 
+                                    hand on <locus target="#127vb"/>, elements of the numerals and of the punctuation signs, including text dividers.
                                 </seg>
                                 <list type="abbreviations">
                                     <item>
@@ -651,20 +702,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   
                         <additions>
                             <list>
-                                <!--
-                                <item xml:id="e">
-                                    <locus target=""/>
-                                    <desc></desc>
-                                    <q xml:lang="gez"></q>
+                                <item xml:id="e6">
+                                    <desc>Aids for identifying readings concerning the crucifixion of Jesus are written in the upper margin in deep vermilion ink: 
+                                        <q xml:lang="gez">ዘአግብአ ፡ <sic>ተግብር፡</sic></q> (<locus target="#124va"/>),
+                                        <q xml:lang="gez">ዘነግህ፡ ወወሰድዎ፡</q> (<locus target="#125rb"/>),
+                                        <q xml:lang="gez">ዘ፫ሰዓት፡</q> (<locus target="#126vb"/>),
+                                        <q xml:lang="gez">ዘቀትር፡</q> (<locus target="#127rb"/>),
+                                        <q xml:lang="gez">ዘሰዓት፡</q> (<locus target="#127vb"/>),
+                                        <q xml:lang="gez">ዘሰርክ፡</q> (<locus target="#128ra"/>),
+                                        <q xml:lang="gez">ዘእሁድ፡ ሰንበት፡</q> (<locus target="#128rb"/>).
+                                    </desc>
                                 </item>
-                                -->
                             </list>
                         </additions>
                     </physDesc>
                    
                         <history>
                             <origin>
-                                <origDate from="" to="" evidence="lettering"/>
+                                <origDate from="1700" to="1800" evidence="lettering"/>
                             </origin>
                             <provenance></provenance>
                         </history>
