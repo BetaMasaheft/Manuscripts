@@ -28,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0312BDL"/>
-                        <idno>Bodleian shelfmark missing</idno>
+                        <idno>Bodleian shelfmark missing</idno> <!--shelfmark to be assigned by César-->
                         <altIdentifier>
                             <idno>Juel-Jensen 29</idno>
                         </altIdentifier>
@@ -93,13 +93,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note>The characters per column are 7-9.</note>
                                     <ab type="pricking">Ruling is visible; pricking is visible.</ab>
-                                    <!--    <ab type="ruling" subtype="pattern">
+                                    <ab type="ruling" subtype="pattern">  
                                         <locus from="1ra" to="1vb"/>    
-                                        Ruling pattern: </ab>-->
+                                        Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                                     <ab type="pricking">Primary pricks are visible.</ab>
                                     <ab type="pricking">Ruling pricks are visible.</ab>
-                                    <!--  <ab type="ruling">The upper line is written below the
-                                        ruling.</ab>--> <!--sure ??-->
+                                      <!--<ab type="ruling">The upper line is written below the ruling.</ab>--> <!-- please check, I do not see it well-->
                                     <ab type="ruling">The bottom line is written above the
                                         ruling.</ab>
                                 </layout>
@@ -109,11 +108,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                                <!--<date notBefore="" notAfter=""/>-->
-                                <!--<seg type="script">Gʷǝlḥ-script</seg>-->
+                                <date notBefore="1650" notAfter="1775"/>
+                                <seg type="script"><foreign xml:lang="gez">Gʷǝlḥ</foreign>-script.</seg>
+                                <desc>Fine and regular hand, broad spaces between the characters.</desc>
                                 <seg type="ink">Black, red.</seg>
-                                <seg type="rubrication">Elements of punctuation signs, a numeral, holy name: the name of <persName ref="PRS6819Mary"/>.</seg>
-                                <desc>Fine and regular hand.</desc>
+                                <seg type="rubrication">Elements of punctuation signs, a numeral, holy name (<persName ref="PRS6819Mary"/>).</seg>
                             </handNote>
                         </handDesc>
                         
@@ -142,12 +141,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                     </physDesc>
                     
-                    <!--    <history>
+                        <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1650" notAfter="1775" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                            <provenance>In January 2019, the leaf had been inserted into <ref type="mss" corresp="BDLaethb3"/>, looted
+                                from <ref target="INS0101MadhaneAlam">Maqdala Madḫāne ʾĀlam</ref>, but nothing indicates a 
+                        common provenance for both manuscripts.</provenance>
+                            <!--According to the handlist, probably acquired from Sotheby's, where it had been identified as Gospel-->
+                    </history>
                     
                     <additional>
                         <adminInfo>
@@ -173,7 +175,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </xi:fallback>
             </xi:include>
             <tagsDecl>
-                <rendition xml:id="partialRubric">Red ink is used partially in the rubrication of punctuation and numerals.</rendition>
+                <rendition xml:id="partialRubric">Red ink is used partially in the rubrication of punctuation.</rendition>
             </tagsDecl>
         </encodingDesc>
         <profileDesc>
