@@ -39,6 +39,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </msIdentifier>
                     
                     <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <extent>
+                                    <measure unit="leaf">130</measure>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>313</height>
+                                        <width>265</width>
+                                        <depth>95</depth>
+                                    </dimensions>
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <height>316</height>
+                                        <width>267</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim1">Data on leaves dimensions taken from <locus target="#45r"/>.</note>
+                                    <measure type="weight" unit="g">3858</measure>
+                                 </extent>
+                                <condition key="deficient">
+                                    The manuscript is kept in a box, in an embroidered rectangular piece of textile, measuring 620 x 920 mm. <!-- how to encode this information? -->
+                                    The leather cover has been cut off, most probably to facilitate the resewing. Small remains of leather survive on the inner sides of the front and the back board.
+                                </condition>
+                            </supportDesc>
+                        </objectDesc>
                         
                         <bindingDesc>
                             <!-- bindingDesc to be revised by Eliana -->
@@ -283,25 +305,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <material key="parchment"/>
                                         <p>Holes, presumably resulting from parchment making, are found on <locus target="#1 #14 #16 #40 #42 #67 #74 #85 #92"/>.</p>
                                     </support>
-                                    <extent>
-                                        <measure unit="leaf">123</measure>
-                                        <dimensions type="outer" unit="mm">
-                                            <height>313</height>
-                                            <width>265</width>
-                                            <depth>95</depth>
-                                        </dimensions>
-                                        <dimensions type="leaf" unit="mm" xml:id="leafdim1">
-                                            <height>316</height>
-                                            <width>267</width>
-                                        </dimensions>
-                                        <note corresp="#leafdim1">Data on leaves dimensions taken from <locus target="#45r"/>.</note>
-                                        <measure type="weight" unit="g">3858</measure>
-                                        <!-- Information on leafdim1 is taken once on f. 45r. But this is a composite ms. So, the leaf dimensions of p2 might be taken again at the Bodleian Library 
-                                        (they seem by eye almost identical to those of p1 here given) and provided below under p2. Alternatively, since the dimensions really look the same 
-                                        (see ff. 123v-124r), I might tacitly copy the above information and paste it as leafdim2 below.  
-                                        As for the weight, it obviously refers to the entire manuscript, not to to this single unit p1. So, it should be encoded elsewhere, preferably at the 
-                                        beginning of the description. I think this is a general problem concerning the BM encoding practice. -->
-                                    </extent>
                                     <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.</foliation>
                                     <collation>
                                         <signatures>
@@ -401,8 +404,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </list>
                                     </collation>
                                     <condition key="deficient">
-                                        The manuscript is kept in a box, in an embroidered rectangular piece of textile, measuring 620 x 920 mm. <!-- how to encode this information? -->
-                                        The leather cover has been cut off, most probably to facilitate the resewing. Small remains of leather survive on the inner sides of the front and the back board.
                                         The textblock has been resewn together and parchment guards have been placed around all quires.
                                         Leaves <locus from="51r" to="62v"/> have been stitched together secondarily.
                                         The textblock is affected with humidity, especially in the outer margins, and water stains (e.g., on <locus target="#37 #104v"/>).
@@ -565,8 +566,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <origin>
                                 <origDate from="1500" to="1600" evidence="lettering"/>
                             </origin>
-                            <provenance>The provenance of the manuscript is unknown. According to <ref target="#a2"/>, the manuscript was placed or linked to an unspecified 
-                                monastery called <placeName ref="LOC7349DabraMi">Dabra Mikāʾel</placeName>.</provenance>
+                            <provenance>The provenance of the manuscript is unknown. According to <ref target="#a2"/>, the manuscript was hosted in or linked to the church of
+                                <placeName ref="LOC7349DabraMi">Dabra Mikāʾel</placeName>, also mentioned in <ref target="#coloph1"/>.</provenance>
                         </history>
                     </msPart>
                     
@@ -629,21 +630,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <support>
                                     <material key="parchment"/>
                                 </support>
-                                <extent>
-                                    <measure unit="leaf">130</measure>
-                                    <dimensions type="outer" unit="mm">
-                                        <height>313</height>
-                                        <width>265</width>
-                                        <depth>95</depth>
-                                    </dimensions>
-                                    <dimensions type="leaf" unit="mm" xml:id="leafdim2">
-                                        <height>316</height>
-                                        <width>267</width>
-                                    </dimensions>
-                                    <note corresp="#leafdim2">Data on leaves dimensions taken from <locus target="#124r"/>.</note>
-                                    <measure type="weight" unit="g">3858</measure><!--with variances-->
-                                    <!-- This is referred to the entire ms! -->
-                                </extent>
                                 <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.</foliation>
                                 <collation>
                                     <list>
@@ -767,7 +753,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="SH" when="2020-04-22">Added editors</change>
             <change who="MV" when="2020-10-06">Added content description</change>
             <change who="MV" when="2020-10-08">Added layout, conservation, rubrication</change>
-            <change who="MV" when="2020-10-13">Added persName, placeName, provenance</change>
+            <change who="MV" when="2020-10-13">Added persName, placeName, provenance, fixed physDesc of the entire ms.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
