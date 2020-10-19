@@ -5,12 +5,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethg35"
-     xml:lang="en"
-     type="mss">
+    xml:lang="en"
+    type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Taʾammǝra Māryām</title>
+                <title xml:lang="en">Fragment of the Miracles of Mary</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -28,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0312BDL"/>
-                        <idno>Bodleian shelfmark missing</idno>
+                        <idno>Bodleian shelfmark missing</idno> <!--shelfmark to be assigned by César-->
                         <altIdentifier>
                             <idno>Juel-Jensen 29</idno>
                         </altIdentifier>
@@ -37,9 +37,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
+                        <msItem xml:id="ms_i1">
+                            <locus from="1ra" to="1vb"/>
+                            <title ref="LIT3596Miracle" type="incomplete"/>
+                            <textLang mainLang="gez"/>
+                            <note>The beginning and end are missing.</note>
+                            <incipit xml:lang="gez">
+                                <pb n="1r"/><cb n="a"/>
+                                ያን፡ ከመ፡ ይጸሊ<hi rend="rubric" rendition="#partialRubric">፤</hi> ወነጸረ፡ ሥዕላ፡ ለእግዝእትነ፡ ቅድስት፡ 
+                                ድንግል፡ በክልኤ፡ <hi rend="rubric">ማርያም፡</hi> ወላዲተ፡ አምላክ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                ወአደመቶ፡ ፈድፋደ፡ ወውዕየ፡ ልቡ፡ በፍቅረ፡ ዚአሃ<hi rend="rubric" rendition="#partialRubric">፨</hi> ወሐለየ፡ ወይቤ፡ <pb n="b"/> ምንተ፡ አምኃ፡ እሁባ፡ ላቲ፡ 
+                                ዘያሠምራ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                ወቆመ፡ ቅድመ፡ ሥዕላ፡ ለእግዝእትነ፡ <cb n="b"/> ቅድስት፡ 
+                                ድንግል፡ በክልኤ፡ <hi rend="rubric">ማርያም፡</hi> ወላዲተ፡ አምላክ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                ወይቤላ፡ ኦእግዝእትየ፡ ፍቅርት፡ እስመ፡ አንቲ፡ ተአምሪ<hi rend="rubric" rendition="#partialRubric">፤</hi>
+                                ዘከመ፡ ኀለፈ፡ መዋዕለ፡ ጽጌ፡ ረዳ<hi rend="rubric" rendition="#partialRubric">፨</hi> ወባሕቱ፡ አነ፡ እኤምኅ፡ ኵ</explicit>
+                        </msItem>
                         
                     </msContents>
                     
@@ -55,9 +70,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>383</height>
                                         <width>335</width>
                                     </dimensions>
-                                    <!--<measure type="weight" unit="g"></measure>-->
                                 </extent> 
-                                <foliation>The manuscript is not foliated.</foliation>
+                                <foliation>The manuscript is not foliated. In this description, the recto is referred to as 
+                                    <locus target="#1r"/>, the verso as <locus target="#1v"/>.</foliation>
+                                <condition key="good">The upper outer corner is stained by humidity. The lower margin shows slight traces of use.</condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -75,44 +91,72 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">30</dim>
                                         <dim type="intercolumn">20</dim>
                                     </dimensions>
+                                    <note>The characters per column are 7-9.</note>
+                                    <ab type="pricking">Ruling is visible; pricking is visible.</ab>
+                                    <ab type="ruling" subtype="pattern">  
+                                        <locus from="1ra" to="1vb"/>    
+                                        Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
+                                    <ab type="pricking">Primary pricks are visible.</ab>
+                                    <ab type="pricking">Ruling pricks are visible.</ab>
+                                    <ab type="ruling">The upper line is written below the ruling.</ab>
+                                    <ab type="ruling">The bottom line is written above the
+                                        ruling.</ab>
                                 </layout>
                             </layoutDesc>
-                           
+                            
                         </objectDesc>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+                                <date notBefore="1650" notAfter="1775"/>
+                                <seg type="script"><foreign xml:lang="gez">Gʷǝlḥ</foreign>-script.</seg>
+                                <desc>Fine and regular hand, broad spaces between the characters. The characters are very large, with a height of more than
+                                    one centimetre.</desc>
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Elements of punctuation signs, a numeral, the name of <persName ref="PRS6819Mary"/>.</seg>
                             </handNote>
                         </handDesc>
                         
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
-                            </binding>
-                        </bindingDesc>-->
+                        <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <locus target="#1r"/>
+                                    <desc>Note in pencil in the lower margin.</desc>
+                                    <q xml:lang="it">Secolo XVIII</q>
+                                </item>
+                                
+                                <item xml:id="e2">
+                                    <locus target="#1r"/>
+                                    <desc>Note in pencil in the lower right corner.</desc>
+                                    <q xml:lang="en">Leaf from <foreign xml:lang="gez">ተአምረ፡ ማርያም፡</foreign>
+                                        <lb/>written on antelope skin</q>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <locus target="#1r"/>
+                                    <desc>Note in pencil in the lower left corner.</desc>
+                                    <q xml:lang="en">C MS 29</q>
+                                </item>
+                            </list>
+                        </additions>
                         
                     </physDesc>
                     
-                <!--    <history>
+                        <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1650" notAfter="1775" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                            <provenance>In January 2019, the leaf had been inserted into <ref type="mss" corresp="BDLaethb3"/>, looted
+                                from <ref target="INS0101MadhaneAlam">Maqdala Madḫāne ʾĀlam</ref>, but nothing indicates a 
+                        common provenance for both manuscripts.</provenance>
+                            <!--According to the handlist, probably acquired from Sotheby's, where it had been identified as Gospel-->
+                    </history>
                     
                     <additional>
                         <adminInfo>
                             <recordHist>
                                 <source>
-                                  <!--  <listBibl type="secondary">
+                                    <!--  <listBibl type="secondary">
                                         <bibl></bibl>
                                     </listBibl>-->
                                 </source>
@@ -125,13 +169,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-                     href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-               <p>Definitions of prefixes used.</p>
-            </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+                <xi:fallback>
+                    <p>Definitions of prefixes used.</p>
+                </xi:fallback>
+            </xi:include>
+            <tagsDecl>
+                <rendition xml:id="partialRubric">Red ink is used partially in the rubrication of punctuation.</rendition>
+            </tagsDecl>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
@@ -140,16 +187,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Apocrypha"/>
+                    <term key="Miracle"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="it">Italian</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-02-24">Created record from metadata provided by Jacopo Gnisci</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="DR" when="2020-10-08">Continued description</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
