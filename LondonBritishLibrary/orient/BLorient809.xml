@@ -50,6 +50,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </extent>
                               </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding contemporary="true" xml:id="binding">
+                              <decoNote xml:id="b1">In the original boards lined with striped silk and covered with
+                                blind-tooled leather. The title, the shelf mark, and the abbreviation of the
+                               British Museum are gold-tooled on the spine.</decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"></material>
+
+                                </decoNote>
+
+                            </binding>
+                        </bindingDesc>
 
                     </physDesc>
 
@@ -465,14 +478,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                       <measure unit="leaf">118</measure>
                                   </extent>
                                   <foliation>One unnumbered blank leaf at the end.</foliation>
+                                  <condition key="good"></condition>
                               </supportDesc>
                               <layoutDesc>
                                   <layout columns="2" writtenLines="40 41"/>
                               </layoutDesc>
                           </objectDesc>
-
                           <handDesc>
-
                               <handNote script="Ethiopic" xml:id="h1">
                                   <desc>The manuscript is written in fine hand, between <date>1633</date>
                                   and <date>1667</date>
@@ -482,6 +494,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                           </handDesc>
                           <additions>
                             <list>
+                              <item xml:id="a5">
+                                  <locus target="#7r"/>
+                                  <desc type="OwnershipNote">The note states that the manuscript belongs to the church of
+                                      <placeName ref="INS0101MadhaneAlam"/>.</desc>
+                                  <q xml:lang="gez">አቡሻክር፡ ዘ<placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName>
+                         </q>
+                              </item>
                               <item xml:id="e6">
                                   <locus from="7ra" to="123v"></locus>
                                   <desc>Amharic glosses and annotations for <ref target="#p3_i1"></ref>
@@ -492,6 +511,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus target="#123v"></locus>
                                 <desc>The owner's name <persName ref="PRS13242WaldaG" role="owner"></persName>
                               is mentioned on <locus target="#123v"></locus>.</desc>
+                              </item>
+                              <item xml:id="e8">
+                                <locus target="#7r #12v #18v #24v #30v #36v #42v #48v #54v
+                                  #60v #71v #77v #88v #94v #105v #111v #117v"></locus>
+                                <desc type="StampExlibris">Impressions of the seal of the British Museum in the
+                                  lower margins, same as
+                                <ref target="#e2">.</ref></desc>
+                              </item>
+                              <item xml:id="e9">
+                                <locus target="#123v"></locus>
+                                <desc type="StampExlibris">Impressions of the seal of the British Museum in the
+                                  lower margins, same as <ref target="#e3">.</ref>
+                                </desc>
                               </item>
                             </list>
                           </additions>
@@ -527,16 +559,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="HistoryAndHistoriography"/>
+                    <term key="Translation"></term>
                     <term key="ZaMa" cert="low"/>
                     <term key="MoPe" cert="low"/>
                 </keywords>
             </textClass>
-            <langUsage/>
+            <langUsage>
+              <language ident="gez">Gǝʿǝz</language>
+              <language ident="am">Amharic</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-02-20">Created catalogue entry</change>
             <change when="2020-11-18" who="DE">Added msParts</change>
-
+            <change when="2020-11-19" who="DE">Completed the description.</change>
 
         </revisionDesc>
     </teiHeader>
