@@ -57,20 +57,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                       <msItem xml:id="ms_i1.4">
                         <locus from="130r" to="137v" facs="134"/>
                         <title type="complete" ref="LIT2509Weddas"/>
-                        <note>arranged for the days of the week (
-                          Monday,  <locus target="#130r" facs="134"/>;
-                          Tuesday,  <locus target="#130v" facs="135"/>;
-                          Wednesday,  <locus target="#132r" facs="136"/>;
-                          Thursday,  <locus target="#133v" facs="138"/>;
-                          Friday,  <locus target="#135r" facs="139"/>;
-                          Saturday,  <locus target="#136r" facs="140"/>;
-                          Sunday,  <locus target="#137r" facs="141"/>"
-                        </note>
+                          <msItem xml:id="ms_i1.4.1"><locus target="#130r" facs="134"/><title>Monday</title></msItem>
+                          <msItem xml:id="ms_i1.4.2"><locus target="#130v" facs="135"/><title>Tuesday</title></msItem>
+                          <msItem xml:id="ms_i1.4.3"><locus target="#132r" facs="136"/><title>Wednesday</title></msItem>
+                          <msItem xml:id="ms_i1.4.4"><locus target="#133v" facs="138"/><title>Thursday</title></msItem>
+                          <msItem xml:id="ms_i1.4.5"><locus target="#135r" facs="139"/><title>Friday</title></msItem>
+                          <msItem xml:id="ms_i1.4.6"><locus target="#136r" facs="140"/><title>Saturday</title></msItem>
+                          <msItem xml:id="ms_i1.4.7"><locus target="#137r" facs="141"/><title>Sunday</title></msItem>
                       </msItem>
                       <msItem xml:id="ms_i1.5">
                         <locus from="138r" to="141r" facs="142"/>
                         <title type="complete" ref="LIT1113Anqasa"/>
-                        <note>With musical notation</note>
+                        <notatedMusic>
+                          <desc>With musical notation</desc>
+                        </notatedMusic>
                      </msItem>
 
                   </msItem>
@@ -201,16 +201,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <handDesc>
                     <handNote xml:id="h1" script="Ethiopic">
                         <seg type="rubrication">
-                           <ref target="#ms_i1.1"/>
-                           <foreign xml:lang="gez">እግዚአብሔር</foreign>
-                           <ref target="#ms_i1.2"/>
-                           <foreign xml:lang="gez">እግዚአብሔር</foreign>
-                           <ref target="#ms_i1.3"/>
+                           <ref target="#ms_i1.1 #ms_i1.2 #ms_i1.3"/>
                            <foreign xml:lang="gez">እግዚአብሔር</foreign>
                            <note>Rubrication of the word <foreign xml:lang="gez">እግዚአብሔር</foreign> often written in alternating letters of red and black ink</note>
-                           <ref target="#ms_i1.4"/>
-                           <foreign xml:lang="gez">ማርያም</foreign>
-                           <ref target="#ms_i1.5"/>
+                           <ref target="#ms_i1.4 #ms_i1.5"/>
                            <foreign xml:lang="gez">ማርያም</foreign>
                         </seg>
                       </handNote>
@@ -218,34 +212,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
                   <decoDesc>
 
-                    <decoNote type="miniature" xml:id="d01">
+                    <decoNote type="miniature" xml:id="d1">
                         <locus target="#ir(ecto)" facs="001"/>
                         <desc>Crude drawing of a face</desc>
                      </decoNote>
-                    <decoNote type="miniature" xml:id="d02">
+                    <decoNote type="miniature" xml:id="d2">
                         <locus target="#iiiv(erso)" facs="004"/>
-                        <desc>Angel <ref type="authFile" corresp="AT1082Angel"/>
+                        <desc><ref type="authFile" corresp="AT1082Angel"/>
                         </desc>
                      </decoNote>
-                    <decoNote type="miniature" xml:id="d03">
+                    <decoNote type="miniature" xml:id="d3">
                         <locus target="#ivr(ecto)" facs="004"/>
                         <desc/>Reclining figure</decoNote>
-                    <decoNote type="miniature" xml:id="d04">
+                    <decoNote type="miniature" xml:id="d4">
                         <locus target="#120v" facs="125"/>
-                        <desc>Angel with <term key="sword"/> uplifted (A piece of cloth is sewn to the top of the folio to provide cover for the miniature) <ref type="authFile" corresp="AT1082Angel"/>
+                        <desc><ref type="authFile" corresp="AT1082Angel"/> with <term key="sword"/> uplifted (A piece of cloth is sewn to the top of the folio to provide cover for the miniature)
                         </desc>
                      </decoNote>
-                    <decoNote type="miniature" xml:id="d05">
+                    <decoNote type="miniature" xml:id="d5">
                         <locus target="#142v" facs="147"/>
                         <desc>
                            <persName ref="PRS4585Georgeo"/> and the <term key="dragon"/>, <ref type="authFile" corresp="AT1035HolyMan"/>
                         </desc>
                      </decoNote>
-                    <decoNote type="miniature" xml:id="d06">
+                    <decoNote type="miniature" xml:id="d6">
                         <locus target="#143r" facs="147"/>
-                        <desc>The Madonna and Child, <ref type="authFile" corresp="AT1031VirginAndChild"/>, two pieces of cloth (one akin to cheesecloth, the other red) are sewn to the top of the folio to provide cover for this miniature and protection for the one on the facing folio</desc>
+                        <desc><ref type="authFile" corresp="AT1031VirginAndChild"/>, two pieces of cloth (one akin to cheesecloth, the other red) are sewn to the top of the folio to provide cover for this miniature and protection for the one on the facing folio</desc>
                      </decoNote>
-                    <decoNote type="frame" xml:id="d07">
+                    <decoNote type="frame" xml:id="d7">
                       Decorative designs:
                       <locus target="#130r #141r" facs="134 145"/> (multiple full-stop symbols);
                       <locus target="#1r" facs="005"/> (two parallel lines of red dots)
@@ -255,12 +249,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <list>
                         <item xml:id="a1">
                            <desc>
-                              <locus target="#ir(ecto)" facs="001"> f. ir(ecto), col. 1</locus>: Excerpt from <title type="complete" ref="LIT2509Weddas"/>
+                              <locus target="#ir(ecto)" facs="001"> f. ir(ecto), col. 1</locus>: Excerpt from <title type="incomplete" ref="LIT2509Weddas"/>
                            </desc>
                         </item>
                         <item xml:id="a2">
                            <desc>
-                              <locus target="#ir(ecto)" facs="001"> f. ir(ecto), col. 2</locus>: First few lines of the <title ref="LIT1455GadlaG"/>
+                              <locus target="#ir(ecto)" facs="001"> f. ir(ecto), col. 2</locus>: First few lines of the <title type="incomplete" ref="LIT1455GadlaG"/>
                            </desc>
                         </item>
                         <item xml:id="a3">
@@ -275,7 +269,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </item>
                         <item xml:id="a4">
                            <desc>
-                              <locus target="#iir(ecto)" facs="002"/> The Angels Praise Her, <title type="complete" ref="LIT3108RepCh388"/>
+                              <locus target="#iir(ecto)" facs="002"/> <title type="complete" ref="LIT3108RepCh388"/>
                            </desc>
                         </item>
                         <item xml:id="a5">
@@ -351,10 +345,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                             This note is in another hand and appears not to be contemporaneous with the origin of the book
                           </desc>
                         </item>
-                        <item xml:id="a16">
+                        <item xml:id="e1">
                           <desc>Some folios contain marginal notations about the situation in which the Psalm should be read</desc>
                         </item>
-                        <item xml:id="a17">
+                        <item xml:id="e2">
                           <desc>
                             Scribal intervention: words of text are written interlinearly (<locus target="#17v #34v #49r #50r" facs="022 039 053 054"/> etc.);
                             and lines of text are written interlinearly (<locus target="#15r #40r #41r #44v #45r" facs="019 044 045 049"/>, etc.);
@@ -363,12 +357,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                             text has been removed (<locus target="#83r #85r" facs="087 089"/>, etc.)
                           </desc>
                         </item>
-                        <item xml:id="a18">
+                        <item xml:id="e3">
                           <desc>
                               <locus target="#119r" facs="123"> f. 119r line 12</locus>: two words have lines drawn above and below to signal erasure in order to correct homoeoteleuton
                           </desc>
                         </item>
-                        <item xml:id="a19">
+                        <item xml:id="e4">
                           <desc>
                             This scribe has avoided the problem of lines of text too long to fit on one line by adopting an aspect ratio that leaves ample room
                             for the width of most lines. Occasionally a line is too long and has to be completed above or below the end of the line
@@ -376,7 +370,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                           </desc>
                         </item>
 
-                        <item xml:id="e1">
+                        <item xml:id="e5">
                           <desc>
                               <locus target="#ivv(erso)" facs="005"/> blank</desc>
                         </item>
@@ -420,6 +414,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change when="2020-10-23" who="ABe">Added facs statements</change>
          <change when="2020-11-03" who="ABe">Updated facs statements</change>
          <change when="2020-11-12" who="ABe">Minor changes</change>
+         <change when="2020-11-19" who="ABe">Updated id numbers</change>
+         <change when="2020-11-23" who="RL">Reformatted days of the week for ms i1.4, simplified rubrication statement in handnote, reformatted miniature descriptions, added note for ms i1.5 on musical notation, reassinged several 'additions' to 'extras'</change>
 </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
