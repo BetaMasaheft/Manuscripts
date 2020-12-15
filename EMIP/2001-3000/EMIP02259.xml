@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02259">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -42,19 +42,109 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">iv + 81</measure>
+                           <measure unit="quire">Protection quire + 8</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>135</height>
+                              <width>116</width>
+                              <depth>43</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection quire and quires 5–7 balanced; quires 1–4 adjusted balanced; quire 8 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">4</dim>
+                              <locus from="i" to="iv" facs="001"></locus>
+                              Protection Quire
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="005"></locus>
+                              <note>Folium stubs appear between <locus target="#2 #3" facs="007"/> and between <locus target="#7 #8" facs="012"/>.</note>
+                              Quire 1:
+                              3, stub after 7
+                              8, stub after 2
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="015"></locus>
+                              <note>Folium stubs appear between <locus target="#12 #13" facs="017"/> and between <locus target="#17 #18" facs="022"/>.</note>
+                              Quire 2:
+                              3, stub after 7
+                              8, stub after 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30" facs="025"></locus>
+                              <note>Folium stubs appear between <locus target="#22 #23" facs="027"/> and between <locus target="#27 #28" facs="032"/>.</note>
+                              Quire 3:
+                              3, stub after 7
+                              8, stub after 2
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">12</dim>
+                              <locus from="31" to="42" facs="035"></locus>
+                              <note>Folium stubs appear between <locus target="#33 #34" facs="038"/> and between <locus target="#38 #39" facs="043"/>.</note>
+                              Quire 4:
+                              4, stub after 8
+                              9, stub after 3
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="43" to="52" facs="047"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="53" to="62" facs="057"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="63" to="72" facs="067"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">9</dim>
+                              <locus from="73" to="81" facs="077"></locus>
+                              <note>A folium stub appears between <locus target="#78 #79" facs="083"/>.</note>
+                              Quire 8:
+                              4, stub after 6
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">12-15</dim>
+                           <dim type="bottom">22-25</dim>
+                           <dim type="right">11-13</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="16 18">
+                         <locus from="1r" to="31r" facs="005"></locus>
+                       </layout>
+                       <layout columns="1" writtenLines="16 18">
+                         <locus from="32r" to="81r" facs="036"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>1930-1974 (f. 1v)</origDate>
+                     <origDate notBefore="1930" notAfter="1974"><locus target="#1v" facs="006"/> mentions emperor Ḫaylä Śəllase.</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +163,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-12-14" who="JS">Added ms dimensions, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
