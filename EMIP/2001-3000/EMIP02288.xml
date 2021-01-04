@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02288">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 282</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,19 +43,90 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">58</measure>
+                           <measure unit="quire">8</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>110</height>
+                              <width>74</width>
+                              <depth>18</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–3, 5–6, and 8 balanced; quires 4 and 7 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">2</dim>
+                              <locus from="1" to="2" facs="001"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="3" to="10" facs="003"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="11" to="18" facs="011"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="19" to="26" facs="019"></locus>
+                              <note>Folium stubs appear between <locus target="#20 #21" facs="021"/> and between <locus target="#25 #26" facs="026"/>.</note>
+                              Quire 4:
+                              2, stub after 7
+                              7, stub after 2
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="27" to="34" facs="027"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="35" to="42" facs="035"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="43" to="50" facs="043"></locus>
+                              <note>Folium stubs appear between <locus target="#44 #45" facs="045"/> and between <locus target="#47 #48" facs="048"/>.</note>
+                              Quire 7:
+                              3, stub after 5
+                              6, stub after 2
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="51" to="58" facs="051"></locus>
+                              Quire 8
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">12</dim>
+                           <dim type="bottom">20</dim>
+                           <dim type="right">10</dim>
+                           <dim type="left">5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="18"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Four Coptic chain stitches, no covers.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>nineteenth century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">Nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +145,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-12-16" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
