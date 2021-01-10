@@ -4,12 +4,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Book of Isaiah, Book of Daniel, Book of Enoch, Old Testament Wisdom books, Minor prophets</title>
-            <!-- fix title:
+            <!-- 
                 <title xml:lang="gez" xml:id="title1">ዳዊት፡</title>
-            <title xml:lang="gez" corresp="#title1" type="normalized">Dāwit</title>
-            <title xml:lang="en" corresp="#title1">Psalter</title>
-            -->
+            <title xml:lang="gez" corresp="#title1" type="normalized">Dāwit</title>   -->
+            <title xml:lang="en" corresp="#title1">Book of Isaiah, Book of Daniel, Book of Enoch, Old Testament Wisdom books, Minor prophets</title>
             <editor key="MV"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -510,11 +508,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <support>
                            <watermark/>
                            <material key="parchment"/>
-                           <!--  <p>Holes, probably from parchment making, on e.g. <locus target="#"/>.</p>
-                           <p>A parchment repair on <locus target="#"/>.</p>
-                           Cp.: Two holes on the front and back board, probably intended to host a buckle. 
-                           Tears repaired on <locus target="#51 #128 #155"/>.
-                           -->
+                           <p>
+                              Tears repaired on <locus target="#51 #128 #155"/>.</p>
                         </support>
                         <extent>
                            <measure unit="leaf">156</measure>
@@ -535,13 +530,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </note>
                         </extent>
                         <foliation>
-                           <!-- The manuscript has been foliated in pencil in the lower margin of each folio. -->
+                           Foliation in pencil centred in the lower margin of each folio.
                         </foliation>
                         <collation>
                            <signatures>
-                              <!-- <note>Decorated quire marks are written in the upper inner margin of the first leaf of most quires.
-                                Quires have been also numbered in pencil in the upper outer margin of the first leaf of each quire.
-                             </note> -->
+                              Quires have been numbered in pencil in the upper outer margin of the first leaf of each quire.
                            </signatures>
                            <list>
                               <item xml:id="q1" n="A">
@@ -626,12 +619,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </list>
                         </collation>
                         <condition key="good">
-                           <!--  -->
+                           <!-- Two holes on the front and back board, probably intended to host a buckle.  -->
                         </condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="3" writtenLines="30">
-                           <locus from="" to=""/>
+                           <locus from="2ra" to="156rc"/>
                            <note corresp="#textarea1 #margin1">Data on text area and margin dimensions taken from <locus target="#3r"/>.</note>
                            <dimensions unit="mm" xml:id="textarea">
                               <height>190</height>
@@ -644,7 +637,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <dim type="right">33</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <note> The characters per line are <!-- ... -->.</note>
+                           <note> The characters per line are 9-15.</note>
                          <!--  
                            <ab type="punctuation" subtype="Dividers">Groups of ten psalms are separated with a chain of red and black small dots 
                               (e.g. <locus target="#19v #26v #36r"/>). Identical chains are also placed before <ref target="#ms_i1.2 #ms_i1.3"/>.</ab>
@@ -659,12 +652,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script"/>
                         <seg type="ink">Black, red</seg>
-                        <date notBefore="1500" notAfter="1699">16th-17th century writing</date>
+                        <date notBefore="1500" notAfter="1699">16th/17th century writing</date>
                         <desc>
                            Fine and careful handwriting.
                         </desc>
                         <seg type="rubrication">
-                           <!--  -->
+                           <!-- 
+                           
+                           ...
+                           
+                           -->
                         </seg>
                      </handNote>
                   </handDesc>
@@ -673,7 +670,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <locus target="#1v"/>
                         <desc>St George and the Dragon</desc>
                         <q xml:lang="gez">ስእሌሁ፡ ሚካኤል፡</q>
-                        <note>The miniature, erroneously described as St Michael <!-- where? By whom? -->, must have been added recently.</note>
+                        <note>The miniature, erroneously described as St Michael in the caption below, must have been added recently.</note>
                      </decoNote>
                      <decoNote type="miniature" xml:id="d2">
                         <locus target="#49v"/>
@@ -686,25 +683,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </decoNote>
                   </decoDesc>
                   <additions>
-                     <!--  Scribal phenomena to be encoded
-                     <list>
+                     <!--  Scribal phenomena to be encoded:
+                        - numerous corrections and textual additions in the margins and in the intercolumn made by different hands, nearly on every page and resulting from collation with another exemplar.
+                        Sometimes the additions in the margins are encircled in rectangular frames and are most often called in the body of the text by <foreign xml:lang="gez">tamallas</foreign>-signs in the shape of a cross or two perpendicular lines (e.g. <locus target="#6vc #19rb #30rb"/>).
+                        - text on erasure on e.g. <locus target="#4rb #7va #24vb"/>
+                        - On the upper margin of <locus target="#4r"/>: note in black ink, encircled in a double rectangular frame, with the Geez name of the planets: ሽምሻ፡ ቀመር፡ ዝሁራ፡ ዙሀል፡ መሸተር፡ አጠርድ፡ መሪሕ፡
+                   - On the upper margin of <locus target="#5v"/>: note in black ink, encircled in three rectangular frames, indicating the years of reign of the kings of Israel. 
+                   - Ownership note on <locus target="#36r"/>, crudely written in red ink and partially illegible: ዝመጽሐፍ፡ ዘአለቃ፡ ተክለ፡ ጽዮን፡ ዝመጽሐፍ፡ ዘአለቃ፡.
+                         The note mentions <persName ref="PRS12015TaklaSe" role="owner"><roleName type="title">ʾalaqā</roleName> Takla Ṣǝyon</persName> as the owner of the manuscript.
+                    <list>
                       <item xml:id="e1">
                            
                            <desc></desc>
-                        </item>
+                        </item> -->
                         </list>
-                     -->
                   </additions>
             
                   <bindingDesc>
                      <binding contemporary="true">
-                        <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards covered with ???? <material key="leather"/>. 
+                        <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards covered with reddish-brown <material key="leather"/>. 
                         </decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
                            <material key="wood"/>  
                            <material key="leather"/>   
                         </decoNote>
-                        <decoNote xml:id="b3" type="Cover" color="">Full cover? The leather is decorated with blind tooled ornaments: ???.</decoNote>
+                        <decoNote xml:id="b3" type="Cover" color="reddish-brown">The leather is decorated with blind tooled ornaments: ???.</decoNote>
                         <decoNote xml:id="b4" type="SewingStations">4</decoNote>
                         <decoNote xml:id="b5" type="Spine">Two pairs of chains of the endband stitches are visibile at the top and the bottom of the spine cover.</decoNote>
                      </binding>
@@ -713,12 +716,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
           
                <history>
                   <origin>
-                   
-                     <origDate notBefore="1500" notAfter="1699" evidence="lettering">
-                        The handwriting is consistent with a 16th-17th century dating.
-                     </origDate>
-                     <note/>
-                  </origin>
+                     <origDate notBefore="1500" notAfter="1699" evidence="lettering"/>
+                        The handwriting is consistent with a 16th/17th century dating. The name of <persName ref="PRS12013Ablanewos"/> and 
+                        <persName ref="PRS12014Filatawos"/> are mentioned in a secondary hand in several supplications throughout the manuscript following the phrase
+                        <foreign xml:lang="gez">ገብርከ፡</foreign> 'your servant'. They probably were later owner of the book.
+                     <persName ref="PRS12015TaklaSe" role="owner"><roleName type="title">ʾAlaqā</roleName> Takla Ṣǝyon</persName> is mentioned in a secondary hand as the owner in <ref target=""/>
+                     </origin>
                </history>
           
                <additional>
