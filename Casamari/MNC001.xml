@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="MNC001" type="mss">
-   <!-- This MS description is provisional and must be complemented with further data (MV 2018-04-18) -->
-  <teiHeader xml:base="https://betamasaheft.eu/">
+   <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Book of Isaiah, Book of Daniel, Book of Enoch, Old Testament Wisdom books, Minor prophets</title>
+            <title xml:lang="gez" xml:id="title1">ዘኢሳይያስ፡ ነቢይ፡, ዘዳንኤል፡ ነቢይ፡, ዘሄኖክ፡ ነቢይ፡, መጻሕፍት፡ ዘብሉይ፡ ኪዳን፡, ደቂቀ፡ ነቢያት፡</title>
+            <title xml:lang="gez" corresp="#title1" type="normalized">Za-ʾIsāyǝyyās nabiy, Za-Dānʾel nabiy, Za-Henok nabiy, Maṣāḥǝft za-bǝluy kidān, Daqiqa nabiyāt</title>
+            <title xml:lang="en" corresp="#title1">Book of Isaiah, Book of Daniel, Book of Enoch, Old Testament Wisdom books, Minor prophets</title>
             <editor key="MV"/>
+            <editor key="SH"/>
+            <editor key="ABr"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -43,128 +46,459 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <msItem xml:id="ms_i1">
                      <locus from="2ra" to="36rc"/>
                      <title type="complete" ref="LIT1672Isaiah"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez">
+                        <locus target="#2ra"/>
+                        <hi rend="rubric">ራእይ፡ ዘርእየ፡ ኢሳይያ፡ ወልደ፡ አሞጽ፡ ዘርእየ፡</hi> በእንተ፡ ይሁዳ፡ ወበእንተ፡ ኢየሩሳሌም፡ በመንግ<hi rend="rubric">ሥተ፡ ዖዝያን፡ 
+                           ወኢዮአታም፡ ወአካዝ፡ ወሕዝቅያ</hi>ስ፡ እለ፡ ነግሡ፡ በይሁዳ፡ ስማዕ፡ ሰማይ፡ ወአጽምዒ፡ ምድር፡ እስመ፡ እግዚአብሔር፡ ነበበ፡
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus from="36rb" to="36rc"/>
+                        ወይመጽኡ፡ ኵሉ፡ ዘነፍስ፡ ቅድሜየ፡ ወይሰግዱ፡ ሊተ፡ <choice><sic>በኢየሩሰሌም፡</sic><corr resp="MV">በኢየሩሳሌም፡</corr></choice> ይቤ፡ 
+                        እግዚአብሔር፡ ወይወፅኡ፡ ወይሬእዩ፡ አብድንቲሆሙ፡ ለእለ፡ ዓለዉኒ፡ ወዕፄሆሙ፡ ዘኢይነውም፡ <cb n="c"/> ወእሳቶሙኒ፡ ዘኢይጠፍእ፡ ወይከውኑ፡ አርአያ፡ 
+                        ለኵሉ፡ ዘሥጋ።
+                     </explicit>           
+                     <explicit xml:lang="gez" type="subscription">
+                        <locus target="#36rc"/>
+                        ተፈጸመ፡ ትንቢት፡ ዘኢሳይያስ፡ በረከቱ፡ ተሀሉ፡ ምስለ፡ ገብሩ፡  <persName ref="PRS12013Ablanewos"><add place="overstrike"><hi rend="rubric">አብለኔዎስ፡</hi></add></persName> 
+                        ለዓለመ፡ ዓለም፡ አሜን። 
+                     </explicit> 
                   </msItem>
+                  
                   <msItem xml:id="ms_i2">
                      <locus from="36ra" to="49vc"/>
                      <title type="complete" ref="LIT1259Daniel"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez" type="inscription">
+                        <locus target="#36ra"/>
+                        <hi rend="rubric">ዘዳንኤል፡ ነቢይ።</hi> 
+                     </incipit>
+                     <incipit xml:lang="gez">
+                        <locus target="#36ra"/>
+                        <hi rend="rubric">ወሀሎ፡ ፩ ብእሲ፡ ዘይነብር፡ በባቢ</hi>ሎን፡ ዘስሙ፡ ኢዮአቂም፡ ወአውሰበ፡ ብእሲተ፡ እን<hi rend="rubric">ተ፡ ስማ፡ ሶስና፡ ወለተ፡ ኬልቅዩ፡ 
+                           ወሠናይት፡ ጥቀ፡ ወፈ</hi>ራሂተ፡ እግዚአብሔር፡ ወአስማዲሃኒ፡ ጻድቃን፡ እሙንቱ፡ ወመሐርዋ፡ ለወለቶሙ፡ ኦሪተ፡ ሙሴ፡ ወኢዮአቂምሰ፡ ምታ፡ ባዕል፡ ውእቱ፡
+                        ጥቀ፡
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus from="49vb" to="49vc"/>
+                        ወይቤ፡ ዓቢይ፡ እግዚአብሔር፡ <add place="interlinear">አንተ<supplied reason="omitted" resp="MV">፡</supplied></add> አምላከ፡ ዳንኤል፡ ወአልቦ፡ ባዕድ፡ ዘእንበሌከ፡ ወአውፅዕዎ፡ ለዳንኤል። እምግበ፡ አናብስት።
+                        <cb n="c"/> ወለእልክቱሰ፡ እለ፡ ፈቀዱ፡ ይቅትልዎ፡ አኀዝዎሙ፡ ወአውረድዎሙ፡ ውስተ፡ ግበ፡ አናብስት፡ ወበልዕዎሙ፡ ሶቤሃ፡ በቅድሜሁ።
+                     </explicit>                  
                   </msItem>
+                  
                   <msItem xml:id="ms_i3">
-                     <locus from="50va" to="80vc"/>
+                     <locus from="50ra" to="80vc"/>
                      <title type="complete" ref="LIT1340EnochE"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez">
+                        <locus target="#50ra"/>
+                        <hi rend="rubric">ክፍል፡ ፩ ቃለ፡ በረከት፡ ዘሄኖክ፡ ዘከመ፡ ባረከ፡ ኅሩያነ፡ ወ</hi>ጻድቃነ፡ እለ፡ ሀለዉ፡ ይኩኑ፡ በዕለተ፡ ምንዳቤ፡ ለአሰስሎ፡  <hi rend="rubric">ኵሉ፡ 
+                        እኩያን፡ ወረሲዓን። ወአውሥአ፡ ሄኖክ፡ ወይቤ፡ ብእሲ፡</hi> ጻድቅ፡ ዘእምኀበ፡ እግዚአብሔር፡ እንዘ፡ አዕይንቲሁ፡ ክሡታት፡ ወይሬኢ፡ ራእየ፡ ቅዱስ፡ ዘበሰማያት፡ 
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus target="#80vc"/>
+                        እስመ፡ ጽድቅ፡ ኵነኔሁ፡ ለአምላክ፡ እስመ፡ ለመኃይምናን፡ ሃይማኖተ፡ ይሁብ፡ በማኅደረ፡ ፍናዋት፡ ርቱዓት፡ ወይሬእይዎሙ፡ ለእለ፡ ተወልዱ፡ በጽልመት፡ ይትወደዩ፡ 
+                        በጽልመት፡ እንዘ፡ ይትወሀውሁ፡ ጻድቃን፡ ወይጸርሑ፡ ወይሬእይዎሙ፡ ኃጥአን፡ እንዘ፡ ይበርሁ፡ ወየሐውሩ፡ እሙንቱሂ፡ በኀበ፡ ትጽሐፈ፡ ሎሙ፡ መዋዕል፡ ወአዝማን።
+                     </explicit>                  
                   </msItem>
+                  
                   <msItem xml:id="ms_i4">
                      <locus from="81ra" to="97vb"/>
                      <title type="complete" ref="LIT1688Job"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez" type="supplication">
+                        <locus target="#81ra"/>
+                        <hi rend="rubric">ዘኢዮብ፡ ጻድቅ፡ በረከቱ፡ ትኩን፡ ምስለ፡ ፍቁሩ፡ <persName ref="PRS12013Ablanewos"><add place="overstrike">አብለኔ</add><add place="interlinear">ዎስ</add><supplied reason="omitted" resp="MV">፡</supplied></persName>
+                           ለዓለመ፡</hi> ዓለም፡ አሜን።
+                     </incipit>
+                     <incipit xml:lang="gez">
+                        <locus target="#81ra"/>
+                        ምዕራፍ፡ ፩። ክፍል፡ ፩። ወሀሎ፡ ፩ ብእሲ፡ በ<hi rend="rubric">ብሔረ፡ አውስጢድ፡ ዘስሙ፡ ኢዮብ፡ ወውእቱ፡ ብእሲ፡ ራትዕ፡</hi> ወንጹሕ፡ ጻድቅ፡ ወፈራሄ፡ እግዚአብሔር።
+                        ወይትገሐስ፡ ምስለ፡ ልቡ፡ እምኵሉ፡ <add place="interlinear">ምግባር<supplied reason="omitted" resp="MV">፡</supplied></add> እኩይ፡ 
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus target="#97vb"/>
+                        ወእምድኅሬሁ፡ አዳድ፡ ወልደ፡ ባረድ፡ ዘቀተሎሙ፡ ለምድያም፡ በሐቅለ፡ ሞአብ፡ ወስመ፡ ሀገሩ፡ ጌቴም፡ ወእለሂ፡ መጽኡ፡ ኀቤሁ፡ አዕርክቲሁ፡ ኤልፋ<add place="overstrike">ዝ፡ 
+                           <add place="overstrike">ዘ</add>እምደቂ</add>ቀ፡ ኤሳው፡ ንጉሠ፡ አሜ<add place="overstrike">ኔ</add>ዎን።
+                     </explicit>   
+                     <explicit xml:lang="gez" type="supplication">
+                        <locus target="#97vb"/>
+                        ተተርጐመ፡ ዝንቱ፡ ምጽሐፍ፡ በሶርያ። ወበረከቱ፡ ለዝንቱ፡ ጻድቅ፡ የሃሉ፡ ምስለ፡ ፍቁሩ፡ <hi rend="rubric"><persName ref="PRS12013Ablanewos"><add place="overstrike">አብለኔዎስ</add><supplied reason="omitted" resp="MV">፡</supplied></persName></hi>
+                        ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ <add place="overstrike">ለይኩን፡ ለይኩን።</add>
+                     </explicit>
                   </msItem>
+                  
                   <msItem xml:id="ms_i5">
                      <locus from="97vc" to="111va"/>
                      <title type="complete" ref="LIT2195Prover"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez">
+                        <locus target="#97vc"/>
+                        <hi rend="rubric">ምሳልያተ፡ ሰሎሞን፡ ወልደ፡</hi> ዳዊት፡ ዘነግሠ፡ ለእስራኤል፡ <hi rend="rubric">በኢየሩሳሌም። ለአእምሮ፡ ጥ</hi>በብ፡ ወተግሣጽ። <add place="interlinear">ወ</add>ለአእምሮ፡
+                        ቃለ፡ ጥበብ፡ ወለተወክፎ፡ <del rend="erasure">ወተ</del>መይጦ፡ ቃል። <add place="interlinear">ወ</add>ለአ<add place="interlinear">እ</add>ምሮ፡ ጽድቅ፡ ዘበአማን። ወለአርትዖ፡ ፍትሕ፡ ከመ፡ 
+                        የሀቦሙ፡ ጥበበ፡ ለየዋሃን፡ ለሕፃናት፡ ወለወሬዛ፡ ተዓውቆ፡ ወአእምሮ።
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus from="111rc" to="111va"/>
+                        ወብዙኃት፡ ገብራ፡ ኃይለ። አንቲሰ፡ ትፈደፍዲ፡ ወተዓደውኪ፡ ኵሎን። ሕስው፡ አ<add place="overstrike">ሥ</add>ምሮ፡ ወምኑን፡ ላህይ፡ እስመ፡ ብእሲት፡ ጠባብ፡ ትትባረክ። ወፈራሂተ፡ እግዚአብሔር፡ 
+                        ይእቲ፡ ትሱ<pb n="111v"/><cb n="a"/>ባሕ። ሀብዋ፡ እምፍሬ፡ <add place="overstrike">ከናፍሪ</add>ሃ። ወይትአኰት፡ በአናቅጽ፡ <add place="interlinear">ምታ፡</add> 
+                        <del rend="expunctuated">ምግባራ</del>።
+                     </explicit>                  
                   </msItem>
+                  
                   <msItem xml:id="ms_i6">
                      <locus from="111va" to="116ra"/>
                      <title type="complete" ref="LIT1320Eccles"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez">
+                        <locus target="#111va"/>
+                        <hi rend="rubric">ቃለ፡ መክብብ፡ ወልደ፡ ዳዊት፡ ዘነ</hi>ግሠ፡ ለእስራኤል፡ በኢየሩሳሌም፡ <hi rend="rubric">ከንቱ፡ ከንቱ፡ ይቤ፡ ቃለ፡ መክብብ፡ ኵሉ፡</hi> ከንቱ። ምንት፡ ፍድፋዴሁ፡ ለሰብእ፡
+                        በኵሉ፡ ፃማሁ፡ ዘይፃሙ፡ እምታሕተ፡ ፀሐይ። ትውልድ፡ የኃልፍ፡ ወትውልድ፡ ይመጽእ። ወምድርሰ፡ ለዓለም፡ ትቀውም። ይሠርቅ፡ ፀሐይ፡ ወየዐርብ፡ ፀሐይ።
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus from="115vc" to="116ra"/>
+                        ንባበ፡ ኵሉ፡ ነገር፡ ስማዕ። ወለእግዚአብሔር፡ ፍርሆ። ወትእዛዛቲሁ፡ ዕቀብ። እስመ፡ ዘውእቱ፡ ኵሉ፡ ብእሲ። እስመ፡ ኵሎ፡ ፍጥረተ፡ ያ<add place="overstrike">ቀር</add>ብ፡ 
+                        እግዚ<pb n="116r"/><cb n="a"/>አብሔር፡ ለኵነኔ። <del rend="expunctuated">ለ</del>ኵሎ፡ ዘያስተርኢ፡ ወዘኢያስተርኢ። እመሂ፡ ሠናየ፡ ወእመሂ፡ እኩየ። 
+                     </explicit>          
+                     <explicit xml:lang="gez" type="subscription">
+                        <locus target="#116ra"/>
+                        ተፈጸመ፡ በዝየ፡ ቃለ፡ መክብብ።
+                     </explicit> 
                   </msItem>
+                  
                   <msItem xml:id="ms_i7">
                      <locus from="116ra" to="125vc"/>
                      <title type="complete" ref="LIT2516Wisdom"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez">
+                        <locus target="#116ra"/>
+                        <hi rend="rubric">ጥበበ፡ ሰሎሞን፡ ወልደ፡ ዳዊት፡ ዘነ</hi> ግሠ፡ ለእስራኤል፡ አፍቅርዋ፡ ለጽድቅ፡ <add place="interlinear">ወለጥበብ፡</add> ኦመኳንንተ፡ ምድር፡ ወኃልዩ፡ ኃይለ፡
+                        እግዚአብሔር፡ በአእምሮ፡ ሠናይ። ወበስፉሕ፡ ልብ፡ <del rend="erasure" unit="chars" quantity="2"/> ኅሥዎ። እስመ፡ ውእቱ፡ ይትረከብ፡ <add place="overstrike">በኀበ፡ እለ፡ ያሜክር</add>ዎ።
+                        ወያስተርኢ፡ ለእለ፡ ኢይክህድዎ።
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus target="#125vc"/>
+                        እስመ፡ በኵሉ፡ ግብር፡ እግዚኦ፡ አዕበይከ፡ ክብረ፡ ሕዝብከ<add place="interlinear"><supplied reason="omitted" resp="MV">፡</supplied> ወስባሕከ</add>። ወበኵሉ፡ 
+                        ዘመጽአ፡ ኀቤነ፡ ኢያሰሰልከ። ወኢተዓወከ፡ እምኔነ፡ በኵሉ፡ ጊዜ፡ ወበኵሉ፡ መካን፡ አንተ፡ ትሄሉ፡ ህየ።
+                     </explicit>                
+                     <explicit xml:lang="gez" type="subscription">
+                        <locus target="#125vc"/>
+                        በዝየ፡ ተፈጸመ፡ መጽሐፈ፡ ሰሎሞን።
+                     </explicit>       
                   </msItem>
+                  
                   <msItem xml:id="ms_i8">
                      <locus from="125vc" to="128rc"/>
                      <title type="complete" ref="LIT2362Songof"/>
-                     <note>
-                     </note>                
+                     <incipit xml:lang="gez">
+                        <locus target="#125vc"/>
+                        <hi rend="rubric">መኃልየ፡ መኃልይ፡ ዝውእቱ፡ ዘሰ</hi>ሎሞን። ይስዕመኒ፡ በስዕመ<hi rend="rubric">ተ፡ አፉሁ። አ<add place="overstrike">ዳም፡ አጥባት</add>ኪ፡ እም</hi>ወይን።
+                        ወመዓዛ፡ ዕፍረትኪ፡ እምኵሉ፡ አፈው። ዕፍረትኪ፡ ዘተሠውጠ፡ ስምከ። በእንተዝ፡ ደናግል፡ አፍቀራከ። ወሰሐባከ፡ ድኅሬከ። በመዓዛ፡ ዕፍረትከ፡ ንረውጽ።
+                     </incipit>
+                     <explicit xml:lang="gez">
+                        <locus target="#128rc"/>
+                        ወ፲፻ ለጽዮን፡ ይሁብ፡ <del rend="expunctuated">አንጻርይ፡</del> አጸደ፡ ወይንየ፡ ሊተ። <add place="interlinear">አንጻርየ፡</add> እንዘ፡ ይነብር፡ ውስተ፡ ገነት። <del rend="erasure" unit="chars" quantity="1"/> 
+                        ካልአን፡ ይሬእይዎ፡ <del rend="erasure" unit="chars" quantity="1"/> ጉቡአን፡ ወስኑዓን፡ እንዘ፡ ይነብሩ፡ በሰላም። ወካልአን፡ ይሬእዩ፡ እንዘ፡ ይትረዓዩ። ማእከለ። እንዘ፡ የሐውሩ፡ ውስተ፡ 
+                        ገነተ፡ ካልአን፡ ቃለከ፡ አስምዓኒ፡ ቅንጽ፡ <add place="interlinear">ወ</add>ጕ<add place="interlinear">የ</add>ይ፡ አንተ፡ <add place="interlinear">ወልድ፡ እኁየ፡</add> ወተመሰላ፡ ለወይጠል፡ 
+                        ወለወ<add place="overstrike">ሬዛ፡</add> ኃይል፡ ውስተ፡ አድባ<add place="overstrike">ር</add>፡ ድኁኃን።
+                     </explicit>                  
                   </msItem>
+                  
                   <msItem xml:id="ms_i9">
                      <locus from="128va" to="156rc"/>
                      <title type="complete" ref="LIT1315Dodeka"/>
-                     <note>
-                     </note>     
                      <msItem xml:id="ms_i9.1">
                         <locus from="128va" to="133ra"/>
                         <title type="complete" ref="LIT3144Hosea"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#128va"/>
+                           <hi rend="rubric">ዘሆሴዕ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ፍቁ</hi>ሩ፡ <persName ref="PRS12013Ablanewos"><add place="overstrike">አብለኔዎስ</add><supplied reason="omitted" resp="MV">፡</supplied></persName>
+                          ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#128va"/>
+                           ቃለ፡ እግዚአ<hi rend="rubric">ብሔር፡ ዘኮነ፡ ኀበ፡ ሆሴዕ፡ ወልደ፡ ቤርም፡ በመዋዕ</hi>ለ፡ ዖዝያን፡ ወኢዮአታም፡ ወአካዝ፡ ወሕዝቅያስ፡ ነገሥተ፡ ይሁዳ፡ <add place="interlinear">ወ</add>በመዋዕለ፡ 
+                           ኢዮርብዓም፡ ወልደ፡ ዮአስ፡ ንጉሠ፡ እስራኤል። ቅዳሜ፡ ቃሉ፡ ለእግዚአብሔር፡ <add place="interlinear">ዘኮነ፡</add> ኀበ፡ ሆሴዕ።
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#133ra"/>
+                           ናሁ፡ አድከምክዎሂ፡ ወአጽናዕክዎሂ፡ ወአነ፡ አፈርዩ፡ ከመ፡ ዘይት፡ ዘሥሙር፡ ጽጌሁ፡ ወይትረከብ፡ ፍሬሁ፡ ኀቤየ። መኑ፡ እንከ፡ ጠቢብ፡ ዘይሔልዩ፡ ለዝንቱ፡ ወለባዊ፡ ዘየአምሮ፡ ለዝንቱ፡ እስመ፡ ርቱዓት፡ 
+                           ፍናዊሁ፡ ለእግዚአብሔር፡ ጻድቃን፡ የሐውርዎን፡ ወኃጥአን፡ ይስዕንዎን።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="supplication">
+                           <locus target="#133ra"/>
+                           ተፈጸመ፡ በዝየ፡ ቃለ፡ ሆሴዕ፡ ነቢይ፡ በረከቱ፡ ተሀሉ፡ ምስለ፡ ፍቁሩ፡ <del rend="erasure" unit="chars" quantity="5"/> ለዓለመ፡ ዓለም፡ አሜን።
+                        </explicit>      
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.2">
-                        <locus from="133rb" to="137ra"/>
+                        <locus from="133ra" to="137ra"/>
                         <title type="complete" ref="LIT3145Amos"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus from="133ra" to="133rb"/>
+                           <hi rend="rubric">ዘአሞጽ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ፍቁሩ፡ <persName ref="PRS12013Ablanewos">አብላኔዎስ፡</persName> አሜን፡</hi>
+                           <cb n="b"/> ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#133rb"/>
+                           ቃለ፡ እግዚአብሔር፡ <hi rend="rubric">ዘኮነ፡ ኀበ፡ አሞጽ፡ በአቃሪም፡ ዘቴቁሔ፡ ዘርእየ፡ በእንተ፡</hi> ኢየሩሳሌም፡ ወበእንተ፡ እስራኤል፡ በመዋዕለ፡ ኦዝያን፡ ንጉሠ፡ ይሁዳ፡ ወበመዋዕለ፡ ኢዮርብዓም፡ 
+                           ወልደ፡ ዮአስ፡ ንጉሠ፡ እስራኤል፡ እምቅድመ፡ ፪ ዓመት፡ ዘድልቅል<add place="right">ቅ፡</add> <add place="overstrike">ከመዝ፡</add> ወይቤ፡ እግዚአብሔር፡ እምጽዮን፡ ነበበ፡ ወእምኢየሩሳሌም፡ 
+                           ወሀበ፡ ቃሎ፡  
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#137ra"/>
+                           ወእመይጥ፡ ፄዋ፡ ሕዝብየ፡ እስራኤል፡ ወየሐንጹ፡ አህጉረ፡ ዘማሰነ፡ ወይነብሩ፡ ውስቴታ፡ ይተክሉ፡ ወይነ፡ ወይሰትዩ፡ ወይኖሙ፡ ይተክሉ፡ ዓፀደ፡ አቅማኅ፡ ወይበልዑ፡ ፍሬሁ፡ ወአልቦ፡ እንከ፡ ዘያወጽኦሙ፡
+                          እምድሮሙ፡ እንተ፡ ወሀብክዎሙ፡ <add place="interlinear">አነ፡</add> ይቤ፡ እግዚአብሔር፡ አምላክ፡ ዘኵሎ፡ ይመስልክ፡ ስሙ። 
+                        </explicit>  
+                        <explicit xml:lang="gez" type="supplication">
+                           <locus target="#137ra"/>
+                           በዝየ፡ ተፈጸመ፡ ዘአሞጽ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ተሀሉ፡ ምስለ፡ ፍቁሩ፡ <add place="overstrike"><hi rend="rubric"><persName ref="PRS12013Ablanewos">አብላኔዎስ<supplied reason="omitted" resp="MV">፡</supplied></persName></hi></add> 
+                           ለዓለመ፡ ዓለም፡ አሜን።
+                        </explicit>                   
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.3">
                         <locus from="137ra" to="140ra"/>
                         <title type="complete" ref="LIT3146Micah"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#137ra"/>
+                           <hi rend="rubric">ዘሚክያስ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ፍቁሩ፡ <persName ref="PRS12013Ablanewos">አብላኔዎስ፡</persName></hi>
+                          ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus from="137ra" to="137rb"/>
+                           ቃለ፡ እግዚአብሔር፡ <hi rend="rubric">ዘኮነ፡ ኀበ፡ ሚክያስ፡ ወልደ፡ ሞራት፡ በመዋዕለ፡ ኢዮአታ</hi>ም፡ ወአካዝ፡ ወሕዝቅያስ፡ <cb n="b"/> ነገሥተ፡ ይሁዳ፡
+                           ዘርእየ፡ በእንተ፡ ሰማርያ፡ ወበእንተ፡ ኢየሩሳሌም። ስምዑ፡ አሕዛብ፡ ወታጽምዕ፡ ምድር፡ ወኵሎሙ፡ እለ፡ ይነብሩ፡ ውስቴታ፡ ወይከውነክሙ፡ እግዚአብሔር<add place="interlinear">ሰ</add>፡
+                           ውስተ፡ ቤተ፡ መቅደሱ።
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#140ra"/>
+                           ወይሣሃለነ፡ ወያሠጥሞን፡ ለኃጣውኢነ፡ ወይዌርዎን፡ ውስተ፡ ቀላየ፡ ባሕር፡ ለአበሳነ፡ <add place="interlinear">ወ</add>ትሁቦ፡ ጽድቆ፡ ለያዕቆብ፡ ወሣህለ፡ 
+                           ለአብርሃም፡ በከመ፡ መሐልከ፡ ለአበዊነ፡ በመዋዕለ፡ ትካት።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="supplication">
+                           <locus target="#140ra"/>
+                           ተፈጸመ፡ ዘሚክያስ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ተሀሉ፡ ምስለ፡ ፍቁሩ፡ <add place="overstrike"><persName ref="PRS12013Ablanewos">አብላኔዎስ፡</persName></add> 
+                           ለዓለመ፡ ዓለም፡ አሜን።
+                        </explicit>                       
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.4">
                         <locus from="140ra" to="142ra"/>
                         <title type="complete" ref="LIT1689Joel"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#140ra"/>
+                           <hi rend="rubric">ዘኢዩኤል፡ ነቢ</hi><add place="interlinear">ይ</add><hi rend="rubric">፡ በረከተ፡ አምላኩ፡ <del rend="erasure" unit="chars" quantity="1"/> 
+                              ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12014Filatawos">ፊላታዎስ፡</persName></hi> ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#140ra"/>
+                           ቃለ፡ እግዚአብሔር፡ ዘኮነ፡ ኀበ፡ ኢዩኤል፡ ወልደ፡ ባቱኤል። ስምዑ፡ ዘንተ፡ ሊቃውንተ፡ <add place="overstrike">ቤተ፡ እስ</add><add place="interlinear">ራኤል፡ 
+                              ወአጽ</add>ምዑ፡ ኵልክሙ፡ እለ፡ ትነብሩ፡ ውስተ፡ ምድር። ለእመ፡ ከዊነ፡ ኮነ፡ ከመዝ፡ በመዋዕሊክሙ፡ ወበመዋዕለ፡ አበዊክሙ፡
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus from="141vc" to="142ra"/>
+                           ወይማስን፡ ብሔረ፡ ግብጽ፡ ወይከውን፡ በ<pb n="142r"/><cb n="a"/>ድወ፡ <add place="interlinear">ወ</add>ኤዶምያስ፡ ይጠፍኡ፡ በኃጢአቶሙ፡ 
+                           <add place="overstrike">ለ</add>ደቂቀ፡ ይሁዳ፡ እስመ፡ ከዓው፡ ደመ፡ ጻድቅ፡ ውስተ፡ ምድሮሙ፡ ወይሁዳሰ፡ ለዓለም፡ ትነብር፡ ወኢየሩሳሌምኒ፡ 
+                           ለትውልደ፡ ወእትቤቀል፡ ደሞሙ፡ ወኢያነጽሖሙ፡ እስመ፡ <add place="interlinear">አነ፡</add> እግዚአብሔር፡ ውስተ፡ <add place="overstrike">ዘአኃ</add>ድር፡ ጽዮን።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#142ra"/>
+                           በዝየ፡ ተፈጸመ፡ ዘኢዩኤል፡ ነቢይ፡ በሰላመ፡ እግዚአብሔር፡ አሜን።
+                        </explicit>                           
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.5">
                         <locus from="142ra" to="142va"/>
                         <title type="complete" ref="LIT3147Obadiah"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#142ra"/>
+                           <hi rend="rubric">ዘአብድዩ፡ ነቢ</hi><add place="interlinear">ይ</add><hi rend="rubric">፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ 
+                              <persName ref="PRS12014Filatawos">ፊላታዎስ፡</persName></hi> ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#142ra"/>
+                           <add place="interlinear">ራእይ<supplied reason="omitted" resp="MV">፡</supplied></add> ዘርእየ፡ አብድዩ፡ ከመዝ፡ ይቤ፡ እግዚአብሔር፡ በእንተ፡ 
+                           ኤዶምያስ፡ ሰሚዓ፡ ሰማዕኩ፡ እምኀበ፡ እግዚአብሔር፡ <del rend="expunctuated">ወ</del>ፈንው፡ ማዕገተ፡ ላዕለ፡ አሕዛብ፡ ተንሥኡ፡ ላዕሌሃ፡ ወቅትልዋ።
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#142va"/>
+                           ወዛቲ፡ ቀዳሚቶሙ፡ ለእስራኤል፡ <add place="overstrike">በ</add>ምድረ፡ ከነዓን፡ <add place="overstrike">ከመ፡</add> ሰራጰታ፡ በሐውርተ፡ 
+                           እስራኤል፡ እስከ፡ ኤፍራታ፡ <add place="margin">ወ</add>ይወርሱ፡ <add place="overstrike">ሰብአ፡</add> ናጌብ፡ ወእለ፡ ድኅኑ፡ የዓርጉ፡ እም<add place="margin">ደ</add>ብረ፡ 
+                           ጽዮን፡ ከመ፡ ይትበቀልዋ፡ ለደብረ፡ ዔሳው፡ ወይከውን፡ መንግሥተ፡ እግዚአብሔር።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#142va"/>
+                           ተፈጸመ፡ ዘአብድዩ፡ ነቢይ፡
+                        </explicit>                             
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.6">
                         <locus from="142va" to="143vc"/>
                         <title type="complete" ref="LIT1694Jonah"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#142va"/>
+                           <hi rend="rubric">ዘዮናስ፡ ነቢይ፡ በረከተ፡ አም<cb n="b"/>ላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12013Ablanewos">አብለኔዎስ፡</persName> 
+                              ወ<persName ref="PRS12014Filatawos">ፊላታዎስ፡</persName></hi> ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#142vb"/>
+                           ቃለ፡ እግዚአብሔር፡ ዘኮነ፡ ኀበ፡ ዮናስ፡ ወልደ፡ አማቴ፡ ወይቤሎ፡ ተንሥእ፡ ወሖር፡ ነነዌ፡ ሀገር፡ ዓባይ፡ ወስብክ፡ ሎሙ፡ እስመ፡ ዓርገ፡ እከዮሙ፡
+                           ኀቤየ፡ ወሖረ፡ ዮናስ፡ ወተኃጥአ፡ ብሔረ፡ ተርሴስ፡ እምገጸ፡ እግዚአብሔር።
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus from="143vb" to="143vc"/>
+                           ወይቤሎ፡ እግዚአብሔር፡ አንተሰ፡ ትምህክ፡ ሐምሐመ፡ ዘኢፃመውከ፡ ወዘኢሰቀይከ፡ ዘ<cb n="c"/>ሌሊተ፡ በቈለት፡ ወሌሊተ፡ ሞተት። ወአንሰ፡ ኢይምሕካኑ፡ 
+                           ለነነዌ፡ ሀገር፡ ዓባይ፡ ዘሀለዉ፡ ውስቴታ፡ ሰብእ፡ ፈድፋደ፡ እም ፲ወ፪፼ እለ፡ ኢፈለጡ፡ ፀጋሞሙ፡ ወየማኖሙ፡ ወእንስሳ፡ ብዙኅ።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#143vc"/>
+                           ተፈጸመ፡ ዘዮናስ፡ ነቢይ፡
+                        </explicit>                   
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.7">
                         <locus from="143vc" to="145ra"/>
                         <title type="complete" ref="LIT2057Bookof"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#143vc"/>
+                           <hi rend="rubric">ዘናሆም፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ወምሕረቱ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12013Ablanewos">አብ<add place="interlinear">ለኔዎስ</add><supplied reason="omitted" resp="MV">፡</supplied></persName></hi> 
+                              ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#143vc"/>
+                           ተረፈ፡ ነነዌ፡ መጽሐፈ፡ ራእዩ፡ ለናሖም፡ ወልደ፡ ሄልቅዩስ። እግዚአብሔር፡ ቀናዒ፡ ወመስተበቅል፡ ወይትቤቀሎሙ፡ እግዚአብሔር፡ በመዓቱ፡ ለፀሩ፡ ወያጠፍኦሙ፡ 
+                           ለጸላእቱ። እግዚአብሔር፡ መስተዓግሥ፡ ወዓቢይ፡ ኃይሉ፡ ወንጹሕኒ፡ አልቦ፡ <del rend="expunctuated">በቅድሜሁ፡</del> ንጹሕ፡ በኀቤሁ፡
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus from="144vc" to="145ra"/>
+                           ንጉሠ፡ ፋርስ፡ አኖሞሙ፡ ለኃያላንኪ፡ ወግዕዙ፡ አ<pb n="145r"/><cb n="a"/>ሕዛቢኪ፡ ውስተ፡ አድባር፡ ወአልቦ፡ ዘይ<add place="overstrike">ሬኢ፡</add> 
+                           <add place="interlinear">ወዘይጸንሕ፡</add> ወአልቦ፡ ፈውስ፡ ለቍስልኪ፡ ኵሕሰ፡ ጽልዕኪ፡ <add place="interlinear">ወ</add>ኵሎሙ፡ እለ፡ ይሰምዑ፡ ዜናኪ፡ 
+                           ወይጠፍሑ፡ እደዊሆሙ፡ ላዕሌኪ፡ እስመ፡ ላዕለ፡ ኵሉ፡ በጽሐ<del rend="erasure">ት</del>፡ እከይኪ፡ በኵሉ፡ ጊዜ።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#145ra"/>
+                           በዝየ፡ ተፈጸመ፡ ዘናሖም፡ ነቢይ።
+                        </explicit>                         
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.8">
                         <locus from="145ra" to="146rc"/>
                         <title type="complete" ref="LIT1567Bookof"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#145ra"/>
+                           <hi rend="rubric">ዘዕንባቆም፡ ነቢይ፡ ረድኤተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12013Ablanewos">አብለኔዎ<add place="interlinear">ስ</add><supplied reason="omitted" resp="MV">፡</supplied></persName></hi> 
+                           ለዓለመ፡ ዓለም፡ አሜን፡
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#145ra"/>
+                           ተረፈ፡ ዘርእየ፡ ዕንባቆም፡ ነቢይ፡ እስከ፡ ማእዜኑ፡ እግዚኦ፡ ንኬልሕ፡ ኀቤከ፡ ወኢትሰምዓነ፡ ናዓወዩ፡ ኀቤከ፡ ተገፊዓነ፡ ወኢታድኅነነ፡ ለምንት፡ እንከ፡ አርአይከነ፡ 
+                           ፍትሐ፡ ከመ፡ እርአይ፡ ኀሣረ ፡ ወ<add place="overstrike">ሕማመ፡</add> መኰንንኒ፡ ይትሐለይ፡ በእንተ፡ ዝንቱ፡ ዓለው፡ ሕገከ፡ ወኢይወጽእ፡ ፍትሐ፡ ጽድቅ፡
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#146rc"/>
+                           ወአልህምትኒ፡ ኢይ<add place="interlinear">ት</add>ረክቡ፡ <add place="overstrike">በውስተ፡ ጎል፡ ወአንሰ፡ እትፌሣሕ</add>። በአግዚአብሔር፡ 
+                           <del rend="expunctuated">እትፌሣሕ፡</del> ወእትሐሠይ ፡ በአምላኪየ፡ ወመድኃንየ። እግዚአብሔር፡ አምላኪየ፡ ወኃይልየ፡ ወያቀውሞን፡ ለእገርየ፡ 
+                           <add place="overstrike">ከመ፡ ኃይል፡ ለዝሉፉ፡ ወዲበ፡ ልዑላን፡ ያፄዕነኒ፡</add> ከመ፡ እማዕ፡ በፍኖቱ ። በመሐልዩሁ።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#146rc"/>
+                           በዝየ፡ ተፈጸመ፡ ዘዕንባቆም፡ ነቢይ።
+                        </explicit>                    
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.9">
                         <locus from="146rc" to="147vc"/>
                         <title type="complete" ref="LIT3148Zephan"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#146rc"/>
+                           <hi rend="rubric">ዘሶፎንያስ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12013Ablanewos">አብለኔዎስ<supplied reason="omitted" resp="MV">፡</supplied></persName></hi> 
+                           ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#146rc"/>
+                           ቃለ፡ እግዚአብሔር፡ ዘኮነ፡ ኀበ፡ ሶፎንያስ፡ ወልደ፡ ኵስ፡ ወልደ፡ ጎዶልያ፡ አሞራዊ፡ ዘሴዴቅያ<del rend="erasure" unit="chars" quantity="1"/>፡ 
+                           በመዋዕለ፡ ኢዮስያስ፡ ወልደ፡ አሞጽ፡ ንጉሠ፡ ይሁዳ። ሐሊቀ፡ የሐልቁ፡ እምገጸ፡ ምድር፡ ይቤ፡ እግዚአብሔር፡
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#147vc"/>
+                           ወአድኅና፡ ለግድፍት፡ ወለምንድብት፡ እትዌከፋ፡ ወእሬስዮሙ፡ ምክሐ፡ ወስሙያነ፡ በኵሉ፡ ምድር፡ ወኢይትኃፈሩ፡ ብኪ፡ ይእተ፡ አሚረ፡ አመ፡ አሠነይኩ፡ ለኪ፡
+                           ወአመ፡ ተወከፍኩክሙ፡ ወእሬስየክሙ፡ ስሙያነ፡ ወምክሐ፡ <choice><sic>ለሕዘቢሃ፡</sic><corr resp="MV">ለአሕዛቢሃ፡</corr></choice> አመ፡ ሜጥኩ፡ ፄዋክሙ፡ 
+                           በቅድሜክሙ፡ ይቤ፡ እግዚአብሔር።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#147vc"/>
+                           ተፈጸመ፡ ዘሶፎንያስ፡ ነቢይ።
+                        </explicit>                          
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.10">
                         <locus from="147vc" to="148vc"/>
                         <title type="complete" ref="LIT3149Haggai"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#147vc"/>
+                           <hi rend="rubric">ዘሐጌ፡ ነቢይ፡ ሣህለ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12013Ablanewos">አ<add place="overstrike">ም</add>ብለኔዎስ<supplied reason="omitted" resp="MV">፡</supplied></persName></hi> 
+                           ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#147vc"/>
+                           በካልእት፡ ዓመቱ፡ ለዳርዮስ፡ <add place="margin">ንጉሠ፡</add> <add place="overstrike">ሜዶን፡</add> በሳድስ፡ ወርኅ፡ አመ፡ ሠርቅ። ኮነ፡ ቃለ፡ 
+                           እግዚአብሔር፡ <add place="overstrike">ኀበ፡</add> ሐጌ፡ ነቢይ፡ ወይቤሎ፡ በሎ፡ ለዝሩባቤል፡ ወልደ፡ ሰላትያል፡ ዘሕዝበ፡ ይሁዳ። ወለዮሴዕ፡ ወልደ፡ ዮሴዴቅ፡ ካህን፡ 
+                           ዓቢይ፡ ወበሎሙ፡   
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#148vc"/>
+                           <add place="overstrike">ወይወርዱ፡ መስተጽእናን፡ በአፍራሲሆሙ፡ ምስለ፡ አስይፍቲሆሙ፡</add> ኀበ፡ ቢጾሙ፡ ይእተ፡ አሚረ፡ ይቤ፡ እግዚአብሔር፡ ዘኵሎ፡ 
+                           ይመልክ። ወእነሥአከ፡ ዘሩባቤል፡ ወልደ፡ ሰላትያል፡ ወእሬስየከ፡ ከመ፡ ማዕተብ፡ እስመ፡ ኪያከ፡ ኃረይኩ፡ አነ፡ ይቤ፡ እግዚአብሔር፡ ዘኵሎ፡ ይመልክ።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#148vc"/>
+                           ተፈጸመ፡ ዘሐጌ፡ ነቢይ።
+                        </explicit>                  
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.11">
                         <locus from="148vc" to="154va"/>
                         <title type="complete" ref="LIT3150Zechar"/>
-                        <note>
-                        </note>                
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#148vc"/>
+                           <hi rend="rubric">ዘዘካርያስ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <persName ref="PRS12013Ablanewos">አብለኔ<add place="interlinear">ዎስ</add><supplied reason="omitted" resp="MV">፡</supplied></persName></hi> 
+                           ለዓለመ፡ ዓለም፡ አሜን።
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus from="148vc" to="149ra"/>
+                           በካልእት፡ ዓመተ፡ መንግሥቱ፡ ለዳርዮስ፡ በሳምን፡ ወርኅ፡ ኮነ፡ ቃለ፡ እግዚአብ<pb n="149r"/><cb n="a"/>ሔር፡ ኀበ፡ ዘካርያስ፡ ወልደ፡ በራክዩ፡ ወልደ፡ ሐዶ፡
+                           ነቢይ፡ ወይቤሎ፡ ተምዕዓ፡ እግዚአብሔር፡ ላዕለ፡ አበዊክሙ፡ ዓቢየ፡ መዓተ፡ ወ<add place="overstrike">በሎሙ፡</add> ከመዝ፡ ይቤ፡ እግዚአብሔር፡ ዘኵሎ፡ 
+                           ይመልክ፡ ተመየጡ፡ ኀቤየ፡
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus from="154rc" to="154va"/>
+                           ወይከውና፡ ጻሕራት፡ ከመ፡ ኮራ<add place="overstrike">ት፡ ዘቤተ፡ እግዚአብሔር፡ ቅድመ፡ ገጹ፡ ለምሥዋዕ፡ ወይሄልዋ፡ ኵሉ፡ ጸሐራት፡ ዘውስተ፡ ምሥዋዕ፡ 
+                              ዘኢየ<pb n="154v"/><cb n="a"/>ሩሳሌም፡</add> መቅደሱ፡ ለእግዚአብሔር፡ ዘኵሎ፡ ይመልክ፡ ይመጽኡ፡ ወይሰግዱ፡ ወይሠውዑ፡ ወይነሥኡ፡ እምውስቴቶሙ፡ 
+                           ወያበስሉ፡ ቦቶን፡ ወኢይትረከብ፡ እንከ፡ ይእተ፡ አሚረ፡ አረማዊ፡ ከነናዊ፡ ውስተ፡ ቤተ፡ እግዚአብሔር፡ ዘኵሎ፡ ይመልክ።
+                        </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#154va"/>
+                           ተፈጸመ፡ ዘዘካርያስ፡ ነቢይ።
+                        </explicit>                            
                      </msItem>
+                     
                      <msItem xml:id="ms_i9.12">
                         <locus from="154va" to="156rc"/>
                         <title type="complete" ref="LIT3151Malachi"/>
-                        <note>
-                        </note>                
-                     </msItem>
+                        <incipit xml:lang="gez" type="supplication">
+                           <locus target="#154va"/>
+                           <hi rend="rubric">ዘሚልክያስ፡ ነቢይ፡ በረከተ፡ አምላኩ፡ ትኩን፡ ምስለ፡ ገብሩ፡ <del rend="erasure" unit="chars" quantity="3"/></hi> 
+                           ለዓለመ፡ ዓለም፡ አሜን፡
+                        </incipit>
+                        <incipit xml:lang="gez">
+                           <locus target="#154va"/>
+                           ተረፈ፡ ቃለ፡ እግዚአብሔር፡ ላዕለ፡ እስራኤል፡ በእደ፡ መልአኩ፡ ሐልይዎኬአ፡ በልብከሙ፡ ከመ፡ አፍቀርኩክሙ፡ ይቤ፡ እግዚአብሔር፡ ወትብሉኒ፡ በበይነ፡ ምንት፡ 
+                           አፍቀርከነ፡ እግዚኦ፡ አኮኑ፡ ዔሳው፡ እኀሁ፡ ለያዕቆብ፡ ይቤ፡ እግዚአብሔር፡ ያዕቆብሃ፡ አፍቀርኩ፡ ወዔሳውሃ፡ ጸላእኩ፡
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus from="156rb" to="156rc"/>
+                           ወይመይጥ፡ ልበ፡ አበው፡ ኀበ፡ ውሉድ፡ ወል<cb n="c"/>በ፡ ብእሲ፡ ኀበ፡ ቢጹ፡ አመ፡ መጻእኩ፡ ወቀሠፍክዋ፡ ለምድር። ተዘከሩ፡ ሕገ፡ ሙሴ፡ ገብርየ፡ ዘአዘዝክዎ፡ 
+                           በኰሬብ፡ ሥርዐተ፡ ወኵነኔ፡ ለ<add place="overstrike">ኵሉ፡ እስራኤል።</add>
+                          </explicit>  
+                        <explicit xml:lang="gez" type="subscription">
+                           <locus target="#156rc"/>
+                           በዝየ፡ ተፈጸመ፡ ዘሚልክያስ፡ ነቢይ።
+                        </explicit>                    
+                     </msItem>                     
                   </msItem>
                   
                </msContents>
@@ -175,7 +509,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <support>
                            <watermark/>
                            <material key="parchment"/>
-                           
+                           <p>A hole, probably from parchment making, on e.g. <locus target="#55"/>.</p>
+                           <p>Tears repaired on <locus target="#55 #128 #155"/>.</p>
                         </support>
                         <extent>
                            <measure unit="leaf">156</measure>
@@ -188,20 +523,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <depth>74</depth>
                            </dimensions>
                            <dimensions type="leaf" unit="mm">
-                              <height/>
-                              <width/>
+                              <height></height>
+                              <width></width>
                            </dimensions>
                            <note corresp="#leafdim">
-                              Data on leaf dimensions 
-                              taken from <locus target="#3r"/>.
+                              Data on leaf dimensions taken from <locus target="#3r"/>.
                            </note>
                         </extent>
-                        <foliation/>
+                        <foliation>
+                           Foliation in pencil centred in the lower margin of each folio.
+                        </foliation>
                         <collation>
                            <signatures>
-                              <note>
-                               
-                             </note>
+                              Quires have been numbered in pencil in the upper outer margin of the first leaf of each quire.
                            </signatures>
                            <list>
                               <item xml:id="q1" n="A">
@@ -243,7 +577,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </item>
                               <item xml:id="q10" n="9">
                                  <dim unit="leaf">11</dim>
-                                 <note>One stub before the first leaf</note>
+                                 <note>One stub before <locus target="#70"/></note>
                                  <locus from="70r" to="80v"/>
                               </item>
                               <item xml:id="q11" n="10">
@@ -286,13 +620,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </list>
                         </collation>
                         <condition key="good">
+                           The back board is split along the vertical axis: the two parts are kept together by means of a vegetal thread passing through three pairs of holes.
                            Two holes on the front and back board, probably intended to host a buckle. 
-                           Tears repaired on <locus target="#51 #128 #155"/>.
+                           The leather on the spine is slightly damaged along the corners.
+                           The sewing is damaged in the centre fold of <ref target="#q18"/>.
                         </condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="3" writtenLines="30">
-                           <dimensions>
+                           <locus from="2ra" to="156rc"/>
+                           <note corresp="#textarea1 #margin1">Data on text area and margin dimensions taken from <locus target="#3r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea">
                               <height>190</height>
                               <width>193</width>
                            </dimensions>
@@ -303,24 +641,85 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <dim type="right">33</dim>
                               <dim type="intercolumn">10</dim>
                            </dimensions>
-                           <note>
-                              Data on text area dimensions 
-                              taken from <locus target="#3r"/>.
-                           </note>
-                           <ab type="pricking">Pricking and ruling are visible.</ab>
+                           <note> The characters per line are 9-15.</note>
+                           <ab type="punctuation" subtype="Dividers">
+                              Texts are separated with two chains of red and black small dots, e.g. on <locus target="#36r #97vb #137ra"/>. 
+                              Chains of red and black dots are also used to separate subscriptions, e.g. on <locus target="#36r #133ra #142ra"/>.
+                           </ab>
+                           <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                           <ab type="ruling" subtype="pattern">1A-1A-1A1A-1A1A/0-0/0-0/C.</ab>
+                           <ab type="ruling">The upper line is written above the ruling. The bottom line is written above the ruling.
+                           Two ruled lines have been left unwritten on <locus target="#133rb"/>.
+                           </ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <seg type="script"/>
+                        <locus from="2ra" to="80vc"/>
                         <seg type="ink">Black, red</seg>
-                        <date notBefore="1500" notAfter="1699">16th-17th century</date>
-                        <desc>
-                           Fine and careful handwriting.
-                        </desc>
-                        <seg type="rubrication">
+                        <date notBefore="1600" notAfter="1799">17th/18th century writing</date>
+                        <seg type="script">
+                           Small and slightly rushed handwriting.
+                           Another hand, featured by a smaller and less trained writing, intervenes on <locus from="47vb" to="48rb"/>, perhaps in order to fill a textual lacuna.
+                           One more change of hand might have occurred towards the end, see e.g. <locus target="#80v"/>, with characters written more closely (cp. <ref target="#h3"/>) and in a pale black ink.
                         </seg>
+                        <seg type="rubrication">
+                           Groups of two lines on the incipit pages alternating with black lines, e.g. on <locus target="#2r #36r #50r"/>; 
+                           titles of the subvidisions of the works, indicated with the words <foreign xml:lang="gez">ክፍል፡</foreign> or <foreign xml:lang="gez">ምዕራፍ፡</foreign>;
+                           the title of <ref target="#ms_i1"/> in the upper margin of <locus target="#2r"/>;
+                           the name of <persName ref="PRS12013Ablanewos"/>, possibly a later owner, written on erasure in the subscription on <locus target="#936rc"/>;
+                           elements of the punctuations signs, including the text dividers, and of the Ethiopic numerals.
+                        </seg>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ምዕ፡</abbr> or <abbr>ምዕራ፡</abbr> for <expan>ምዕራፍ፡</expan> (e.g. <locus target="#39va #67ra #68rb"/>)
+                           </item> 
+                           <item>
+                              <abbr>ክፍ፡</abbr> for <expan>ክፍል፡</expan> (e.g. <locus target="#53rc #54ra"/>)
+                           </item> 
+                        </list>
+                     </handNote>
+                     <handNote xml:id="h2" script="Ethiopic">
+                        <locus from="81ra" to="128rc"/>
+                        <seg type="ink">Black, red</seg>
+                        <date notBefore="1600" notAfter="1799">17th/18th century writing</date>
+                        <seg type="script">
+                          Small handwriting. It becomes rapid and increasingly irregular towards the end. The characters are boradly spaced, e.g. on <locus target="#128r"/>.
+                        </seg>
+                        <seg type="rubrication">
+                           One or two lines on the incipit pages alternating with black lines, e.g. on <locus target="#81r #97vc #125vb"/>; 
+                           sometimes one single line of the incipits, e.g. on <locus target="#116ra"/>;
+                           titles of the subvidisions of the works, indicated with the words <foreign xml:lang="gez">ክፍል፡</foreign> or <foreign xml:lang="gez">ምዕራፍ፡</foreign>;
+                           the titles of some works written in the upper margin of the folio, e.g. on <locus target="#81r #97vc"/>;
+                           the name of <persName ref="PRS12013Ablanewos"/>, possibly a later owner, written on erasure in the subscription on <locus target="#97vb"/>;
+                           elements of the punctuations signs, including the text dividers, and of the Ethiopic numerals.
+                        </seg>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ክ፡</abbr> or <abbr>ክፍ፡</abbr> for <expan>ክፍል፡</expan> (e.g. <locus target="#82vc #83ra #93vb"/>)
+                           </item> 
+                        </list>
+                     </handNote>
+                     <handNote xml:id="h3" script="Ethiopic">
+                        <locus from="128va" to="156rc"/>
+                        <seg type="ink">Black, red</seg>
+                        <date notBefore="1600" notAfter="1799">17th/18th century writing</date>
+                        <seg type="script">
+                           Trained hand with big and rather curved characters, written close to each other.
+                        </seg>
+                        <seg type="rubrication">
+                           Groups of two lines on the incipit pages, most often alternating with black lines, e.g. on <locus target="#128va #137ra #140ra"/>; 
+                           titles of the subvidisions of the works, indicated with the words <foreign xml:lang="gez">ክፍል፡</foreign> or <foreign xml:lang="gez">ምዕራፍ፡</foreign>;
+                           the names of <persName ref="PRS12013Ablanewos"/> and <persName ref="PRS12014Filatawos"/>, possibly later owners, written on erasure in the subscriptions,
+                           e.g. on <locus target="#128va #137ra #146rc"/>;
+                           elements of the punctuations signs, including the text dividers, and of the Ethiopic numerals.
+                        </seg>
+                        <list type="abbreviations">
+                           <item>
+                              <abbr>ክ፡</abbr> or <abbr>ክፍ፡</abbr> for <expan>ክፍል፡</expan> (e.g. <locus target=" #130ra #131vb #134rb"/>)
+                           </item> 
+                        </list>
                      </handNote>
                   </handDesc>
                   <decoDesc>
@@ -328,7 +727,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <locus target="#1v"/>
                         <desc>St George and the Dragon</desc>
                         <q xml:lang="gez">ስእሌሁ፡ ሚካኤል፡</q>
-                        <note>The miniature, erroneously described as St Michael, must have been added recently.</note>
+                        <note>The miniature, erroneously described as St Michael in the caption below, must have been added recently.</note>
                      </decoNote>
                      <decoNote type="miniature" xml:id="d2">
                         <locus target="#49v"/>
@@ -341,38 +740,152 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </decoNote>
                   </decoDesc>
                   <additions>
-                     <!--  Scribal phenomena to be encoded
-                     <list>
-                      <item xml:id="e1">
-                           
-                           <desc></desc>
+                     <list>                      
+                     <item xml:id="a1">
+                        <desc type="Unclear">                   
+                           The note is written in the upper margin and is encircled in a double rectangular frame. 
+                           It contains the Arabic-based names of the heavenly bodies: Šamš, i.e. the Sun, Qamar, i.e. the Moon, Zǝhurā, i.e. Venus, 
+                           Zuhal, i.e. Saturn, Maštari, i.e. Jupiter, ʾAṭarǝd, i.e. Mercury, and Mariḥ, i.e. Mars.</desc>
+                        <locus target="#4r"/>
+                        <q xml:lang="gez">
+                           ሸምሽ፡ ቀመር፡ ዝሁራ፡ ዙሀል፡ መሽተሪ፡ አጠርድ፡ መሪሕ፡
+                        </q>
+                     </item>
+                     
+                     <item xml:id="a2">
+                        <desc type="Comment">                  
+                           The note is written in black ink in the upper margin and is encircled in three rectangular frames.
+                           It indicates the years of reign of the kings of Israel. 
+                        </desc>
+                        <locus target="#5v"/>
+                        <q xml:lang="gez">
+                           <seg part="I">
+                              እስከ፡ ፲ወ፭፡ ዘይቤ፡ እም<add place="above">ነ</add><supplied reason="omitted" resp="MV">፡</supplied> መንግሥተ፡ አካዝ፡ ፱ ዓመት፡ ዘሕዝቅያስ፡
+                              ፯፡ ቦዘይቤ፡ እምነ፡ መንግሥተ፡ ፋቁሒ፡ ፫ ዓመት፡ እስከ፡ ሆሴዕ፡ ወልደ፡ ኢላ፡ ፲ወ፪፡ ዓመት፡ ጠፍ፡
+                           </seg>
+                           <seg part="F">
+                              እመንግሥተ፡ ያሆ፡ ዘይቤ፡ ለዝንቱ። አልቦቱ፡ ኍልቍ፡
+                             </seg>
+                        </q>
+                     </item>
+                     
+                     <item xml:id="a3">
+                        <desc type="OwnershipNote">
+                           The note is crudely written in brownish ink and is partially illegible. It mentions 
+                           <persName ref="PRS12015TaklaSe" role="owner"><roleName type="title">ʾalaqā</roleName> Takla Ṣǝyon</persName> as the owner of the manuscript.
+                        </desc>
+                        <locus target="#36r"/>
+                        <q xml:lang="gez">
+                           ዝመጽሐፍ፡ ዘአለቃ፡ ተክለ፡ ጽዮን፡ ዝመጽሐፍ፡ ዘአለቃ፡
+                        </q>
+                     </item>
+                     
+                     <item xml:id="a4">
+                        <desc type="Unclear">             
+                           The note is written in Amharic in the upper margin and is encircled in one rectangular frame. 
+                        </desc>
+                        <locus from="52vb" to="52vc"/>
+                        <q xml:lang="am">
+                           <seg part="I">
+                              በመዠመሯ፡ ያየው፡ ቤት፡ የጻድቃነ፡ ብሊት፡ ዓለም<supplied reason="omitted" resp="MV">፡</supplied> ነው፡
+                              በማህከሉ፡ ኪሩቤል፡ አሉ፡ ማለቱ፡ ጌታ፡ ካለ፡ ዘንድ፡ መላእክት፡ አይለዩምና፡ እሳት፡ እንደ፡ መሆኑ፡ የሞቀ፡ ነው፡
+                           </seg>
+                           <seg part="F">
+                              እጅግም፡ ያልሞቀ፡ እጅግም፡ ያልቀዘቀዘ፡ ደስ፡ ያሰኛል፡ መንግሥተ፡ ሰማይም፡ እንዲያ፡ ደስ፡ ያሰኛል፡
+                           </seg>
+                        </q>
+                     </item>
+                     
+                     <item xml:id="a5">
+                        <desc type="Comment">         
+                          The note is written in Amharic in the upper margin and is encircled in two rectangular frames.
+                          It contains the names of the leaders who divide the four parts of the year and of those who lead them, as narrated in
+                           <ref type="work" corresp="LIT1340EnochE.3.82"/>. 
+                        </desc>
+                        <locus target="#69v"/>
+                        <q xml:lang="am">
+                           <seg part="I">
+                              ምልክኤል፡ ሕልምልሜሌክ፡ ምልኤል፡ ናርርል። የዘጠና። አድናርኤል፡ ኢየሱሳኤል፡ ኢየሉምኤል፡ የወ። መ። 
+                              ለና፡ ብርክኤል፡ ዜልብስኤል፡
+                           </seg>
+                           <seg part="F">
+                              አድናርኤል፡ ኢየሱሳኤል፡ ኢየሉምኤል፡ አስፋ፡ ፬የወ፡ መ፡ ለ፬፡ ብርክኤል፡ ዜልብስኤል፡ ሄሉያሴፍ፡ የለ፡ የሻ፡ 
+                              ለምል፡ ቤዳ፡ ኬኤ፡ ሄኬ፡ የለ፡ የሻ፡ ለህ 
+                           </seg>
+                        </q>
+                     </item>
+                     
+                     <item xml:id="a6">
+                        <desc type="Comment">         
+                           The note is written in the upper margin, in correspondence of <ref type="work" corresp="LIT1688Job.36"/>.
+                        </desc>
+                        <locus target="#93vb"/>
+                        <q xml:lang="gez">
+                           በሐልዮ፡ በነቢብ፡ በገቢር፡ በሕዛንነት፡ በቁልማስነት፡ በሽምግልና፡ በጥዒና። በደዌ፡ በሞት፡ በደዌ፡ በሞት፡
+                           በመቃብር፡ በሞት፡ በመቃብር፡ በትንሣኤ፡ በንጽሐ፡ ሥጋ፡ በንጽሐ፡ ልብ፡ በንጽሐ፡ ነፍስ፡ የባላ፡ 
+                           ፴ የባላ<supplied reason="omitted" resp="MV">፡</supplied> ፰፡ የባላ<supplied reason="omitted" resp="MV">፡</supplied> ፻፡
+                        </q>
+                     </item>
+                     
+                     <item xml:id="a7">
+                        <desc type="OwnershipNote">       
+                          The note is crudely written in black ink. It mentions <persName ref="PRS12015TaklaSe" role="owner"><roleName type="title">ʾalaqā</roleName> Takla Ṣǝyon</persName> 
+                           as the owner of the manuscript.
+                        </desc>
+                        <locus target="#97vb"/>
+                        <q xml:lang="gez">
+                           ዝመጽሐፍ፡ ዘአለቃ፡ ተክለ<supplied reason="omitted" resp="MV">፡</supplied> ጽዮን፡ ዘሰረቆ፡ ወዘፈሐቆ፡ ለይኩን፡ ለይኩን፡
+                        </q>
+                     </item>
+                    
+                        <item xml:id="e1">
+                           <desc>A sticker of the monastic library with the signature ‘Ms 29’ is glued onto the inner side of the front board. 
+                              The inventory number "50426" is written in pencil in the lower margin of <locus target="#156v"/>.</desc>
                         </item>
-                        </list>
-                     -->
+                        <item xml:id="e2">
+                           <desc>
+                              Extremely frequent corrections, textual additions, glosses or numbers of the subsection, nearly on every leaf in the margins, in the intercolumn or interlineally.
+                              They are written in several hands and probably result from collation with one or more additional exemplars.
+                              Sometimes the additions in the margins are encircled in rectangular frames and are most often called in the body of the text by <foreign xml:lang="gez">tamallas</foreign>-signs in the shape of a cross or two perpendicular lines (e.g. <locus target="#6vc #19rb #30rb"/>).
+                              Sometimes they are overwritten on erasure (e.g. on <locus target="#4rb #7va #24vb"/>), especially towards the second part of the manuscript.
+                           </desc>
+                           <!-- Insert one or two selected examples to be printed in our catalogue!
+                           SH-MV 2021-01-13
+                           -->
+                        </item>
+                        <item xml:id="e3">
+                           <desc>
+                              The titles of some of the Old Testament books are written in the upper margin in black or red ink and marked with thin lines above and below, 
+                              e.g. on <locus target="#2r #81r #97vc"/>.
+                           </desc>
+                        </item>
+                     </list>
                   </additions>
             
                   <bindingDesc>
                      <binding contemporary="true">
-                        <decoNote xml:id="b1">Two wooden boards covered with tooled leather; guard cover.
-                           Two pairs of sewing stations.
+                        <!-- TO BE CHECKED BY MARCO -->
+                        <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards covered with reddish-brown <material key="leather"/>. 
                         </decoNote>
                         <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
+                           <material key="wood"/>  
+                           <material key="leather"/>   
                         </decoNote>
-                        <decoNote xml:id="b3" type="Endbands">Two pairs of chains of the endband stitches at the spine cover.</decoNote>
-                        <decoNote xml:id="b4" type="Other"/>
-                        <decoNote xml:id="b5">Blind tooled ornament on the cover.</decoNote>
+                        <decoNote xml:id="b3" type="Cover" color="reddish-brown">The leather is decorated with blind tooled ornaments.</decoNote>
+                        <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                        <decoNote xml:id="b5" type="Spine">Two pairs of chains of the endband stitches are visibile at the top and the bottom of the spine cover.</decoNote>
                      </binding>
                   </bindingDesc>
                </physDesc>
           
                <history>
                   <origin>
-                   
-                     <origDate notBefore="1500" notAfter="1699"/>
-                     <note/>
-                     <p/>
-                  </origin>
+                     <origDate notBefore="1600" notAfter="1799" evidence="lettering"/>
+                        The handwriting is consistent with a 17th/18th century dating. The names of <persName ref="PRS12013Ablanewos"/> and 
+                        <persName ref="PRS12014Filatawos"/> are mentioned in a secondary hand in several supplications throughout the manuscript following the phrase
+                        <foreign xml:lang="gez">ገብርከ፡</foreign> 'your servant'. They probably were later owner of the book.
+                     <persName ref="PRS12015TaklaSe" role="owner"><roleName type="title">ʾAlaqā</roleName> Takla Ṣǝyon</persName> is mentioned in a secondary hand as the owner in <ref target="#a3 #a7"/>
+                     </origin>
                </history>
           
                <additional>
@@ -380,6 +893,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <recordHist>
                         <source>
                            <listBibl type="secondary">
+                              <bibl>
+                                 <ptr target="bm:Bausi2008tradizione"/>
+                                 <citedRange>514 n. 15</citedRange>
+                              </bibl>
                               <bibl>
                                  <ptr target="bm:Britaetc2017ThreeCollections"/>
                                  <citedRange>181</citedRange>
@@ -428,6 +945,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
      <revisionDesc>
         <change who="MV" when="2018-04-18">Created catalogue entry</change>
+        <change who="MV" when="2020-02-11">BindingDesc</change>
+        <change who="MV" when="2020-02-15">Added incipits and explicits</change>
+        <change who="MV" when="2021-01-11">Added title, conditions, handDesc, bibl; fixed dating</change>
+        <change who="MV" when="2021-01-12">Added additiones</change>
      </revisionDesc>
   </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
