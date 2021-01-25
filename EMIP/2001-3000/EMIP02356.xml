@@ -7,6 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:id="t1">Weiner Codex 324</title>
             <editor key="JS"></editor>
             <editor key="ABe"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -32,16 +33,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2356/">Weiner Codex 324</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-115v: Psalter, incomplete at the beginning, starting part way through Psalm 7, and incomplete at the end, ending with Song of Songs.  Some dislocated folios.  The midpoint of the Psalms (<locus target="#42r"/>) is marked with a line of alternating red and black dots across the entire page and a small design, and the word, "መንፈቅ". Psalm 151 is the short version.  The fourth biblical canticle indicates Hana as a prophetess. Illuminations are added recently over text. The Song of Songs is the common version. </summary>
+                  <summary>The Song of Songs is the common version. </summary>
               <msItem xml:id="ms_i1">
                 <locus from="1r" to="115v" facs="001"/>
                 <title type="incomplete" ref="LIT2701Dawit"/>
               <textLang mainLang="gez">Gǝ'ǝz</textLang>
-              <note>Incomplete at the beginning (begins part way through Psalm 7) and incomplete at the end (ends with Song of Songs). Some folios are dislocated</note>
+              <note>Ends with Song of Songs. Some folios are dislocated</note>
 
               <msItem xml:id="ms_i1.1">
                 <locus from="1r" to="94r" facs="001"/>
-                <title type="complete" ref="LIT2000Mazmur"/>
+                <title type="incomplete" ref="LIT2000Mazmur"/>
+                <note>Incomplete at the beginning, begins part way through <ref type="work" corresp="LIT2000Mazmur#Ps7"/></note>
               </msItem>
 
               <msItem xml:id="ms_i1.2">
@@ -52,13 +54,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
               <msItem xml:id="ms_i1.3">
                 <locus from="108r" to="105r" facs="108"/>
                 <title type="complete" ref="LIT2362Songof"/>
+                <note>Common version</note>
               </msItem>
 
-              <msItem xml:id="ms_i1.4">
-                <locus from="106r" to="115v" facs="106"/>
-                <title type="complete" ref="LIT2509Weddas"/>
               </msItem>
-              </msItem>
+
 
               </msContents>
                <physDesc>
@@ -180,8 +180,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <ref target="#ms_i1.1 #ms_i1.2 #ms_1.3"/>
                   <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
                   </seg>
-                  <desc>The word God is rubricated in the first three works</desc>
-                  <desc>Columetric layout of text: <locus target="#93r #93v" facs="093 094"/> (Psalm 150); <locus target="#103v #104r" facs="104"/> (Tenth Biblical Canticle)</desc>
+                  <desc>Columetric layout of text: <locus target="#93r #93v" facs="093 094"/> <ref type="work" corresp="LIT2000Mazmur#Ps150"/>;
+                    <locus target="#103v #104r" facs="104"/> <ref type="work" corresp="LIT1566hababa#ThreeYouths3"/>
+                  </desc>
                   </handNote>
                   </handDesc>
                   <decoDesc>
@@ -290,10 +291,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2021-01-13" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
-                                    <change when="2021-01-22" who="ABe">Added ms_i1-1.4, minis 1-10, a1-3, and e1-6</change>
+          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+          <change when="2021-01-13" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+          <change when="2021-01-22" who="ABe">Added ms_i1-1.4, minis 1-10, a1-3, and e1-6</change>
+          <change when="2021-01-25" who="RL">Removed ms_i4, added work refs to handnote on columetric layout  </change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
