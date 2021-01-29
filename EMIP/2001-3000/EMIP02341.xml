@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Weiner Codex 309</title>
             <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,11 +32,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2341/">Weiner Codex 309</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-46r: Prayer of Incense, ጸሎተ፡ ዕጣን።., arranged by a later hand for the days of the week: Monday (1r); Wednesday (13r), Thursday (14v),  Friday (17v), Saturday (18v). Published in Ethiopia, ጸሎተ፡ ዕጣን። (Addis Ababa: Tǝnśa’e Zä-Guba’e, 1951 E.C.). Illuminations added recently over text.</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <summary></summary>
+                <msItem xml:id="ms_i1">
+                  <locus from="1r" to="46r" facs="003"/>
+                  <title type="complete" ref="LIT2252salota"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                </msItem>
+
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -115,6 +119,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        <layout columns="2" writtenLines="17"/>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                  <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#iiv(erso)" facs="003"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with two <term key="angel"/>s holding <term key="sword"/>s</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#9r" facs="011"/><desc><ref type="authFile" corresp ="AT1030Trinity"/> surrounded by the Four Living Creatures</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d3"><locus target="#29r" facs="031"/><desc><ref type="authFile" corresp="AT1005Crucifixion"/> with <persName ref="PRS6819Mary"/> and John standing beside the <term key="cross"/></desc></decoNote>
+                  <decoNote type="miniature" xml:id="d4"><locus target="#46v" facs="049"/><desc><ref type="authFile" corresp ="AT1049Resurrection"/>, raising <persName ref="PRS1386Adam"/> and <persName ref="PRS3926Eve"/> from the dead</desc></decoNote>
+                  <decoNote type="frame" xml:id="d5">
+                  Decorative designs:
+                  <locus target="#1r" facs="003"/> ornamental band;
+                  <locus target="#4v #6v" facs="007 009"/> multiple full stops and lines of alternating red and black dots;
+                  <locus target="#2r" facs="004"/> multiple full stops.
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <locus target="#ms_i1"/>
+                    <locus target="#1r #13r #14v #17v #18v" facs="003 015 017 020 021"/>
+                    <desc>Headings for the days of the week, Monday, Wednesday, Thursday, Friday, Saturday</desc>
+                    </item>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto) #iv(erso) #iir(ecto) #47r #47v #48r #48v" facs="001 002 049 050 051"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#46r" facs="048"/>
+                    text has been erased
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    Numbered quires: quires 3–6
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#6r #8r #12v #21v #26r" facs="008 010 015 024 028"/>, etc.);
+                      erasure markings are visible (<locus target="#7v #9v" facs="010 012"/>)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered with tooled leather.</decoNote>
@@ -148,6 +205,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2020-04-17" who="RL">corrected ǝ character</change>
          <change when="2020-12-31" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-01-21" who="ABe">Added ms_i1, minis 1-4, and e1-4</change>
+         <change when="2021-01-22" who="ABe">Added a1</change>
   </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
