@@ -5,6 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 316</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,19 +43,95 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 53</measure>
+                           <measure unit="quire">Protection sheet + 7</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>195</height>
+                              <width>125</width>
+                              <depth>34</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–2 and 6–7 balanced; quires 4–5 adjusted balanced; protection sheet and quires 3 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i" facs="001"></locus>
+                              <note>A folium stub appears between <locus target="#i #1" facs="002"/>.</note>
+                              Protection Sheet:
+                              1, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="002"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="010"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">5</dim>
+                              <locus from="17" to="21" facs="018"></locus>
+                              <note>A folium stub appears between <locus target="#19 #20" facs="021"/>.</note>
+                              Quire 3:
+                              3, stub after 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="22" to="29" facs="023"></locus>
+                              <note>Folium stubs appear between <locus target="#23 #24" facs="025"/> and between <locus target="#26 #27" facs="028"/>.</note>
+                              Quire 4:
+                              3, stub after 5
+                              6, stub after 2
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="30" to="39" facs="031"></locus>
+                              <note>Folium stubs appear between <locus target="#34 #35" facs="036"/> and between <locus target="#35 #36" facs="037"/>.</note>
+                              Quire 5:
+                              6, stub after 5
+                              5, stub after 6
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="40" to="49" facs="041"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">4</dim>
+                              <locus from="50" to="53" facs="051"></locus>
+                              Quire 7
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">19-21</dim>
+                           <dim type="bottom">28-34</dim>
+                           <dim type="right">12-16</dim>
+                           <dim type="left">12</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="20 23"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">1854-1861 (F. 18v mentions Our Bishop Abba Salama, አባ ሰላማ III, 1841-1867. F. 32r mentions the Coptic Patriarch Abba Qerlos (IV 1854-1861)</origDate>
+                     <origDate notBefore="1854" notAfter="1861"><locus target="#18v" facs="020"/> mentions Our Bishop Abba Salama, አባ ሰላማ III, 1841-1867. <locus target="#32r" facs="033"/> mentions the Coptic Patriarch Abba Qerlos (IV 1854-1861).</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +150,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2020-04-17" who="RL">corrected ǝ character</change>
+         <change when="2021-01-08" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
     </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

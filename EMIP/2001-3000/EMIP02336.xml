@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02336">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 304</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +32,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2336/">Weiner Codex 304</idno>
                </msIdentifier>
                <msContents>
-                  <summary>i v: Prayer to Saint Mary. F<locus target="#1r"/>-16r: Image of Saint George zä-Säläda Mogäs, መልክአ፡ ጊዮርጊስ፡ ዘሰሌዳ፡ ሞገስ፡. Répertoire 147. F<locus target="#16r"/> and passim mention the owner, ወልደ ማርያም as well as a secondary owner, ሣህለ ማርያም; F<locus target="#16v"/>-30r: Image of Michael, Mälk‘a Mika’el, መልክአ፡ ሚካኤል፡. Répertoire 119. MG 290ff. F<locus target="#30r"/>-39r: Image of Gabriel, Mälk‘a Gäbra’el, መልክአ፡ ገብርኤል፡, incipit: ሰላመ: መልአክ: ገብርኤል: በላዕለ: ማርያም: ዘአዕረፈ:. Répertoire 246</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
+                  <summary></summary>
+                  <msItem xml:id="ms_i1"><locus from="1r" to="17r" facs="003"/>
+                  <title type="complete" ref="LIT2866RepCh147"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                  <incipit xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ዘሰሌዳ፡ ሞገስ፡ መጽሐፉ፡</incipit>
                   </msItem>
-               </msContents>
+
+                  <msItem xml:id="ms_i2">
+                    <locus from="17v" to="31r" facs="020"/>
+                    <title type="complete" ref="LIT2835RepCh119"/>
+                    <incipit xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ምስለ፡ ስመ፡ ልዑል፡ ዘተሳተፈ፡</incipit>
+                  </msItem>
+
+                  <msItem xml:id="ms_i3">
+                    <locus from="31r" to="40r" facs="033"/>
+                    <title type="complete" ref="LIT2965RepCh246"/>
+                    <incipit xml:lang="gez">በሰላመ፡ ገብርኤል፡ መልአክ፡ በላእለ፡ ማርያም፡ ዘአእረፈ፡</incipit>
+                  </msItem>
+
+                  </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +59,132 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 40</measure>
+                           <measure unit="quire">Protection sheet + 4</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>112</height>
+                              <width>77</width>
+                              <depth>21</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–4 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="013"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30" facs="023"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40" facs="033"></locus>
+                              Quire 4
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">12-14</dim>
+                           <dim type="bottom">15-20</dim>
+                           <dim type="right">13</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="15 16"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ጊዮርጊስ፡</foreign>
+                  <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                  <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#1r #17r #40r" facs="003 019 042"/>, ornamental band
+                  </decoNote>
+                </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#iv(erso)" facs="002"/>
+                    Prayer to Mary
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto)" facs="001"/>
+                    Image of <locus target="6v #7r" facs="009"/> was missed in the initial digitization. Image has been added and foliation follows the corrected numbering
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#ir(ecto)" facs="001"/>
+                    several letters written in blue ink
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <desc>
+                    <locus target="#iir(ecto)" facs="002"/>
+                    several lines of text in different hands. These include the Trinitarian formula and the name Wäldä Mikaʾel (<foreign xml:lang="gez">ወልደ፡ ሚካኤል፡</foreign>)
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#iiv(erso) #40v" facs="003 043"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="a3">
+                    <desc type="OwnershipNote">
+                    <locus target="#17r" facs="019"> f. 17r and passim</locus>
+                    mention the owner, Wäldä Maryam (<foreign xml:lang="gez">ወልደ፡ ማርያም፡</foreign>), as well as a secondary owner, Śahǝlä Maryam (<foreign xml:lang="gez">ሣህለ፡ ማርያም፡</foreign>)
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#6r #7v #9r #9v #11r" facs="008 010 011 012 013"/>, etc.);
+                      erasure markings are visible (<locus target="#22r #24v" facs="024 027"/>);
+                      text has been removed (<locus target="#12r #14v #23v #24r #28r" facs="014 017 026 030"/>, etc.)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, back cover has broken and been repaired.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +203,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-12-29" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2021-01-21" who="ABe">Added ms_1-3, a1-3, and e1-3</change>
+                                    <change when="2021-01-25" who="ABe">Changed e1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
