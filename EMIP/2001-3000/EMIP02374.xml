@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02374">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 339</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,19 +43,74 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 27</measure>
+                           <measure unit="quire">Protection sheet + 4</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>192</height>
+                              <width>150</width>
+                              <depth>32</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–3 balanced; protection sheet and quire 4 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i" facs="001"></locus>
+                              <note>A folium stub appears before <locus target="#i" facs="001"/>.</note>
+                              Protection Sheet:
+                              1, stub before 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="002"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="010"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="018"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">3</dim>
+                              <locus from="25" to="27" facs="026"></locus>
+                              <note><locus target="#25" facs="026"/> has broken from the quire. It is possible that f. 25 was part of a sheet with a now lost f. 28. It is also possible that there was a folium stub attached to f. 25 that is now lost.</note>
+                              Quire 4:
+                              1 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">22</dim>
+                           <dim type="bottom">39-41</dim>
+                           <dim type="right">15-18</dim>
+                           <dim type="left">9</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="21 22"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, rebound in some disorder, both covers have broken and been repaired.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1800">l18-e19th</origDate>
+                     <origDate notBefore="1750" notAfter="1850">Late-eighteenth/early-nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +129,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2021-01-21" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
