@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02377">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 342</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,19 +43,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">iv + 119</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>180</height>
+                              <width>165</width>
+                              <depth>71</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Many folios are loose and rebound with stab stitch. A quire map is not possible.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">14-20</dim>
+                           <dim type="bottom">30-38</dim>
+                           <dim type="right">19-31</dim>
+                           <dim type="left">7-9</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="22 25">
+                         <locus from="1r" to="109v" facs="005"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="22 25">
+                         <locus from="110r" to="119v"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, back cover has broken and been repaired, rebound with stab stitch.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>19th</origDate>
+                     <origDate notBefore="1800" notAfter="1899">Nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +102,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2021-01-26" who="JS">Added ms dims, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

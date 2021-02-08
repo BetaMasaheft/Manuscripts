@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02316">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 302</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +33,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2316/">Weiner Codex 302</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-193v: Psalter .  The midpoint is marked with a small harag in the right margin. Psalm 151 is the short version. Song of Songs is the Common version. Several folios are missing between f<locus target="#185"/> and 186, thus the Praises of Mary are incomplete at the begining, missing most of the prayers fore Monday through Wednesday.  Gate of Light is incomplete at the end. f. i v: unidentified text, oriented upside down to the rest of the book.</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <summary>Psalter</summary>
+                <msItem xml:id="ms_i1">
+                  <locus from="1r" to="194v" facs="003"/>
+                  <title type="complete" ref="LIT2701Dawit"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                  <note>Psalm 118 does not contain the spiritual meanings of the Hebrew letters</note>
+
+                <msItem xml:id="ms_i1.1">
+                  <locus from="1r" to="158r" facs="003"/>
+                  <title type="complete" ref="LIT2000Mazmur"/>
+                </msItem>
+
+                <msItem xml:id="ms_i1.2">
+                <locus from="158r" to="177v" facs="160"/>
+                <title type="complete" ref= "LIT1828Mahale"/>
+                </msItem>
+
+                <msItem xml:id="ms_i1.3">
+                  <locus from="177v" to="185v" facs="180"/>
+                  <title type="complete" ref="LIT2362Songof"/>
+                </msItem>
+
+                <msItem xml:id="ms_i1.4">
+                  <locus from="186r" to="191v" facs="188"/>
+                  <title type="incomplete" ref="LIT2509Weddas"/>
+
+                <msItem xml:id="ms_i1.4.1">
+                  <locus from="186r" facs="188"/>
+                  <title>Thursday</title>
+                  <note>incomplete at beginning</note>
+                </msItem>
+
+                <msItem xml:id="ms_i1.4.2">
+                  <locus from="186r" facs="188"/>
+                  <title>Friday</title>
+                  <note>incomplete at the end</note>
+                </msItem>
+
+                <msItem xml:id="ms_i1.4.3">
+                  <locus from="188r" facs="190"/>
+                  <title>Saturday</title>
+                  <note>incomplete at the beginning</note>
+                </msItem>
+
+                <msItem xml:id="ms_i1.4.4">
+                  <locus from="189v" facs="192"/>
+                  <title>Sunday</title>
+                </msItem>
+                </msItem>
+
+                <msItem xml:id="ms_i1.5">
+                  <locus from="191v" to="194v" facs="194"/>
+                  <title type="incomplete" ref="LIT1113Anqasa"/>
+                  <note>Incomplete at the end</note>
+                </msItem>
+                </msItem>
+
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +98,130 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                          <measure unit="leaf">ii + 194</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                             <height>143</height>
+                             <width>124</width>
+                             <depth>82</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Many quires have been rebound and many folios are missing, making a quire map impossible.</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">19</dim>
+                           <dim type="bottom">31-35</dim>
+                           <dim type="right">16-20</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="15">
+                         <locus from="1r" to="185v" facs="003"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="15">
+                         <locus from="186r" to="194v" facs="188"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <ref target="#ms_i1.4 #ms_i1.5"/>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word God is not rubricated in the first three works; the word Mary is rubricated in the final two works</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#95v" facs="098"/><desc>crude drawing of a <ref type ="authFile" corresp="AT1071Cross"/> in purple ink</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#135r #138r" facs="137 140"/><desc>crude drawing of a face</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d3"><locus target="#185v #194r" facs="188 196"/><desc>ornamental band drawn with black ink in the bottom margin</desc></decoNote>
+                  <decoNote type="frame" xml:id="d4">
+                  Decorative designs:
+                  <locus target="#10r #28r #41r #50v #57r #68r #73r #87v #97r #104v #121r #137r #141r #149v #158r #177v #185v #186r #189v #191v" facs="012 030 043 053 059 070 075 090 099 107 123 139 143 152 160 180 188 192 194"/> (line of alternating red and black dots);
+                  <locus target="#41r #50v #73r #97r #104v #158r #177v #185v" facs="043 053 075 099 107 160 180 188"/> (multiple full stops)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    Image of <locus target="#186v #187r" facs="189"/> was missed in the initial digitization. Image has been added and foliation follows the corrected numbering
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#ir(ecto) #iv(erso) #iir(ecto)" facs="001 002"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#iiv(erso)" facs="003"/>
+                    unidentified text, oriented upside down to the rest of the codex. A great deal of the folio has been lost
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    <locus target="#81r" facs="083"/>
+                    The midpoint of the Psalms is marked with a small design in red and black ink
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    <locus target="#105v #106r #106v" facs="108 109"/>
+                    several lines of text in Amharic. Written in pencil
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    A number of notes written on paper in Amharic have been tucked into the codex
+                    </desc>
+                    </item>
+                    <item xml:id="e7">
+                    <desc>
+                    <locus target="#59r #80r #82r #82v" facs="061 082 084 085"/>
+                      There are a number of scrawls in purple ink throughout the codex
+                    </desc>
+                    </item>
+                    <item xml:id="e8">
+                    <desc>
+                    <locus target="#10 #28 #38 #57 #81 #92 #102 #113 #158" facs="012 030 040 059 083 094 104 115 160"/>
+                      red string stitched into fore edge as navigation system
+                    </desc>
+                    </item>
+                    <item xml:id="e9">
+                    <desc>
+                    Numbered quires: quires 4–5, 7, 3 (<locus target="#69r" facs="071"/>), 8–9, and 12–19
+                    </desc>
+                    </item>
+                    <item xml:id="e10">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#10v #13r #14r #18v #75r" facs="013 015 016 021 077"/>, etc.);
+                      lines of text are written interlinearly (<locus target="#181r" facs="183"/>);
+                      lines of text are written in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#98v" facs="101"/>);
+                      text has been removed (<locus target="#16v #18r #23v #31r #61v" facs="019 020 026 033 064"/>, etc.)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, three Coptic chain stitches attached with bridle attachments to a rough-hewn board of the traditional wood for the front cover, back cover is heavy leather.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1750">late-seventeenth century</origDate>
+                    <origDate notBefore="1650" notAfter="1699">Late-seventeenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +238,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+          <change when="2021-01-15" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+          <change when="2021-01-20" who="ABe">Added ms_1-1.5, minis 1-3, and e1-9</change>
+          <change when="2021-01-25" who="RL">Deleted note on arrangement for the days of the week in ms_i1.4, marked ms_i1.4 as incomplete</change>
+          <change when="2021-01-25" who="ABe">Updated e1 and added note to ms_1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
