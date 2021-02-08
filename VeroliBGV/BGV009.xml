@@ -57,7 +57,42 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <idno>Zanutto 9</idno>
                   </altIdentifier>
                </msIdentifier>
-          
+               
+               
+               <!--
+               BGV009 is a composite MS containing the Vita and Miracles of ʾEwosṭātewos. It has three codicological units p1, p2, and p3.
+               A certain text (LIT3073RepCh353) begins in the last folios of p1 and continues on p2. This happened because another codicological unit (a simple bifolium) was 
+               added at the end of p1 but the scribe decided, for several reasons (textual continuity, to save space), to start writing from the first available leaf, that is at the end of p1.
+               I had to state type="incomplete" because each codicological unit contains only a part of the text, even though the text is overall complete and runs without interruption.
+               The explicit of p1_i2 just coincides arbitrarily with the final lines of p1 (in this case a given word አንቀልቀላ። is split into the two parts), and the incipit of p2_i1 
+               similarly coincides with the first lines at the beginning of p2. But the text is NOT incomplete or acephalous.
+               In most cases textual units are simple submultiples of codicological units, so that the codicological subvidision forms the upper level and the textual subdivision the 
+               lower level, but here there's an overlap between the codicological and the textual sequences.
+               
+               Pietro suggests (issue #1692):
+               since there is no assumption AFAIK that a msPart is defined on the basis of a material unit of production, you could have, for example a production unit, thus a msPart, 
+               which only contains your text and is defined on the basis of content.
+               You would have, e.g. msPart[@xml:id='p1'] with the msItem[@xml:id='p1_i3'] as above, a msPart[@xml:id='p2'] with the msItem[@xml:id='p2_i1'] which is your 
+               complete text, this msPart not having further definition of support and a msPart[@xml:id='p3'] with the msItem[@xml:id='p3_i1'] which lists the end of 
+               LIT3073RepCh353 as you have now. Two units defined on a material base, one defined by content. You could also use ref[@type='msPart'] to relate these.
+               An additional set of structural relation elements could also be considered, to state what happens (addition of content and material) with respect to the first production unit.
+
+<relation active="BGV009#p1" name="sdc:constituteUnite" passive="BGV009#UniProd1"/>
+<relation active="BGV009#p1" name="sdc:constituteUnite" passive="BGV009#UniMat1"/>
+<relation active="BGV009#p2" name="sdc:constituteUnite" passive="BGV009#UniProd2"/>
+<relation active="BGV009#p2" name="sdc:constituteUnite" passive="BGV009#UniCont1"/>
+<relation active="BGV009#p3" name="sdc:constituteUnite" passive="BGV009#UniProd2"/>
+<relation active="BGV009#p3" name="sdc:constituteUnite" passive="BGV009#UniMat2"/>
+<relation active="BGV009#UniProd1" name="sdc:undergoesTransformation" passive="BGV009#tr1"/>
+<relation active="BGV009#UniProd2" name="sdc:undergoesTransformation" passive="BGV009#tr1"/>
+<relation active="BGV009#tr1" name="sdc:hasTransformationModel" passive="sdc:A2">
+        <desc>This a transformation A2 Addition of material support and content.</desc>
+    </relation>
+    
+         In terms of presentation in print, this encoding can be used prioritizing content or units as desired, and can be made into a static rule. e.g. listing contents and grouping 
+         them by title/@ref.
+               -->
+               
               <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
