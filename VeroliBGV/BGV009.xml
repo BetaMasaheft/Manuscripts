@@ -57,42 +57,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <idno>Zanutto 9</idno>
                   </altIdentifier>
                </msIdentifier>
-               
-               
-               <!--
-               BGV009 is a composite MS containing the Vita and Miracles of ʾEwosṭātewos. It has three codicological units p1, p2, and p3.
-               A certain text (LIT3073RepCh353) begins in the last folios of p1 and continues on p2. This happened because another codicological unit (a simple bifolium) was 
-               added at the end of p1 but the scribe decided, for several reasons (textual continuity, to save space), to start writing from the first available leaf, that is at the end of p1.
-               I had to state type="incomplete" because each codicological unit contains only a part of the text, even though the text is overall complete and runs without interruption.
-               The explicit of p1_i2 just coincides arbitrarily with the final lines of p1 (in this case a given word አንቀልቀላ። is split into the two parts), and the incipit of p2_i1 
-               similarly coincides with the first lines at the beginning of p2. But the text is NOT incomplete or acephalous.
-               In most cases textual units are simple submultiples of codicological units, so that the codicological subvidision forms the upper level and the textual subdivision the 
-               lower level, but here there's an overlap between the codicological and the textual sequences.
-               
-               Pietro suggests (issue #1692):
-               since there is no assumption AFAIK that a msPart is defined on the basis of a material unit of production, you could have, for example a production unit, thus a msPart, 
-               which only contains your text and is defined on the basis of content.
-               You would have, e.g. msPart[@xml:id='p1'] with the msItem[@xml:id='p1_i3'] as above, a msPart[@xml:id='p2'] with the msItem[@xml:id='p2_i1'] which is your 
-               complete text, this msPart not having further definition of support and a msPart[@xml:id='p3'] with the msItem[@xml:id='p3_i1'] which lists the end of 
-               LIT3073RepCh353 as you have now. Two units defined on a material base, one defined by content. You could also use ref[@type='msPart'] to relate these.
-               An additional set of structural relation elements could also be considered, to state what happens (addition of content and material) with respect to the first production unit.
-
-<relation active="BGV009#p1" name="sdc:constituteUnite" passive="BGV009#UniProd1"/>
-<relation active="BGV009#p1" name="sdc:constituteUnite" passive="BGV009#UniMat1"/>
-<relation active="BGV009#p2" name="sdc:constituteUnite" passive="BGV009#UniProd2"/>
-<relation active="BGV009#p2" name="sdc:constituteUnite" passive="BGV009#UniCont1"/>
-<relation active="BGV009#p3" name="sdc:constituteUnite" passive="BGV009#UniProd2"/>
-<relation active="BGV009#p3" name="sdc:constituteUnite" passive="BGV009#UniMat2"/>
-<relation active="BGV009#UniProd1" name="sdc:undergoesTransformation" passive="BGV009#tr1"/>
-<relation active="BGV009#UniProd2" name="sdc:undergoesTransformation" passive="BGV009#tr1"/>
-<relation active="BGV009#tr1" name="sdc:hasTransformationModel" passive="sdc:A2">
-        <desc>This a transformation A2 Addition of material support and content.</desc>
-    </relation>
-    
-         In terms of presentation in print, this encoding can be used prioritizing content or units as desired, and can be made into a static rule. e.g. listing contents and grouping 
-         them by title/@ref.
-               -->
-               
+          
               <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
@@ -610,10 +575,29 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <locus target="#75vb"/>
                            <hi rend="rubric">አመ</hi>፡ አድባራት፡ ሮጸ፡ እምቅዋሞን፡ ወአመ፡ እምድሮን፡ አንቀ
                         </explicit>
-                        <note>The text is written in another hand (cf. <ref target="#h2"/>) on an originally blank leaf. It continues on <ref target="#p2"/> (<locus from="76ra" to="77ra"/>).</note>
+                        <note>
+                           The text is written in another hand (cf. <ref target="#h2"/>) on an originally blank leaf. It continues on <ref target="#p3"/> (<locus from="76ra" to="77ra"/>).
+                           This happened because another codicological unit (a simple bifolium) was added at the end of <ref target="#p1"/>, but the scribe decided for several reasons 
+                           (textual continuity, to save space) to start writing from the first available leaf, that is <locus target="#75ra"/>.
+                          Each codicological unit contains only a part of the text, even though the text is overall complete and runs without interruption.
+                          The explicit of <ref target="#p1_i2"/> coincides with the last words at the bottom of the page. Here the word <foreign xml:lang="gez">አንቀልቀላ።</foreign> 
+                           is split into between <ref target="#p1_i2"/> and <ref target="#p3_i1"/>.
+                        </note>
+                        <listRelation>
+                           <relation active="BGV009#p1" name="sdc:constituteUnite" passive="BGV009#UniProd1"/>
+                           <relation active="BGV009#p1" name="sdc:constituteUnite" passive="BGV009#UniMat1"/>
+                           <relation active="BGV009#p2" name="sdc:constituteUnite" passive="BGV009#UniProd2"/>
+                           <relation active="BGV009#p2" name="sdc:constituteUnite" passive="BGV009#UniCont1"/>
+                           <relation active="BGV009#p3" name="sdc:constituteUnite" passive="BGV009#UniProd2"/>
+                           <relation active="BGV009#p3" name="sdc:constituteUnite" passive="BGV009#UniMat2"/>
+                           <relation active="BGV009#UniProd1" name="sdc:undergoesTransformation" passive="BGV009#tr1"/>
+                           <relation active="BGV009#UniProd2" name="sdc:undergoesTransformation" passive="BGV009#tr1"/>
+                           <relation active="BGV009#tr1" name="sdc:hasTransformationModel" passive="sdc:A2">
+                              <desc>This a transformation A2 Addition of material support and content.</desc>
+                           </relation>
+                        </listRelation>
                      </msItem>
                   </msContents>
-                  
                   <physDesc>
                      <objectDesc form="Codex">
                         <supportDesc>
@@ -746,7 +730,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               Characters are distributed in a slightly irregular fashion on the writing line.
                            </desc>
                            <seg type="rubrication">
-                              Several lines on the incipit page of <ref target="#p2_i1"/> (<locus target=" #75r"/>); holy names; some single words throughout the text;
+                              Several lines on the incipit page of <ref target="#p3_i1"/> (<locus target=" #75r"/>); holy names; some single words throughout the text;
                               elements of the punctuation signs.
                            </seg>
                           </handNote>
@@ -805,12 +789,44 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </history>
                </msPart>
           
-                  <msPart xml:id="p2">
+               <msPart xml:id="p2">
                   <msIdentifier>
                   </msIdentifier>
                   <msContents>
                      <summary/>
                      <msItem xml:id="p2_i1">
+                        <locus from="75ra" to="77ra"/>
+                        <title type="complete" ref="LIT3073RepCh353"/>
+                        <textLang xml:lang="gez"/>
+                        <!-- This msPart is NOT a codicological unit. It includes the complete text split between p1 and p3: while p1 and p3 are defined on a material basis,
+                           p2 is defined by content.-->
+                        <incipit xml:lang="gez">
+                           <locus target="#75ra"/>
+                           <hi rend="rubric">እንዘ፡ ሀሎ<add place="above">ኩ</add>፡ በተሰዶ፡ ወበተምቅሖ፡ ዕፁብ። ተዝካረ፡ ዕድወትከ፡ እዜኑ፡ ለአሕ</hi>ዛብ፡ ወሕዝብ።
+                           <hi rend="rubric">ኤዎስጣቴዎስ፡</hi> ሀበኒ፡ ልሳነ፡ አግአዚት፡ ጥበብ። ወአንበር፡ ዲበ፡ ርእስየ፡ ምስለ፡ ቃለ፡ ሐዲስ፡ ንባብ። መንፈስ፡ በአ<add place="above">ም</add>ሳል፡
+                           ርእየተ፡ ርግብ።
+                        </incipit>
+                        <explicit xml:lang="gez">
+                           <locus target="#77ra"/>
+                           እንዘ፡ ትትኬነስ፡ ደሴተ፡ ቆጵሮስ፡ ለብፁዕ፡ ኤ<hi rend="rubric">ዎስ<supplied reason="omitted" resp="MV">ጣ</supplied>ቴዎስ<supplied reason="omitted" resp="MV">፡</supplied></hi>
+                           ከመ፡ እሌኒ፡ ንግሥት፡ መስቀለ፡ ኢየሱስ፡ ኀሣሤ፡ ወከመ፡ ቶማስ፡ ሐዋ<add place="interlinear">ር</add>ያ፡ አጽልዕተ፡ ገቦሁ፡ ገሣሤ፡ 
+                           ኤ<hi rend="rubric">ዎስጣቴዎስ፡</hi> ዜናዊ፡ ሃይማኖተ፡ ቅድ<surplus>ድ</surplus>ስት፡ ሥላሴ፡ አባ፡ አባ፡ አሣዕኒከ፡ ብናሴ፡ አባ፡ ከፋሌ፡ ባሕር፡ ዳግማይ፡ ሙሴ።
+                        </explicit>
+                        <explicit xml:lang="gez" type="supplication">
+                           <locus target="#77ra"/>
+                           ጸሎቱ፡ ወበረከቱ፡ ለአቡነ፡ ኤ<hi rend="rubric">ዎስጣቴዎስ<supplied reason="omitted" resp="MV">፡</supplied></hi> የሀሉ፡ ምስለ፡ ገብሩ፡ ገድለ፡
+                        </explicit>
+                     </msItem>
+                  </msContents>
+               </msPart>
+          
+          
+                  <msPart xml:id="p3">
+                  <msIdentifier>
+                  </msIdentifier>
+                  <msContents>
+                     <summary/>
+                     <msItem xml:id="p3_i1">
                         <locus from="76ra" to="77ra"/>
                         <title type="incomplete" ref="LIT3073RepCh353"/>
                         <textLang xml:lang="gez"/>
@@ -901,15 +917,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </history>
                </msPart>
                
-               <msPart xml:id="p3">
+               <msPart xml:id="p4">
                   <msIdentifier>
                   </msIdentifier>
                   <msContents>
                      <summary/>
-                     <msItem xml:id="p3_i1">
+                     <msItem xml:id="p4_i1">
                         <locus from="78ra" to="87vb"/>
                         <title ref="LIT4315Miracles"/>
-                        <msItem xml:id="p3_i1.1">
+                        <msItem xml:id="p4_i1.1">
                            <locus from="78ra" to="81ra"/>
                            <title type="complete" ref="LIT6365MESick"/>
                            <textLang xml:lang="gez"/>
@@ -933,7 +949,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               በእንተ፡ ጽድቅ፡ ለሥጋሁ፡ ወነፍሱ፡ ዘቀነያ። ወአንደያ። ኮነ፡ ዝንቱ፡ መድምመ፡ ወኢተሐሰወ፡ እስመ፡ ነገረነ፡ አእይንቲሁ፡ ዘርእያ፡ ወበእዘኒሁ፡ ዘሰምዓ።
                            </explicit>
                         </msItem>
-                        <msItem xml:id="p3_i1.2">
+                        <msItem xml:id="p4_i1.2">
                            <locus from="81ra" to="87vb"/>
                            <title type="complete" ref="LIT6366MEDeath"/>
                            <textLang xml:lang="gez"/>
@@ -1014,7 +1030,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               </dimensions>
                               <note> The characters per line are 9–12.</note>
                               <ab type="punctuation" subtype="Dividers">
-                                 A chain of red and black dots at the end of <ref target="#p3_i2"/>, on <locus target="#87vb"/>.
+                                 A chain of red and black dots at the end of <ref target="#p4_i2"/>, on <locus target="#87vb"/>.
                               </ab>
                               <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
                               <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
@@ -1030,7 +1046,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <date notBefore="1800" notAfter="1900">19th-century writing.</date>
                            <desc>Decent handwriting.</desc>
                            <seg type="rubrication">
-                              Two lines of the incipits of  groups of lines on the incipit page of <ref target="#p3_i1"/> on <locus target=" #78ra"/> and <ref target="#p3_i2"/> on 
+                              Two lines of the incipits of  groups of lines on the incipit page of <ref target="#p4_i1"/> on <locus target=" #78ra"/> and <ref target="#p4_i2"/> on 
                               <locus target=" #81ra"/>; holy names; name of <persName ref="PRS13338WalattaAm"/>; elements of the punctuation signs and of the numerals.
                            </seg>
                         </handNote>
@@ -1101,6 +1117,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="MV" when="2021-01-19">Binding; typed incipit and explicit of p1</change>
          <change who="MV" when="2021-01-24">Added p2 and p3</change>
          <change who="MV" when="2021-01-25">Conservation; handDesc h1, h2, h3; scribal practices</change>
+         <change who="MV" when="2021-02-10">Added new msPart and fixed relations</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
