@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Weiner Codex 307</title>
             <editor key="JS"></editor>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,10 +32,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2339/">Weiner Codex 307</idno>
                </msIdentifier>
                <msContents>
-                  <summary>Ff. i v-iii r: excerpt On the Faith of the Orthodox Church, in Amharic. F<locus target="#1r"/>-43r: On the Passion of the Cross, Ḥǝmamatä Mäsqäl,  በእንተ፡ ሕማማተ፡ መስቀል፡, in Amharic. <locus target="#43r"/> mentions the owner, ወልደ ጊዮርጊስ. <locus target="#44r"/>. has a note in the Tigreñña language.</summary>
+                  <summary></summary>
                   <msItem xml:id="ms_i1">
-                     <textLang>Amharic</textLang>
-                  </msItem>
+                    <locus from="1r" to="43r" facs="004"/>
+                    <title>On the Passion of the Cross, Bäʾəntä Ḥǝmamatä Mäsqäl, በእንተ፡ ሕማማተ፡ መስቀል፡</title>
+                    <textLang mainLang="am" otherLangs="gez">Amharic commentary on Gǝ'ǝz text</textLang></msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -111,6 +113,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        <layout columns="2" writtenLines="20"/>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ማርያም፡</foreign><foreign xml:lang="gez">ኢየሱስ፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#ir" facs="001"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/>, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#iiiv" facs="004"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with two <term key="angel"/>, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d3"><locus target="#24r" facs="027"/><desc><ref type="authFile" corresp="AT1005Crucifixion"/> with <persName ref="PRS6819Mary"/> and <persName ref="PRS5695John"/> standing beside the cross, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d4"><locus target="#43v" facs="047"/><desc><ref type="authFile" corresp ="AT1049Resurrection"/>, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d5"><locus target="#44v" facs="048"/><desc>Geometric patterns <ref type="authFile" corresp ="AT1109GeometricPatterns"/>, reminiscent of the evil eye, painted over text</desc></decoNote>
+                  <decoNote type="frame" xml:id="d6">
+                    Decorative designs: <locus target="#1r" facs="004"/>, ornamental band;
+                    <locus target="#28r" facs="031"/>, lines of black dots;
+                    <locus target="#43r" facs="046"/>, multiple full stops and a line of black dots;
+                    <locus target="#44r" facs="047"/>, multiple full stops</decoNote>
+                </decoDesc>
+                <additions><list>
+                  <item xml:id="a1"><desc type="GuestText" xml:lang="am"><locus target="#iv #iir #iiv #iiir" facs="002 003"/> excerpt <q>On the Faith of the Orthodox Church</q>, in Amharic. Possibly related to <ref type="work" corresp="LIT1584Hayman"/>. The first folio and last folios of text have been painted over.</desc></item>
+                  <item xml:id="a2"><desc type="OwnershipNote"><locus target="#43r" facs="046"/>Mentions the owner, Wäldä Giyorgis (<foreign xml:lang="gez">ወልደ፡ ጊዮርጊስ፡</foreign>)</desc></item>
+                  <item xml:id="a3"><desc type="GuestText" xml:lang="gez"><locus target="#44r" facs="047"/>Unidentified text in Amharic. Incomplete at the beginning</desc></item>
+                  <item xml:id="a4"><desc xml:lang="ti"><locus target="#44r" facs="047"/> note in Tigreñña </desc></item>
+                  <item xml:id="e1"><desc>Scribal intervention: words of text are written interlinearly <locus target="#4v #7r #10r #10v #12r" facs="008 010 013 014 015"/>, etc.;
+                    and in the upper margin with a symbol (+) marking the location where the text is to be inserted <locus target="#36r" facs="039"/>;
+                    text has been removed <locus target="#2r #2v #3r #3v #4r" facs="005 005 007"/>, etc.</desc></item>
+</list></additions>
+
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to boards covered with tooled leather, boards may be planed wood rather than rough-hewn.</decoNote>
@@ -141,9 +166,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2020-12-30" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2020-12-30" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-02-09" who="RL">Added ms i1, decorations d1-d6, addition items a1-14, e1, handnote</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
