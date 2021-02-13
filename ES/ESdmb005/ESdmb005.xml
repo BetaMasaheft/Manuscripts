@@ -175,7 +175,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <ab type="pricking"> Ruling pricks are visible. </ab>
                            <ab type="ruling"> The upper line is written above the ruling.</ab>
                            <ab type="ruling"> The bottom line is written above the ruling.</ab>
-                           <ab> </ab>
                            <ab type="ruling"> The column width is irregular on some fols. (e.g.,
                                  <locus target="#45r">45r</locus>, 79r, 104r-105v) due to ruling
                               mistakes.</ab>
@@ -327,11 +326,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="SH" when="2014-11-11">catalogued</change>
          <change who="SH" when="2014-12-18">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change when="2021-02-13" who="PL">added text from transkribus and facsimile with xi:include</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+      href="facsimile.xml">
+      <xi:fallback>
+         <!-- facsimile -->
+      </xi:fallback>
+   </xi:include>
+   <text>
       <body>
-         <ab/>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+            href="transkribusText.xml">
+            <xi:fallback>
+               <!-- transcribus text-->
+            </xi:fallback>
+         </xi:include>
       </body>
    </text>
 </TEI>
