@@ -302,11 +302,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
          <change when="2019-05-02" who="ES">adjusted to schema</change>
          <change when="2020-08-20" who="ES">facs added</change>
+         <change when="2021-02-16" who="PL">added text from transkribus and facsimile with xi:include</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+      href="facsimile.xml">
+      <xi:fallback>
+         <!-- facsimile -->
+      </xi:fallback>
+   </xi:include>
+   <text >
       <body>
-         <ab/>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+            href="transkribusText.xml">
+            <xi:fallback>
+               <!-- transcribus text-->
+            </xi:fallback>
+         </xi:include>
       </body>
    </text>
 </TEI>
