@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 314</title>
-            <editor key="JS"></editor>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,9 +32,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2346/">Weiner Codex 314</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-52r: Commentary on the Ten Commandments by Seven Scholarly Monks, in Amharic. Incipit: ዝንቱ ምዕዳን ዘአስተጋብዕዎ ፯ቱ ቅዱሳን መነኮሳት. F<locus target="#52v"/>-93r: On the Passion of the Cross, Ḥǝmamatä Mäsqäl,  [በእንተ፡] ሕማማተ፡ መስቀል፡, in Amharic, cf. EMIP 278., <locus target="#52r"/> mentions the owner, Walda Maryam.</summary>
+                  <summary></summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="52r" facs="006"/>
+                    <title type="complete" ref="LIT4014Medan"/>
+                    <textLang xml:lang="am">Amharic</textLang>
+                    <incipit xml:lang="am">ዝንቱ፡ ምዕዳን፡ ምዕዳን፡ ዘአስተጋብዕዎ፡ ፯ቱ፡ ቅዱሳን፡ መነኮሳት፡</incipit>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                    <locus from="52v" to="93r" facs="058"/>
+                    <title type="complete" ref="LIT6376Suffering"/>
                   </msItem>
                </msContents>
                <physDesc>
@@ -123,6 +131,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        <layout columns="2" writtenLines="16"/>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic">
+                      <seg type="rubrication">
+                        <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                        <foreign xml:lang="gez">ማርያም፡</foreign>
+                        <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                        <note>The names of the biblical works that serve as source material are rubricated</note>
+                      </seg>
+                    </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1">
+                      Decorative designs: <locus target="#37v #49r #52r #93r" facs="043 054 057 098"/>, multiple full stops</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e1"><desc><locus target="#ir #vr" facs="001 005"/>Isolated words and pen trials</desc></item>
+                      <item xml:id="e2"><desc><locus target="#iv #iir #iiv #iiir #iiiv #ivr #ivv #vv #93v" facs="002 003 004 005 006 099"/>Blank</desc></item>
+                      <item xml:id="a1"><desc type="OwnershipNote"><locus target="#52r #93r" facs="058 098"/> mention the owner Wäldä Maryam <foreign xml:lang="gez">ወልደ፡ ማርያም፡</foreign></desc></item>
+                      <item xml:id="e3"><desc>Numberer quires 1–2; a later hand has numbered quires 2–9.</desc></item>
+                      <item xml:id="e4"><desc>
+                        Scribal intervention:
+                        words of text are written interlinearly, <locus target="#4r #6r #6v #7r #8r" facs="009 011 012 012 013"/>, etc.;
+                        and in the upper margin with a symbol (┴) marking the location where the text is to be inserted, <locus target="#14v #36v #54r #76v #83r" facs="020 042 082 088"/>,
+                        and in another case where the symbol (+) is used, <locus target="#55v" facs="061"/>;
+                        erasure markings are visible, <locus target="#56v" facs="062"/>;
+                        text has been removed <locus target="#2r #3v #7r #9v #16r" facs="007 009 012 015 021"/>, etc.</desc></item>
+                    </list>
+                  </additions>
+
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
@@ -152,9 +190,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2021-01-07" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2021-01-07" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-02-26" who="RL">Added ms i1, decoration d1, additions e1-e4, a1, handnote</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
