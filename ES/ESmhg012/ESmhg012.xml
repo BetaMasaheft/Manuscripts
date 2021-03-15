@@ -154,10 +154,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <ab type="pricking"> Ruling pricks are visible.</ab>
                            <ab type="ruling"> The upper line is written above the ruling.</ab>
                            <ab type="ruling"> The bottom line is written above the ruling.</ab>
-                           <ab> </ab>
                            <ab type="ruling"> The scribe disregarded the ruling line on <locus target="#71va">71va</locus>, ls. 1-4.</ab>
                            <ab type="ruling"> The ruling on fol. 1 has been done crudely.</ab>
-                           <ab>
+                           <ab type="ruling">
                               <locus target="#97">97</locus> is partly unruled.</ab>
                         </layout>
                         <layout/>
@@ -388,9 +387,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+      href="facsimile.xml">
+      <xi:fallback>
+         <!-- facsimile -->
+      </xi:fallback>
+   </xi:include>
+   <text >
       <body>
-         <ab/>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+            href="transkribusText.xml">
+            <xi:fallback>
+               <!-- transcribus text-->
+            </xi:fallback>
+         </xi:include>
       </body>
    </text>
 </TEI>
