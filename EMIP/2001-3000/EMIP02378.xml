@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Weiner Codex 343</title>
             <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -33,9 +34,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>Chants called Zimmare for the whole year, 20th c, with musical notation. with very nice cloth book cover that envelops foredge and spine, etc. F. iv r: The chant of Christmas, with musical notation, written in blue ink.</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="37v" facs="005"/>
+                    <title type="complete" ref="LIT2610Zemmar"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                    <note>Chants for the whole year. Includes musical notation</note>
                   </msItem>
-               </msContents>
+                  <msItem xml:id="ms_i2">
+                    <locus from="38r" to="116r" facs="042"/>
+                  <title type="complete" ref="LIT1990Mawase"/>
+                  <note>Includes musical notation</note>
+                  </msItem>
+                  </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -144,6 +153,62 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        <layout columns="2" writtenLines="16"/>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">መንፈስ፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                  <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type ="frame" xml:id="d1">
+                  Decorative designs:
+                  <locus target="#23r #37v #116r" facs="027 042 120"/> (multiple full stops);
+                  <locus target="#39r" facs="043"/> and several times in <locus target="#96v #97r #97v #98r #98v #99r #99v #100r #100v #101r #101v #102r #102v #103r #103v #104r #104v #105r #105v #106r #106v #107r #107v #108r #108v #109r #109v #110r #110v #111r #111v #112r" facs="101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116"/> (line of alternating red and black dots).
+                </decoNote>
+              </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto)" facs="001"/>
+                    pen trials in blue ink
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#iv(erso) #iir(ecto) #iiv(erso) #iiir(ecto) #iiiv(erso) #ivv(erso) #95r #95v #116v #117r #117v #118r #118v #119r #119v" facs="002 003 004 005 099 100 121 122 123 124"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#ivr(ecto)" facs="004"/>
+                    The chant of Christmas, with musical notation, written in blue ink
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <desc type="OwnershipNote">
+                    <locus target="#37v" facs="042"/>
+                    note of ownership, <q>“This book belongs to the chief märigeta, who is Gäbrä Maryam.”</q>
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    Numbered quires: quires 2–4 numbered in Arabic numerals
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                      words of text are written in the upper margin with a symbol (+) marking the location where the text is to be inserted (<locus target="#99v #102v" facs="104 107"/>);
+                      text has been removed (<locus target="#26v #46v #71r #93v" facs="031 051 075 098"/>)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, half-bound with tooled leather, headband and tailband visible, cloth cover wraps the entire codex along with a strap to wrap the fore edge.</decoNote>
@@ -178,6 +243,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2021-01-26" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2021-03-09" who="ABe">Added ms_i1-2, a1-2, and e1-4</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

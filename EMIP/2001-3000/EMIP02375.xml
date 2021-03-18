@@ -5,7 +5,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 340</title>
-            <editor key="JS"></editor>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -33,7 +34,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>Horologium of Abba Giyorgis for the night Hours, arranged for the days of the week: Monday (<locus target="#1r"/>), Tue (<locus target="#8r"/>), Wednesday (<locus target="#16v"/>), Thursday (<locus target="#25r"/>), Friday (<locus target="#34r"/>), Sunday (<locus target="#46r"/>).  Min of Tourism number H3-IV-417. F. i r: note of secondary ownership in blue ink, mentioning a date in the month of Ter, 1953. Three of the images are blurred.</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="55r" facs="003"/>
+                    <title type="complete" ref="LIT3575Mashaf"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                      <msItem xml:id="ms_i1.1"><locus from="1r" facs="003"/><title>Monday</title></msItem>
+                      <msItem xml:id="ms_i1.2"><locus from="8r" facs="010"/><title>Tuesday</title></msItem>
+                      <msItem xml:id="ms_i1.3"><locus from="16v" facs="019"/><title>Wednesday</title></msItem>
+                      <msItem xml:id="ms_i1.4"><locus from="25r" facs="027"/><title>Thursday</title></msItem>
+                      <msItem xml:id="ms_i1.5"><locus from="33v" facs="036"/><title>Friday</title></msItem>
+                      <msItem xml:id="ms_i1.6"><locus from="42v" facs="045"/><title>Saturday </title></msItem>
+                      <msItem xml:id="ms_i1.7"><locus from="47r" facs="049"/><title>Sunday</title></msItem>
                   </msItem>
                </msContents>
                <physDesc>
@@ -124,6 +134,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        <layout columns="2" writtenLines="12 14"/>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic">
+                      <seg type="rubrication">
+                        <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                        <foreign xml:lang="gez">ማርያም፡</foreign>
+                        <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
+                        <foreign xml:lang="gez">መንፈስ፡ ቅዱስ፡</foreign>
+                      </seg>
+                    </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1">
+                      Decorative designs: <locus target="#23v #52r" facs="026 054"/>, multiple full stops</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a1"><desc type="OwnershipNote"><locus target="#ir" facs="001"/> note of secondary ownership in blue ink, mentioning a date in Ṭərr, 1953.</desc></item>
+                      <item xml:id="e1"><desc><locus target="#iv #55v" facs="002 058"/> blank</desc></item>
+                      <item xml:id="a2"><desc><locus target="#iir" facs="002"/> note in blue ink mentioning <q>Ṗäwlos</q> and <q>14x11</q></desc></item>
+                      <item xml:id="e2"><desc><locus target="#iiv" facs="003"/> erased text written in black ink</desc></item>
+                      <item xml:id="e3">
+                      <desc>Ministry of Tourism number H3-IV-417
+                        <rs type="inline">
+                          <graphic xml:id="g1" url="https://betamasaheft.eu/iiif/EMIP/Codices/2375/058.tif/full/full/0/default.jpg"></graphic>
+                        </rs>
+                      </desc>
+                    </item>
+                      <item xml:id="e4"><desc>Numbered quires 3–7.</desc></item>
+                      <item xml:id="e5"><desc>
+                        Scribal intervention:
+                        words of text are written interlinearly <locus target="#2r #5r #7r #11v #12r" facs="004 007 009 014"/>, etc.;
+                        erasure markings are visible <locus target="#10v #18r #24r" facs="013 020 026"/></desc>
+                      </item>
+                    </list>
+                  </additions>
                   <bindingDesc>
                     <binding xml:id="binding" contemporary="true">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
@@ -153,9 +198,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2021-01-25" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2021-01-25" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-03-12" who="RL">Added ms i 1, with sub items, decoration d1, additions e1-e5, a1, a2</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
