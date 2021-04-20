@@ -368,12 +368,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DN" when="2011-05-20">Ethio-SPaRe team photographed the manuscript</change>
          <change who="AA" when="2014-07-10">catalogued</change>
          <change who="AA" when="2014-11-12">last edited</change>
-         <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>    
+         <change when="2021-04-19" who="GC">aligned images in Transkribus</change>
+         <change when="2021-04-20" who="PL">transformed Transkribus export in TEI to BM added facsimile and transkribus text, split file with xinclude</change>
+         
       </revisionDesc>
-   </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   </teiHeader><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+      href="facsimile.xml">
+      <xi:fallback>
+         <!-- facsimile -->
+      </xi:fallback>
+   </xi:include>
+   <text >
       <body>
-         <ab/>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+            href="transkribusText.xml">
+            <xi:fallback>
+               <!-- transcribus text-->
+            </xi:fallback>
+         </xi:include>
       </body>
    </text>
 </TEI>
