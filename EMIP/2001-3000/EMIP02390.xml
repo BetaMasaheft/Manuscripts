@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02390">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -69,7 +69,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       </encodingDesc>
       <profileDesc>
          <langUsage><language ident="en">English</language></langUsage>
-      </profileDesc>
+      </profileDesc>        <listRelation>
+                <relation active="EMIP02390#UniCirc1" name="sdc:undergoesTransformation" passive="EMIP02390#tr1"/>
+                <relation active="EMIP02389#UniCirc1" name="skos:exactMatch" passive="EMIP02390#UniCirc1"/>
+                <relation active="EMIP02390#tr1" name="skos:exactMatch" passive="EMIP02389#tr1"/>
+                <relation active="EMIP02390#tr1" name="sdc:hasTransformationModel" passive="sdc:D3"/>
+                <relation active="EMIP02390#UniCirc1" name="dcterms:hasPart" passive="EMIP02389 EMIP02390 EMIP02391"></relation>
+                <relation active="EMIP02390#tr1" name="sdc:resultsIn" passive="EMIP02390#UniCirc2"/>
+                <relation active="EMIP02389#tr1" name="sdc:resultsIn" passive="EMIP02390#UniCirc3"/>
+                <relation active="EMIP02389#tr1" name="sdc:resultsIn" passive="EMIP02390#UniCirc4"/>
+                <relation active="EMIP02390#UniCirc2" name="skos:exactMatch" passive="EMIP02389"/>
+                <relation active="EMIP02390#UniCirc3" name="skos:exactMatch" passive="EMIP02390"/>
+                <relation active="EMIP02390#UniCirc4" name="skos:exactMatch" passive="EMIP02391"/>
+              </listRelation>
+
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
@@ -77,6 +90,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+        <listRelation>
+          <relation active="EMIP02390#UniCirc1" name="sdc:undergoesTransformation" passive="EMIP02390#tr1"/>
+          <relation active="EMIP02389#UniCirc1" name="skos:exactMatch" passive="EMIP02390#UniCirc1 EMIP02391#UniCirc1"/>
+          <relation active="EMIP02390#tr1" name="skos:exactMatch" passive="EMIP02389#tr1 EMIP02391#tr1"/>
+          <relation active="EMIP02390#tr1" name="sdc:hasTransformationModel" passive="sdc:D3"/>
+          <relation active="EMIP02390#UniCirc1" name="dcterms:hasPart" passive="EMIP02389 EMIP02390 EMIP02391"/>
+          <relation active="EMIP02390#tr1" name="sdc:resultsIn" passive="EMIP02390#UniCirc2"/>
+          <relation active="EMIP02390#tr1" name="sdc:resultsIn" passive="EMIP02390#UniCirc3"/>
+          <relation active="EMIP02390#tr1" name="sdc:resultsIn" passive="EMIP02390#UniCirc4"/>
+          <relation active="EMIP02390#UniCirc2" name="skos:exactMatch" passive="EMIP02389"/>
+          <relation active="EMIP02390#UniCirc3" name="skos:exactMatch" passive="EMIP02390"/>
+          <relation active="EMIP02390#UniCirc4" name="skos:exactMatch" passive="EMIP02391"/>
+        </listRelation>
          <ab/>
       </body>
    </text>
