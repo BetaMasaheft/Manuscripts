@@ -2,7 +2,7 @@
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
    schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="EMIP01859" type="mss">
-   <teiHeader xml:base="https://betamasaheft.eu/">
+   <teiHeader>
      
       <fileDesc>
          <titleStmt>
@@ -3493,7 +3493,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <facsimile>
         <graphic url="https://w3id.org/vhmml/readingRoom/view/200100"/>
     </facsimile>
-    <text xml:base="https://betamasaheft.eu/">
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="facsimile.xml">
+        <xi:fallback>
+            <!-- facsimile -->
+        </xi:fallback>
+    </xi:include>
+    <text>
         <body>
              <div type="edition">
                  <div type="textpart" subtype="month" n="1" corresp="#ms_i1.1" xml:lang="gez">
@@ -6412,6 +6418,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                  
                 
              </div>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                href="transkribusText.xml">
+                <xi:fallback>
+                    <!-- transkribus text -->
+                </xi:fallback>
+            </xi:include>
         </body>
     </text>
 </TEI>
