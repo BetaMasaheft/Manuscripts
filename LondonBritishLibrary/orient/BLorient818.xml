@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"
-?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
    schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BLorient818" type="mss">
     <!-- This is an expanded miniMs record: many fields are still unfilled (MV 2018-02-15) -->
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Kǝbra nagaśt, Chronicle of John of Nikiu, History of the Blessed at the time of Jeremiah, Zenāhu la-ʾƎskǝndǝr, Zenā Sǝkǝndǝs, Maṣḥafa ṭǝnta hāymānot, 
-                    Fǝkkāre ʾIyasus, Apocalypse of Mary, Ṭǝbāba Sābelā, Physiologus, Raʾǝya Sinodā, Letter of Abgar, Homilies
+                <title>Kǝbra nagaśt, Yoḥnnǝs Madabbǝr, Zenā bǝḍuʿān ba-mawāʿǝla ʾErmǝyās, Zenāhu la-ʾƎskǝndǝr, Zenā Sǝkǝndǝs, Maṣḥafa ṭǝnta hāymānot,
+                    Fǝkkāre ʾIyasus, Rāʾǝya Māryām, Ṭǝbāba Sābelā, Dǝrsān za-bǝḍuʿ Fisālgos,
+                    Raʾǝya Sinodā, Letter of Abgar, Homilies
                 </title>
                 <editor key="AB" role="generalEditor"/>
+                <editor key="DR"></editor>
+                <editor key="MV"></editor>
+                <editor key="DE"></editor>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -34,152 +38,767 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <idno>Wright 291</idno>
                         </altIdentifier>
                </msIdentifier>
-               
+
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
                             <locus from="3r" to="46v"/>
                             <title type="complete" ref="LIT1709Kebran"/>
+                            <textLang mainLang="gez"></textLang>
+                            <note>In this manuscript the text is not divided into
+                            chapters.</note>
+
+                            <msItem xml:id="ms_i1.1">
+                              <locus from="46v"></locus>
+                              <title type="complete" xml:lang="en">Index</title>
+                              <textLang mainLang="gez"></textLang>
+                              <note>Index of 122 chapters, wrongly numbered
+                              123.</note>
+                            </msItem>
+                            <msItem xml:id="ms_i1.2">
+                              <locus from="46r"></locus>
+                              <title type="complete" xml:lang="en" ref="LIT1709Kebran#Chapter118">Colophon</title>
+                              <textLang mainLang="gez"></textLang>
+                              <note>The colophon has been much altered.</note>
+                              <incipit xml:lang="gez">
+                                ወተብህለ፡ በክታበ፡ ዐረቢ፡ አውፃእናሁ፡ እመጽሐፈ፡ ቅብጢ፡ ለዐረቢ። እመቃብረ፡ ማርቆስ፡ ወንጌላዊ፡
+                                መምህር፡ አበ፡ ኵልነ። ወአውፃእናሁ፡ በ፬፻ወ፱ ዓመተ፡ ምሕረት፡<pb/> ውስተ፡ ሀገረ፡ ኢትዮጵያ።
+                                በመዋዕለ፡ ገብረ፡ መስቀል፡ ንጉሥ፡<corr></corr> ሰጓሁ፡ ለላሊበላ፡ በመዋዕለ፡ ጊዮርጊስ፡ ኄር፡ ጳጳስ፡ ወአስተታ፡
+                                እግዚአብሔር፡ አውፅኦ፡ ወተርጐሞ፡ ኀበ፡ ነበረ፡ ኀበሺ። ወሶበ፡ ሐለይኩ፡ ዘንተ፡ ልምንት፡ ኢተርጐምዋ፡
+                                <del>አቡል፡</del> እዝ፡ ወ<del>አቡል፡</del>
+                                ፈረግ፡ እለ፡ አውፅእዋ፡ እቤ፡ ዘንተ፡ እስመ፡ ወፅአት፡ በመዋዕለ፡ ዘጓ ኢተርጉምዋ እስመ፡ ትብል፡ ዛቲ፡
+                                መጽሐፍ፡ እለሰ፡ ይነግሡ፡ እለ፡ ኢኮኑ፡ እስራኤል፡ ተአድዎ፡ ሕግ፡ ውእቱ። ወሶበ፡ ይከውን፡ መንፍሥተ፡
+                                እስራኤል፡ አውፅእዋ፡ ውተረክበት፡ በናዝሬት። ወጸልዩ፡ ላዕሌየ፡ <add place="above">ለ</add>
+                                ይስሐቅ፡ ነዳይ፡ ወኢትኀሡኒ፡ በእንተ፡ ኢያርትዖ፡ ነገረ፡ ልሳን። እስመ፡ ፃመውኩ፡ ብዙኃ፡ በእንተ፡
+                                ክብራ፡ ለሀገረ፡ ኢትዮጵያ። ወበእንተ፡ ፀዓታ፡ ለጽዮን፡ ሰማዛዊት፡ ወበእንተ፡ ክብረ፡ ንጉሠ፡ ኢትዮጵያ። እስመ፡
+                                አነሂ፡ ተስእልክዎ፡ ለመኰንን፡ ርቱዕ፡ ፍቁረ፡ ክርስቶስ፡ ያዕቢከ፡ እግዚእ፡ ወአፍቀረኒ፡ ወይቤለኒ፡ ግበር።
+                                ወገበርኩ፡ እንዘ፡ እግዚአብሔር፡ ይረድአኒ፡
+                              </incipit>
+                            </msItem>
+                            <msItem xml:id="ms_i1.3">
+                              <locus from="46v"></locus>
+                              <title type="complete" xml:lang="en" ref="LIT1709Kebran#Chapter119">List of the kings of Ethiopia</title>
+                              <textLang mainLang="gez"></textLang>
+                              <note>The list extends from <persName ref="PRS2597Bazen"></persName> to
+                            <persName ref="PRS3493Delnaod"></persName> and from
+                            <persName ref="PRS10303Yekunno"></persName> to
+                          <persName ref="PRS1854Amdase"></persName>.</note>
+
+                            </msItem>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i2">
                             <locus from="48r" to="103v"/>
                             <title type="complete" ref="LIT1239Chroni"/>
-                            <listBibl type="secondary">
-                                <bibl>
-                                    <ptr target="bm:Weninger2007JohnNikiu"/>
-                                </bibl>
-                            </listBibl>
+                            <textLang mainLang="gez"></textLang>
+
+                            <msItem xml:id="ms_i2.1">
+                              <locus from="48r"></locus>
+                              <title type="complete" ref="LIT1239Chroni#Preface"></title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i2.2">
+                              <locus from="48r"></locus>
+                              <title type="complete" ref="LIT1239Chroni#ChapterTable"></title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i2.3">
+                              <locus from="51v"></locus>
+                              <title type="complete" ref="LIT1239Chroni#PrefaceTranslator"></title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i2.4">
+                              <locus from="102v"></locus>
+                              <title type="complete" ref="LIT1239Chroni#Colophon"></title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i3">
                             <locus from="104r" to="107v"/>
                             <title type="complete" ref="LIT1605Histor"/>
                             <textLang mainLang="gez"/>
-                            <listBibl type="editions">
-                                <bibl>
-                                    <ptr target="bm:Budge1896Alexander1"/>
-                                    <citedRange unit="page">355–376</citedRange>
-                                </bibl>
-                            </listBibl>
+                            <incipit xml:lang="gez">
+                              በስመ፡ አብ፡ <gap reason="ellipsis"></gap> ስምዑ፡ አኃዊነ፡ ንዜንወክሙ፡
+                              ዜና፡ ሐዲሰ፡ ዜናሆሙ፡ ለብፁዓን፡ ቅዱሳን፡ ጻድቃን፡ ዘኮነ፡ በመዋዕለ፡ ኤርምያስ፡ ነቢይ፡
+                              ወልደ፡ ሔልⷃ፡ ወነግሠ፡ ፩ ንጉሥ፡ ዘስሙ፡ ሴዴⷃስ፡ ወልደ፡ ኢዮስያስ። ወኢሖረ፡ በፍኖተ፡
+                              አቡሁ፡ አላ፡ ገብረ፡ ሎቱ፡ ግልፎ፡ ወጣዖት፡ ወሰገደ፡ ሎቱ፡ በኀቡእ፡ ለውእቱ፡ ምስል፤ ወአኀዘ፡
+                              ይነግር፡ ገሃደ። አነ፡ ወልደ፡ ዳዊት፡ ዘእምቤተ፡ ይሁዳ፡ ወተሰምዓ፡ ዝንቱ፡ ነገር፡ በኢየሩሳሌም፡
+                              ወበኵሉ፡ አድያሚሃ፤ ወሶበ፡ ሰምዑ፡ ዘንተ፡ ሰብእ፡ ቅዱሳን፡ እምኢየሩሳሌም፡ ተከዙ፡ በልቦሙ፡
+                              ትካዘ፡ ዓቢየ። ወሖሩ፡ ወዜነውዎ፡ ለቅዱስ፡ ኤርምያስ፡ ነቢይ። ወሶበ፡ ሰምዓ፡ ዘንተ፡ ነገረ፡ ተከዘ፡
+                              ወኀዘነ፡ ፈድፋደ፡ ወቆመ፡ ቅድመ፡ እግዚአብሔር፡ ወበከየ፡ ወይቤ። እግዚኦ፡ አምላከ፡ አበውየ፡
+                              አብርሃም፡ ይስሐቅ፡ ወያዕቆብ። በመዋዕልየኑ፡ ይትገበር፡ ዝንቱ፡ ኵሉ፡ ግብር፡ አነ፡ ኃጥእ፡
+                              ገብርከ። ወአውሥኦ፡ እግዚአብሔር፡ ለኤርምያስ፡ ወይቤሎ፡ ኢትፍራህ፡ ገብርየ፡ ኤርምያስ።
+                            </incipit>
+                            <msItem xml:id="ms_i3.1">
+                              <locus from="104v"></locus>
+                              <title type="complete" xml:lang="en">On the coming of Alexander
+                              to Jerusalem.</title>
+                              <textLang mainLang="gez"></textLang>
+                              <incipit xml:lang="gez">
+                                ወአስተጋብኦሙ፡ ለካህናተ፡ እስራኤል፡ ወለዓበይቶሙ። ወአውሥአ፡ ወይቤሎም፡
+                                ሀቡኒ፡ ከለሜዳ፡ ዘለይ።
+                              </incipit>
+                            </msItem>
+                            <msItem xml:id="ms_i3.2">
+                              <title type="complete" xml:lang="en">On the massacre.</title>
+                              <textLang mainLang="gez"></textLang>
+                              <incipit xml:lang="gez">
+                                ወ፩ ጐየ፡ እምኔሆሙ፡ ወቦአ፡ ወቆመ፡ ውስተ፡ መድረከ፡ ቤተ፡ መቅደስ፡ ወረገጾ፡ ለመድረክ፡
+                                በእግሩ፡ ፫ ጊዜ። ወይቤ፡ ዘካርያስ፡ ዘካርያስ፡ ኢጸገብከኑ፡ ናሁ፡ ተቀትሉ፡ ኵሎሙ፡ እለ፡
+                                ቀተሉከ። እስመ፡ እምቀዲሙ፡ ተነበየ፡ ዘካርያስ፡ ወልደ፡ በራክዩ፡ በእንተ፡ ምጽአቱ፡ ለእግዚእነ፡
+                                እንዘ፡ ይብል፡ ተፈሥሒ፡ ወለተ፡ ጽዮን፡ <gap reason="ellipsis"></gap>
+                                ወበእንተ፡ ዝንቱ፡ ኬ፡ ቀተልዎ፡ በዲበ፡ <sic>መድረክ፡</sic> ቤተ፡ መቅደስ።
+                              </incipit>
+                            </msItem>
+                            <msItem xml:id="ms_i3.3">
+                              <title type="complete" xml:lang="en">Narrative on Alexander</title>
+                              <textLang mainLang="gez"></textLang>
+                              <incipit xml:lang="gez">
+                                ወእምድኅረ፡ ቀተሎሙ፡ ንጉሥ፡ ለካህናት። ወነሥአ፡ ከለሜዳ፡ ዘለይ፡ ወለብሰ፡ ፫ መዋዕል።
+                                ወእምድኅሬሁ፡ አውረደ፡ እምላዕሌሁ፡ ውእተ፡ ልብሰ፡ ወአፀፈ፡ ውእተ፡ ልብሰ። ወይቤ፡ እግዚኦ፡
+                                እግዚእየ፡ ፈቃድከ፡ ለይኩን፡ በዝንቱ፡ ልብስ፡ ወአንበረ። ወሖረ፡ ወበጽሐ፡ ኀበ፡ ምድረ፡ ንፁዓን፡
+                                ወዓደወ፡ ኀቤሆሙ፡ ወሐተቶሙ፡ በእንተ፡ ምጽአቶሙ፡ ወንብረቶሙ፡ ውስተ፡ ውእቱ፡ ብሔር።
+                              </incipit>
+                            </msItem>
+                            <msItem xml:id="ms_i3.4">
+                              <title type="complete" xml:lang="en">Proceeding of the story</title>
+                              <textLang mainLang="gez"></textLang>
+                              <incipit xml:lang="gez">
+                                ወእምድኅረ፡ ዕርገቱ፡ ለእግዚእነ፡ ሰማያተ፡ ሰበኩ፡ ሐዋርያት፡ ውስተ፡ ኵሉ፡ ምድር፡ ወአጥመቁ፡
+                                ብዙኃነ፡ አሕዛበ። በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። ወተሐንጸ፡ አብያተ፡ ክርስቲያናት፡
+                                ውስተ፡ ኵላ፡ ምድር፡ ወበዝኁ፡ መነኮሳት፡ ውስተ፡ ኵሉ፡ ምድር። እስመ፡ ፩ መነኮስ፡ ነበረ፡
+                                ማዕዶተ፡ ዮርዳኖስ፡ ውስተ፡ አሐቲ፡ በዓት፡ ዘስሙ፡ ግራሲሞስ። ወነፅአ፡ መጽሐፎ፡ ለንጉሥ፡
+                                እስከንድር፡ ወአንበበ፡ ቦቱ፡ ወበጽሐ፡ ኀበ፡ ዜናሆሙ፡ ለእሙንቱ፡ ብፁዓን፡ ወቅዱሳን። ወሐለየ፡
+                                በልቡ፡ ወይቤ፡ እግዚእ፡ ኢየሱስ፡ ክርስቶስ፡ እስእለከ፡ ወአስተበቍዓከ፤ ከመ፡ ታብጽሐኒ፡ ኀቤሆሙ፡
+                                ወታርእየኒ፡ ገጾሙ፡ <sic>በዝንቱ፡</sic> ብፁዓን፡ ቅዱሳን፡ አግብርቲከ።
+                              </incipit>
+                            </msItem>
+
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i4">
                             <locus from="108v"/>
                             <title type="complete" ref="LIT2616Zenaes"/>
+                            <textLang mainLang="gez"></textLang>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i5">
                             <locus to="127r"/>
                             <title type="complete" ref="LIT4092AlexanderAbus"/>
                             <textLang mainLang="gez"/>
-                            <listBibl type="editions">
-                                <bibl>
-                                    <ptr target="bm:Budge1896Alexander1"/>
-                                    <citedRange unit="page">227–236</citedRange>
-                                </bibl>
-                            </listBibl>
-                        </msItem> 
-                        
+                            <incipit xml:lang="gez">
+                              በስመ፡ እግዚአብሔር፡ ሕያው፡ መሓሪ፡ ወመስተሣህል፡ ንጽሕፍ፡ ዜናሁ፡ ለእስክንድር፡ ንጉሥ፤
+                              ዘተረክበ፡ እምአቡሻክር።
+                            </incipit>
+                        </msItem>
+
                         <msItem xml:id="ms_i6">
                             <locus from="127v" to="129r"/>
                             <title type="incomplete" ref="LIT4723TarikaWaldaAmid"/>
                             <textLang mainLang="gez"/>
                             <incipit xml:lang="gez">ራእየ፡ ነገር፡ ዘተረክበ፡ እምጊዮርጊስ፡ ወልደ፡ አሚድ።</incipit>
-                            <note>Excerpts from the History</note>
+                            <note>28 excerpts from Tārika Walda ʿAmid.</note>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i7">
                             <locus from="129v" to="144v"/>
                             <title type="complete" ref="LIT2625ZenaSe"/>
                             <textLang mainLang="gez"/>
-                            <listBibl type="secondary">
-                                <bibl>
-                                    <ptr target="bm:Weninger2010EAESecundus"/>
-                                </bibl>
-                            </listBibl>
+                            <incipit xml:lang="gez">
+                              ዜና፡ ስክንድስ፡ ጠቢብ፡ ለእንድርያኖስ፡ ንጉሥ፡
+                            </incipit>
+                            <msItem xml:id="ms_i7.1">
+                              <locus from="138r"></locus>
+                              <title type="complete" ref="LIT4093QalatTebab"></title>
+                              <textLang mainLang="gez"></textLang>
+                              <incipit xml:lang="gez">
+                                በስመ፡ አብ፡ <gap reason="ellipsis"></gap> ንቀድም፡ በረድኤተ፡ እግዚአብሔር፡
+                                ኅዳጥ፡ እምነ፡ ቃላተ፡ ጥበብ፡ ወአእምሮ። ይቤ፡ እስመ፡ ጥበብሰ፡ ብርሃን፡ ይእቲ፡ ዘትመልዓ፡
+                                ለነፍስ፡ ህልውት፡ ውስተ፡ ኵሉ፡ መካን፤ ወአልባቲ፡ ተፍጻሜት፡ ወኢይትከሃል፡ ከመ፡ ትርከብ፤
+                                እምከመሰ፡ ኮነ፡ አእምሮ፡ ግሁደ፤ ወዝንቱኬ፡ ውእቱ፡ ተመሰሎተ፡ አምላክ፤ ወይእቲኬ፡ አይ፡
+                                ነፍስ፡ ዘትሬኢ፡ ኵሎ፡ ኅቡኣት፤ ወትሰምያ፡ ለአእምሮ፡ ልቡና፡ እስመ፡ ይእቲ፤ ተትሕተት፡
+                                መንክራተ፡ እግዚአብሔር፡ ልዑል፤ እለሰ፡ ይሰግዱ፡ እንበለ፡ ልቡና፡ ሕፅፅተ፡ ነፍሶሙ፡ እምብርሃን፡
+                                ወኀፀፀ፡ ብርሃንሰ፡ ውእቱ፡ ጽልመት፡ በከመ፡ ብርሃነ፡ ፀሐይ፡ እንተ፡ ክረምተ፡ ከማሁኬ፡ ብርሃነ፡
+                                ጠቢባንሂ፡ ለባውያን፡ ወየውሃን፤ በከመ፡ ለአዝማን፡ ቦሙ፡ ተዋልጦተ፡ ከማሁኬ፡ ይከውን፤ ብርሃን፡
+                                ለለባውያን፡ እለ፡ አፈድፈዱ፡ አእምሮ። ተስእልዎ፡ ለጠቢብ፡ ወይቤልዎ፡ እፎኑ፡ ሐዊር፡ ኀበ፡ መልዕልተ፡
+                                ሰማዛት፤ ወበአይ፡ ጾታ፡ ይከውን። ይቤ፡ እስመ፡ ሐዊርሰ፡ መልዕልተ፡ ሰማያት፡ ከመዝ፡ ውእቱ፡ ሀሎ፡
+                                ሰዋስው፡ ዘብዙኅ፡ መዓርግ፡ ወመፍርህ፤ ወበአምጣነ፡ ትሩፋቲከ፡ ተዓርግ፡ ኀበ፡ እግዚአብሔር፤ እስመ፡
+                                ትሩፋትሰ፡ መዓርግ፡ እሙንቱ።
+                              </incipit>
+                            </msItem>
+                            <colophon xml:id="coloph1" xml:lang="gez">
+                              <locus target="#144v"></locus>
+                              ተፈጸመ፡ ዜና፡ ስክንድስ፡ ጠቢብ፤ ወተስእሎታቲሁ፡ ለእንድርያኖስ፡ ንጉሥ፡ ወለካልኣን፡ ሰብእ፤ በሥምረተ፡ እግዚአብሔር።
+                              ለዓለመ፡ ዓለም፡ አሜን።
+                            </colophon>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i8">
                             <locus from="145r" to="159v"/>
                             <title type="complete" ref="LIT1976Mashaf"/>
                             <textLang mainLang="gez"/>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i9">
                             <locus from="160r" to="161r"/>
                             <title type="complete" ref="LIT1385Fekkar" xml:lang="gez">ፍካሬ፡ ኢየሱስ፡</title>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              በስመ፡ አብ፡ <gap reason="ellipsis"></gap> ፍካሬ፡ ኢየሱስ፡ ክርስቶስ፡ ዘተስእልዎ፡
+                              አርዳኢሁ፡ ለኢየሱስ፡ እንዘ፡ ይመስሕ፡ ምስሌሆሙ፡ ሐተትዎ፡ ወይቤልዎ፡ እስኩ፡ ንግረነ፡ ኦሊቅነ፡
+                              ለደኃሪ፡ ትውልድ፡ ዘይመጽእ፡ መዋዕል፡
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i10">
                             <locus from="161v" to="168v"/>
                             <title type="complete" ref="LIT1124Apocal"/>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              በስመ፡ አብ፡ <gap reason="ellipsis"></gap> ክርስቶስ፡ አምላኪየ፡ ወተስፋየ፡
+                              ወእግዝእትየ፡ ማርያም፡ ድንግል። ትስአል፡ ለነ፡ ድርሳን፡ ዘብፁዕ፡ ወቅዱስ፡ ዮሐንስ፡ ወልደ፡
+                              ዘብዴዎስ፡ ዘደረሰ፡ በእንተ፡ ዕበያ፡ ወክብራ፡ ለቅድስት፡ ድንግል። <gap reason="ellipsis"></gap>
+                              ወይቤ፡ ዮሐንስ፡ ወልደ፡ ዘብዴዎስ፡ ዘያፈቅሮ፡ እግዚኡ፡ ፈድፋደ፡ በእንተ፡ ንጽሕናሁ፡ ወእግዝእትነ፡
+                              ማርያም፡ ታፈቅሮ፡ ፈድፋደ፡ በከመ፡ አፍቀሮ፡ ወልዳ። አውሥአት፡ ወትቤለኒ፡ ስማዕ፡ ኦዮሐንስ፡
+                              እነግረከ፡ ኅቡአ፡ ምሥጢረ፡ ወመድምመ፡
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i11">
                             <locus from="169r" to="170v"/>
                             <title type="complete" ref="LIT2353SibylW"/>
                             <textLang mainLang="gez"/>
-                            <listBibl type="secondary">
-                                <bibl>
-                                    <ptr target="bm:Schleifer1908Sibyl"/>
-                                    <citedRange unit="page">4a</citedRange>
-                                </bibl>
-                            </listBibl>
+                            <incipit xml:lang="gez">
+                              በስመ፡ አብ <gap reason="ellipsis"></gap> <sic>ጠባባ፡</sic>
+                              ለብእሲት፡ እንተ፡ ስማ፡ ሳቢላ፡ ወለተ፡ ሕርቃል፡ ርእሰ፡ ጠቢባን፡ ዘኤፎእሶን፡ ወፍካሬ፡
+                              ሕልም፡ <sic>ላዕለ፡</sic> ርእዩ፡ ፻ ብእሴ፡ ጠቢባን፡ በሀገረ፡ ሮምያ፡ በአሐቲ፡
+                              ሌሊት፡ ወበአሐቲ፡ ሰዓት፡ እምድኅረ፡ ፀዓቶሙ፡ ለደቂቀ፡ ግብጽ። ወእምድኅረ፡ ዓርጉ፡
+                              ውስተ፡ ገዳም፡ በመዋዕል፡ እሙራት፡ ወቦኡ፡ ምድረ፡ <sic>መንግሥት፡</sic>
+                              ዮናናውያን፡ ወዕቤራውያን፡ ወጌርሣውያን። ወኮኑ፡ በኀቤሆሙ፡ ነቢያት፡ ወመምህራን፡
+                              እለ፡ ይከሥቱ፡ ሎሙ፡ ኅቡኣተ፡ ምሥጢር፡ ወይሜህርዎሙ፡ ኵሎ፡ ዘኃሠሡ፡ በኀቤሆሙ።
+                              ወሶበ፡ በዝንቱ፡ ኃጢአት፡ ኀቤሆሙ፡ በአምልኮ፡ ጣዖት፡ ወሰገዱ፡ ለአጋንንት። ወዘብሑ፡
+                              ደቂቆሙ፡ ወአዋልዲሆሙ፡ ለአጋንንት፡ ወአብጠለ፡ እግዚእ፡ እምኔሆሙ፡ መንግሥተ። ወነሥአ፡
+                              እምኔሆሙ፡ ትንቢተ፡ ወተኃድገት፡ ሎሙ፡ ላዕካን፡ ወፈቀዱ፡ ይሖሩ፡ ኀበ፡ መሠርያን፡
+                              ወይሴአልዎሙ፡ ከመ፡ ይርአይዎሙ፡ ዘከመ፡ ርእይዎሙ፡ ነቢያት፡ ወላዕካን፡ እለ፡ ኮኑ፡
+                              በቅድሜሆሙ። ወኢክህሉ፡ ይግበሩ፡ ከማሆሙ፡ ወበውእቱ፡ መዋዕል፡ ፄወውዎሙ፡
+                              ጢጦስ። ወአብጽሕዎሙ፡ እስከ፡ ሮምያ፡ ሀገር፡ ወዘረዎሙ፡ እግዚአብሔር፡ ወውስተ፡
+                              ኵሉ፡ በሓውርተ፡ ሮሜ፡ ወኮነ፡ ሑረቶሙ፡ በመዓት፡ ፲፪ወ፪ በመዋዕለ፡ እስክንድሮስ፡
+                              በወርኃ፡ መጋቢት፡ ዘውእቱ፡ ቆስጦስ፡ ርእዩ፡ ፻ ብእሴ፡ ጠቢባን፡ አሐቲ፡ ሕልም፡
+                              በአሐቲ፡ ሌሊት፡ ወተሰምዓ፡ ዜናሁ፡ ለሕልም፡ እስከ፡ ኀበ፡ እስክንድሮስ፡ ነግሠ፡ ሮሜ።
+                              ወለአከ፡ ኀቤሃ፡ ለይእቲ፡ ብእሲት፡ ኀበ፡ ሳቢላ፡ ወለተ፡ ሕርቃል፡ ርእሰ፡ ኤፌሶን፡ ወይእቲ፡
+                              ትሜህር፡ ወደቂቀ፡ ወራዙት፡ ዘይከውን፡ ውስተ፡ ኵሉ፡ ዓለም፡ በኵሉ፡ አዝማን፡ ወአዝማን።
+                              ወወሀባ፡ እግዚአብሔር፡ ለይእቲ፡ ብእሲት፡ ሀብተ፡ ብዙኃ፡ እስከ፡ ትትነበይ፡ በኵሉ፡ ሕዝብ፡
+                              ዘማየ፡ ወፀሐየ፡ ወወርኃ። ወእምብዝኃ፡ ጥበቢሃ። ወኮነ፡ መዋዕሊሃ፡ ፻ወ፴ወ፯ ዓመት። ወሀለወት፡
+                              እኅታ፡ እንተ፡ ስማ፡ ስማል፡ ወከሠተት፡ ላቲ፡ ለእኅታ፡ ኵሎ፡ ዘታአምር፡ ወኵሉ፡ ዘርእዩ።
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i12">
                             <locus from="171rb" to="176v"/>
                             <title type="complete" ref="LIT4915PhysA"/>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              ድርሳን፡ ዘብፁዕ፡ ፊሳልጎስ፡ ዘደረሰ፡ በእንተ፡ አራዊት፡ ወአዕዋፍ፡ ከመቦ፡ ላዕሌሆሙ፡ ብዙኅ፡ አምሳል፡
+                              ወብዙኅ፡ ትእምርት፡ ዘይከውን፡ በቍዔተ፡ ለዘያነብቦ።
+                            </incipit>
+                            <note>Contains 49 chapters, wrongly numbered 47.</note>
+
+                            <msItem xml:id="ms_i12.1">
+                              <locus target="#171r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch1" xml:lang="gez">
+                                ነገር፡ <sic>ቀዳሚዊ፡</sic> በእንተ፡ አንበሳ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.2">
+                              <locus from="171r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch2" xml:lang="gez">
+                                ፪ ፍካሬ፡ በእንተ፡ ሕንጲን፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.3">
+                              <locus from="171r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch3" xml:lang="gez">
+                                ፫ ፍካሬ፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ከራድዮን፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.4">
+                              <locus from="171v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch4" xml:lang="gez">
+                                <sic>፫</sic> ፍካሬ፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ጰልቃን፡ ዘውእቱ፡ ግራብ።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.5">
+                              <locus from="171v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch5" xml:lang="gez">
+                                ፬ ፍካሬ፡ በእንተ፡ ኒቂጢቆ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.6">
+                              <locus from="171v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch6" xml:lang="gez">
+                                ፭ ፍካሬ፡ በእንተ፡ ንስር።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.7">
+                              <locus from="172r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch7" xml:lang="gez">
+                                ፮ ፍካሬ፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ፊንክስ።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.8">
+                              <locus from="172r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch8" xml:lang="gez">
+                                ፯ ፍካሬ፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ሔጲጰስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.9">
+                              <locus from="172r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch9" xml:lang="gez">
+                                ፰ ፍካሬ፡ በእንተ፡ ሐልስትዮ።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.10">
+                              <locus from="172r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch10" xml:lang="gez">
+                                ፱ ፍካሬ፡ በእንተ፡ አርዌ፡ ምድር፡ ዘስሙ፡ አከድና።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.11">
+                              <locus from="172v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch11" xml:lang="gez">
+                                ፲ ፍካሬ፡ በእንተ፡ አርዌ፡ ምድር።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.12">
+                              <locus from="172v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch12" xml:lang="gez">
+                                ፲ወ፩ ፍካሬ፡ በእንተ፡ ቃሕም፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.13">
+                              <locus from="172v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch13" xml:lang="gez">
+                                ፲ወ፪ ፍካሬ፡ በእንተ፡ አንሲራኒስ፡ ወአንቅጣውሮስ።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.14">
+                              <locus from="173r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch14" xml:lang="gez">
+                                ፍካሬ፡ ፲ወ፫፡ በእንተ፡ ቅንፍዝ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.15">
+                              <locus from="173r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch15" xml:lang="gez">
+                                ፍካሬ፡ ፲ወ፬፡ በእንተ፡ ቍንጽል።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.16">
+                              <locus from="173r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch16" xml:lang="gez">
+                                ፲ወ፭፡ ፍካሬ፡ በእንተ፡ ጻሕው።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.17">
+                              <locus from="173r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch17" xml:lang="gez">
+                                ፲ወ፮፡ ነገር፡ በእንተ፡ አስጰደክሎኒ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.18">
+                              <locus from="173v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch18" xml:lang="gez">
+                                ፲ወ፯፡ ነገር፡ በእንተ፡ ቆቃህ።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.19">
+                              <locus from="173v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch19" xml:lang="gez">
+                                ፲ወ፰፡ ነገር፡ በእንተ፡ ጊጶስ፡ ዘውእቱ፡ አውስት።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.20">
+                              <locus from="173v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch20" xml:lang="gez">
+                                ፲ወ፱፡ ነገር፡ በእንተ፡ መርሜርቆሌዎስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.21">
+                              <locus from="173v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch21" xml:lang="gez">
+                                ፳ ነገር፡ በእጋሌን፡ ዘስሙ፡ ህርስቲዮስ።
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.22">
+                              <locus from="173v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch22" xml:lang="gez">
+                                ፳፩ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ መኖቅሪጥስ፡ ዘውእቱ፡ ርኢም፡ ዘ፩ ቀርኑ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.23">
+                              <locus from="173v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch23" xml:lang="gez">
+                                ፳፪ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ ቀርጣርዮስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.24">
+                              <locus from="174r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch24" xml:lang="gez">
+                                ፳፫ ነገር፡ በእንተ፡ ዝዕብ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.25">
+                              <locus from="174r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch25" xml:lang="gez">
+                                ፳ወ፬ ነገር፡ በእንተ፡ ኢንድርዳኖስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.26">
+                              <locus from="174r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch26" xml:lang="gez">
+                                ፳፭ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ አኪሞን፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.27">
+                              <locus from="174r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch27" xml:lang="gez">
+                                ፳፮ ነገር፡ በእንተ፡ ቋዕ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.28">
+                              <locus from="174r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch28" xml:lang="gez">
+                                ፳፯ ነገር፡ በእንተ፡ ማዕነቅ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.29">
+                              <locus from="174r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch29" xml:lang="gez">
+                                ፳፰ ነገር፡ በእንተ፡ ቈርነነዓት፡ ምድራዊ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.30">
+                              <locus from="174v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch30" xml:lang="gez">
+                                ፳፱ ነገር፡ በእንተ፡ ሀየል፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.31">
+                              <locus from="174v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch31" xml:lang="gez">
+                                ፴ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ እልመንደር፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.32">
+                              <locus from="174v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch32" xml:lang="gez">
+                                ፴፩ ነገር፡ በእንተ፡ ዕንቍ፡ አድማስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.33">
+                              <locus from="174v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch33" xml:lang="gez">
+                                ፴፪ ነገር፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ ከሊዲን፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.34">
+                              <locus from="174v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch34" xml:lang="gez">
+                                ፴፫ ነገር፡ በእንተ፡ ዕፅ፡ ዘስሙ፡ ኤጲዲቅስዮ፡ ዝብሂል፡ የማናዊ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.35">
+                              <locus from="175r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch35" xml:lang="gez">
+                                <sic>፴፫</sic> ነገር፡ በእንተ፡ ርግብ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.36">
+                              <locus from="175r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch36" xml:lang="gez">
+                                ፴፬ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ እንድራጶስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.37">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch37" xml:lang="gez">
+                                ፴፭ ነገር፡ በእንተ፡ እብን፡ ዘስሙ፡ ጰርጰሎ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.38">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch38" xml:lang="gez">
+                                ፴፮ ነገር፡ በእንተ፡ እብን፡ ዘስሙ፡ መጐንጢስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.39">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch39" xml:lang="gez">
+                                ፴፯ ነገር፡ በእንተ፡ አርዌ፡ ቂጦስ፡ ዓዲ፡ ስሙ፡ ጵርያኖስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.40">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch40" xml:lang="gez">
+                                ነገር፡ ፴፰ በእንተ፡ ጽኑዓን፡ ፫ደቂቅ፡ ወዳንኤል፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.41">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch41" xml:lang="gez">
+                                ነገር፡ ፴፱ በእንተ፡ አቢሶር፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.42">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch42" xml:lang="gez">
+                                ፵ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ ድርቆድስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.43">
+                              <locus from="175v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch43" xml:lang="gez">
+                                ፵፩ ነገር፡ በእንተ፡ ድማንጥስ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.44">
+                              <locus from="176r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch44" xml:lang="gez">
+                                ፵፪ ነገር፡ በእንተ፡ አርዌ፡ ዘስሙ፡ ኤልባስ፡ ዘውእቱ፡ ነጌ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.45">
+                              <locus from="176r"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch45" xml:lang="gez">
+                                ፵፫ ነገር፡ በእንተ፡ አኩጢስ፡ እብን፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.46">
+                              <locus from="176v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch46" xml:lang="gez">
+                                ፵፬ ነገር፡ በእንተ፡ ሐለስትዮ፡ ወበእንተ፡ ሆባይ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.47">
+                              <locus from="176v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch47" xml:lang="gez">
+                                ፵፭ ነገር፡ በእንተ፡ እብነ፡ ህንደኬ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.48">
+                              <locus from="176v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch48" xml:lang="gez">
+                                ፵፮ ነገር፡ በእንተ፡ ዖፍ፡ ዘስሙ፡ አሮድዮን፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
+                            <msItem xml:id="ms_i12.49">
+                              <locus from="176v"></locus>
+                              <title type="complete" ref="LIT4915PhysA#ed1ch49" xml:lang="gez">
+                                ፵፯ ነገር፡ በእንተ፡ ሰቃምሮስ፡ ዘውእቱ፡ ሰግላ፡
+                              </title>
+                              <textLang mainLang="gez"></textLang>
+                            </msItem>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i13">
                             <locus from="177r" to="179r"/>
                             <title type="complete" ref="LIT5804RayaSinA"/>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              ቅዱስ፡ ሥሉስ፡ አምላክነ፡ ዋህድ፡ በመሥልስቱ፡ ሥሉስ፡ በተዋህዶቱ፡ <gap reason="ellipsis"></gap>
+                              ነገር፡ ዘከመ፡ ርእየ፡ አባ፡ ሲኖዳ፡ ራእየ፡ እምኀበ፡ አምላክ፡ ፲ ራእያተ፡ ዘይከውን፡ ኵሎ፡ በበመትልው፡ ወበበዘመኑ፡
+                              እስከ፡ ይትነሣእ፡ ንኡስ፡ ቀርን፡ ዘርእየ፡ ዳንኤል፡ ነቢይ፡ ዘይሰብሮሙ፡ ለኵሎሙ፡ አቅርንት። ወያነውኅ፡ ውእቱ፡
+                              ቀርኖ፡ እስከ፡ ሰማይ፡ ወይእኅዝ፡ ለኵሉ፡ ምድር፡ እስከ፡ ፬ መዓዝነ፡ አጽናፈ፡ ዓለም፡ ወይሠልጥ፡ ላዕሌሃ፡
+                              ኵሎ፡ ዘፈቀደ፡ እስከ፡ ፵ወ፪ አውራኅ። ወእምድኅሬሁ፡ ይሰሮ፡ ሎቱኒ፡ ቀርነ፡ መድኃኒተነ፡ ዘተንሥአ፡ እምቤተ፡
+                              ዳዊት፡ ገብሩ። ውእቱ፡ ይኰንና፡ ለዓለም፡ አሜን። ንወጥን፡ በእንተ፡ ራእይ፡ ዘርእየ፡ አባ፡ ሲኖዳ፡ ፲ ራእያተ፡
+                              ፯ ራእያተ፡ በእንተ፡ ፯ ነገሥት፡ እለ፡ ይመልክዋ፡ ለ፮ ብሔር፡ ፰ ራእይ፡ ተስፋ፡ ጻድቃን፡ ወፍግዓ፡ ተድላሆሙ፡
+                              እንተ፡ አልባቲ፡ ማኅለቅት፡ በዓለም፡ ዘይመጽእ፡ ፱ ራእይ፡ በእንተ፡ ኵነኔ፡ ረሲዓን፡ እንተ፡ አልባቲ፡
+                              ማሕለቅት፡ ፲ ራእይ፡ ኅቡኣተ፡ ቃል፡ ዘሀሎ፡ ውስቴቱ፡ ዘተስእሎ፡ አባ፡ ሲኖዳ፡ ለእግዚእነ።
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i14">
                             <locus from="179v" to="181r"/>
                             <title type="complete" ref="LIT1759Legend"/>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              ሥሉስ፡ ቅዱስ፡ <gap reason="ellipsis"></gap> ንወጥን፡ ኀበ፡ ጥንተ› ነገር፡ ዘከመ፡
+                              ለአብ፡ ንጉሠ፡ ሮሃ፡ አቃርዮስ፡ ብፁዕ፡ ኀበ፡ ክርስቶስ፡ ለዘክሮቱ፡ ስግደት፡ እንዘ፡ ሀሎ፡ <sic>በመዋዕል፡</sic>
+                              ትስጉቱ፡ እምቅድመ፡ ይዕርግ፡ ዲበ፡ መስቀል፡ ከመ፡ ይግዝማ፡ ለኃይለ፡ ኃጢአት፡ በድካመ፡ ትሕትናሁ፡
+                              ማሕየዊትነ፡ ሶበ፡ ሰምዓ፡ ምግባራቲሁ፡ መድምመ። ዘከመ፡ ረሰየ፡ ማየ፡ ወይነ፡ ወዘከመ፡ አጽገቦ፡ ለአእላፍ፡
+                              እምኅዳጥ፡ ኅብስት፡ ወዘከመ፡ ሮፀ፡ ዲበ፡ ማዕበል፡ በአሣዕን።
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i15">
                             <locus from="181v" to="182v"/>
                             <title type="complete" ref="LIT1660Homily"/>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              ክርስቶስ፡ አምላኪየ፡ ወተስፋየ፡ ወእግዝእትየ፡ ማርያም፡ ትስአል፡ ሊተ፡ ድርሳን፡ ዘቅዱስ፡
+                              ወብፁዕ፡ ኤፍሬም፡ በእንተ፡ ሕማማቲሁ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወበእንተ፡
+                              ፈያታዊ። ንዑ፡ ኦአኃው፡ ፍቁራን፡ ሰብሕዎ፡ ለእግዚአብሔር፡ ዘተሰቅለ፡ በእንተ፡
+                              ኃጢአትነ።
+
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i16">
                             <locus from="183r" to="186v"/>
                             <title type="complete" ref="LIT1631Homily"/>
                             <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                              ክርስቶስ፡ አምላኪየ፡ ወተስፋየ፡ ወእግዝእትየ፡ ማርያም፡ ተስአል፡ ሊተ፡ ድርሳን፡ ቃሉ፡ ዘቅዱስ፡
+                              ወብፁዕ፡ ያዕቆብ፡ ኤጲስ፡ ቆጶስ፡ ዘሥሩግ። በእንተ፡ መልአክ፡ ወፈያታዊ፡ ርድአኒ፡ ክርስቶስ፡
+                              ወልደ፡ እግዚአብሔር፡ ሕያው። ወአብርህ፡ አዕይንተ፡ ልብየ፡ ከመ፡ አክሥት፡ ምሥጢራተ፡
+                              መንክራቲከ፡ ወአጽንዓኒ፡ ከመ፡ እግበር፡ ትእዛዘከ።
+                            </incipit>
                         </msItem>
-                        
+
                         <msItem xml:id="ms_i17">
                             <locus from="187r"/>
                             <title type="complete" ref="LIT1275Dersan"/>
                             <textLang mainLang="gez"/>
-                            <listBibl type="editions">
-                                <bibl>
-                                    <ptr target="bm:Pereira1906Jacobi"/>
-                                </bibl>
-                            </listBibl>
+                            <incipit xml:lang="gez">
+                              በስመ፡ አብ፡ <gap reason="ellipsis"></gap> ድርሳን፡ ዘአባ፡ ያዕቆብ፡ ጳጳስ፡ ዘሀገረ፡
+                              ንጽቢን። ዘከመ፡ መጽአ፡ ንጉሠ፡ ፋርስ፡ በመዋዕሊሁ፡ ውስተ፡ ሀገረ፡ ንጽቢን። ወናሁ፡ ወረደኒ፡
+                              ሕሊና፡ በእማንቱ፡ መዋዕል፡ በእንተ፡ ፀር። ዘሀሎ፡ ይብጻሕ፡ በዛቲ፡ ዘመን፡ ወኃይል፡ ዘተጋብአ፡
+                              ለተቃትሎ፡ ዘመን፡ ዘአስተቃደመ። ወአስተጋብአ፡ እግዚአብሔር፡ ዘመነ፡ ሰላም፡ በመዋዕለ፡ ጽድቅ፡
+                              ወብፁዕ፡ ይትፈጸም።
+                            </incipit>
                         </msItem>
                     </msContents>
-                    
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf">191</measure>
+                                    <measure unit="leaf" type="blank">1</measure>
+                                    <dimensions type="outer" unit="in">
+                                        <height>14.875</height>
+                                        <width>13</width>
+                                    </dimensions>
+
+                                </extent>
+                                <foliation>One unnumbered blank leaf at the end.</foliation>
+
+                            </supportDesc>
+
+                            <layoutDesc>
+                                <layout columns="3" writtenLines="36"/>
+                            </layoutDesc>
+                        </objectDesc>
+
+                        <handDesc>
+
+                            <handNote script="Ethiopic" xml:id="h1">
+                                <desc>The manuscript is well written;
+                                  of the <date>first half of the 17th century.</date>
+                                </desc>
+                                <date notBefore="1700" notAfter="1750" resp="PRS10171Wright"/>
+                            </handNote>
+                        </handDesc>
+                        <additions>
+                            <list>
+                        <item xml:id="a1">
+                                <locus target="#3r"/>
+                                <desc type="OwnershipNote">The note states that the manuscript belongs to the church of
+                                    <placeName ref="INS0101MadhaneAlam"/>.</desc>
+                            <q xml:lang="gez">ክብረ፡ ነገሥት፡ ዘ<placeName ref="INS0101MadhaneAlam">ቅዱስ፡ መድኃኔ፡ ዓለም።</placeName>
+                           </q>
+                            </item>
+                            </list>
+                            <list>
+                        <item xml:id="e1">
+                                <desc>The name of the owners,
+                                  <persName ref="PRS13359Yohannes" role="owner"></persName> and
+                                  <persName ref="PRS13360WalattaG" role="owner"></persName>, are mentioned on
+                                  <locus target="#46r #46v"></locus> and elsewhere. But on
+                                  <locus target="#161v #162v"></locus> instead of the latter the name
+                                  of <persName ref="PRS13361HamalmalaW" role="owner"></persName> is mentioned. </desc>
+
+                            </item>
+                            </list>
+
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="true" xml:id="binding">
+                                <decoNote xml:id="b1">In the original boards, covered with blind-tooled leather. </decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                </decoNote>
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
                     <history>
                         <origin>
                             <origDate notBefore="1700" notAfter="1750"/>
                         </origin>
-                        <provenance> 
+                        <provenance>
+                          The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area,
+                              from where it was taken by
+                              <persName ref="PRS9430Tewodros"/> and brought to <placeName ref="INS0101MadhaneAlam"/>. It was then looted
+                              by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date>.
                         </provenance>
                     </history>
-               
+
                <additional>
                   <adminInfo>
                      <recordHist>
@@ -188,6 +807,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <bibl>
                                     <ptr target="bm:Wright1877BM"/>
                                     <citedRange unit="page">297b-314a</citedRange>
+                                </bibl>
+                                <bibl>
+                                    <ptr target="bm:Schleifer1908Sibyl"/>
+                                    <citedRange unit="page">4a</citedRange>
                                 </bibl>
                             </listBibl>
                         </source>
@@ -215,15 +838,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <term key="OldTestament"/>
                   <term key="Apocrypha"/>
                   <term key="HistoryAndHistoriography"/>
+                  <term key="Translation"></term>
+                  <term key="NaturalSciences"></term>
+                  <term key="Homily"></term>
               </keywords>
           </textClass>
-          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
+          <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+          </langUsage>
       </profileDesc>
         <revisionDesc>
             <change who="MV" when="2018-02-15">Created catalogue entry</change>
             <change who="DR" when="2019-06-04">Added link to images</change>
             <change who="DR" when="2019-11-04">Updated keywords and catalogue range</change>
             <change who="DR" when="2019-11-08">Specified Vision of Shenoute recension</change>
+            <change when="2021-02-02" who="DE">Completed the description.</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -231,7 +861,454 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     </facsimile>
     <text xml:base="https://betamasaheft.eu/">
         <body>
-            <ab/>
+            <div type="edition">
+              <div type="textpart" corresp="#ms_i1.1" xml:lang="gez">
+                <ab>
+                  ፩ በእንተ፡ ክብረ፡ ነገሥት።<lb/>
+                  ፪ በእንተ፡ ዕበየ፡ ነገሥት።<lb/>
+                  ፫ በእንተ፡ መንግሥተ፡ አዳም።<lb/>
+                  ፬ በእንተ፡ ቅንዓተ፡ ቃየን።<lb/>
+                  ፭ በእንተ፡ መንግሥተ፡ ሴት።<lb/>
+                  ፮ በእንተ፡ ኃጢአተ፡ ቃየን።<lb/>
+                  ፯ በእንተ፡ ኖኅ።<lb/>
+                  ፰ በእንተ፡ አይኅ።<lb/>
+                  ፱ በእንተ፡ ኪዳነ፡ ኖኅ።<lb/>
+                  ፲ በእንተ፡ ዘከመ፡ ነገሮ፡ በእንተ፡ ጽዮን።<lb/>
+                  ፲፩ በእንተ፡ ጽዮን፡ ኀበ፡ ኃብሩ፡ ፫፻፲ወ፰።<lb/>
+                  ፲፪ በእንተ፡ ትዕቢተ፡ ከነዓን።<lb/>
+                  ፲፫ በእ፡ ፍቅረ፡ አምላኩ፡ ለአብርሃም።<lb/>
+                  ፲፬ በእንተ፡ ኪዳነ፡ አብርሃም።<lb/>
+                  ፲፭ በእንተ፡ ይስሐቅ፡ ወያዕቆብ።<lb/>
+                  ፲፮ በእንተ፡ ሮቤል።<lb/>
+                  ፲፯ በእ፡ ርደታ፡ ወክብራ፡ ለጽዮን።<lb/>
+                  ፲፰ ኀበ፡ ሖሩ፡ አበው፡ ጳጳሳት።<lb/>
+                  ፲፱ ኀበ፡ ተረክበት፡ ዛቲ፡ መጽሐፍ፡ በሮሜ።<lb/>
+                  ፳ በእንተ፡ ክፍለ፡ ምድር።<lb/>
+                  ፳፩ በእንተ፡ ንግሥተ፡ አዜብ።<lb/>
+                  ፳፪ በእንተ፡ ተምሪን፡ ነጋዲ።<lb/>
+                  ፳፫ ኀበ፡ ገብአ፡ ነጋዲ፡ ሀገረ፡ ኢትዮጵያ።<lb/>
+                  ፳፬ ኀበ፡ ተአዘዘት ወተደለወት፡ ለሐዊር።<lb/>
+                  ፳፭ በ፡ ዘከመ፡ በጽሐት፡ ኀበ፡ ሰሎሞን፡ ንጉሥ።<lb/>
+                  ፳፮ ኀበ፡ ተናገረ፡ ንጉሥ፡ ምስለ፡ ንግሥት።<lb/>
+                  ፳፯ በእንተ፡ ገባራዊ።<lb/>
+                  ፳፰ በእ፡ ዘከመ፡ አዘዛ፡ ልንግሥት።<lb/>
+                  ፳፱ በእንተ፡ ፫፻፲ወ፰ አበው።<lb/>
+                  ፴ በ፡ ዘከመ፡ መሐለ፡ ላቲ፡ ንጉሥ፡ ለንግሥት።<lb/>
+                  ፴፩ በ፡ ዘከመ፡ ወሀባ፡ ትእምርተ፡ ለንግሥት።<lb/>
+                  ፴፪ በ፡ ዘከመ፡ ወለደት፡ ወአተወት፡ ብሔራ።<lb/>
+                  ፴፫ በ፡ ዘከመ፡ ወረደ፡ ንጉሠ፡ ኢትዮጵያ፡ ኀበ፡ አቡሁ።<lb/>
+                  ፴፬፡ በ፡ ዘበጽሐ፡ ብሔረ፡ እሙ፡ ጋዛ።<lb/>
+                  ፴፭ በ፡ ዘለአከ፡ ይትቀበሎ፡ መልአከ፡ ኃይሉ።<lb/>
+                  ፴፮ ኀበ፡ ተራከበ፡ ምስለ፡ ወልዱ፡ ንጉሥ፡ ሰሎሞን።<pb/>
+                  ፴፯ በእ፡ ዘከመ፡ ተስእሎ፡ ንጉሥ፡ ለወልዱ።<lb/>
+                  ፴፰ በእንተ፡ ዘከመ፡ ተማከረ፡ ንጉሥ፡ ምስለ፡ ዐበይቱ፡ ከመ፡ ይፈንዎ፡ ምስለ፡ ደቂቆሙ።<lb/>
+                  ፴፱ ኀበ፡ አንገሥዎ፡ ለወልደ፡ ሰሎሞን።<lb/>
+                  ፵ ኀበ፡ አዘዞ፡ ሳዶቅ፡ ለንጉሥ፡ ደዊት።<lb/>
+                  ፵፩ በእንተ፡ በረከተ፡ ነገሥት።<lb/>
+                  ፵፪ በእንተ፡ ትእዛዝ፡ ፲ ቃላት።<lb/>
+                  ፵፫ በ፡ ዘተአዘዙ፡ ይሑሩ፡ ደቂቀ፡ ኃይለ፡ <sic>እስራ</sic>።<lb/>
+                  ፵፬፡ ከመ፡ ኢመፍትው፡ ሐሚየ፡ ንጉሥ።<lb/>
+                  ፵፭ በ፡ ዘበከዩ፡ ወመከሩ፡ እለ፡ ተፈነው።<lb/>
+                  ፵፮ በ፡ ዘመከሩ፡ በእንተ፡ ጽዮን።<lb/>
+                  ፵፯ ኀበ፡ አስተርአዮ፡ መልአክ፡ ለአዛርያስ።<lb/>
+                  ፵፰ በ፡ መሥዋዕተ፡ አዛርያስ፡ ወንጉሥ።<lb/>
+                  ፵፱ ኀበ፡ አንሥእዋ፡ ለጽዮን፡ በፈቃደ፡ መልአክ፡ ወአዛርያስ።<lb/>
+                  ፶ ኀበ፡ ባረኮ፡ አቡሁ፡ ለወልዱ።<lb/>
+                  ፶፩ ኀበ፡ ተፋነዉ፡ ምስለ፡ አቡሁ፡ ወለሀወት፡ ሀገር፡ ዘተርፈ።<lb/>
+                  ፶፪ ኀበ፡ ተነሥአ፡ ልብሳ፡ ወምጻሃ፡ ለጽዮን።<lb/>
+                  ፶፫ ኀበ፡ ወሀቦ፡ ሳዶቅ፡ ለዳዊት።<lb/>
+                  ፶፬ በእንተ፡ ዘተውህበ፡ ሰረገላ፡ ለሰብአ፡ ኢትዮጵያ።<lb/>
+                  ፶፭ በእን፡ ዘነገርዎ፡ ለንጉሥ፡ በእንተ፡ ጽዮን።<lb/>
+                  ፶፮ ኀበ፡ ተነበየ፡ ዳዊት፡ ንጉሠ፡ ኢትዮጵያ፡ ወተሳለማ፡ ለጽዮን።<lb/>
+                  ፶፯ በ፡ ዘተፈሥሑ፡ ሰብአ፡ ኢትዮጵያ።<lb/>
+                  ፶፰ በ፡ ዘዓደው፡ ተከዜ፡ ወኤርትራ።<lb/>
+                  ፶፱ በ፡ ግብአተ፡ ሳዶቅ፡ ውሂቦ፡ ሞጻ።<lb/>
+                  ፷ በእ፡ ውድቀተ፡ ሳዶቅ።<lb/>
+                  ፷፩ በ፡ ዘከመ፡ ተንሥአ፡ ሰሎሞን፡ ይቅትሎሙ።<lb/>
+                  ፷፪ በ፡ ዘሐተቶ፡ ለግብጽ፡ ገብረ፡ ፈርዖን።<lb/>
+                  ፷፫ በ፡ ዘለሐዋ፡ ለጽዮን፡ ንጉሥ፡ ሰሎሞን።<lb/>
+                  ፷፬ በእንተ፡ ግብአቱ፡ ለሰሎሞን፡ ወናዘዝዎ፡ አዕሩግ።<lb/>
+                  <sic>፳፭</sic> በ፡ ዘአውሥኦሙ፡ ሰሎሞን፡<lb/>
+                  <sic>፳፮</sic> በ፡ ዘኃብሩ፡ ዐበይተ፡ እስራኤል።<lb/>
+                  <sic>፳፰</sic> ኀበ፡ አስሐተቶ፡ ለሰሎሞን፡ ወለተ፡ ፈርዖን።<lb/>
+                  ፷፱ በእንተ፡ ኃጢአተ፡ ሰሎሞን።<lb/>
+                  ፸ በእንተ፡ ትንቢተ፡ ክርስቶስ።<lb/>
+                  ፸፩ በእንተ፡ ብካየ፡ ሰሎሞን።<lb/>
+                  ፸፪ በእ፡ ዘተናገሮ፡ መልአክ፡ <sic>ለሰሎሞ።</sic><lb/>
+                  ፸፫ በእንተ፡ መድኃኒትነ፡ ማርያም።<lb/>
+                  ፸፬ ኀበ፡ ተስእለ፡ ሰሎሞን፡ ዳግመ።<lb/>
+                  ፸፭ በእንተ፡ ዘነግሠ፡ ዮርብዓም።<lb/>
+                  ፸፮ ኀበ፡ ዐለውዎ፡ ለዮርብዓም።<lb/>
+                  ፸፯ በእንተ፡ ማርያም፡ ከመ፡ ወለተ፡ ዳዊት።<lb/>
+                  ፸፰ በእንተ፡ ንጉሠ፡ ሮም።<lb/>
+                  ፸፱ በእንተ፡ ቀዳሜ፡ ፍትሑ፡ ለአድራሚ፡ ንጉሠ፡ ሮም።<lb/>
+                  ፹ በእንተ፡ ንጉሠ፡ ምድያም።<lb/>
+                  ፹፩ በእንተ፡ ንጉሠ፡ ባቢሎን።<lb/>
+                  ፹፪ በእንተ፡ እል፡ ኮኑ፡ ሰማዕተ፡ ሐሰት።<lb/>
+                  ፹፫ በእንተ፡ ንጉሠ፡ ፋርስ።<lb/>
+                  ፹፬ በእንተ፡ ንጉሠ፡ ሞአብ።<lb/>
+                  ፹፭ በእንተ፡ ንጉሠ፡ አማሌቅ።<lb/>
+                  ፹፮ በእንተ፡ ንጉሠ፡ ኢሎፍሊ።<lb/>
+                  ፹፯ በእንተ፡ ዘከመ፡ ቀተሎ፡ ወልደ፡ ሰምሶን፡ ለወልደ፡ ንጉሠ ኢሎፍሊ።<lb/>
+                  ፹፰ በ፡ ርደተ፡ አብርሃም፡ ግብጽ።<lb/>
+                  ፹፱ በ፡ ንጉሠ፡ እስማዔላውያን።<lb/>
+                  ፺ በ፡ ንጉሠ፡ ኢትዮጵያ፡ ኀበ፡ ገብአ፡ ሀገሮ።<lb/>
+                  ፺፩ በ፡ ኀበ፡ ተፈሥሐት፡ ማክዳ፡ ንግሥት።<lb/>
+                  ፺፪ ኀበ፡ አንገሠቶ፡ ማክዳ፡ ለወልዳ።<lb/>
+                  ፺፫ ኀበ፡ መሐሉ፡ መኳንንተ፡ ኢትዮጵያ።<lb/>
+                  ፺፬ ኀበ፡ ዜነዋ፡ ለእሙ፡ ዘከመ፡ <sic>አንገሥዋ።</sic><lb/>
+                  ፺፭ ኀበ፡ ነገረቶሙ፡ ንግሥት፡ ለደቂቀ፡ ኃያላነ፡ እስራኤል።<lb/>
+                  ፺፮ ኀበ፡ ወደሳ፡ ለንግሥት፡ ወለሀገራ፡ አዛርያስ።<lb/>
+                  ፺፯ በእ፡ ዘይበልዑ፡ ኅጹሐ፡ ወርኵሰ።<lb/>
+                  ፺፰ ኀበ፡ ሐደሱ፡ መንግሥቶ፡ ለንጉሠ፡ ኢትዮጵያ፡ በቤተ፡ ጽዮን።<lb/>
+                  ፺፱ በእ፡ ዘአማሰኑ፡ ሃይማናቶሙ፡ ሮም።<lb/>
+                  ፻ ቀዳሚ፡ ኀበ፡ ፅብዓ፡ ንጉሠ፡ ኢትዮጵያ።<lb/>
+                  ፻፩ ኀበ፡ ኀብሩ፡ አበው፡ ክብሩ፡ ለንጉሠ፡ ኢትዮጵያ።<lb/>
+                  ፻፪ በእንተ፡ ትንቢተ፡ ነቢያት፡ ዘተነበዩ፡ በእንተ፡ ክርስቶስ።<lb/>
+                  ፻፫ በእንተ፡ ነጐርጓረ፡ እስራኤል።<lb/>
+                  ፻፬ በእንተ፡ በትረ፡ ሙሴ፡ ወአሮን።<lb/>
+                  ፻፭ በእንተ፡ ፪ አግብርት።<lb/>
+                  ፻፮ በ፡ እለ፡ ተዓደው፡ መላእክት።<lb/>
+                  ፻፯ በእንተ፡ ታቦት።<lb/>
+                  ፻፰ በእንተ፡ ህላዌ፡ ኵለሄ።<lb/>
+                  ፻፱ በእንተ፡ ቀዳማዊ።<lb/>
+                  ፻፲ በእንተ፡ አቅርንተ፡ ምሥዋዕ።<lb/>
+                  ፻፲፩ ካዕበ፡ በእንተ፡ ታቦት፡ ወነገረ፡ ዕልዋን።<lb/>
+                  ፻፲፪ በእንተ፡ አሚነ፡ አብርሃም።<lb/>
+                  ፻፲፫ ትንቢት፡ በእንተ፡ ምጽአቱ፡ ለክርስቶስ።<lb/>
+                  ፻፲፬ በእንተ፡ በዓቱ፡ ኢየሩሳሌም፡ በስብሐት።<lb/>
+                  ፻፲፭ በእንተ፡ ይሁድ፡ ዕልው።<lb/>
+                  ፻፲፮ ትንቢት፡ በእንተ፡ ስቅለቱ።<lb/>
+                  ፻፲፯ በእንተ፡ ዕርገቱ፡ ወዳግሞ፡ ምጽአቱ።<lb/>
+                  ፻፲፰ በእንተ፡ ዘአርአዩ፡ በሥጋሆሙ፡ ነቢያት።<lb/>
+                  ፻፲፱ በእንተ፡ ሰረገላ፡ ወመግረሬ፡ ፀር።<lb/>
+                  ፻፳ በእ፡ ግብአታ፡ ለጽዮን፡ ኀበ፡ እግዚአብሔር።<lb/>
+                  ፻፳፩ በእንተ፡ ቅሥተ፡ እስራኤል።<lb/>
+                  ፻፳፪ በእተ፡ ሰረገላ፡ ዘኢትዮጵያ።<lb/>
+                  ፻፳፫ በእንተ፡ ንጉሠ፡ ሮም፡ ወንጉሠ፡ ኢትዮጵያ።
+                </ab>
+              </div>
+              <div type="textpart" corresp="#ms_i2.1" xml:lang="gez">
+                <ab>
+                  በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ አምላክ። መቅድመ፡ መጽሐፍ፡ ዛቲ፡ በኍልቈ፡ ክፍላቲሃ፡ ዘውእቶን፡ ፻፳ወ፪፡
+                  ለእልክቱ፡ አምሳላት፡ አስተጋብኦሙ፡ ለቀዳማውያን፡ ዘኀለፈ፡ ወኃልቀ፡ እመጻሕፍተ፡ ትውልዳት፡ ቀዳማውያን፡ እምአዳም፡
+                  እስከ፡ ቲው፡ ዘነግሠት፡ ላዕለ፡ ዮናናውያን፡ ወአፍራቅያ፡ አመ፡ ሮማኖስ፡ ወሮምሎስ፡ ዘነግሡ፡ ላዕለ፡ ሮም።
+                  ለተዝካር፡ ሠናይ፡ እስከ፡ ፍጻሜ፡ መንግሥቱ፡ ለቅዱስ፡ ቈስጠንጢኖስ፡ መሲሐዊ፡ ቀዳማዊ፡ ንጉሠ፡ ሮም፡ አመ፡
+                  ሢመቶሙ፡ ለደቂቀ፡ ንጉሥ፡ ዐቢይ፡ መሲሐዊ፡ ቈስጠንጢኖስ፡ መምለኬ፡ እግዚአብሔር፡ እስከ፡ ፍጻሜሁ። ወዩያይኑስ፡
+                  ንጉሥ፡ መፍቀሬ፡ እግዚአብሔር። ወእምአመ፡ ሢመቱ፡ ለእንድያንስ፡ እስከ፡ ፍጻሜሁ። ወታውዶስዮስ፡ ንጉሥ፡ ዐቢይ፡
+                  ወብፁዕ። ወአመ፡ ዘመነ፡ አርቃዴዎስ፡ ወአኖሬዎስ፡ ደቂቀ፡ ንጉሥ፡ መፍቀሬ፡ እግዚአብሔር። ወለእድዩስ፡ እስከ፡
+                  ፍጻሜሁ። ወአንስጣትዮስ፡ ንጉሥ፡ ብፁዓዊ። ወበመዋዕለ፡ ዮስጥያኖስ፡ ንጉሥ፡ እስከ፡ መንግሥቱ፡ ለሕርቃል፡ እስከ፡
+                  ፍጻሜሁ። ወአመ፡ ቴዎድሮስ፡ ሊቅ፡ ቀዳማዊ፡ ዘሀገረ፡ ምስር። ወዮሐንስ፡ መነኮስ፡ ዘደብረ፡ ሲና፡ ዘተአመነ፡ በሃይማኖተ፡
+                  ኪልቄዶናውያን። ወዓዲ፡ ለእልክቱ፡ አምሳላት፡ ዘአስተጋብኦሙ፡ በፍጹም፡ ዮሐንስ፡ መደብር፡ ወመስተጋድል፡ ዘበትርጓሜሁ፡
+                  ሠራዒ፡ ዘኮነ፡ ሊቀ፡ ላዕለ፡ ሀገረ፡ ነቂዩስ፡ ዘምስር፡ እንተ፡ ትሰመይ፡ አብሳይ፡ ዘአስተጋብኦሙ፡ እምነ፡ ዜናት፡ ነዊኃት፡
+                  ዘውእቶሙ፡ ክፍላት፡ ዘኍላቌሆሙ፡ ፻፳ወ፪፡ ዘውእቶሙ፡ ጽሒፈ፡ አዝማናት፡ እምጥንተ፡ ትውልድ፡ አዝማናዊያን።
+                </ab>
+              </div>
+              <div type="textpart" corresp="#ms_i2.2" xml:lang="gez">
+                <ab>
+                  ክፍል፡ ቀዳማዊ። በእንተ፡ አስማተ፡ አዳም፡ ወሔዋን፡ ወደቂቁ፡ ወኵሉ፡ ፍጥረት።
+                  ክፍል፡ ዳግማዊ፡ በእንተ፡ አስማተ፡ ከዋክብት፡ ፀሐይ፡ ወወርኅ፡ ወዘተረክቡ፡ እመጻሕፍተ፡ ዕብራውያን።
+                  ክፍል፡ ሣልስ፡ በእንተ፡ ግብረ፡ አሕማር፡ እለ፡ ወጠኑ፡ ቅድመ፡ ወሖሩ፡ ውስተ፡ ባሕር።
+                  ክፍል፡ ራብዕ፡ በእንተ፡ ዘጸሐፉ፡ እስጡርላባት፡ እምቀዳሚ፡ እስከ፡ ደኃሪ።
+                  ክፍል፡ ኃምስ፡ በእንተ፡ ጥንተ፡ ሕንፀታ፡ ለባቢሎን፡ ወሰገዱ፡ ለሥዕለ፡ ፈረስ፡ ከመ፡ አምላክ። ወወጢነ፡ ንዒው፡ ወበሊዓ፡ አራዊት።
+                  ክፍል፡ ሳድስ፡ በእንተ፡ ዘወጠኑ፡ በሊዓ፡ ሥጋ፡ ሰብእ። ወዘቀተለ፡ ወላድያኒሁ፡ ቅድመ፡ ወዘቀተለ፡ አቡሁ፡ ዓዲ።
+                  ክፍል፡ ሳብዕ፡ በእንተ፡ ዘነሥአ፡ ለእኅቱ፡ ወረሰያ፡ ብእሲተ፡ ቅድመ።
+                  ክፍል፡ ፰ በእንተ፡ ዘወጠነ፡ ሐኒጾታ፡ ለሀገረ፡ ነነዌ። ወበእንተ፡ ዘነሥኣ፡ ለእሙ፡ ወረሰያ፡ ብእሲተ ቅድመ።
+                  ክፍል፡ ተስዓቱ፡ በእንተ፡ ዘወጠነ፡ ገቢረ፡ ወርቅ፡ ወአውፅኦ፡ ማዕድን።
+                  ክፍል፡ ፲ በእንተ፡ ዘወጠኑ፡ ገቢረ፡ ንዋየ፡ ፀብእ፡ ቅድመ።
+                  ክፍል፡ <sic>፲</sic> በእንተ፡ ዘወጠነ፡ ገቢረ፡ ምንሃብ፡ ወዘአውሰበ፡ ክልኤ፡ አንስተ።
+                  ክፍል፡ ፲፪፡ በእንተ፡ ዘሐነጸ፡ ሀገረ፡ እንተ፡ ትሰመይ፡ ሀገረ፡ ፀሐይ።
+                  ክፍል፡ ፲ወ፫፡ በእንተ፡ ዘሐነጸ፡ ክልኤ፡ አኅጉረ፡ አቡሴይር፡ ለአሐቲ፡ በላዕላይ፡ ግብጽ። ወለካልእታ፡ በደቡበ፡ ግብጽ።
+                  ክፍል፡ ፲፬፡ በእንተ፡ ዘሐነፅዋ፡ ለሀገረ፡ ሰምኑድ፡ ወለእልበራቢ፡ እንተ፡ ይእቲ፡ ቤተ፡ አማልክት።
+                  ክፍል፡ <sic>፲፫፡</sic> በእንተ፡ ሐነፋውያን፡ እለ፡ አቅደሙ፡ ነጊረ፡ ክብረ፡ ሥሉስ፡ ቅዱስ፡ በዕሪና።
+                  ክፍል፡ ፲፬፡ በእንተ፡ ዘአቅደሙ፡ ቅድመ፡ ግብረ፡ ማኅረስ፡ በአህጉረ፡ ግብጽ። ወበአይ፡ ህላዌ፡
+                  ነበረት፡ ቅድመ፡ ምስር።
+                  ክፍል፡ ፲፭፡ በእንተ፡ ዘወጠነ፡ ነሢኦ፡ ጸባሕት፡ በሀገረ፡ ግብጽ፡ ወሰፊረ፡ ምድር፡ በሕለት፡ ወረሰዮሙ፡
+                  የሀቡ፡ ለንጉሥ። ወመኑ፡ ውእቱ፡ ዘከረየ፡ ምድረ፡ ለአውኅዞ፡ ማይ፡ ወለፈለግ፡ ዘይሰመይ፡ ዲክ።
+                  ክፍል፡ ፲፮፡ በእንተ፡ ዘአጥፍኦሙ፡ ለማያት፡ ወደምሰሶሙ፡ ለአብሕርተ፡ ግብጽ፡ እስከ፡ ሐነፁ፡
+                  ላዕሌሆን፡ አኅጉራተ፡ ወአድያማተ፡ ወተከሉ፡ ውስቴቶን፡ አትክልተ።
+                  ክፍል፡ ፲፯፡ በእንተ፡ ዘሐነፁ፡ ሠላሰ፡ ምስጋዳተ፡ በሀገረ፡ መኑፍ።
+                  ክፍል፡ ፲፰፡ በእንተ፡ ዘወጠነ፡ ገቢረ፡ ጥምዓታተ፡ ኅብር፡ ዘአልባስ።
+                  ክፍል፡ <sic>፳፱፡</sic> በእንተ፡ ዘገብረ፡ ምስላተ፡ ሠናያተ፡ ወአምለክዎሙ። ወበእንተ፡ ዘሐነፆን፡
+                  ለኢቆንዮን፡ ወለጠርሱስ። ወመኑ፡ ዘሰመያ፡ ለሶርያ፡ በፋርስ። ወመኑ፡ ዘተከለ፡ አዕፃወ፡ በምስር። ወመኑ፡
+                  ዘአምለከ፡ ፀሐየ፡ ወወርኀ፡ ወእሳተ፡ ወማየ፡ ቅድመ።
+                  ክፍል፡ ፳፡ በእንተ፡ ዘአ<pb/>ምለከ፡ ወርኃ፡ ባሕቲቱ፡ ወሐነፀ፡ ላቲ፡ ምሥዋዐ፡ ከመ፡ አምላክ።
+                  ክፍል፡ ፳፫፡ በእንተ፡ ዘሰመያ፡ ለዮናን። ወመኑ፡ ዘሐነፃ፡ ለሱር። ወመኑ፡ ዘሰመዮን፡ ለከናአን፡ ወለሻም፡ ወቂልቅያ።
+                  ክፍል፡ ፳፬፡ በእንተ፡ ዘሰመዮን፡ ለአህጉራተ፡ ኦርያ፡ ወዘሐነፃ፡ ለሀገረ፡ ቅርጣግና።
+                  ክፍል፡ ፳፭፡ በእንተ፡ ዘወጠነ፡ ገቢረ፡ ዕፅ፡ በአእጋረ፡ ሰብእ፡ ቅድመ።
+                  ክፍል፡ ፳፮፡ በእንተ፡ ዘወጠነ፡ ሐኒፀ፡ ምሥዋዕ፡ ለጣዖታት፡ ወአምለኮሙ።
+                  ክፍል፡ ፳፯፡ በእንተ፡ መልከ፡ ጼዴቅ፡ ካህን፡ እምነ፡ አይ፡ ነገድ፡ ውእቱ፡ ወበእንተ፡ ዘሐነፅዎን፡ ለሳይዳ፡
+                  ወለጽዮን። እንተ፡ ትሰመይ፡ ሳሌም፡ ወተሰምዮተ፡ አይሁድ፡ ዘውእቶሙ፡ ዕብራውያን።
+                  ክፍል፡ ፳፰፡ በእንተ፡ ዘረከቡ፡ መጽሐፈ፡ ሐነፋውያን፡ ቅድመ፡ ወአእምሮተ፡ ጽሕፈተ፡ መጻሕፍቲሆሙ።
+                  ክፍል፡ ፳፱፡ በእንተ፡ ማየ፡ አይኅ፡ ዘኮነ፡ በምድረ፡ ዲክ፡ ወምክንያተ፡ ጐንድዮቱ፡ ላዕሌሃ፡ ወከዊኖታ፡ በድወ።
+                  ክፍል፡ ፴፡ በእንተ፡ ኩነተ፡ ፈርዖን፡ በቅድመ፡ ሙሴ፡ ወተሐጕሎቱ፡ ምስለ፡ እሊዓሁ፡ ውስተ፡ ዕመቀ፡ ባሕረ፡ ኤርትራ።
+                  ክፍል፡ ፴፩፡ በእንተ፡ ዘወለጠ፡ ስመ፡ ሀገረ፡ አብሳይ፡ ወሰመያ፡ ነቂዩስ፡ ወምክንያተ፡ ዘፈለሰ፡ ባቲ፡ ፈለግ፡
+                  እምነ፡ ምሥራቃ፡ ወኮነ፡ ኀበ፡ ምዕራቢሃ፡ በትእዛዘ፡ እግዚአብሔር።
+                  ክፍል፡ ፴፪፡ በእንተ፡ ሐኒፀ፡ ኢየሩሳሌም፡ ወፍልሰተ፡ ስማ፡ እንተ፡ ይእቲ፡ ናብሎስ። ወበእንተ፡ ዘተሐንፀ፡
+                  ውስቴታ፡ ቤተ፡ እግዚአብሔር።
+                  ክፍል፡ ፴፫፡ ዘወጠነ፡ ገቢረ፡ ግብረ፡ እድ፡ እምነ፡ ቀዳማውያን።
+                  ክፍል፡ ፴፬፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘረከበ፡ ጽሕፈተ፡ ቀዳሚ፡ ወወሀበ፡ ለሰብእ። ወመኑ፡ ዘረከበ፡ ተመርሖ፡
+                  ወመኑ፡ ዘፈከረ፡ መሥመራተ፡ ዘጽሑፋት፡ ዘሰሌዳ፡ እብን።
+                  ክፍል፡ ፴፭፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአንበረ፡ ሕገ፡ አውስቦ፡ ከመ፡ ይንሥኡ፡ ዕደው፡ አንስቲያ፡ አዋልደ፡
+                  ደናግለ፡ ብእሲተ፡ ሎሙ። ወይስምይዎሙ፡ መርዓዊያተ፡ ወመኑ፡ ውእቱ፡ ዘወጠነ፡ ገቢረ፡ ምሳሕ።
+                  ክፍል፡ ፴፮፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአቅደመ፡ አሚነ፡ እምነ፡ ሐነፋውያን፡ በከመ፡ ሥሉስ፡ ቅዱስ፡ እስመ፡
+                  ውእቱ፡ ዕሩይ፡ በ፩፡ መለኮት።
+                  ክፍል፡ ፴፯፡ በእንተ፡ እለ፡ ወጠኑ፡ ገቢረ፡ ፈውስ፡ በውስተ፡ ዓለም፡ ቅድመ።
+                  ክፍል፡ ፴፰፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘወጠነ፡ ሐኒፀ፡ ቤተ፡ ብለኔ፡ በውስተ፡ ዓለም፡ ቅድመ።
+                  ክፍል፡ ፴፱፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘወጠነ፡ ነፊሐ፡ እንድር፡ ወዘይመስሎ፡ ከመ፡ ቀርን፡ ወጥብልቃና።
+                  ክፍል፡ ፵፡ በእንተ፡ ሐኒፀ፡ ከሲከስ። ወምክንያተ፡ ተአመኑ፡ ቦቱ፡ መናፍስት፡ በተዋሕዶተ፡ ሥሉስ፡ ቅዱስ፤
+                  ወዜነዉ፡ ዓዲ፡ ለኵሉ፡ ሰብእ፡ ወከመ፡ ድንግል፡ ትወልድ፡ አምላክ።
+                  ክፍል፡ ፵፩፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአጽንዓ፡ ለመቅደስ፡ ስቴንስ። ወሐኒጸ፡ ቤተ፡ ክርስቲያን፡ በትእዛዘ፡
+                  ንጉሥ፡ ቈስጠንጢኖስ፡ መፍቀሬ፡ እግዚአብሔር።
+                  ክፍል፡ ፵፪፡ በእንተ፡ ቅንዋት፡ ዘእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወመዊእ፡ ዘኮነ፡ ለነገሥት፡ በእንቲአሆሙ።
+                  ክፍል፡ ፵፫፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሰመዮሙ፡ ለክልኤ፡ አህጉር፡ ዘውእቶሙ፡ አካይያ፡ ወሉቃንያ።
+                  ክፍል፡ ፵፬፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሰመያ፡ ለደሴተ፡ ሉናንያ፡ ወሐነፀ፡ ውስቴታ፡ ሀገረ፡ ዘትሰመይ፡ ሉባኒዩን።
+                  ክፍል፡ ፵፭፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፆን፡ ለፈርማ፡ ወቡልኪኑን።
+                  ክፍል፡ ፵፮፡ በእንተ፡ መኑ፡ ውእቱ፡ መሐረ፡ ተዛውዖ፡ በንዋየ፡ ተውኔት፡ ቅድመ።
+                  ክፍል፡ ፵፯፡ በእንተ፡ ዘሰመያ፡ ለደሴተ፡ ኤፌሶን፡ እንተ፡ ይእቲ፡ እስያ። ቅድመሰ፡ ትሰመይ፡
+                  ሰቃልበህ፡ ወወለጡ፡ ስማ፡ ወሰመይዋ፡ ኢቆንዮን።
+                  ክፍል፡ ፵፰፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፃ፡ ለሀገር፡ ዘትሰመይ፡ ቡልሚዝ፡ እስመ፡ በኀቤሃ፡ ሞኦ፡ ዳዊት፡
+                  ንጉሥ፡ ለፍልስጥኤማዊ።
+                  ክፍል፡ ፵፱፡ በእንተ፡ ምክንያተ፡ መዊኦቱ፡ ለናቡከድነጾር፡ ለሀገረ፡ ጢሮስ፡ እስመ፡ ይእቲ፡ ደሴት።
+                  ክፍል፡ ፶፡ በእንተ፡ ታቦተ፡ እግዚአብሔር፡ ወጽላታት፡ ወበትረ፡ አሮን፡ ዘጸገየት፡ ወመሥርተ፡ መና፡
+                  ወእብነ፡ ኰኵሕ፡ ጽሙም። ወመኑ፡ ውእቱ፡ ዘኀብኦሙ፡ እምሰብእ።
+                  ክፍል፡ ፶፩፡ በእንተ፡ መንግሥተ፡ ኩርሽ፡ ንጉሥ፡ ወፈንዎቱ፡ ፄዋ፡ ለደቂቀ፡ እስራኤል። ወዘከመ፡ ከልኦሙ፡
+                  ከሚስ፡ ከመ፡ ኢይሕንፁ፡ መቅደሰ። ወዘመከሮሰ፡ ለከሚስ፡ የሲድ፡ መልአከ፡ ኃይ<pb/>ሎሙ፡ ለምስር።
+                  ወቀተሎሙ፡ ለመኳንንተ፡ ምስር፡ ወፄወወ፡ ፄዋ፡ ዘነሥአ፡ ከሚስ፡ እምነ፡ ምስር። እስከ፡ ሀገሩ፡ ወተመይጡ፡
+                  ምሥራውያን፡ ኀበ፡ ሀገሮሙ፡ ምዕረ፡ ዳግመ። ወእምድኅረ፡ ፵ወ፩ ዓመት፡ ነግሠ፡ እስከንድር፡
+                  መቄዶናዊ፡ ዘተብህለ፡ አኃዜ፡ ዓለም።
+                  ክፍል፡ ፶፪፡ በእንተ፡ ሕንፀተ፡ ሀገር፡ ዘትሰመይ፡ ሉንያ።
+                  ክፍል፡ ፶፫፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፀ፡ ቤተ፡ ቅድመ፡ ወሰመየ፡ ስሞ፡ ማኅፈደ።
+                  ክፍል፡ ፶፬፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፀ፡ ሀገረ፡ እንተ፡ ትሰመይ፡ ህልዋን።
+                  ክፍል፡ ፶፭፡ በእንተ፡ ዘሐነፃ፡ ለቅርጣግና፡ ሀገር።
+                  ክፍል፡ ፶፭፡ በእንተ፡ ዘሐነፃ፡ ለሀገረ፡ ሮሜ፡ ወምክንያተ፡ ዘተሰምዩ፡ ባቲ፡ ሮማውያን፡ ወጥንተ፡ ጽሕፈተ፡
+                  መጻሕፍቲሆሙ፡ በስኢል፡ ወበትእዛዝ፡ ወኡደተ፡ ሢመታት፡ ወሑረተ፡ ሐራ፡ በውስተ፡ ፀብእ፡ በተፅዕኖ፡
+                  አፍራስ፡ ወአጽንዖ፡ መካነ፡ ፀብእ፡ ዘአንስት፡ ወትእዛዘ፡ ሥርዓታት፡ ሐራ፡ ወህላዌ፡ ልኡካን፡ ወእለ፡
+                  ይትለአክዎሙ፤ ወምክንያተ፡ አበዊነ፡ መነኮሳት፡ ዘግብጻውያን፡ ይቄድሱ፡ በቀዳማዊ፡ ዕለት፡ እምነ፡ ኵሉ፡ አውራኅ፡
+                  በእንተ፡ አይ፡ ምክንያት።
+                  ክፍል፡ ፶፮፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአስተርአየ፡ ገቢረ፡ ፍሉስ፡ በማኅተም። ወኮነ፡ ጥንት፡ ለሤጥ፡
+                  ወተሣይጦ፡ ወአቅሞተ፡ መኳንንት፡ ወመላእክት፡ ወፈታሕት።
+                  ክፍል፡ ፶፯፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፃ፡ ለሀገረ፡ ተሰሎንቄ።
+                  ክፍል፡ ፶፰፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነጾን፡ ለሀገረ፡ እስክንድርያ፡ ወለእኽርሳ፡ ሀገረ፡ ብራንጥያ፡
+                  ዘውእቱ፡ እስክንድር፡ በምክንያት፡ በእንተ፡ ዘሞኦ፡ ለዳርዮስ፡ ወፄወወ፡ ወለቶ። ወበምክንያተ፡ ቅንዳቅስ፡
+                  ንግሥት፡ ዘአኀዘቶ፡ ለእስክንድር፡ አመ፡ በጽሐ፡ ኀቤሃ፡ ምስለ፡ ሰብአ፡ ዓይን፡ ኅቡረ፡ ዜናውያን፡ ዘፈነዎሙ፡
+                  ኀቤሃ። ወበምክንያት፡ ዘረሰያ፡ ሎቱ፡ ብእሲተ።
+                  ክፍል፡ ፶፱፡ በእንተ፡ አይ፡ ዘመን፡ ተተርጐሙ፡ መጻሕፍት፡ እምእስትንፋሰ፡ እግዚአብሔር፡ ወእስፍንቱ፡
+                  ውእቶሙ፡ መተርጐማን።
+                  ክፍል፡ ፷፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፆን፡ ለእንዲዓ፡ ወአንጾኪያ፡ ወሎዶቅያ፡ ወአያምያ፡ አህጉር፡ እሙራት።
+                  ክፍል፡ ፷፩፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘጸሐፈ፡ ዜና፡ ቅድመ፡ ወሰመዮሙ።
+                  ክፍል፡ ፷፪፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሣቀዮሙ፡ ለቅዱሳን፡ መቃቢያን።
+                  ክፍል፡ ፷፫፡ በእንተ፡ ልደተ፡ ቄሣር፡ ዮልዩስ፡ ንጉሠ፡ ሮም፡ ወመንግሥተ፡ አክላኡባጥራ፡ ወሕንፀተ፡
+                  ቤተ፡ ክርስቲያን፡ ዐባይ፡ እንተ፡ ትሰመይ፡ ቄሣርያ፡ በሀገረ፡ እስክንድርያ።
+                  ክፍል፡ ፷፬፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፃ፡ ዘቂሳርያ፡ ዘፍልስጥኤም።
+                  ክፍ፡ ፷፭፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነጻ፡ ለእልፋሩስ፡ ዘእስክንድርያ፡ ወከረየ፡ ምድረ፡ ለአውኅዞ፡
+                  ፈለገ፡ ከርዩን፡ ዘትርጓሜሁ፡ ክርየት፡ እስከ፡ ቦአ፡ ማይ፡ እምነ፡ ፈለግ፡ ዐቢይ፡ ግዮን፡ ኀበ፡ ሀገር፡
+                  ዐቢይ፡ እስክንድርያ፡ ወበዊኦቱ፡ ለማይ፡ ኀበ፡ ዕመቅ፡ ዘተሐንፀ፡ በጥበብ። ወበአይ፡ ዘመን፡ ተወልደ፡
+                  እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ በሥጋ። ወበእንተ፡ ምንት፡ ረሰዩ፡ ሮማውያን፡ ጥንተ፡ አውራኂሆሙ፡ በሳድስ፡
+                  ወርኅ፡ እምነ፡ ዓመት።
+                  ክፍል፡ ፷፮፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአንበረ፡ ፩፡ እምርታት፡ አመ፡ ሰዱሱ፡ ለጥር። ወአውፅእዎ፡
+                  ለእስትድራቢ፡ ብእሲ፡ ንጹሕ፡ በዓመፃ።
+                  ክፍ፡ ፷፯፡ በእንተ፡ በመዋዕለ፡ መኑ፡ እምነገሥት፡ ተሰቅለ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ። ወመኑ፡
+                  ዘሐነፃ፡ ለሀገረ፡ ጢባርያ።
+                  ክፍል፡ ፷፰፡ በእንተ፡ ዘኮነ፡ ለኔሮስ፡ ንጉሥ፡ ወሞቱ፡ መሪር።
+                  ክፍል፡ <sic>፷፰፡</sic> በእንተ፡ ዱማዴዮስ፡ ንጉሥ፡ ወዘከመ፡ ሰደዶ፡ ለቅዱስ፡ ዮሐንስ፡ ወንጌላዊ፡ ክልኤ፡ ጊዜ፡ ወሞቱ።
+                  ወዘከመ፡ ሐነፁ፡ ሀገረ፡ ዶማዱያኑ፡ ወሞቱ፡ ዕፁብ፡ ለዶማድያኖስ፡ ወአጽርዖተ፡ ፀብእ፡ ወበጽፍዓተ፡ ሰብእ።
+                  ክፍል፡ ፷፱፡ በእንተ፡ ሞተ፡ አግናጤዎስ፡ ለባሴ፡ አምላክ፡ ወለአንስት፡ ዘኮኑ፡ ሰማዕተ፡ ምስሌሁ። ወሐኒፀ፡
+                  ማኅፈድ፡ በባቢሎነ፡ ምስር። ወመኑ፡ ውእቱ፡ ዘሰመያ፡ ባቢሎን። ወመኑ፡ ውእቱ፡ ዘከረየ፡ ለሙኃዘ፡ ፈለግ፡
+                  ዘይሰመይ፡ ድርያኑስ፡ እንተ፡ ተሐውር፡ ውስተ፡ ባሕረ፡ ኤርትራ፡ ወማኅፈደ፡ ዘውስተ፡ መኑፍ።
+                  ክፍል፡ <sic>፷፱፡</sic> በእንተ፡ መኑ፡ ውእቱ፡ ዘሐነፃ፡ ለእንድና፡ በሀገረ፡ ሪፍ።
+                  ክፍል፡ ፸፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአንበረ፡ ትእዛዘ፡ ለአበ<pb/>ው፡ ይትካየዱ፡ ውሉዶሙ።
+                  ወሐኒፀ፡ ክልኤ፡ አናቅጸ፡ በሀገረ፡ እስክንድርያ፡ በምዕራባ፡ ወምሥራቃ።
+                  ክፍል፡ ፸፩፡ በእንተ፡ መኑ፡ ዘአምጽአ፡ አናብስተ፡ ላዕለ፡ ምስር፡ ወፍልስጥኤም።
+                  ክፍል፡ ፸፪፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘአንበረ፡ ጥንተ፡ መጽሐፈ፡ ሐሳብ፡ ወተሐብዮ፡ ከመ፡ ይኩን፡ ጽንዓ፡ ሰብእ።
+                  ክፍ፡ ፸፫፡ በእንተ፡ መንግሥተ፡ ዲዮቅልጥያኖስ፡ ግብጻዊ፡ ወምክንያተ፡ ተወልጦተ፡ ልቡናሁ፡ ወተሰዶቱ፡
+                  ወመኑ፡ ውእቶሙ፡ ደቂቁ፡ እለ፡ ገብሩ፡ እኩየ። ወሞተ፡ ግብት፡ ዘአምጽአ፡ እግዚአብሔር፡ ላዕለ፡ መጣዓውያን፡
+                  እስከ፡ ኃጥኡ፡ ዘይቀብሮሙ። ወመንግሥተ፡ ቈስጠንጢኖስ፡ መፍቀሬ፡ እግዚአብሔር፡ ወአቅሞተ፡ ምግባር፡
+                  ዘገብሮሙ፡ ወሠርጓተ፡ ክርስቲያን፡ በመዋዕሊሁ። ወመኑ፡ ውእቱ፡ ዘገብረ፡ ቀናጥረ፡ ቅድመ፡ ዘውእቱ፡ ድልዲይ።
+                  ወበእንተ፡ ተረክቦተ፡ መስቀል፡ ወበእንተ፡ ሕንፃ፡ ሀገረ፡ ቍስጥንጥንያ፡ ወተሰምዮታ፡ በዝንቱ፡ ስም፡
+                  ወስማሰ፡ ዘቅድም፡ በራንጥያ፡ ወበእንተ፡ ሃይማኖተ፡ አክላስዮስ፡ በእንተ፡ ተአምር፡ ዘርእያ፡ እንተ፡ ይእቲ፡
+                  ጥምቀት፡ ቅድስት፡ ወሞቱ፡ መንክር። ወበአይ፡ ምክንያት፡ አእመርዎ፡ ሕንድ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡
+                  አምላክነ። እስመ፡ ቅዱስ፡ አትናስዮስ፡ ሐዋርያዊ፡ ውእቱ፡ ሤመ፡ ሎሙ፡ ቅድመ፡ ጳጳስ፡ ለሕንድ፡ ወለየመን።
+                  ወለቈስጠንጢኖስኒ፡ ኮነ፡ ያስተርእዮ፡ መልአከ፡ እግዚአብሔር፡ ኵሎ፡ መዋዕለ፡ ሕይወቱ፡ ወያነቅሆ፡ ለጸሎት።
+                  ክፍ፡ ፸፬፡ በእንተ፡ ሕንፀተ፡ ቀንጠራኅ፡ ዘውእቱ፡ ዲልዲይ፡ ላዕለ፡ ፈለግ፡ ዘይሰመይ፡ በበራምስ፡
+                  ወድቀታ፡ በኒቅያ፡ ወአስተርእዮተ፡ መስቀል፡ ቅዱስ፡ በመንፈቀ፡ መዓልት፡ ላዕለ፡ ጎልጎታ፡ በመካን፡
+                  ዘተሰቅለ፡ ቦቱ፡ እግዚእነ። ወሕማም፡ ዘተወክፈ፡ ቅዱስ፡ አትናስዮስ፡ ሐዋርያዊ፡ እምነ፡ አርዮሳውያን።
+                  ወስደተ፡ ሊዋርዮስ፡ ወጳጳሳት፡ ቅዱሳን፡ እለ፡ ምስሌሁ፡ በምክንያተ፡ ምክረ፡ እከዮሙ፡ ለአርዮሳውያን።
+                  ወዓዲ፡ በእንተ፡ ዮልያኖስ፡ ንጉሥ፡ ከሐዲ። ወምክንያተ፡ ኅዲጎቱ፡ መዓርገ፡ ዘቤተ፡ ክርስቲያን፡
+                  ወከዊኖቱ፡ ሊቀ፡ ሐራ፡ እስከ፡ ነሥአ፡ መንግሥተ፡ ህየንተ፡ አሉሉስ፡ እኁሁ፡ ወሰዲዶቱ፡ ለቅዱስ፡
+                  አትናስዮስ፡ ከመ፡ ይቅትሎ፡ በምክረ፡ ሐነፋውያን። ወበአይ፡ ምክንያት፡ ተደለወት፡ እስክንድርያ፡
+                  ለተወክፎተ፡ ሥጋሁ፡ ለቅዱስ፡ ዮሐንስ፡ መጥምቅ፡ እስከ፡ የኀድር፡ ውስቴታ፡ ወይሕንጹ፡ ሎቱ፡
+                  መካነ፡ ሥርግወ፡ በትእዛዘ፡ ሊቀ፡ ጳጳሳት፡ ቴዎፍሎስ።
+                  ክፍል፡ ፸፭፡ በእንተ፡ ከመ፡ ናእምር፡ እስመ፡ ቴዎፍሎስ፡ ሊቀ፡ ጳጳሳት፡ ዘለእስክንድርያ፡ እምአይ፡
+                  ሀገር፡ ውእቱ፡ ወእምአይ፡ ዘመድ። ወቅዱስኒ፡ ቄርሎስ፡ ወልደ፡ እኅቱ፡ ወበአይ፡ መካን፡ ተወልደ፡ ውእቱ።
+                  ክፍል፡ ፸፮፡ በእንተ፡ ፍጻሜ፡ ሞቱ፡ ለቅዱስ፡ ዱማድዮስ፡ ሰማዕት። ወበቀለ፡ ዘአምጽአ፡ እግዚአብሔር፡
+                  ላዕለ፡ ዩልያኖስ፡ ዓላዊ፡ ወዘከመ፡ ቀሠፎ፡ እግዚአብሔር፡ በእደ፡ ሰማዕቱ፡ ቅዱስ፡ መርቆሬዎስ፡ ወሞተ፡ በሞት፡ እኩይ።
+                  ክፍል፡ ፸፯፡ በእንተ፡ መንግሥተ፡ ዮናኖስ፡ ወዘከመ፡ በርሀት፡ ቤተ፡ ክርስቲያን። ወምክንያተ፡ ተመይጦቱ፡
+                  ለቅዱስ፡ አትናስዮስ፡ ኀበ፡ መንበሩ፡ በክብር፡ ዐቢይ። ወአስተርእዮተ፡ ቤተ፡ ክርስቲያን፡ በሃይማኖት፡
+                  ኦርቶዶክሳዊት፡ በኵለሄ።
+                  ክፍል፡ ፸፰፡ በእንተ፡ መንግሥተ፡ ሳሙስትዩስ፡ ወጸሊኦቱ፡ ዓመፃ፡ ወፍትሑ፡ በጽድቅ፡ ወበርትዕ፡
+                  ወሐኒጾቱ፡ አናቅጸ፡ አእባን፡ እንተ፡ ይእቲ፡ ለኅርቃልዩን፡ ዘረሰዮሙ፡ አናቅጸ፡ ዘፈለግ፡ ዐቢይ፡ ዘምስር፡
+                  በግብር፡ ዕፁብ። ወምክንያተ፡ አቅሞተ፡ ፈለገ፡ ውቅያኖስ፡ ላዕለ፡ እስክንድርያ፡ ከመ፡ ኢያሥም፡ ሀገረ፡
+                  ሶበ፡ አኮ፡ ኢከልኦ፡ በጸሎቱ፡ ቅዱስ፡ አትናትዮስ፡ ሊቀ፡ ጳጳሳት።
+                  ክፍል፡ ፸፱፡ በእንተ፡ መንግሥተ፡ ታኦዶስዮስ፡ ዘየዐቢ፡ መፍቀሬ፡ እግዚአብሔር፡ ወአምሳለ፡ ዘአምጽአ፡
+                  በቅድሜሁ፡ ፌልጎስ፡ ጳጳስ፡ ዘኢቆንዮን። በእንተ፡ ተዋሕዶቶሙ፡ ለሥሉስ፡ ቅዱስ። ወበእንተ፡ ዘአስተጋብአ፡
+                  ንጉሥ፡ በሀገረ፡ ቍስጥንጥንያ፡ በእንተ፡ ጽንዐ፡ አብያተ፡ ክርስቲያናት፡ ወበእንተ፡ ምክንያት፡ ዘጢሞቴዎስ፡ ሊቀ፡
+                  ጳጳሳት፡ ዘእለእስክንድርያ። ወገሠጸ፡ ቦቱ፡ ጎርጎርዮስ፡ ጳጳስ፡ ዘብርያሱስ፡ ከመ፡ ይኅድጋ፡ ለሀገረ፡ ንጉሥ፡
+                  ቍስጥንጥንያ፡ ወ<pb/>ይሑር፡ ኀበ፡ ሀገሩ። ወሤሞ፡ ለ፩፡ ብእሲ፡ ሊቀ፡ ጳጳሳት፡ ዘስሙ፡ መክሲሞስ፡
+                  ዘቍስጥንጥንያ። ወዓዲ፡ በእንተ፡ ሕንፀተ፡ ቤተ፡ ክርስቲያን፡ ለታኦዶክስያ፡ በእለእስክንድርያ፡ ወቤተ፡
+                  ክርስቲያን፡ ዘቅዱሳን፡ ሰማዕት፡ ቆዝሞስ፡ ወድምያኖስ፡ ወዘአኃዊሆሙ፡ ሰማዕታት። ወበእንተ፡ አውዕዮተ፡
+                  እሳት፡ ለሀገረ፡ አንጾኪያ፡ በትእዛዘ፡ ንጉሥ። ወተግሣጽ፡ ዘፈነወ፡ ኀቤሁ፡ መነኮስ፡ ቅዱስ፡ ዘእምገዳመ፡
+                  አስቄጥስ፡ በእንተ፡ ዝንቱ፡ ግብር። ወሕማመ፡ ልብ፡ ዘኮነ፡ ለንጉሥ፡ በዝንቱ፡ ምክንያት። ወዓዲ፡ በእንተ፡
+                  ምክንያተ፡ ሰያጥያነ፡ ወይን፡ ወመካነ፡ ዘማውያን፡ ተጸርዓ፡ በመዋዕሊሁ፡ ወበርሃት፡ መንግሥቱ፡ በኵሉ፡ መካን።
+                  ክፍል፡ ፹፡ በእንተ፡ ሢመተ፡ አርቃድዮስ፡ ወአኖሬዎስ፡ ነገሥት። ወአርቃድዮስ፡ ላዕለ፡ ሀገረ፡ ቍስጥንጥንያ፡
+                  ወአኖሬዎስ፡ ላዕለ፡ ሀገረ፡ ሮሜ። ወበእንተ፡ ዘከመ፡ አፍቀሮ፡ አርቃዴዎስ፡ ለእግዚአብሔር፡ ወተጋድሎተ፡
+                  አኖሬዎስ። ወበእንተ፡ ዘአስተናሥአ፡ ሁከተ፡ ለአሪሁስ፡ ውስተ፡ ሀገረ፡ ሮሜ። ወበምክንያተ፡
+                  ዘተሰምየት፡ ቦቱ፡ እኅተ፡ ንጉሥ፡ አኖሬዎስ፡ ወበርብሮተ፡ ኵሉ፡ ንዋይ፡ ዘኮነ፡ በማኅፈድ።
+                  ወዓዲ፡ በእንተ፡ ምክንያት፡ ዘኀደጋ፡ አኖሬዎስ፡ ለሮሜ፡ ወመጽአ፡ ኀበ፡ ቍስጥንጥንያ። ወኮነ፡ ሱታፌ፡
+                  ለንጉሥ፡ ምስለ፡ ታኦዶስዮስ፡ ንጉሥ፡ ዘይንእስ፡ ወልደ፡ እኁሁ፡ አርቃድዮስ፡ እስከ፡ ዕለተ፡ ሞቱ።
+                  ወዓዲ፡ እስመ፡ አውዶክያ፡ ንግሥት፡ ብእሲተ፡ ታኦዶስዮስ፡ ንጉሥ፡ ዘይንእስ፡ ወእምአይ፡ ዘመድ፡
+                  ይእቲ፡ ወእፎ፡ ኮነ፡ ምክንያተ፡ ተሰናእዎቱ፡ ለንጉሥ፡ ምስሌሃ፡ ወነሥአ፡ ሎተ፡ ብእሲተ።
+                  ወበአይ፡ ዘመን፡ ጸሐፉ፡ ስመ፡ ቅዱስ፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ በውስተ፡ ፍትሐት። እምድኅረ፡
+                  ሑረቱ፡ ኀበ፡ እግዚእነ። ወበእንተ፡ መርገሙ፡ ለንስጥሮስ፡ ወመዊኦቱ፡ ለቄርሎስ። ወዓዲ፡ በእንተ፡
+                  ብእሲት፡ <sic>ሐነዊት፡</sic> ዘለእስክንድርያ፡ ወሁከተ፡ ዘአስተናሥአት፡ ማእከለ፡ አይሁድ፡
+                  ወክርስቲያን፡ በል፡ እስክንድርያ። ወምክንያት፡ ዘከመ፡ ነሥአ፡ ቅዱስ፡ ቄርሎስ፡ ለምኵራበ፡ አይሁድ፡
+                  ወረሰያ፡ ቤተ፡ ክርስቲያን፡ በተናግሮቱ፡ ምስለ፡ አይሁድ፡ ወዘከመ፡ ሰሐብዋ፡ ለብእሲት፡ ሐነፋዊት፡
+                  በውስተ፡ መራኅብት፡ እስከ፡ ሞተት፡ ወአውዓዩ፡ ሥጋሃ፡ በእሳት፡ በትእዛዘ፡ ሊቀ፡ ጳጳሳት፡ አባ፡ ቄርሎስ።
+                  ክፍል፡ ፹፩፡ በእንተ፡ ቅትለት፡ ዘገብሩ፡ አይሁድ፡ በውስተ፡ ቁሚትራ። በእንተ፡ ዘገብሩ፡ ስላቀ፡
+                  በመስቀለ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ አመ፡ ሰቀሎ፡ ሕፃን፡ ንኡስ፡ ወቀተልዎ፡ በስላቅ።
+                  ክፍል፡ ፹፪፡ በእንተ፡ ፊንክስር፡ አይሁዳዊ፡ ዘአስተርአየ፡ ለአይሁድ፡ እንዘ፡ ይብል፡ አነ፡ ውእቱ፡
+                  <sic>አነ፡ ውእቱ፡</sic> ሙሴ፡ ሊቀ፡ ነቢያት።
+                  ክፍል፡ ፹፫፡ በእንተ፡ ትፋሕ፡ ዘአምጽኡ፡ ሎቱ፡ ለንጉሥ፡ ትዮዶስዮስ፡ አምኃ። ወምክንያተ፡ ሢመታ፡
+                  ለብርካልያ፡ እኅት፡ ወጽልመት፡ ዘኮነ፡ ላዕለ፡ ኵላ፡ ምድር፡ እምጽባሕ፡ እስከ፡ ምሴት። በዕለት፡ ዘነግሠ፡
+                  ባቲ፡ መርቃያን፡ መናፍቅ።
+                  ክፍል፡ ፹፬፡ በእንተ፡ ምክንያት፡ ዘአዝነመ፡ ሰማይ፡ ጂረን፡ ዘውእቱ፡ በረቅ፡ ላዕለ፡ ሀገረ፡ ቍስጥንጥንያ፡
+                  ወእሳትኒ፡ ነደ፡ እምባሕር፡ እስከ፡ ባሕር። ወተመይጦተ፡ አንሱካስዩስ፡ ፊልሱፍ፡ ኃላፋዊ፡ ኀበ፡ ሃይማኖት፡
+                  ኦርቶዶክሳዊት፡ ወለጢሞቴዎስ፡ ሊቀ፡ ጳጳሳት፡ እምአይ፡ መካን፡ ውእቱ፡ ወሞተ፡ ሕማም፡ ጽኑዕ፡ ዘኮነ፡
+                  በሀገረ፡ ቍስጥንጥንያ፡ ወድቀተ፡ ደብር፡ ዘኮነ፡ በሻም፡ ወምክንያተ፡ ጽነቱ፡ ለዋስኪስዩስ፡ በአምሳለ፡
+                  ኬልቄዶናውያን፡ በእንተ፡ ንዋይ፡ ሙሱን። ወምክንያተ፡ መንግሥቱ፡ ለዘይኑን፡ ንጉሥ፡ ላዕለ፡ ሀገረ፡
+                  መንግሥተ፡ ቍስጥንጥንያ፡ ወስደተ፡ ዋሰልስክስ፡ እስከ፡ አመ፡ ሞቱ። ወሞት፡ ዘኮነ፡ በፈታት፡ በእንተ፡
+                  ተሀይዮቶሙ፡ በውስተ፡ ፍትሕ። ወበእንተ፡ መንግሥተ፡ ዘይኑን፡ ወትእዛዙ፡ ለመጽሐፈ፡ ጦማር፡ ወያንብቡ፡
+                  በውስተ፡ ኵሉ፡ መካን። ወበእንተ፡ በርንቄ፡ ሐማቱ፡ ወተፃብኦታ፡ ምስሌሁ። እስከ፡ ረከባ፡ ሞት፡ ምስለ፡ እሊዓሃ።
+                  ክፍል፡ ፹፭፡ በእንተ፡ መንግሥተ፡ አንስጣስዩስ፡ መፍቀሬ፡ እግዚአብሔር፡ በምክንያተ፡ ትንቢቱ፡ ለአባ፡
+                  ያውምያስ፡ ባሕታዊ፡ ዘደብረ፡ መኑፍ። ወሕንፀተ፡ አናቅጽ፡ አእባን፡ ዘእልሙወረድ፡ ወከ<pb/>ርየት፡
+                  ለገቢረ፡ ድልዲይ፡ ዐቢይ፡ ዘጥንቱ፡ እምባቢሎን፡ ወብጽሐቱ፡ እስከ፡ ባሕር። ወምክንያተ፡ ሰምዮተ፡
+                  ቂላልትያስ፡ ወመዊኦተ፡ ሊቀ፡ ጳጳሳት፡ ዐቢይ፡ ሳዊሮስ፡ ወስደተ፡ መቅዶንዮስ፡ ወመንኖተ፡ ጉባኤ፡ ኬልቄዶናዊያን።
+                  ክፍል፡ ፹፮፡ በእንተ፡ ምክንያተ፡ ስደቱ፡ ለቅዱስ፡ ሳዊሮስ፡ እምነ፡ መንበሩ፡ ዘአንጾኪያ፡ በእንተ፡ ሐራጥቃ፡
+                  ወበእንተ፡ ስእለት፡ ዘገብራ፡ ኀበ፡ እግዚአብሔር። በእንተ፡ ሰብአ፡ ሀገረ፡ ቍስጥንጥንያ፡ ላዕለ፡ እከይ፡ ዘገብራ፡
+                  ለስጥናስ፡ ንጉሥ። ወተግሣጽ፡ ዘሰምዓ፡ እምእግዚአብሔር፡ ወበእንተ፡ እሳት፡ ዘነደት፡ ውስተ፡ ሀገረ፡ አንጾኪያ፡
+                  ወአህጉራተ፡ ምሥራቅ። ወንህለተ፡ ብዙኃን፡ አብያተ፡ ሰማዕታት፡ ወኵሉ፡ ተአምራት፡ ዘኮኑ፡ ወጥምቀተ፡ ሕዝብ፡
+                  አርዮሳውያን፡ ወነገሥተ፡ ሕንድ፡ ወእልማሪጥስ፡ ዘውእቶሙ፡ ኖባ፡ ወበአይ፡ ሃይማኖት፡ ኮኑ፡ ውእቶሙ፡ ቅድመ።
+                  ወበእንተ፡ ድልቅልቅ፡ ዘኮነ፡ በምስር። ወነዱ፡ እንተ፡ ይእቲ፡ በአፍአ፡ ሀገር፡ ወሕንድሂ፡ ኮኑ፡ ቅድመ፡ አይሁድ፡
+                  ዘውእቶሙ፡ እልማኩሪድስ።
+                  ክፍ፡ ፹፯፡ በእንተ፡ አስተርእዮተ፡ ቅናት፡ ወመንዲል፡ ዘእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ተረክቡ፡ በኀበ፡ አይሁድ፡
+                  ዘይነብር፡ በእለእስክንድርያ።
+                  ክፍ፡ ፹፰፡ በእንተ፡ ምክንያት፡ ዘተሰመይነ፡ ንሕነ፡ ክርስቲያን፡ በስመ፡ ታኦዶስዮስ፡ ወአስተርእዮተ፡
+                  አቴናውያን፡ ወሃይማኖቶሙ። ወምክንያተ፡ ዘጸሐፉ፡ ባቲ፡ ሊቃውንት፡ መልእከታተ፡ ኀበ፡ ምሥያጥ፡
+                  ከመ፡ ይኩን፡ ተዝካረ፡ በኀቤሆሙ፡ እስከ፡ ይነሥኡ፡ ኵሉ፡ ዘይፈቅዱ።
+                  ክፍል፡ ፹፱፡ በእንተ፡ ሕንፀተ፡ ሀገረ፡ ሮሜ፡ ቅድመ።
+                  ክፍል፡ ፺፡ ሀከክ፡ ዘኮነ፡ በሀገረ፡ ቍስጥንጥንያ፡ በእንተ፡ ሥጋ፡ ንጹሕ፡ ዘእግዚእነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ።
+                  ክፍል፡ ፺፩፡ በእንተ፡ አርስቶማኹስ፡ ወልደ፡ ታኦዶስዮስ፡ ዘእምሀገረ፡ አብሳይ፡ ወውዴተ፡ ዘገብሩ፡ ቦቱ፡
+                   ንጉሥ፡ እስከ፡ አሰሮ። ወምክንያተ፡ ዘአምነ፡ ባቲ፡ ከስራ፡ ንጉሠ፡ ፋርስ፡ ዘኮነ፡ ክርስቲያናዌ።
+                  ክፍል፡ ፺፪፡ በእንተ፡ ከለንዱህ፡ ብእሲተ፡ በጥሪቃ፡ ዘውእቱ፡ ስመ፡ ሢመት፡ ወበራእይ፡ ዘርእየቶ፡ ገሃደ፡
+                  በቤተ፡ ማእሰር፡ አመ፡ ስደታ።
+                  ክፍል፡ ፺፫፡ በእንተ፡ እለ፡ ሀለዉ፡ ውስተ፡ ማእዘንት፡ ዘመንበረ፡ ሀገረ፡ መውስል፡ ወበእንተ፡ እንስሳ፡
+                  ዘአስተርአየ፡ በአምሳለ፡ አንስት፡ በፈለገ፡ ምስር።
+                  ክፍል፡ ፺፬፡ በእንተ፡ ዩልይንስ፡ መሠርይ፡ ዘይገብር፡ ምሥዋዕተ፡ ለአጋንንት፡ በጻሕለ፡ ብሩር።
+                  ክፍል፡ ፺፭፡ በእንተ፡ መኑ፡ ውእቱ፡ ዘወጠነ፡ ጽሒፈ፡ በስመ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ።
+                  ክፍል፡ ፺፮፡ በእንተ፡ ማይ፡ ዘከደኖን፡ ለሀገረ፡ እንጹና፡ ወለጠርሱስ፡ ርእሰ፡ ሀገረ፡ ኪልቅያ፡ በአሐቲ፡ ሌሊት።
+                  ክፍል፡ ፺፯፡ በእንተ፡ ዕርበተ፡ ፀሐይ፡ በመንፈቀ፡ መዓልት፡ ወአስተርእዮተ፡ ከዋክብት፡ ወድልቅልቅ፡ ዐቢይ፡ ዘኮነ።
+                  ክፍ፡ ፺፰፡ በእንተ፡ ሱሪኩስ፡ መኰንን፡ ዘገብረ፡ ተጋድሎ፡ ወሞት፡ እኩይ፡ ዘረከቦ። ወምክንያቶሙ፡
+                  ለሰብአ፡ ቍስጥንጥንያ፡ ዘሰደድዎ፡ ለሙርቂዩስ፡ ንጉሥ።
+                  ክፍል፡ ፺፱፡ በእንተ፡ ምክንያተ፡ ሐዳፍያነ፡ አሕማር፡ ድልዋን፡ ለግዕዛን፡ ሶበ፡ ተሠጥመ፡ ንዋይ፡
+                  ዘሀለወ፡ ቦቱ፡ ወመንግሥተ፡ ፉቃ፡ ወቅትለተ፡ ዘገብረ።
+                  ክፍል፡ ፻፡ በእንተ፡ ምክንያት፡ ዘኢክህሉ፡ ይሢሙ፡ ሊቀ፡ ጳጳሳት፡ ወኢአሐደ፡ እመዓርገ፡ ቤተ፡ ክርስቲያን፡
+                  ዘእንበለ፡ ምክረ፡ ፉቃ። ወበእንተ፡ ዘገብሩ፡ ሰብአ፡ ምሥራቅ፡ በእንተ፡ ዝንቱ፡ ግብር። ወበፍልስጥኤምሂ፡
+                  ከመ፡ መልኡ፡ ዓዘቅታተ፡ መቃብር፡ ዘቤተ፡ ክርስቲያን፡ ደመ፡ አመ፡ ጐዩ፡ ሰብእ፡ ኀበ፡ ምጥማቃት፡
+                  ዘቤተ፡ ክርስቲያናት።
+                  ክፍል፡ ፻፩፡ በእንተ፡ ታኦፊሎስ፡ ዘሀገረ፡ መውረድ። ወቀትል፡ ዘገብረ፡ ፉቃ፡ በእንተ፡ ሞቱ፡ በውስተ፡
+                  አንጾኪያ፡ ወፍልስጥኤም።
+                  ክፍል፡ ፻፪፡ በእንተ፡ ብእሲተ፡ ህርቃል፡ ዘየዐቢ፡ ወብእሲተ፡ ህርቃል፡ ዘይንእስ፡ ወወለቱ፡ አውልያ፡ ድንግል።
+                  ወምክንያት፡ ዘአድኅኖሙ፡ አክርስዩስ፡ መኰንን፡ እምርኵሰ፡ ፎቃ።
+                  ክፍል፡ ፻፫፡ በእንተ፡ ሀከክ፡ ዘገብሩ፡ ላዕለ፡ ፎቃ፡ በግብጽ፡ ወመርዩጥ፡ ወበሀገረ፡ እስክንድርያ፡ ወቀትል፡ ዐቢይ፡
+                  ዘገብሩ፡ በእንተ፡ ዝንቱ፡ ግብር።<pb/> ወምክንያት፡ ዘአውረዱ፡ ሥዕለ፡ መልክኡ፡ ኀበ፡ መትሕት።
+                  ክፍል፡ ፻4፡ በእንተ፡ ታኦፊሎስ፡ ዘዓምድ፡ ወትንቢቱ፡ ለይፍትጣሕ፡ እንተ፡ ትመውኦ። ወትጠፍእ፡ ፍጡነ፡
+                  መንግሥቱ፡ ፎቃ፡ ወበዛቲ፡ ዘመን፡ ይነግሥ፡ ሕርቃል።
+                  ክፍል፡ ፻፭፡ በእንተ፡ ዘኮነ፡ ድልዲይ፡ በሀገረ፡ ደፋሽር፡ በጥቃ፡ ቤተ፡ ክርስቲያነ፡ ቅዱስ፡ ሚናስ።
+                  ክፍል፡ ፻፯፡ በእንተ፡ ሞቱ፡ ለፎቃ፡ ወተዘርዎተ፡ ንዋይ፡ ዘማኅፈድ፡ ወምንዳቤ፡ ዘአምጽአ፡ ህርቃል፡
+                  ላዕለ፡ ፎቃ፡ በእንተ፡ ትዕይርት፡ ዘአምጽአ፡ ላዕለ፡ ብእሲቱ፡ ወወለቱ።
+                  ክፍል፡ ፻፯፡ በእንተ፡ አስተርእዮተ፡ እስላም፡ በወሰነ፡ ፊዩም፡ ወተመውኦቶሙ፡ ለሮም፡ እለ፡ ይነብሩ፡ ህየ።
+                  ክፍል፡ ፻፰፡ በእንተ፡ ዘተፃብአ፡ ቅድመ፡ ዕመር፡ ምስለ፡ ሮም፡ በሀገረ፡ ዓውን።
+                  ክፍል፡ ፻፱፡ በእንተ፡ ምክንያት፡ አይሁድ፡ ዘተጋብኡ፡ ኵሎሙ፡ ኀበ፡ ሀገረ፡ መኑፍ። በእንተ፡ ፍርሃቶሙ፡
+                  ለእስላም፡ ወሥቃየ፡ ዕመር፡ ወነሢአ፡ ንዋዮሙ፡ እስከ፡ ኀደግዋ፡ ርኅወ፡ አናቅጸ፡ ምስር፡ ወጐዩ፡ ኀበ፡
+                  እስክንድርያ፡ በምክንያት፡ ዘበዝኁ፡ ዓማፅያን፡ በጥንተ፡ ዓመፃ፡ ወኮኑ፡ ይትራድእዎ፡ ለአህጕሎተ፡ ሰብአ፡ ምስር።
+                  ክፍል፡ ፻፲፡ በእንተ፡ ምክንያት፡ ሰብአ፡ ሰምኑድ፡ አስተኃቀርዎ፡ ለእመር፡ ከመ፡ ኢይሠጠውዎ፡ ወተመይጦተ፡
+                  ከላጂ፡ ዓዲ፡ ኀበ፡ ሮም፡ ወበእንተ፡ ምክንያት፡ ዘአኀዙ፡ ቦቱ፡ እም፡ ወብእሲት፡ ወኀብእዎሙ፡ ኀበ፡
+                  እስክንድርያ፡ እስመ፡ ውእቱ፡ ተሳተፈ፡ ለተራድኦተ፡ እስላም።
+                  ክፍል፡ <sic>፻፩፡</sic> በእንተ፡ ዘነሥእዋ፡ እስላም፡ ለምስር፡ በ፲ወ፬፡ ዓመት፡ እምነ፡ ዑደት።
+                  ወበ፲ወ፭፡ ዓመት፡ አርኀዉ፡ ማኅፈደ፡ ባቢሎን።
+                  ክፍል፡ ፻፲፪፡ በእንተ፡ ሞቱ፡ ለህርቃል፡ ንጉሥ፡ ወተመይጦቱ፡ ለከይረስ፡ ሊቀ፡ ጳጳሳት፡ እምስደት፡ ወመጺኦቱ፡
+                  ኀበ፡ ምስር፡ ከመ፡ የሀብ፡ ጸባሕተ፡ ለእስላም።
+                  ክፍል፡ ፻፲፫፡ በእንተ፡ ዘከመ፡ አግብኦሙ፡ እግዚአብሔር፡ ለሮም፡ ውስተ፡ እደ፡ እስላም፡ ወገደፎሙ፡ በእንተ፡
+                  ኑፋቄሆሙ፡ ወተፈልጦቶሙ፡ ወአምጽኦቶሙ፡ ስደተ፡ ላዕለ፡ ክርስቲያን፡ ዘምስር።
+                  ክፍል፡ ፻፲፬፡ በእንተ፡ ምክንያት፡ ዘቀነያ፡ ዕመር፡ ለአብሻዲ፡ እንተ፡ ይእቲ፡ ነቂዩስ፡ ወጐይዮተ፡ ዶማድያኖስ፡
+                  መኰንን፡ ወሙተተ፡ ሐራሁ፡ በውስተ፡ ማያት። ወቅትለት፡ ዐቢይ፡ ዘኮነ፡ በሀገረ፡ አብሳዲይ፡ ወበእለ፡ ተርፉ፡
+                  አህጉር፡ ኵሎሙ፡ እስከ፡ ሖረ፡ ዕመር፡ ሀገረ፡ ሳውና፡ ዘምልክና፡ አብሳዳይ፡ ወደሴታ፡ አመ፡ ፲ወ፰፡ ለወርኀ፡
+                  ግንቦት፡ ወአመ፡ ፲ወ፭፡ ዓመት፡ እምነ፡ ኡደት።
+                  ክፍል፡ ፻፲፭፡ በእንተ፡ ምክንያት፡ ዘቀነይዋ፡ እስላም፡ ለቂሳርያ፡ ዘፍልስጥኤም፡ ወመከራ፡ ዘረከባ።
+                  ክፍል፡ ፻፲፮፡ በእንተ፡ ድልቅልቅ፡ ዐቢይ፡ ወቀትል፡ ዘኮነ፡ በቀርጤሳውያን፡ ወበደሴቶሙ፡ ወበኵሉ፡
+                  አህጉር፡ ዘዓውዶሙ።
+                  ክፍል፡ ፻፲፯፡ በእንተ፡ ከይረስ፡ ሊቀ፡ ጳጳሳት፡ <sic>ዘኬልቄዶናውያን፡</sic> ወውእቱ፡ ዘሖረ፡ ኀበ፡
+                  ባቢሎን፡ ወኀበ፡ ዕመር፡ ርእሰ፡ እስላም፡ ወአምጽኦ፡ ኀበ፡ ሐመር፡ ወአግብአ፡ ውስተ፡ እዴሁ። ወዓዲ፡ በእንተ፡
+                  ዘአክባደ፡ ጸባሕተ፡ ግብር፡ ዕመር፡ ላዕለ፡ ግብጻውያን፡ ወሞቱ፡ ለኬይረስ፡ ኬልቄዶናዊ፡ እምድኅረ፡ ንስሓ፡
+                  እስመ፡ ውእቱ፡ አግብአ፡ ለሀገረ፡ እስክንድርያ፡ ውስተ፡ እደ፡ እስላም።
+                  ክፍል፡ ፻፲፰፡ በእንተ፡ ተመይጦቱ፡ ለአባ፡ ብንያሚን፡ ሊቀ፡ ጳጳሳት፡ ዘግብጽ፡ እምነ፡ ስደቱ፡ እምሀገረ፡ ሪፍ፡
+                  በ፲ወ፬ ዓመት፡ ወእምኔሃ፡ ፲ ዓመት፡ በእንተ፡ ዘሰደድዎ፡ ነገሥተ፡ ሮም፡ ወ፬ ዓመት፡ በመንግሥተ፡ እስላም።
+                  ወዘተርፈ፡ እምዝ፡ በፍጻሜ፡ መጽሐፍ።
+                  ክፍል፡ ፻፲፱፡ ወዘይተልዎ፡ ለዝኩ፡ ዜና፡ ካልእ፡ ዓዲ።
+                </ab>
+              </div>
+              <div type="textpart" corresp="#ms_i2.3" xml:lang="gez">
+                <ab>
+                  በስመ፡ እግዚአብሔር፡ መሓሪ፡ ወመስተሣህል። ይቤ፡ አብ፡ ቅዱስ፡ ዮሐንስ፡ ጳጳስ፡ ዘኒቅዩስ፡
+                  ዘአስተጋብአ፡ ለዛቲ፡ መጽሐፍ፡ <gap reason="ellipsis"></gap> ንወጥን፡ ከመ፡
+                  ንግበር፡ ዘንተ፡ እምቀደምት፡ መጻሕፍት፡ ብዙኃት፡ ዘለአዝማን፡ ወዜና፡ ዘርኤናሆሙ፡ ዓዲ፡
+                  በጊዜያት፡ እንተ፡ በጸሕነ፡ ኅቤሆሙ፡ ወኮንኩ፡ በስፉሕ፡ ከመ፡ እንግር፡ ወአኅድግ፡ ተዝካረ፡
+                  ሠናየ፡ ለመፍቀሬያነ፡ ትሩፋት፡ በዝንቱ፡ ሕይወተ፡ ዓለም። ወንሕነ፡ ኀደግነ፡ ዘንተ፡ ቃለ፡ ዘጽሑፍ፡
+                  በሥርዐት፡ ሠናይ፡ ወበትርጓሜ፡ ልዑል፡ ወውእቱ፡ ይትሌዓል፡ እምኵሉ፡ ዘኮነ፡ በፍካሬ፡ መተርጕም፡
+                  ከመ፡ ኢይኩኑ፡ ዘእንበለ፡ ረባሕ፡ ዘኮነ፡ ወዘሀለወ፡ ዘእንበለ፡ መክፈልት፡ ወኢርስት፡ እለ፡ ይረክንዎ።
+                </ab>
+              </div>
+              <div type="textpart" corresp="#ms_i2.4" xml:lang="gez">
+                <ab>
+                  ተፈጽመ፡ ዝንቱ፡ መጽሐፍ፡ ቡሩክ፡ ዘአስተናብሮ፡ ዮሐንስ፡ መደብር፡ ጳጳስ፡ ዘሀገረ፡ ነቅዩስ፡ በእንተ፡
+                  በቍዔተ፡ ነፍስ። ወሀለዉ፡ ቦቱ፡ ምሥጢራት፡ አምላካውያት፡ ወመንክራት፡ ሉዓላውያት፡ ዘኮኑ፡ በዓላውያነ፡
+                  ሃይማኖት። በጊዜ፡ አድለቅለቀት፡ ምድር፡ በእንተ፡ ምክንያተ፡ ክሕደቱ፡ ወማሰነት፡ ኒቅያ፡ ሀገር፡ ዐባይ።
+                  ወበጊዜ፡ ዘንመ፡ እሳት፡ እምሰማይ። ወበጊዜ፡ ጸልመ፡ ፀሐይ፡ እምሰዓተ፡ ጽባሕ፡ እስከ፡ ምሴት።
+                  ቦጊዜ፡ ዓርጉ፡ አፍላጋት፡ ወአስጠሙ፡ ብዙኃተ፡ አህጉራተ። ወቦ፡ ጊዜ፡ ንህሉ፡ አብያት፡ ወኀልቁ፡
+                  ብዙኃን፡ ሰብእ፡ ወወረዱ፡ ውስተ፡ ዕመቀ፡ ምድር። ወዝ፡ ኵሉ፡ ኮነ፡ በእን<pb/>ተ፡ ዘከፈልዎ፡
+                  ለክርስቶስ፡ ኀበ፡ ፪ ጠባይዕ። ወመንፈቆሙ፡ ረሰይዎ፡ ፍጡረ።
+                  ወእምነገሥታተ፡ ሮምሂ፡ ተአተተ፡ አክሊለ፡ መንግሥት፡ ወተሠለጡ፡ ላዕሌሆሙ፡ እስማኤላውያን፡
+                  ወቍዛውያን። በእንተ፡ ዘኢሖሩ፡ በሃይማኖት፡ ርትዕት፡ ዘለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ ወከፈልዎ፡
+                  ለዘኢይትከፈል። ወኮነ፡ ጥንተ፡ ጽሕፈቱ፡ ለዝንቱ፡ መጽሐፍ፡ አመ፡ ፳ወ፰ ለሐምሌ። ወፍጻሜሁ፡
+                  አመ፡ ፳ወ፪ ለጥቅምት፡ በዕለተ፡ ሰኑይ፡ በጊዜ፡ ፯ ሰዓተ፡ መዓልት፡ እንዘ፡ ሀሎ፡ ፀሐይ፡ በማኅፈደ፡
+                  አቅራብ። ወወርኅኒ፡ በማኅፈደ፡ ደሉ። ወሑረተ፡ ፀሐይኒ፡ ኮነ፡ አሜሃ፡ ፻፺ወ፭ መዓርግ። ወመንፈቀ፡
+                  መዓልቱኒ፡ ይከውን፡ ፹ወ፯ ማዕርግ፡ ወ፴ ደቃይቅ። ወሰዓተ፡ መዓልቱኒ፡ ፲ወ፩። ወሰዓተ፡ ሌሊቱኒ፡
+                  ፲ወ፫። ወኮነ፡ ይነሥእ፡ መዓልት፡ እምነ፡ ሌሊት፡ ለለኵሉ፡ ዕለት፡ ፳ ደቃይቅ። ወምልክና፡ እልጉፍርኒ፡
+                  እምነ፡ መናዝል፡ ኮነ፡ አሜሃ። በ፸፻ወ፭፻፺ወ፬ ዓመተ፡ ዓለም፡ በ፲፻ወ፱፻፵ወ፯ ዓመተ፡ እስክንድር፡
+                  በ፲፻ወ፭፻፺ወ፬ ዓመተ፡ ሥጋዌሁ፡ ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ። በ፲፻ወ፫፻፲ወ፰ ዓመታተ፡ ሰማዕታት።
+                  በ፱፻ወ፹ ዓመተ፡ አጋር፡ በዓመተ፡ ፀሐይ። ወበዓመተ፡ ወርኅኒ፡ ፲፻ወ፲ ዓመት። በ፬ ዓመት፡ ወ፯ አውራኅ፡
+                  ወ፰ ዕለታት፡ እመንግሥተ፡ መለክ፡ ሰገድ፡ ዘይንእስ፡ ወልደ፡ መለክ፡ ሰገድ፡ ዘየዐቢ። ወበጸጋ፡ ጥምቀት
+                  ዘተሰምየ፡ ያዕቆብ። በ፰ ዓመት፡ ወ፫፡ አውራኅ፡ ወ፭ ዕለታት፡ እምዘ፡ <sic>ነገሥት፡</sic> ንግሥት፡
+                  መለክ፡ ሞገሳ፡ መፍቀሪተ፡ እግዚአብሔር። ወበጸጋ፡ ጥምቀት፡ ዘተሰምየት፡ ማርያም፡ ስና።
+                  ወተርጐምኖ፡ በአስተሐምሞ፡ ብዙኅ፡ ለዝንቱ፡ መጽሐፍ፡ እምዓረቢ፡ ለግዕዝ፡ አነ፡ ምስኪን፡ ምኑን፡ በኀበ፡
+                  ሰብእ፡ ወትሑት፡ በውስተ፡ ሕዝብ። ወዲያቆን፡ ቅብርያል፡ ግብጻዊ፡ ወልደ፡ ሰማዕት፡ ዮሐንስ፡ ዘቀልዩቢ፡
+                  በትእዛዘ፡ <persName ref="PRS2226Atnatewo">አትናቴዎስ፡</persName> ሊቀ፡ ሠራዊት፡
+                  ዘኢትዮጵያ። ወበትእዛዘ፡ ንግሥት፡ <persName ref="PRS6829Maryams">ማርያም፡ ስና።</persName>
+                  ባሕቱ፡ ይረስዮ፡ እግዚአብሔር፡ ለመድኀኒተ፡ ነፍስ፡ ወለዕቅበተ፡ ሥጋ። ወስብሐት፡ ለዘወሀበነ፡ ክሂለ፡ ለወጢን፡
+                  ወፍጻሜ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ ለይኩን፡ ለይኩን።
+                </ab>
+              </div>
+            </div>
         </body>
     </text>
 </TEI>

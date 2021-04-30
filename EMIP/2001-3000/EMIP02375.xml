@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02375">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 340</title>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -32,7 +34,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>Horologium of Abba Giyorgis for the night Hours, arranged for the days of the week: Monday (<locus target="#1r"/>), Tue (<locus target="#8r"/>), Wednesday (<locus target="#16v"/>), Thursday (<locus target="#25r"/>), Friday (<locus target="#34r"/>), Sunday (<locus target="#46r"/>).  Min of Tourism number H3-IV-417. F. i r: note of secondary ownership in blue ink, mentioning a date in the month of Ter, 1953. Three of the images are blurred.</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="55r" facs="003"/>
+                    <title type="complete" ref="LIT3575Mashaf"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                      <msItem xml:id="ms_i1.1"><locus from="1r" facs="003"/><title>Monday</title></msItem>
+                      <msItem xml:id="ms_i1.2"><locus from="8r" facs="010"/><title>Tuesday</title></msItem>
+                      <msItem xml:id="ms_i1.3"><locus from="16v" facs="019"/><title>Wednesday</title></msItem>
+                      <msItem xml:id="ms_i1.4"><locus from="25r" facs="027"/><title>Thursday</title></msItem>
+                      <msItem xml:id="ms_i1.5"><locus from="33v" facs="036"/><title>Friday</title></msItem>
+                      <msItem xml:id="ms_i1.6"><locus from="42v" facs="045"/><title>Saturday </title></msItem>
+                      <msItem xml:id="ms_i1.7"><locus from="47r" facs="049"/><title>Sunday</title></msItem>
                   </msItem>
                </msContents>
                <physDesc>
@@ -42,19 +53,135 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 55</measure>
+                           <measure unit="quire">Protection quire + 8</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>139</height>
+                              <width>107</width>
+                              <depth>41</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–4, 6, and 8 balanced; protection quire and quire 5 adjusted balanced; quire 7 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              <note>Folium stubs appear between <locus target="#i #ii" facs="002"/> and between <locus target="#ii #1" facs="003"/>.</note>
+                              Protection Quire:
+                              1, stub after 2
+                              2, stub after 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="011"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="019"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">6d</dim>
+                              <locus from="25" to="30" facs="027"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="31" to="38" facs="033"></locus>
+                              <note>Folium stubs appear between <locus target="#32 #33" facs="035"/> and between <locus target="#37 #38" facs="040"/>.</note>
+                              Quire 5:
+                              2, stub after 7
+                              7, stub after 2
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="39" to="46" facs="041"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">7</dim>
+                              <locus from="47" to="53" facs="049"></locus>
+                              <note>Folium stub appears between <locus target="#48 #49" facs="051"/>, and <locus target="#51 #52" facs="054"/>, and <locus target="#53 #54" facs="056"/>.</note>
+                              Quire 7:
+                              1, stub after 7
+                              3, stub after 5
+                              6, stub after 2
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">2</dim>
+                              <locus from="54" to="55" facs="056"></locus>
+                              Quire 8
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">11-14</dim>
+                           <dim type="bottom">27-30</dim>
+                           <dim type="right">14-18</dim>
+                           <dim type="left">6-8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="12 14"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic">
+                      <seg type="rubrication">
+                        <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                        <foreign xml:lang="gez">ማርያም፡</foreign>
+                        <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
+                        <foreign xml:lang="gez">መንፈስ፡ ቅዱስ፡</foreign>
+                      </seg>
+                    </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1">
+                      Decorative designs: <locus target="#23v #52r" facs="026 054"/>, multiple full stops</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="a1"><desc type="OwnershipNote"><locus target="#ir" facs="001"/> note of secondary ownership in blue ink, mentioning a date in Ṭərr, 1953.</desc></item>
+                      <item xml:id="e1"><desc><locus target="#iv #55v" facs="002 058"/> blank</desc></item>
+                      <item xml:id="a2"><desc><locus target="#iir" facs="002"/> note in blue ink mentioning <q>Ṗäwlos</q> and <q>14x11</q></desc></item>
+                      <item xml:id="e2"><desc><locus target="#iiv" facs="003"/> erased text written in black ink</desc></item>
+                      <item xml:id="e3">
+                      <desc>Ministry of Tourism number H3-IV-417
+                        <rs type="inline">
+                          <graphic xml:id="g1" url="https://betamasaheft.eu/iiif/EMIP/Codices/2375/058.tif/full/full/0/default.jpg"></graphic>
+                        </rs>
+                      </desc>
+                    </item>
+                      <item xml:id="e4"><desc>Numbered quires 3–7.</desc></item>
+                      <item xml:id="e5"><desc>
+                        Scribal intervention:
+                        words of text are written interlinearly <locus target="#2r #5r #7r #11v #12r" facs="004 007 009 014"/>, etc.;
+                        erasure markings are visible <locus target="#10v #18r #24r" facs="013 020 026"/></desc>
+                      </item>
+                    </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1950">20th</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +198,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2021-01-25" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-03-12" who="RL">Added ms i 1, with sub items, decoration d1, additions e1-e5, a1, a2</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

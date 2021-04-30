@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP03117">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Hazarian Collection, Ms 100</title>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -32,9 +33,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>18.5</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="119v" facs="001"/>
+                    <title type="incomplete" ref="LIT2701Dawit"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                    <note>Incomplete, the Book of Song of Songs is missing completely. Gate of Light is missing altogether</note>
+
+                  <msItem xml:id="ms_i1.1">
+                    <locus from="1r" to="101v" facs="001"/>
+                    <title type="complete" ref="LIT2000Mazmur"/>
+                    <note><locus target="#3r #3v #4r #4v #5r #5v" facs="003 004 005 006"/> The first few folios of the Psalms contain notes in the upper margin giving directions for the recitation of the Psalms when facing specific situations</note>
+                    <note><locus target="#103v" facs="104"/> Psalm 151 has only the first of the plusses and constitutes the short version</note>
                   </msItem>
-               </msContents>
+
+                  <msItem xml:id="ms_i1.2">
+                    <locus from="101v" to="111v" facs="102"/>
+                    <title type="complete" ref= "LIT1828Mahale"/>
+                    <note>The original superscription of the fourth canticle is "Prayer of Hana, mother of Samuel.” A second hand has added the word “Prophet" at the end</note>
+                  </msItem>
+
+                  <msItem xml:id="ms_i1.3">
+                    <locus from="112r" to="119v" facs="112"/>
+                    <title type="incomplete" ref="LIT2509Weddas"/>
+                    <note>incomplete at the end, going only through the first part of the reading for Saturday</note>
+                    <note>The Praises of Mary are laid out to begin on Monday and culminate on Sunday</note>
+                  </msItem>
+                  </msItem>
+
+                  <msItem xml:id="ms_i2">
+                    <locus from="122v" to="123r" facs="123"/>
+                    <title>The list of the spiritual meanings of the Hebrew Letters in Psalm 118. Each superscription is given along with the first line of each section</title>
+                  </msItem>
+                  </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -51,6 +80,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </extent>
                      </supportDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢግዚአብሔር፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    Part of the collection of Haroutune Nazarian, who had microfilms made of his Ethiopian manuscripts and the microfilms sent to the Institute of Ethiopian Studies. They were digitized by EMIP workers in Addis Ababa in the first half of 2010
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#Inside cover" facs="001"/>
+                    a name plate indicates this book is “Ex Libris Haroutune Hazarian” and is 287. The microfilm information plate (image 126) indicates that the manuscript was microfilmed in 1982 and assigned the number 100
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <desc type="RecordTransaction">
+                    <locus target="#1v" facs="002"/>
+                    Two record of transaction. The upper record is indecipherable, though one can read the judge and the guarantor.  The lower record is also for an unspecified transaction and lists witnesses, guarantor, and judge
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#55r" facs="055"/>
+                    The midpoint of the Psalms is marked with a small text in a box: <foreign xml:lang="gez">መንፈቁ፡ ዝየ፡ ውእቱ</foreign>
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    <locus target="#92v #93r" facs="093"/>
+                    missed shot
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    <locus target="#122r" facs="122"/>
+                    directions for the recitation of the Psalms when facing specific situations, e.g., riding a horse, protection from wild animals, and from harmful potion, etc.
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
@@ -73,6 +148,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+        <change when="2021-02-12" who="ABe">Added ms_1-2, a1, and e1-5</change>
+        <change when="2021-04-02" who="ABe">Updated location and facs for e3</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

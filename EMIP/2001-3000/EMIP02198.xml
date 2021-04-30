@@ -6,6 +6,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <titleStmt>
             <title xml:id="t1">Weiner Codex 244</title>
             <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,11 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2198/">Weiner Codex 244</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-43v: Prayer of Incense. F<locus target="#31r"/> and passim, mentions the owner, ወልደ ሩፋኤል.</summary>
+                  <summary>Prayer of Incense</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="43v" facs="001"/>
+                    <title type="complete" ref="LIT2252salota"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
                   </msItem>
-               </msContents>
+                  </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -101,6 +104,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        <layout columns="2" writtenLines="18"/>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">እ<hi rend="ligature">ግዚ</hi></foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1">
+                    Decorative designs:
+                    <locus target="#43v" facs="044"/> (line of full stops and a line of alternating red and black dots).
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#7v #28r" facs="008 028"/>
+                    mentions emperor <persName ref="PRS9430Tewodros "/>
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <desc>
+                    <locus target="#7r" facs="007"/>
+                    mentions <persName ref="PRS3258CyrilIV"/> and <persName ref="PRS8388SalamaI"/>
+                    </desc>
+                    </item>
+                    <item xml:id="a3">
+                    <desc type="OwnershipNote">
+                    <locus target="#31r" facs="031"> f. 31r and passim</locus>
+                    mentions the owner Wäldä Rufaʾel (<foreign xml:lang="gez">ወልደ፡ ሩፋኤል፡</foreign>)
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#3v #6r #7r #14r #18v" facs="004 006 007 014 019"/>, etc.);
+                      erasure markings are visible (<locus target="#6v" facs="007"/>);
+                      text has been removed (<locus target="#14v #16v #20r #22v #23r" facs="015 017 020 023"/>, etc.)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                   <bindingDesc>
                     <binding xml:id="binding">
                       <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered with linen.</decoNote>
@@ -134,6 +180,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2020-12-02" who="JS">Added ms dimensions, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2021-01-22" who="ABe">Added ms_i1, a1-3, and e1</change>
+                                    <change when="2021-02-17" who="ABe">Added person ref to a1, removed dates from a2</change>
+                                    <change when="2021-02-18" who="ABe">Added Lord to rubrication</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
