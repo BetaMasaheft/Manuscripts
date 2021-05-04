@@ -7,6 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <title xml:id="t1">Weiner Codex 146</title>
             <editor key="ABe"/>
             <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -33,18 +34,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </msIdentifier>
                <msContents>
                   <summary>Psalter, ዳዊት፡</summary>
-                  <msItem xml:id="ms_i1"><locus from="1r" to="122v" facs="003"/><title type="complete" ref="LIT2701Dawit"/>
-                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
-                     <note>
-                     <foreign xml:lang="gez">
-                                        Introductory Poem:
-                                        እስመ: መዝሙረ: ዳዊት: ትመስል: ገነተ።
-                                        ወታስተጋብዕ: ኵሎ: [ጽ]ጌያተ።
-                                        ወትፈሪ: ፍሬያተ: ወትመልዕ: በረከተ።
-                                        ትሰድድ: አጋንንተ: ወታቀርብ: መላእክተ።
-                      </foreign>
-                    </note>
+
+                  <msItem xml:id="ms_i1">
+                    <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+
+                    <msItem xml:id="ms_i1.1">
+                      <locus from="1r"/>
+                      <title>Introductory Poem:</title>
+                      <incipit xml:lang="gez">
+                        እስመ: መዝሙረ: ዳዊት: ትመስል: ገነተ።
+                        ወታስተጋብዕ: ኵሎ: [ጽ]ጌያተ።
+                        ወትፈሪ: ፍሬያተ: ወትመልዕ: በረከተ።
+                        ትሰድድ: አጋንንተ: ወታቀርብ: መላእክተ።
+                      </incipit>
                   </msItem>
+
+                  <msItem xml:id="ms_i1.2">
+                    <locus from="1r" to="122v" facs="003"/>
+                    <title type="complete" ref="LIT2701Dawit"/>
+                     <note><ref type="work" corresp="LIT2000Mazmur#Ps118Spiritual"/></note>
+                  </msItem>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -78,7 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                             <item xml:id="q3" n="2">
                               <dim unit="leaf">10</dim>
                               <locus from="11" to="20" facs="013"/>
-                              <note>Folio stubs are visible between <locus target="#11 #12" facs="013 014"/>, <locus target="#13 #14" facs="015 016"/>, <locus target="#16 #17" facs="018 019"/>, <locus target="#18 #19" facs="020 021"/>.</note>
+                              <note>Folio stubs are visible between <locus target="#11 #12" facs="014"/>, <locus target="#13 #14" facs="016"/>, <locus target="#16 #17" facs="019"/>, <locus target="#18 #19" facs="021"/>.</note>
                               Quire 2:
                               9, stub after 1
                               2, stub after 8
@@ -133,7 +143,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                             <item xml:id="q13" n="12">
                               <dim unit="leaf">13</dim>
                               <locus from="111" to="123" facs="113"/>
-                              <note>A folio stub is visible between <locus target="#122 #123" facs="124 125"/>.</note>
+                              <note>A folio stub is visible between <locus target="#122 #123" facs="125"/>.</note>
                               Quire 12:
                               2, stub after 12
                             </item>
@@ -202,7 +212,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     <item xml:id="e3">
                     <locus target="#61r" facs="063"/>
                     <desc>
-                    A small ḥaräg in the margin marks the midpoint of the <title type="complete" ref="LIT2000Mazmur"/>
+                    A small ḥaräg in the margin marks the midpoint of the <ref type="work" corresp="LIT2000Mazmur"/>
                     </desc>
                     </item>
                     <item xml:id="a2">
@@ -222,21 +232,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     Numbered quires: quires 2–3
                     </desc>
                     </item>
-                    <item xml:id="a4">
-                    <desc>
-                    Psalm 118 contains the spiritual meanings of the Hebrew letters
-                    </desc>
-                    </item>
                     <item xml:id="e5">
                     <locus target="#5v #9v #14r #14v #17r" facs="008 012 016 017 019"/>
-                    <desc>
-                    (etc.) words of text are written interlinearly;
+                    <desc>etc., words of text are written interlinearly;
                     </desc>
                     </item>
                     <item xml:id="e6">
                     <locus target="#9v #17v #21v #59r #64r" facs="012 020 024 061 066"/>
-                    <desc>
-                    (etc.) lines of text are written interlinearly
+                    <desc>etc., lines of text are written interlinearly
                     </desc>
                     </item>
                     <item xml:id="e7">
@@ -275,14 +278,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
-                                    <change when="2019-10-02" who="ABe">Added items</change>
-                                    <change when="2020-01-16" who="ABe">Added items</change>
-                                    <change when="2020-03-18" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
-                                    <change when="2020-04-18" who="RL">Corrected ǝ character</change>
-                                    <change when="2020-05-11" who="ABe">Added facs statements</change>
-    </revisionDesc>
+          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+          <change when="2019-10-02" who="ABe">Added items</change>
+          <change when="2020-01-16" who="ABe">Added items</change>
+          <change when="2020-03-18" who="JS">Added quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+          <change when="2020-04-18" who="RL">Corrected ǝ character</change>
+          <change when="2020-05-11" who="ABe">Added facs statements</change>
+          <change when="2020-07-22" who="RL">Added link to spiritual meaning of Hebrew letters in Ps118, and minor format edits</change>
+          <change when="2020-11-13" who="ABe">Minor edits</change>
+  </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>

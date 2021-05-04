@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02264">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 265</title>
+            <editor key="JS"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +32,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2264/">Weiner Codex 265</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-75r: Gospel of John, Wängel zä-Yoḥanǝs, ወንጌል፡ ዘዮሐንስ፡. M. G. Wechsler, Evangelium Iohannis Aethiopicum, CSCO 617, SA 109 (2005), arranged for the days of the week: Saturday (14r), Tuesday (17v), Saturday (32r), Wednesday (39v), Thursday (48r), Friday (61r), Sunday (69r). F<locus target="#75v"/>-85r: Ritual for the Unction of the Sick, Mäṣḥafä Baḥrǝy. , መጽሐፈ: ባሕርይ. F<locus target="#85r"/>-91v: Book of Canon Which was arranged by the Church Scholars, Mäṣǝḥäfä Qänona, መጽሐፈ፡ ቀኖና፡ ዘሠርዕዎ መምሕራነ ቤተ ክርስቲያን.  Illuminations: i r: Three women saints, with a prostrate patron below. 1 v: Our Lady Mary with Her Beloved Son, flanked by two angels. ii r: The three (members of the Trinity?), with the patron prostrate below. ii v: Saint George and the Dragon. Notes. <locus target="#75v"/> mentions owner, ወልደ አረጋዊ, and the scribe, ወልደ ማርያም (mentioned again on <locus target="#91v"/>). </summary>
+                  <summary></summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="75v" facs="003"/>
+                    <title type="complete" ref="LIT1693John"/>
+                    <textLang mainLang="gez"/>
+                      <msItem xml:id="ms_i1.1"><locus from="14r" facs="016"/><title>Saturday</title></msItem>
+                      <msItem xml:id="ms_i1.2"><locus from="17v" facs="020"/><title>Tuesday</title></msItem>
+                      <msItem xml:id="ms_i1.3"><locus from="32r" facs="034"/><title>Saturday</title></msItem>
+                      <msItem xml:id="ms_i1.4"><locus from="39v" facs="042"/><title>Wednesday</title></msItem>
+                      <msItem xml:id="ms_i1.5"><locus from="48r" facs="050"/><title>Thursday</title></msItem>
+                      <msItem xml:id="ms_i1.6"><locus from="61r" facs="063"/><title>Friday</title></msItem>
+                      <msItem xml:id="ms_i1.7"><locus from="69r" facs="071"/><title>Sunday</title></msItem>
                   </msItem>
-               </msContents>
+                  <msItem xml:id="ms_i2">
+                    <locus from="75v" to="85r" facs="078"/>
+                    <title type="complete" ref="LIT1918Mashaf"/>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                    <locus from="85r" to="91v" facs="088"/>
+                    <title type="complete" ref="LIT3177Canon"/>
+                  </msItem>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +61,139 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 92</measure>
+                           <measure unit="quire">Protection sheet + 12</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>164</height>
+                              <width>114</width>
+                              <depth>51</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–2 and 4–12 balanced; quire 3 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="011"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="019"></locus>
+                              <note>Folium stubs appear between <locus target="#17 #18" facs="020"/> and between <locus target="#22 #23" facs="025"/>.</note>
+                              Quire 3:
+                              2, stub after 6
+                              8, stub after 1
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32" facs="027"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40" facs="035"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="41" to="48" facs="043"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="49" to="56" facs="051"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="57" to="64" facs="059"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="65" to="72" facs="067"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="73" to="80" facs="075"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">10</dim>
+                              <locus from="81" to="90" facs="083"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">2</dim>
+                              <locus from="91" to="92" facs="093"></locus>
+                              Quire 12
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">13-20</dim>
+                           <dim type="bottom">31-35</dim>
+                           <dim type="right">15</dim>
+                           <dim type="left">8</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="18"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ኢየሱስ፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#ir" facs="001"/><desc><ref type="authFile" corresp ="AT1106HolyWomen"/>Three female saints, with a prostrate patron below</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d3"><locus target="#iir" facs="002"/><desc><ref type="authFile" corresp ="AT1041HolyMen"/>Three figures (the three members of the Trinity?), with the patron prostrate below</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#iv" facs="002"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> two <term type="angel"/>s</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d4"><locus target="#iiv" facs="003"/><desc><ref type="authFile" corresp="AT1035HolyMan"/><persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                    <decoNote type="frame" xml:id="d5">    
+                      Decorative designs:
+                      <locus target="#1r #75v" facs="003 078"/>, ornamental band;
+                      <locus target="#75v #85r #90v #91v" facs="078 087 093 094"/>, multiple full stops</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                    <item xml:id="a1"><desc type="OwnershipNote"><locus target="#75v" facs="078"/> mentions the owner Wäldä ʾArägawi (ወልደ፡ አረጋዊ፡) and the scribe Wäldä Maryam (ወልደ፡ ማርያም፡). The scribe is mentioned again on f. 91v.</desc></item>
+                    <item xml:id="e1"><desc><locus target="#91v #92r" facs="094"/>erased text</desc></item>
+                    <item xml:id="a2"><desc type="OwnershipNote"><locus target="#92r"/>note written in blue ink <q>“The holy, glorious gospel”</q> followed by (in Amharic) <q>“It is the gospel of Qes ʾƎnyäw ʾAkälu,”</q> with the letters contained in a pattern of circles</desc></item>
+                    <item xml:id="e2"><desc><locus target="#92v" facs="095"/>Unconnected writing from various hands and time periods. Most are groups of a few words, but at the top is a six-line text, quite faded, in Amharic.</desc></item>
+                    <item xml:id="e3"><desc>Numbered quires 2–10</desc></item>
+                    <item xml:id="e4"><desc>
+                      Scribal intervention:
+                      words of text are written interlinearly <locus target="#4r #12v #21r #22v #34r" facs="006 015 023 025 036"/>, etc.;
+                      erasure markings are visible <locus target="#19v #85v" facs="022 088"/>;
+                      text has been removed <locus target="#12v #20r #39r #40r #52v" facs="015 022 041 042 055"/>, etc.</desc></item>
+                  </list>
+                </additions>
+
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, front cover is broken at 65 mm wide, back cover has been broken and repaired</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +210,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2020-12-15" who="JS">Added ms dimensions, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-01-18" who="RL">Added main ms works</change>
+         <change when="2021-01-27" who="RL">Added miniatures d1-d4, frame d5, additions a1-a2, e1-e4, handnote on rubrication</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
