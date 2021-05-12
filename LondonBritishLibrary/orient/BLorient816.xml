@@ -235,10 +235,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             እንተ፡ ትማልም፡ ሐለፈት፡ እማንቱ።
                           </incipit>
                         </msItem>
-                        <msItem xml:id="ms_i18">
-                          <locus from="50r"></locus>
-                          <title type="complete"></title>
-                        </msItem>
+
 
                     </msContents>
 
@@ -250,9 +247,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </support>
                                 <extent>
                                     <measure unit="leaf">50</measure>
-                                    <dimensions type="outer" unit="mm">
-                                        <height>197</height>
-                                        <width>175</width>
+                                    <measure unit="leaf" type="blank">3</measure>
+                                    <dimensions type="outer" unit="in">
+                                        <height>7.75</height>
+                                        <width>6.875</width>
                                     </dimensions>
                                 </extent>
 
@@ -260,22 +258,45 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
 
                             <layoutDesc>
-                                <layout columns="2" writtenLines="23 26" cert="high"/>
+                                <layout columns="2" writtenLines="23 26"/>
                             </layoutDesc>
                         </objectDesc>
 
                         <handDesc>
 
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is neatly written by the two hands, of the <date>19th century.</date>
+                                <desc>The manuscript is neatly written, of the <date>19th century.</date>
                                 </desc>
 
-                                <date notBefore="1800" notAfter="1900" resp="PRS10171Wright"/>
+                                <date notBefore="1800" notAfter="1868" resp="PRS10171Wright"/>
 
                             </handNote>
 
                         </handDesc>
                         <additions>
+                          <list>
+                            <item xml:id="a1">
+                              <locus target="#10v"></locus>
+                              <desc type="GuestText">Dates of the Prophets and Priests of the Old Testament</desc>
+                              <q xml:lang="gez"><seg part="I">ታሪክ፡ ዘነቢያት፡ እለ፡ ኮኑ፡</seg></q>
+                            </item>
+                            <item xml:id="a2">
+                              <locus target="#15v"></locus>
+                              <desc type="Comment">A short note on epacts added after <ref target="#ms_i5"></ref></desc>
+                              <q xml:lang="am"></q>
+                            </item>
+                            <item xml:id="a3">
+                              <locus target="#19v"></locus>
+                              <desc type="Unclear">The last section of <ref target="#ms_i6.1"></ref> added
+                            in a later hand.</desc>
+                            <q xml:lang="am"></q>
+                            </item>
+                            <item xml:id="a4">
+                              <locus from="50r" to="50v"></locus>
+                              <desc type="Genealogy">Genealogies of the kings of Ethiopia</desc>
+                              <q xml:lang="gez"></q>
+                            </item>
+                          </list>
 
                         </additions>
 
@@ -284,7 +305,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <history>
                         <origin>
 
-                            <origDate/>
+                            <origDate notBefore="1800" notAfter="1868" evidence="lettering"/>
                         </origin>
                         <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName>
                             expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
@@ -326,6 +347,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="HistoryAndHistoriography"/>
+                    <term key="Chronography"></term>
+                    <term key="Miscellanea"></term>
                     <term key="ZaMa" cert="low"/>
                     <term key="MoPe" cert="low"/>
                 </keywords>
@@ -336,6 +359,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="SG" when="2019-02-20">Created catalogue entry</change>
             <change who="DR" when="2019-06-04">Added link to images</change>
             <change who="DR" when="2019-06-04">Added link to images</change>
+            <change when="2021-05-12" who="DE">Continued the description.</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
