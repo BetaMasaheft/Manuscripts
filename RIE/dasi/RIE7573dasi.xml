@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
         type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE7573dasi" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -13,6 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                             <resp>Editor</resp>
                         </respStmt>
             <editor key="AB"/>
+            <editor key="AS"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,15 +35,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier/>
+               <msIdentifier>
+                 <settlement>Hawlti</settlement>
+                 <collection>RIÉ</collection>
+                   <idno>RIÉ 6</idno>
+                 <idno type="invNo">JE 1384</idno>
+             </msIdentifier>
                <physDesc>
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"/>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
+                            <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/189" xml:lang="fr">Bloc</objectType>
                         </support>
+                        <extent>
+                            <dimensions unit="cm">
+                                <height>20</height>
+                                <width atLeast="22.5" atMost="26">22.5—26</width>
+                            </dimensions>
+                            </extent>
                         <foliation/>
                      </supportDesc>
+                     <layoutDesc>
+                         <layout>
+                         <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                     </layout>
+                         <layout writtenLines="2"/>
+                         <!-- bustrophedon Inscription -->
+                         </layoutDesc>
                   </objectDesc>
                </physDesc>
                <additional>
@@ -52,6 +72,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">74</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -77,15 +98,56 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-05-13">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
-   </text>
+       <body>
+     <div type="bibliography">
+       <listBibl type="secondary">
+         <bibl xml:id="rie1">
+           <ptr target="bm:RIE1"/>
+           <citedRange unit="page">74</citedRange>
+        </bibl>
+        <bibl>
+          <ptr target="bm:RIE2"/>
+          <citedRange unit="plate">3(6)</citedRange>
+       </bibl>
+         <bibl xml:id="rie3">
+           <ptr target="bm:RIE3B"/>
+           <citedRange unit="page">39</citedRange>
+        </bibl>
+      </listBibl>
+     </div>
+     <div type="edition" source="#rie1">
+     <ab>
+       <!-- text keyed in with Keyman and Diacritics configuration-->
+ <lb n="1"/><gap reason="lost"/><w part="F"><supplied reason="lost"><milestone unit="word"/>ʾdm</supplied>
+</w>
+<gap reason="lost"/>
+  hy <milestone unit="word"/> wṣ <supplied reason="lost" cert="low">mhy<milestone unit="word"/></supplied><gap reason="lost"/>
+<lb n="2"/><gap reason="lost"/><w part="F"><supplied reason="lost"><milestone unit="word"/> w </supplied>
+</w>
+<gap reason="lost"/> hwbs <milestone unit="word"/> wʾl <supplied reason="lost" cert="low"> mqh <milestone unit="word"/> </supplied><gap reason="lost"/>
+</ab>
+</div>
+
+
+<!-- text copied from PDF and marked up-->
+        <div type="translation" xml:lang="fr" source="#rie3">
+          <ab>
+<lb n="1"/><gap reason="lost"/><w part="F"><supplied reason="lost">des rou</supplied></w>ges aussi bien que des
+<supplied reason="lost" cert="low">noirs</supplied><gap reason="lost"/>
+<lb n="2"/><gap reason="lost"/><w part="F"><supplied reason="lost">et</supplied>
+</w>
+<gap reason="lost"/>HBS et ʾL <supplied reason="lost" cert="low">MQH</supplied><gap reason="lost"/>
+</ab>
+</div>
+</body>
+ </text>
 </TEI>
