@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
         type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE7767dasi" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -13,6 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                             <resp>Editor</resp>
                         </respStmt>
             <editor key="AB"/>
+            <editor key="AS"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -37,17 +38,33 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <msIdentifier>
                                 <settlement>Addis Abeba</settlement>
                                 <repository>National Archaeological Museum</repository>
-                                <collection/>
+                                <collection>RIÉ</collection>
                                 <idno type="invNo">JE 4</idno>
                             </msIdentifier>
                <physDesc>
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"/>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/75"/>
+                             <objectType ref= "https://www.eagle-network.eu/voc/objtyp/lod/33" xml:lang="fr">autel brûle-parfum</objectType>
                         </support>
+                        <extent>
+                            <dimensions unit="cm">
+                                <height>38</height>
+                                <width>21</width>
+                              </dimensions>
+                            </extent>
                         <foliation/>
                      </supportDesc>
+                     <layoutDesc>
+                         <layout>
+                         <rs type="execution"/>
+                         </layout>
+                        <layout writtenLines="6"/>
+                        <!-- The base of the altar bears an inscription on the front face, face A, and the two
+                        sides, sides B and C; side B has six lines and side C has four lines.
+                        Bustrophedon inscription, the first line is sinistrorse. -->
+                        </layoutDesc>
                   </objectDesc>
                </physDesc>
                <additional>
@@ -57,6 +74,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                  <citedRange unit="page">7—78</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -82,15 +100,73 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-05-14">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+                <div type="bibliography">
+            <listBibl type="secondary">
+              <bibl xml:id="rie1">
+                <ptr target="bm:RIE1"/>
+                <citedRange unit="page">76—78</citedRange>
+             </bibl>
+             <bibl>
+               <ptr target="bm:RIE2"/>
+               <citedRange unit="plate">6</citedRange>
+            </bibl>
+              <bibl xml:id="rie3">
+                <ptr target="bm:RIE3B"/>
+                <citedRange unit="page">41—42</citedRange>
+             </bibl>
+           </listBibl>
+          </div>
+          <div type="edition" source="#rie1">
+           <ab>
+            <!-- text keyed in with Keyman and Diacritics configuration-->
+      <lb n="1" style="text-direction:l-to-r"/>(A)<supplied reason="lost"><g type="symbol"/> <milestone unit="word"/>
+          rb</supplied>ḥ <milestone unit="word"/> mlkn <milestone unit="word"/> ṣrʿn <milestone unit="word"/> yg (B) ʾḏyn
+          <milestone unit="word"/> mkrb <milestone unit="word"/> dʿmt <milestone unit="word"/>
+      <lb n="2" style="text-direction:r-to-l"/> (B)  wsbʾ <milestone unit="word"/> bn <milestone unit="word"/>
+          bn <milestone unit="word"/> wʿrn <damage><milestone unit="word"/></damage> (A) ryd <damage> n <milestone unit="word"/> hqn </damage>
+          <w part="I"><supplied reason="lost"> yw <milestone unit="word"/></supplied></w> (C) <gap reason="lost" quantity="1" unit="character"/> <milestone unit="word"/> <gap reason="lost"/>
+          l'lmqhy <milestone unit="word"/> bʿl <milestone unit="word"/> qḏ
+      <lb n="3" style="text-direction:l-to-r"/>(C) <gap reason="lost" quantity="1" unit="character"/><damage>r</damage> <milestone unit="word"/> ywm
+          <milestone unit="word"/> hḥdsw <milestone unit="word"/> ʿ<gap reason="lost" quantity="1" unit="character"/> (A) <gap reason="lost" extent="unknown" unit="character"/>
+          (B) <gap reason="lost" quantity="1" unit="character"/> <milestone unit="word"/> mlkw <milestone unit="word"/> rbḥ <milestone unit="word"/>dʿmt
+      <lb n="4" style="text-direction:r-to-l"/> ms̆ <supplied reason="lost">rqhy</supplied> <milestone unit="word"/> wmʿrbh<damage>y</damage>
+         <w part="I"><supplied reason="lost"> <milestone unit="word"/> (A) </supplied></w><gap reason="lost" extent="unknown" unit="chars"/>
+          (C) <gap reason="lost" extent="unknown" unit="chars"/> <damage>w</damage> <milestone unit="word"/> nfsnhmw <milestone unit="word"/> wʿḏ<supplied reason="lost">rh</supplied>
+      <lb n="5" style="text-direction:l-to-r"/> <supplied reason="lost"> mw <milestone unit="word"/> </supplied> wnfs <milestone unit="word"/> ʾnstm
+         <w part="I"><supplied reason="lost"> w <milestone unit="word"/></supplied></w><gap reason="lost" extent="unknown" unit="chars"/>
+         <damage></damage> <milestone unit="word"/> bytmw <supplied reason="lost"><milestone unit="word"/> w </supplied>ḥqlmw
+      <lb n="6" style="text-direction:r-to-l"/><gap reason="lost" extent="unknown" unit="chars"/>mq <milestone unit="word"/> nf<w part="I"><supplied reason="lost">s</supplied></w><gap reason="lost"/>
+        </ab>
+        </div>
+
+        <!-- text copied from PDF and marked up-->
+                <div type="translation" xml:lang="fr" source="#rie3">
+                  <ab>
+        <lb n="1"/><supplied reason="lost">(Symbole?) RB</supplied>Ḥ, roi ṣrʿn, celui de YGʿḎ, mkrb de DʿMT,
+        <lb n="2"/> et Sabaʾ, descendant de WʿRN RYDN, a consa<supplied reason="lost">cré cet autel</supplied> à ʾLMQH, seigneur de QḎ
+        <gap reason="lost" quantity="1" unit="chars"/><damage>R</damage>,
+        <lb n="3"/> lorsqu’il fonda <w part="F"><supplied reason="lost">lorsque</supplied></w><gap reason="lost"/> RBḤ devint roi de DʿMT,
+        <lb n="4"/> de l’est aussi bien que de l’ouest <w part="F"><supplied reason="lost"> et il à confié à la protection de la divinité</supplied></w><gap reason="lost"/> sa personne et ses cognats
+        <lb n="5"/> et la personne de sa femme <gap reason="lost"/> et sa maison et ses champs
+        <lb n="6"/> <gap reason="lost" extent="unknown" unit="chars"/> Mq la person
+        <w part="I">
+        <supplied reason="lost">ne de</supplied>
+        </w>
+        <gap reason="lost"/>
+
+    </ab>
+    </div>
+
       </body>
    </text>
 </TEI>

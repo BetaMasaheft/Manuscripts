@@ -59,10 +59,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                      <layoutDesc>
                          <layout>
                          <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
-                     </layout>
-                         <layout writtenLines=""/>
-
-                         </layoutDesc>
+                         </layout>
+                        <layout writtenLines="6"/>
+                         <!-- Text 1 consists of two lines;
+                         it starts on one of the short sides, face A, and continues on the adjacent long side
+                         on the left, face B. It is read line by line on each side taken separately.
+                         Text II is on the other small side, face C. -->
+                    </layoutDesc>
                   </objectDesc>
                </physDesc>
                <additional>
@@ -72,6 +75,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">74—75</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -97,15 +101,66 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-05-14">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+          <listBibl type="secondary">
+            <bibl xml:id="rie1">
+              <ptr target="bm:RIE1"/>
+              <citedRange unit="page">74—75</citedRange>
+           </bibl>
+           <bibl>
+             <ptr target="bm:RIE2"/>
+             <citedRange unit="plate">4</citedRange>
+          </bibl>
+            <bibl xml:id="rie3">
+              <ptr target="bm:RIE3B"/>
+              <citedRange unit="page">39—41</citedRange>
+           </bibl>
+         </listBibl>
+        </div>
+        <div type="edition" source="#rie1">
+         <ab>
+          <!-- text keyed in with Keyman and Diacritics configuration-->
+          <!-- Text I,side A -->
+          <lb n="1"/><supplied reason="lost"><g type="symbol"/><milestone unit="word"/>
+           wʿrn </supplied> <milestone unit="word"/> ḥy <damage>w</damage><supplied reason="lost"/>
+          <lb n="2"/><supplied reason="lost"> t <milestone unit="word"/> </supplied> <milestone unit="word"/>
+           bn <milestone unit="word"/> b <supplied reason="lost">n <milestone unit="word"/></supplied>
+           <!-- Text I,side B -->
+           <lb n="1"/><supplied reason="lost"> sl </supplied> mm <milestone unit="word"/> fṭrn <milestone unit="word"/>
+           w<gap reason="lost" quantity="1" unit="character"/><damage>m̊</damage><gap reason="lost" quantity="2" unit="character"/>t <milestone unit="word"/> ʿ
+           <lb n="2"/><supplied reason="lost"> r </supplied><damage>ky</damage>tn <milestone unit="word"/> hḥdsw <milestone unit="word"/> mṭryn
+           <!-- Text I,side C -->
+           <lb n="1"/><space quantity="1" unit="line" cert="low"/>
+           <!-- Text II -->
+           <lb n="1"/><milestone unit="word"/> gbr <milestone unit="word"/> s <damage>b</damage><gap reason="lost"></gap>
+         </ab>
+         </div>
+
+         <!-- restoration proposed by the editors basing on the formule used in RIÉ 5 -->
+         <div type="edition" source="#rie1">
+           <ab>
+             <!-- Text I,side A -->
+             <lb n="1"/><supplied reason="lost"><g type="symbol"/> WʿRN </supplied> ḤYWT,
+             <lb n="2"/><supplied reason="lost"> roi,</supplied> descendant de
+              <!-- Text I,side B -->
+              <lb n="1"/>SLMM FṬRN, et <gap reason="lost" extent="unknown" unit="character"/>, celle
+              <lb n="2"/>de ʿRK, ont consacré ce mṭry.
+               <!-- Text I,side C -->
+               <lb n="1"/> (sans texte?)
+              <!-- Text II -->
+              <lb n="1"/>SB <gap reason="lost" extent="unknown" unit="character"/> l’a fait.
+            </ab>
+            </div>
       </body>
    </text>
 </TEI>
