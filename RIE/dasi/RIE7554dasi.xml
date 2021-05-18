@@ -60,6 +60,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">78—79</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -85,15 +86,72 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+<change who="AS" when="2021-05-18">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+    <listBibl type="secondary">
+      <bibl xml:id="rie1">
+        <ptr target="bm:RIE1"/>
+        <citedRange unit="page">78—79</citedRange>
+     </bibl>
+     <bibl>
+       <ptr target="bm:RIE2"/>
+       <citedRange unit="plate">7</citedRange>
+    </bibl>
+      <bibl xml:id="rie3">
+        <ptr target="bm:RIE3B"/>
+        <citedRange unit="page">43—45</citedRange>
+     </bibl>
+   </listBibl>
+  </div>
+  <div type="edition" source="#rie1">
+   <ab>
+    <!-- text keyed in with Keyman and Diacritics configuration-->
+    <lb n="1"/><milestone unit="face" n="A"/><g type="symbol"/><milestone unit="word"/> rdʾm <milestone unit="word"/>
+        mlk<damage>n</damage><supplied reason="lost"><milestone unit="word"/> ṣ </supplied> <milestone unit="face" n="B"/>
+        rʿn <milestone unit="word"/> sryt <milestone unit="word"/> m <milestone unit="face" n="C"/>
+        <supplied reason="lost">krb<milestone unit="word"/></supplied> dʿmt <milestone unit="word"/> bn
+        <supplied reason="lost"> <milestone unit="word"/> </supplied>
+    <lb n="2"/> bn <milestone unit="word"/> slmm̊ <milestone unit="word"/> f̊ṭ̊ <milestone unit="face" n="b"/>
+       <supplied reason="lost">r</supplied>n̊ <milestone unit="word"/> wy <damage>r</damage>ʿt <milestone unit="word"/>ʿr <milestone unit="face" n="A"/>
+       <supplied reason="lost">ktn</supplied> <milestone unit="word"/> hḥdsw <milestone unit="word"/> <supplied reason="lost">m</supplied>
+    <lb n="3"/><milestone unit="face" n="A"/> qṭrn <milestone unit="word"/> lrb <milestone unit="face" n="B"/> <milestone unit="word"/>
+       bʿl <milestone unit="word"/> ʾw <milestone unit="face" n="C"/> <gap reason="lost" quantity="1" unit="characters"/> ḥ <milestone unit="word"/>
+       ywm <milestone unit="word"/> ml
+    <lb n="4"/><milestone unit="face" n="C"/> kw <milestone unit="word"/> dʿmt <milestone unit="word"/><supplied reason="lost">m</supplied>
+       <milestone unit="face" n="B"/> s̆rqhy <milestone unit="word"/> w <milestone unit="face" n="A"/><damage>m</damage> ʿrbhy <milestone unit="word"/> sb
+    <lb n="5"/><milestone unit="face" n="A"/> ʾhy <milestone unit="word"/> wʿbr <damage>h</damage> <milestone unit="face" n="B"/> y
+       <milestone unit="word"/> ʾdmhy <supplied reason="lost"> <milestone unit="word"/> <milestone unit="face" n="C"/> w </supplied>
+       ṣlmhy <milestone unit="word"/> bs
+    <lb n="6"/><milestone unit="face" n="C"/> qt <milestone unit="word"/> ʿstr <milestone unit="word"/> w <supplied reason="lost">h</supplied>
+       <milestone unit="face" n="B"/> wbs <milestone unit="word"/> wʾlm <milestone unit="face" n="A"/> qy <milestone unit="word"/> wḏt <milestone unit="word"/> ḥm
+    <lb n="7"/><milestone unit="face" n="A"/> n <milestone unit="word"/> wḏt <milestone unit="word"/>bʿdn <damage><milestone unit="word"/></damage>
+        <milestone unit="face" n="B"/> wʾbk <milestone unit="word"/> wd <milestone unit="face" n="C"/> m <damage><milestone unit="word"/></damage>
+        <gap reason="lost" quantity="2" unit="character"/> ʿtkm
+</ab>
+</div>
+
+<!-- text copied from PDF and marked up-->
+        <div type="translation" xml:lang="fr" source="#rie3">
+          <ab>
+<lb n="1"/>(Symbole) RDʾM, roi ṣrʿn, (de la tribu de?) SRYT, mkrb de DʿMT, de-scendant
+<lb n="2"/>de SLMM˚F˚Ṭ˚<supplied reason="lost">R</supplied>N˚ , et YRʿT, celle de
+ʿR<supplied reason="lost">K</supplied>, ont consacré
+<lb n="3"/>cet autel brûleparfum à RB, seigneur de ʾW<gap reason="lost" quantity="1" unit="character"/>H, lorsqu’il devint roi
+<lb n="4"/>de DʿMT, de l’est aussi bien que de l’ouest, des Sabéens
+<lb n="5"/>aussi bien que des ʿBR, des rouges aussi bien que des noirs.
+<lb n="6"/>Par ʿAstar et HBS et ʾLMQH et ḎT ḤMN
+<lb n="7"/>et ḎT BʿDN. Ton père est Wadd <gap reason="lost" quantity="2" unit="character"/>ʿtkm.
+</ab>
+</div>
       </body>
    </text>
 </TEI>
