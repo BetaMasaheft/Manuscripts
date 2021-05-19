@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-        type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE7566dasi" type="mss">
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:bm="https://betamasaheft.eu" xml:lang="en" xml:id="RIE7566dasi" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -13,6 +12,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                             <resp>Editor</resp>
                         </respStmt>
             <editor key="AB"/>
+            <editor key="AS"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -36,18 +36,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
             <msDesc>
                <msIdentifier>
                                 <settlement>Abba Pantaleon</settlement>
+                        <!--<settlement><note> in RIE3B it is said that this inscription came from Enda Tcherqos</note></settlement>-->
                                 <repository>Church</repository>
-                                <collection/>
+                                <collection>RIÉ</collection>
+                                <idno>RIÉ 2</idno>
                                 <idno type="invNo"/>
                             </msIdentifier>
                <physDesc>
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"/>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
+                             <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/189" xml:lang="fr">Bloc de calcaire</objectType>
                         </support>
+                        <extent>
+                            <dimensions unit="cm">
+                                <height>22.50</height>
+                                <width>38</width>
+                            </dimensions>
+                            </extent>
                         <foliation/>
                      </supportDesc>
+                     <layoutDesc>
+                         <layout>
+                         <rs type="execution" cert="low" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                     </layout>
+                         <layout writtenLines="2"/>
+                         <!-- Bustrophedon inscription, the first line is sinistrorse-->
+                     </layoutDesc>
                   </objectDesc>
                </physDesc>
                <additional>
@@ -57,6 +73,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">69—70</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -82,15 +99,60 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage> <language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-05-12">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
-      </body>
+        <div type="bibliography">
+          <listBibl type="secondary">
+            <bibl xml:id="rie1">
+              <ptr target="bm:RIE1"/>
+              <citedRange unit="page">69—70</citedRange>
+           </bibl>
+           <bibl>
+             <ptr target="bm:RIE2"/>
+             <citedRange unit="plate">1(2)</citedRange>
+          </bibl>
+            <bibl xml:id="rie3">
+              <ptr target="bm:RIE3B"/>
+              <citedRange unit="page">30–31</citedRange>
+           </bibl>
+         </listBibl>
+        </div>
+        <div type="edition" source="#rie1">
+        <ab>
+          <!-- text keyed in with Keyman and Diacritics configuration-->
+<lb n="1" style="text-direction:r-to-l"/><gap reason="lost" extent="unknown" unit="line"/> mlkw <milestone unit="word"/> dʿmt <milestone unit="word"/> mšrq <damage>h</damage>y
+ <milestone unit="word"/> wmʿrbhy <milestone unit="word"/> <gap reason="lost" extent="unknown" unit="character"/>
+<lb n="2" style="text-direction:l-to-r"/><gap reason="lost" extent="unknown" unit="character"/><damage> <milestone unit="word"/> wd̠</damage>tbʿ<damage>dn<milestone unit="word"/> wʾb</damage>
+<supplied reason="lost">k <milestone unit="word"/> wdm</supplied>
+</ab>
+</div>
+<div type="edition" source="#rie1">
+  <ab>
+    <!-- text restored by editors thanks to the comparison with RIÉ 5B -->
+<lb n="1" style="text-direction:r-to-l"/><supplied reason="lost">ywm <milestone unit="word"/></supplied> mlkw <milestone unit="word"/> dʿmt <milestone unit="word"/>
+     ms̆rq<damage  bm:placeOfDamage="upperLeft lowerLeft">h</damage>y<milestone unit="word"/> wmʿrbhy <milestone unit="word"/>ʾdmhy <milestone unit="word"/> wṣlmhy <milestone unit="word"/> bn <supplied reason="lost"/>
+<lb n="2" style="text-direction:l-to-r"/><supplied reason="lost">ẖ <milestone unit="word"/> ʿstr <milestone unit="word"/> whbs <milestone unit="word"/>
+wʾlmqh <milestone unit="word"/> wḏtḥmym </supplied> <damage> <milestone unit="word"/> wḏ</damage> tbʿ<damage>dn <milestone unit="word"/> wʾb</damage><damage>k</damage>
+<milestone unit="word"/> wdm <supplied reason="lost"/>
+</ab>
+</div>
+
+<!-- text copied from PDF and marked up-->
+        <div type="translation" xml:lang="fr" source="#rie3">
+          <ab>
+<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>il devint roi de DʿMT, de l’est <w part="I"><supplied reason="lost"> aussi bien que de l’ouest </supplied></w><gap reason="lost"/>
+<lb n="2"/>"/><gap reason="lost" extent="unknown" unit="character"/> Et ḎT BʿDN. Ton père <supplied reason="lost">est Wadd.</supplied>
+</ab>
+</div>
+
+        </body>
    </text>
 </TEI>
