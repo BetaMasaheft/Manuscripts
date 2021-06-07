@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE199" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
@@ -6,6 +6,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <titleStmt>
                 <title>RIÉ 199</title>
                 <editor key="PL"/>
+                <editor key="AS"/>
                 <editor role="generalEditor" key="AB"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
@@ -22,14 +23,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    
+
                     <msIdentifier>
-                        <repository cert="low">In situ</repository>
+                        <repository ref="INS0961CPH">In situ </repository>
                         <collection>RIÉ</collection>
                         <idno>RIÉ 199</idno>
                     </msIdentifier>
-                    
-                    
+
+
                     <physDesc>
                         <objectDesc form="Inscription">
                             <supportDesc>
@@ -49,19 +50,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <seg type="script">non vocalized Ethiopic script</seg>
                             </handNote>
                         </handDesc>
-                        
+
                     </physDesc>
-                    
+
                     <history>
                         <origin>
-                            <origPlace ref="LOC1310Aksum"> 
+                            <origPlace ref="LOC1310Aksum">
                                 The inscription from <placeName ref="LOC1310Aksum"/>.
                             </origPlace>
                             <origDate/>
                         </origin>
                     </history>
-                    
-                    
+
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -71,11 +72,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                             <ptr target="bm:RIE1"/>
                                             <citedRange unit="page">294-295</citedRange>
                                         </bibl>
-                                        
+
                                     </listBibl>
                                 </source>
                             </recordHist>
-                            
+
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -97,20 +98,39 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <term key="Aks"/>
                 </keywords>
             </textClass>
-            <langUsage/>
+            <langUsage>
+              <language ident="en">English</language>
+              <language ident="fr">French</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
             <change when="2018-10-14" who="PL">created entry</change>
+            <change when="2021-05-07" who="AS">added bibliography</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
-        
+
         <body>
             <div type="edition">
                 <ab>
                 </ab>
          </div>
+         <div type="bibliography">
+           <listBibl type="secondary">
+             <bibl xml:id="rie1">
+               <ptr target="bm:RIE1"/>
+               <citedRange unit="page">294—295</citedRange>
+             </bibl>
+             <bibl>
+              <ptr target="bm:RIE2"/>
+              <citedRange unit="plate">147</citedRange>
+             </bibl>
+             <bibl>
+               <ptr target="bm:RIE3B"/>
+               <citedRange unit="page">293–296</citedRange>
+            </bibl></listBibl>
+         </div>
         </body>
-        
+
     </text>
 </TEI>
