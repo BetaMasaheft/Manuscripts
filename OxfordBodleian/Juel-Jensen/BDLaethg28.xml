@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BDLaethg28" xml:lang="en" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
@@ -14,6 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
+                <editor key="EDS"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -112,9 +113,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
 
-                                <condition key="deficient">The sewing is broken. A brown liquid
-                                    (coffee?) was spilled on the manuscript, see especially on <locus
-                                        from="15r" to="16v"/>. Smudged ink on many folia.</condition>
+                                <condition key="deficient">The original sewing is broken and it has been repaired by using a different kind of thread. A brown liquid
+                                    <!--I would omit (coffee)--> was spilled on the manuscript, see especially on <locus
+                                        from="15r" to="16v"/> <!--Actually to me it seems that a brown ink was used to draw the two images on 15v and 16r, later damaged by water. The same ink is on 11v.-->  Smudged ink on many folia.</condition>
 
                             </supportDesc>
                             <layoutDesc>
@@ -196,14 +197,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 target="#ms_i1"/>. </decoDesc>-->
 
                         <bindingDesc>
-                            <binding contemporary="false" xml:id="binding">
-                                <decoNote xml:id="b1">Two <material key="wood">wooden</material>
-                                    boards.</decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                                    <material key="wood"/>
-                                </decoNote>
-                                <decoNote xml:id="b3" type="SewingStations">2</decoNote>
-                            </binding>
+                          <binding contemporary="true Ethiopian" xml:id="binding">
+                            <decoNote xml:id="b1">
+                              Bound in wooden boards.
+                            </decoNote>
+                            <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="wood"/>
+                        </decoNote>
+                            <decoNote xml:id="b3" type="Boards">
+                              The boards are cut to the same size as the bookblock and have square edges. The grain runs vertically.
+                            </decoNote>
+                            <decoNote xml:id="b6" type="SewingStations">2</decoNote>
+                            <decoNote xml:id="b7">
+                              The sewing, heavily damaged and repaired, is a chainstitch on two sewing stations. <!--
+                              A thread of <term key="animalThread">animal origin</term> has been used for the sewing.-->
+                            </decoNote>
+                            <decoNote xml:id="b9" type="Spine">
+                              The small holes close to the head of quire are prabably what remains of tackets.
+                            </decoNote>
+                            <decoNote xml:id="b11" type="EndLeaves">
+                              The first bifolio has a protective function.
+                            </decoNote>
+                            <decoNote xml:id="b12" type="other">
+                              Textile bookmark inserted in the upper text prick of fol. 35
+                            </decoNote>
+                          </binding>
                         </bindingDesc>
                     </physDesc>
 
