@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethf28"
@@ -13,7 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Maṣḥafa tārik</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,16 +36,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 53</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
@@ -62,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#60"/>.</note>
                                     <measure type="weight" unit="g">424</measure>
-                                </extent> 
+                                </extent>
                                 <collation>
                                         <list>
                                             <item xml:id="q1" n="1">
@@ -96,9 +99,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             </item>
                                         </list>
                                 </collation>
-                                
+
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="1" writtenLines="24">
                                     <locus from="1r" to="122"/>
@@ -115,37 +118,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                           
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+
                         </decoDesc>-->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+
+                        <bindingDesc>
+                            <binding xml:id="binding" contemporary="false"> <!-- Ethiopian style..can we put Ethiopian label?-->
+                              <decoNote xml:id="b1" type="bindingMaterial">
+                                The book is bound in <material key="wood">wooden</material> boards.
+                              </decoNote>
+                              <decoNote xml:id="b2" type="Boards">
+                                The boards are cut to the same size as the bookblock and have square edges.
+                                The grain runs vertically. Both surfaces are finely polished.
+                              </decoNote>
+                              <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                              <decoNote xml:id="b5">
+                                Chainstitch sewing on four sewing stations. The original thread is Z-ply while the modern S-ply.
+                                <!--The original thread of <term key="animalThread">animal origin</term> has been repaired and prolonged with a white thread
+                                to reconnect the sewing with the new modern boards.-->
+                            </decoNote>
+                            <decoNote xml:id="b7" type="Spine">
+                              The quires were held together by means of tackets made of parchment, still extant at head and tail of quires <locus target="#q1, #q2"/>.
+                            </decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -157,7 +172,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
