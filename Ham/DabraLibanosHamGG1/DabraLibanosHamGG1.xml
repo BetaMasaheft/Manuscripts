@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="DabraLibanosHamGG1">
+  <teiHeader >
+    <fileDesc>
+      <titleStmt>
+        <title xml:id="t1" type="académique">Golden Gospel of Beta Mata za-Ham </title>
+        <editor role="generalEditor" key="AB"/>
+        <editor key="NV"/>
+        <editor role="encoder" key="PL"/>
+        <respStmt xml:id="bausi">
+          <resp>Photographer</resp>
+          <resp>Editor</resp>
+          <name>Alessandro Bausi</name>
+        </respStmt>
+        <respStmt xml:id="schneider">
+          <resp>Photographer</resp>
+          <resp>Editor</resp>
+          <name>Roger Schneider</name>
+        </respStmt>
+        <respStmt xml:id="liuzzo">
+          <resp>Encoder</resp>
+          <name>Pietro Liuzzo</name>
+        </respStmt>
+        <respStmt xml:id="hizkiel">
+          <resp>Transkribus contributor</resp>
+          <name>Hizkiel Mitiku</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <p>Photo Credit for <ref target="#shneider1975">Set photographed in 1993</ref> : Roger Schneider, 1975, <!--invented and -->scanned by
+          Marie-Laure Derat. © Roger Schneider archive, Institute of Ethiopian Studies, Walda Masqal
+          centre.</p>
+        <p>Photo Credit for <ref target="#bausi1993">Set photographed in 1993</ref> and 
+          <ref target="#bausi1994">Set photographed in 1994</ref>: 
+          Alessandro Bausi © MIE (Missione Italiana in Eritrea 1993-1994), Consiglio
+          Nazionale delle Ricerche and University of Bologna.</p>
+        <p>The identification of texts is carried out on the basis of the list in
+          <bibl>
+            <ptr target="bm:Bausi1997ManoscrittiEritreaParteIII"/>
+          </bibl>, and improved with line references aligned to the image segmentation carried out in Transkribus. Units identified where checked against <bibl>
+            <ptr target="bm:ContiRossini1901Evangelodoro"/>
+          </bibl> edited text.</p>
+        <p>The encoding was carried out by Nafisa Valieva thanks to the project <ref target="https://cordis.europa.eu/project/id/726206">HornEast</ref> that has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (Grant agreement No. 726206).</p>
+        </editionStmt>
+      <publicationStmt>
+        <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+        <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+          Forschungsumgebung / Beta maṣāḥǝft</publisher>
+        <pubPlace>Hamburg</pubPlace>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
+            <p> This file is licensed under the Creative Commons Attribution-ShareAlike 4.0. </p>
+          </licence>
+        </availability>
+      </publicationStmt>
+     <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="DabraLibanosHamGG1/CCRsourceDesc.xml">
+        <xi:fallback>CCR sourceDesc</xi:fallback>
+      </xi:include>-->
+      <sourceDesc>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+          href="msDesc.xml">
+          <xi:fallback>
+            <!--msDesc-->
+          </xi:fallback>
+        </xi:include>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+        <xi:fallback>
+          <p>Definitions of prefixes used.</p>
+        </xi:fallback>
+      </xi:include>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+        <language ident="it">Italian</language>
+        <language ident="gez">Gǝʿǝz</language>
+        <language ident="la">Latin</language>
+        <language ident="fr">French</language>
+        <language ident="de">German</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change who="ES" when="2018-06-01">Created stub record</change>
+      <change who="PL" when="2019-06-28">some fixes for validation</change>
+      <change who="NV" when="2019-11-20">updates</change>
+      <change who="NV" when="2019-11-26">encoded Decodesc</change>
+      <change who="HM" when="2020-11-30">added segmentation to images in Transkribus</change>
+      <change who="PL" when="2020-12-01">organized facsimiles exported from transkribus, adding
+        copies of images and updating xmlids</change>
+      <change who="PL" when="2021-01-18">Split file with xinclude</change>
+    </revisionDesc>
+  </teiHeader>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+    href="facsimile1.xml">
+    <xi:fallback>
+      <!--schneider facsimile-->
+    </xi:fallback>
+  </xi:include>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+    href="facsimile2.xml">
+    <xi:fallback>
+      <!--Bausi 1993 facsimile-->
+    </xi:fallback>
+  </xi:include>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+    href="facsimile3.xml">
+    <xi:fallback>
+      <!--Bausi 1994 facsimile-->
+    </xi:fallback>
+  </xi:include>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+    href="facsimile4.xml">
+    <xi:fallback>
+      <!--Valieva Liuzzo facsimile-->
+    </xi:fallback>
+  </xi:include>
+  <text>
+    <body>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="edition.xml">
+        <xi:fallback>
+          <!-- edition -->
+        </xi:fallback>
+      </xi:include>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="transkribusText.xml">
+        <xi:fallback>
+          <!-- transcribus text-->
+        </xi:fallback>
+      </xi:include>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="sdc.xml">
+        <xi:fallback>
+          <!-- transcribus text-->
+        </xi:fallback>
+      </xi:include>
+    </body>
+  </text>
+</TEI>
