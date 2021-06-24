@@ -80,12 +80,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </support>
                         <extent>
                            <measure unit="leaf">36</measure>
+                           <measure type="weight" unit="g">191</measure>
                            <dimensions type="outer" unit="mm">
                               <height>155</height>
                               <width>115</width>
                               <depth>20</depth>
                            </dimensions>
-
+                          <dimensions type="outer" unit="mm"> <!--folio size-->
+                            <height>154</height>
+                            <width>95</width>
+                          </dimensions>
                         </extent>
 
 
@@ -127,7 +131,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="1" writtenLines="19">
-                           <locus target="#19r"/>
+                           <locus from="1r" to="34v"/>
+                                 <note corresp="#textarea1 #margin1">Data on text area and margin dimensions taken from <locus target="#17r"/>.</note>
+                                 <dimensions unit="mm" xml:id="textarea1">
+                                 <height>114</height>
+                                 <width>95</width>
+                              </dimensions>
+                              <dimensions type="margin" unit="mm" xml:id="margin1">
+                                 <dim type="top">12</dim>
+                                 <dim type="bottom">27</dim>
+                                 <dim type="right">13</dim>
+                                 <dim type="left">9</dim>
+                              </dimensions>
                         </layout>
                      </layoutDesc>
                      </objectDesc>
