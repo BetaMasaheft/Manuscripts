@@ -1,11 +1,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EMIP2759" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EMIP2774" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>UNESCO Collection 1, Patriarch's Library 14</title>
+                <title>UNESCO Collection 1, Patriarch's Library 29</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="RL"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,14 +25,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msIdentifier>
                         <repository ref="INS0447EMIP">UNESCO Collection 1</repository>
                         <collection>EMIP</collection>
-                        <idno facs="EMIP/Codices/2759/">UNESCO Collection 1, Patriarch's Library
-                            14</idno>
+                        <idno facs="EMIP/Codices/2774/">UNESCO Collection 1, Patriarch's Library
+                            29</idno>
                     </msIdentifier>
                     <msContents>
-                        <summary/>
                         <msItem xml:id="ms_i1">
-                            <title type="complete" ref="LIT3178Deggwa"/>
-                            <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                            <locus from="1r" to="226r"/>
+                            <title type="complete" ref="LIT2317Senodo"/>
+                            <textLang mainLang="gez">Gǝʿǝz</textLang>
+                            <colophon xml:id="coloph1">
+                                <locus target="#226r"/> Colophon with date, mention of <persName
+                                    ref="PRS5226haylase">Haile Selassie</persName>, <persName
+                                    ref="PRS2533Baselyos">Basiliyos</persName>, scribe's name, etc.
+                            </colophon>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -42,42 +47,38 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <watermark/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">viii + 209</measure>
+                                    <measure unit="leaf">228</measure>
                                     <measure unit="quire"/>
-                                    <dimensions type="outer" unit="mm"/>
-                                    <height>340</height>
-                                    <width>280</width>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>320</height>
+                                        <width>230</width>
+                                        <depth/>
+                                    </dimensions>
                                 </extent>
-                                <collation> </collation>
                             </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <dimensions type="margin" unit="mm">
+                                        <dim type="top"/>
+                                        <dim type="bottom"/>
+                                        <dim type="right"/>
+                                        <dim type="left"/>
+                                    </dimensions>
+                                </layout>
 
+                            </layoutDesc>
                         </objectDesc>
-
-                        <additions>
-                            <list>
-                                <item xml:id="a1">
-                                    <desc>The scribe is mentioned in <locus target="#1r"/></desc>
-                                </item>
-                                <item xml:id="a2">
-                                    <desc>
-                                        <locus target="#9r"/> includes mention of date, <persName
-                                            ref="PRS10671Zawditu">Empress Zewditu</persName>,
-                                        <persName ref="PRS5226haylase">Haile Selasse</persName>,
-                                        Patriarch of Alexandria, and Metropolitan of Ethiopia
-                                    </desc>
-                                </item>
-                            </list>
-                        </additions>
-
+                        <additions/>
+                        <bindingDesc>
+                            <binding xml:id="binding" contemporary="true">
+                                <decoNote xml:id="b1"/>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
-
                     <history>
                         <origin>
-                            <origDate notBefore="1917" notAfter="1930" evidence="reign">
-                                <locus target="#9r"/> includes mention of date, <persName
-                                    ref="PRS10671Zawditu">Empress Zewditu</persName>, <persName
-                                        ref="PRS5226haylase">Haile Selasse</persName>, Patriarch of
-                                Alexandria, and Metropolitan of Ethiopia </origDate>
+                            <origDate calendar="ethiopian" when-custom="1956">1956 EC, recorded in
+                                the colophon <ref target="#coloph1"/></origDate>
                         </origin>
                     </history>
                 </msDesc>
@@ -94,11 +95,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="RL" when="2021-06-16">Created entity</change>
-            <change when="2021-07-23" who="RL">Corrected persName to PRS5226haylase</change>
+            <change who="RL" when="2021-07-28">Created entity</change>
         </revisionDesc>
     </teiHeader>
     <text>
