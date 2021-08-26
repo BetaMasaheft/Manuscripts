@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
         type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE8018dasi" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -14,6 +14,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         </respStmt>
             <editor key="AB"/>
             <editor role="generalEditor" key="AB"/>
+            <editor role="encoder" key="AS"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
@@ -34,7 +35,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier/>
+               <msIdentifier>
+                 <settlement ref="LOC6384Yeha">Yeha</settlement>
+                 <repository>private house</repository>
+                 </msIdentifier>
                <physDesc>
                   <objectDesc form="Inscription">
                      <supportDesc>
@@ -52,6 +56,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">124</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -74,18 +79,35 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <profileDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="Paks1"/>
+               <term key="PreAks"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-06-07">Added bibliography and repository.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <div type="bibliography">
+        <listBibl type="secondary">
+         <bibl>
+            <ptr target="bm:RIE1"/>
+            <citedRange unit="page">124</citedRange>
+         </bibl>
+         <bibl>
+           <ptr target="bm:RIE2"/>
+           <citedRange unit="plate">38</citedRange>
+         </bibl>
+        <bibl>
+          <ptr target="bm:RIE3B"/>
+          <citedRange unit="page">79—80</citedRange>
+        </bibl>
+      </listBibl>
+     </div>
       </body>
    </text>
 </TEI>
