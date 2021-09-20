@@ -125,7 +125,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <msItem xml:id="p1_i1.1">
                            <locus from="1r" to="3r" facs="005"/>
                            <title>General index</title>
-                           <title/>
                         </msItem>
                         <msItem xml:id="p1_i1.2">
                            <locus from="4r" to="41r" facs="008"/>
@@ -454,9 +453,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="PL" when="2019-02-27">Completed encoding of main features (contents list, collation, structure of description, physical description) from Marrassini Catalogue</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+      href="facsimile.xml">
+      <xi:fallback>
+         <!-- facsimile -->
+      </xi:fallback>
+   </xi:include>
+   <text>
       <body>
-         <ab/>
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+            href="transkribusText.xml">
+            <xi:fallback>
+               <!-- transkribus text -->
+            </xi:fallback>
+         </xi:include>
       </body>
    </text>
 </TEI>
