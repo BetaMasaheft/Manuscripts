@@ -32,7 +32,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>Psalter of Nebura ‘Ed Gabra Selassie, ዳዊት፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                    <locus from="1r" to="191v" facs="005"/>
+                    <title type="complete" ref="LIT2701Dawit"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                    <note><ref type="work" corresp="LIT2000Mazmur#Ps118Spiritual"/></note>
                   </msItem>
                </msContents>
                <physDesc>
@@ -51,11 +54,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            </dimensions>
                         </extent>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout columns="1" writtenLines="22">
+                         <locus from="1r" to="168v" facs="005"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="22">
+                         <locus from="169r" to="191v" facs="173"></locus>
+                       </layout>
+                    </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic">
+                    <seg type="rubrication">
+                    <foreign xml:lang="gez">ማርያም፡</foreign>
+                    </seg>
+                    <desc>The word God is not rubricated in the first three works; the word Mary is rubricated in the final two works</desc>
+                    </handNote>
+                    <handNote xml:id="h2" script="Ethiopic">
+                      <desc>Columetric layout of text: <locus target="#142r" facs="146"/>(<ref type="work" corresp="LIT2000Mazmur#Ps150"/>); <locus from="153v" to="154r" facs="158"/> tenth biblical canticle <ref type="item" target="#ms_i1.2.10"/>)</desc>
+                    </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="frame" xml:id="d1">Decorative designs: <locus target="#1r #9v #18r #27v #39v #48v #55v #66r #79r #89r #95v #110r #125r #128v #135v #143r #158v #169r" facs="005 014 022 032 044 053 060 070 083 093 100 114 129 133 140 147 163 173"/> (häräg); <locus target="#9r #17v #27r #55r #65v #78v #88v #142v #158r #175r #180r #183r #189v" facs="013 022 031 059 070 083 093 147 162 179 184 187 194"/> (multiple full stops)</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e1">
+                        <locus target="#69v #152v #163v #168v #173v" facs="074 157 168 178"></locus>
+                        <desc>words of text are written interlinearly</desc>
+                      </item>
+                      <item xml:id="e2">
+                        <locus target="#72v #158r #173v #181v" facs="077 162 178 186"></locus>
+                        <desc>lines of text are written interlinearly</desc>
+                      </item>
+                      <item xml:id="e3">
+                        <locus target="#49v #56r #79v #105rv" facs="054 060 084 109 110"></locus>
+                        <desc>text has been removed</desc>
+                      </item>
+                    </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1925">early-twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1950">Early-twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -74,6 +124,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2020-04-17" who="RL">Corrected ǝ characters</change>
+         <change when="2021-09-20" who="JS">Added ms contents, extras, hand notes, columns/lines, binding desc, dating info.</change>
   </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
