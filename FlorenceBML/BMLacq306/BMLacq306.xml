@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BMLsmarco741" type="mss">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BMLacq306" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -24,14 +24,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
+            <sourceDesc><p>Aligned in Transkribus by Giada Liuzzo.</p></sourceDesc>
             <sourceDesc>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0339BML"/>
-                        <collection>S. Marco</collection>
-                        <idno facs="Laurenziana/BML_008/BML_008-" n="89">BML S. Marco 741</idno>
+                        <collection>Acquisizioni e doni</collection>
+                        <idno facs="Laurenziana/BML_009/BML_009-" n="139">BML Acq. e doni 306</idno>
                         <altIdentifier>
-                            <idno>Marrassini ms. 8</idno>
+                            <idno>Marrassini ms. 9</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <history>
@@ -43,7 +44,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <listBibl type="catalogue">
                                         <bibl>
                                             <ptr target="bm:Marrassini1986Laurenziana"/>
-                                            <citedRange unit="page">103-104</citedRange>
+                                            <citedRange unit="page">104-110</citedRange>
                                         </bibl>
                                     </listBibl>
                                 </source>
@@ -70,9 +71,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="PL" when="2019-02-21">Created catalogue entry</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:base="https://betamasaheft.eu/">
+    <change when="2021-09-21" who="PL">added text from transkribus and facsimile with xi:include</change>
+    </revisionDesc>
+    </teiHeader>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="facsimile.xml">
+        <xi:fallback>
+            <!-- facsimile -->
+        </xi:fallback>
+    </xi:include>
+    <text>
         <body>
-            <ab/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                href="transkribusText.xml">
+                <xi:fallback>
+                    <!-- transkribus text -->
+                </xi:fallback>
+            </xi:include>
         </body>
     </text>
 </TEI>

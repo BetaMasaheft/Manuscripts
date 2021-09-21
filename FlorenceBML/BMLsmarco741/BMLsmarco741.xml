@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BMLacq812" type="mss">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BMLsmarco741" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
                 <title/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
-                
             </titleStmt>
             <editionStmt>
-                <p>The images of the manuscript taken by Alessandro Bausi, Antonella Brita, Karsten Helmholz and Susanne Hummel during a mission funded by the Sonderforschungsbereich 950
+                <p>The images of the manuscript taken by Antonella Brita, Karsten Helmholz and Susanne Hummel during a mission funded by the Sonderforschungsbereich 950
                     Manuskriptkulturen in Asien, Afrika und Europa, the ERC Advanced Grant TraCES, From Translation to Creation: Changes in Ethiopic Style and Lexicon from Late Antiquity to the Middle Ages (Grant Agreement no. 338756) and Beta maṣāḥǝft.</p>
-                    <p>The images are published in conjunction with this descriptive data about the manuscript
+                <p>The images are published in conjunction with this descriptive data about the manuscript
                     with the permission of the <ref target="https://www.bmlonline.it/la-biblioteca/cataloghi/">Biblioteca Medicea Laurenziana</ref>, prot. 190/28.13.10.01/2.23 of the 24 January 2019 and are available for research purposes.</p>
             </editionStmt>
             <publicationStmt>
@@ -25,14 +24,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
             </publicationStmt>
+            <sourceDesc><p>Aligned in Transkribus by Jana Andresen.</p></sourceDesc>
             <sourceDesc>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0339BML"/>
-                        <collection>Acquisizioni e doni</collection>
-                        <idno facs="Laurenziana/BML_007/BML_007-" n="225">BML Acq. e doni 812</idno>
+                        <collection>S. Marco</collection>
+                        <idno facs="Laurenziana/BML_008/BML_008-" n="89">BML S. Marco 741</idno>
                         <altIdentifier>
-                            <idno>Marrassini ms. 7</idno>
+                            <idno>Marrassini ms. 8</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <history>
@@ -44,7 +44,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <listBibl type="catalogue">
                                         <bibl>
                                             <ptr target="bm:Marrassini1986Laurenziana"/>
-                                            <citedRange unit="page">102-103</citedRange>
+                                            <citedRange unit="page">103-104</citedRange>
                                         </bibl>
                                     </listBibl>
                                 </source>
@@ -69,11 +69,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </profileDesc>
         <revisionDesc>
             <change who="PL" when="2019-02-21">Created catalogue entry</change>
+            <change when="2021-09-21" who="PL">added text from transkribus and facsimile with xi:include</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:base="https://betamasaheft.eu/">
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+        href="facsimile.xml">
+        <xi:fallback>
+            <!-- facsimile -->
+        </xi:fallback>
+    </xi:include>
+    <text>
         <body>
-        <ab/>            
-          </body>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                href="transkribusText.xml">
+                <xi:fallback>
+                    <!-- transkribus text -->
+                </xi:fallback>
+            </xi:include>
+        </body>
     </text>
 </TEI>
