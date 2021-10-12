@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Malkǝʾ to St George, Malkǝʾ to  St George, Hymn to St Mary</title>
+                <title>Malkǝʾ-hymns to St George and St Mary</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
@@ -39,6 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <msContents>
                         <summary/>
+                        
+                        <!--all texts to be corrected-->
                         
                         <msItem xml:id="ms_i1">
                       <locus from="1r" to="22r"/>
@@ -69,7 +71,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <msItem xml:id="ms_i2">
                             <locus from="22v" to="24r"/>
                             <title ref="LIT2799RepCh83" type="complete"/>
-                            <!--complete?-->
                             <incipit xml:lang="gez">
                                 <pb n="22v"/><hi rend="rubric">ሰ፡ ጊዮርጊስ</hi> ዘልዳ፡ መሥተጽእነ፡ ፈረስ፡ ፀዐዳ<hi rend="rubric" rendition="#partialRubric">፤</hi> ሰማዕተ፡
                                 <hi rend="rubric">ማርያም፡</hi> ድንግል፡ ለፍቁር፡ ወልዳ<hi rend="rubric" rendition="#partialRubric">፨</hi> ለጥበብ፡ ሕንፃ፡ ማኅፈድ<hi rend="rubric" rendition="#partialRubric">፨</hi>
@@ -103,7 +104,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <msItem xml:id="ms_i4">
                             <locus from="44v" to="46v"/>
                             <title ref="LIT2812RepCh96" type="complete"/>
-                            <!--complete?-->
                             <incipit xml:lang="gez">
                                 <hi rend="rubric">ሰላም፡ ለኪ፡ ኪዳነ፡ ምሕ</hi> ተስፋየ፡ ዘታጸድቂ፡ ኃጥአ<hi rend="rubric" rendition="#partialRubric">፨</hi> 
                                 ወዘተኃሰሲ፡ <hi rend="rubric" rendition="#partialRubric">፩</hi> <pb n="45r"/> በግዓ<hi rend="rubric" rendition="#partialRubric">፤</hi> 
@@ -181,6 +181,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                         </list>
                                 </collation>
+                                <condition key="good">The manuscript is in good condition, slight traces of use. The sewing has become undone in a few places, the back board is not fully attached anymore.</condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -197,6 +198,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">9</dim>
                                         <dim type="left">5</dim>
                                     </dimensions>
+                                    <note>The characters per line are 12-14.</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern"> Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
                             </layoutDesc>
                            
@@ -204,23 +209,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
+                                <date notBefore="1650" notAfter="1849"/>
+                                <desc>Mediocre hand. Change of nib on <locus target="#24v"/>.</desc>
                            <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Beginnings of texts; holy names; the abbreviations <foreign xml:lang="gez">ሰ</foreign>/<foreign xml:lang="gez">ሰላ</foreign>
+                                    and <foreign xml:lang="gez">ጊ</foreign>/<foreign xml:lang="gez">ጊዮ</foreign>; numerals
+                                    and elements of 
+                                numerals; elements of punctuation signs.</seg>
+                                <list type="abbreviations">
+                                    <item>
+                                        <abbr>ሰ፡</abbr> or <abbr>ሰላ</abbr> for <expan>ሰላም፡</expan> (e.g. <locus target="#14 #26r #45r"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ጊ</abbr> or  <abbr>ጊዮ፡</abbr>  for <expan>ጊዮርጊስ፡</expan> (e.g. <locus target="#5v #14r #18r"/>)
+                                    </item>
+                                </list>
                             </handNote>
                         </handDesc>
                         
                         <additions>
                             <list>
                                 <item xml:id="e1">
-                                    <desc> A white sticker with the name of <persName
+                                    <desc>A white sticker with the name of <persName
                                         ref="PRS5782JuelJen"/> printed (<foreign xml:lang="gez"
                                             >ቤንት፡ ዩውል፡ የንሰን።</foreign>), and the signature Ms.
                                         Aeth. g. 35 written in pencil is glued onto
-                                        the inner side of the front board.</desc>
+                                        the inner side of the front board. On <locus target="#ir"/>, ‘Wedassie Giyorgis’,
+                                        ‘Wedassie Maryam (short)’, and ‘MS Aeth JJ 28’ are written in pencil.</desc>
+                                    <!--end of pencil note illegible-->
                                 </item>
                                 
                                 <item xml:id="e2">
                                     <locus target="#24r"/>
                                     <desc>A name has been erased in the supplication at the end of <ref target="#ms_i2"/>.</desc>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <desc>Spaces left for rubrication have been left unfilled on three opening,
+                                        ( <locus from="6v" to="8r"/>, <locus from="15v" to="16r"/>,
+                                        and <locus from="21v" to="22r"/>). Very rarely, several words have been erased  (<locus target="#13v #20r"/>).</desc>
                                 </item>
                             </list>
                         </additions>
@@ -236,12 +263,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                     </physDesc>
                     
-                <!--    <history>
+                    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1650" notAfter="1849" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                    </history>
                     
                     <additional>
                         <adminInfo>
@@ -279,6 +305,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Poetry"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -289,7 +316,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-17">Created record</change>
             <change who="DR" when="2020-02-24">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+        <change who="SH" when="2020-04-22">Added editors</change>
+        <change who="DR" when="2021-10-12">Continued description</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
