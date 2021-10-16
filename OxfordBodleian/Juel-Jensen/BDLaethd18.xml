@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethd18"
@@ -15,7 +15,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title xml:lang="en" corresp="#title1">Book of Enoch</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,29 +36,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <idno>Bodleian Aeth. d. 18</idno>
                         <altIdentifier>
                             <idno>Juel-Jensen 16</idno>
-                        </altIdentifier>                      
+                        </altIdentifier>
                     </msIdentifier>
-                    
+
                     <physDesc>
                         <bindingDesc>
                             <binding contemporary="true">
-                                <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards covered with orange tooled <material key="leather"/> and
-                                    textile inlays.
+                                <decoNote xml:id="b1" type="bindingMaterial">
+                                    The book is bound in <material key="wood">wooden</material> boards covered with orange blind-tooled <material
+                                    key="leather">leather</material>. The front and back board are decorated with <material key="textile"/> inlays.
                                 </decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                                    <material key="wood"/>       
-                                    <material key="leather"/>     
-                                    <material key="textile"/>    
+                                <decoNote xml:id="b2" type="Boards">
+                                    The boards are cut to the same size as the bookblock and present square edges.
                                 </decoNote>
                                 <decoNote xml:id="b3" type="Cover" color="orange">
-                                    The front and back covers are decorated with blind tooled ornaments. The covers are decorated with circular and linear elements that form cross- or 
-                                    square-shaped patterns and feature a central cross within two rectangular frames respectively decorated with interlace and a criss-cross motifs.</decoNote>
-                                <decoNote xml:id="b4" type="SewingStations">4</decoNote>
-                                <decoNote xml:id="b5" type="Spine">The stitches of four endband chains are sewn into the leather of the spine, two being close to the head and two to the tail.</decoNote>
+                                    Full orange leather cover.
+                                    The turn-ins have been trimmed out and at the corners they form butt mitres. An <term key="additionalLeatherPatch"/>
+                                    has been added along the inner margin of the boards to fill the gap between the turn-ins.
+                                    The upper, the lower covers and the turn-ins are decorated with blind-tooled ornaments.
+                                    The cover sides present a slightly different design consisting of three concentric rectangular frames
+                                    surrounding a central panel featuring a Latin cross. The frames are composed by the repetition of single tools
+                                    enclosed between <term key="singleStraightLine">single straight lines</term> arranged in groups of three. The frame next to the
+                                    decorated ones is left blank.
+                                    The outer frame presents <term key="crissCross"/>motifs and the inner one <term key="curveStrapwork"/>elements.
+                                    The cross is formed by bands of <term key="XForm"/>motifs between single straight lines.
+                                    <term key="corniForm">Corni-form</term> motifs and three <term key="doubleCircle">double circles</term> decorate the
+                                    ends of the arms of the cross.
+                                    In the blank areas, the straight lines form cross- and square-shaped patterns decorated with <term key="doubleCircle">double circles</term>
+                                    at the intersections.
+                                    The two square patterns flanking the foot of the cross are surmounted by a triangular shape each.
+                                </decoNote>
+                                <decoNote xml:id="b4" type="Endbands" color="orange">
+                                  <term key="slitBraid">Slit-braid</term> endbands are present.
+                                </decoNote>
+                                <decoNote xml:id="b5" type="SewingStations">4</decoNote>
+                                <decoNote xml:id="b6">
+                                    Chainstitch sewing on four sewing stations (two pairs).
+                                    Two tightly Z-plied threads have been used. Their ends are knotted in the centrefold of the last quire.
+                                </decoNote>
+                                <decoNote xml:id="b7" type="Spine">
+                                    Two lines of running stitches close to head and tail, are visible on the back cover, they are part of the attachment system
+                                    of the endbands.
+                                    The spine covering extends slightly beyond the endbands forming two caps.
+                                </decoNote>
                             </binding>
                         </bindingDesc>
                     </physDesc>
-                    
+
                     <msPart xml:id="p1">
                         <msIdentifier>
                             <idno/>
@@ -71,8 +98,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#3ra"/>
                                     <hi rend="rubric">ክፍል፡ ፩ ቃለ፡ በረከት፡ ዘሄኖክ፡ ዘከመ፡ ባረከ፡ <choice>
                                         <sic>ኀሩያነ፡</sic>
-                                    </choice> ወጻድቃነ፡</hi> እለ፡ ሀለዉ፡ ይኩኑ፡ በዕለተ፡ ምንዳቤ፡ ለአሰስሎ፡ ኵሉ፡ እኩያን፡ ወረሲዓን፡ ወአውሥአ፡ 
-                                    እንከ፡ ሄ<hi rend="rubric">ኖክ፡ ወይቤ፡ ብእሲ፡ ጻድቅ፡ ዘእምኃበ፡ እግዚአብሔር፡ እንዘ፡ አ</hi>ዕይንቲሁ፡ ክሡታት፡ ወይሬኢ፡ ራእየ፡ ቅዱሰ፡ ዘበሰማያት፡ ዘአርአዩኒ፡ መላእክት፡ 
+                                    </choice> ወጻድቃነ፡</hi> እለ፡ ሀለዉ፡ ይኩኑ፡ በዕለተ፡ ምንዳቤ፡ ለአሰስሎ፡ ኵሉ፡ እኩያን፡ ወረሲዓን፡ ወአውሥአ፡
+                                    እንከ፡ ሄ<hi rend="rubric">ኖክ፡ ወይቤ፡ ብእሲ፡ ጻድቅ፡ ዘእምኃበ፡ እግዚአብሔር፡ እንዘ፡ አ</hi>ዕይንቲሁ፡ ክሡታት፡ ወይሬኢ፡ ራእየ፡ ቅዱሰ፡ ዘበሰማያት፡ ዘአርአዩኒ፡ መላእክት፡
                                     ወሰማዕኩ፡ እምኃቤሆሙ፡ ኵሎ፡ ወ<hi rend="rubric">አእመርኩ፡ አነ፡ ዘእሬኢ፡ ወአኮ፡ ለዝ፡ ትውልድ፡ ርኁቃን፡ አላ፡ ለ</hi>ዘይመጽእ፡ ትውልድ፡ ርኁቃን፡ በእንተ፡ <choice>
                                         <sic>ኀሩያን።</sic>
                                     </choice>
@@ -81,37 +108,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#12vb"/>
                                     ወሶበ፡ ርኢኩ፡ ባረኩ፡ ወበኲሉ፡ ጊዜ፡ እባርክ፡ ለእግዚአ፡ <choice>
                                         <sic>ሰብሐት፡</sic>
-                                    </choice> ዘገብረ፡ ተአምራተ፡ ዓቢያነ፡ ወስቡሐነ፡ ከመ፡ ያርኢ፡ ዕበየ፡ ግብሩ፡ ለመላእክቲሁ፡ ወለነፍሳተ፡ ሰብእ፡ ከመ፡ ይሰብሑ፡ ግብሮ። ወኲሉ፡ ተግባሩ፡ ከመ፡ ይርአዩ፡ ግብረ፡ 
+                                    </choice> ዘገብረ፡ ተአምራተ፡ ዓቢያነ፡ ወስቡሐነ፡ ከመ፡ ያርኢ፡ ዕበየ፡ ግብሩ፡ ለመላእክቲሁ፡ ወለነፍሳተ፡ ሰብእ፡ ከመ፡ ይሰብሑ፡ ግብሮ። ወኲሉ፡ ተግባሩ፡ ከመ፡ ይርአዩ፡ ግብረ፡
                                     ኃይሉ፡ ወይሰብሕዎ፡ ለግብረ፡ እደዊሁ፡ ዓቢይ፡ ወይባርክዎ፡ እስከ፡ ለዓለም።
-                                </explicit>                         
+                                </explicit>
                             </msItem>
                                 <msItem xml:id="p1_i1.2">
                                 <locus from="12vb" to="27va"/>
                                 <title type="complete" ref="LIT1340EnochE#Parables"/>
                                 <incipit xml:lang="gez">
                                     <locus target="#12vb"/>
-                                    <hi rend="rubric">ክፍል፡</hi> ፴፬ ራእይ፡ ዘርእየ፡ ካልዕ፡ ራእየ፡ ጥበብ፡ ዘርእየ፡ ሄኖክ፡ ወልደ፡ ያሬድ፡ ወልደ፡ መላልኤል፡ ወልደ፡ ቃይናን፡ ወልደ፡ ሄኖስ፡ ወልደ፡ ሴት፡ ወልደ፡ 
-                                   አዳም። ወዝርእሱ፡ ለነገረ፡ ጥበብ፡ ዘአንሣእኩ፡ እትናገር፡ ወእብል፡ ለእለ፡ የሐድሩ፡ ዲበ፡ የብስ፡ ስምዑ፡ ቀደምት፡ ወርእዩ፡ ደኃርያን፡ ነገረ፡ ቅዱስ፡ 
+                                    <hi rend="rubric">ክፍል፡</hi> ፴፬ ራእይ፡ ዘርእየ፡ ካልዕ፡ ራእየ፡ ጥበብ፡ ዘርእየ፡ ሄኖክ፡ ወልደ፡ ያሬድ፡ ወልደ፡ መላልኤል፡ ወልደ፡ ቃይናን፡ ወልደ፡ ሄኖስ፡ ወልደ፡ ሴት፡ ወልደ፡
+                                   አዳም። ወዝርእሱ፡ ለነገረ፡ ጥበብ፡ ዘአንሣእኩ፡ እትናገር፡ ወእብል፡ ለእለ፡ የሐድሩ፡ ዲበ፡ የብስ፡ ስምዑ፡ ቀደምት፡ ወርእዩ፡ ደኃርያን፡ ነገረ፡ ቅዱስ፡
                                    ዘእነግር፡ ቅድመ፡ እግዚአ፡ መናፍስት፡ እሉ፡ ቀዳሚ፡ ይኄይስ፡ ብሂል፡ ወደኃውያንሂ፡ ኢንከልእ፡ ርእሳ፡ ለጥበብ፡
                                 </incipit>
                                 <explicit xml:lang="gez">
                                     <locus from="27rb" to="27va"/>
-                                    ወምስሌከ፡ ይከውን፡ ማኅደሪሆሙ፡ ወምስሌከ፡ ክፍሎሙ፡ ወእምኔከ፡ ኢይትሌለዩ፡ ለዓለም፡ ወለዓለመ፡ ዓለም፤ ወከመዝ፡ ይከውን፡ ኑኃ፡ መዋዕል፡ ምስለ፡ ውእቱ፡ ወልደ፡ እጓለ፡ 
+                                    ወምስሌከ፡ ይከውን፡ ማኅደሪሆሙ፡ ወምስሌከ፡ ክፍሎሙ፡ ወእምኔከ፡ ኢይትሌለዩ፡ ለዓለም፡ ወለዓለመ፡ ዓለም፤ ወከመዝ፡ ይከውን፡ ኑኃ፡ መዋዕል፡ ምስለ፡ ውእቱ፡ ወልደ፡ እጓለ፡
                                     እመሕያው። ወሰላም፡ ይከውን፡ <add place="interlinear">ለ</add>ጻድቃን፡ ወፍኖቱ፡ ርቱዕ፡ ለጻድቃን፡ <pb n="27v"/><cb n="a"/> በስመ፡ እግዚአ፡ መናፍስት፡ ለዓለመ፡ ዓለም። ። ።
                                 </explicit>
                                 </msItem>
                                 <msItem xml:id="p1_i1.3">
                                     <locus from="27va" to="35vb"/>
                                     <title type="complete" ref="LIT1340EnochE#Luminaries"/>
-                                    <incipit xml:lang="gez">   
+                                    <incipit xml:lang="gez">
                                         <locus target="#27va"/>
-                                        <hi rend="rubric">ክፍል፡ ፷ወ፱መጽሐፈ፡ ሕይወተ፡ ብርሃናተ፡ ሰማይ፡ ፩፩ ዘከመ፡</hi> ሀለዉ፡ በበሕዘቢሆሙ፡ ፩፩ በበሥልጣኖሙ፡ ወበበዘመኖሙ፡ ፩፩ 
-                                        በበስሞሙ፡ ወሙላዳቲሆሙ፡ ወበበአውራሂሆሙ፡ ዘአርአየኒ፡ <hi rend="rubric">ኡርኤል፡</hi> መልአክ፡ ቅዱስ፡ ዘሀሎ፡ ምስሌየ፡ ዘውእቱ፡ 
-                                        መራሂሆሙ፡ ወኲሎ፡ መጽሐፎሙ፡ በከመ፡ ውእቱ፡ አርአየኒ።                                     
+                                        <hi rend="rubric">ክፍል፡ ፷ወ፱መጽሐፈ፡ ሕይወተ፡ ብርሃናተ፡ ሰማይ፡ ፩፩ ዘከመ፡</hi> ሀለዉ፡ በበሕዘቢሆሙ፡ ፩፩ በበሥልጣኖሙ፡ ወበበዘመኖሙ፡ ፩፩
+                                        በበስሞሙ፡ ወሙላዳቲሆሙ፡ ወበበአውራሂሆሙ፡ ዘአርአየኒ፡ <hi rend="rubric">ኡርኤል፡</hi> መልአክ፡ ቅዱስ፡ ዘሀሎ፡ ምስሌየ፡ ዘውእቱ፡
+                                        መራሂሆሙ፡ ወኲሎ፡ መጽሐፎሙ፡ በከመ፡ ውእቱ፡ አርአየኒ።
                                     </incipit>
                                     <explicit xml:lang="gez">
                                         <locus target="#35vb"/>
-                                        ወእሉ፡ እሙንቱ፡ ስሞሙ፡ ወሥርዓቲሆሙ፡ ወመራኅያኒሆሙ፡ እለ፡ መትሕቲሆሙ፡ ለእሉ፡ ጊዳኤያል፡ ወሲኤል፡ ወሂኤል፡ ወስሙ፡ ለዘይትዌሰክ፡ 
+                                        ወእሉ፡ እሙንቱ፡ ስሞሙ፡ ወሥርዓቲሆሙ፡ ወመራኅያኒሆሙ፡ እለ፡ መትሕቲሆሙ፡ ለእሉ፡ ጊዳኤያል፡ ወሲኤል፡ ወሂኤል፡ ወስሙ፡ ለዘይትዌሰክ፡
                                         ምስሌሆሙ፡ ርእሰ፡ ፲፻ አስፋኤል፤ ወተፈጸመ፡ መዋዕለ፡ ሥልጣነ፡ ዚአሆሙ ።
                                     </explicit>
                                 </msItem>
@@ -120,15 +147,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <title type="complete" ref="LIT1340EnochE#DreamVisions"/>
                                 <incipit xml:lang="gez">
                                     <locus from="35vb" to="36ra"/>
-                                    <hi rend="rubric">ክፍል፡</hi> ፹ወይእዜኒ፡ አርእየ፡ ወልድየ፡ ማቱሳላ፡ ኵሎ፡ ራእያተ፡ ዘርኢኩ፡ ወበቅድሜከ፡ እነግር፡ ፪ ራእያተ፡ ርኢኩ፡ እንበለ፡ እንሣእ፡ ብእሲተ፡ ወ፩ሂ፡ እምኔሆሙ፡ ኢይትማሰል፡ 
-                                    ምስለ፡ ካልኡ፡ ቀዳማየ፡ አመ፡ እትመሐር፡ <pb n="36r"/><cb n="a"/> መጽሐፈ፡ ወካልአ፡ ዘእንበለ፡ እነሥኣ፡ ለእምከ፡ እድና። ርኢኩ፡ ራእየ፡ ጽኑዐ፡ ወበእንቲአሆሙ፡ አስተብቋዕክዎ፡ ለእግዚእ፡ ስኩበ፡ 
+                                    <hi rend="rubric">ክፍል፡</hi> ፹ወይእዜኒ፡ አርእየ፡ ወልድየ፡ ማቱሳላ፡ ኵሎ፡ ራእያተ፡ ዘርኢኩ፡ ወበቅድሜከ፡ እነግር፡ ፪ ራእያተ፡ ርኢኩ፡ እንበለ፡ እንሣእ፡ ብእሲተ፡ ወ፩ሂ፡ እምኔሆሙ፡ ኢይትማሰል፡
+                                    ምስለ፡ ካልኡ፡ ቀዳማየ፡ አመ፡ እትመሐር፡ <pb n="36r"/><cb n="a"/> መጽሐፈ፡ ወካልአ፡ ዘእንበለ፡ እነሥኣ፡ ለእምከ፡ እድና። ርኢኩ፡ ራእየ፡ ጽኑዐ፡ ወበእንቲአሆሙ፡ አስተብቋዕክዎ፡ ለእግዚእ፡ ስኩበ፡
                                     ኮንኩ፡ በቤተ፡ መላልኤል፡ እምሔውየ፡ ርኢኩ፡ በራእይ።
                                 </incipit>
                                 <explicit xml:lang="gez">
                                     <locus target="#45rb"/>
                                     ወእምኔሁ፡ በከይኩ፡ ብካየ፡  ዓቢየ፡ ወአንብዕየ፡ ኢቆመ፡ እስከ፡ ኢክህልኩ፡ <choice>
-                                        <sic>ተአግሦተ፡</sic></choice> 
-                                    ሶበ፡ እሬኢ፡ ይወርዱ፡ ዲበ፡ ዝኩ፡ ዘርኢኩ፡ እስመ፡ ኲሉ፡ ይመጽእ፡ ወይትፌጸም። ወኲሉ፡ በበክፍሉ፡ ምግባረ፡ ሰብእ፡ ተርእየ፡ ሊተ፤ ወበይእቲ፡ 
+                                        <sic>ተአግሦተ፡</sic></choice>
+                                    ሶበ፡ እሬኢ፡ ይወርዱ፡ ዲበ፡ ዝኩ፡ ዘርኢኩ፡ እስመ፡ ኲሉ፡ ይመጽእ፡ ወይትፌጸም። ወኲሉ፡ በበክፍሉ፡ ምግባረ፡ ሰብእ፡ ተርእየ፡ ሊተ፤ ወበይእቲ፡
                                     ሌሊት፡ ተዘከርክዎ፡ ለሕልምየ፡ ቀዳማዊ። ወበእንቲአሁ፡ በከይኩ፡ ወተሀወኩ፡ እስመ፡ ርኢኩ፡ ውእተ፡ ራእየ።
                                 </explicit>
                             </msItem>
@@ -137,19 +164,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <title type="complete" ref="LIT1340EnochE#Epistle"/>
                                 <incipit xml:lang="gez">
                                     <locus from="45rb" to="45va"/>
-                                    <hi rend="rubric">ክፍል፡</hi> ፺ ወይእዜኒ፡ ወልድየ፡ ማቱሳላ፡ ጸውእ፡ ሊተ፡ ኲሎ፡ አኃዊከ፡ ወአ<pb n="45v"/><cb n="a"/>ስተጋብእ፡ ዘንተ፡ ኲሎ፡ 
-                                    ደቂቀ፡ እምከ፡ እስመ፡ ቃል፡ ይጼውአኒ፡ ወመንፈሰ፡ 
-                                    ተክዕወ፡ ዲቤየ፡ ከመ፡ አርኢክሙ፡ ኲሎ፡ ወይበጽሐክሙ፡ እስከ፡ ለዓለም። ወእምኔሁ፡ ሖረ፡ ማቱሳላ፡ ወጸውዖሙ፡ ለኲሎሙ፡ አኃዊሁ፡ ኀቤሁ፡ 
+                                    <hi rend="rubric">ክፍል፡</hi> ፺ ወይእዜኒ፡ ወልድየ፡ ማቱሳላ፡ ጸውእ፡ ሊተ፡ ኲሎ፡ አኃዊከ፡ ወአ<pb n="45v"/><cb n="a"/>ስተጋብእ፡ ዘንተ፡ ኲሎ፡
+                                    ደቂቀ፡ እምከ፡ እስመ፡ ቃል፡ ይጼውአኒ፡ ወመንፈሰ፡
+                                    ተክዕወ፡ ዲቤየ፡ ከመ፡ አርኢክሙ፡ ኲሎ፡ ወይበጽሐክሙ፡ እስከ፡ ለዓለም። ወእምኔሁ፡ ሖረ፡ ማቱሳላ፡ ወጸውዖሙ፡ ለኲሎሙ፡ አኃዊሁ፡ ኀቤሁ፡
                                     ወአስተጋብኦሙ፡ ለአዝማደ፡ ዚአሁ። ወተና<supplied reason="omitted">ገ</supplied>ሮሙ፡ ለኲሎሙ፡ ውሉዱ፡ ጽድቀ።
                                 </incipit>
                                 <explicit xml:lang="gez">
                                     <locus target="#56rb"/>
-                                    ወይትወሀውሁ፡ በአዝማን፡ ዘአልቦ፡ ኊልቊ። እስመ፡ ጽድቅ፡ ኲነኔሁ፡ ለአምላክ። እስመ፡ ለመሃይምናን፡ ይሁብ፡ ሃይማኖተ። በማኅደረ፡ ፍናዋት፡ ርቱዓት፡ ወይሬእይዎሙ። 
-                                    ለእለ፡ ተወልዱ፡ በጽልመት፡ ይትወደዩ፡ በጽልመት፡ እንዘ፡ ይትወሐውሁ፡ ጻድቃን፡ ወይጸርሑ፡ ወይሬእይዎሙ፡ ኃጥአን፡ እንዘ፡ ይበርሁ፡ ወየሐውሩ፡ እሙንቱሂ፡ በኀበ፡ 
+                                    ወይትወሀውሁ፡ በአዝማን፡ ዘአልቦ፡ ኊልቊ። እስመ፡ ጽድቅ፡ ኲነኔሁ፡ ለአምላክ። እስመ፡ ለመሃይምናን፡ ይሁብ፡ ሃይማኖተ። በማኅደረ፡ ፍናዋት፡ ርቱዓት፡ ወይሬእይዎሙ።
+                                    ለእለ፡ ተወልዱ፡ በጽልመት፡ ይትወደዩ፡ በጽልመት፡ እንዘ፡ ይትወሐውሁ፡ ጻድቃን፡ ወይጸርሑ፡ ወይሬእይዎሙ፡ ኃጥአን፡ እንዘ፡ ይበርሁ፡ ወየሐውሩ፡ እሙንቱሂ፡ በኀበ፡
                                     ተጽሕፈ፡ ሎሙ፡ መዋዕል፡ ወአዝማን። ተፈጸመ፡ መጽሐፈ፡ ሄኖክ፡
                                 </explicit>
-                            </msItem>                       
-                        </msItem>    
+                            </msItem>
+                        </msItem>
                             <msItem xml:id="p1_i2">
                             <locus from="56va" to="58rb"/>
                             <title ref="NAR0101Moon">Calculations and tables concerning the lunar phases</title>
@@ -157,28 +184,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <locus target="#57va"/>
                                 <hi rend="rubric">ሠረቀ፡ ሚያዝያ፡</hi> በኆህት፡ ራብዕ፡ ፪። በኃምስ፡ ኅህት፡ ፰። በሳድስ፡ ኆኅት፡ ፰። በኃምስ፡ ኆኅት፡ ፩። በራብዕ፡ ኆኅት፡ ፩፡ በሣልስ፡ ኆኅት፡ ፪።
                             </incipit>
-                                <note>Astronomical tables have been drawn in black and red ink on <locus target="#56v #57r"/>: each folio accommodates three columns in red ink filled 
+                                <note>Astronomical tables have been drawn in black and red ink on <locus target="#56v #57r"/>: each folio accommodates three columns in red ink filled
                                     with astronomical terms and digits which indicate the <foreign xml:lang="gez">kekros</foreign>.
                                     Areas between columns host drawing of the lunar phases. Text on <locus target="#56v"/> is written upside down.
                                     A table showing the lunar phases, perhaps incomplete, is also drawn on <locus target="#56rb"/>.
-                                </note>                                    
-                      
+                                </note>
+
                         <colophon xml:lang="gez" xml:id="coloph1">
                             <locus target="#58va"/>
                             <date when="1975" evidence="internal"/>
-                            ዝንቱ፡ መጽሐፍ፡ ዘአጽሐፎ፡ ዶክተር፡ <hi rend="rubric"><persName ref="PRS5782JuelJen">ቤንት፡ ኢ፡ የውል፡ የንሰን፡</persName></hi> 
-                            ወምስለ፡ ብእሲቱ፡ ወይዘሮ፡ <hi rend="rubric"><persName ref="PRS12946MaryamMary">ማርያም፡ ሜሪ፡</persName></hi> 
-                            ዝመጽሐፍ፡ ተፈጸመ፡ በወርኃ፡ ታህሣሥ፡ በ፳ወ፭ መዓልት፡ <date calendar="grace">በ፲ወ፱፻፷ወ፯ ዓመተ፡ ምሕረት፡</date> ወጸሐፊሁ፡ ዲያቆን፡ 
-                            <hi rend="rubric"><persName ref="PRS21944AmhaSe">አምኃ፡ ሥላሴ፡</persName></hi> ገ፡ ክርስቶስ፡ ዘብሔረ፡ <placeName ref="LOC4505Manawe">ተምቤን፡ መነዌ፡ ገዳም።</placeName> 
+                            ዝንቱ፡ መጽሐፍ፡ ዘአጽሐፎ፡ ዶክተር፡ <hi rend="rubric"><persName ref="PRS5782JuelJen">ቤንት፡ ኢ፡ የውል፡ የንሰን፡</persName></hi>
+                            ወምስለ፡ ብእሲቱ፡ ወይዘሮ፡ <hi rend="rubric"><persName ref="PRS12946MaryamMary">ማርያም፡ ሜሪ፡</persName></hi>
+                            ዝመጽሐፍ፡ ተፈጸመ፡ በወርኃ፡ ታህሣሥ፡ በ፳ወ፭ መዓልት፡ <date calendar="grace">በ፲ወ፱፻፷ወ፯ ዓመተ፡ ምሕረት፡</date> ወጸሐፊሁ፡ ዲያቆን፡
+                            <hi rend="rubric"><persName ref="PRS21944AmhaSe">አምኃ፡ ሥላሴ፡</persName></hi> ገ፡ ክርስቶስ፡ ዘብሔረ፡ <placeName ref="LOC4505Manawe">ተምቤን፡ መነዌ፡ ገዳም።</placeName>
                             <note>The colophon states that the manuscript was commissioned by <persName ref="PRS5782JuelJen" role="patron"/> and his wife <persName ref="PRS12946MaryamMary" role="patron"/>.
                                 It was completed on the <date calendar="grace">25th Tāḫśāś of the year of mercy 1967 EC</date>, corresponding to the 18th January 1975.
-                                The scribe was the deacon <persName ref="PRS12944AmhaSe" role="scribe">ʾAmmǝḫā Śǝllāse</persName> from the monastery of <placeName ref="LOC4505Manawe">Manāwe</placeName> 
+                                The scribe was the deacon <persName ref="PRS12944AmhaSe" role="scribe">ʾAmmǝḫā Śǝllāse</persName> from the monastery of <placeName ref="LOC4505Manawe">Manāwe</placeName>
                                 in <placeName ref="LOC5882Tamben">Tamben</placeName>.
                             </note>
                         </colophon>
                         </msItem>
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
@@ -210,7 +237,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </signatures>
                                     <list>
                                         <item xml:id="q1">
-                                            <dim unit="leaf">2</dim>                                            
+                                            <dim unit="leaf">2</dim>
                                             <locus from="1r" to="2v"/>
                                         </item>
                                         <item xml:id="q2" n="1">
@@ -254,9 +281,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
-                                <condition key="good"/>   
+                                <condition key="good"/>
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="2" writtenLines="26">
                                     <locus from="3ra" to="58va"/>
@@ -279,7 +306,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
                                 <seg type="ink">Black, red</seg>
@@ -288,7 +315,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     Fine handwriting.
                                 </desc>
                                 <seg type="rubrication">
-                                    Holy names; several groups of lines on the incipit page, alternating with black lines; 
+                                    Holy names; several groups of lines on the incipit page, alternating with black lines;
                                     the word <foreign xml:lang="gez">ክፍል፡</foreign>;
                                     first two lines of <ref target="ms_i1.3"/>; incipit of each monthly section of <ref target="ms_i2"/>;
                                     elements of the punctuation signs, text dividers, and numerals, included quire marks;
@@ -296,26 +323,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </seg>
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
                         </decoDesc>-->
-                        
+
                         <additions>
                             <list>
                                 <item xml:id="e1">
                                     <desc>A white sticker is glued on <locus target="#1r"/>. The name of <persName ref="PRS5782JuelJen"/> is printed on it
-                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. d. 18" is written in pencil. 
+                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. d. 18" is written in pencil.
                                         An additional sticker, with the signature "Ms 16" on it, is glued below it.</desc>
                                 </item>
                                 <item xml:id="e2">
                                     <locus target="#1r"/>
                                     <desc>The title of the book in Gǝʿǝz and in English is written in pencil in small script.
                                     </desc>
-                                    <q xml:lang="gez">ኄኖክ</q> <q xml:lang="en">The book of Henok</q>                                    
+                                    <q xml:lang="gez">ኄኖክ</q> <q xml:lang="en">The book of Henok</q>
                                 </item>
                                 <item xml:id="e3">
-                                  <desc>Chapter numbering is erroneously given from 12 onwards.                                         
-                                        Chapters 11, 27, 32, 46 are not numbered. 
+                                  <desc>Chapter numbering is erroneously given from 12 onwards.
+                                        Chapters 11, 27, 32, 46 are not numbered.
                                         Numbering of chapter 68 (which corresponds to ch. 71) is omitted.
                                     </desc>
                                 </item>
@@ -327,16 +354,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <origDate when="1975" evidence="internal-date"/>
                         </origin>
                       <provenance>
-                          This manuscript was faithfully copied from another manuscript, bound together with the book of Job and coming from <placeName ref="LOC3549Gojjam">Goǧǧām</placeName>, 
+                          This manuscript was faithfully copied from another manuscript, bound together with the book of Job and coming from <placeName ref="LOC3549Gojjam">Goǧǧām</placeName>,
                           belonging to the deacon <persName ref="PRS12948MalakaMe">Malʿaka Mǝḥrat Yāred Gǝrmāye</persName>
-                          from <placeName ref="LOC2091Calaqo">Č̣alaqot Śǝllāse</placeName>, South of Mekelle (Tǝgray).  
+                          from <placeName ref="LOC2091Calaqo">Č̣alaqot Śǝllāse</placeName>, South of Mekelle (Tǝgray).
                           According to <ref target="#coloph1"/> and to other information (cp. <bibl>
                               <ptr target="bm:JuelJensen1994Bindings"/>
                               <citedRange>189</citedRange>
                           </bibl>), the manuscript was commissioned in <placeName ref="LOC4545Maqala"/>
-                          by <persName ref="PRS5782JuelJen"/> and his wife <persName ref="PRS12946MaryamMary"/> in September 1974, in the house of 
-                          <persName ref="PRS12949YohannesA">Abuna Yoḥannǝs</persName>, Archbishop of Aksum. 
-                          The manuscript was copied by the deacon <persName ref="PRS12944AmhaSe">ʾAmmǝḫā Śǝllāse</persName> in his monastery of <placeName ref="LOC4505Manawe">Manāwe</placeName> 
+                          by <persName ref="PRS5782JuelJen"/> and his wife <persName ref="PRS12946MaryamMary"/> in September 1974, in the house of
+                          <persName ref="PRS12949YohannesA">Abuna Yoḥannǝs</persName>, Archbishop of Aksum.
+                          The manuscript was copied by the deacon <persName ref="PRS12944AmhaSe">ʾAmmǝḫā Śǝllāse</persName> in his monastery of <placeName ref="LOC4505Manawe">Manāwe</placeName>
                           in <placeName ref="LOC5882Tamben">Tamben</placeName>, and was completed in the month of January 1975.
                           It costed 100 Ethiopian birr, and the binding costed 5 birr extra.
                       </provenance>
@@ -366,13 +393,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                    <bibl><ptr target="bm:Laurence1839Enoch"/></bibl>
                                    <bibl><ptr target="bm:Erho2013NewEthiopic"/></bibl>
                                    <bibl><ptr target="bm:ErhoStuckenbruck2013Enoch"/></bibl>
-                                    </listBibl>                                    
+                                    </listBibl>
                                 </source>
                             </recordHist>
                         </adminInfo>
                     </additional>
                     </msPart>
-                    
+
                     <msPart xml:id="p2">
                         <msIdentifier>
                             <idno/>
@@ -384,7 +411,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <note>
                                     The documents are written in Amharic, with some formulas in Gǝʿǝz.
                                     Some documents (<ref target="#p2_i1.6 #p2_i1.7 #p2_i1.8 #p2_i1.9"/>) mention <placeName ref="LOC3659GurAmb">Gʷǝrāmbā</placeName>.
-                                    Several local individuals holding various honorific titles are mentioned, in particular <roleName type="title">malʾaka ṣahay</roleName>, 
+                                    Several local individuals holding various honorific titles are mentioned, in particular <roleName type="title">malʾaka ṣahay</roleName>,
                                     <roleName type="title">liqa ṭabbabt</roleName>, <roleName type="title">bālāmbā rās</roleName>, etc.
                                     Single texts are divided with black lines.
                                 </note>
@@ -392,7 +419,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#ir"/>
                                     <title>Documentary text</title>
                                 <incipit xml:lang="am">
-                                    ከች፡ የ<roleName type="title">መልአከ፡</roleName> ፀሐይ፡ ሣህሉ፡ ፩ጋሽ፡ የችዋይ፡ ፩ም፡ ባድማው፡ እስከ፡ ወይመከይ፤ 
+                                    ከች፡ የ<roleName type="title">መልአከ፡</roleName> ፀሐይ፡ ሣህሉ፡ ፩ጋሽ፡ የችዋይ፡ ፩ም፡ ባድማው፡ እስከ፡ ወይመከይ፤
                                     ፩ም፡ የሰጊ፡ የዶንቾ፡ ባድማ፤ ፩ም፡ ሰርዳሆ፡ ያያን፡ ባፍማ፤
                                 </incipit>
                                 </msItem>
@@ -400,7 +427,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#ir"/>
                                     <title>Documentary text</title>
                                     <incipit xml:lang="am">
-                                        ከች፡ የ<roleName type="title">ባለአምባ፡ ራስ፡</roleName> ረምሃ፡ የጋሽ፡ እኩ፡ ያባይ፡ ባድማው፤ ፩ም፡ ማተቦጊ፡ እስከ፡ ቀይ፡ አፈር፤ 
+                                        ከች፡ የ<roleName type="title">ባለአምባ፡ ራስ፡</roleName> ረምሃ፡ የጋሽ፡ እኩ፡ ያባይ፡ ባድማው፤ ፩ም፡ ማተቦጊ፡ እስከ፡ ቀይ፡ አፈር፤
                                         ፩ም፡ ኵርቢላሃ፡ ፩ም፡ አምባው፡ የጨጓር፡ ባድማ፡ ፪ም፡ ዘንተይጌ፡ ፩ም፡ ስንኰርኵራ፡ ፩ም፡ ደኪ፡ አርዋ፡ ፩ም፡ ሰሎግ፡ ፩ም፡ ኳርዌና፡
                                     </incipit>
                                 </msItem>
@@ -408,7 +435,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#ir"/>
                                     <title>Documentary text</title>
                                     <incipit xml:lang="am">
-                                        የ<roleName type="title">ብላቴን፡ ጌታ፡</roleName> ለታ፡ ፩ጋ፡ ደዝቢሆን፡ ፩ም፡ ፉራ፡ ወልዱ፡ አስከ፡ ፩ም፡ ስጉደ፡ የከቴ፡ አስከ፡ ፩ም፡ ላይ፡ 
+                                        የ<roleName type="title">ብላቴን፡ ጌታ፡</roleName> ለታ፡ ፩ጋ፡ ደዝቢሆን፡ ፩ም፡ ፉራ፡ ወልዱ፡ አስከ፡ ፩ም፡ ስጉደ፡ የከቴ፡ አስከ፡ ፩ም፡ ላይ፡
                                         ፉራ፡ የከብቴ፡ አስከ፡ ፩ም፡
                                     </incipit>
                                 </msItem>
@@ -416,8 +443,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#ir"/>
                                     <title>Documentary text</title>
                                     <incipit xml:lang="am">
-                                        በ<roleName type="title">መልአከ፡ ፀሐይ፡</roleName> ሣህሉና፡ በ<roleName type="title">ሊቀ፡ ጠበብት፡</roleName> ገብረ፡ ሥሉስ፡ 
-                                        ሹመት፡ የ<roleName type="title">ወይዘሮ፡</roleName> 
+                                        በ<roleName type="title">መልአከ፡ ፀሐይ፡</roleName> ሣህሉና፡ በ<roleName type="title">ሊቀ፡ ጠበብት፡</roleName> ገብረ፡ ሥሉስ፡
+                                        ሹመት፡ የ<roleName type="title">ወይዘሮ፡</roleName>
                                         ሣህሉ፡ ልጅ፡ ሰይፈ፡ ሩፋኤል፡ በ፲፪ ወቄት፡ ወርቅ፡ የቍስቋምን፡ አሪም፡ ከይብተሮች፡
                                     </incipit>
                                 </msItem>
@@ -425,7 +452,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#ir"/>
                                     <title>Documentary text</title>
                                     <incipit xml:lang="am">
-                                        በ<roleName type="title">መልአከ፡ ፀሐይ፡</roleName> ሣህሉና፡ በ<roleName type="title">ሊቀ፡ ጠበብት፡</roleName> ገብረ፡ ሥሉስ፡ 
+                                        በ<roleName type="title">መልአከ፡ ፀሐይ፡</roleName> ሣህሉና፡ በ<roleName type="title">ሊቀ፡ ጠበብት፡</roleName> ገብረ፡ ሥሉስ፡
                                         ሹመት፡ ጻፊ፡ ፈንታ፡ በላስ፡ ፩ም፡ እምቡሪፍ፡ ፪ ጭየ፡ የቄስ፡ አደነት፡ በወቄት፡ ወርቅ፡
                                     </incipit>
                                 </msItem>
@@ -433,7 +460,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#iv"/>
                                     <title>Land record</title>
                                     <incipit xml:lang="am">
-                                        የሊቄ፡ ኃይሉ፡ ሪም፡ በይዴም። በ<placeName ref="LOC3659GurAmb">ጕራምባ፡</placeName> ፪ ምድር፡ ከጸባሕተ፡ ወልድ፡ 
+                                        የሊቄ፡ ኃይሉ፡ ሪም፡ በይዴም። በ<placeName ref="LOC3659GurAmb">ጕራምባ፡</placeName> ፪ ምድር፡ ከጸባሕተ፡ ወልድ፡
                                         ከ<roleName type="title">ባልአምበራስ፡</roleName> ረምኃ፡ ምድር፡ በጸገብና፡ ከብርጭቆ፡ ደጅ፡ ፩ም፡ ባድማ፤ ፩ም፡ ከማሪቺን፡
                                     </incipit>
                                 </msItem>
@@ -441,7 +468,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#iv"/>
                                     <title>Land record</title>
                                     <incipit xml:lang="am">
-                                        በ<placeName ref="LOC3659GurAmb">ጕራምባ፡</placeName> የጽራግ፡ ማሰሬ፡ ዜና፡ ዘጸረመኒ። ሪም፡ ከመርቆረዎስ፡ ያ፬ጬን፡ ምደር። 
+                                        በ<placeName ref="LOC3659GurAmb">ጕራምባ፡</placeName> የጽራግ፡ ማሰሬ፡ ዜና፡ ዘጸረመኒ። ሪም፡ ከመርቆረዎስ፡ ያ፬ጬን፡ ምደር።
                                         ፩ ምድር፡ ያባ፡ ጌትየ። ፪ ምድር፡ ዋልዋልታ። የሙዙ። ፩ ምድር፡ አኽያ፡
                                     </incipit>
                                 </msItem>
@@ -456,10 +483,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus target="#iir"/>
                                     <title>Land record</title>
                                     <incipit xml:lang="am">
-                                        በዘመነ፡ <del rend="erasure"/><add place="overstrike">ዮሐን</add>ስ፡ <add place="above">በሐምሌ፡</add> በ<roleName type="title">መልአከ፡ 
-                                            ፀሐይ፡</roleName> ሣህሉ፡ አለቅነት፡ 
-                                        በ<roleName type="title">ሊቀ፡ ጠበብት፡</roleName> እንግዳ፡ ሹመት፡ ከ<placeName ref="LOC3659GurAmb">ጕራምባ።</placeName> ፲፫ቱን፡ 
-                                        ጫን፡ የዘይቱን፡ ሰቤተ፡ ክርስቲያን፡ ይሁን፡ ብለው፡ ተገዝተው፡ ሰጥቶ፡ አሉ፡ መልአከ፡ ፀሐይ፡ 
+                                        በዘመነ፡ <del rend="erasure"/><add place="overstrike">ዮሐን</add>ስ፡ <add place="above">በሐምሌ፡</add> በ<roleName type="title">መልአከ፡
+                                            ፀሐይ፡</roleName> ሣህሉ፡ አለቅነት፡
+                                        በ<roleName type="title">ሊቀ፡ ጠበብት፡</roleName> እንግዳ፡ ሹመት፡ ከ<placeName ref="LOC3659GurAmb">ጕራምባ።</placeName> ፲፫ቱን፡
+                                        ጫን፡ የዘይቱን፡ ሰቤተ፡ ክርስቲያን፡ ይሁን፡ ብለው፡ ተገዝተው፡ ሰጥቶ፡ አሉ፡ መልአከ፡ ፀሐይ፡
                                         ሣህሉ፡ ሊቀ፡ ጠበብት፡ እንግዳ፡ አለቀ፡ አስቡ፡ ግራጌታ፡ ሰሎሞን፡
                                     </incipit>
                                 </msItem>
@@ -477,7 +504,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <locus target="#ivv"/>
                                         <measure unit="quire">1</measure>
                                     </extent>
-                                    <collation>                                        
+                                    <collation>
                                         <list>
                                             <item xml:id="q9">
                                                 <dim unit="leaf">4</dim>
@@ -485,7 +512,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             </item>
                                         </list>
                                     </collation>
-                                    <condition key="deficient">The codicological unit consists of one loose bifolium having a different origin and placed between <locus target="#2"/> and 
+                                    <condition key="deficient">The codicological unit consists of one loose bifolium having a different origin and placed between <locus target="#2"/> and
                                         <locus target="#3"/>. The lower margin of <locus target="#ii"/> is cut.
                                     </condition>
                                 </supportDesc>
@@ -544,6 +571,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="MV" when="2020-06-15">Updated binding, layout, ruling and pricking, extra.</change>
             <change who="MV" when="2020-06-18">Changes after PR.</change>
             <change who="MV" when="2020-07-23">Added new bibliographic reference.</change>
+            <change who="EDS" when="2021-09-15">Revised binding description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

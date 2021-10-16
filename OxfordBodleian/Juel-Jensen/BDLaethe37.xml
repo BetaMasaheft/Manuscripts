@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethe37"
@@ -13,7 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Ṣoma dǝggwa, salām to Mary</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,16 +36,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 11</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
@@ -66,7 +69,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#24r"/>.</note>
                                 </extent>
-                                
+
                                 <collation>
                                     <list>
                                         <item xml:id="q1">
@@ -122,8 +125,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="deficient">
+                                    The sewing is broken at the attachment with the boards. It was repaired with a different thread.
+                                    The parchment has been damaged by humidity. Some leaves are stained with water, e.g. <locus target="#94rv #95rv #96rv"/>. <!-- ondulazioni, corrugamenti
+                                  holes from the making of parchment, some repaired. Holes from pests, possibly rodents.-->
+
+                                </condition>
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="2" writtenLines="21 23">
                                     <locus from="4ra" to="93vb"/>
@@ -140,7 +149,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="intercolumn">6</dim>
                                     </dimensions>
                                 </layout>
-                                
+
                                 <layout columns="2" writtenLines="20">
                                     <locus from="94ra" to="95rb"/>
                                     <note corresp="#textarea2 #margin2">Data on margin dimensions taken from <locus target="#94r"/>.</note>
@@ -158,37 +167,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                            
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+
                         </decoDesc>-->
-                        
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
-                            </binding>
-                        </bindingDesc>-->
-                        
+
+                       <bindingDesc>
+                         <binding contemporary="true Ethiopian" xml:id="binding">
+                             <decoNote xml:id="b1" type="bindingMaterial">
+                               The manuscript is bound in <material key="wood">wooden</material> boards.
+                             </decoNote>
+                             <decoNote xml:id="b2" type="Boards">
+                               The boards are cut to the same size as the bookblock and have square edges. The grain runs vertically.
+                             </decoNote>
+                             <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                             <decoNote xml:id="b4">
+                               The sewing is a chainstitch on four sewing stations. The thread is Z-twisted.<!--
+                               The original thread of <term key="animalThread">animal origin</term> has been repaired with a thread of <term key="vegetalThread">vegetal origin</term> to reconnect the broken sewing to the boards.-->
+                             </decoNote>
+                             <decoNote xml:id="b5" type="Spine">
+                               The small holes close to the head and tail of the quires are probably all that remains of former quire tackets.
+                               The spine has been protected by a sort of spine lining made by joining two sheets of leather (a brown and a white one). The thread before entering into the boards, passes through this lining.<!-- check the material of the white piece -->
+                             </decoNote>
+                             <decoNote xml:id="b6" type="SlipCase">The original leather case is preserved.</decoNote>
+                         </binding>
+                     </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -200,7 +221,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
