@@ -10,10 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Malkǝʾ to the church, Malkǝʾ to Rufāʾel, Ṣalota ʾakkʷatet za-Bāsǝlyos, Malkǝʾ to ʾAmānuʾel</title>
+                <title>Malkǝʾ-hymns and Ṣalota ʾakkʷatet za-Bāsǝlyos</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <editor key="SG"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -79,8 +83,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="good"/>
                             </supportDesc>
                         </objectDesc>
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <desc>A white sticker is glued to the inner side of the front board, on the top. The name of <persName ref="PRS5782JuelJen"/> is printed on it
+                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signatures "MS. Aeth. f. 26" and "MS Aeth. 2 + MS Aeth. 3" are written in pencil.
+                                        Additional stickers, with the signatures "Ms 2" and "Ms 3" on it, are glued below it.</desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <desc>Recent note written in pencil on the inner side of the front board and barely legible, 
+                                        containing minimal descriptive information on the manuscript.</desc>
+                                    <q xml:lang="en">Ethiopic MSS 2&amp;3
+                                    2. Hymns to the church, by Ghiorgis and miscellaneous hymns to Raphael, Mikael and Ghiorgis
+                                    3. Hymns to Gabriel, Mary, Emmanuel and Christ</q>
+                                </item>
+                            </list>
+                        </additions>
                         
                         <bindingDesc>
                             <binding xml:id="binding">
@@ -95,6 +117,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                     </physDesc>
                     
+                    <history>
+                        <origin>
+                            <origDate notBefore="1956" notAfter="1970" evidence="prosopography"/>
+                            The scribe of this manuscript, who
+                            identifies himself as <foreign xml:lang="gez"><persName ref="PRS13687WaldaA" role="scribe">ወልደ፡ አማኑኤል፡  ዘብሔረ፡ ምሑር፡</persName></foreign>, 
+                            is identical to the scribe of 
+                            <ref type="mss" corresp="EMIP00989"/>, which can be dated by a mention of <persName ref="PRS2533Baselyos"/> 
+                            to <date notBefore="1956" notAfter="1970"/>. This makes a date of production broadly within or close to the same timespan likely
+                            for this manuscript. An original production around the church of
+                            <origPlace ref="INS0794MEN"/>, which holds  <ref type="mss" corresp="EMIP00989"/>, seems likely.
+                        </origin>
+                        <provenance> It is not known how and when <persName ref="PRS5782JuelJen"/> acquired the manuscript. He assigned a shelfmark to each
+                        unit of production, Juel-Jensen 2 and Juel-Jensen 3 respectively. This might indicate that both units were not bound together
+                        in the moment of acquisition. Traces of a former sewing can be observed in <ref target="#p2"/>.</provenance>
+                    </history>
+                    
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -107,12 +145,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </adminInfo>
                     </additional>
                     
-                <!--    <history>
-                        <origin>
-                            <origDate when="" evidence=""/>
-                        </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                    
+                
                     
                     <msPart xml:id="p1">
                         <msIdentifier>
@@ -125,18 +159,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <locus from="2r" to="4v"/>
                                 <title type="complete" ref="LIT2809RepCh93"/>
                                <textLang xml:lang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus target="#2r"/>
+                                    <hi rend="rubric">ሰላም፡</hi> ለኪ፡ ቤተ፡ ክርስቲያን፡ ቅድስት፡ <hi rend="rubric">ሰላም፡ ለኪ፡</hi> ቤተ፡ ቅድስት፡ ክርስቲያን፡ 
+                                    ቤተ፡ ጸሎት<hi rend="rubric" rendition="#partialRubric">፨</hi> በደመ፡ መለኮት፡ ጥልልተ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    <hi rend="rubric">ሰላም፡</hi> ለኪ፡ ቤተ፡ ክርስቲያን፡ ቅድስት<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    <hi rend="rubric">ሰላም፡</hi> ለኪ፡ ቤተ፡ ክርስቲያን፡ ቤተ፡ ጸሎት<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="4r" to="4v"/>
+                                    ቤተ፡ ክርስቲያን፡ አንቲ፡ ሐሊብ፡ ወመዓር<hi rend="rubric" rendition="#partialRubric">፨</hi> እስመ፡ ዘእንበሌኪ፡ አልብየ፡ ተስፋ፡ መምሕር<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    ኦእግዝእትየ፡ ሰንበተ፡ ክርስቲያን፡  ቅድስት፡ ዕቀበኒ፡ ወሰወርኒ፡ <pb n="4v"/> እመከራ፡ ሥጋ፡ ወነፍስ፡ ለዓመትኪ፡ <del rend="erasure"/>
+                                    <hi rend="rubric">ጊዮርጊስ፡</hi> ወለጸሐፊሁ፡ ሊተኒ፡ ለገብርከ፡ <del rend="erasure"/> <hi rend="rubric">ሃይማኖት፡ </hi>ለዓለመ፡ ዓለም፡ አሜን<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                </explicit>
                             </msItem>
                             
-                            <msItem xml:id="p1_i2">
+                            <msItem xml:id="p1_i2"><!--different hand?-->
                                 <locus from="4v" to="8r"/>
-                                <title type="complete">Malkǝʾ to Rufāʾel</title>
+                                <title type="complete" ref="LIT2934RepCh215"/>
                                 <textLang xml:lang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus target="#4v"/>
+                                    <hi rend="rubric">ሰላም፡</hi> ለተፈጥሮትከ፡ በዕለተ፡ እሁድ፡ ሰንበት፡ እሁድ፡ ዘተስዕለ፡ ቅድመ፡ እምነፋስ፡ ወነድ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    <hi rend="rubric">ሩፋኤል፡</hi> ሊቆሙ፡ ለፆታ፡ <hi rend="rubric" rendition="#partialRubric">፫</hi> ተነገድ፡ ወዓዲ፡ ተሰየምከ፡ በማኅፀነ፡ ኵሉ፡ ትውልድ፡ በከመ፡
+                                    ይቤ፡ ዮሐንስ፡ ወልደ፡ ነጐድጓድ፡
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="7v" to="8r"/>
+                                    ቅዱስ፡ <hi rend="rubric">ሩፋኤል፡</hi> ለእግዚአብሔር፡ መልአኩ<hi rend="rubric" rendition="#partialRubric">፨</hi> ዘመነ፡ መንሳዌ፡ ኢያንጥየኒ፡
+                                    ፈራህኩ<hi rend="rubric" rendition="#partialRubric">፨</hi> በረድኤትከ፡ ተማኅፀንኩ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    ኀቤከ፡ አሰመኩ<hi rend="rubric" rendition="#partialRubric">፨</hi> ኦአምላከ፡ <del rend="erasure"/><hi rend="rubric">ሩፋኤል።</hi> ዕቀበኒ፡
+                                    ወአድኅነኒ፡ <pb n="8r"/> ሊተ፡ ለዓመትከ፡ <hi rend="rubric">ጊዮርጊስ፡</hi> ወለጸሐፊሁ፡ ሊተኒ፡ ለገብርከ፡ ወ<del rend="erasure"/> <hi rend="rubric">ሃይማኖት። </hi>
+                                    ለዓለም፡ ወለዓለመ፡ ዓለም፡ አሜን። ። ። 
+                                </explicit>
                             </msItem>
                             
                             <msItem xml:id="p1_i3">
                                 <locus from="8r" to="10r"/>
                                 <title type="complete" ref="LIT2248salota"/>
                                 <textLang xml:lang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus target="#8r"/>
+                                    <space reason="rubrication"/> ለገባሬ፡ ሠናያት፡ ላዕሌነ፡ እግዚአብሔር፡ መሐሪ፡ አቡሁ፡ ለእግዚእነ፡ ወአምላክነ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ እስመ፡ ሰወረነ፡ ወረደአነ፡ 
+                                    ዓቀበነ፡ ወአቅረበነ፡ ወተወከፈነ፡ ሀቤሁ፡ <add place="margin">ወተማኅፀነነ፡ ወአጽንዓነ።</add> ወአብጽሐነ፡ እስከ፡ ዛቲ፡ ሰዓት፡ ንስዓሎ፡ እንከ፡ ከመ፡ ይዕቀበነ፡ በዛቲ፡ ዕለት፡ ቅድስት፡
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="9v" to="10r"/>
+                                    ኢታብአነ፡ ውስተ፡ መንሱት፡ አላ፡ አድኅነነ፡ ወበልሐነ፡ እምኵሉ፡ እኩይ፡ በጸጋ፡ ወበሣህል፡ ዘለፍቅረ፡ ሰብእ፡ ዘ<pb n="10r"/>ለወልድከ፡ ዋህድ፡ እግዚእነ፡ ወአምላክነ፡ ወመድኃኒነ፡
+                                    ኢየሱስ፡ ክርስቶስ፡ ዘቦቱ፡ ለከ፡ <sic resp="DR">ስብሐተ፡</sic> ወክብር፡ ወእዘዝ፡ ይደሉ፡ ምስሌሁ፡ ወምስለ፡ መንፈስ፡ ቅዱስ፡ ማኅየዊ፡ ዘዕሩይ፡ ምስሌከ፡ ይእዜኒ፡ በል<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                </explicit>
                             </msItem>
                             
                         </msContents>
@@ -153,6 +224,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <measure unit="page" type="blank">3</measure>
                                         <locus target="#1r #1v #10v"/>
                                     </extent>
+                                    <condition key="good">This unit of production shows slight traces of use. The ink on a few folia is smudged (e.g. <locus target="#7"/>).</condition>
                                 </supportDesc>
                                 
                                 <layoutDesc>
@@ -173,6 +245,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </layoutDesc>
                             </objectDesc>
                             
+                            <handDesc>
+                                <handNote xml:id="h1" script="Ethiopic">
+                                    <seg type="ink">Black, red</seg>
+                                    <date></date>
+                                    <desc></desc>
+                                    <seg type="rubrication">Parts of the names of the owner and scribe; divine names;
+                                        the words <foreign xml:lang="gez">ሥላሴ፡</foreign> 
+                                        <foreign xml:lang="gez">ሰላም፡</foreign>; <foreign xml:lang="gez">ይዲ</foreign> <foreign xml:lang="gez">ይካ</foreign>,
+                                        <foreign xml:lang="gez">ሕዝ</foreign>; elements
+                                    of punctuation signs</seg>
+                                    <list type="abbreviations">
+                                        <item>
+                                            <abbr>ሰላ</abbr> and <abbr>ሰ</abbr> for <expan>ሰላም፡</expan> (e.g. <locus target="#3r #6r"/>)
+                                            <abbr>ይዲ</abbr> and  for <expan>ይቤ፡ ዲያቆን፡</expan> (e.g. <locus target="#6v"/>)
+                                            <abbr>ይካ</abbr>  for <expan>ይቤ፡ ካህን፡</expan> (e.g. <locus target="#6v"/>)
+                                            <abbr>ሕዝ</abbr> and for <expan>ሕዝብ፡</expan> (e.g. <locus target="#7r"/>)
+                                            <abbr>ቡራ</abbr> and for <expan>ቡራኬ፡</expan> (<locus target="#9v"/>)
+                                        </item>
+                                    </list>
+                                </handNote>
+                            </handDesc>
+                            
                         </physDesc>
                         
                         
@@ -186,8 +280,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <summary/>
                             <msItem xml:id="p2_i1">
                                 <locus from="12ra" to="21vb"/>
-                                <title type="complete">Malkǝʾ to ʾAmānuʾel</title>
+                                <title type="complete" ref="LIT1841Malkea"/>
                                 <textLang xml:lang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus target="#12ra"/>
+                                    <hi rend="rubric">በሰሌዳ፡ ዝንቱ፡ ልብየ፡ አምጣነ፡ ለመንክ</hi>ር፡ ተጽሕፈ<hi rend="rubric" rendition="#partialRubric">፤</hi> ፊደለ፡ 
+                                    <hi rend="rubric" rendition="#partialRubric">፩</hi>ዱ፡ ፍቅርከ፡ እ<hi rend="rubric">ንተ፡ ኢኮነ፡ ግዱፈ፤
+                                    አማኑኤል፡ ኰና</hi>ኒ፡ ማዕከላተ፡ ወጽንፈ<hi rend="rubric" rendition="#partialRubric">፨</hi> ከመ፡ እንብብ፡ ቅድመ፡ ጉባዔ፡ ነገረ፡ ሥጋዊከ፡ 
+                                    ዘልፈ<hi rend="rubric" rendition="#partialRubric">፨</hi> እግዚአብሔር፡ ሀበኒ፡ ጥበበ፡ ወአፈ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="21va" to="21vb"/>
+                                    <hi rend="rubric">ኢየሱስ፡ ክርስቶስ፡</hi> ተወካፌ፡ ስቅለት፡ መልዕልት፡ ጸልቦ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    ሥጋከ፡ ወደምከ፡ ምስካይ፡ ለዘአጸቦ<hi rend="rubric" rendition="#partialRubric">፨</hi> ረድኤትከ፡ አፍጥን፡ ፀዊረከ፡ 
+                                    አስቦ<hi rend="rubric" rendition="#partialRubric">፤</hi> ኦእግዚእየ፡ ወአምላኪየ፡ <hi rend="rubric">አማኑኤል፡</hi> ዕቀበኒ፡ ወአድኅነ<cb n="b"/>ኒ፡
+                                    እመከራ፡ ሥጋ፡ ወነፍስ፡ ሊተ፡ <add place="above">ለገብርከ፡</add> <persName ref="" role="owner"><hi rend="rubric">ገብረ፡ ጻድቅ። </hi></persName>
+                                    ለዓለመ፡ ዓለም፡ አሜን<hi rend="rubric" rendition="#partialRubric">፨</hi> <hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                </explicit>
+                                <colophon xml:id="coloph1" xml:lang="gez">
+                                    <locus target="#21vb"/>
+                                    ወጸሐፊሁ፡ <persName ref="PRS13687WaldaA" role="scribe"><hi rend="rubric">ወልደ፡ አማኑኤል፡</hi></persName> ዘብሔረ፡
+                                    <placeName ref="LOC4898MuherI">ምሑር</placeName>
+                                </colophon>
                             </msItem>
                         </msContents>
                         
@@ -203,6 +317,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <measure unit="page" type="blank">6</measure>
                                         <locus target="#11r #11v #22v #23r #24r #24v"/>
                                     </extent>
+                                    <condition key="good">The first and last folia of this unit of production are darkened show stronger traces of use, overall, 
+                                        the state of condition is good.</condition>
                                 </supportDesc>
                                 
                                     <layoutDesc>
@@ -224,7 +340,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </layoutDesc>
                             </objectDesc>
                             
+                            <handDesc>
+                                <handNote xml:id="h2" script="Ethiopic">
+                                    <seg type="ink">Black, red</seg>
+                                    <date></date>
+                                    <desc></desc>
+                                    <seg type="rubrication"></seg>
+                                    <list type="abbreviations"></list>
+                                </handNote>
+                            </handDesc>
+                            
+                            <additions>
+                                <list>
+                                    <item xml:id="a1">
+                                        <locus target="#21v"/>
+                                        <desc type="ScribalNoteCompleting">Modern colophon written within the last lines of the text in pen, partly 
+                                            illegible. If correct, it would point to a date of production in the 1930s or 1940s. It cannot be determined with certainty
+                                        whether the hand is identical to the main hand.</desc>
+                                        <q xml:lang="am">በ፲፱፻፴<gap reason="illegible"/>ዓ<gap reason="illegible"/>ምህ<gap reason="illegible"/>ተጻፈ</q>
+                                    </item>
+                                    
+                                    <item xml:id="a2">
+                                        <locus target="#22r"/>
+                                        <desc type="Unclear">Modern note</desc>
+                                        <q xml:lang=""><gap reason="illegible"/>መልካ</q>
+                                    </item>
+                                    
+                                    <item xml:id="a3">
+                                        <locus target="#22r"/>
+                                        <desc type="Unclear">Modern note</desc>
+                                        <q xml:lang="am">ብርዳት ጡሮሞ ቤቱ፡ እኽድ የጸቺ ወንድም</q>
+                                    </item>
+                                    
+                                    <item xml:id="a4">
+                                        <locus target="#22r"/>
+                                        <desc type="Unclear">Modern note</desc>
+                                        <q xml:lang="am">ህትዘር፡</q>
+                                    </item>
+                                    
+                                    <item xml:id="a5">
+                                        <locus target="#23v"/>
+                                        <desc type="Unclear">Modern note</desc>
+                                        <q xml:lang="am">ቸርቤተዘረር</q>
+                                    </item>
+                                </list>
+                            </additions>
+                            
                         </physDesc>
+                        
+                        <history>
+                            <origin><origDate notBefore="1930" notAfter="1970"/>
+                                The scribe, who
+                                identifies himself as <foreign xml:lang="gez"><persName ref="PRS13687WaldaA" role="scribe">ወልደ፡ አማኑኤል፡  ዘብሔረ፡ ምሑር፡</persName></foreign>, 
+                                is identical to the scribe of 
+                                <ref type="mss" corresp="EMIP00989"/>, which can be dated by mention of <persName ref="PRS2533Baselyos"/>
+                                to <date notBefore="1956" notAfter="1970"/>. The colophon added above the end of the text
+                            on <locus target="#21v"/> is not entirely legible, but probably points to a date of production in the 
+                            1930s or 1940s. This makes is certain that the date of production of this unit falls in the mid-twentieth century, probably until the 
+                            1940s. An original production around the church of
+                                <origPlace ref="INS0794MEN"/>, which also holds  <ref type="mss" corresp="EMIP00989"/>, seems likely.
+                            </origin>
+                        </history>
                         
                     </msPart>
                 </msDesc>
@@ -237,6 +413,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
+            <tagsDecl>
+                <rendition xml:id="partialRubric">Red ink is used partially in the rubrication of punctuation.</rendition>
+            </tagsDecl>
          </xi:include>
       </encodingDesc>
         <profileDesc>
