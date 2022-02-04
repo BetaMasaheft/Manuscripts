@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BDLaethg28" xml:lang="en" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
@@ -14,6 +14,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
+                <editor key="EDS"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -112,9 +113,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
 
-                                <condition key="deficient">The sewing is broken. A brown liquid
-                                    (coffee?) was spilled on the manuscript, see especially on <locus
-                                        from="15r" to="16v"/>. Smudged ink on many folia.</condition>
+                                <condition key="deficient">The original sewing is broken and it has been repaired by using a different kind of thread. <!--A brown liquid
+                                     was spilled on the manuscript, see especially on <locus
+                                        from="15r" to="16v"/> I think that a different kind of ink, a brownish one, has been used to draw
+                                      the figures on f. 15v and f. 16v later damaged by humidity. The same ink is on f. 1v, 2r, 9r, 9v, 10r, 10v, 11r, 11v.-->
+                                        Smudged ink on many folia see especially on <locus
+                                           from="15r" to="16v"/>.</condition>
 
                             </supportDesc>
                             <layoutDesc>
@@ -134,9 +138,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note>The characters per line are 10–12.</note>
                                     <ab type="pricking">Ruling and pricking are barely visible.</ab>
-                                    <ab type="ruling" subtype="pattern">
+                                    <ab type="ruling">Horizontal lines are visible at the bottom of <locus target="3v"/> and
+                                    <locus target="6r"/>, but most folia seem to have no ruled lines.</ab>
+                                    <!--SH: <ab type="ruling" subtype="pattern">
                                         <locus from="2r" to="15v"/>Ruling pattern:
-                                        1A-1A/0-0/0-0/C.</ab>
+                                        1A-1A/0-0/0-0/C.</ab> EDS: I don't see the the horizontal ruled lines, do you?
+                                      Shall we include the ruling pattern also for this record?-->
                                     <ab type="pricking">Primary pricks are visible.</ab>
                                     <ab type="pricking">Ruling pricks are not visible.</ab>
                                 </layout>
@@ -195,17 +202,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                      <decoDesc> @Jacopo: Ornamental band in red and black with 'eyes' is drawn on the incipit page of <ref
                                 target="#ms_i1"/>. </decoDesc>-->
 
-                        <bindingDesc>
-                            <binding contemporary="false" xml:id="binding">
-                                <decoNote xml:id="b1">Two <material key="wood">wooden</material>
-                                    boards.</decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                                    <material key="wood"/>
+                                <bindingDesc>
+                                  <binding contemporary="true Ethiopian" xml:id="binding">
+                                    <decoNote xml:id="b1">
+                                      Bound in wooden boards.
+                                    </decoNote>
+                                    <decoNote xml:id="b2" type="bindingMaterial">
+                                   <material key="wood"/>
                                 </decoNote>
-                                <decoNote xml:id="b3" type="SewingStations">2</decoNote>
-                            </binding>
-                        </bindingDesc>
-                    </physDesc>
+                                    <decoNote xml:id="b3" type="Boards">
+                                      The boards are cut to the same size as the bookblock and have square edges.
+                                      The grain runs vertically. The outer sides of the boards have a brown finishing,
+                                      while the signs left by the working tool are visible on the inner sides.
+                                    </decoNote>
+                                    <decoNote xml:id="b6" type="SewingStations">2</decoNote>
+                                    <decoNote xml:id="b7">
+                                      The original sewing was a chainstitch on two sewing stations. It has been repaired with a different type of thread and
+                                      in this occasion <locus target="#q3"/> has been re-sewn on four sewing stations. Nevertheless the sewing
+                                      is still in a bad state of conservation.
+                                    </decoNote>
+                                    <decoNote xml:id="b9" type="Spine">
+                                      The small holes close to the head and tail of the quires are probably what remains of quire tackets.
+                                    </decoNote>
+                                    <decoNote xml:id="b12" type="other">
+                                      A red <term key="leafStringMark">leaf string marker</term> is attached to the upper outer prick of <locus
+                                          target="#8"/>
+                                    </decoNote>
+                                  </binding>
+                                </bindingDesc>
+
+                                </physDesc>
 
                     <history>
                         <origin>
