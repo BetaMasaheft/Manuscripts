@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="BerOr1270">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="BerOrOct1270">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -298,22 +298,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </binding>
 </bindingDesc>
 </physDesc>
+              
 <history>
 <origin>
 <origDate notBefore="1350" notAfter="1450" evidence="lettering">Mid-14th mid-15th century</origDate>
 </origin>
 </history>
+              <additional>
+                <adminInfo>
+                  <recordHist>
+                    <source>
+                      <listBibl type="catalogue">
+                        <bibl>
+                          <ptr target="bm:Six1983VOHD4"/>
+                          <citedRange unit="page">109-111</citedRange><citedRange unit="number">42</citedRange>
+                        </bibl>
+                        <bibl>
+                          <ptr target="bm:HammerschmidtJaeger1968Illuminiert"/>
+                          <citedRange unit="page">45-48</citedRange><citedRange unit="number">1</citedRange>
+                        </bibl>
+                      </listBibl>
+                    </source>
+                  </recordHist>
+                </adminInfo>
+              </additional>
 </msDesc>
-<listBibl type="secondary">
-<bibl>
-<ptr target="bm:Six1983VOHD4"/>
-<citedRange>109-111</citedRange>
-</bibl>
-<bibl>
-<ptr target="bm:HammerschmidtJaeger1968Illuminiert"/>
-<citedRange>45-48</citedRange>
-</bibl>
-</listBibl>
+
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -331,11 +341,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </profileDesc>
       <revisionDesc>
          <change who="VP" when="2021-06-23">Created entry</change>
+        <change when="2022-02-07" who="ES">renamed file; moved bibliography to catalogue -additional; inserted secondary bibliography</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+        <listBibl type="secondary">
+          <bibl>
+            <ptr target="bm:Uhlig1988Palaographie"/>
+            <citedRange unit="page">243-244</citedRange>
+          </bibl>          
+        </listBibl>
       </body>
    </text>
 </TEI>
