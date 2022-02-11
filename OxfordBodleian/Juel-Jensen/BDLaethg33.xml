@@ -10,10 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Liturgical texts</title>
+                <title xml:lang="gez" xml:id="title1">...</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">...</title>
+                <title xml:lang="en" corresp="#title1">Anaphoras ...</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,8 +41,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         
-                        <!--<msItem xml:id="ms_i1">
-                      
+                        <!--      </incipit>
+                        <msItem xml:id="ms_i1.1">
+                            <locus from="" to=""/>
+                            <title type="complete" ref=""/>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                                <locus target="#2ra"/>
+                                <hi rend="rubric">...</hi>   ...
+                            </incipit>
+                        <explicit xml:lang="gez">
+                            <locus target="#5vb"/>
+                            <hi rend="rubric">...</hi> ... 
+                        </explicit>
                         </msItem>-->
                         
                     </msContents>
@@ -51,8 +66,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">84</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
                                     <dimensions type="outer" unit="mm">
                                         <height>96</height>
                                         <width>80</width>
@@ -65,7 +78,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#59r"/>.</note>
                                 </extent>
-                                
+                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay 
+                                    in January 2020.</foliation>
                                 <collation>
                                     <signatures><foreign xml:lang="gez">፪</foreign> in the upper left margin on
                                     <locus target="#59r"/> at the beginning of <ref target="#q8"/>. No other quire marks.</signatures>
@@ -112,7 +126,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
-                                
+                                <condition key="deficient">                   
+                                   <!--  The entire manuscript is severely damaged by humidity, which has led to a general browning and stiffening of the parchment.
+                                    Most of leaves are wrinkled and stained with water.
+                                    The text is for the most part illegible due to faded ink and stains of unclear origin (e.g. on <locus target="#6v #7r #10v"/>). The red ink is mostly faded out.
+                                    --> 
+                                </condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -128,8 +147,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="bottom">23</dim>
                                         <dim type="left">5</dim>
                                     </dimensions>
-                                    <note>The outer margin has been damaged and its original dimension not be taken from the 
-                                    manuscript anymore.</note>
+                                    <note> The characters per line are 10-14</note>
+                                    <note>The outer margin has been damaged and its original dimension could not be taken from the manuscript anymore.</note>
+                                    <ab type="pricking">Primary and ruling pricks are not visible. </ab>
+                                    <ab type="ruling"> The manuscript is unruled.</ab> 
                                 </layout>
                                 
                                 <layout columns="1" writtenLines="11">
@@ -145,38 +166,74 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">9</dim>
                                         <dim type="left">11</dim>
                                     </dimensions>
+                                    <note> The characters per line are 12-14.</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
                             </layoutDesc>
-                            
                         </objectDesc>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+                           <!-- 
+                             <seg type="script"/>
+                                <seg type="ink">Black, red</seg>
+                                <date notBefore="" notAfter="">...</date>
+                                <desc>
+                                    Mediocre handwriting. Characters are unevenly spaced and sometimes irregular in size.
+                                </desc>
+                                <note>
+                                    The graphemes ግ and ዚ in the word <foreign xml:lang="gez">እግዚአብሔር፡</foreign> are occasionally written with ligature 
+                                    (e.g. on <locus target="#14r #24r #29r"/>).
+                                </note>
+                                <seg type="rubrication">
+                                    Very few rubricated words are still legible, e.g. the name of <persName ref="PRS7840Phanuel"/> on <locus target="#24r #24v"/> and
+                                    part of the word <foreign xml:lang="gez">ሰላም፡</foreign>.
+                                    The elements of the punctuation signs were possibly rubricated (cp. on <locus target="#23v"/>).
+                                </seg>
+                           -->
                             </handNote>
                         </handDesc>
                         
                        <!-- <decoDesc>
-                         
                         </decoDesc>-->
                         
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding" contemporary="false">
-                                <decoNote xml:id="b1">Modern binding</decoNote>
+                        <!-- <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <desc>A white sticker is glued on <locus target="#1r"/> with the signature "Ms 14" printed on it.
+                                    </desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <locus target="#1r"/>
+                                    <desc>The title of the book is poorly written in violet ink .</desc>
+                                </item>
+                            </list>
+                        </additions>-->
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards wrapped in a textile cover.
+                                </decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+                                    <material key="wood"/>  
+                                    <material key="textile"/>  
+                                </decoNote>
+                                <decoNote xml:id="b4" type="SewingStations">2</decoNote>
+                                <decoNote xml:id="b5" type="Spine">The spine cover is apparently missing.</decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc> 
                     </physDesc>
                     
-                <!--    <history>
+                    <!--    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1800" notAfter="1950" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                        <provenance>Unknown provenance. The name of the original owner, <persName ref="PRS13686WaldaTH"/>, is written in various supplication formulas. It is fully readable on <locus target="#31v"/>
+                            and partially legible on <locus from="23r" to="23v"/> (where only Walda is legible) and on <locus target="#28r"/> (where only Walda Takla is legible). 
+                            The manuscript came to <persName ref="PRS5782JuelJen"/> under unknown circustamnces.</provenance>
+                    </history>
+                    -->
                     
                     <additional>
                         <adminInfo>
@@ -189,7 +246,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -210,6 +266,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Liturgy"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -220,7 +277,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-14">Created record</change>
             <change who="DR" when="2020-02-18">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="MV" when="2022-02-11">Added layout, keywords, binding</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
