@@ -3829,14 +3829,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 		</xi:fallback>
 	</xi:include>
 	<text >
-		<body>
-		   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
-		      href="transkribus.xml">
-		      <xi:fallback>
-		         <!-- transkribus -->
-		      </xi:fallback>
-		   </xi:include>
-
-		</body>
+	   <body>	      
+	      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+	         href="transkribus.xml">
+	         <xi:fallback>
+	            <!-- transkribus-->
+	         </xi:fallback>
+	      </xi:include>
+	      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+	         href="edition.xml">
+	         <xi:fallback>
+	            <!--  text-->
+	         </xi:fallback>
+	      </xi:include>
+	   </body>
 	</text>
 </TEI>
