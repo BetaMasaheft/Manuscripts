@@ -5,8 +5,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Philoxenus</title>
+                <title>Filkǝsyos</title>
                 <editor key="SG"/>
+                <editor key="DR"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
@@ -37,12 +38,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msContents>
                         <summary/>
                         
+                        <msItem xml:id="ms_i1">
+                            <title type="complete" ref="LIT1399Filkes"/>
+                            <textLang mainLang="gez"/>
+                        </msItem>
+                        
                     </msContents>
-                    
-                    
-                    
-                    
-                    
                     
                     <physDesc>
                         <objectDesc form="Codex">
@@ -52,9 +53,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </support>
                                 <extent>
                                     <measure unit="leaf">98</measure>
-                                    <dimensions type="outer" unit="mm">
-                                        <height>248</height>
-                                        <width>222</width>
+                                    <dimensions type="outer" unit="in">
+                                        <height>9.75</height>
+                                        <width>8.75</width>
                                     </dimensions>
                                 </extent>
                                 
@@ -62,23 +63,46 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="20 22" cert="high"/>
+                                <layout columns="2" writtenLines="20 22"/>
                             </layoutDesc>
                         </objectDesc>
                         
                         <handDesc>
-                            
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is fairly written of the <date>18th century</date>
-                                </desc>
-                                
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
-                                
+                                <desc>Fairly written.</desc>
+                                <date notBefore="1700" notAfter="1799" resp="PRS10171Wright"/>
                             </handNote>
-                            
                         </handDesc>   
+                        
                         <additions>
-                            
+                        <list>
+                            <item xml:id="a1">
+                                <locus target="#95r"/>
+                                <desc type="GuestText"><title type="complete" ref="LIT5627NagaraArestaAemro"/></desc>
+                                <q xml:lang="gez"/>
+                            </item>
+                            <item xml:id="a2">
+                                <locus target="#95v"/>
+                                <desc type="GuestText">Excerpt from <persName ref="PRS3255CyrilI"/>.</desc>
+                                <q xml:lang="gez"/>
+                            </item>
+                            <item xml:id="a3">
+                                <locus target="#98r"/>
+                                <locus target="#2r"/>
+                                <desc type="GuestText">Excerpts from several fathers.</desc>
+                                <q xml:lang="gez"><seg part="I">ዜነዉ፡ በእንተ፡ አባ፡ እንጦንስ፡ ሶበ፡ ሐለየ፡ ማዕምቀ፡ ጥበቡ፡ ለእ<hi rend="ligature">ግዚ</hi>አብ፡ <sic>ወትእዛዛቲ</sic>፡ ሰአለ፡ ወይቤ፡</seg></q>
+                            </item>
+                            <item xml:id="a4">
+                                <locus target="#3r"/>
+                                <desc type="OwnershipNote">The note states that the manuscript belongs to the church of
+                                    <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>.</desc>
+                                <q xml:lang="gez">ፊልክስዩስ፡ ዘቅዱስ፡ መድኃኔ፡ አለም።</q>
+                            </item>
+                            <item xml:id="e1">
+                                <locus target="#3r #94v"/>
+                                <desc>The name of the owner was <persName ref="PRS13774Liqanos"/>.</desc>
+                            </item>
+                        </list>    
                         </additions>
                         
                     </physDesc>
@@ -129,15 +153,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Hagiography"/>
+                    <term key="MonasticLiterature"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="en">English</language></langUsage>
+            <langUsage><language ident="en">English</language>
+                <language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-03-21">Created catalogue entry</change>
-            
-            
+            <change who="DR" when="2022-03-09">Continued description from historical catalogue entry</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
