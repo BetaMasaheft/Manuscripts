@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02266">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 267</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +33,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2266/">Weiner Codex 267</idno>
                </msIdentifier>
                <msContents>
-                  <summary>Images. F<locus target="#1r"/>-15r: Image of Jesus Christ, Mälk‘a Iyyäsus, መልክአ፡  ኢየሱስ፡. Répertoire 123. Incipit : ሰላም ለዝክረ ሰምኪ ስመ መሐላ ዘኢየኄሱ. F<locus target="#15r"/>-30v: Image of Mary, Mälk‘a Maryam, መልክአ፡ ማርያም፡, Répertoire 220; MG 735ff.; Incipit: ሰላም ሰላም ለዝክረ ስምኪ ሐዋዝ።  Illuminations. i v: Abuna Takla Haymanot, with notice of two women offering prayers to him. <locus target="#9r"/>: Abuna Gabra Manfas Qeddus, flanked by lions and leopards. <locus target="#10r"/>: Our Lady Mary and her beloved son, with the angels Mika'el and Gabr'el, with a patron prostrate below. <locus target="#19r"/>: The Crucifixion of Jesus Christ, with Mary and John on either side of the cross and a prostrate patron, ወለተ ዘሙሴ, clings to the base of the cross. <locus target="#20v"/>: Saint George and the Dragon.</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <summary></summary>
+                <msItem xml:id="ms_i1">
+                  <locus from="1r" to="15r" facs="002"/>
+                  <title type="complete" ref="LIT2839RepCh123"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                  <incipit xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ስመ፡ መሐላ፡ ዘኢይሔሱ፡</incipit>
+                </msItem>
+                <msItem xml:id="ms_i2">
+                  <locus from="15r" to="30v" facs="016"/>
+                  <title type="complete" ref="LIT2891RepCh172"/>
+                  <incipit xml:lang="gez">ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ።</incipit>
+                </msItem>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +53,130 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 31</measure>
+                           <measure unit="quire">3</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>134</height>
+                              <width>100</width>
+                              <depth>27</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quire 1 balanced; quires 2–3 adjusted balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="i" to="9" facs="001"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="10" to="19" facs="011"></locus>
+                              <note>Folium stubs visible between <locus target="#12 #13" facs="014"/> and between <locus target="#17 #18" facs="019"/>.</note>
+                              Quire 2:
+                              3, stub after 8
+                              8, stub after 3
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">12</dim>
+                              <locus from="20" to="31" facs="021"></locus>
+                              <note>Folium stubs visible between <locus target="#22 #23" facs="024"/> and between <locus target="#27 #28" facs="029"/>.</note>
+                              Quire 3:
+                              4, stub after 8
+                              9, stub after 3
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">12-18</dim>
+                           <dim type="bottom">19-28</dim>
+                           <dim type="right">14-16</dim>
+                           <dim type="left">14-16</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="14"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                  <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#iv(erso)" facs="002"/><desc><ref type="authFile" corresp ="AT1035HolyMan"/> <persName ref="PRS9162TaklaHa"/>, with notice of two women offering prayers to him</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#9r" facs="010"/><desc><ref type ="authFile" corresp="AT1035HolyMan"/> <name ref="PRS4306GabraMa"/>, flanked by lions and leopards</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d3"><locus target="#10v" facs="012"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with the archangels <persName ref="PRS7049Michael"/> and <persName ref="PRS4377Gabriel"/>, with a patron prostrate below</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d4"><locus target="#19r" facs="020"/><desc><ref type="authFile" corresp="AT1005Crucifixion"/> with <persName ref="PRS6819Mary"/> and John on either side of the <term key="cross"/> and a prostrate patron, Wälättä Zämuse (<foreign xml:lang="gez">ወለተ፡ ዘሙሴ፡</foreign>), clings to the base of the cross</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d5"><locus target="#20v" facs="022"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                  <decoNote type="frame" xml:id="d6">
+                  Decorative designs:
+                  <locus target="1r" facs="002"/> (multiple full stops and a line of alternating red and black dots)
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto)" facs="001"/>
+                    several words written in blue pencil or crayon by an untrained hand
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#9v" facs="011"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#19v" facs="021"/>
+                    pentrials and the Trinitarian formula in a crude hand
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <desc type="GuestText">
+                    <locus target="#20r" facs="021"/>
+                    Excerpt from <title type="incomplete" ref="LIT3100RepCh380"/>. Written in a different hand
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    <locus target="#31r #31v" facs="032 033"/>
+                    pentrials
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    <locus target="#31v" facs="033"> f. 31v, top</locus>
+                    note in an untrained hand, largely illegible due to damage
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    <locus target="#31v" facs="033"> f. 31v, bottom</locus>
+                    title of the work “Image of Mary, Mälkǝʾä Maryam, <foreign xml:lang="gez">መልክአ፡ ማርያም፡</foreign>,” written in purple ink
+                    </desc>
+                    </item>
+                    <item xml:id="e7">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#2r #2v #5r #7v #8v" facs="003 004 006 009 010"/>, etc.);
+                      text has been removed (  <locus target="#22r" facs="023"/>)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +193,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+          <change when="2020-12-15" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+          <change when="2021-01-19" who="ABe">Added ms_i1-2, minis 1-5, a1, and e1-7</change>
+          <change when="2021-01-25" who="RL">Removed summary text, as superfluous, removed note on rubrication as repeated information</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

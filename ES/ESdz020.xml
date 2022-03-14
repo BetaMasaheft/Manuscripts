@@ -30,17 +30,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno>DZ-020</idno>
                </msIdentifier>
                <msContents>
-                  <summary>I) Ṣalota ʿǝṭan “Prayer of Incense” (fols. 3ra-36ra) &#xD; - Prayer of
-                     Incense for Sunday (ba-ʿǝlätä ʾǝḥud) (fols. 28rb-36ra)</summary>
+                  <summary>I) Ṣalota ʿǝṭān “Prayer of Incense” (fols. 3ra-36ra) &#xD; - Prayer of
+                     Incense for Sunday (ba-ʿǝlata ʾǝḥud) (fols. 28rb-36ra)</summary>
                   <msItem xml:id="ms_i1">
-
-                     <incipit>
-                        <foreign xml:lang="en"/>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
-                     <note/>
+                     
+                     <locus from="3ra" to="36ra"></locus>
+                     <title ref="LIT2252salota"/>
+                     <textLang xml:lang="gez"></textLang>
+                     <msItem xml:id="ms_i1.1">
+                        
+                        <locus from="28rb" to="36ra"></locus>
+                        <title>Prayer of  Incense for Sunday (ʿǝlata ʾǝḥud)</title>
+                        <textLang xml:lang="gez"></textLang>
+                        
+                     </msItem>
                   </msItem>
                </msContents>
                <physDesc>
@@ -56,7 +59,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <depth unit="mm">30</depth>
                            </dimensions>
                         </extent>
-                        <foliation><!--2016-10-18+02:00 Updated DZ-020 from DomLib--></foliation>
+                        <foliation>Foliated by the Ethio-SPaRe team</foliation>
                         <collation>
                            <signatures> Decorated </signatures>
                            <list>
@@ -124,12 +127,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
-                     <!--ACHTUNG! first HandNote comes from writing system in Ethiospare. the others are one for each CHANGE OF HAND-->
                      <handNote xml:id="h1" script="Ethiopic">
                         <seg type="script">Careful.</seg>
                         <seg type="ink">Black, red.</seg>
                         <date>First half of the 20th century.</date>
-                        <seg type="rubrication">Nomina sacra; name of the donors; name of the
+                        <seg type="rubrication">Holy names; name of the donors; name of the
                            Metropolitan; incipit of Text I; incipit of the prayers to be read;
                            directives to the ministers; elements of the punctuation signs; elements
                            of Ethiopic numerals. &#xD; On the incipit page of Text I (fol. 3r), a
@@ -140,12 +142,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <decoNote type="miniature" xml:id="d1">
                         <locus target="#38v">Fol. 38v: </locus>
                         <desc>Unidentified saint or evangelist.</desc>Originating from a different,
-                        older Ms. (15th cent.?), the leaf with miniature is of a smaller size
+                        older Ms. (<date notBefore="1400" notAfter="1500">15th cent.?</date>), the leaf with miniature is of a smaller size
                         (8x7.5cm) and was sewn later to the codex.</decoNote>
                      <decoNote type="miniature" xml:id="d2">
                         <locus target="#39r">Fol. 39r: </locus>
                         <desc>Unidentified saint or evangelist.</desc>Originating from a different,
-                        older Ms. (15th cent.?), the leaf with miniature is of a smaller size
+                        older Ms. (<date notBefore="1400" notAfter="1500">15th cent.?</date>), the leaf with miniature is of a smaller size
                         (8x7.5cm) and was sewn later to the codex.</decoNote>
                   </decoDesc>
                   <bindingDesc>
@@ -168,11 +170,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0034DZ">Dabra Zäyt Qǝddǝst Māryām / DZ</placeName>
+                        <placeName ref="INS0034DZ"></placeName>
                      </origPlace>
-                     <origDate notBefore="1881" notAfter="1926">Metropolitan Matewos (in tenure in
+                     <origDate notBefore="1881" notAfter="1926">Metropolitan Mātewos (in tenure in
                         1881-1926) is mentioned on <locus target="#19vb">19vb</locus>.</origDate>
+                     <origDate notBefore="1400" notAfter="1500">Miniatures originate from an older, 15th century manuscript</origDate>
                   </origin>
+                  <provenance>Kidāna Māryām and Walatta Krǝstos are
+                     mentioned in supplication formulas on <locus target="#21ra">21ra</locus>, 28rb,
+                     36rb.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -206,21 +212,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <particDesc>
-            <listPerson>
-               <person>
-                  <persName role="owner" ref="PRS0000">Kidāna Māryām and Walatta Krǝstos are
-                     mentioned in supplication formulas on <locus target="#21ra">21ra</locus>, 28rb,
-                     36rb.</persName>
-                  <!--ACHTUNG! This is actually paragraphic information identifying the donor. 
-                                        Person/persName should only contain the person name, not all the paragraph.-->
-               </person>
-               <person>
-                  <persName ref="PRS00000"/>
-                  <!--other-->
-               </person>
-            </listPerson>
-         </particDesc>
+         
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="Liturgy"/>
@@ -233,6 +225,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="SA" when="2014-01-28">catalogued</change>
          <change who="EG" when="2014-05-04">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
+         <change when="2021-06-01" who="ES">adjusted to schema, no person ID created</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

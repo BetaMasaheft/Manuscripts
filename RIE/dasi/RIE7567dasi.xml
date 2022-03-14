@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
         type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE7567dasi" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -13,6 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                             <resp>Editor</resp>
                         </respStmt>
             <editor key="AB"/>
+            <editor key="AS"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -44,12 +45,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"/>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
+                           <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/257" xml:lang="fr">Dalle</objectType>
                         </support>
+                        <extent>
+                            <dimensions unit="cm">
+                                <height>48</height>
+                                <width>33</width>
+                            </dimensions>
+                            </extent>
                         <foliation/>
                      </supportDesc>
+                     <layoutDesc>
+                         <layout>
+                         <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                     </layout>
+                         <layout writtenLines="5"/>
+                         </layoutDesc>
                   </objectDesc>
-               </physDesc>
+                </physDesc>
                <additional>
                   <adminInfo>
                      <recordHist>
@@ -57,6 +71,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">71—72</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -82,15 +97,58 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-05-12">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+        <div type="bibliography">
+          <listBibl type="secondary">
+            <bibl xml:id="rie1">
+              <ptr target="bm:RIE1"/>
+              <citedRange unit="page">71—72</citedRange>
+           </bibl>
+           <bibl>
+             <ptr target="bm:RIE2"/>
+             <citedRange unit="plate">2(4)</citedRange>
+          </bibl>
+            <bibl xml:id="rie3">
+              <ptr target="bm:RIE3B"/>
+              <citedRange unit="page">34–35</citedRange>
+           </bibl>
+         </listBibl>
+        </div>
+        <div type="edition" source="#rie1">
+        <ab>
+          <!-- text keyed in with Keyman and Diacritics configuration-->
+<lb n="1"/>
+  <w part="F"><supplied reason="lost"><milestone unit="word"/> bn <milestone unit="word"/> bn <milestone unit="word"/>
+slmm <milestone unit="word"/></supplied>
+</w>
+<gap reason="lost"/>
+<lb n="2"/>fṭ<w part="I"><supplied reason="lost"> rn <milestone unit="word"/>
+</supplied></w><gap reason="lost"/>
+<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><damage><milestone unit="word"/></damage>mšq<supplied reason="omitted">h</supplied>
+<lb n="4"/> y <milestone unit="word"/> wmʿr <damage>b</damage> hy <milestone unit="word"/><gap reason="lost" extent="unknown"/>
+ <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> m <milestone unit="word"/>
+</ab>
+</div>
+<!-- text copied from PDF and marked up-->
+        <div type="translation" xml:lang="fr" source="#rie3">
+          <ab>
+<lb n="1"/> <w part="F"><supplied reason="lost">, descendant de SLMM </supplied></w><gap reason="lost"/>
+<lb n="2"/> FṬ <w part="I"><supplied reason="lost">RN,</supplied></w><gap reason="lost"/>
+<lb n="3"/> <gap reason="lost" extent="unknown" unit="character"/> de l’est aussi
+<lb n="4"/> bien que de l’ouest, <gap reason="lost" extent="unknown" unit="character"/>
+<lb n="5"/> <gap reason="lost" extent="unknown" unit="character"/>
+
+      </ab>
+      </div>
       </body>
    </text>
 </TEI>

@@ -32,9 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>Psalter of Wassan Sagad, ዳዊት፡</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                    <locus from="1r" to="165r" facs="004"/>
+                    <title type="complete" ref="LIT2701Dawit"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                    <note><title type="complete" ref="LIT2509Weddas"/> arranged for the days of the week</note>
                   </msItem>
-               </msContents>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -51,11 +54,78 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            </dimensions>
                         </extent>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout columns="1" writtenLines="20">
+                         <locus from="1r" to="150r" facs="004"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="20">
+                         <locus from="150v" to="165r" facs="154"></locus>
+                       </layout>
+                    </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic">
+                    <seg type="rubrication">
+                    <foreign xml:lang="gez">ማርያም፡</foreign>
+                    <foreign xml:lang="gez">እግዚአብሔር</foreign>
+                    </seg>
+                    <desc>The word God is rubricated in the first three works; the word Mary is rubricated in the final two works</desc>
+                    </handNote>
+                    <handNote xml:id="h2" script="Ethiopic">
+                      <desc>Columetric layout of text: <locus from="138r" to="139r" facs="141"/> tenth biblical canticle <title type="complete" ref="LIT1566hababa#ThreeYouths3"/>)</desc>
+                    </handNote>
+                    </handDesc>
+                    <decoDesc>
+                      <decoNote type="frame" xml:id="d1"><locus target="#1r #16r #25r #36r #44v #60r #71r #115r #121v #142v" facs="004 019 028 039 048 063 074 118 125 146"/> (line of alternating red and black dots); <locus target="#80r #86r #111v #128v" facs="083 089 115 132"/> (line of black dots); <locus target="#150r" facs="153"/> (multiple full stops and a line of red and black dots)</decoNote>
+                    </decoDesc>
+                    <additions>
+                      <list>
+                        <item xml:id="e1">
+                          <locus target="#36r #68r #95r #101v" facs="039 071 098 105"/>
+                          <desc>words of text are written interlinearly</desc>
+                        </item>
+                        <item xml:id="e2">
+                          <locus target="#131v" facs="135"/>
+                          <desc>lines of text are written interlinearly</desc>
+                        </item>
+                        <item xml:id="e3">
+                          <locus target="#70r #71v #86v" facs="073 075 090"/>
+                          <desc>erasure markings are visible</desc>
+                        </item>
+                        <item xml:id="e4">
+                          <locus target="#7v #11v #32r" facs="011 015 #035"/>
+                          <desc>text has been removed</desc>
+                        </item>
+                        <item xml:id="e5">
+                          <note>EMML 6260. Inventory #: AI - IV - 19</note>
+                        </item>
+                        <item xml:id="e6">
+                          <locus target="#ir" facs="001"/>
+                          <note>There is a note written on a piece of paper pasted onto the first folio</note>
+                        </item>
+                        <item xml:id="e7">
+                          <locus from="iv(erso)" to="iiiv(erso)" facs="002"/>
+                          <locus target="#165v" facs="169"/>
+                          <desc>blank folios</desc>
+                        </item>
+                        <item xml:id="e8">
+                          <locus target="#1r #122v #123r #128v #150r" facs="004 127 133 153"/>
+                          <desc type="StampExlibris"/>
+                        </item>
+                      </list>
+                    </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1725">early-eighteenth century</origDate>
+                     <origDate notBefore="1700" notAfter="1750">Early-eighteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -74,6 +144,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
          <change when="2020-04-17" who="RL">Corrected ǝ characters</change>
+         <change when="2021-10-01" who="JS">Added ms contents, columns/lines, hand notes, decoDesc, extras dating info.</change>
     </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
