@@ -5,9 +5,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>ʾƎgzer Nagś
-                </title>
+                <title>ʾƎgziʾabǝḥer nagśa</title>
                 <editor key="SG"/>
+                <editor key="DR"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
@@ -44,13 +44,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <textLang xml:lang="gez"/>
                             
                             <msItem xml:id="ms_i1.1">
-                                <locus from="2ra" to=""/>
+                                <locus from="2ra" to="2va"/>
                                 <title type="complete" ref="LIT6592EgziabeherN#Introduction"/>
                                 <textLang xml:lang="gez"/>
+                                <incipit xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ፨ ጸሐፍነ፡ በዘንዜከር፡ እግዚእብሔር፡ ነግሠ፡ ዘአስተጋብአ፡ ፩፡ ካህን፡ ከመ፡ ይንግር፡ ዜናሆሙ፡ ለዝለ፡ አሥመርዎ፡ በንጽሕ፡ ለመድኃኒነ።</incipit>
                             </msItem>
                             
                             <msItem xml:id="ms_i1.2">
-                                <locus from="2ra" to="13vb"/>
+                                <locus from="2va" to="13vb"/>
                                 <title type="complete" ref="LIT6592EgziabeherN#HedarFirstPart"/>
                                 <textLang xml:lang="gez"/>
                             </msItem>
@@ -143,6 +144,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </support>
                                 <extent>
                                     <measure unit="leaf">197+1</measure>
+                                    <note>One unnumbered leaf at the end, referred to as <locus target="#i"/> in the library's digitisation.</note>
                                     <dimensions type="outer" unit="in">
                                         <height>6.75</height>
                                         <width>5.88</width>
@@ -231,17 +233,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                             <dim unit="leaf">10</dim>
                                             <locus from="172r" to="181v"/>
                                         </item>
-                                <!--        <item xml:id="q20" n="19">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="182r" to="1v"/>
-                                        </item>-->
+                                        <item xml:id="q20" n="19">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="182r" to="189v"/>
+                                            3, stub after 6
+                                            6, stub after 3
+                                        </item>
+                                        <item xml:id="q21" n="20">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="190r" to="197v"/>
+                                            2, stub after 7
+                                            7, stub after 2
+                                        </item>
                                     </list>
                                 </collation>
                                 <condition key="good"/>
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="13 16"/>
+                                <layout columns="2" writtenLines="13 16">
+                                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                                    <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling,
+                                        the lower line is written above the ruling.</ab>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         
@@ -255,7 +271,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </handDesc>   
                         <additions>
                             <list>
-                            <item xml:id="a2">
+                                <item xml:id="a1">
+                                    <locus target="#197ra"/>
+                                    <desc type="OwnershipNote">The note, written in the main hand following the end of <ref target="#ms_i1"/>, states that the manuscript belongs
+                                        to <persName ref="PRS13780HabtaG" role="owner"/>, who sponsored its production.</desc>
+                                    <q xml:lang="gez"><hi rend="rubric">ዝመጽሐፍ፡ ዘ<persName ref="PRS13780HabtaG" role="owner">ሀብተ፡ ጊዮርጊስ፡</persName> ዘአጽሐፎ፡ በሢመቱ፡ ኦርቶዶክሳዊት፡ ለመድኃኒተ፡ ነፍስ፤</hi></q>
+                                </item>
+                                
+                                <item xml:id="a2">
+                                    <locus target="#127r #145r #164r #180r #192v"/>
+                                    <desc type="GuestText">In the last third of the manuscripts, hymns to Mary are added in the upper margin of the first folium of a new month.</desc>
+                                    <q xml:lang="gez"/>
+                                </item>
+                                
+                            <item xml:id="a3">
                                 <locus target="#2r"/>
                                 <desc type="OwnershipNote">The note states that the manuscript belongs to the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
                                 </desc>
@@ -264,12 +293,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </list>
                         </additions>
                         
+                        <bindingDesc>
+                            <binding contemporary="true" xml:id="binding">
+                                <decoNote xml:id="b1">In the original wooden boards, covered with blind-tooled leather, with textile inlays.</decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                    <material key="textile"/>
+                                </decoNote>
+                            </binding>
+                        </bindingDesc>
+                        
                     </physDesc>
                     
                     <history>
                         <origin>
-                            
-                            <origDate/>
+                            <origDate notBefore="1700" notAfter="1799" evidence="lettering"/>
                         </origin>
                         <provenance>The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area, 
                             from where it was taken by
