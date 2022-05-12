@@ -5,9 +5,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Mǝʿǝrāf
-                </title>
+                <title>Mǝʿrāf</title>
                 <editor key="SG"/>
+                <editor key="DR"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
@@ -38,13 +38,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msContents>
                         <summary/>
                         
-                        
+                        <msItem xml:id="ms_i1">
+                            <locus from="3r"/>
+                            <title type="incomplete" ref="LIT3186Meeraf"/>
+                            <textLang mainLang="gez"/>
+                            <note>Slightly incomplete at the end.</note>
+                            <notatedMusic><desc>With musical notes.</desc></notatedMusic>
+                            <incipit xml:lang="gez">ንወጥን፡ በረድኤተ፡ እግዚአብሔር፡ ተፀዊነነ፡ ቦቱ፡ ጽሒፈ፡ 
+                                ምዕራፍ፡ ሎቱ፡ ስብሐት፡ እስከ፡ ለዓለም። ዘይትቀነዩ፡ በበዘመኑ። እምዮሐንስ፡ እስከ፡ ዮሐንስ፡</incipit>
+                        </msItem>
                     </msContents>
-                    
-                    
-                    
-                    
-                    
                     
                     <physDesc>
                         <objectDesc form="Codex">
@@ -54,41 +57,53 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </support>
                                 <extent>
                                     <measure unit="leaf">134</measure>
-                                    <dimensions type="outer" unit="mm">
-                                        <height>171</height>
-                                        <width>152</width>
+                                    <dimensions type="outer" unit="in">
+                                        <height>6.75</height>
+                                        <width>6</width>
                                     </dimensions>
                                 </extent>
-                                
-                                
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns=" 2" writtenLines="14" cert="high"/>
+                                <layout columns=" 2" writtenLines="14"/>
                             </layoutDesc>
                         </objectDesc>
                         
                         <handDesc>
                             
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is neatly written of the <date>18th century</date>
-                                </desc>
-                                
-                                <date notBefore="1700" notAfter="1800"/>
-                                
+                                <desc>Neatly written.</desc>
+                                <date notBefore="1700" notAfter="1799"/>
                             </handNote>
-                            
                         </handDesc>   
+                     
                         <additions>
-                            
+                            <list>
+                                <item xml:id="e1">
+                                    <desc><persName ref="PRS5616IyasuI"/> and <persName ref="PRS8870Sinoda"/> are mentioned in prayers on <locus target="#92v"/>;
+                                        <persName ref="PRS5616IyasuI"/> is also mentioned on <locus target="#94r"/> and in 
+                                        <ref type="work" corresp="LIT2605Zayena"/>
+                                        on <locus target="#117v"/>. This would point to a date of production between <date>1682-1692</date>, however,
+                                        <persName ref="PRS10171Wright"/>
+                                    judges it improbable that the manuscript is as old and assumes that the names were copied from an older
+                                    manuscript.</desc>
+                                </item>
+                                
+                                <item xml:id="a1">
+                                    <locus target="#3r"/>
+                                    <desc type="OwnershipNote">The note states that the manuscript belongs to the church of 
+                                        <placeName ref="INS0101MadhaneAlam"/>.
+                                    </desc>
+                                    <q xml:lang="gez">ምእራፍ፡ ዘቅዱስ፡ <placeName ref="INS0101MadhaneAlam">መድኃኔ፡ ዓለም።</placeName></q>
+                                </item>
+                            </list>
                         </additions>
-                        
                     </physDesc>
                     
                     <history>
                         <origin>
-                            
-                            <origDate/>
+                            <origDate notBefore="1700" notAfter="1799" evidence="lettering"/>
+                            <origDate notBefore="1682" notAfter="1692" evidence="prosopography"/>
                         </origin>
                         <provenance>The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area, 
                             from where it was taken by
@@ -104,7 +119,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <listBibl type="catalogue">
                                         <bibl>
                                             <ptr target="bm:Wright1877BM"/>
-                                            <citedRange unit="page">116a</citedRange>
+                                            <citedRange unit="page">116b</citedRange>
                                         </bibl>
                                     </listBibl>
                                     
@@ -131,15 +146,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Liturgy"/>
-                    
+                    <term key="Chants"/>
                 </keywords>
             </textClass>
-            <langUsage/>
+            <langUsage>
+                <language ident="gez">Gǝʿǝz</language>
+                <language ident="en">English</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-04-10">Created catalogue entry</change>
-            
-            
+            <change who="DR" when="2022-04-23">Continued description from historical catalogue entry</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

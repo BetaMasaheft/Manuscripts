@@ -5,8 +5,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Miracles of the blessed Virgin Mary, the Order of Baptism</title>
+                <title>Taʾammǝra Māryām, Maṣḥafa ṭǝmqat</title>
                 <editor key="SG"/>
+                <editor key="DR"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
@@ -37,13 +38,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msContents>
                         <summary/>
                         
+                        <msItem xml:id="ms_i1">
+                            <locus from="1r"/>
+                            <title type="complete" ref="LIT3585Taamme"/>
+                            <textLang mainLang="gez"/>
+                        </msItem>
+                        
+                        <msItem xml:id="ms_i2">
+                            <locus from="11r"/>
+                            <title type="incomplete" ref="LIT1975Mashaf">መጽሐፈ፡ ጥምቀት፡</title>
+                            <textLang mainLang="gez"/>
+                            <note>Incomplete at the end.</note>
+                        </msItem>
                         
                     </msContents>
-                    
-                    
-                    
-                    
-                    
                     
                     <physDesc>
                         <objectDesc form="Codex">
@@ -58,7 +66,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                         <width>159</width>
                                     </dimensions>
                                 </extent>
-                                
+                                <condition key="deficient">Slightly damaged.</condition>
                                 
                             </supportDesc>
                             
@@ -68,19 +76,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </objectDesc>
                         
                         <handDesc>
-                            
                             <handNote script="Ethiopic" xml:id="h1">
-                                <desc>The manuscript is well written of the <date>18th century</date>. 
-                                    
-                                </desc>
-                                
-                                <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
-                                
+                                <date notBefore="1700" notAfter="1799" resp="PRS10171Wright"/>
+                                <desc>Well written.</desc>
                             </handNote>
-                            
                         </handDesc>   
+                        
                         <additions>
-                            
+                            <list>
+                                <item xml:id="a1">
+                                    <date when="1868" evidence="internal"/>
+                                    <desc type="AcquisitionNote">Note on the inside of one board.</desc>
+                                    <q xml:lang="en">Obtained from the church of the rock at <placeName ref="LOC5534Sanafe">Senafe</placeName>, <date when="1868-01-31">31st Jan. 1868</date>.
+                                        <persName ref="PRS5383Holmes">R. Holmes</persName>.</q>
+                                </item>
+                                
+                                <item xml:id="e1">
+                                    <locus target="#1r"/>
+                                    <desc>The name of the owner has been generally erased, but seems to be 
+                                        <persName ref="PRS13301AqabaM"/>.</desc>
+                                </item>
+                            </list>
                             
                         </additions>
                         
@@ -88,15 +104,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     
                     <history>
                         <origin>
-                            
-                            <origDate/>
+                            <origDate notBefore="1700" notAfter="1799" evidence="lettering"/>
                         </origin>
-                        <provenance>The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area, 
-                            from where it was taken by
-                            <persName ref="PRS9430Tewodros"/> and brought to <placeName ref="INS0101MadhaneAlam"/>. It was then looted 
-                            by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date>.</provenance>
-                        
-                        
+                        <provenance>Procured by <persName ref="PRS5383Holmes"/>,
+                            a member of the British <persName ref="PRS7484Napier">Napier</persName> expedition, 
+                            on the way to <placeName ref="LOC4547Maqdal"/> in <date>1868</date> from <placeName ref="LOC5534Sanafe"/>, 
+                            see <ref target="#a1"/>. 
+                            <listBibl type="secondary">
+                                <bibl>
+                                    <ptr target="bm:Wright1877BM"/>
+                                    <citedRange unit="page">iii</citedRange>
+                                </bibl>
+                            </listBibl>
+                        </provenance>
                     </history>
                     
                     <additional>
@@ -109,7 +129,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                             <citedRange unit="page">96a</citedRange>
                                         </bibl>
                                     </listBibl>
-                                    
                                 </source>
                             </recordHist>
                         </adminInfo>
@@ -133,14 +152,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Rituals"/>
+                    <term key="Apocrypha"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
-            <langUsage/>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="SG" when="2019-04-04">Created catalogue entry</change>
-            
-            
+            <change who="DR" when="2020-12-09">Continued description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
