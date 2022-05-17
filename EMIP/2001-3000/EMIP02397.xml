@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02397">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 362</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +32,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2397/">Weiner Codex 362</idno>
                </msIdentifier>
                <msContents>
-                  <summary>Large (ecclesial). Funeral Rituals? Includes the book that came from Jerusalem. In a large mahdar. Colophon on last page with date of 1904 EC . Strip of yellow paper inside with number 13 on it.</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
-               </msContents>
+                  <summary>Funeral Rituals</summary>
+                <msItem xml:id="ms_i1">
+                  <locus from="1r" to="145v" facs="002"/>
+                  <title type="complete" ref="LIT1931Mashaf"/>
+                <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                <colophon xml:id="coloph1">
+                      <locus target="#145v" facs="147"/>
+                      Colophon mentions the patron “Abba [erased text] and his baptismal name is Wäldä Mikaʾel.” The colophon dates the manuscript to 1904 E.C. (1911/1912)
+                    </colophon>
+                </msItem>
+                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +50,244 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 148</measure>
+                           <measure unit="quire">Protection sheet + 15</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>339</height>
+                              <width>239</width>
+                              <depth>73</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–10 and 12–13 balanced; protection sheet and quires 11 and 14–15 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i" facs="001"></locus>
+                              <note>A folium stub appears before <locus target="#i" facs="001"/>.</note>
+                              Protection Sheet:
+                              1, stub before 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="002"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="012"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30" facs="022"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40" facs="032"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50" facs="042"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60" facs="052"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="61" to="70" facs="062"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">10</dim>
+                              <locus from="71" to="80" facs="072"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">10</dim>
+                              <locus from="81" to="90" facs="082"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">10</dim>
+                              <locus from="91" to="100" facs="092"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">9</dim>
+                              <locus from="101" to="109" facs="102"></locus>
+                              <note>A folium stub appears between <locus target="#107 #108" facs="109"/>.</note>
+                              Quire 11:
+                              3, stub after 7
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">8</dim>
+                              <locus from="110" to="117" facs="111"></locus>
+                              Quire 12
+                            </item>
+                            <item xml:id="q14" n="13">
+                              <dim unit="leaf">10</dim>
+                              <locus from="118" to="127" facs="119"></locus>
+                              Quire 13
+                            </item>
+                            <item xml:id="q15" n="14">
+                              <dim unit="leaf">9</dim>
+                              <locus from="128" to="136" facs="129"></locus>
+                              <note>A folium stub appears between <locus target="#130 #131" facs="132"/>.</note>
+                              Quire 14:
+                              6, stub after 3
+                            </item>
+                            <item xml:id="q16" n="15">
+                              <dim unit="leaf">12</dim>
+                              <locus from="137" to="148" facs="138"></locus>
+                              <note>A quire of two half-sheets is inserted between <locus target="#145 #148" facs="149"/>. Folium stubs are visible between <locus target="#146 #147" facs="148"/> and between <locus target="#147 #148" facs="149"/>.</note>
+                              Quire 15:
+                              10 added
+                              11 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">33-36</dim>
+                           <dim type="bottom">55-61</dim>
+                           <dim type="right">27-34</dim>
+                           <dim type="left">18-20</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="27"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">ኢየሱስ፡ ክርስቶስ፡</foreign>
+                  <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                  <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#ir(ecto)" facs="001"> f. ir(ecto), top</locus><desc><ref type="authFile" corresp ="AT1015Flagellation"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#ir(ecto)" facs="001"> f. ir(ecto), bottom left</locus><desc><ref type="authFile" corresp ="AT1035HolyMan"/> <persName ref="PRS9162TaklaHa"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d3"><locus target="#ir(ecto)" facs="001"> f. ir(ecto), bottom right</locus><desc><ref type ="authFile" corresp="AT1035HolyMan"/> <name ref="PRS4306GabraMa"/> with lions and leopards</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d4"><locus target="#iv(erso)" facs="002"> f. iv(erso), top</locus><desc><ref type="authFile" corresp ="AT1016Flight"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d5"><locus target="#iv(erso)" facs="002"> f. iv(erso), bottom</locus><desc><ref type="authFile" corresp="AT1038Baptism"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d6"><locus target="#146r" facs="147"> f. 146r, top</locus><desc><ref type="authFile" corresp ="AT1010Entombment"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d7"><locus target="#146r" facs="147"> f. 146r, bottom</locus><desc><ref type="authFile" corresp ="AT1049Resurrection"/>, raising <persName ref="PRS1386Adam"/> and <persName ref="PRS3926Eve"/> from the dead</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d8"><locus target="#146v" facs="148"> f. 146v, top</locus><desc><ref type="authFile" corresp="AT1005Crucifixion"/>, <persName ref="PRS6819Mary"/> and John stand beside the <term key="cross"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d9"><locus target="#146v" facs="148"> f. 146v, bottom</locus><desc>Removal of the body of <ref type="authFile" corresp ="AT1084JesusChrist"/> from the <term key="cross"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d10"><locus target="#147r" facs="148"> f. 147r, top</locus><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with two <term key="angel"/>s holding <term key="sword"/>s</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d11"><locus target="#147r" facs="148"> f. 147r, bottom</locus><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d12"><locus target="#147v" facs="149"> f. 147v, top</locus><desc><ref type ="authFile" corresp="AT1002Annunciation"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d13"><locus target="#147v" facs="149"> f. 147v, bottom</locus><desc><ref type="authFile" corresp="AT1025NativityJesus"/></desc></decoNote>
+                    <decoNote type="frame" xml:id="d14">
+                    Decorative designs:
+                    <locus target="#145v" facs="147"/> (ornamental band);
+                    multiple full stops are used as section dividers throughout
+                    </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    Strip of yellow paper inside with number 13 on it
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#5v" facs="007"> f. 5v and passim</locus>
+                    the departed is referred to as <foreign xml:lang="gez">እገሌ፡</foreign> <q>ʿso-and-soʾ</q>
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <desc>
+                    <locus target="#29r" facs="030"/>
+                    mentions Peṭros IV (1881–1916), Matewos (1889–1926), and emperor Mənilək II (1889–1913)
+                    </desc>
+                    </item>
+                    <item xml:id="a3">
+                    <desc>
+                    <locus target="#113r" facs="114"/>
+                    mentions emperor Mənilək II (1889–1913)
+                    </desc>
+                    </item>
+                    <item xml:id="a4">
+                    <desc>
+                    <locus target="#113v" facs="115"/>
+                    mentions Matewos (1889–1926)
+                    </desc>
+                    </item>
+                    <item xml:id="a5">
+                    <desc>
+                    <locus target="#145v" facs="147"/>
+                    mentions the owner Wäldä Mikaʾel (<foreign xml:lang="gez">ወልደ፡ ሚካኤል፡</foreign>) and the scribe ʾAklog (<foreign xml:lang="gez">አክሎግ፡</foreign>)
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#148r #148v" facs="149 150"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                    <locus target="#19 #73 #125 #127 #133" facs="020 074 126 134"/>
+                    black thread stitched into top edge as navigation system
+                    </desc>
+                    </item>
+                    <item xml:id="e4">
+                    <desc>
+                    <locus target="#64" facs="065"/>
+                    white thread stitched into top edge as navigation system
+                    </desc>
+                    </item>
+                    <item xml:id="e5">
+                    <desc>
+                    <locus target="#104" facs="105"/>
+                    white thread stitched into fore edge as navigation system
+                    </desc>
+                    </item>
+                    <item xml:id="e6">
+                    <desc>
+                    <locus target="#114" facs="115"/>
+                    red thread stitched into top edge as navigation system
+                    </desc>
+                    </item>
+                    <item xml:id="e7">
+                    <desc>
+                    Numbered quires: quires 2–15
+                    </desc>
+                    </item>
+                    <item xml:id="e8">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#6r #11r #11v #16r #19r #20v" facs="007 012 013 017 020 022"/>, etc.);
+                      text has been removed (<locus target="#7r #19v #63v #73v" facs="008 021 065 075"/>
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1911">1904EC = 1911/12</origDate>
+                     <origDate notBefore="1911" notAfter="1912"><locus target="#145v" facs="147"/> mentions 1904 EC.</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +306,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2021-02-16" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2021-03-09" who="ABe">Added ms_i1, minis 1-13, a1-5, and e1-8</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
