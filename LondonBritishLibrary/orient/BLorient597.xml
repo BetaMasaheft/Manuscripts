@@ -43,12 +43,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">262</measure>
+                                    <measure unit="leaf" quantity="262">262</measure>
                                     <dimensions type="outer" unit="in">
                                         <height>16.125</height>
                                         <width>12.625</width>
                                     </dimensions>
                                 </extent>
+                              <foliation>Foliation in the upper right corner by the library.</foliation> 
+                              <collation>
+                                <signatures>Quire marks in the middle of the lower margin, and/or in the upper inner corner of the first folium of each quire.</signatures>
+                                <note>The quire structure is difficult to discern.</note>
+                              </collation>
                                 <condition key="good">Some leaves are slightly stained and torn.</condition>
                             </supportDesc>
 
@@ -64,6 +69,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </item>
                           </list>
                         </additions>
+                      
+                      <bindingDesc>
+                        <binding contemporary="false" xml:id="binding">
+                          <decoNote xml:id="b1" type="Boards">Two wooden boards.</decoNote> 
+                          <decoNote xml:id="b2" type="Cover">Blind-tooled leather cover
+                            (with the gilded title and shelfmark on the spine).</decoNote> 
+                          <decoNote xml:id="b3" type="bindingMaterial">
+                            <material key="wood"/>
+                            <material key="leather"/>
+                          </decoNote>
+                          <decoNote xml:id="b4" type="SewingStations">4</decoNote> 
+                          <decoNote xml:id="b5" type="SewingStations">Sewing stations are used in an irregular way.</decoNote> 
+                          <decoNote xml:id="b6">The manuscript has been rebound in the library. Possibly both wooden boards have been replaced, 
+                            and a blind-tooled cover added.</decoNote>
+                        </binding>
+                      </bindingDesc>
 
                     </physDesc>
 
@@ -88,6 +109,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                                 </source>
                             </recordHist>
+                          <custodialHist>
+                            <custEvent type="restorations" subtype="modern"/>
+                          </custodialHist>
                         </adminInfo>
                     </additional>
                     <msPart xml:id="p1">
@@ -108,18 +132,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                       <material key="parchment"/>
                                   </support>
                                   <extent>
-                                      <measure unit="leaf">1</measure>
-
+                                      <measure unit="leaf" quantity="1">1</measure>
+<locus target="#1"/>
                                   </extent>
                               </supportDesc>
 
                               <layoutDesc>
-                                  <layout columns="2" writtenLines="22"/>
+                                  <layout columns="2" writtenLines="22">
+                                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                                    <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                    <ab type="ruling">The upper line is written above the ruling,
+                                      the lower line is written above the ruling.</ab>
+                                  </layout>
                               </layoutDesc>
                           </objectDesc>
                           <handDesc>
                               <handNote script="Ethiopic" xml:id="h1">
-                                  <desc>The manuscripts is written in a hand of the <date>15th century</date>.
+                                  <desc>The manuscript is written in a hand of the <date>15th century</date>.
                                   </desc>
                                   <date notBefore="1400" notAfter="1500"/>
                               </handNote>
@@ -367,15 +397,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                   <support>
                                       <material key="parchment"/>
                                   </support>
+                                <extent>
+                                  <measure unit="leaf" quantity="261">261</measure>
+                                  <locus from="2" to="262"/>
+                                </extent>
                               </supportDesc>
 
                               <layoutDesc>
-                                  <layout columns="2" writtenLines="34"/>
+                                  <layout columns="2" writtenLines="34">
+                                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                                    <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                    <ab type="ruling">The upper line is written above the ruling,
+                                      the lower line is written above the ruling.</ab>
+                                  </layout>
                               </layoutDesc>
                           </objectDesc>
                           <handDesc>
                               <handNote script="Ethiopic" xml:id="h2">
-                                  <desc>The manuscripts is written in a hand of the <date>15th century</date>.
+                                  <desc>The manuscript is written in a hand of the <date>15th century</date>.
                                   </desc>
                                   <date notBefore="1400" notAfter="1500"/>
                               </handNote>
@@ -620,6 +660,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="SG" when="2019-04-24">Created catalogue entry</change>
             <change when="2020-11-26" who="DR">Added link to images</change>
             <change when="2021-07-15" who="DE">Completed the description</change>
+          <change when="2022-06-24" who="DR">Added layout</change>
+          <change when="2022-07-04" who="DR">Added binding</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
