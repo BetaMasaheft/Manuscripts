@@ -1,0 +1,60 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout code
+      - name: Checkout
+        uses: actions/checkout@v3
+      # checkout schema as xmllint can't https 
+      - name: Checkout schema repo
+        uses: actions/checkout@v3
+        with:
+          repository: BetaMasaheft/Schema
+          path: schema
+          fetch-depth: 1  
+      - name: Install Test Dependencies
+        run: |
+          sudo apt-get install libxml2-utils
+          xmllint --version
+      # - name: check local Files
+      #   run: |
+      #     cd schema
+      #     ls
+      # - name: Build Xar Package
+      #   run:  ant
+      - name: Validate XML Files
+        run: |
+          xmllint \
+            --noout --xinclude --nowarning \
+            --relaxng schema/tei-betamesaheft.rng \
+            $(find . -type f -name '*.xml' -not -name "facsimile*" -not -name "transkribus*" -not -name "build.xml" -not -name "repo.xml" -not -name "expath-pkg.xml" -not -path "./schema/*")
+       
+  release:
+    runs-on: ubuntu-latest
+    # needs: test
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      # TODO(DP): not clear yet what these will be
+      - name: Build Expath Package
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 8
+      - run: ant  
+      # TBD 
+      # - name: Expand xml data
+      #   run: ant expand
+      # - name: Check Git Status 
+      #   run: git status
+      # TODO(DP): baptise commiter bot
+      # - name: Commit and Push
+      #   uses: actions-x/commit@v2
+      #   with:
+      #     message: "[skip ci] BetaMasaBot"
