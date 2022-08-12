@@ -72,7 +72,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <!--   <p>Tears repaired on <locus target="#..."/>.</p>. -->
+                                    <p>Tears repaired on <locus target="#1 #43 #71"/>.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">86</measure>
@@ -133,6 +133,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                         </list>
                                 </collation>
+                                <condition key="good">                   
+                                    The entire manuscript is slightly damaged by humidity and dirt, especially at the upper and outer corners of the leaves.
+                                    Stains of wax are found on <locus target="#76v #77r"/>.
+                                    The readability of text deteriorates towards the end of the book and the text is barely legible due to faded ink (<locus target="#81r #81v"/>).
+                                </condition>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -160,18 +165,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
                                 <seg type="ink">Black, red</seg>
-                              <!--   <date when="1975">20th century</date>
+                                <date notBefore="1700" notAfter="1799">18th century</date>
                                 <desc>
-                                    Fine handwriting.
+                                    Mediocre handwriting. Slant and spacing of the characters vary throughout the manuscript.
                                 </desc>
                                 <seg type="rubrication">
-                                    Holy names; several groups of lines on the incipit page, alternating with black lines;
-                                    the word <foreign xml:lang="gez">ክፍል፡</foreign>;
-                                    first two lines of <ref target="ms_i1.3"/>; incipit of each monthly section of <ref target="ms_i2"/>;
-                                    elements of the punctuation signs, text dividers, and numerals, included quire marks;
-                                    name of the patron and of the scribe in the colophon.
+                                    Holy names; some lines on the incipit page, alternating with black lines; few lines on <ref target="#62v"/>;
+                                    the title of the <foreign xml:lang="gez">Ṣalota fattǝto</foreign> on <ref target="#64v"/>;
+                                    liturgical directives in abbreviation; few letters, alternating with black lines, of single words or groups of words on <ref target="#63v #71v #72v"/>;                                    
+                                    elements of the punctuation signs and numerals.
                                 </seg>
-                                --> 
+                                <list type="abbreviations">
+                                    <item>
+                                        <abbr>ይዲ</abbr> for <expan>ይቤ፡ ዲያቆን፡</expan> (e.g. <locus target="#15r #17v #18v"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ይካ</abbr> or <abbr>ይ፡ ካህ፡</abbr> for <expan>ይቤ፡ ካህን፡</expan> (e.g. <locus target="#17v #20r #68v"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ይሕ</abbr> for <expan>ይቤ፡ ሕዝብ፡</expan> (e.g. <locus target="#47v #71v #73r"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ቅ</abbr> for <expan>ቅዱስ፡</expan> (e.g. <locus target="#53v"/>)
+                                    </item>
+                                   </list>
                             </handNote>
                         </handDesc>
                         
@@ -179,7 +196,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <!-- Decoration to be revised by JG -->
                             <decoNote type="miniature" xml:id="d1">
                                 <locus target="#4v"/>
-                                <desc>Virgin and Child</desc>
+                                <desc>The Virgin and Child</desc>
                             </decoNote>
                             <decoNote type="miniature" xml:id="d2">
                                 <locus target="#57r"/>
@@ -187,45 +204,77 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </decoNote>
                         </decoDesc>
                         
-                        <!--          <additions>
+                        <additions>
                             <list>
+                                <item xml:id="a1">
+                                    <locus from="1r" to="2r"/>
+                                    <desc type="GuestText">Excerpt from the <title ref="LIT1099Anapho"/>, written in the main hand. 
+                                        The note reproduces the same text found on <locus from="61r" to="62v"/> and corresponds to 
+                                        <bibl><ptr target="bm:Petrus1548Test"/><citedRange unit="page">172va, last line-172vb, l. 12</citedRange></bibl>.
+                                        Liturgical directives in abbreviation and elements of the punctuation signs are rubricated.
+                                    </desc>  
+                                    <q xml:lang="gez"><seg part="I">የ፡ ትዜንዉ። <abbr><hi rend="rubric">ይካ፡</hi></abbr> ኦእግዚኦ፡ በከመ፡ አሜሃ፡ ዘንተ፡ ኅብስተ፡ ባርክ። ወፈትት፡ 
+                                        ወሀብ፡ እግዚኦ፡ በከመ፡ አሜሃ፡ ዘንተ፡ ጽዋዓ፡ ዕቀብ። ወቀድስ፡ ወመጡ።</seg></q>
+                                    <q xml:lang="gez"><seg part="F">በከመ፡ ሕገ፡ ላዕክ፡ አ<add place="interlinear">ብ</add>ጽሖ፡ ካ<add place="interlinear">ዕ</add>በ፡ ዘየአቤ፡ ማዕረግ፡ 
+                                        ሴመተ፡ ካህነት። ወረሰዮ፡ ምሉዓ።</seg></q>
+                                </item>
+                                
                                 <item xml:id="e1">
                                     <desc>A white sticker is glued on <locus target="#1r"/>. The name of <persName ref="PRS5782JuelJen"/> is printed on it
-                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. d. 18" is written in pencil.
-                                        An additional sticker, with the signature "Ms 16" on it, is glued below it.</desc>
+                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. f. 32" is written in pencil.
+                                    </desc>
                                 </item>
                                 <item xml:id="e2">
-                                    <locus target="#1r"/>
-                                    <desc>The title of the book in Gǝʿǝz and in English is written in pencil in small script.
+                                    <desc>Some writings have been added in pencil on <locus target="#1r"/> by the hand of <persName ref="PRS5782JuelJen"/>. On the upper margin is written
+                                        an amount of money which presumably indicates the price of sale of the manuscript <q xml:lang="en">"£ 120"</q>; below are found
+                                        information on the dating and the decorations <q xml:lang="en">"C 18 - 2 miniatures"</q>, as well as the signature of the book <q xml:lang="en">"Ms Aeth. J-J 39"</q>;  
+                                        on the lower margin is written the title of the book in English <q xml:lang="en">"Praise for the Holy Communion of Our Mother Mary written 
+                                            <supplied reason="omitted">by</supplied> Aba Hariyaqos of Bhansa"</q>.
                                     </desc>
-                                    <q xml:lang="gez">ኄኖክ</q> <q xml:lang="en">The book of Henok</q>
                                 </item>
                                 <item xml:id="e3">
-                                    <desc>Chapter numbering is erroneously given from 12 onwards.
-                                        Chapters 11, 27, 32, 46 are not numbered.
-                                        Numbering of chapter 68 (which corresponds to ch. 71) is omitted.
+                                    <desc>
+                                        Corrections are infrequent. They mostly consist of interlineal additions (e.g. <locus target="#17r #21v #65v"/>) and corrections through dashes above and below 
+                                        the letters (e.g. <locus target="#15r #43v #75r"/>).
                                     </desc>
+                                </item>
+                                <item xml:id="e4">
+                                    <locus from="1r" to="1v"/>
+                                    <locus from="82v" to="84r"/>
+                                    <desc>Scribbles and pen trials in blue or violet ink.</desc> 
+                                </item>
+                                <item xml:id="e5">
+                                    <locus target="#3v"/> 
+                                    <locus from="86r" to="86v"/>
+                                    <desc>Crude drawings of human figures in red ink or blue pencil.</desc> 
+                                </item>
+                                <item xml:id="e6">
+                                    <locus from="81v" to="82r"/>
+                                    <desc>Several names of individuals have been addes in blue pencil or violet ink in a very inaccurate handwriting.</desc> 
                                 </item>
                             </list>
                         </additions>
-                        -->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
+                    
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards.
+                                    On the back board the following writing <q xml:lang="en">"Profumeria 20555 Extra Mil"</q> (?) is carved, together with decorative interlaces.
+                                    Part of the writing is now lost.
+                                </decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+                                    <material key="wood"/>       
+                                </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">2</decoNote>
+                                <decoNote xml:id="b4" type="SlipCase">The manuscript is provided with a <material key="leather"/> double-slip case with a strap.</decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
                     </physDesc>
                     
                     <history>
                         <origin>
-                            <origDate from="" to="" evidence="lettering"/>
+                            <origDate from="1700" to="1799" evidence="lettering"/>
                         </origin>
-                        <provenance>Bought by <persName ref="PRS5782JuelJen"/> in ....</provenance>
+                        <provenance>Unknown provenance. The manuscript was purchased by <persName ref="PRS5782JuelJen"/> under unknown circustamnces.</provenance>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -259,7 +308,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-01-17">Created record</change>
             <change who="DR" when="2020-02-24">Added dimensions and layout</change>
             <change who="SH" when="2020-04-22">Added editors</change>
-            <change who="MV" when="2022-08-12">Added textual content</change>
+            <change who="MV" when="2022-08-12">Added textual content, conservation, rubrication</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
