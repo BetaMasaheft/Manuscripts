@@ -10,10 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>ʾAkkʷateta qʷǝrbān za-qǝddus Hǝryāqos za-hagara Bǝhnǝsā</title>
+                <title xml:lang="gez" xml:id="title1">አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ህርያቆስ፡ ዘሀገረ፡ ብህንሳ፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">ʾAkkʷateta qʷǝrbān za-qǝddus Hǝryāqos za-hagara Bǝhnǝsā</title>
+                <title xml:lang="en" corresp="#title1">Anaphora of St Cyriacus from Bǝhnǝsā</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -36,11 +41,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <msContents>
                         <summary/>
-                        
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
-                        
+                        <msItem xml:id="ms_i1">
+                            <locus from="5r" to="82r"/>
+                            <title type="complete" ref="LIT1099Anapho"/>
+                            <textLang mainLang="gez"/>    
+                            <incipit xml:lang="gez" type="inscriptio">
+                                <locus target="#5r"/>
+                                <hi rend="rubric">አኰቴተ፡ ቍርባን፡ ዘእግዚ</hi>እትነ፡ <hi rend="rubric">ማርያም፡</hi> ዘደረሰ፡ አባ<supplied reason="omitted">፡</supplied> ሕርያቆስ፡ 
+                                ኤጲ<hi rend="rubric">ስ፡ ቆጶስ፡ ዘሀገረ<supplied reason="omitted">፡</supplied></hi> ብሕንሳ፡ 
+                            </incipit>
+                            <incipit xml:lang="gez" type="supplication">
+                                <locus from="5r" to="5v"/>
+                                ጸሎታ<supplied reason="omitted">፡</supplied> ወበረከታ፡ የሃ<pb n="5v"/>ሉ፡ ምስለ፡ ገብራ። <space unit="chars" quantity="5"/> ለዓለመ፡ ዓለም፡ <abbr>አ</abbr>፤
+                            </incipit>
+                            <incipit xml:lang="gez">
+                                <locus from="5v" to="6r"/>
+                                <hi rend="rubric">ጐሥዓ፡ ልብየ፡ ቃለ፡ ሠናየ፡ ጐ</hi>ሥዓ፡ ልብየ፡ ቃለ፡ ሠናየ፡ ጐሥዓ፡ ልብየ፡ ቃለ፡ ሠና<pb n="6r"/>የ፡ ወአነ፡ አየድዕ፡ ቅዳሴሃ፡ 
+                                <hi rend="rubric">ለማርያም፡</hi> 
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus from="81r" to="82r"/>
+                                እስመ፡ <hi rend="rubric">ማርያም፡ እግዝእትነ፡ ቅ</hi><pb n="81v"/>ድስት፡ ድንግል። ይእቲ፡ ወትረ። በሰማይ፡ ወ<add place="interlinear">በ</add>ምድር፡ 
+                                በረከተ፡ ጸሎታ፡ ወሀብተ፡ ረድኤታ፡ የሀሉ፡ ምስለ፡ ገብራ። ለዓለመ፡ ዓለም፡ <abbr>አሜ።</abbr> ወአሜን፡ <pb n="82r"/> ለይኩን።
+                            </explicit>
+                        </msItem>
                     </msContents>
                     
                     <physDesc>
@@ -48,11 +72,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <!--   <p>Tears repaired on <locus target="#..."/>.</p>. -->
                                 </support>
                                 <extent>
                                     <measure unit="leaf">86</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <measure unit="leaf" type="blank">5</measure>
+                                    <locus target="#3v #4r #84v #85r #85v"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>98</height>
                                         <width>72</width>
@@ -124,20 +149,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">10</dim>
                                         <dim type="left">8</dim>
                                     </dimensions>
+                                    <note> The characters per line are 5-9</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
                             </layoutDesc>
-                           
                         </objectDesc>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+                                <seg type="ink">Black, red</seg>
+                              <!--   <date when="1975">20th century</date>
+                                <desc>
+                                    Fine handwriting.
+                                </desc>
+                                <seg type="rubrication">
+                                    Holy names; several groups of lines on the incipit page, alternating with black lines;
+                                    the word <foreign xml:lang="gez">ክፍል፡</foreign>;
+                                    first two lines of <ref target="ms_i1.3"/>; incipit of each monthly section of <ref target="ms_i2"/>;
+                                    elements of the punctuation signs, text dividers, and numerals, included quire marks;
+                                    name of the patron and of the scribe in the colophon.
+                                </seg>
+                                --> 
                             </handNote>
                         </handDesc>
                         
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
+                        <decoDesc>
+                            <!-- Decoration to be revised by JG -->
+                            <decoNote type="miniature" xml:id="d1">
+                                <locus target="#4v"/>
+                                <desc>Virgin and Child</desc>
+                            </decoNote>
+                            <decoNote type="miniature" xml:id="d2">
+                                <locus target="#57r"/>
+                                <desc>St George and the dragon.</desc>
+                            </decoNote>
+                        </decoDesc>
+                        
+                        <!--          <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <desc>A white sticker is glued on <locus target="#1r"/>. The name of <persName ref="PRS5782JuelJen"/> is printed on it
+                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature "MS. Aeth. d. 18" is written in pencil.
+                                        An additional sticker, with the signature "Ms 16" on it, is glued below it.</desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <locus target="#1r"/>
+                                    <desc>The title of the book in Gǝʿǝz and in English is written in pencil in small script.
+                                    </desc>
+                                    <q xml:lang="gez">ኄኖክ</q> <q xml:lang="en">The book of Henok</q>
+                                </item>
+                                <item xml:id="e3">
+                                    <desc>Chapter numbering is erroneously given from 12 onwards.
+                                        Chapters 11, 27, 32, 46 are not numbered.
+                                        Numbering of chapter 68 (which corresponds to ch. 71) is omitted.
+                                    </desc>
+                                </item>
+                            </list>
+                        </additions>
+                        -->
                         
                    <!--     <bindingDesc>
                             <binding xml:id="binding">
@@ -150,25 +221,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                     </physDesc>
                     
-                <!--    <history>
+                    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate from="" to="" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
-                    
-                    <additional>
-                        <adminInfo>
-                            <recordHist>
-                                <source>
-                                  <!--  <listBibl type="secondary">
-                                        <bibl></bibl>
-                                    </listBibl>-->
-                                </source>
-                            </recordHist>
-                        </adminInfo>
-                    </additional>
-                    
+                        <provenance>Bought by <persName ref="PRS5782JuelJen"/> in ....</provenance>
+                    </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -189,6 +247,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Liturgy"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -199,7 +258,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-17">Created record</change>
             <change who="DR" when="2020-02-24">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="MV" when="2022-08-12">Added textual content</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
