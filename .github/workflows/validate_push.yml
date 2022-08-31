@@ -1,5 +1,8 @@
-name: Validate
-on: pull_request
+name: Validate Push
+on:
+  push:
+    branches:    
+      - master
 
 defaults:
   run:
@@ -7,7 +10,7 @@ defaults:
     working-directory: project
 
 jobs:
-  test:
+  validate-all-and-build:
     runs-on: ubuntu-latest
     steps:
       # checkout code
@@ -15,7 +18,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: project
-          fetch-depth: 2
       # checkout schema as xmllint can't https 
       - name: Checkout schema repo
         uses: actions/checkout@v3
@@ -24,27 +26,28 @@ jobs:
           path: schema
       - name: Install Test Dependencies
         run: sudo apt-get install libxml2-utils
-      - name: Check for changed source files
-        id: changed
+      - name: Gather all source files
+        id: all
         run: |
           echo "::set-output name=files::$( \
-            git diff --name-only --diff-filter=ACMRT \
-            ${{ github.event.pull_request.base.sha }} \
-            ${{ github.sha }} -- './**/*.xml' | xargs)"
-      - name: Validate changed source files
-        if: ${{ steps.changed.outputs.files != '' }}
+            find . -type f -name '*.xml' \
+            -not -name 'build.xml' \
+            -not -name 'repo.xml' \
+            -not -name 'expath-pkg.xml' | \
+            xargs \
+          )"
+      - name: Validate all source files
         run: |
           xmllint \
             --noout --xinclude --nowarning \
             --relaxng ../schema/tei-betamesaheft.rng \
-            ${{ steps.changed.outputs.files }} \
+            ${{ steps.all.outputs.files }} \
             2>&1 | \
             { grep -vE 'RNG|validates' || :; }
-      - name: No source files changed
-        if: ${{ steps.changed.outputs.files == '' }}
-        run: |
-          echo "All good"
-      - name: Ensure all XML files are well formed
-        run: |
-          xmllint --noout \
-            $(find . -type f -name '*.xml') 
+      - name: Build Expath Package
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 8
+      - run: ant  
+
