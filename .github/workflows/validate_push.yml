@@ -32,15 +32,13 @@ jobs:
           xmllint \
             --noout --xinclude --nowarning \ 
             --relaxng ../schema/tei-betamesaheft.rng \
-            $( \
-              find . -type f -name '*.xml' \
+            $( find . -type f -name '*.xml' \
                 -not -name 'transkribus*.xml' \
                 -not -name 'facsimile*.xml' \
                 -not -name 'build.xml' \
                 -not -name 'repo.xml' \
                 -not -name 'expath-pkg.xml' \
-            ) \
-            2>&1 | \
+            ) 2>&1 | \
             { grep -vE 'RNG|validates' || :; }
       - name: Build Expath Package
         uses: actions/setup-java@v3
