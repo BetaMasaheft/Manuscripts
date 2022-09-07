@@ -1,4 +1,4 @@
-name: Validate
+name: Validate PR
 on: pull_request
 
 defaults:
@@ -24,6 +24,7 @@ jobs:
           path: schema
       - name: Install Test Dependencies
         run: sudo apt-get install libxml2-utils
+      # Compare locally changed files to PR's base
       - name: Check for changed source files
         id: changed
         run: |
@@ -31,6 +32,7 @@ jobs:
             git diff --name-only --diff-filter=ACMRT \
             ${{ github.event.pull_request.base.sha }} \
             ${{ github.sha }} -- './**/*.xml,!./**/transkribus*.xml,!./**/facsimile*.xml' | xargs)"
+      # Validate changed files against latest schema
       - name: Validate changed source files
         if: ${{ steps.changed.outputs.files != '' }}
         run: |
@@ -40,10 +42,12 @@ jobs:
             ${{ steps.changed.outputs.files }} \
             2>&1 | \
             { grep -vE 'RNG|validates' || :; }
+      # If no xml files were modified
       - name: No source files changed
         if: ${{ steps.changed.outputs.files == '' }}
         run: |
           echo "All good"
+      # ensure branch conaints only well-formed xml files 
       - name: Ensure all XML files are well formed
         run: |
           xmllint --noout \
