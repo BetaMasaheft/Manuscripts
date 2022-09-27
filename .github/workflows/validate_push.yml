@@ -1,0 +1,51 @@
+name: Validate Push
+on:
+  push:
+    branches:    
+      - master
+
+defaults:
+  run:
+    shell: bash
+    working-directory: project
+
+jobs:
+  validate-all-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout code
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: project
+      # checkout schema as xmllint can't https 
+      - name: Checkout schema repo
+        uses: actions/checkout@v3
+        with:
+          repository: BetaMasaheft/Schema
+          path: schema
+      - name: Install Test Dependencies
+        run: sudo apt-get install libxml2-utils
+      # validate all TEI-files in chunks
+      - name: Validate files
+        run: |
+          find . -type f -name '*.xml' \
+            -not -name 'facsimile*.xml' \
+            -not -name 'transkribus*.xml' \
+            -not -name 'msDesc.xml' \
+            -not -name 'edition.xml' \
+            -not -name '*text.xml' \
+            -not -name 'build.xml' \
+            -not -name 'repo.xml' \
+            -not -name 'expath-pkg.xml' \
+            -print0 | \
+          xargs -0 \
+          xmllint --noout --xinclude --nowarning \
+          --relaxng ../schema/tei-betamesaheft.rng 2>&1 | \
+          { grep 'fails to validate' || :; }      
+      - name: Build Expath Package
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 8
+      - run: ant

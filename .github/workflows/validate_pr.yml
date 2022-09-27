@@ -1,0 +1,54 @@
+name: Validate PR
+on: pull_request
+
+defaults:
+  run:
+    shell: bash
+    working-directory: project
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout code
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: project
+          fetch-depth: 2
+      # checkout schema as xmllint can't https 
+      - name: Checkout schema repo
+        uses: actions/checkout@v3
+        with:
+          repository: BetaMasaheft/Schema
+          path: schema
+      - name: Install Test Dependencies
+        run: sudo apt-get install libxml2-utils
+      # Compare locally changed files to PR's base
+      - name: Check for changed source files
+        id: changed
+        run: |
+          echo "::set-output name=files::$( \
+            git diff --name-only --diff-filter=ACMRT \
+            ${{ github.event.pull_request.base.sha }} \
+            ${{ github.sha }} -- ':./**/*.xml' ':!./**/transkribus*.xml' ':!./**/facsimile*.xml' ':!./**/edition.xml'  ':!./**/msDesc.xml' ':!./**/*text.xml' | xargs)"
+      # Validate changed files against latest schema
+      - name: Validate changed source files
+        if: ${{ steps.changed.outputs.files != '' }}
+        run: |
+          xmllint \
+            --noout --xinclude --nowarning \
+            --relaxng ../schema/tei-betamesaheft.rng \
+            ${{ steps.changed.outputs.files }} \
+            2>&1 | \
+            { grep -vE 'RNG|validates' || :; }
+      # If no xml files were modified
+      - name: No source files changed
+        if: ${{ steps.changed.outputs.files == '' }}
+        run: |
+          echo "All good"
+      # ensure branch conaints only well-formed xml files 
+      - name: Ensure all XML files are well formed
+        run: |
+          xmllint --noout \
+            $(find . -type f -name '*.xml') 
