@@ -53,7 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                      <locus from="5ra" to="9vb"/>
                                      <title type="complete" ref="LIT4872MaqdemaWangel"/>
                                      
-                                     <msItem xml:id="ms_i1.1.1.1">
+                                <!--     <msItem xml:id="ms_i1.1.1.1">
                                          <locus from="5ra" to="5rb"/>
                                          <title type="complete" ref="LIT4872MaqdemaWangel#Preface"/>
                                      </msItem>
@@ -91,7 +91,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                      <msItem xml:id="ms_i1.1.1.8">
                                          <locus from="9rb" to="9vb"/>
                                          <title type="complete" ref="LIT4872MaqdemaWangel#Chapter7"/>
-                                     </msItem>
+                                     </msItem>-->
                                  </msItem>
                                      
                                      <msItem xml:id="ms_i1.1.2">
@@ -186,11 +186,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                      
                                      <msItem xml:id="ms_i1.3.4">
                                          <locus from="96ra" to="96vb"/>
-                                         <title type="complete" ref=""/>
+                                         <title type="complete" ref="LIT6725Letter"/>
                                      </msItem>
-                                     
-                                    <!--  create new record https://www.bl.uk/manuscripts/Viewer.aspx?ref=or_481_f001r 
-                                        f. 2r-->
                                      
                                      <msItem xml:id="ms_i1.3.5">
                                          <locus from="97ra" to="145rb"/>
@@ -242,7 +239,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                              
                                  <msItem xml:id="ms_i1.5">
                                      <locus from="229ra" to="293vb"/>
-                                     <title type="complete" ref="LIT2715John"/>
+                                     <title type="complete" ref="LIT1693John"/>
                                      
                                      <msItem xml:id="ms_i1.5.1">
                                          <locus from="229ra" to="293va"/>
@@ -264,7 +261,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <p><locus target="#14"/> is cut off after the first column.</p>
+                                    <p><locus target="#14"/> is cut off after the first column.
+                                        According to <persName ref="PRS6665Mangasa">Leul Ras Mangashia Seyoum</persName>, who provided Bent Juel-Jensen with his expertise on the manuscript,
+                                    the material is horse vellum (cp. 
+                                        <bibl><ptr target="bm:JuelJensen1981Gospels"/><citedRange unit="page">65</citedRange></bibl>).</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">294</measure>
@@ -433,8 +433,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-
                         </objectDesc>
+                        
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <persName ref="PRS13901Zaparaqlitos" role="scribe"/>
+                                <persName ref="PRS13900WaldaD" role="scribe"/>
+                                <date notBefore="1743" notAfter="1767"/>
+                                <desc>Regular handwriting, trained hand, gʷǝlḥ script. Big and evenly spaced characters. The two different names indicated in the bottom margins 
+                                    of <locus target="#"/> and <locus target="#"/> indicate that at least two scribes were involved in the copying, 
+                                but no differences in the hand can be observed throughout the manuscript.</desc>
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Beginnings of books and sections; holy names; elements of punctuation signs.</seg>
+                            </handNote>
+                        </handDesc>
                         
                         <additions>
                             <list>
@@ -455,18 +467,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 
                                 <item xml:id="a2">
                                     <locus target="#1vb"/>
-                                    <desc type="RecordTransaction">Record of a transaction dated to 1797, probably consisting of <persName ref="PRS13903Hirut"/> pawning land 
-                                        to <persName ref="PRS13904Baytafa"/>.</desc>
+                                    <desc type="RecordTransaction">Amharic record of a transaction dated to 1767, in which
+                                        <persName ref="PRS13903Hirut"/> pawns land 
+                                        to <persName ref="PRS13904Baytafa"/>, with an extensive list of witnesses.</desc>
                                     <q xml:lang="am"><date when-custom="7260" calendar="world" when="1767-10-06">በ፸፻ወ፪፻፺ አመተ፡ ዓለም፡ በዘመነ፡ ዮሐንስ፡ በመስከረም፡ በ፳፯ ቀን፡</date>
                                         ማክሰኞ፡ 
                                         የ<persName ref="PRS13902Mammo"><roleName type="title">ሊቄ፡</roleName> ማሞ፡</persName> ልጅ፡ 
                                         <persName ref="PRS13903Hirut"><roleName type="title">ወይዘሮ፡</roleName> ሂሩት፡</persName> የበለሳውን፡ ፩ ጋሻ፡ ሪም፡ የጋሻ፡ እኩል፡ ጃኑህ፡ የጋሻ፡
                                         እኩል፡ እንጨናቆ፡ በ፪ ወቄት፡ ካላድ፡ <persName ref="PRS13904Baytafa"><roleName type="title">ላቤቶ፡</roleName> ባይጠፋ፡</persName> አሲዛለች፡ 
                                         መሳክርቱ፡ <persName ref="PRS13905Batru">ሊቀ፡ ጠበብት፡ በትሩ፡</persName> <persName ref="PRS13906Maqabo">ርእሰ፡ ደብር፡ ማቀቦ፡</persName>
-                                        <persName ref="PRS13907WaldaG">መምሕር፡ ወልደ፡ ጌርጊስ፡</persName> <persName ref="PRS13908WaldaE">ግራ፡ ጌታ፡ ወልደ፡ እግዚእ፡</persName> አባ፡ ሚካኤል፡
-                                        <persName ref="">ሥምረት፡</persName> <persName ref="">ያሬድ፡</persName> <persName ref="">ሰሎሞን፡</persName>
-                                        <persName ref="">ዘፈሩ፡</persName> <persName ref="">ወልደ፡ ዮሐንስ፡</persName>
-                                        <persName ref="">ጽፍጥ፡</persName> <persName ref="">አባ፡ ቢያድጎ፡ ወሰን፡</persName> <persName ref="">የሊቀ፡ ጠበብት፡ ሎሌ፡ ወልደ፡ ኪሮስ፡</persName> <persName ref="PRS13910WaldaM">አለቃ፡ ወልደ፡ መለኮት፡</persName>
+                                        <persName ref="PRS13907WaldaG">መምሕር፡ ወልደ፡ ጌርጊስ፡</persName> <persName ref="PRS13908WaldaE">ግራ፡ ጌታ፡ ወልደ፡ እግዚእ፡</persName> 
+                                        <persName ref="PRS13922Mikael"><roleName type="title">አባ፡ </roleName>ሚካኤል፡</persName>
+                                        <persName ref="PRS13913Semrat">ሥምረት፡</persName> <persName ref="PRS13914Yared">ያሬድ፡</persName>
+                                        <persName ref="PRS13915Salomon">ሰሎሞን፡</persName>
+                                        <persName ref="PRS13916Zaffaru">ዘፈሩ፡</persName> <persName ref="PRS13917WaldaY">ወልደ፡ ዮሐንስ፡</persName>
+                                        <persName ref="PRS13918Seffet">ጽፍጥ፡</persName> <persName ref="PRS13919Biyadgo"><roleName type="title">አባ፡</roleName> ቢያድጎ፡</persName> 
+                                        <persName ref="PRS13920Wasan">ወሰን፡</persName> የሊቀ፡ ጠበብት፡ ሎሌ፡ 
+                                        <persName ref="PRS13921WaldaK">ወልደ፡ ኪሮስ፡</persName> <persName ref="PRS13910WaldaM">አለቃ፡ ወልደ፡ መለኮት፡</persName>
                                         <persName ref="PRS13909HabtaR">አለቃ፡ ሐብተ፡ ሩፋኤል፡</persName><persName ref="PRS13911Keflu"> አለቃ፡
                                             ክፍሉ፡</persName> <persName ref="PRS13912TaklaG">አቤቶ፡ ተክለ፡ ጌርጊስ፡</persName> ጻፊ፡ <persName ref="PRS13911Keflu">ክፍሉ፡ ወልደ፡ አረጋይ፡</persName> የቃሐ፡ ዘወልድ፡ ልጅ፡ አደሩ፡ 
                                         የበጋውን፡ አዝመራ፡ የምድሩን፡ ይብላ፡ በሰኔ፡ ወርቁ፡ ባልሰጥ፡ ምድሩን፡ ለቅቄአለሁ፡ ብለው፡
@@ -475,16 +492,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 
                                 <item xml:id="a3">
                                     <locus target="#11va"/>
-                                    <desc type=""></desc>
-                                    <q xml:lang="am"><persName ref="PRS5618IyasuII"><roleName type="title">አፄ፡</roleName> ኢያሱ፡</persName> በነገሡ፡ በዓመት፡ ከ፯ ወርኅ፡ እኔ፡ <persName ref="PRS10450YosabI">ኢዮሳብ፡</persName> ባደባባይ፡ ቁሜ፡ ከንጉሡ፡ ከእጨጌው፡ ከሊቃውንቱ፡ ከመኳንንቱ፡ ያደባራቱ፡
+                                    <desc type="Record">Amharic record on the appointment of an official by <persName ref="PRS10450YosabI"/>.</desc>
+                                    <q xml:lang="am"><persName ref="PRS5618IyasuII"><roleName type="title">አፄ፡</roleName> ኢያሱ፡</persName> በነገሡ፡ በዓመት፡ ከ፯ ወርኅ፡ እኔ፡ 
+                                        <persName ref="PRS10450YosabI">ኢዮሳብ፡</persName> ባደባባይ፡ ቁሜ፡ ከንጉሡ፡ ከእጨጌው፡ ከሊቃውንቱ፡ ከመኳንንቱ፡ ያድባራቱ፡
                                     ሊቃውንት፡ እዱግነት፡ የሾመ፡ ንጉሥ፡ የተላከ፡ መኰነን፡ እሾማለሁ፡ ያለ፡ በ ፫፻፲ወ፰ በ ፲ወ፪ ሐዋርያት፡ እጨጌም፡ አቡን፡ ገዝተዋሉ፡</q>
                                 </item>
                                 
                                 <item xml:id="a4">
                                     <locus target="#11va"/>
-                                    <desc type=""></desc>
-                                    <q xml:lang="am">የወለቃውንም፡ መሰክ፡ ቀደሞም፡ የጳጳሳት፡ ነበር፡ አሁንም፡ አፄ፡ ኢያሱ፡ ላቡን፡ ሰጥተዋሉ፡ <del rend="erasure" unit="lines" quantity="5"/>
-                                    የታዘዙቱ፡ ሌቄ፡ በጸሎቱ፡ ነዎ፡ አብዝኃራንም፡ ባዛዥ፡ ያቦ፡ ባርያ፡ እጅ፡ የነበረውን፡ ፲፭ ጋሻ፡ ባላምበራስ፡ ረምኃና፡ ሌቄ፡ በጸሎቱ፡ ቍስቋም፡ ይቀድሱበት፡ ብለዋል፡ ይሕነን፡ ያፈረሰ፡ 
+                                    <desc type="LandGrant">Amharic record. </desc>
+                                    <q xml:lang="am"><placeName ref="LOC6168Walaqa">የወለቃውንም፡</placeName> መሰክ፡ ቀደሞም፡ የጳጳሳት፡ ነበር፡ አሁንም፡ አፄ፡ ኢያሱ፡ ላቡን፡ ሰጥተዋሉ፡ <del rend="erasure" unit="lines" quantity="5"/>
+                                        የታዘዙቱ፡ <persName ref="PRS13923Basalotu"><roleName type="title">ሌቄ፡</roleName> በጸሎቱ፡</persName> ነዎ፡
+                                        አብዝኃራንም፡ <persName ref="PRS13924YabboB"><roleName type="title">ባዛዥ፡</roleName> ያቦ፡ ባርያ፡</persName> እጅ፡ የነበረውን፡ 
+                                        ፲፭ ጋሻ፡ <persName ref="PRS8073Ramha"><roleName type="title">ባላምበራስ፡</roleName> ረምኃና፡</persName>
+                                        <persName ref="PRS13923Basalotu"><roleName type="title">ሌቄ፡</roleName> በጸሎቱ፡</persName> ቍስቋም፡ ይቀድሱበት፡ ብለዋል፡ ይሕነን፡ ያፈረሰ፡ 
                                     በ ፫፻፲ወ፰፡ በ፲ወ፪ ሐዋርያት፡ ቃል፡ በ<persName ref="PRS10450YosabI"><roleName type="title">አቡነ፡</roleName> ዮሳብ፡</persName>
                                         በ<persName ref="PRS13628Tasfu"><roleName type="title">እጨጌ፡</roleName> ተስፉ፡</persName> ቃል፡ እንደ፡ ንስጥሮስ፡ ውጉዝ፡ ነው፡  
                                     </q>
@@ -554,27 +575,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               </bindingDesc>-->
 
                     </physDesc>
-
-
+      
+                    <history>
+                        <origin>
+                            <origDate notBefore="1730" notAfter="1755" evidence="reign"/>
+                            The manuscript was produced during the reign of <persName ref="PRS5617IyasuII"/> (r. 1730-1755), who is mentioned together with
+                            <persName ref="PRS2682BerhanM"/> in supplications. A further narrowing of this dating hinges on the interpretation of the letter from
+                            to (<locus from="96ra" to="96vb"/>), dated to <date>1743</date> as part of the original process of production or as later addition.
+                        </origin>
+                        <provenance>The manuscript was put up for sale on <date>9 July 1979</date> at Sotheby's and acquired by <persName ref="PRS5782JuelJen"/>,
+                            through
+                            the bookseller <persName ref="PRS13559Thomas"/>, for a three-figure sum (cp. <bibl><ptr target="bm:JuelJensen1981Gospels"/></bibl>).</provenance>
+                    </history>
+                    
                     <additional>
                         <adminInfo>
                             <recordHist>
                                 <source>
-                                    <!--  <listBibl type="secondary">
-                                        <bibl></bibl>
-                                    </listBibl>-->
+                                      <listBibl type="secondary">
+                                          <bibl><ptr target="bm:JuelJensen1981Gospels"/></bibl>
+                                    </listBibl>
                                 </source>
                             </recordHist>
                         </adminInfo>
                     </additional>
-
-               <!--     <history>
-                        <origin>
-                            <origDate notBefore="1743" notAfter="1767" evidence="internal-date"/>
-                        </origin>
-                        <provenance>  </provenance>
-                    </history>-->
-
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -597,6 +621,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                     <term key="Bible"/>
                     <term key="NewTestament"/>
+                    <term key="Letter"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -610,6 +635,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-01-15">Created record from metadata provided by Jacopo Gnisci</change>
             <change who="DR" when="2020-02-21">Added dimensions and layout</change>
             <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="DR" when="2022-09-27">Continued description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
