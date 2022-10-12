@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP01851">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIPms00479">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Kaleab Addis Project 83_Mesfin</title>
+            <title>Tweed MS 11</title>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -17,47 +18,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p> This file is licensed under the Creative Commons
-                                                Attribution-ShareAlike 4.0. </p>
+                   This file is licensed under the Creative Commons
+                                                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">Kaleab Addis Project 83_Mesfin</repository>
+                  <repository ref="INS0447EMIP">Tweed</repository>
                   <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/1851/">Kaleab Addis Project 83_Mesfin</idno>
+                  <idno facs="EMIP/Scrolls/MS0479/" n="11">Tweed MS 11</idno>
                </msIdentifier>
                <msContents>
-                  <summary>Psalter, ዳዊት፡, Angels Praise Her, Yǝwedǝssǝwa Mäla’ǝkt, ይዌድስዋ፡ መላእክት፡ ለማርያም፡</summary>
+                  <summary> </summary>
                   <msItem xml:id="ms_i1">
                      <textLang mainLang="gez">Gǝ‘ǝz</textLang>
                   </msItem>
                </msContents>
                <physDesc>
-                  <objectDesc form="Codex">
+                  <objectDesc form="Scroll">
                      <supportDesc>
                         <support>
                            <watermark/>
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">ii + 153</measure>
+                           <measure unit="strips">3</measure>
                            <dimensions type="outer" unit="mm">
-                              <height>ca.199</height>
-                              <width>148</width>
-                              <depth>87</depth>
+                              <height>128</height>
+                              <width>9.6</width>
+                              <depth/>
                            </dimensions>
                         </extent>
                      </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1"/>
+                     </layoutDesc>
                   </objectDesc>
                </physDesc>
-               <history>
-                  <origin>
-                     <origDate when="1925">early-20th century</origDate>
-                  </origin>
-               </history>
+               
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -69,16 +69,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
+         
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
-         <change when="2020-04-17" who="RL">corrected ǝ character</change>
-    </revisionDesc>
+         <change when="2020-04-20" who="RL">Corrected ǝ character</change>
+         <change when="2022-07-08" who="RL">Edited idno to include images</change>
+         <change when="2022-10-10" who="RL">added include statements to incorporate traskribus output</change>
+</revisionDesc>
    </teiHeader>
-   <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
-   </text>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="facsimileEMIPms00479.xml">
+      <xi:fallback>
+         <!-- facsimile -->
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+      href="transkribusTextEMIPms00479.xml">
+      <xi:fallback>
+         <!-- transkribus text -->
+      </xi:fallback>
+   </xi:include> 
 </TEI>
