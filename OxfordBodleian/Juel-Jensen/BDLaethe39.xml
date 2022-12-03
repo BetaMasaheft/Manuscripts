@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethe39"
@@ -13,7 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Gadla Gabra Manfas Qǝddus, Taʾammǝra Gabra Manfas Qǝddus, Text on councils</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,21 +36,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 17</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>Holes on some leaves (e.g. <locus target="#11 #78 #83"/>), presumably from the parchment making process.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">90</measure>
@@ -64,19 +68,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>170</width>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#12r"/>.</note>
-                                </extent> 
+                                </extent>
                                 <collation>
                                     <list>
                                         <item xml:id="q1">
                                             <dim unit="leaf">3</dim>
                                             <locus from="1" to="3"/>
                                             <note>The original quire structure is not visible.</note>
-                                            <note>Parchment support around the quire.</note>
+                                            <note>A parchment guard has been places around the quire.</note>
                                         </item>
                                         <item xml:id="q2">
                                             <dim unit="leaf">3</dim>
                                             <locus from="4r" to="7v"/>
-                                            <note>All leaves are detached and probably did not constitute an original quire, see <locus target="#7v"/>, 
+                                            <note>All leaves are detached and probably did not constitute an original quire, see <locus target="#7v"/>,
                                             where remains of the other half of the bifolium are visible.</note>
                                         </item>
                                         <item xml:id="q3">
@@ -168,10 +172,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
-                                <condition key="deficient">only held by one loose thread between f. 56-57. Both boards seems to have been broken and been
-                                glued together.</condition>
+                                <condition key="deficient">
+                                  The manuscript is in bad condition. Tears, losses, and insect droppins are present, expecially along the external magins.
+                                  Most folia are unevenly distorted, stained, and darkened along the margins.
+                                  The sewing is broken throughout. Most bifolia became separated and the single folia are stitched
+                                  to protective stips of parchment or textile placed around the quires.
+                                </condition>
                             </supportDesc>
-                           
+
                             <layoutDesc>
                                 <layout columns="2" writtenLines="17">
                                     <locus from="2ra" to="87v"/>
@@ -188,7 +196,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="intercolumn">15</dim>
                                     </dimensions>
                                 </layout>
-                                
+
                                 <layout columns="2" writtenLines="16 20">
                                     <locus from="88r" to="90va"/>
                                     <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#89r"/>.</note>
@@ -205,37 +213,46 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                           
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+
                         </decoDesc>-->
-                        
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+
+                        <bindingDesc>
+                            <binding contemporary="Ethiopian false">
+                                <decoNote xml:id="b1" type="bindingMaterial">
+                                  The book is bound in <material key="wood">wooden</material> boards.
+                                </decoNote>
+                                <decoNote xml:id="b2" type="Boards">
+                                  The boards are few millimeters larger than the leaves. The grain runs vertically.
+                                  The external surface and the edges of the boards are polished and a finishing layer of dark colour has been added.
+                                  The lower board has been repaired when it broke vertically in two halves which have been glued togeter.
+                                </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">4>
+                                  The main sewing is broken thoughout. It consisted in a chainstitch sewing on four sewing stations (two pairs); periodic fold pattern; Z-plied thread.
+                                  The separated bifolia are now crudely stitched to protective stips of parchment or textile which have been placed around the quires.
+                                  <locus target="#53"/> is stitched through the inner margin directly to <locus target="#54"/>.
+                                </decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -247,7 +264,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -278,7 +295,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-16">Created record</change>
             <change who="DR" when="2020-02-18">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="EDS" when="2022-12-03">Updated conditions, added binding description</change>
+          </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
