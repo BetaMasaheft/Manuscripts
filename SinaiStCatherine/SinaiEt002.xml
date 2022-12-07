@@ -31,22 +31,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <msContents>
                   <summary/>
                  
-                 <!--check with ms: maybe two codicological units?-->
-                 
                   <msItem xml:id="ms_i1">
                     <locus from="4r" to="53ra"/>
                     <title type="complete" ref="LIT2711Mark"/>
                      <textLang mainLang="gez"/>
                     
                     <colophon xml:id="coloph1">
-                      <locus from="52v" to="53r"/>
-                      
+                      <locus from="52vb" to="53ra"/>
+                      <hi rend="rubric">መልዓ፡ ጽሕፈተ፡ ብስራቱ፡ ለማርቆስ፡ ሐዋርያ፡</hi> ወኮነ፡ ጸሐፎ፡ በልሳነ፡ <pb n="53r"/><cb n="a"/>
+                      ሮሜ፡ ዘአፍርክንጊ፡ ዘሀገረ፡ ሮምያ፨ እምድኅረ፡ ዕርገቱ፡ ለእግዚእነ፡ ክርስቶስ፡ በሥጋ<hi rend="rubric" rendition="#partialRubric">፨</hi> ውስተ፡ ሰማይ፡ በዓሠርቱ፡ ወአሐዱ፡ ዓመት፡
+                      በራብዒት፡ ዓመተ፡ መንግሥቱ፡ ለቀላውዴዎስ፡ ቄሣር፡ ንጉሠ፡ ሮምያ<hi rend="rubric" rendition="#partialRubric">፨</hi> 
+                     <seg type="supplication"> ጸሎቱ፡ ወበረከቱ፡ ለቅዱስ፡ ማርቆስ፡ የሃሉ፡ ምስለ፡
+                      <add place="overstrike">ወልደ፡ ህሪስቶፎሮስ፡</add> ለዓለመ፡ ዓለም፡ አሜን<hi rend="rubric" rendition="#partialRubric">፨</hi></seg>
                     </colophon>
                   </msItem>
                  
                  <msItem xml:id="ms_i2">
                    <locus from="53rb" to="55va"/>
-                   <title type="incomplete" ref="LIT1812GospelLuke"/>
+                   <title type="incomplete" ref="LIT1812GospelLuke#LukeGospelPreface"/>
                    <textLang mainLang="gez"/>
                  </msItem>
 
@@ -57,6 +59,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
+                          <locus from="1" to="57"/>
+                          <material key="paper"/>
+                          <locus from="58" to="59"/>
                         </support>
                         <extent>
                            <measure unit="leaf" quantity="59">59</measure>
@@ -186,11 +191,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        </item>
                        
                        <item xml:id="e2">
-                         <locus target="#1r #30v"/>
-                         <desc>The days of the week are indicated in the upper margin.</desc>
+                         <desc>The "Coptic" and Greek (<foreign xml:lang="gez">በሮም፡</foreign>) numeration of chapters is given within the main body of the text.</desc>
                        </item>
                        
                        <item xml:id="e3">
+                         <locus target="#1r #30v"/>
+<!--                         to be checked in manuscript-->
+                         <desc>The days of the week are indicated in the upper margin. Kamil indicates the further division into the days of the week as 
+                         follows: Monday: <locus target="#4r"/>, chapters 1-10; Tuesday: <locus target="#14r"/>, chapters 11-17;
+                         Wednesday: <locus target="#21v"/>, chapters 18-27; Thursday: <locus target="#30v"/>, chapters 28-37;
+                         Friday: <locus target="#37v"/>, chapters 38-45; Saturday: <locus target="#44r"/>, chapters 46-47;
+                         Sunday: <locus target="#51r"/>, chapter 48.</desc>
+                       </item>
+                       
+                       <item xml:id="e4">
                          <locus target="#4r"/>
                          <desc>The name of <persName ref="PRS13953Gabreel" role="owner"/> has been inserted probably after the production of the manuscript
                            in space left empty in the introductory supplication to <ref target="#ms_i1"/>. Later, it has been crossed out and that of 
@@ -247,6 +261,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
+        <tagsDecl>
+          <rendition xml:id="partialRubric">Red ink is used partially in the rubrication of punctuation.</rendition>
+        </tagsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
