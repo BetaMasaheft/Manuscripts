@@ -6,6 +6,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 680</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
@@ -26,44 +27,84 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
+                  <repository ref="INS0353EOCP"/> 
                   <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 680</idno>
+                  <idno facs="EMIP/Codices/2747/" n="286">EMML 680</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 680</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-2</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2747</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <title type="complete" ref="LIT1544Gebrah"/>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
                         <support>
-                           <material key="parchment"/>
+                           <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 284+3</measure>
-                           <dimensions>
-                              <dim>40.5 x 32 cm</dim>
+                           <measure unit="leaf">i + 284</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>410</height>
+                              <width>335</width>
                            </dimensions>
                         </extent>
-                        <foliation/>
-                        <condition key="good">Indication of the title, f. 1a.</condition>
+                        <collation> </collation>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>3 cols, 30 lines (ff. 4-33) and 31 lines (ff 34-284).</layout>
+                        <layout columns="3" writtenLines="30 31">3 cols, 30 lines (ff. 4-33) and 31 lines (ff 34-284).</layout>                                
                      </layoutDesc>
                   </objectDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus target="#30v"/>
+                           <desc> mentions <persName ref="PRS5226haylase">Haile
+                              Selassie</persName> and <persName ref="PRS13102Yusab"
+                                 >Yusab II</persName> 1946-1956, and <persName
+                                    ref="PRS2533Baselyos">Baselyos</persName> 1951-56 and
+                              56-70 </desc>
+                        </item>
+                        <item xml:id="e1">Blank spaces have been left for the name of the original owner. </item>
+                        <item xml:id="e2">Stamp of the Patriarchate Library, ff. 1a, 3a, 8a, 24a, 27a, 60a, 83b, 1122b, 185a, 209b, 263b, 283b, 284a, and 284b. </item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                     <binding xml:id="binding" contemporary="true">
+                        <decoNote xml:id="b1">Parchment</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="parchment"/>
+                           <material key="leather"/>
+                           <material key="wood"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1959" notAfter="1970">20th century,
-                                                        1959-1970</origDate>
+                     <origDate notBefore="1951" notAfter="1956"><locus target="#30v"/>
+                        mentions Haile Selassie and Yusab II 1946-1956, and Baselyos 1951-56
+                        and 56-70</origDate>
                   </origin>
-                  <provenance>Blank spaces have been left for the name of the original owner. Stamp of the Patriarchate Library, ff. 1a, 3a, 8a, 24a, 27a, 60a, 83b, 1122b, 185a, 209b, 263b, 283b, 284a, and 284b.  Filmed while in the Patriarchate Library.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -97,12 +138,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-08">Created record for EMIP 2747</change>
+         <change when="2021-07-23" who="RL">Corrected persName to PRS5226haylase</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <graphic url="https://w3id.org/vhmml/readingRoom/view/202514"/>
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
+      <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML680" passive="EMIP02747"></relation></listRelation>
       <body>
          <ab/>
       </body>
