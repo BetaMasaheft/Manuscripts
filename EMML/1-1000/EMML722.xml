@@ -13,7 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 provided by Hill Museum &amp; Manuscript Library.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202556">https://w3id.org/vhmml/readingRoom/view/202556.</ref>
             </p>
-            <p>Fol. 18b-19a and 67b-68a filmed twice</p>
+            <p>Fol. 18b-19a and 67b-68a microfilmed twice</p><p>Added data provided by the EMIP project for EMIP 2778 UNESCOCollection01_Patriarch's Library_33</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +26,32 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 722</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2778/" n="79">EMML 722</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 722</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-33</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2778</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1"><locus from="10r" to="220r"></locus><title ref="LIT1415GadlaA">ገድለ ፡ አዳም</title>
+                     <textLang xml:lang="gez"/>
+                     <colophon xml:id="coloph1"><locus from="220v" to="221r"></locus>Colophon specifies that the MS was copied by መክብበ ፡ ሥላሴ ፡ ኃይለ ፡ ጊዮርጊስ, Makbǝba Śǝllāsē Hayla Giyorgis</colophon>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,26 +60,36 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 221+6</measure>
-                           <dimensions>
-                              <dim>31.5 x 21.5 cm</dim>
+                           <measure unit="leaf">221+6</measure><!-- EMIP has i + 215 -->
+                           <dimensions type="outer" unit="mm">
+                              <height>315</height>
+                              <width>215</width>
+                              <depth/>
                            </dimensions>
-                        </extent>
+                        </extent>                        
                         <foliation/>
-                        <condition key="good">Pencilled indication of the title, f. 3a.</condition>
-                     </supportDesc>
+                        <condition key="good"></condition>
+                     </supportDesc>                     
+                     <layoutDesc><layout columns="2" writtenLines="18"></layout></layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        <persName role="scribe" ref="PRS0000">Makbeba Śellāsē Hayla Giyorgis (colophon, ff. 220b and 221a) for Patriarch Basleyos I [1959-1970] (prayer,f . 187a).</persName>
+                        <persName role="scribe" ref="PRS0000">Makbǝba Śǝllāsē Hayla Giyorgis (colophon, ff. 220b and 221a) for Patriarch Basǝlyos I [1959-1970] (prayer,f . 187a).</persName>
                      </handNote>
                   </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="e1"><desc>Pencilled indication of the title, f. 3a.</desc></item>
+                        <item xml:id="e2"><desc>Stamp of the Patriarchate Library, ff. 1a, 10a, 34a, 56a, 74a, 113a, 121a, 153a, 185a, 217a, and 219a</desc></item>
+                        
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1963"/>
+                     <origDate evidence="internal-date" when="1963">15 Tāḫśāś 1956 EC</origDate>
                   </origin>
-                  <provenance>Stamp of the Patriarchate Library, ff. 1a, 10a, 34a, 56a, 74a, 113a, 121a, 153a, 185a, 217a, and 219a. In Patriarchate Library when filmed.</provenance>
+                  <provenance>Copied for for Patriarch Basǝlyos I [1959-1970]. In Patriarchate Library when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -72,7 +97,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:EMML3"/>
+                                 <ptr target="bm:EMML3"/><citedRange>26</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -93,11 +118,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change when="2023-01-11" who="ES">merged EMML722 and EMIP02778</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -105,6 +131,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML722" passive="EMIP02778"></relation></listRelation>
          <ab/>
       </body>
    </text>
