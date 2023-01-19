@@ -6,6 +6,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 743</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
@@ -26,17 +27,32 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 743</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2748/" n="201">EMML 743</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 743</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-3</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2748</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <title type="complete" ref="LIT2375Synaxa#FirstHalf"/>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,22 +61,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 216+4</measure>
-                           <dimensions>
-                              <dim>30 x 26.5 cm</dim>
-                           </dimensions>
+                           <measure unit="leaf"> 216+4</measure><!-- EMIP file had 199, EMML metadata has 216 -->
+                           <dimensions type="outer" unit="mm">
+                              <height>300</height><!-- EMIP: 350 -->
+                              <width>265</width><!-- EMIP: 290 -->
+                           </dimensions>                           
                         </extent>
                         <foliation/>
                         <condition key="good"/>
                      </supportDesc>
+                     <layoutDesc>
+                        <layout columns="3" writtenLines="35 36"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1"><locus target="#216v"></locus>
+                           <desc type="ScribalSignature">
+                              Scribe Walda Giyorgis ወልደ ፡ ጊዮርጊስ
+                           </desc>
+                        </item>
+                        <item xml:id="e1"><desc type="StampExlibris">Stamp of the Patriarchate Library, ff. 1a, 7a, 110a, 143a, 165a, 180a, 192a, 215a, and 216a.</desc></item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1900" notAfter="1925">20th century,
-                                                        </origDate>
+                     <origDate when="1956"/>
                   </origin>
-                  <provenance>Copied by Walda Giyorgis (colophon, f. 216b). Stamp of the Patriarchate Library, ff. 1a, 7a, 110a, 143a, 165a, 180a, 192a, 215a, and 216a. In Patriarchate Library when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -68,7 +96,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:EMML3"/>
+                                 <ptr target="bm:EMML3"/><citedRange unit="page">50</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -89,11 +117,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-08">Created entity EMIP02748</change>
+         <change when="2021-06-09" who="RL">Added textlang statement</change>
+         <change when="2023-01-11" who="ES">merged EMML743 and EMIP02748, adding data from vHMML</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -101,6 +132,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML743" passive="EMIP02748"></relation></listRelation>
          <ab/>
       </body>
    </text>
