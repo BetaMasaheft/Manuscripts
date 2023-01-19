@@ -6,6 +6,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 682</title>
             <editor role="generalEditor" key="AB"/>
+            
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
@@ -26,49 +28,96 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 682</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2746/" n="214">EMML 682</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML 682</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-1</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2746</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <title type="complete" ref="LIT2384Taamme"/>
+                     <textLang xml:lang="gez"/>
+                     <note>372 Miracles of Mary with introductory materials</note>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
                         <support>
-                           <material key="parchment"/>
+                           <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 214+6</measure>
-                           <dimensions>
-                              <dim>39.5 x 31 cm</dim>
+                           <measure unit="leaf">213</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>400</height>
+                              <width>315</width>
                            </dimensions>
                         </extent>
-                        <foliation/>
-                        <condition key="good"/>
+                        <collation>
+                           <note>every 10th folio is numbered</note>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                        <layout columns="3" writtenLines="32 37"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc>Last folio of writing mentions <persName ref="PRS5226haylase">
+                              <q>Our Emperor Haile Selassie</q></persName></desc>
+                        </item>
+                        <item xml:id="a2">
+                           <desc>The Patriarch is mentioned, though not by name, so the
+                              date must be after 1956</desc>
+                        </item>
+                        <item xml:id="e1">Stamp of the Patriarchate Library, ff. 1a, 29a, 214b.</item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                     <binding xml:id="binding" contemporary="true">
+                        <decoNote xml:id="b1">Parchment</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="parchment"/>
+                           <material key="leather"/>
+                           <material key="wood"/>
+                        </decoNote>
+                     </binding>
+                  </bindingDesc>
                </physDesc>
+               
                <history>
                   <origin>
-                     <origDate notBefore="1900" notAfter="2000">20th century,
-                                                        c. 1950/59</origDate>
+                     <origDate notBefore="1956" notAfter-custom="1974">Last folio of writing
+                        mentions <persName ref="PRS5226haylase"/>. The Patriarch is mentioned,
+                        though not by name, so the date must be after 1956.</origDate>
                   </origin>
-                  <provenance>Stamp of the Patriarchate Library, ff. 1a, 29a, 214b.  In Patriarchate Library when filmed.</provenance>
                </history>
+               
                <additional>
                   <adminInfo>
                      <recordHist>
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:EMML2"/>
+                                 <ptr target="bm:EMML2"/><citedRange unit="page">440</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -94,6 +143,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-07">Created entity EMIP02746</change>
+         <change when="2021-06-09" who="RL">Added textlang statement EMIP02746</change>
+         <change when="2021-07-23" who="RL">Corrected persName to PRS5226haylase in EMIP02746</change>
+         <change when="2023-01-11" who="ES">merged EMML682 and EMIP02746, added info from the metadata by Ted Erho at https://w3id.org/vhmml/readingRoom/view/202516</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -103,5 +156,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <body>
          <ab/>
       </body>
+      <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML682" passive="EMIP02746"></relation></listRelation>
    </text>
 </TEI>
