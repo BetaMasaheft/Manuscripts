@@ -55,8 +55,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                         may concern outer dimensions of bookcover or 
                                         dimensions of folia (not clearly specified in cataloque).</note>
                                     <dimensions type="outer" unit="mm">                                        
-                                        <height cert="medium">295-305</height>
-                                        <width cert="medium">250-265</width>    
+                                        <height cert="medium">305</height>
+                                        <width cert="medium">265</width>    
                                                  </dimensions>
                                 </extent>
                                 <foliation>Foliated in pencil by a recent European hand at the top on the right.</foliation>
@@ -161,10 +161,40 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     because the text ends abruptly and one folio is missing in <locus target="q12"/>.
                                     Wooden boards broken and repaired.
                                     <locus target="#q16"/> has been repaired and attached to the codex with a more recent thread.
+                                    <note>Contrary to the here given description Marrassini proposes another </note>
                                 </condition>
                             </supportDesc>
+                            
                         </objectDesc>
-                         
+                        <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <locus target="#1r"></locus>
+                                    <desc type="StampExlibris">"A. D. 681"</desc>
+                                </item>
+                                
+                                <item xml:id="e2">
+                                    <locus target="#1r"></locus>
+                                    <desc type="StampExlibris">Pencil note by an European hand "Acq. e doni 681"</desc>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <locus target="#2r #34r #131r"></locus>
+                                    <desc type="StampExlibris"><foreign xml:lang="la">"BIBL. MED. LAUR. FLOR."</foreign></desc>
+                                </item>
+                                
+                                <item xml:id="e4">
+                                    <locus target="#1r"></locus>
+                                    <desc type="StampExlibris">"66156" written with pen on top left.</desc>
+                                </item>
+                                
+                                <item xml:id="e5">
+                                    <locus target="#131r"></locus>
+                                    <desc type="StampExlibris">"66156" with a stamp.</desc>
+                                </item>
+                                
+                            </list>
+                        </additions>
                         <bindingDesc>
                             <binding contemporary="partly">
                             <decoNote xml:id="b1" type="Boards">Two wooden boards.</decoNote>    
@@ -172,7 +202,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <decoNote xml:id="b3" type="bindingMaterial"><material key="wood"></material></decoNote>
                             </binding>
                         </bindingDesc>
-                       
+                        
                     </physDesc>
                     <history>
                         </history>
@@ -211,8 +241,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <note>130 stories, indicated by numbers in the margins or with rubricated numbers in the text up to 134, 
                                 while several stories are omitted and the numbering being confused: no. 13 omitted, no. 42 omitted, 
                                 one miracle after no. 89 and before no. 90 has no number, no. 100 and no. 101 omitted, no 121 is omitted.</note>
-                            <note>Some stories on <locus target="93"></locus> are similar to the some passages in the Life of Cyrus as it is recorded in <ref type="mss"  target="BLorient701">Ms. BMorient701 (= Wright 277)</ref>.</note>
-                                <colophon xml:id="coloph1"><locus target="113vb" xml:lang="gez"/>፻፴፬፡ ዘተጽሕፈ፡ ተአምር፡ ዘማርያም። በእዴሁ፡ ለ<persName ref="PRS0000">አርሳንዮስ፡</persName> ሊቀ፡ ካህናት፡</colophon>
+                            <note>Some stories on <locus target="93"></locus> are similar to the some passages in the Life of Cyrus as it is recorded in 
+                                <ref type="mss"  target="BLorient701">Ms. BMorient701 (= Wright 277)</ref>.</note>
+                            <colophon xml:id="coloph1"><locus target="113vb" xml:lang="gez"/>፻፴፬፡ ዘተጽሕፈ፡ ተአምር፡ ዘማርያም። በእዴሁ፡ 
+                                ለ<persName ref="PRS13968Arsanyos">አርሳንዮስ፡</persName> ሊቀ፡ ካህናት፡</colophon>
                         </msItem>
                             
                         <msItem xml:id="p1_i2">
@@ -246,14 +278,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <locus from="115ra" to="115va"></locus>
                                 <title ref="LIT6353MEMiracle"></title>
                             </msItem>
-                            <msItem xml:id="p1_i2.5.1">
-                                <locus target="115v"></locus>
+<msItem xml:id="p1_i2.5"> 
+    <locus from="115v" to="116r"></locus>
+    <title>Miracle no. 5</title>
+    <msItem xml:id="p1_i2.5.1">
+                                <locus target="#115v"></locus>
                                 <title ref="LIT6354MEMiracle"></title>
                             </msItem>
                            <msItem xml:id="p1_i2.5.2">
-                               <locus target="116r"></locus>
+                               <locus target="#116r"></locus>
                                <title ref="LIT6355MEMiracle"></title>
                            </msItem>
+</msItem>
+                            
                             <msItem xml:id="p1_i2.6">
                                 <locus from="116rb" to="117rb"></locus>
                                 <title ref="LIT6356MEMiracle"></title>
@@ -326,10 +363,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <locus from="2ra" to="2vb"></locus>
                                     <locus from="7ra" to="113vb"></locus>   
                                     <locus from="128rb" to="128vb"></locus>
-                                    <note corresp="#textarea1">Data on text area dimensions are taken from <locus target="#1r #7r #10"/>.</note>
-                                    <note corresp="#textarea1">Number and size of ruling lines appears to remain the same, but number of written lines
-                                    increases gradually from 20 or 21 at the beginning up to 27 or 28 in the end of the textual unit.</note>
-                                    <dimensions unit="mm" xml:id="textarea1">
+                                    <note>Data on text area dimensions are taken from <locus target="#1r #7r #10"/>.</note>
+                                    <note>Number and size of ruling lines appears to remain the same, but number of written lines
+                                    increases gradually from 20 or 21 at the beginning up to 28 in the end of the textual unit.</note>
+                                    <dimensions unit="mm">
                                      <height>220</height>
                                         <width>220</width>                                        
                                     </dimensions>
@@ -341,10 +378,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <layout columns="2" writtenLines="35" corresp="#p1_i2">
                                     <locus from="113vb" to="122rb"></locus>
                                     <locus from="123ra" to="127va"></locus>
-                                    <note corresp="#textarea2">Data on text area dimensions are taken from <locus target="#114r #117r"/>.</note>
-                                    <note corresp="textarea2">Number and size of ruling lines appears to remain the same, but number of written lines varies 
+                                    <note>Data on text area dimensions are taken from <locus target="#114r #117r"/>.</note>
+                                    <note>Number and size of ruling lines appears to remain the same, but number of written lines varies 
                                         greatly between 25 and 38.</note>
-                                    <dimensions unit="mm" xml:id="textarea2">
+                                    <dimensions unit="mm">
                                         <height>230</height>
                                         <width>225</width>
                                     </dimensions>
@@ -355,10 +392,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                                        
                                 <layout columns="2" writtenLines="30" corresp="#p1_i3">
                                     <locus from="127vb" to="128rb"></locus>
-                                    <note corresp="#textarea3">Data on text area dimensions are taken from <locus target="#127v #128r"/>.</note>
-                                    <note corresp="textarea2">Number and size of ruling lines appears to remain the same, but number of written lines varies
+                                    <note>Data on text area dimensions are taken from <locus target="#127v #128r"/>.</note>
+                                    <note>Number and size of ruling lines appears to remain the same, but number of written lines varies
                                         between 29 and 30.</note>
-                                    <dimensions unit="mm" xml:id="textarea3">
+                                    <dimensions unit="mm">
                                         <height>225</height>
                                         <width>220</width>
                                     </dimensions>
@@ -371,7 +408,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </objectDesc>
 
                             <handDesc>
-                                <handNote xml:id="h1" script="Ethiopic" corresp="#p1">
+                                <handNote xml:id="h1" script="Ethiopic">
                                     <locus from="2ra" to="2vb"></locus>
                                     <locus from="7ra" to="113vb"></locus>   
                                     <locus from="113vb" to="122rb"></locus>
@@ -390,7 +427,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </handDesc>
                            </physDesc>
                           </msPart>
-                        <msPart xml:id="p2"><msIdentifier/><msContents><summary/><msItem xml:id="p2_i1">
+                        <msPart xml:id="p2"><msIdentifier/><msContents><summary/>
+                            <msItem xml:id="p2_i1">
                         <locus from="3ra" to="6va"></locus> 
                             <title type="incomplete" ref="LIT2384Taamme">Miracles of Mary</title>
                                 <incipit xml:lang="gez">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩፡ አምላክ።
@@ -403,12 +441,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <physDesc>
                                 <objectDesc>
                                     <layoutDesc>  
-                                        <layout columns="2" writtenLines="25" corresp="#p2">
+                                        <layout columns="2" writtenLines="25">
                                             <locus from="3ra" to="6va"></locus>
-                                            <note corresp="#textarea4">Data on text area dimensions are taken from <locus target="#127v #128r"/>.</note>
-                                            <note corresp="textarea4">Number and size of ruling lines appears to remain the same, but number of written lines varies
+                                            <note>Data on text area dimensions are taken from <locus target="#127v #128r"/>.</note>
+                                            <note>Number and size of ruling lines appears to remain the same, but number of written lines varies
                                                 between 24 and 26.</note>
-                                            <dimensions unit="mm" xml:id="textarea4">
+                                            <dimensions unit="mm">
                                                 <height>225</height>
                                                 <width>250</width>
                                             </dimensions>
@@ -426,7 +464,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </handDesc>
                           </physDesc>
                     </msPart>
-                    <msPart xml:id="p3"><msIdentifier/><msContents><summary/><msItem xml:id="p3_i1">
+                    <msPart xml:id="p3"><msIdentifier/><msContents><summary/>
+                        <msItem xml:id="p3_i1">
                         <locus from="122rb" to="122vb"/>
                         <locus from="129ra" to="131ra"/>
                         <title type="incomplete" ref="LIT2382Taamme">Miracles of Jesus, 3 stories.</title>
@@ -456,20 +495,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <physDesc>
                             <objectDesc>
                                 <layoutDesc>
-                                    <layout columns="2" writtenLines="21" corresp="p3">
+                                    <layout columns="2" writtenLines="21">
                                         <locus from="122rb" to="122vb"/>
-                                        <note corresp="#textarea5">Data on text area dimensions are taken from <locus target="#122v"/>.</note>
-                                        <dimensions unit="mm" xml:id="textarea5">
+                                        <note>Data on text area dimensions are taken from <locus target="#122v"/>.</note>
+                                        <dimensions unit="mm">
                                             <height>235</height>
                                             <width>215</width>
                                         </dimensions>
                                         <ab type="pricking">Pricking visible</ab>
                                         <ab type="ruling">Ruling visible</ab>
                                     </layout>
-                                    <layout columns="2" writtenLines="18" corresp="p3">
+                                    <layout columns="2" writtenLines="18">
                                         <locus from="129ra" to="131ra"/>
-                                        <note corresp="#textarea6">Data on text area dimensions are taken from <locus target="#129r #129v"/>.</note>
-                                        <dimensions unit="mm" xml:id="textarea6">
+                                        <note>Data on text area dimensions are taken from <locus target="#129r #129v"/>.</note>
+                                        <dimensions unit="mm">
                                             <height>225</height>
                                             <width>210</width>
                                         </dimensions>
@@ -488,35 +527,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </handNote>
                        </handDesc>
 
-                            <additions>
-                               <list>
-                                   <item xml:id="e1">
-                                       <locus target="#1r"></locus>
-                                       <desc type="StampExlibris">"A. D. 681"</desc>
-                                   </item>
-                                   
-                                   <item xml:id="e2">
-                                       <locus target="#1r"></locus>
-                                       <desc type="StampExlibris">Pencil note by an European hand "Acq. e doni 681"</desc>
-                                   </item>
-                                   
-                                   <item xml:id="e3">
-                                       <locus target="#2r #34r #131r"></locus>
-                                       <desc type="StampExlibris"><foreign xml:lang="la">"BIBL. MED. LAUR. FLOR."</foreign></desc>
-                                   </item>
-                                   
-                                   <item xml:id="e4">
-                                       <locus target="#1r"></locus>
-                                       <desc type="StampExlibris">"66156" written with pen on top left.</desc>
-                                   </item>
-                                   
-                                   <item xml:id="e5">
-                                       <locus target="#131r"></locus>
-                                       <desc type="StampExlibris">"66156" with a stamp.</desc>
-                                   </item>
-                               
-                               </list>
-                           </additions>
+                            
                         </physDesc>
                     </msPart>                   
                 </msDesc>
@@ -534,7 +545,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </xi:include>
       </encodingDesc>
         <profileDesc>
-            <langUsage><language ident="en">English</language></langUsage>
+            <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="la">Latin</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="PL" when="2019-02-21">Created catalogue entry</change>
@@ -543,7 +554,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change when="2023-01-11" who="CH">added dimensions and quire structure</change>
             <change when="2023-01-12" who="CH">added hands; added date according to colophon, deleted imprecise date</change>
             <change when="2023-01-24" who="CH">added additions, updated contents</change>
-            <change when="2023-01-25" who="CH">updated addition, updated contents, updated hands, added ruling and pricking</change>
+            <change when="2023-01-25" who="CH">updated additions, updated contents, updated hands, added ruling and pricking</change>
         </revisionDesc>
     </teiHeader>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
