@@ -315,7 +315,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">155</measure>
+                                    <measure unit="leaf" quantity="155">155</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>171</height>
                                         <width>155</width>
@@ -328,7 +328,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#2r"/>.</note>
                                    <!-- <measure type="weight" unit="g"></measure>-->
                                 </extent> 
-                                <foliation>One leaf after <locus target="#135"/> has been skipped in the original foliation and has been 
+                                <foliation>One leaf after <locus target="#135"/> has been skipped in the original foliation and has then been 
                                     foliated <locus target="#135a"/>.</foliation>
                                 <collation>
                                     <note>All quires have been reinforced with modern parchment strips sewn on with a running stitch, the leaves are probably partly detached.</note>
@@ -426,6 +426,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">16</dim>
                                         <dim type="left">8</dim>
                                     </dimensions>
+                                    <note>The characters per line are 16–31.</note>
+                                    <ab type="punctuation" subtype="Dividers">Groups of ten psalms are separated sometimes
+                                        with one chain of red and black dots
+                                        (e.g. on <locus target="#7v"/>).<!--The only photographed occurence--></ab>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.
+                                    </ab>
                                 </layout>
                             </layoutDesc>
                             
@@ -446,6 +454,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          
                         </decoDesc>-->
                         
+                        <additions>
+                            <list>
+                            <item xml:id="e1">
+                                <desc>A white sticker is glued to the inner side of the front board. The signature ‘MS. Eth. E.U. I’ is printed on it.</desc>
+                            </item>
+                            
+                                <item xml:id="e2">
+                                    <desc>The manuscript contains very few scribal corrections. Rarely, omitted characteres or verses are added above the 
+                                        line (e.g. <locus target="#66r #115v"/>), and corrections are added above erasures (e.g. <locus target="#115v #140r"/>).
+                                        Occasional line take-ups (e.g. <locus target="#3r #108v #140r"/>) and take-downs (e.g. <locus target="#140r"/>).</desc>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <locus from="108v" to="109r"/>
+                                    <locus target="#134v"/>
+                                    <locus from="138v" to="139r"/>
+                                    <desc>Crudely written scribbles of the trinitarian formula (<locus target="#108v"/>) and other partly illegible and erased 
+                                        words and characters in the margins.</desc>
+                                </item>
+                                
+                                <item xml:id="e4">
+                                    <locus target="#120r"/>
+                                    <desc>A rubricated text has been deleted between Psalms 120 and 121.</desc>
+                                </item>
+                                
+                                <item xml:id="e5">
+                                    <locus target="#139v"/>
+                                    <desc>A crudely drawn human figure in the inner margin.</desc>
+                                </item>
+                                
+                                <item xml:id="e6">
+                                    <locus target="#144v"/>
+                                    <desc>Crudely written note in the lower margin.</desc>
+                                    <q xml:lang="am">የታሀሳሥ፡ ቅዱሥ፡ ሚካየል</q>
+                                </item>
+                                
+                                <item xml:id="e7">
+                                    <locus target="#148v"/>
+                                    <locus target="#149r"/>
+                                    <desc>Crudely written notes in the upper margins.</desc>
+                                    <!--Are these personal names?-->
+                                    <q xml:lang="am">የወልዴ፡ ፭ ጨው</q>
+                                    <q xml:lang="am">የገዴ፡ ፪ ጨው</q>
+                                </item>
+                                
+                                <!--continue from 189-->
+                            </list>
+                        </additions>
+                        
                    <!--     <bindingDesc>
                             <binding xml:id="binding">
                                 <decoNote xml:id="b1"></decoNote>
@@ -461,7 +518,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <origin>
                             <origDate notBefore="1650" to="1849" evidence="lettering"/>
                         </origin>
-                        <provenance>The manuscript was purchased in <date when="1952">1952</date> at Sotheby's by <persName ref="" role="owner"/>.</provenance>
+                        <provenance>The manuscript contains no indications regarding its original owner(s) or place
+                            of production. It was purchased in <date when="1952">1952</date> at Sotheby's by 
+                            <persName ref="PRS9622Ullendor" role="owner"/>.</provenance>
                     </history>
                     
                     <additional>
@@ -507,6 +566,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
