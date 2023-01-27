@@ -73,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <p>A hole, presumably from parchment making, is found on <locus target="#52"/>.</p>
+                                    <p>A hole, presumably from parchment making, is found on <locus target="#49 #52"/>.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">60</measure>
@@ -119,10 +119,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
                                 <condition key="deficient">
-                                    The boards are missing. The lowermost sewing station is damaged.
+                                    The boards are missing. The lowermost sewing station is damaged and the sewing is broken.
                                     The textblock is incomplete: an undetermined number of leaves is missing with loss of text from Ps 70 onwards.
                                     Humidity appears to have damaged the parchment, especially towards the beginning of the manuscript. Water stains are attested in the outer or inner margins of
-                                    many leaves, e.g. on <locus target="#1r #22r #26v"/>. Wax stains are visible on e.g. <locus target="#1r #31v #38r #46r"/>.
+                                    many leaves, e.g. on <locus target="#1r #22r #26v"/>. Wax stains are visible on e.g. <locus target="#1r #31v #46r"/>.
                                     The parchment is crumpled on <locus target="#17"/>.
                                 </condition>
                             </supportDesc>
@@ -234,13 +234,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </additions>
 
                         <bindingDesc>
-                            <binding contemporary="true">
-                                <decoNote xml:id="b1">Boards are missing. The manuscript consists of the textblock only.
-                                </decoNote>
-                                <decoNote xml:id="b2" type="SewingStations">4</decoNote>
-                                <decoNote xml:id="b3" type="Other">Crimson <term key="leafTabMark">leaf tab markers</term> for navigating are inserted in the outer margins of
-                                    <locus target="#16 #24 #36 #45 #52"/>.</decoNote>
-                            </binding>
+                          <binding xml:id="binding" contemporary="true">
+                            <decoNote xml:id="b1">
+                              Boards are missing. The binding consists of the sewing only.
+                            </decoNote>
+                            <decoNote xml:id="b2" type="SewingStations">4</decoNote>
+                            <decoNote xml:id="b3">
+                             Chainstitch sewing on four sewing stations (two pairs); periodic fold pattern; Z-plied threads.
+                             Between each pair of sewing stations there are two lengths of thread.
+                            </decoNote>
+                            <decoNote xml:id="b4" type="Spine">
+                              The small holes close to the head and tail of the quires presumably are what remains of quire tackets or endbands tiedowns.
+                            </decoNote>
+                            <decoNote xml:id="b5" type="Other">
+                              Crimson <term key="leafTabMark">leaf tab markers</term> for navigating the text are inserted in the outer margins of
+                              <locus target="#16 #24 #36 #45 #52"/>.</decoNote>
+                          </binding>
                         </bindingDesc>
                     </physDesc>
 
@@ -287,6 +296,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="MV" when="2020-06-16">Added textual contents, binding, addition, condition.</change>
             <change who="MV" when="2020-06-17">Added handDesc, rubrication, extra, ruling.</change>
             <change who="MV" when="2020-06-18">Changes after PR.</change>
+            <change who="EDS" when="2023-01-27">Updated writing support, condition, and binding description.</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
