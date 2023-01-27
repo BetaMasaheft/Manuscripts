@@ -10,10 +10,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library and Ethiopic Manuscript Imaging Project directed
+               by Steve Delamarter.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201860">https://w3id.org/vhmml/readingRoom/view/201860.</ref>
             </p>
-            <p>Fol. 64b-65a, 99b-100a, 103b-104a, 106b-107a, 118b-119a, 174b-175a, 191b-192a, 209b-210a, 217b-218a, 224b-225a, 242b-243a, 251b-252a, and 268b-269a filmed twice</p>
+            <p>HMML: Fol. 64b-65a, 99b-100a, 103b-104a, 106b-107a, 118b-119a, 174b-175a, 191b-192a, 209b-210a, 217b-218a, 224b-225a, 242b-243a, 251b-252a, and 268b-269a filmed twice</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +27,33 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 18</idno>
+                  <repository ref="INS0632AQM"/>                   
+                  <idno facs="EMIP/Codices/1303" n="329">EMML 18</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 18</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 18</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1303</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Synaxarium, Sǝnkǝssar, መጽሐፈ፡ ስንክሳር፡ given by the Emperor Ḫaylä Śǝllase to the Church of St. Mark in Addis Ababa</summary>
+                  <msItem xml:id="ms_i1">
+                     <locus from="3r" to="274v"></locus>
+                     <title>Synaxarion. Maggābit-Pāgwǝmen</title>
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,22 +62,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 256</measure>
-                           <dimensions>
-                              <dim>28.5 x 21.5 cm</dim>
+                           <measure unit="leaf">4+252</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>285</height>
+                              <width>215</width>
+                              <depth/>
                            </dimensions>
                         </extent>
                         <foliation/>
                         <condition key="good">On some pages, the ink has penetrated so badly that the text is illegible in part.</condition>
                      </supportDesc>
+                     <layoutDesc><layout columns="2" writtenLines="34"></layout></layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"></handNote></handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1944" notAfter="1945">20th century,
-                                                        1944-5</origDate>
+                     <origDate when="1945">1938 EC = 1945-6 (colophon added at the bottom of f. 2r, and mentions Ḫaylä Śǝllase)</origDate>
                   </origin>
-                  <provenance>In the church of St. Mark when filmed.</provenance>
+                  <provenance>Given by Emperor Ḫāyla Śellāsē to the church on 14 Ṭeqemt 1938 EC (24 October 1945 CE), fol. 1r. In the church of St. Mark when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -68,7 +88,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:EMML1"/>
+                                 <ptr target="bm:EMML1"/><citedRange>21</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -89,11 +109,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="PL" when="2018-01-18">Created XML record EMIP01303 from EMIP Collection Metadata.xsls</change>
+         <change when="2020-04-17" who="RL">corrected ǝ character EMIP01303</change>
+         <change when="2023-01-27" who="ES">merged EMML18  and EMIP01303, adding metadata by Ted Erho from vHMML</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -101,6 +124,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML18" passive="EMIP01303"></relation></listRelation>
          <ab/>
       </body>
    </text>
