@@ -10,7 +10,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library and Ethiopic Manuscript Imaging Project directed
+               by Steve Delamarter.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201870">https://w3id.org/vhmml/readingRoom/view/201870.</ref>
             </p>
             <p/>
@@ -26,17 +27,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 28</idno>
+                  <repository ref="INS0632AQM"/>                   
+                  <idno facs="EMIP/Codices/1304" n="106">EMML 28</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 82</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 19</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1304</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Homiliary in Honor of the Archangel Michael, Dǝrsanä Mika’el, ድርሳነ፡ ሚካኤል፡</summary>
+                  <msItem xml:id="ms_i1">
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,19 +60,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 103</measure>
-                           <dimensions>
-                              <dim>32 x 23 cm</dim>
+                           <measure unit="leaf">103</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>320</height>
+                              <width>230</width>
+                              <depth/>
                            </dimensions>
+                           
                         </extent>
-                        <foliation/>
-                        <condition key="good">The gatherings, despite being numbered in part, have been bound in great disorder.  The correct sequence of the leaves is: ff. 1a-26b, 45a-70b, 27a-44b, 89a-96b, 71a-88b, 97b-101b.</condition>
+                        <foliation>The gatherings, despite being numbered in part, have been bound in great disorder.  The correct sequence of the leaves is: ff. 1a-26b, 45a-70b, 27a-44b, 89a-96b, 71a-88b, 97b-101b.</foliation>
+                        <condition key="deficient"></condition>
                      </supportDesc>
                   </objectDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1910"/>
+                     <origDate when="1923">1916 EC = 1923-4 (colophon added at the bottom of f. 1v-2r, and mentions Ḫaylä Śǝllase)</origDate>
                   </origin>
                   <provenance>Copied for Fitawrari Asfaw/Walda Hawaryat (Prayer, f. 8b; colophon, f. 101b). In Church St. Mark when filmed.</provenance>
                </history>
@@ -88,11 +106,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="PL" when="2018-01-18">Created XML record EMIP01304 from EMIP Collection Metadata.xsls</change>
+         <change when="2020-04-17" who="RL">corrected ǝ character EMIP01304</change>
+         <change when="2023-01-27" who="ES">merged EMML28 and EMIP01304</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -100,6 +121,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML28" passive="EMIP01304"></relation></listRelation>
          <ab/>
       </body>
    </text>
