@@ -10,10 +10,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library and Ethiopic Manuscript Imaging Project directed
+               by Steve Delamarter.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201863">https://w3id.org/vhmml/readingRoom/view/201863.</ref>
             </p>
-            <p>Fol. 131b-132a and 134b-135a filmed twice</p>
+            <p>HMML: Fol. 131b-132a and 134b-135a filmed twice</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +27,36 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 21</idno>
+                  <repository ref="INS0632AQM"/>                   
+                  <idno facs="EMIP/Codices/1296" n="238">EMML 21</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 21</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 11</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1296</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Tarik Giyorgis Walda Amid</summary>
+                  <msItem xml:id="ms_i1">
+                     <title>ጊዮርጊስ ፡ ወልደ ፡ ዓሚድ Giyorgis Walda Amid</title>
+                     <textLang mainLang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <title>ዜና ፡ አይሁድ Yosippon</title>
+                     <textLang mainLang="gez"/>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -46,21 +66,36 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         </support>
                         <extent>
                            <measure unit="leaf"> 234</measure>
-                           <dimensions>
-                              <dim>35 x 28 cm</dim>
+                           <dimensions type="outer" unit="mm">
+                              <height>350</height>
+                              <width>280</width>
+                              <depth/>
                            </dimensions>
+                           
                         </extent>
-                        <foliation/>
-                        <condition key="good">On the recto of the fore guard leaf, there is found the tragic tale of a princess who fell in love with her father's adversary and betrayed her father, who was killed in battle. Her victorious lover married her, but then killed her to avenge her father.</condition>
+                        <foliation>Leaf after fol. 37 unnumbered; no. 51 duplicated on two leaves</foliation>
+                        <condition key="good"></condition>
                      </supportDesc>
+                     <layoutDesc><layout writtenLines="34" columns="2"></layout></layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <ab type="script">scribe: ወልደ ፡ ገብርኤል Walda Giyorgis</ab>
+                     </handNote>
+                  </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1"><desc type="GuestText">On the recto of the fore guard leaf, there is found the tragic tale of a princess who fell in love with her father's adversary and betrayed her father, who was killed in battle. Her victorious lover married her, but then killed her to avenge her father.</desc><q xml:lang="am"></q></item>
+                        <item xml:id="a2"><desc>miscellaneous bibliographical references on foreguard leaves</desc></item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
                      <origDate notBefore="1921" notAfter="1922">20th century,
-                                                        1921-2</origDate>
+                        1914 EC = 1921-22</origDate>
                   </origin>
-                  <provenance>Copied for Ras Tafari Makonnen/Haile Selassie by Walda Gare'el (rector of the Church of St. Mark). In Church of St. Mark when filmed.</provenance>
+                  <provenance>Copied for Ras Tafari Makonnen/Haile Selassie by Walda Gabre'el (rector of the Church of St. Mark). In Church of St. Mark when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -68,7 +103,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:EMML1"/>
+                                 <ptr target="bm:EMML1"/><citedRange>23</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -89,11 +124,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="am">Amharic</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change when="2023-01-27" who="ES">merged EMML21  and EMIP01296, adding metadata by Ted Erho from vHMML</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -101,6 +137,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML21" passive="EMIP01296"></relation></listRelation>
          <ab/>
       </body>
    </text>
