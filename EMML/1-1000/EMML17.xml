@@ -10,10 +10,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library and Ethiopic Manuscript Imaging Project directed
+               by Steve Delamarter.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201859">https://w3id.org/vhmml/readingRoom/view/201859.</ref>
             </p>
-            <p>Fol. 37b-38a and 41b-42a filmed twice</p>
+            <p>Fol. 37b-38a and 41b-42a microfilmed twice. The text is often rather blurred in the EMML microfilm</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +27,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 17</idno>
+                  <repository ref="INS0632AQM"/>                   
+                  <idno facs="EMIP/Codices/1294" n="155">EMML 17</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 17</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 9</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1294</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Book of Pearl by Sawiros መጽሐፈ ፡ ባሕርይ ፡ ዘብዙኅ ፡ ሤጡ</summary>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -46,20 +58,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         </support>
                         <extent>
                            <measure unit="leaf"> 154</measure>
-                           <dimensions>
-                              <dim>29 x 22 cm</dim>
-                           </dimensions>
+                           <dimensions type="outer" unit="mm">
+                              <height>290</height>
+                              <width>220</width>
+                            </dimensions>                           
                         </extent>
                         <foliation/>
-                        <condition key="good">The text is often rather blurred in the microfilm.  For chapter divisions, see catalog.</condition>
+                        <condition key="good"></condition>
                      </supportDesc>
+                     <layoutDesc><layout writtenLines="26" columns="2"></layout></layoutDesc>
                   </objectDesc>
+                  
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1927"/>
+                     <origDate when="1927-05-15">6 Maggābit 1919 EC</origDate>
                   </origin>
-                  <provenance>In the church of St. Mark when filmed.</provenance>
+                  <provenance>Given to the church by Emperor Ḫāyla Śellāsē in 1925/6 CE (sic!), fol. 153r. In the church of St. Mark when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -88,11 +103,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change when="2023-01-27" who="ES">merged EMML17  and EMIP01294</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -100,6 +116,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML17" passive="EMIP01294"></relation></listRelation>
          <ab/>
       </body>
    </text>
