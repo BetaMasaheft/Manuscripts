@@ -10,7 +10,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library and Ethiopic Manuscript Imaging Project directed
+               by Steve Delamarter.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201857">https://w3id.org/vhmml/readingRoom/view/201857.</ref>
             </p>
             <p/>
@@ -26,17 +27,48 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 15</idno>
+                  <repository ref="INS0632AQM"/>                   
+                  <idno facs="EMIP/Codices/1316" n="254">EMML 15</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 15</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 31</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1316</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Spiritual Elder, Aragawi Manfasawi, አረጋዊ፡ መንፈሳዊ፡; Mār Yesḥaq, Filkesyus</summary>
+                  <msItem xml:id="ms_i1">
+                     <locus from="1r" to="112r"></locus>
+                     <title>አረጋዊ ፡ መንፈሳዊ</title>
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="113r" to="182r"></locus>
+                     <title>Mār Yesḥaq ማር ፡ ይስሐቅ</title>
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="183r" to="247v"></locus>
+                     <title>Filkesyus 	ፊልክስዩስ</title>
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="248v" to="249r"></locus>
+                     <title>Index</title>
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,14 +77,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 251</measure>
-                           <dimensions>
-                              <dim>31 x 28 cm</dim>
+                           <measure unit="leaf">2+251</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>310</height>
+                              <width>280</width>
+                              <depth/>
                            </dimensions>
+                           
                         </extent>
                         <foliation/>
-                        <condition key="good">For subdivisions of the three works, see catalog.</condition>
+                        <condition key="good"></condition>
                      </supportDesc>
+                     <layoutDesc><layout columns="3" writtenLines="23 25"></layout></layoutDesc>
                   </objectDesc>
                </physDesc>
                <history>
@@ -60,7 +96,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                      <origDate notBefore="1600" notAfter="1800">17th-18th century,
                                                         </origDate>
                   </origin>
-                  <provenance>Copied by unnamed scribe for Walda Mika'el.  Given to the Church of St. Mark by Emperor Haile Selassie I the 7th of June 1924 A.D. In Church of St. Mark when filmed.</provenance>
+                  <provenance>Copied by unnamed scribe for ወልደ ፡ ሚካኤል Walda Mika'el.  Given to the church by Emperor Ḫāyla Śellāsē on 30 Genbot 1916 EC (7 June 1924).  In Church of St. Mark when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -68,7 +104,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <source>
                            <listBibl type="catalogue">
                               <bibl>
-                                 <ptr target="bm:EMML1"/>
+                                 <ptr target="bm:EMML1"/><citedRange>17-18</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -89,11 +125,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="PL" when="2018-01-18">Created XML record EMIP01316 from EMIP Collection Metadata.xsls</change>
+         <change when="2020-04-17" who="RL">corrected ǝ character EMIP01316</change>
+         <change when="2023-01-27" who="ES">merged EMML15  and EMIP01316, adding metadata by Ted Erho from vHMML</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -101,6 +140,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML15" passive="EMIP01316"></relation></listRelation>
          <ab/>
       </body>
    </text>
