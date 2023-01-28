@@ -6,14 +6,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 631</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+                                provided by Hill Museum &amp; Manuscript Library and EMIP.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202469">https://w3id.org/vhmml/readingRoom/view/202469.</ref>
             </p>
-            <p>Fol. 29b-30a and 148b-149a filmed twice</p>
+            <p>HMML: Fol. 29b-30a and 148b-149a filmed twice</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +27,40 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 631</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2753/" n="162">EMML 631</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 631</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-8</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 8</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2753</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <title type="complete" ref="LIT2701Dawit"/>
+                     <note>Hebraic edition of <ref type="work" corresp="LIT2362Songof"/></note>
+                     <note>Titles of sections are christological</note>
+                     <colophon xml:id="coloph1">
+                        <locus from="140v"/>
+                        includes Date, mention of <persName ref="PRS7006Menilek"></persName>, mention of Scribe, mention of city of copying
+                     </colophon>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,14 +69,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 160+3</measure>
-                           <dimensions>
-                              <dim>27.5 x 22.5 cm</dim>
+                           <measure unit="leaf">154</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>280</height>
+                              <width>230</width>
                            </dimensions>
                         </extent>
-                        <foliation/>
+                        <foliation>Folios are numbered 1 to 161, with nrs. 4 and 5 given to the same leaf. </foliation>
                         <condition key="good"/>
                      </supportDesc>
+                     <layoutDesc>
+                        <layout columns="2"/>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
@@ -67,10 +96,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1800" notAfter="1900">19th century,
-                                                        </origDate>
+                     <origDate when-custom="1898" calendar="ethiopian" when="1905">1898 EC</origDate>
                   </origin>
-                  <provenance>Folios are numbered 1 to 161, with nrs. 4 and 5 given to the same leaf. Copied by Stamp of the Patriarchate Library, ff. 1a, 9a, 47a, 71a, 113a, 144a, and 149a.  In Patriarchate Library when filmed.</provenance>
+                  <provenance>Copied by Stamp of the Patriarchate Library, ff. 1a, 9a, 47a, 71a, 113a, 144a, and 149a.  In Patriarchate Library when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -99,11 +127,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-14">Created entity EMIP02753</change>
+         <change when="2023-01-11" who="ES">merged EMML631  and EMIP02753</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -111,6 +141,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML631" passive="EMIP02753"></relation></listRelation>
          <ab/>
       </body>
    </text>
