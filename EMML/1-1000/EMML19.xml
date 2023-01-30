@@ -10,10 +10,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library and Ethiopic Manuscript Imaging Project directed
+               by Steve Delamarter.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201861">https://w3id.org/vhmml/readingRoom/view/201861.</ref>
             </p>
-            <p>Fol. 23b-24a not filmed.  fol. 33b-34a, 82b-83a, 86b-87a, and 96b-97a filmed twice</p>
+            <p>HMML: Fol. 23b-24a not filmed.  fol. 33b-34a, 82b-83a, 86b-87a, and 96b-97a filmed twice</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +27,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 19</idno>
+                  <repository ref="INS0632AQM"/>                   
+                  <idno facs="EMIP/Codices/1295" n="157">EMML 19</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 19</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 10</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1295</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Zena Abaw</summary>
+                  <msItem xml:id="ms_i1">
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -46,9 +61,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         </support>
                         <extent>
                            <measure unit="leaf"> 155</measure>
-                           <dimensions>
-                              <dim>32.5 x 28.5 cm</dim>
+                           <dimensions type="outer" unit="mm">
+                              <height>325</height>
+                              <width>285</width>
+                              <depth/>
                            </dimensions>
+                           
                         </extent>
                         <foliation/>
                         <condition key="good"/>
@@ -57,7 +75,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1929"/>
+                     <origDate when="1923">1916 EC = 1923-4 (colophon added at the bottom of f. 2r, and mentions Ḫaylä Śǝllase)</origDate>
                   </origin>
                   <provenance>Copied for Haile Selassie I by Gabra Mika'el, brother of Walda Gabre'el (rector of the Church of St. Mark). In Church of St. Mark when filmed.</provenance>
                </history>
@@ -88,11 +106,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2020-04-17" who="RL">corrected ǝ character</change>
+         <change when="2023-01-27" who="ES">merged EMML19  and EMIP01295</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -100,6 +121,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML19" passive="EMIP01295"></relation></listRelation>
          <ab/>
       </body>
    </text>
