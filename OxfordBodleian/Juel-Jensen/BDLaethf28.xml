@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethf28"
@@ -13,7 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Maṣḥafa tārik</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,21 +36,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 53</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>Holes, presumably from the parchment making process (e.g. <locus target="#3 #27 #85"/>).
+                                   The hole on <locus target="#47"/> has been repaired at the moment of parchment production by sewing. </p>
                                 </support>
                                 <extent>
                                     <measure unit="page">122</measure>
@@ -62,7 +67,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#60"/>.</note>
                                     <measure type="weight" unit="g">424</measure>
-                                </extent> 
+                                </extent>
                                 <collation>
                                         <list>
                                             <item xml:id="q1" n="1">
@@ -96,9 +101,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             </item>
                                         </list>
                                 </collation>
-                                
+                                <condition key="good">
+                                 The bookblock has been damaged by humidity, especially in the outer margins.
+                                 Hairs are still attached to <locus target="#49"/>.
+                                 Insect droppings are present on <locus target="#31 #32"/>. The blunt edge used for ruling has perforated on <locus target="#22"/>.
+                                 Creases and losses are present, especially on the first and last leaves.
+                                 New boards replace the original ones and a new thread attaches the bookblock to the boards.
+                               </condition>
+
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="1" writtenLines="24">
                                     <locus from="1r" to="122"/>
@@ -115,37 +127,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                           
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+
                         </decoDesc>-->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+
+                        <bindingDesc>
+                            <binding contemporary="false">
+                              <decoNote xml:id="b1" type="bindingMaterial">
+                                The book is bound in <material key="wood">wooden</material> boards.
+                              </decoNote>
+                              <decoNote xml:id="b2" type="Boards">
+                                The boards are flush with the bookblock and have square edges.
+                                The grain runs vertically. Both inner and outer surfaces are finely polished.
+                              </decoNote>
+                              <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                              <decoNote xml:id="b5">
+                                Chainstitch sewing on four sewing stations (two pairs); periodic fold pattern. The original Z-plied thread has been repaired with a modern S-plied thread to reattach
+                                the bookblock to the boards.
+                            </decoNote>
+                            <decoNote xml:id="b7" type="Spine">
+                              Parchment tackets are still extant at head and tail of <ref target="#q1 #q2"/>.
+                            </decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -157,7 +180,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -189,7 +212,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-22">Created record</change>
             <change who="DR" when="2020-02-27">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="EDS" when="2022-11-20">Added bindingDesc, updated condition</change>
+        </revisionDesc>
+
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
