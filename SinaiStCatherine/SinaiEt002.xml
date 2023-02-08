@@ -50,6 +50,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                    <locus from="53rb" to="55va"/>
                    <title type="incomplete" ref="LIT1812GospelLuke#LukeGospelPreface"/>
                    <textLang mainLang="gez"/>
+                   <incipit xml:lang="gez">
+                     <hi rend="rubric">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ አሐ</hi>ዱ፡ አምላክ፨ ዘመርሐነ፡ በርድኤቱ፡ እምድኅረ፡ ስሕተት፡ ወሁረት፨ ወአርአየነ፡ ተመርሖ፡ እምድኅረ፡ እከይ፡
+                   </incipit>
+                   <note>It includes several parts including the list of "tituli", possibly not all complete</note>
+                   <!--tmay be later elaborated-->
                  </msItem>
 
                    
@@ -139,10 +144,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                       <desc>Trained and regular hand.</desc>
+                       <seg type="script"><date>Second half of the eigteenth-/first half of the nineteenth-century</date> script.</seg>                       
                        <date notBefore="1750" notAfter="1849"/>
                         <seg type="ink">Black, red</seg>
+                       <desc>Regular and careful, well-trained hand.</desc>
                      </handNote>
+                    
+                    <handNote xml:id="h2" script="Ethiopic">
+                      <seg type="script"><date>Second half of the eigteenth-/nineteenth-century</date> script.</seg>                       
+                      <date notBefore="1800" notAfter="1849"/>
+                      <seg type="ink">Black, red</seg>
+                      <desc>Very crude and irregular; by a poorly trained scribe; possibly the hand of the 
+                        additional texts in <ref type="mss" corresp="SinaiEt1"/>.</desc>
+                      <!--to be checked in situ again-->
+                    </handNote>
                   </handDesc>
                  
                   <additions>
@@ -150,13 +165,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        <item xml:id="a1">
                          <locus from="1v" to="3v"/>
                          <locus from="55vb" to="59r"/>
-                         <desc type="GuestText"><title ref="LIT2999RepCh279" type="complete"/></desc>
-                         <q xml:lang="gez"/>
+                         <desc type="GuestText"><title ref="LIT2999RepCh279" type="complete">Malkǝʿa-hymn to John the Baptist, written in a very crude hand (that most probably wrote also 
+                           other notes listed below)</title></desc>
+                         <q xml:lang="gez">
+                           በስመ፡ እግዚአብሔር፡ እሳት፡ በሐቅለ፡ ሕሊና፡ ነዳዲ፨ 
+                           ወበስመ፡ ማርያም፡ ድንግል፡ መጥበቢተ፡ ዓለም፡ አባዲ፨ ማኅቶተ፡ ጥበብ፡ ዮሐንስ፡ <sic resp="DN">ጸልመተ፡ </sic>አበሳ፡ ሳዳዲ፨ ከመ፡ እዜኑ፡ ኂሩተከ፡ ዕዳ፡ ኃጣውዕየ፡ ይፍዲ፨ 
+                         </q>
                        </item>
                        
                        <item xml:id="a2">
-                         <desc type="OwnershipNote">The name of <persName ref="PRS13952Heristoforos" role="owner"/>, is indicated in supplications
-                           in margins of most folia in varying spelling (<foreign xml:lang="gez">ህሪስቶፎሮስ፡</foreign>; <foreign xml:lang="gez">ህሪስቶፍሮ፡</foreign>;
+                         <desc type="OwnershipNote">The name of <persName ref="PRS13952Heristoforos" role="owner"/> is indicated in supplications
+                           in margins of most folia, in varying spelling (<foreign xml:lang="gez">ህሪስቶፎሮስ፡</foreign>; <foreign xml:lang="gez">ህሪስቶፍሮ፡</foreign>;
                            <foreign xml:lang="gez">ህሪስቶፎሮ፡ ኤሳ</foreign>; <foreign xml:lang="gez">ህሪስቶፎሮስ፡ ኤሳ፡ ደቂቁ፡ ለሳባ፡</foreign>).</desc>
                          <q xml:lang="gez">ለገብርከ፡ ህሪስቶ፡ ፎሮስ፡</q>
                        </item>
@@ -218,12 +237,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <binding contemporary="true" xml:id="binding">
                         <decoNote xml:id="b1">Two boards covered with blind-tooled leather.</decoNote>
                         <decoNote xml:id="b2" type="Boards"><term key="textileInlay">Textile inlay</term> in the front board.</decoNote>
-                        <decoNote xml:id="b3" type="bindingMaterial">
+                       <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                       <decoNote xml:id="b4" type="Endbands">Endbands intact</decoNote>
+                       <!-- to be checked in  the manuscript-->
+                        <decoNote xml:id="b5" type="bindingMaterial">
                          <!-- <material key="wood"/>-->
                           <material key="leather"/>
                           <material key="textile"/>
                         </decoNote>
-                        <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                       <decoNote xml:id="b6" type="Other">Coloured 
+                         <term key="leafStringMark"></term>
+                         inserted in an upper text prick of <locus target="#4 #14 #21 #30 #44 #50"/>.
+                       </decoNote>
+                     
                      </binding>
                   </bindingDesc>
                </physDesc>
@@ -284,6 +310,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2022-10-25">Created record from catalogue description with consultation of digitized microfilm</change>
+        <change who="DN" when="2023-02-10">Minor editions</change>
       </revisionDesc>
   </teiHeader>
   <text xml:base="https://betamasaheft.eu/">
