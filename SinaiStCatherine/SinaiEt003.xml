@@ -186,12 +186,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            <measure unit="leaf" quantity="132">132</measure>
                           <measure unit="leaf" quantity="2" type="blank">2</measure>
                           <locus target="#1r #2r"/>
-                        <measure unit="quire"></measure>
-                           <dimensions type="outer" unit="mm">
+                        <measure unit="quire" quantity="15">1+14</measure>
+                          <measure unit="g" type="weight">804</measure>
+                         <!--  <dimensions type="outer" unit="mm">
+                             <note>As provided by the catalogue.</note>
                               <height>175</height>
                               <width>125</width>
-                            <!-- <depth></depth>-->
-                           </dimensions>
+                           </dimensions>-->
+                          <dimensions type="outer" unit="mm">
+                            <height>178</height>
+                            <width>127</width>
+                             <depth>47</depth>
+                            <note>Due to exposure to humidity, the manuscript's depth has expanded to c. 85 mm along the other side.</note>
+                          </dimensions>
+                          <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                            <height>173</height>
+                            <width>122</width>
+                          </dimensions>
+                          <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#49r"/>.</note>
                         </extent>
                         <foliation>Foliation in the upper outer corner until <locus target="#80r"/>, the in the middle
                           of the upper margin. The number 122 has been used twice in the foliation, now distinguished in the manuscript as 
@@ -273,9 +285,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        <!--check ruling in ms-->
                            <layout columns="1" writtenLines="25">
                              <locus from="3r" to="118r"/>
-                             <dimensions unit="mm" xml:id="textarea1">
+                         <!--    <dimensions unit="mm" xml:id="textarea1">
+                               <note>As indicated in the catalogue.</note>
                                <height>135</height>
                                <width>100</width>
+                             </dimensions>-->
+                             <note corresp="#textarea1 #margin1">Data on text area and margin dimensions taken from <locus target="#49r"/>.</note>
+                             <dimensions unit="mm" xml:id="textarea1">
+                               <height>127</height>
+                               <width>107</width>
+                             </dimensions>
+                             <dimensions type="margin" unit="mm" xml:id="margin1">
+                               <dim type="top">15</dim>
+                               <dim type="bottom">33</dim>
+                               <dim type="right">12</dim>
+                               <dim type="left">8</dim>
                              </dimensions>
                              <ab type="ruling">Ruling and pricking are partly visible.</ab>
                              <ab type="ruling" subtype="pattern">1A-1A/0-0/0-0/C</ab>
@@ -286,9 +310,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            </layout>
                        <layout columns="2" writtenLines="26">
                          <locus from="118v" to="130v"/>
-                         <dimensions unit="mm" xml:id="textarea2">
+                         <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#121r"/>.</note>
+                       <!--  <dimensions unit="mm" xml:id="textarea2">
+                           <note>As indicated in the catalogue.</note>
                            <height>135</height>
                            <width>100</width>
+                         </dimensions>-->
+                         <dimensions unit="mm" xml:id="textarea2">
+                           <height>132</height>
+                           <width>100</width>
+                         </dimensions>
+                         <dimensions type="margin" unit="mm" xml:id="margin2">
+                           <dim type="top">13</dim>
+                           <dim type="bottom">28</dim>
+                           <dim type="right">17</dim>
+                           <dim type="left">8</dim>
+                           <dim type="intercolumn">8</dim>
                          </dimensions>
                          <ab type="ruling">Ruling is visible.</ab>
                          <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
@@ -322,7 +359,7 @@ elements of numerals and punctuation marks.</seg>
                      <desc>A European printed devotional image with French title, 
                        <q xml:lang="fr">Imitation de Jésus enfant</q>, and caption,
                        <q xml:lang="fr">Le coucher. Si vous m'aimez, imitez-moi.</q>,
-                       is attached to the inner front board.</desc>
+                       is attached to the inner front board. The image is surrounded by a frame of a gilded material, probably metal.</desc>
                    </decoNote>
                    <decoNote xml:id="d2" type="printedImage">
                      <locus target="#1v"/>
@@ -434,6 +471,8 @@ elements of numerals and punctuation marks.</seg>
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2022-12-22">Created record from catalogue description with consultation of digitized microfilm</change>
+        <change who="DR" when="2023-02-14">Updated description with codicological data (weight, dimensions) taken at
+        consultation of the manuscript in St Catherine's</change>
       </revisionDesc>
   </teiHeader>
   <text xml:base="https://betamasaheft.eu/">
