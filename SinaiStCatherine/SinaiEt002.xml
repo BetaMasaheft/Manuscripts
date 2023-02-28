@@ -36,7 +36,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <title type="complete" ref="LIT2711Mark"/>
                      <textLang mainLang="gez"/>
                     
-                    <colophon xml:id="coloph1">
+                    <colophon xml:id="coloph1" xml:lang="gez">
                       <locus from="52vb" to="53ra"/>
                       <hi rend="rubric">መልዓ፡ ጽሕፈተ፡ ብስራቱ፡ ለማርቆስ፡ ሐዋርያ፡</hi> ወኮነ፡ ጸሐፎ፡ በልሳነ፡ <pb n="53r"/><cb n="a"/>
                       ሮሜ፡ ዘአፍርክንጊ፡ ዘሀገረ፡ ሮምያ፨ እምድኅረ፡ ዕርገቱ፡ ለእግዚእነ፡ ክርስቶስ፡ በሥጋ<hi rend="rubric" rendition="#partialRubric">፨</hi> ውስተ፡ ሰማይ፡ በዓሠርቱ፡ ወአሐዱ፡ ዓመት፡
@@ -70,12 +70,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </support>
                         <extent>
                            <measure unit="leaf" quantity="59">59</measure>
-                        <measure unit="quire"></measure>
-                           <dimensions type="outer" unit="mm">
+                        <measure unit="quire" quantity="8">A+6+B</measure>
+                          <measure unit="g" type="weight">334</measure>
+                     <!--      <dimensions type="outer" unit="mm">
+                             according to catalogue
                               <height>130</height>
                               <width>110</width>
-                            <!-- <depth></depth>-->
-                           </dimensions>
+                           </dimensions>-->
+                          <dimensions type="outer" unit="mm">
+                            <height>135</height>
+                            <width>109</width>
+                            <depth>40</depth>
+                          </dimensions>
+                          <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                            <height>128</height>
+                            <width>108</width>
+                          </dimensions>
+                          <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#34r"/>.</note>
                         </extent>
                         <foliation>Foliation in the upper outer corner.</foliation>
                         <collation>
@@ -85,7 +96,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                <dim unit="leaf">3</dim>
                                <locus from="1r" to="3v"/>
                               2, stub after 2
-                              <!--to be checked in the manuscript-->
                           </item>
                           <item xml:id="q2" n="1">
                             <num value="1">፩</num>
@@ -120,7 +130,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <item xml:id="q8" n="B">
                               <dim unit="leaf">2</dim>
                               <locus from="58r" to="59v"/>
-                              <!--to be checked in the manuscript-->
                             </item>
                           </list>
                         </collation>
@@ -130,9 +139,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <layoutDesc>
                            <layout columns="2" writtenLines="16">
                              <locus from="4r" to="55va"/>
-                             <dimensions unit="mm" xml:id="textarea1">
+                            <!-- <dimensions unit="mm" xml:id="textarea1">
+                               according to catalogue
                                <height>90</height>
                                <width>85</width>
+                             </dimensions>-->
+                             <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#34r"/>.</note>
+                             <dimensions unit="mm" xml:id="textarea1">
+                               <height>83</height>
+                               <width>83</width>
+                             </dimensions>
+                             <dimensions type="margin" unit="mm" xml:id="margin">
+                               <dim type="top">29</dim>
+                               <dim type="bottom">27</dim>
+                               <dim type="right">13</dim>
+                               <dim type="left">10</dim>
+                               <dim type="intercolumn">8</dim>
                              </dimensions>
                              <ab type="ruling">Ruling and pricking are visible.</ab>
                              <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
@@ -144,18 +166,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                       <seg type="script"><date>Second half of the eigteenth-/first half of the nineteenth-century</date> script.</seg>                       
+                       <seg type="script"><date>Second half of the eighteenth-/first half of the nineteenth-century</date> script.</seg>                       
                        <date notBefore="1750" notAfter="1849"/>
                         <seg type="ink">Black, red</seg>
                        <desc>Regular and careful, well-trained hand.</desc>
                      </handNote>
                     
                     <handNote xml:id="h2" script="Ethiopic">
-                      <seg type="script"><date>Second half of the eigteenth-/nineteenth-century</date> script.</seg>                       
+                      <seg type="script"><date>Second half of the eighteenth-/nineteenth-century</date> script.</seg>                       
                       <date notBefore="1800" notAfter="1849"/>
                       <seg type="ink">Black, red</seg>
                       <desc>Very crude and irregular; by a poorly trained scribe; possibly the hand of the 
-                        additional texts in <ref type="mss" corresp="SinaiEt1"/>.</desc>
+                        additional texts in <ref type="mss" corresp="SinaiEt001"/>.</desc>
                       <!--to be checked in situ again-->
                     </handNote>
                   </handDesc>
@@ -229,20 +251,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                          <desc>The name of <persName ref="PRS13953Gabreel" role="owner"/> has been inserted probably after the production of the manuscript
                            in space left empty in the introductory supplication to <ref target="#ms_i1"/>. Later, it has been crossed out and that of 
                            <persName ref="PRS13952Heristoforos"/> has been added in the margin. In the final supplication on <locus target="#53ra"/>, the original 
-                           name has been erased anf that of <persName ref="PRS13952Heristoforos"/> been written above it.</desc>
+                           name has been erased and that of <persName ref="PRS13952Heristoforos"/> been written above the erasure.</desc>
                        </item>
                      </list>
                   </additions>
 
                   <bindingDesc>
                      <binding contemporary="true" xml:id="binding">
-                        <decoNote xml:id="b1">Two boards covered with blind-tooled leather.</decoNote>
+                        <decoNote xml:id="b1">Two boards covered with blind-tooled leather. Fastening consisting of metal fastening nailed to the front
+                        board and leather strap with metal peg nailed to the back board.</decoNote>
                         <decoNote xml:id="b2" type="Boards"><term key="textileInlay">Textile inlay</term> in the front board.</decoNote>
                        <decoNote xml:id="b3" type="SewingStations">4</decoNote>
-                       <decoNote xml:id="b4" type="Endbands">Endbands intact.</decoNote>
-                       <!-- to be checked in  the manuscript-->
+                       <decoNote xml:id="b4" type="Endbands">Headband missing, tailband slightly torn.</decoNote>
                         <decoNote xml:id="b5" type="bindingMaterial">
-                         <!-- <material key="wood"/>-->
+                          <material key="wood"/>
                           <material key="leather"/>
                           <material key="textile"/>
                         </decoNote>
