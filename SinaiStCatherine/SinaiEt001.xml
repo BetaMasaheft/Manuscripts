@@ -31,8 +31,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                <msContents>
                   <summary/>
                  
-                 <!--check with ms: maybe two codicological units?-->
-                 
                   <msItem xml:id="ms_i1">
                     <locus from="3r" to="122vb"/>
                      <title type="complete" ref="LIT2701Dawit"/>
@@ -195,11 +193,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <measure unit="leaf" type="blank">3</measure>
                           <locus from="1v" to="2r"/>
                         <measure unit="quire">A+17</measure>
-                           <dimensions type="outer" unit="mm">
+                          <measure unit="g" type="weight">1069</measure>
+                      <!--     <dimensions type="outer" unit="mm">
+                             provided in the catalogue
                               <height>210</height>
                               <width>136</width>
-                            <!-- <depth></depth>-->
-                           </dimensions>
+                            <!-\- <depth></depth>-\->
+                           </dimensions>-->
+                          <dimensions type="outer" unit="mm">
+                            <height>215</height>
+                            <width>140</width>
+                            <depth>50</depth>
+                          </dimensions>
+                          <dimensions type="leaf" unit="mm" xml:id="leafdim1">
+                            <height>206</height>
+                            <width>136</width>
+                          </dimensions>
+                          <note corresp="#leafdim1">Data on leaves dimensions taken from <locus target="#19r"/>.</note>
+                          <dimensions type="leaf" unit="mm" xml:id="leafdim2">
+                            <height>209</height>
+                            <width>133</width>
+                          </dimensions>
+                          <note corresp="#leafdim2">Data on leaves dimensions taken from <locus target="#111r"/>.</note>
                         </extent>
                         <foliation>Foliation in the upper outer corner.</foliation>
                         <collation>
@@ -209,7 +224,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <item xml:id="q1" n="A">
                                <dim unit="leaf">1</dim>
                                <locus from="1r" to="2v"/>
-                              <!--to be checked in the manuscript whether this really is a bifolium-->
                           </item>
                           <item xml:id="q2" n="1">
                              <dim unit="leaf">8</dim>
@@ -302,23 +316,47 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <layoutDesc>
                            <layout columns="1" writtenLines="27">
                              <locus from="3r" to="109v"/>
-                             <dimensions unit="mm" xml:id="textarea1">
+                             <!--<dimensions unit="mm" xml:id="textarea1">
+                               provided by catalogue
                                <height>155</height>
                                <width>105</width>
+                             </dimensions>-->
+                             <dimensions unit="mm" xml:id="textarea1">
+                               <height>153</height>
+                               <width>105</width>
+                             </dimensions>
+                             <note corresp="#textarea1 #margin1">Data on text area and margin dimensions taken from <locus target="#19r"/>.</note>
+                             <dimensions type="margin" unit="mm" xml:id="margin1">
+                               <dim type="top">16</dim>
+                               <dim type="bottom">38</dim>
+                               <dim type="right">21</dim>
+                               <dim type="left">15</dim>
+                             </dimensions>
+                             <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#111r"/>.</note>
+                             <dimensions unit="mm" xml:id="textarea2">
+                               <height>157</height>
+                               <width>95</width>
+                             </dimensions>
+                             <dimensions type="margin" unit="mm" xml:id="margin2">
+                               <dim type="top">18</dim>
+                               <dim type="bottom">32</dim>
+                               <dim type="right">23</dim>
+                               <dim type="left">15</dim>
+                               <dim type="intercolumn">10</dim>
                              </dimensions>
                              <ab type="ruling">Ruling and pricking are visible.</ab>
                              <ab type="ruling" subtype="pattern">1A-1A/0-0/0-0/C</ab>
-                             <ab type="pricking">Horizontal and bottom vertical pricks are mostly visible, upper vertical pricks are not visible.</ab>
+                             <ab type="pricking">Horizontal and vertical pricks are visible.</ab>
                              <ab type="ruling">The upper written line is written above the ruling, the lower written line is written above the ruling.</ab>
                            </layout>
                            <layout columns="2" writtenLines="28">
                              <locus from="110ra" to="160v"/>
-                             <dimensions unit="mm" xml:id="textarea2">
+                             <dimensions unit="mm" xml:id="textarea3">
                                <height>155</height>
                                <width>105</width>
                              </dimensions>
                              <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C </ab>
-                             <ab type="pricking">Horizontal and bottom vertical pricks are mostly visible, upper vertical pricks are not visible.</ab>
+                             <ab type="pricking">Horizontal and vertical pricks are visible.</ab>
                              <ab type="ruling">The upper written line is written above the ruling, the lower written line is written above the ruling.</ab>
                            </layout>
 
@@ -327,7 +365,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                       <seg type="script"><date>Late nineteenth/eigteenth century</date> script.</seg>
+                       <seg type="script"><date>Late nineteenth/eighteenth century</date> script.</seg>
                        <date notBefore="1801" notAfter="1818"/>
                        <seg type="ink">Black, red.</seg>
                        <desc>Careful, regular; by a good scribe. A slight change seems to occur on <locus target="#123r"/> with the beginning of <ref target="#ms_i2"/>, 
@@ -445,7 +483,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        
                        <item xml:id="e1">
                          <locus from="1r" to="159ra"/>
-                         <desc type="Correction">Corrections in the text on some folia, in the main hand: omissions inserted interleneally, 
+                         <desc type="Correction">Corrections in the text on some folia, in the main hand: omissions inserted interlineally, 
                            mostly single letters (e.g. ff. 20r, 26r, 40r, 40v, 43v, 52v, 53r, 58v, 59r, 65r, 79r),  erasures marked by lines (e.g. ff. 6r, 51v, 59v), correction written above the erasure that is
                            marked with thin lines (e.g. f. 61v), through <foreign xml:lang="am">tamallas</foreign>-sign (f. 177r) and other sings, frequently dots in the margin 
                            (cp. e.g. ff. 23v, 25v, 70v, 71r, 75v, 76r, 77v, 78r, 80v, 81r).                            
@@ -483,17 +521,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                            in  secondary hands, decorated with red and black dotted lines or frames (partly trimmed).</desc>
                        </item>
                        
-                   
+                       <item xml:id="e7">
+                         <desc>A small white sticker (partly destroyed with missing text) is glued onto the spine, on which is printed
+                           "<foreign xml:lang="grc">ΒΙΒΛΙΟΘ<gap reason="lost"/>Η Χειρουγρ<gap reason="lost"/>ων ΣΙΝΑ. 1</foreign>".</desc>
+                       </item>
                      </list>
                   </additions>
 
                   <bindingDesc>
                      <binding contemporary="true" xml:id="binding">
-                        <decoNote xml:id="b1">Two wooden boards covered with blind-tooled leather (design of a cross within a frame).</decoNote>
+                        <decoNote xml:id="b1">Two wooden boards covered with blind-tooled leather (design of a cross within a frame).
+                        Fastening: metal fastening nailed to the front board, part of leather strap nailed to the back board (metal peg kept in 
+                        a plastic bag inside the manuscript).</decoNote>
                         <decoNote xml:id="b2" type="Boards"><term key="textileInlay">Textile inlays</term>.</decoNote>
                        <decoNote xml:id="b3" type="SewingStations">4</decoNote>
-                       <decoNote xml:id="b4" type="Endbands">Endbands intact</decoNote>
-                       <!-- to be checked in  the manuscript-->
+                       <decoNote xml:id="b4" type="Endbands">Headband slightly torn, tailband intact.</decoNote>
                         <decoNote xml:id="b5" type="bindingMaterial">
                           <material key="wood"/>
                           <material key="leather"/>
@@ -562,6 +604,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
          <change who="DR" when="2022-10-18">Created record from catalogue description with consultation of digitized microfilm</change>
+        <change who="DR" when="2023-02-14">Updated codicological data after consultation of the manuscript in St Catherine's</change>
       </revisionDesc>
   </teiHeader>
   <text xml:base="https://betamasaheft.eu/">
