@@ -39,16 +39,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     </support>
                     <extent>
                       <measure unit="leaf" quantity="116">116</measure>
-                      <!--<measure unit="quire"></measure>-->
-                      <dimensions type="outer" unit="mm">
+                      <measure unit="g" type="weight">514</measure>
+                      <measure unit="quire" quantity="15">15</measure>
+                     <!-- <dimensions type="outer" unit="mm">
+                       according to catalogue
                         <height>165</height>
                         <width>120</width>
-                        <!-- <depth></depth>-->
+                        <!-\- <depth></depth>-\->
+                      </dimensions>-->
+                      <dimensions type="outer" unit="mm">
+                        <height>170</height>
+                        <width>122</width>
+                        <depth>45</depth>
                       </dimensions>
                     </extent>
                     <foliation>Foliation in the upper outer corner.</foliation>
-              <!--      <collation>
-                      to be checked in the manuscript
+                    <collation>
                       <list>
                         <item xml:id="q1" n="1">
                           <dim unit="leaf">8</dim>
@@ -66,24 +72,70 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                           <dim unit="leaf">8</dim>
                           <locus from="25r" to="32v"/>
                         </item>
+                        <item xml:id="q5" n="5">
+                          <dim unit="leaf">8</dim>
+                          <locus from="33r" to="40v"/>
+                        </item>
+                        <item xml:id="q6" n="6">
+                          <dim unit="leaf">8</dim>
+                          <locus from="41r" to="48v"/>
+                        </item>
+                        <item xml:id="q7" n="7">
+                          <dim unit="leaf">8</dim>
+                          <locus from="49r" to="56v"/>
+                        </item>
+                        <item xml:id="q8" n="8">
+                          <dim unit="leaf">8</dim>
+                          <locus from="57r" to="64v"/>
+                        </item>
+                        <item xml:id="q9" n="9">
+                          <dim unit="leaf">8</dim>
+                          <locus from="65r" to="72v"/>
+                        </item>
+                        <item xml:id="q10" n="10">
+                          <dim unit="leaf">8</dim>
+                          <locus from="73r" to="80v"/>
+                        </item>
+                        <item xml:id="q11" n="11">
+                          <dim unit="leaf">8</dim>
+                          <locus from="81r" to="88v"/>
+                        </item>
+                        <item xml:id="q12" n="12">
+                          <dim unit="leaf">8</dim>
+                          <locus from="89r" to="96v"/>
+                        </item>
+                        <item xml:id="q13" n="13">
+                          <dim unit="leaf">8</dim>
+                          <locus from="97r" to="104v"/>
+                        </item>
+                        <item xml:id="q14" n="14">
+                          <dim unit="leaf">8</dim>
+                          <locus from="105r" to="112v"/>
+                        </item>
+                        <item xml:id="q15" n="15">
+                          <dim unit="leaf">4</dim>
+                          <locus from="113r" to="116v"/>
+                          <note>This quire is completely detached from the manuscript.</note>
+                        </item>
                       </list>
-                    </collation>-->
+                    </collation>
                     <condition key="good">The back board is missing.</condition>
                   </supportDesc>
                 </objectDesc>
             
                 
                 <bindingDesc>
-                  <!--to be checked in manuscript-->
                   <binding contemporary="true" xml:id="binding">
                     <decoNote xml:id="b1">One <material key="wood">wooden</material> board,
-                      probably covered with leather.</decoNote>
+                       covered with leather. Attached to the spine with textile.</decoNote>
                     <decoNote xml:id="b2" type="Boards">Only the front board is preserved, the back board is missing.</decoNote>
                     <decoNote xml:id="b3" type="bindingMaterial">
                       <material key="wood"/>
-                <!--      <material key="leather"/>-->
+                      <material key="leather"/>
                     </decoNote>
-                    <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                    <decoNote xml:id="b4">Pieces of red textile are glued to both sides of the leaf on <locus target="#10"/>, 
+                      to <locus target="#21r #25r #40v #49r #58r #63v"/>.</decoNote>
+                    <!--<decoNote xml:id="b4" type="SewingStations">4</decoNote>-->
                   </binding>
                 </bindingDesc>
               </physDesc>
@@ -282,6 +334,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <extent>
                           <measure unit="leaf" quantity="112">112</measure>
                       <!--  <measure unit="quire"></measure>-->
+                          <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                            <height>165</height>
+                            <width>118</width>
+                          </dimensions>
+                          <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#25r"/>.</note>
                         </extent>
                         <condition key="good"/>
                          </supportDesc>
@@ -290,14 +347,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        <!--check in ms-->
                            <layout columns="2" writtenLines="25">
                              <locus from="1ra" to="112vb"/>
-                             <dimensions unit="mm" xml:id="textarea1">
+                            <!-- <dimensions unit="mm" xml:id="textarea1">
+                              according to catalogue
                                <height>135</height>
                                <width>90</width>
+                             </dimensions>-->
+                             <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#25r"/>.</note>
+                             <dimensions unit="mm" xml:id="textarea">
+                               <height>130</height>
+                               <width>88</width>
                              </dimensions>
-                       <!--      <ab type="ruling"></ab>
-                             <ab type="ruling" subtype="pattern"></ab>
-                             <ab type="pricking"></ab>
-                             <ab type="ruling"></ab>-->
+                             <dimensions type="margin" unit="mm" xml:id="margin">
+                               <dim type="top">17</dim>
+                               <dim type="bottom">20</dim>
+                               <dim type="right">24</dim>
+                               <dim type="left">5</dim>
+                               <dim type="intercolumn">12</dim>
+                             </dimensions>
+                             <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                             <ab type="pricking">Vertical and horizontal pricks are visible. Horizontal pricks are located close to the outer vertical ruled line.
+                             Vertical pricks are located next to the written text.</ab>
+                             <ab type="ruling">Ruling is visible. The upper line is written below the ruling, the lower line is written above the ruling.</ab>
                            </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -310,7 +380,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                        <seg type="rubrication">One to three lines at the beginning of prayers, sometimes alternating with black lines; 
                          every second character, alternating with black characters, of the beginning of the prayer on <locus target="#101rb"/>
                          the word <foreign xml:lang="gez">ሃሌሉያ፡</foreign>; names of the letters of the Hebrew alphabet;
-                         elements of puncutation marks and text dividers.</seg>
+                         elements of punctuation marks and text dividers.</seg>
                        <desc>Careful, slightly irregular; by a good scribe. Both variants of the 6th-order ሰ can be found, the one constructed 
                          of a short horizontal stroke (ending with a serif) 
                          directed to the left, set up at the short oblique stroke, and the standard medieval/modern ስ (see e.g.<locus target="#24v #25r"/> against <locus target="#20r"/>).
@@ -333,7 +403,66 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <ref type="mss" corresp="SinaiEt004"/> and <ref type="mss" corresp="SinaiEt006"/>,
         is mentioned in supplications within the main body of the text.</desc>
     </item>
-    <!--what is about notes on f. 112v?-->
+    
+    <item xml:id="a1">
+      <desc>Note on the inner front board, only partly visible.</desc>
+      <q xml:lang="gez">ኤና ከ ትረያ
+      ወረሀ፡ ታሕሳስ፡ እም ፲
+      ገብዐከ</q>
+    </item>
+    
+    <item xml:id="a2">
+      <locus target="#112v"/>
+      <desc>Note in brownish ink in the upper margin, only partly visible.</desc>
+      <q xml:lang="gez">ለጸ<gap reason="illegible" unit="chars" quantity="1"/> ነሀናሰርበመንገክርስቶ ዐሜን </q>
+    </item>
+    
+    <item xml:id="a3">
+      <locus target="#112v"/>
+      <desc>Note in brownish ink in the lower margin, only partly visible.</desc>
+      <q xml:lang="gez">ተዘከሮ ለሀብርኮ ናሰር ወ<add place="below">ለ</add>ዕ<gap reason="illegible" unit="chars" quantity="1"/>ና
+      ሰርበ፡ መንገሰተ ሰማያት ዐሜን</q>
+    </item>
+    
+    <item xml:id="a4">
+      <locus target="#112v"/>
+      <desc>Note in faded ink in the left margin, only partly visible.</desc>
+      <q xml:lang="gez">ዕምሰሙ
+      <gap reason="illegible"/>ታሕሳስ</q>
+    </item>
+    
+    <item xml:id="a5">
+      <locus target="#112v"/>
+      <desc>List of numbers under Gǝnbot and Sane.</desc>
+      <q xml:lang="gez"></q>
+    </item>
+    
+    <item xml:id="a6">
+      <locus target="#112v"/>
+      <desc>Possibly pen trial, the characters መ and እ are repeated in several orders.</desc>
+      <q xml:lang="gez"></q>
+    </item>
+    
+    <item xml:id="a7">
+      <locus target="#112v"/>
+      <desc>Erased note.</desc>
+      <q xml:lang="gez"></q>
+    </item>
+    
+    <item xml:id="a8">
+      <locus target="#112v"/>
+      <desc>Prayer.</desc>
+      <q xml:lang="gez"></q>
+    </item>
+    
+    <item xml:id="a9">
+      <locus target="#112v"/>
+      <desc>Prayer in faded ink (beginning identical as above).</desc>
+      <q xml:lang="gez">እግዚእየ፡ ወአምላክየ፡ ኢየሱስ፡ ክርስቶስ፡ ወልደ፡ እግዚአ፡ ብሔር፡ ሕያው፡ ዘእምኃቤሁ፡ ኵሉ፡ ሃብት፡ ወሠናያት፡ አበ፡ ብርሃናት፡ ዘይሁብ፡
+        <gap reason="illegible" unit="chars" quantity="2"/>ለኅሩያኒሁ<gap reason="illegible" unit="chars" quantity="2"/>ምላእ፡ ላዕሌነ
+      </q>
+    </item>
+    
   </list>
 </additions>
                </physDesc>
@@ -384,17 +513,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     </supportDesc>
                     
                     <layoutDesc>
-                      <!--check in ms-->
                       <layout columns="2" writtenLines="17">
                         <locus from="113ra" to="116vb"/>
+                        <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#25r"/>.</note>
                         <dimensions unit="mm" xml:id="textarea2">
-                          <height></height>
-                          <width></width>
+                          <height>120</height>
+                          <width>87</width>
                         </dimensions>
-                        <!--      <ab type="ruling"></ab>
+                        <dimensions type="margin" unit="mm" xml:id="margin2">
+                          <dim type="top">22</dim>
+                          <dim type="bottom">20</dim>
+                          <dim type="right">19</dim>
+                          <dim type="left">12</dim>
+                          <dim type="intercolumn">9</dim>
+                        </dimensions>
+                              <ab type="ruling">On <locus target="#113r"/>, vertical and lower and upper horizontal ruled lines are visible.
+                              Vertical and horizontal pricks are visible, both close to the body of the text. There are no horizontal ruled text lines.
+                              On <locus from="114" to="115"/>, three vertical ruled lines are visible. No horizontal lines are visible. Upper vertical pricks are visible, 
+                              lower vertical pricks are not visible.
+                              <locus target="#116"/> has the same ruling and pricking as <locus target="#113"/>, but here horizontal ruled lines are present.</ab>
                              <ab type="ruling" subtype="pattern"></ab>
                              <ab type="pricking"></ab>
-                             <ab type="ruling"></ab>-->
+                             <ab type="ruling"></ab>
                       </layout>
                     </layoutDesc>
                   </objectDesc>
@@ -411,6 +551,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                     </handNote>
                   </handDesc>
+                  
+                  <additions>
+                    <list>
+                      <item xml:id="a10">
+                        <locus target="#115r"/>
+                       <desc>Calendaric note in brownish ink in the upper margin.</desc>
+                        <q xml:lang="gez">፲ወ፯፡ ለግንቦት፡ ገበዐኩጠቢ</q>
+                      </item>
+                      <item xml:id="a11">
+                        <locus target="#116v"/>
+                        <desc>Calendaric note in brownish ink in the upper margin.</desc>
+                        <q xml:lang="gez">ዘተዘከረ እም፳፩ መጥቅ ዓበቅቴ፡ ፱</q>
+                      </item>
+                    </list>
+                  </additions>
+                  
                 </physDesc>
                 <history>
                   <origin>
