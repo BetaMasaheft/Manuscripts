@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft-expanded.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft-expanded.rng" 
-        type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     type="mss"
-     xml:id="PetermannIINachtrag42">
-   <teiHeader>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="BNFet677" type="mss">
+   <teiHeader xml:base="https://betamasaheft.eu/">
+      
       <fileDesc>
          <titleStmt>
-            <title>Prophetae maiores; Major Prophets</title>
+            <title>Isaiah, Jeremiah, Ezekiel</title>
             <editor key="ES"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -39,7 +34,51 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
                      <idno>Dillmann 2</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents/>
+               <msContents>
+                  <summary/>
+                  
+                  <msItem xml:id="ms_i1">
+                     <locus from="1ra" to="92"/>
+                     <locus target="#293"/>
+                     <locus target="#297"/>
+                     <title type="incomplete" ref="LIT1672Isaiah"/>
+                     <textLang mainLang="gez"/>
+                     <note>Isaiah 40:7-45 (expected between <locus target="#63"/> and <locus target="#64"/>) is missing.
+                        <locus target="#293"/> contains Isaiah 41:25-42;     <locus target="#297"/> contains Isaiah 44:13-24.
+                     </note>
+                  </msItem>
+                  
+                  <msItem xml:id="ms_i2">
+                     <locus from="93ra" to="207"/>
+                     <title type="complete" ref="LIT2035Jerem"/>
+                     <textLang mainLang="gez"/>
+                     
+                     <msItem xml:id="ms_i2.1">
+                        <locus from="93ra" to="196v"/>
+                        <title type="complete" ref="LIT1685Bookof"/>
+                        <textLang mainLang="gez"/>
+                     </msItem>
+                     
+                     <msItem xml:id="ms_i2.2">
+                        <locus from="196v" to="200v"/>
+                        <title type="complete" ref="LIT1202Bookof"/>
+                        <textLang mainLang="gez"/>
+                     </msItem>
+                     
+                     <msItem xml:id="ms_i2.3">
+                        <locus from="200v" to="206v"/>
+                        <title type="complete" ref="LIT1753Lament"/>
+                        <textLang mainLang="gez"/>
+                     </msItem>
+                  
+                     <msItem xml:id="ms_i2.4">
+                        <locus from="206v" to="207"/>
+                        <title type="complete" ref="LIT1686Epistl"/>
+                        <textLang mainLang="gez"/>
+                     </msItem></msItem>
+                  
+               </msContents>
+               
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -48,9 +87,49 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
                         </support>
                         <extent>
                            <measure unit="leaf">298</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>300</height>
+                              <width>220</width>
+                              <!--    <depth></depth>-->
+                           </dimensions>
                         </extent>
+                        <collation>
+                           <note>A quaternion is missing between <locus target="#63"/> and <locus target="#64"/>, of which
+                           two folia are located at <locus target="#293"/> and <locus target="#297"/>. <locus target="#296"/> should be located
+                           before <locus target="294"/>.</note>
+                        </collation>
+                <condition key="good">Partly damaged by humidity, dirt and animals. The lower margin of <locus target="#31"/>
+                and the outer margins of <locus target="#43 #62 #63"/> are cut off.</condition>
                      </supportDesc>
                   </objectDesc>
+                  
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <date notBefore="1400" notAfter="1499"/>
+                        <desc>Large, archaic characters, not very correct.</desc>
+                     </handNote>
+                  </handDesc>
+                  
+                  <decoDesc>
+                     <decoNote xml:id="d1" type="frame">
+                        <desc>Coloured ornaments.</desc>
+                     </decoNote>
+                  </decoDesc>
+                  
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc type="Correction">Erasures and corrections by a more recent hand in a few places.</desc>
+                           <q xml:lang="gez"/>
+                        </item>
+                        
+                        <item xml:id="a2">
+                           <desc type="Comment">A more recent hand has noted the European chapter numbers 
+                              (<foreign xml:lang="gez">ምዕራፍ፡</foreign>) in the margins.</desc>
+                           <q xml:lang="gez"/>
+                        </item>
+                     </list>
+                  </additions>
                   
                </physDesc>
                <additional>
@@ -69,162 +148,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
                               <bibl>
                                  <ptr target="bm:Dillmann1878Verzeichnis"/>
                                  <citedRange unit="number">2</citedRange>
+                                 <citedRange unit="page">1-2</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
                      </recordHist>
                   </adminInfo>
                </additional>
-               <msPart xml:id="p1">
-                  <msIdentifier>
-                     <repository ref="INS0333SBB"/>
-                     <idno>Petermann II Nachtrag 42 p. 1</idno>
-                     
-                  </msIdentifier>
-                  <msContents>
-                     <summary>Jesaja Bl. 1- 92.  Zwischen Bl. 63 und 64 fehlt Jes. 40, 7-45, 7; Bl. 293 steht Jes. 41, 25-42, 10 u. Bl. 297 Jes. 44, 13-24.&#xD;
-Gebet Jesaja´s u. 38,9 als Gebet Hizkia´s, u. ausserdem 36, 1 u. 38, 1 durch rote Anfangszeilen hervorgehoben.</summary>
-                  </msContents>
-                  <physDesc>
-                     <objectDesc form="Codex">
-                        <supportDesc>
-                           <support>
-                              <material key="parchment"/>
-                           </support>
-                           <extent>
-                              <measure unit="leaf">92
-p. 1: f. 1r-92v</measure>
-                           </extent>
-                        </supportDesc>
-                     </objectDesc>
-                     <handDesc>
-                        <handNote script="Ethiopic" xml:id="h1">
-                           <seg type="ink">.</seg>
-                        </handNote>
-                     </handDesc>
-                  </physDesc>
-                  
-               </msPart>
-               <msPart xml:id="p2">
-                  <msIdentifier>
-                     <repository ref="INS0333SBB"/>
-                     <idno>Petermann II Nachtrag 42 p. 2</idno>
-                     
-                  </msIdentifier>
-                  <msContents>
-                     <summary>a) Buch Jeremja Bl. 93-196b.&#xD;
-b)  Der griech. apokr. Baruch, ohne jegliche Trennung mit Jeremja verbunden, nicht einmal durch rothen Zeilenanfang unterscheiden Bl. 196b - 200b.&#xD;
-c)  Klagelieder Bl. 200b- 206b.&#xD;
-d)  Brief des Jeremja (አርአያ: መጽሐፍ: ዘእርምያስ:) Bl. 206b-207, &#xD;
-und dann erst die Unterschrift : ተፈጸመ: መጽሐፈ: እርምያስ: ነቢይ: „zu Ende ist das Buch des Propheten Jeremja“</summary>
-                  </msContents>
-                  <physDesc>
-                     <objectDesc form="Codex">
-                        <supportDesc>
-                           <support>
-                              <material key="parchment"/>
-                           </support>
-                           <extent>
-                              <measure unit="leaf">115
-p. 2: f. 93r-207v</measure>
-                           </extent>
-                        </supportDesc>
-                     </objectDesc>
-                     <handDesc>
-                        <handNote script="Ethiopic" xml:id="h2">
-                           <seg type="ink">.</seg>
-                        </handNote>
-                     </handDesc>
-                  </physDesc>
-                  
-               </msPart>
-               <msPart xml:id="p3">
-                  <msIdentifier>
-                     <repository ref="INS0333SBB"/>
-                     <idno>Petermann II Nachtrag 42 p. 3</idno>
-                    
-                  </msIdentifier>
-                  <msContents>
-                     <summary>Die Paralipomena des Baruch, „nicht apokryph“ (ተረፋተ: ነገር: ዘባሮክ: ዘኢኮነ: ኅቡአ:)                  Bl. 208-219a. Gedruckt in meiner äth. Chrestomathie p. 1-15; griechisch bei A.M.                   Ceriani Monumenta sacra et profana t. V, 1 Mediol. 1868 p. 11 seq. Unterschrift:                   ወትሩፋተ: ነገሩሰ: ለእርምያስ: ነዋ: ጹሑፍ: ውስተ: መጽሐፈ: ባሮክ:: ወተፈጸመ: ዘባሮክ::</summary>
-                  </msContents>
-                  <physDesc>
-                     <objectDesc form="Codex">
-                        <supportDesc>
-                           <support>
-                              <material key="parchment"/>
-                           </support>
-                           <extent>
-                              <measure unit="leaf">12
-p. 3: f.  208r-219v</measure>
-                           </extent>
-                        </supportDesc>
-                     </objectDesc>
-                     <handDesc>
-                        <handNote script="Ethiopic" xml:id="h3">
-                           
-                        </handNote>
-                     </handDesc>
-                  </physDesc>
-                  
-               </msPart>
-               <msPart xml:id="p4">
-                  <msIdentifier>
-                     <repository ref="INS0333SBB"/>
-                     <idno>Petermann II Nachtrag 42 p. 4</idno>
-                     
-                  </msIdentifier>
-                  <msContents>
-                     <summary>Beigegeben sind Bl. 219 u 220 unter der Überschrift መጽሐፈ: ተዝካር: ወተረፈ: ነገር: ዘግብጻዊያን:  die bei den Griechen, Kopien u.s.w. im Umlauf gekommenen                    apokryphischen Nachrichten oder Legenden über Jeremja, derlei in Epiphan.                   de vit. prophet., bei Pseudodorotheus, im Chron. pasch. und sonst zu lesen sind                   (vid. Fabricius cod. pseudepigr. V. T. I. 1110-1115).</summary>
-                  </msContents>
-                  <physDesc>
-                     <objectDesc form="Codex">
-                        <supportDesc>
-                           <support>
-                              <material key="parchment"/>
-                           </support>
-                           <extent>
-                              <measure unit="leaf">2
-p. 4: f.  219r-220v</measure>
-                           </extent>
-                        </supportDesc>
-                     </objectDesc>
-                     <handDesc>
-                        <handNote script="Ethiopic" xml:id="h4">
-                           <seg type="ink">.</seg>
-                        </handNote>
-                     </handDesc>
-                  </physDesc>
-                  
-               </msPart>
-               <msPart xml:id="p5">
-                  <msIdentifier>
-                     <repository ref="INS0333SBB"/>
-                     <idno>Petermann II Nachtrag 42 p. 5</idno>
-
-                  </msIdentifier>
-                  <msContents>
-                     <summary>Die Abschnitte des Textes, durch rote Anfangszeilen kenntlich gemacht, sind:  C. 6, 1. 7, 1. 8, 1. 11, 14. 12, 1. 8. 17. 21. 26. 13, 1. 14, 2. 12. 15, 1. 16,1. 17,1. 11. 18, 1. 20, 1. 2. 21, 1. 6. 13. 23.  22, 1.17. 23. 23, 1. 24, 1.15. 25, 1. 26, 1. 27, 1. 28, 1. 11. 20. 29, 1.17. 30, 1. 20. 31, 1. 32, 1. 17. 33, 1. 21. 23. 34,1. 35, 1. 37, 11. 15. 38, 1. 40, 1.    Von Cap. 42 an ist der Text Stark verstümmelt, wie in andern ältesten Handschriften des Ezechiel. Beigegeben sind Bl. 295b,ß und 298 unter dem Titel ትራፈ: ነገር: (ähnlich wie bei Jeremja) Legenden über die Wunder, den Märtyrertod und das Grab des Ezechiel.</summary>
-                  </msContents>
-                  <physDesc>
-                     <objectDesc form="Codex">
-                        <supportDesc>
-                           <support>
-                              <material key="parchment"/>
-                           </support>
-                           <extent>
-                              <measure unit="leaf">72
-p. 5: f.  221r-292v</measure>
-                           </extent>
-                        </supportDesc>
-                     </objectDesc>
-                     <handDesc>
-                        <handNote script="Ethiopic" xml:id="h5">
-                           
-                        </handNote>
-                     </handDesc>
-                  </physDesc>
-                  
-               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -239,11 +169,14 @@ p. 5: f.  221r-292v</measure>
       <profileDesc>
          <textClass>
             <keywords>
-               <term>Christianity</term>
+               <term key="ChristianLiterature"/>
+               <term key="OldTestament"/>
+               <term key="Bible"/>
             </keywords>
          </textClass>
          <langUsage>
             <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
@@ -255,7 +188,13 @@ p. 5: f.  221r-292v</measure>
                                 Handschriften der Staatsbibliothek zu Berlin – Preußischer
                                 Kulturbesitz .
                                     http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00025169?XSL.Style=native and related
-                                entries: http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059166?XSL.Style=native , http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059167?XSL.Style=native , http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059168?XSL.Style=native , http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059169?XSL.Style=native , http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059170?XSL.Style=native ,  .</change>
+                                entries: 
+                                http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059166?XSL.Style=native , 
+                                http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059167?XSL.Style=native , 
+                                http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059168?XSL.Style=native , 
+                                http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059169?XSL.Style=native , 
+                                http://orient-digital.staatsbibliothek-berlin.de/receive/SBBMSBook_islamhs_00059170?XSL.Style=native ,  .</change>
+         <change when="2023-03-07" who="DR">Encoded information provided by Dillmann's catalogue</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
