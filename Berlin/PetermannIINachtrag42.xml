@@ -149,6 +149,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <!--    <depth></depth>-->
                            </dimensions>
                         </extent>
+                        <foliation>Foliation in the outer upper corner of each recto. Two paper guard leaves each at the beginning and end of the manuscript,
+                           part of the European binding, 
+                        have not been foliated and are referred to here as <locus from="i" to="iv"/>.</foliation>
                <!--         <collation>
                            <note>A quaternion is missing between <locus target="#63"/> and <locus target="#64"/>, of which
                            two folia are located at <locus target="#293"/> and <locus target="#297"/>. <locus target="#296"/> should be located
@@ -347,38 +350,50 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      
                      <layoutDesc>
                         <layout columns="2" writtenLines="19">
-                           <note>Number of characters per line: .</note>
-                      <!--     <locus from="1r" to=""/>
-                           <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#11r"/>.</note>
-                           <dimensions unit="mm" xml:id="textarea">
+                           <note>Number of characters per line per column: 10-11.</note>
+                           <locus from="1ra" to="92vb"/>
+                           <note corresp="#textarea1 #margin1">Data on text area and margin dimensions taken from <locus target="#26r"/>.</note>
+                           <!--library
+                           text area and margin measurements-->
+                           <dimensions unit="mm" xml:id="textarea1">
                               <height></height>
                               <width></width>
                            </dimensions>
-                           <dimensions type="margin" unit="mm" xml:id="margin">
+                           <dimensions type="margin" unit="mm" xml:id="margin1">
                               <dim type="top"></dim>
                               <dim type="bottom"></dim>
                               <dim type="right"></dim>
                               <dim type="left"></dim>
+                              <dim type="intercolumn"></dim>
                            </dimensions>
-                           <ab type="pricking"></ab>
-                           <ab type="ruling" subtype="pattern"></ab>-->
+                           <!--library
+                           check horizontal pricks-->
+                           <ab type="pricking">Vertical pricks are visible;</ab>
+                           <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                           <ab type="ruling">The upper line is written above the ruling; the lower line is written above the ruling.</ab>
                         </layout>
+                        
                         <layout columns="2" writtenLines="24">
-                           <note>Number of characters per line: .</note>
-                           <!--     <locus from="92r" to=""/>
-                           <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#11r"/>.</note>
-                           <dimensions unit="mm" xml:id="textarea">
+                           <note>Number of characters per line per column: 11-13.</note>
+                                <locus from="93ra" to=""/>
+                           <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#101r"/>.</note>
+                           <!--library
+                           text area and margin measurements-->
+                           <dimensions unit="mm" xml:id="textarea2">
                               <height></height>
                               <width></width>
                            </dimensions>
-                           <dimensions type="margin" unit="mm" xml:id="margin">
+                           <dimensions type="margin" unit="mm" xml:id="margin2">
                               <dim type="top"></dim>
                               <dim type="bottom"></dim>
                               <dim type="right"></dim>
                               <dim type="left"></dim>
                            </dimensions>
-                           <ab type="pricking"></ab>
-                           <ab type="ruling" subtype="pattern"></ab>-->
+                           <!--library
+                           check horizontal pricks-->
+                           <ab type="pricking">Vertical pricks are visible;</ab>
+                           <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                           <ab type="ruling">The upper line is written above the ruling; the lower line is written above the ruling.</ab>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -400,18 +415,83 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   
                   <additions>
                      <list>
+                        <item xml:id="e1">
+                           <desc>Note in German on the front pastedown, presumably giving two dates on which the manuscript has been
+                              collated, and a signature.</desc>
+                           <q xml:lang="de">Kollationiert: fol. 1-298
+                           <date when="1933-02-25">25.2.1933</date>
+                           <date when="1935-10-05">5.10. 1935</date></q>
+                        </item>
+                        
+                        <item xml:id="e2">
+                           <locus target="#iv"/>
+                           <desc>Bookbinder's stamp in the lower outer edge of the paper guard leaf.</desc>
+                           <q xml:lang="de">W. Collin
+                              Kaiserl. u. Königl. Hofbuchbinder
+                              Berlin.</q>
+                        </item>
+                        
+                        <item xml:id="e3">
+                           <locus target="#iiv"/>
+                           <desc>Note in German.</desc>
+                           <q xml:lang="de"></q>
+                        </item>
+                        
+                        <item xml:id="e4">
+                           <locus target="#1r"/>
+                           <desc>Note by a European hand.</desc>
+                        </item>
+                        
+                        <item xml:id="e5">
+                           <locus target="#1r"/>
+                           <desc>Shelfmar.</desc>
+                           <q xml:lang="de">Pet. II Nachtr. 42.</q>
+                        </item>
+                        
+                        <item xml:id="e6">
+                           <locus target="#1r"/>
+                           <desc>Stamp of the library.</desc>
+                        </item>
+                        
                         <item xml:id="a1">
+                           <locus target="#1r"/>
+                           <desc>Note listing the main content of the manuscript.</desc>
+                           <q xml:lang="gez">ዝ፡ መጽሐፍ፡ ኢሳይያስ፡ ወኤርምያስ፡ ወባሮክ፡ ወሕዝቅኤል።</q>
+                        </item>
+                        
+                        <item xml:id="a2">
+                           <locus target="#1r"/>
+                     <!--      library
+                           check ink or pencil-->
+                           <desc type="OwnershipNote">Note written in faded ink or pencil in the upper part of the page, partly illegible.</desc>
+                           <q xml:lang="gez">አ<gap reason="illegible" unit="chars" quantity="2"/> ፫ ለታሣስ፡ ዙ<gap reason="illegible"/> ኪዳነ፡ ማርያም፡</q>
+                        </item>
+                        
+                        <item xml:id="a3">
                            <desc type="Correction">Erasures and corrections by a more recent hand in a few places.</desc>
                            <q xml:lang="gez"/>
                         </item>
                         
-                        <item xml:id="a2">
+                        <item xml:id="a4">
                            <desc type="Comment">A more recent hand has noted the European chapter numbers 
                               (<foreign xml:lang="gez">ምዕራፍ፡</foreign>) in the margins.</desc>
                            <q xml:lang="gez"/>
                         </item>
                      </list>
                   </additions>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding" contemporary="false">
+                        <decoNote xml:id="b1">European binding. The manuscript has been re-bound by the library. The binding includes paper pastedowns
+                        and two paper guard leaves each at the beginning and end. Content and shelfmark of the manuscript are impressed in gold 
+                        on the spine.</decoNote>
+                        <decoNote xml:id="b2" type="bindingMaterial">
+                           <material key="leather"/>
+                           <material key="paper"/>
+                        </decoNote>
+                        <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                     </binding>
+                  </bindingDesc>
                   
                </physDesc>
                
@@ -467,6 +547,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <langUsage>
             <language ident="en">English</language>
             <language ident="gez">Gǝʿǝz</language>
+            <language ident="de">German</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
