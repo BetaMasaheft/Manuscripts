@@ -13,6 +13,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Gospel of John, Anaphora of Mary</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
+                <editor key="MV"/>
+                <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -34,9 +37,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
+                        <msItem xml:id="ms_i1">
+                      <locus from="1r" to="79v"/>
+                            <title ref="LIT2715John" type="complete"/>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                                <locus target="#1r"/>
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#79v"/>
+                            </explicit>
+                        </msItem>
+                        
+                        <msItem xml:id="ms_i2">
+                            <locus from="81ra" to="107ra"/>
+                            <title ref="LIT1099Anapho" type="complete"/>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                                <locus target="#81ra"/>
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#107ra"/>
+                            </explicit>
+                        </msItem>
                         
                     </msContents>
                     
@@ -48,8 +71,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">iv+110</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <measure unit="leaf" type="blank">9</measure>
+                                    <locus from="i" to="iv"/>
+                                    <locus target="#80"/>
+                                    <locus target="#107v"/>
+                                    <locus from="108" to="110"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>155</height>
                                         <width>110</width>
@@ -62,16 +88,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#11r"/>.</note>
                                     <measure unit="g" type="weight">418</measure>
                                 </extent>
-                                
+                                <foliation>Foliation in pencil in the upper right corner. The first quire is foliated with Roman numerals.</foliation>
                                 
                                 <collation>
+                                    <signatures>Undecorated quire marks in the middle of the upper margin of the first folium of each quire.</signatures>
                                     <list>
                                         <item xml:id="q1" n="A">
-                                            <dim unit="leaf">2</dim>
-                                            <locus from="ir" to="iiv"/>
-                                            i, no stub
-                                            ii, no stub
-                                            <!--to be checked with the manuscript-->
+                                            <dim unit="leaf">4</dim>
+                                            <locus from="ir" to="ivv"/>
                                         </item>
                                         <item xml:id="q2" n="1">
                                             <dim unit="leaf">10</dim>
@@ -136,9 +160,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </handNote>
                         </handDesc>
                         
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
+                        <decoDesc>
+                         <decoNote xml:id="d1" type="band">
+                             <locus target="#1r"/>
+                             <desc></desc>
+                         </decoNote>
+                        </decoDesc>
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <desc>Scribbles in pencil on both inner boards.</desc>
+                                </item>
+                                
+                                <item xml:id="e2">
+                                    <locus target="#ir"/>
+                                    <desc>The shelfmark ‘MS Aeth. f. 35’ is written in pencil at the bottom of the page.</desc>
+                                </item>
+                                
+                                <item xml:id="a1">
+                                    <locus target="#108v"/>
+                                    <desc>List of names, probably each person’s given name next to their baptismal name.</desc>
+                                    <q xml:lang="gez"></q>
+                                </item>
+                                
+                                <item xml:id="a2">
+                                    <locus target="#109v"/>
+                                    <desc>The first words of the Gospel of John written in pencil, probably a pen trial.</desc>
+                                    <q xml:lang="gez"></q>
+                                </item>
+                            </list>
+                        </additions>
                         
                      <!--   <bindingDesc>
                             <binding xml:id="binding">
