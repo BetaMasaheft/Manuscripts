@@ -120,7 +120,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 
                                 <collation>
                                     <signatures>Undecorated quire marks in the middle of the upper margin of the first folium of each quire.</signatures>
-                                    <list>
+                                    <note>As the manuscript has not been fully digitized, the complete quire structure could not be established. 
+                                    After a protective binion, the manuscript seems to be composed mostly of quinions. The last quire (<locus from="105" to="110"/>)
+                                    is a ternion.</note>
+                             <!--       <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">4</dim>
                                             <locus from="ir" to="ivv"/>
@@ -157,7 +160,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <dim unit="leaf">10</dim>
                                             <locus from="71r" to="80v"/>
                                         </item>
-                                    </list>
+                                        <item xml:id="q10" n="9">
+                                            <dim unit="leaf"></dim>
+                                            <locus from="81r" to=""/>
+                                        </item>
+                                        <item xml:id="q11" n="10">
+                                            <dim unit="leaf"></dim>
+                                            <locus from="" to=""/>
+                                        </item>
+                                        <item xml:id="q12" n="11">
+                                            <dim unit="leaf">6</dim>
+                                            <locus from="105r" to="110v"/>
+                                        </item>
+                                    </list>-->
                                 </collation>
                                 
                             </supportDesc>
@@ -189,11 +204,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
+                                <locus from="1ra" to="104vb"/>
                            <seg type="ink">Black, red.</seg>
                                 <seg type="rubrication">Incipits (groups of red lines alternating with black lines) and single words; holy names; the names
                                     of persons involved in the manuscript production;
                                     elements of punctuation marks. From <locus target="#105r"/> on, spaces left for rubrication have been left empty.</seg>
-                                <desc>The script changes on <locus target="#105r"/>.</desc>
+                                <desc>Modern bulky, slightly condensed script. The characters are of somewhat irregular height, but the hand is trained.</desc>
+                                <persName ref="PRS14003FereS" role="scribe"/>
+                                <date notBefore="1889" notAfter="1926"/>
+                            </handNote>
+                            
+                            <handNote xml:id="h2" script="Ethiopic">
+                                <locus from="105ra" to="107ra"/>
+                                <seg type="ink">Black.</seg>
+                                <desc></desc>
                             </handNote>
                         </handDesc>
                         
@@ -211,11 +235,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </item>
                                 
                                 <item xml:id="e2">
+                                    <locus target="#82rb"/>
+                                    <desc>A supplication within the main text of <ref target="#ms_i2"/> mentions
+                                        <foreign xml:lang="gez">አባ፡ ቄርሎስ፡ ዘሀገር፡ ዓባይ፡ እለ፡ እስክንድርያ፡</foreign> 
+                                        and <foreign xml:lang="gez">ብፁዕ፡ ጳጳስነ፡ አባ፡ ማቴዎስ፡</foreign>.
+                                        These can probably be identified with <persName ref="PRS3259CyrilV"/> and 
+                                        <persName ref="PRS6876Matewos"/>, simultaneously in tenure in 
+                                        <date notBefore="1889" notAfter="1926"/>.</desc>
+                                </item>
+                                
+                                <item xml:id="e3">
                                     <locus target="#ir"/>
                                     <desc>The shelfmark ‘MS Aeth. f. 35’ is written in pencil at the bottom of the page.</desc>
                                 </item>
                                 
-                                <item xml:id="e3">
+                                <item xml:id="e4">
                                     <desc><persName ref="PRS14002WaldaS" role="patron"/>, probably the owner or commissioner, and the scribe 
                                         <persName ref="PRS14003FereS" role="scribe"/> are mentioned in supplications, e.g. on <locus target="#79va"/>.</desc>
                                 </item>
@@ -253,12 +287,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                     </physDesc>
                     
-                <!--    <history>
+                    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1889" notAfter="1926" evidence="prosopography"/>
                         </origin>
                         <provenance>  </provenance>
-                    </history>-->
+                    </history>
                     
                     <additional>
                         <adminInfo>
@@ -307,7 +341,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-03-06">Created record</change>
-            
+            <change who="DR" when="2023-04-21">Continued description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
