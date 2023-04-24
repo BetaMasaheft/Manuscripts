@@ -6,14 +6,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 675</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+                                provided by Hill Museum &amp; Manuscript Library. Digitized also by EMIP. </p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202509">https://w3id.org/vhmml/readingRoom/view/202509.</ref>
             </p>
-            <p>Fol. 207a filmed twice</p>
+            <p>EMML: Fol. 207a filmed twice. EMIP: Folios before image 1 and after image 279 were not shot</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -22,21 +23,43 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 675</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2760/" n="282">EMML 675</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 675</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-15</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 15</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2760</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <title type="complete" ref="LIT2432Teachi"/>
+                     <textLang mainLang="gez" otherLangs="am">Gǝ‘ǝz and Amharic, facing
+                        columns</textLang>
+                     <colophon xml:id="coloph1">
+                        <locus target="#279r"/> Full colophon giving date and other
+                        information </colophon>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,12 +68,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 279+9</measure>
-                           <dimensions>
-                              <dim>31 x 23 cm</dim>
-                           </dimensions>
+                           <measure unit="page">560</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm"/>
+                           <height>310</height>
+                           <width>135</width>
                         </extent>
-                        <foliation/>
+                        <foliation>paginated</foliation>
                         <condition key="good"/>
                      </supportDesc>
                   </objectDesc>
@@ -59,12 +83,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <persName role="scribe" ref="PRS0000">Makbeba Śellāsē Hayla Giyorgis</persName>
                      </handNote>
                   </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1"><locus target="#1"/>
+                           <desc> mentions <persName
+                              ref="PRS2533Baselyos">Basiliyos</persName> and <persName
+                                 ref="PRS5226haylase">Haile Selassie</persName></desc>
+                        </item>
+                        <item xml:id="e1">Stamp of the Patriarchate Library, ff. 1a, 2a, 86a, 97a, 104a, 109a, 127a, and 151a.</item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1965"/>
+                     <origDate when="1965" evidence="internal-date">note on <locus target="#1"/> mentions <persName
+                        ref="PRS2533Baselyos">Basiliyos</persName> and <persName
+                           ref="PRS5226haylase">Haile Selassie</persName>;  full colophon gives date 1957 E.C.</origDate>
                   </origin>
-                  <provenance>Copied for Patriarch Baslyos (colophon, f. 279a). Stamp of the Patriarchate Library, ff. 1a, 2a, 86a, 97a, 104a, 109a, 127a, and 151a.  In Patriarchate Library when filmed.</provenance>
+                  <provenance>Copied for Patriarch Baslyos (colophon, f. 279a).  In Patriarchate Library when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -93,11 +129,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-16">Created EMIP02760 entity</change>
+         <change when="2023-04-24" who="ES">merged EMML675 and EMIP02760</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -106,6 +148,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML675" passive="EMIP02760"></relation></listRelation>
       </body>
    </text>
 </TEI>
