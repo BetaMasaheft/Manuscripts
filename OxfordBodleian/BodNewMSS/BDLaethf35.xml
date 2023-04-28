@@ -120,9 +120,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </msItem>
                         </msItem>
                         
-                        
-                        
-                        
                     </msContents>
                     
                     <physDesc>
@@ -132,7 +129,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">iv+110</measure>
+                                    <measure unit="leaf" quantity="114">iv+110</measure>
                                     <measure unit="leaf" type="blank">9</measure>
                                     <locus from="i" to="iv"/>
                                     <locus target="#80"/>
@@ -153,7 +150,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <foliation>Foliation in pencil in the upper right corner. The first quire is foliated with Roman numerals.</foliation>
                                 
                                 <collation>
-                                    <signatures>Undecorated quire marks in the middle of the upper margin of the first folium of each quire.</signatures>
+                                    <signatures>Undecorated quire marks in the middle of the upper margin of the first folium.</signatures>
                                     <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">4</dim>
@@ -164,6 +161,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="1r" to="10v"/>
                                         </item>
                                         <item xml:id="q3" n="2">
+                                            <num value="2">፪</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="11r" to="20v"/>
                                         </item>
@@ -184,6 +182,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="51r" to="60v"/>
                                         </item>
                                         <item xml:id="q8" n="7">
+                                            <num value="7">፯</num>
                                             <dim unit="leaf">10</dim>
                                             <locus from="61r" to="70v"/>
                                         </item>   
@@ -211,7 +210,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <layoutDesc>
                                 <layout columns="2" writtenLines="18">
                                     <locus from="1ra" to="107ra"/>
-                                    <note>There are 11–12 characters per line per column.</note> <!--hand 1-->
+                                    <note>There are 11–12 characters per line per column in the part
+                                        written by <ref target="#h1">hand 1</ref> and 9–11 in the part written by <ref target="#h2">hand 2</ref>.</note>
                                     <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#11r"/>.</note>
                                     <dimensions unit="mm" xml:id="textarea">
                                         <height>101</height>
@@ -239,8 +239,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <seg type="ink">Black, red.</seg>
                                 <seg type="rubrication">Incipits (groups of red lines alternating with black lines) and single words; holy names; the names
                                     of persons involved in the manuscript production;
-                                    elements of punctuation marks. From <locus target="#105r"/> on, spaces left for rubrication have been left empty.</seg>
-                                <desc>Modern bulky, slightly condensed script. The characters are of somewhat irregular height, but the hand is trained.</desc>
+                                    elements of punctuation marks.</seg>
+                                <desc>Modern bulky, slightly condensed script. The characters are of somewhat irregular height, but the hand is trained.
+                                The vowel markers for the third and fifth order are hardly distinguishable.</desc>
                                 <persName ref="PRS14003FereS" role="scribe"/>
                                 <date notBefore="1889" notAfter="1926"/>
                             </handNote>
@@ -248,8 +249,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <handNote xml:id="h2" script="Ethiopic">
                                 <locus from="105ra" to="107ra"/>
                                 <seg type="ink">Black.</seg>
+                                <seg type="rubrication">Spaces left for rubrication have been left empty.</seg>
                                 <desc>Hand of the last quire. Modern, slighly cursive script, somewhat irregular. <foreign xml:lang="gez">ሠ</foreign>
-                                has a peculiar, archaizing form.</desc>
+                                has an archaizing form.</desc>
                                 <date notBefore="1889" notAfter="1926"/>
                             </handNote>
                         </handDesc>
@@ -264,10 +266,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <additions>
                             <list>
                                 <item xml:id="e1">
-                                    <desc>Scribbles in pencil on both inner boards.</desc>
+                                    <desc>The part written by <ref target="#h1">hand 1</ref> contains no scribal corrections.
+                                    The part written by <ref target="#h2">hand 2</ref> contains an erasure on <locus target="#105ra"/>
+                                        and <locus target="#106va"/>.</desc>
                                 </item>
                                 
-                                <item xml:id="e2">
+                                       <item xml:id="e2">
                                     <locus target="#82rb"/>
                                     <desc>A supplication within the main text of <ref target="#ms_i2"/> mentions
                                         <foreign xml:lang="gez">አባ፡ ቄርሎስ፡ ዘሀገር፡ ዓባይ፡ እለ፡ እስክንድርያ፡</foreign> 
@@ -278,11 +282,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </item>
                                 
                                 <item xml:id="e3">
+                                    <desc>Scribbles in pencil on both inner boards.</desc>
+                                </item>
+                                
+                                <item xml:id="e4">
                                     <locus target="#ir"/>
                                     <desc>The shelfmark ‘MS Aeth. f. 35’ is written in pencil at the bottom of the page.</desc>
                                 </item>
                                 
-                                <item xml:id="e4">
+                                <item xml:id="e5">
                                     <desc><persName ref="PRS14002WaldaS" role="patron"/>, probably the owner or commissioner, and the scribe 
                                         <persName ref="PRS14003FereS" role="scribe"/> are mentioned in supplications, e.g. on <locus target="#79va"/>.</desc>
                                 </item>
@@ -292,7 +300,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <desc>List of names, probably each person’s given name next to their baptismal name.</desc>
                                     <q xml:lang="gez">
                                         <persName ref="PRS14004Berhane">ብርሃኔ፡ ወለተ ጻዴቅ፡</persName>
-                                       <del rend="strikethrough"> በቀለ፡ ገብረ፡ <gap reason="illegible"/>ግአብ</del>
+                                       <del rend="strikethrough">በቀለ፡ ገብረ፡ <gap reason="illegible"/>ግአብ</del>
                                         <persName ref="PRS14005Baqqala">በቀለ፡ ገብረ፡ እዚአር</persName>
                                         <persName ref="PRS14006Ballata">በለጠ፡ ወልደ ገብርኤል፡</persName>
                                         <persName ref="PRS14007Alamayyahu">አለማየሁ፡ ወልደአብ፡</persName>
@@ -322,12 +330,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <history>
                         <origin>
-                            <origDate notBefore="1889" notAfter="1926" evidence="prosopography"/>
                             The manuscript was written by two hands, but the continuitites in layout and content point to a single production process.
-                            
+                            A supplication mentions ‘ʾAbbā Qerǝllos za-hagara ʿābbāy ʾƎlla ʾƎskǝndǝryā’ and ‘ṗāṗṗāsǝna ʾAbbā Mātewos’ <!--italics-->
+                            (<locus target="#82rb"/>), likely to be identified with
+                            <persName ref="PRS3259CyrilV"/> (in tenure 1874–1927) and 
+                            <persName ref="PRS6876Matewos"/> (in tenure 1889–1926), which would date the production of the manuscript to
+                           <origDate notBefore="1889" notAfter="1926" evidence="prosopography"/>.
                         </origin>
                         <provenance>The provenance of the manuscript is not known.</provenance>
-                        <acquisition>The manuscript was acquired by the Bodleian Library in <date when="2012">2012</date>.</acquisition>
+                        <acquisition>It was acquired by the Bodleian Library in <date when="2012">2012</date>.</acquisition>
                     </history>
                     
                     <additional>
