@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethg36"
@@ -13,7 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Golgotā, Hymn to Mary, Tǝmhǝrta ḫǝbuʾat</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,21 +36,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 30</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>Holes on <locus target="#18 #32"/>, presumably from the parchment making process.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">54</measure>
@@ -64,8 +68,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#33r"/>.</note>
                                     <measure type="weight" unit="g">98</measure>
-                                </extent> 
-                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay 
+                                </extent>
+                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library
                                     in January 2020.</foliation>
                                 <collation>
                                     <list>
@@ -98,13 +102,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="51r" to="54v"/>
                                             1, stub after 4
                                             3 added
-                                            <note><locus target="#54"/>  and <locus target="#52"/> probably formed an original bifolium, which has now become separated.
+                                            <note><locus target="#54"/> and <locus target="#52"/> probably formed an original bifolium, which has now become separated.
                                             <locus target="#53"/> is sewn to <locus target="#54"/>.</note>
+                                            <!-- EDS 01.12.2022: Could the stubs after f. 54 be cut leaves?-->
                                         </item>
                                         </list>
                                 </collation>
+                                <condition key="good">
+                                  The manuscript is in good condition. There are slight traces of use in the lower outer corners and insect droppings on <locus target="#37 #38"/>.
+                                </condition>
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="1" writtenLines="12">
                                     <locus from="1r" to="54v"/>
@@ -121,37 +129,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                           
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+
                         </decoDesc>-->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+
+                        <bindingDesc>
+                            <binding contemporary="Ethiopian false">
+                                <decoNote xml:id="b1" type="bindingMaterial">
+                                  The book is bound in <material key="wood">wooden</material> boards.
+                                </decoNote>
+                                <decoNote xml:id="b2" type="Boards">
+                                  The boards are flush with the bookblock and have square edges. The grain runs vertically.
+                                  Both the external and inner surfaces of the boards are polished. On the external surface a finishing layer of dark colour has been added.
+                                  The board attachment is uncommon. It only consists of two holes drilled through the thickness of the boards.
+                                </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">3</decoNote>
+                                <deconote xml:id="b4">
+                                  Chainstitch sewing on three sewing stations; continuous fold pattern; S-plied thread.
+                                  The bookblock was probably sewn on four sewing stations and has been resewn on three, also substituting the boards. On the leaves, the holes and the marks left by the previous sewing are present.
+                                  The ends of the thread are knotted in the centrefold of the first quire.
+                                  <locus target="#53"/> is stitched through the inner margin directly to <locus target="#54"/>.
+                                </decoNote>
+                                <decoNote xml:id="b4" type="Spine">
+                                  A piece of folded parchment protects the spine and is linked to the bookblock by stitching it to the holes for board attachment and the chains that the sewing forms on the spine.
+                                  A yellow thread emerges from the tail edge of the bookblock.
+                                </decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -163,7 +186,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -194,7 +217,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-17">Created record</change>
             <change who="DR" when="2020-02-24">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="EDS" when="2022-12-12">Added description of support, condition, and binding</change>
+      </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>

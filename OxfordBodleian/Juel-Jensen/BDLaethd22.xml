@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Letter</title>
+                <title>Letter from King Tewodros II to military officials</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -37,9 +37,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
+                        <msItem xml:id="ms_i1">
+                            <locus target="#1r"/>
+                            <!--title to be included in index manually-->
+                            <title xml:lang="en">Letter from King <persName ref="PRS9430Tewodros"/> to military officials</title>
+                            <textLang mainLang="am"/>
+                            <note>The following is the entire text. After a greeting to <persName ref="PRS13884Bisawwer"/> and unnamed military leaders, the king informs the recipients
+                                of the arrival of a cannon in <!--or from?--> <placeName ref="LOC2449Dalant"/>. It might be related to the events leading up to the siege of
+                                <placeName ref="LOC4547Maqdal"/>, especially the cannon (<foreign xml:lang="am">ቦምባ፡</foreign>) brought there, as related in 
+                                <bibl><ptr target="bm:MondonVidailhet1904ChroniqueText"/><citedRange unit="page">46-47</citedRange></bibl>, where a 
+                            <foreign xml:lang="gez">Rās</foreign> Bisawwǝr is also mentioned as <foreign xml:lang="am">የመቅደላ፡ ጠባቂ፡</foreign>
+                                (<bibl><ptr target="bm:MondonVidailhet1904ChroniqueText"/><citedRange unit="page">50</citedRange></bibl>).</note>
+                            <incipit xml:lang="am">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ አምላክ፡ 
+                                <persName ref="PRS9430Tewodros"><roleName type="title">ንጉሠ፡ ነገሥት፡</roleName> ቴዎድሮስ፡</persName> ይድረስ፡
+                                ከ<persName ref="PRS13884Bisawwer"><roleName type="title">ራስ፡</roleName> ቢሰውር፡</persName> ከቢትወደዶች፡ ከደጃዝማቾች፡ ካምበሎች፡ ከ፻ አለቆች፡ ካ፶ አለቆች፡ ካ፲ አለቆች፡ 
+                                ካ፭ አለቆች፡ እንዴት፡
+                                ሰነበታችሁ፡ እኔ፡
+                                እግዚአብሔር፡ ይመስገን፡ ደኅና፡ ነኝ። በእግዚአብሔር፡ ኃይል፡ የምስራች፡ ቡምባውም፡ መድፉም፡ ወጣልኝ፡ 
+                                <placeName ref="LOC2449Dalant">ደላንታ፡</placeName> ከሜዳው፡ ደግሞም፡ ሁለንትናውን፡ ተጫውተን፡ እልክባችሁ፡ አለሁ፡
+                            ፫ ጊዜ፡ መድፍ፡ ተኩሱ። ባሩዱን፡ ተጠንቅቃችሁ።</incipit>
+                        </msItem>
                         
                     </msContents>
                     
@@ -57,12 +74,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <measure type="weight" unit="g">2</measure>
                                 </extent> 
+                                <foliation>The leaf is not foliated.</foliation>
+                                <condition key="good">Creases show where the leaf had been folded. There are a few small tears along the border of the leaf.</condition>
                             </supportDesc>
                             
                             <layoutDesc>
                                 <layout columns="1" writtenLines="8">
                                     <locus target="#1"/>
-                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#1"/>.</note>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#1r"/>.</note>
+                                    <note>There are 12–13 characters per line.</note>
                                     <dimensions unit="mm" xml:id="textarea">
                                         <height>80</height>
                                         <width>200</width>
@@ -73,6 +93,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">9</dim>
                                         <dim type="left">11</dim>
                                     </dimensions>
+                                    <!--<ab type="ruling">Pricking and ruling are not visible.</ab> There folded lines that coincide with written lines' but I don't know if the leaf was folded before or after
+                                        writing. Also some "pricks" in the lower part that I cannot interprete
+                                    -->
                                 </layout>
                             </layoutDesc>
                            
@@ -80,13 +103,50 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+                                <date notBefore="1855" notAfter="1868"/>
+                               <desc>Regular hand, bulky script.</desc>
+                           <seg type="ink">Black.</seg>
                             </handNote>
                         </handDesc>
                         
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
+                        <additions>
+                            <list>
+                                <item xml:id="e1">
+                                    <locus target="#1r"/>
+                                    <desc>Stamp of King <persName ref="PRS9430Tewodros"/>, a lion surrounded by writing in Gǝʿǝz and Arabic.</desc>
+                                    <q xml:lang="gez">ንጉሠ፡ ነገሥት፡ ቴዎድሮስ፡ ዘኢትዮጵያ፡</q>
+                                    <q xml:lang="ar"><gap reason="illegible"/>تاودروس ملك الحبشة</q>
+                                </item>
+                                
+                                <item xml:id="e2">
+                                    <locus target="#1v"/>
+                                    <desc>Written on the verso, possibly by the main hand.</desc>
+                                    <q xml:lang="am">ከ<persName ref="PRS13884Bisawwer"><roleName type="title">ራስ፡</roleName> ቢሰውር፡</persName></q>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <desc>There are no scribal corrections.</desc>
+                                </item>
+                                
+                                <item xml:id="e4">
+                                    <desc>Traces of printed text, maybe on the remainder of a paper sticker, are visible on the verso.</desc>
+                                </item>
+                                
+                                <item xml:id="e5">
+                                    <locus target="#1v"/>
+                                    <desc>The shelfmark ‘Ms. Aeth. d. 21’ is written in pencil on the verso (the current shelfmark of the manuscript is Aeth. d. 22).</desc>
+                                </item>
+                                
+                                <item xml:id="e6">
+                                    <desc>A white sticker, with the name of <persName
+                                        ref="PRS5782JuelJen"/> (<foreign xml:lang="gez">ቤንት፡
+                                            ዩውል፡ የንሰን።</foreign>) printed on it, and the signature
+                                        ‘Ms. Aeth. d. 22’ written in pencil, is glued
+                                        on the inside of the folder in which the letter is kept. Another sticker with estimated dating, ‘[109]’ (possibly an inventory number), and a brief content description signature printed on
+                                        it is glued below it. In pencil, the content description has been corrected and ‘£ 30’, presumably the price of the manuscript, been added.</desc>
+                                </item>
+                            </list>
+                        </additions>
                         
                    <!--     <bindingDesc>
                             <binding xml:id="binding">
@@ -99,12 +159,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                     </physDesc>
                     
-                <!--    <history>
+                    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            The letter can be dated to the reign of King <persName ref="PRS9430Tewodros"/>
+                            (<origDate notBefore="1855" notAfter="1868" evidence="prosopography"/>). It seems likely that it was written towards the end of his reign, possibly in
+                            <date notBefore="1867" notAfter="1868"/>, shortly before
+                            the fall of <placeName ref="LOC4547Maqdal"/>. 
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                    </history>
                     
                     <additional>
                         <adminInfo>
@@ -139,17 +201,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords scheme="#ethioauthlist">
                     <term key="Letter"/>
                     <term key="ChristianLiterature"/>
+                    <term key="AmharicLiterature"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="am">Amharic</language>
+                <language ident="ar">Arabic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-21">Created record</change>
             <change who="DR" when="2020-02-27">Added layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+        <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="DR" when="2022-09-02">Continued description</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>

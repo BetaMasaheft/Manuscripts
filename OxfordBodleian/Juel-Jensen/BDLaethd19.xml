@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethd19"
@@ -13,7 +13,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>Dāwit</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -36,21 +39,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 40</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>Holes, presumably from parchment making, are present (e.g. in <locus target="#87 #121 #142"/>),
+                                    especially towards the end of the manuscript.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">165</measure>
@@ -167,8 +172,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="deficient">
+                                    The manuscript is severely damaged, however it still retains the binding and all the leaves without loss of text.
+                                    The leaves are stained by water, dirt, droppings, and wax. Losses caused by insects are present.
+                                    The border around a loss in the upper margin of <locus target="#36"></locus> is darkened, perhaps burned.
+                                    Many tears that occurred after the parchment making have been repaired by sewing (e.g. <locus target="#26 #28 #29"></locus>)
+                                    The back board is divided in two halves by a crack along the vertical axis. The two halves are held together by various
+                                    threads passing through pairs of holes drilled in the board.
+                                    The portion of leather covering the back is torn and lacks part of the tail. The endbands are missing.
+                                    The sewing is broken at the uppermost pair of sewing stations in <ref target="#q6"></ref>.
+                                </condition>
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="1" writtenLines="24">
                                     <locus from="1r" to="146v"/>
@@ -184,7 +199,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">15</dim>
                                     </dimensions>
                                 </layout>
-                                
+
                                 <layout columns="2" writtenLines="24">
                                     <locus from="148ra" to="165vb"/>
                                     <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#151r"/>.</note>
@@ -202,35 +217,252 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
-                        
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+
+                        <decoDesc>
+                            <summary>
+                              This psalter contains iconic portraits of figures from the Old and New Testaments.
+                              It is among the most extensively illustrated examples from the mid-fifteenth century.
+                              Most miniatures take up a full page, but some ½ or less (e.g <locus target="#4v #146v"/>).
+                              In all likelihood, this manuscript was scribed and decorated by  <persName ref="PRS13458GabraK">Gabra Krǝstos</persName>,
+                              who produced at least two other manuscripts
+                              (i.e. <ref type="mss" corresp="BLorient597"/>; <ref type="mss" corresp="EMIP02099"/>),
+                               both commissioned by <persName ref="PRS6733MarhaKr">Marḥa Krəstos</persName> (c. 1408–1497),
+                              abbot of the monastery of <placeName ref="INS0341DL">Dabra Libānos</placeName> (<bibl><ptr target="bm:2020GnisciPsalter"/></bibl>).
+                              While the dates of activity of Gabra Krǝstos are unknown it is likely that the manuscript was produced in a period
+                              between <date notBefore="1450" notAfter="1520">the second half of the fifteenth and early sixteenth century</date>.
+                              The manuscript is extensively decorated with dozens of headpieces and bands that mark the beginning of new psalms and texts and
+                               are filled with a variety of non-figurative patterns (e.g. <locus target="#4v #7r #15r #126r #139r"/>).
+                               These elements appear to have been executed by the same artist who painted the figurative illuminations.
+                              </summary>
+
+                              <!-- For transparency, work on transcription of
+                              captions was mainly based from work done by JK for ITIESE -->
+
+
+                            <decoNote type="miniature" xml:id="d1">
+                                <locus target="#4v"/>
+                                <desc>One-third page miniature half-bust portraits inserted into two rectangular frames at the bottom of the page.
+                                  <persName ref="PRS5691Job">Job</persName> and <persName ref="PRS11004Samuel">Samuel</persName> in one
+                                  and
+                                  <persName ref="PRS3943Ezra">Ezra</persName>, with a chalice,
+                                  and <persName ref="PRS3942Ezekiel">Ezekiel</persName> in the other.
+                                   <q xml:lang="gez"><persName ref="PRS5691Job">ኢዮብ</persName></q>
+                                   <q xml:lang="gez"><persName ref="PRS11004Samuel">ሳሙኤል</persName></q>
+                                    <q xml:lang="gez"><persName ref="PRS3943Ezra">ዕዝራ፡</persName></q>
+                                    <q xml:lang="gez"><persName ref="PRS3942Ezekiel">ሕዝቅኤል፡</persName></q>
+                                </desc>
+
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d2">
+                                <locus target="#5v"/>
+                                <desc>Full-page miniature with four panels, each with a single portait of:
+                                  <persName ref="PRS13683Asaph">Asaph</persName>
+                                  <persName ref="PRS13684Ethan">Ethan</persName>, and two sons of Korah.
+                                  <q xml:lang="gez"><persName ref="PRS13683Asaph">አሳፍ</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS13684Ethan">ኤታን፡</persName></q>
+                                   <q xml:lang="gez">ደቂቀ፡ ቆሬ፡</q>
+                                   <q xml:lang="gez">ደቂቀ፡ ቆሬ፡</q>
+                                </desc>
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d3">
+                                <locus target="#6r"/>
+                                <desc>Full-page miniature with six panels, each with a pair of portraits showing:
+                                  <persName ref="PRS3337Daniel">Daniel</persName> and
+                                  <persName ref="PRS5680Jeremiah">Jeremiah</persName>,
+                                  <persName ref="PRS4400Gad">Gad</persName> and
+                                  <persName ref="PRS13685Nathan">Nathan</persName>,
+                                  <persName ref="PRS3814Enoch">Enoch</persName> and
+                                  <persName ref="PRS3721Elijah">Elijah</persName>,
+                                  <persName ref="PRS3723Elisha">Elisha</persName> and
+                                  <persName ref="PRS5773Joshua">Joshua the Judge</persName>,
+                                  <persName ref="PRS8854Simeon">Simeon</persName> and
+                                  <persName ref="PRS5584Isaiah">Isaiah</persName>,
+                                  an unidentified figure (Zerubabel?) and
+                                  <persName ref="PRS3943Ezra">Second Ezra.</persName>
+
+                                  <q xml:lang="gez"><persName ref="PRS3337Daniel">ዳንኤል፡</persName> ነቢይ፡</q>
+                                  <q xml:lang="gez"><persName ref="PRS5680Jeremiah">ኤርምያስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS4400Gad">ጋድ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS13685Nathan">ናታን</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS3814Enoch">ሄኖክ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS3721Elijah">ኤልያስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS3723Elisha">ኤልሳዕ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS5773Joshua">ኢያሱ፡ መስፍን።</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS5584Isaiah">ኢሳይያስ፡</persName></q>
+                                  <q xml:lang="gez">ዘሩ<gap reason="lost"/>ል።</q>
+                                  <q xml:lang="gez"><persName ref="PRS3943Ezra">ዕዝራ፡ ካልዕ።</persName></q>
+                                </desc>
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d4">
+                                <locus target="#6v"/>
+                                <desc>Full-page miniature of King <persName ref="PRS3417David">David</persName> playing
+                                 the harp in the presence of three attendants that respectively hold a parasol, sword and fly-whisk.
+
+                                  <q xml:lang="gez"><persName ref="PRS3417David">ዳዊት፡</persName> ንጉሠ፡ እስራኤል፡</q>
+                                  <q xml:lang="gez">ጸዋሬ፡ ድቡብ።</q>
+                                  <q xml:lang="gez">አውታር</q>
+                                  <q xml:lang="gez">ሐራዊ።</q>
+                                </desc>
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d5">
+                                <locus target="#126r"/>
+                                <desc>Half-page miniature with two panels that feature:
+                                  <persName ref="PRS7181MosesM">Moses</persName> and <persName ref="PRS1002Aaron">Aaron</persName>.
+                                  The two panels are incorporated into a headband decorated with an interlace pattern.
+
+                                  <q xml:lang="gez"><persName ref="PRS7181MosesM">ሙሴ፡</persName> ሊቀ፡ ነቢያት፡ ጸሊ፡ በእንቲአነ፨</q>
+                                  <q xml:lang="gez"><persName ref="PRS1002Aaron">አሮን፡</persName> ካህን፡ አዕርግ፡ ጸሎተነ፨</q>
+                                </desc>
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d6">
+                                <locus target="#138v"/>
+                                <desc>Full-page miniature of King <persName ref="PRS8925Solomon">Solomon</persName> with a spear
+                                is flanked by an attendant with a parasol and <persName ref="PRS8876Sirach">Sirach</persName>.
+                                  <q xml:lang="gez"><persName ref="PRS8925Solomon">ሰሎሞን፡</persName> ንጉሥ፡</q>
+                                  <q xml:lang="gez">ጸዋሬ፡ ድቡብ፡</q>
+                                  <q xml:lang="gez"><persName ref="PRS8876Sirach">ሲራክ፡</persName> ነቢይ።</q>
+                                </desc>
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d7">
+                                <locus target="#146v"/>
+                                <desc>Half-page miniature featuring <persName ref="PRS5578Isaac">Isaac</persName>
+                                and <persName ref="PRS5650Jacob">Jacob</persName>
+                                embraced by <persName ref="PRS1267Abraham">Abraham</persName>.
+
+                                <q xml:lang="gez"><persName ref="PRS5578Isaac">ይስሐቅ።</persName></q>
+                                <q xml:lang="gez"><persName ref="PRS1267Abraham">አብርሃም፡</persName></q>
+                                <q xml:lang="gez"><persName ref="PRS5650Jacob">ያዕቆብ፡</persName></q>
+                                <q xml:lang="gez">አበ፡ አበው።</q>
+                                </desc>
+                            </decoNote>
+
+                            <decoNote type="miniature" xml:id="d8">
+                                <locus target="#147r"/>
+                                <desc>Full-page miniature with six panels, each with a pair of portraits showing:
+                                  <persName ref="PRS11023Mathias">Matthias</persName> and
+                                  <persName ref="PRS5781JudasTh"></persName>,
+                                  <persName ref="PRS5665James">James son of Alphaeus</persName> and
+                                  <persName ref="PRS5662James">James son of Zebedee</persName>,
+                                  <persName ref="PRS11433Nathaniel">Nathanael</persName> and
+                                  <persName ref="PRS6387Luke">Luke</persName>,
+                                  <persName ref="PRS13686Philemon">Philemon</persName> and
+                                  <persName ref="PRS3129Clement">Clement</persName>,
+                                  <persName ref="PRS13687JosephArim">Joseph of Arimathea</persName> and
+                                  <persName ref="PRS13688Nicodemus">Nicodemos</persName>,
+                                  <persName ref="PRS7953Prochoru">Prochoros</persName> and
+                                  <persName ref="PRS2505Barnabas">Barnabas</persName>. All figures hold a codex.
+
+                                  <q xml:lang="gez"><persName ref="PRS11023Mathias">ማትያስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS5781JudasTh">ታዴዎስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS5665James">ያዕቆብ፡ ወልደ፡ እልፍዮስ።</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS5662James">ያዕቆብ፡ ወልደ፡ ዘብዴዎስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS11433Nathaniel">ናትናኤል</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS6387Luke">ሉቃስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS13686Philemon">ፊልሞና፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS3129Clement">ቀሌምንጦስ</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS13687JosephArim">ዮሴፍ</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS13688Nicodemus">ኒቆዲሞስ።</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS7953Prochoru">አብሮኮስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS2505Barnabas">በርናባስ።</persName></q>
+
+
+                                </desc>
+                            </decoNote>
+                            <decoNote type="miniature" xml:id="d9">
+                                <locus target="#147v"/>
+                                <desc>
+                                  Full-page miniature with six panels, each with a group of portraits showing:
+                                  <persName ref="PRS5684JesusCh">Jesus</persName> kissing
+                                  <persName ref="PRS5695John">John the Disciple</persName> next to
+                                  <persName ref="PRS7049Michael">Michael the Archangel</persName>,
+                                  <persName ref="PRS7805Peter">Peter</persName> with his keys and
+                                  <persName ref="PRS7743Paul">Paul</persName>,
+                                  <persName ref="PRS5741Johnthe">John the Baptist</persName> and
+                                  <persName ref="PRS11326Andrew">Andrew the Apostle</persName>,
+                                  <persName ref="PRS5666Jamesth"> James brother of the Lord</persName> and
+                                  <persName ref="PRS6751Mark">Mark</persName> with hand crosses and monastic hoods,
+                                  <persName ref="PRS2481Bartholo">Bartholomew</persName> and
+                                  <persName ref="PRS6902Matthew">Matthew</persName>,
+                                  <persName ref="PRS9496Thomas">Thomas</persName> and
+                                  <persName ref="PRS7843Philip">Philip</persName>.
+
+                                  <q xml:lang="gez"><persName ref="PRS5684JesusCh">እግዚእነ፡</persName> ዘከመ፡ ሰዐሞ፡
+                                  ለ<persName ref="PRS5695John">ዮሐንስ</persName><persName ref="PRS7049Michael">ሚካኤል፡ መልአክ።</persName></q>
+                                  <q xml:lang="gez">ሥዕለ፡ <persName ref="PRS7805Peter">ጴጥሮስ፡</persName> ወ<persName ref="PRS7743Paul">ጳውሎስ።</persName></q>
+                                  <q xml:lang="gez">መራኁት።</q>
+                                  <q xml:lang="gez"><persName ref="PRS5741Johnthe">ዮሐንስ፡ መጥምቅ</persName>
+                                  <persName ref="PRS11326Andrew">እንድርያስ፡ ሐዋርያ፡</persName>ሰአሉ፡ ለነ።</q>
+                                  <q xml:lang="gez"><persName ref="PRS5666Jamesth">ያዕቆብ፡ እኁሁ፡ ለእግዚእነ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS6751Mark">ማርቆስ።</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS2481Bartholo">በርተሎሜዎስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS6902Matthew">ማቴዎስ፡</persName></q>
+                                    <q xml:lang="gez"><persName ref="PRS9496Thomas">ቶማስ፡</persName></q>
+                                  <q xml:lang="gez"><persName ref="PRS7843Philip">ፊልጶስ፡</persName></q>
+                                </desc>
+                            </decoNote>
+
+                        </decoDesc>
+
+                        <bindingDesc>
+                            <binding contemporary="true Ethiopian">
+                              <decoNote xml:id="b1" type="bindingMaterial">
+                                <term key="quarterCover">Quartercover</term>. The book is bound in <material key="wood">wooden</material> boards with a blind-tooled <material
+                                key="leather">leather</material> which covers only the spine and the back edge of the boards.
+                              </decoNote>
+                              <decoNote xml:id="b2" type="Boards">
+                                The boards are flush with the bookblock and have external shallow bevels. The grain runs vertically.
+                                The outer surface and the edges of the boards are polished and a layer of dark-coloured finish has been added, while the inner surface exhibits signs of the working tool.
+                                The lower board is separated vertically in two halves which are held together with various threads passing through pairs of holes drilled in the board.
+                                On the inner surface of the upper board, in the middle, remnants of a grayish substance are present, which perhaps was used to glue a <term key="mirror">mirror</term>.
+                              </decoNote>
+                              <decoNote xml:id="b3" type="Cover" color="reddish-brown">
+                                The boards and the spine are partially covered with a reddish-brown leather featuring a blind-tooled decoration.
+                                On the surface of the boards and on the back, bands of two <term key="singleStraightLine">single straight lines</term> intersect
+                                forming two columns of juxtaposed panels. Within each panel, the lines cross each other forming a <foreign xml:lang="la">crux decussata</foreign>. Within a panel
+                                on the lower boards the lines also form a 4-pointed star.
+                                The turn-ins and the edges are not decorated. On the inner side of the boards, between the turn-ins, <term key="additionalLeatherPatch">additional leather patches</term>
+                                have been added. On the one on the upper board, an angel holding a spear in his hand, perhaps St Michael, is drawn in pencil.
+                              </decoNote>
+                              <decoNote xml:id="b4" type="Endbands">
+                                The endbands are missing.
+                              </decoNote>
+                              <decoNote xml:id="b5" type="SewingStations">4</decoNote>
+                              <decoNote xml:id="b6">
+                                Chainstitch sewing on four sewing stations (two pairs); periodic fold pattern; Z-plied threads.
+                                In the quires, between each pair of sewing stations, there are two lengths of thread.
+                              </decoNote>
+                              <decoNote xml:id="b7" type="Spine">
+                                At the head are preserved the horizontal short stitches used to pierce the leather on the spine in two points (at the head and tail), thus fixing the endbands to the cover.
+                              </decoNote>
+                              <decoNote xml:id="b8" type="Other">
+                                Threads of various colours are inserted in the outer margins for navigating the text.
+                                More specifically, a black <term key="leafStringMark">leaf string marker</term> is inserted in <locus target="#28"/> and a
+                                purple <term key="leafStringMark">leaf string marker</term> is inserted in <locus target="#113"/>.
+                              </decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -242,7 +474,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -273,7 +505,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-13">Created record from metadata provided by Jacopo Gnisci</change>
             <change who="DR" when="2020-02-24">Added layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="EDS" when="2023-01-11">Added condition and binding description</change>
+        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
