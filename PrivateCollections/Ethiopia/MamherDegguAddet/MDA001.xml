@@ -1,7 +1,7 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MDDL001" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MDA001" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -11,6 +11,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <editor key="AY"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
+            <editionStmt><p>Digitized within the framework of the project Endangered Archives Programme, EAP336 "Preserving the lay bet andemta: the Ethiopian intellectual legacy on the verge of extinction", 2010-2011, <ref target="https://eap.bl.uk/project/EAP336">https://eap.bl.uk/project/EAP336</ref>. Catalogued within the framework of the project Documenting an 
+                Ancient Education System in Africa: ʾAbǝnnat Tǝmhǝrt in Ethiopia 
+                (Universität Hamburg, HLCEES, funded by the Gerda Henkel Stiftung, 2021-2023)</p></editionStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
@@ -25,7 +28,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0981MDDL"/>
-                        <idno>MDDL-001</idno>
+                        <collection>EAP 336</collection>
+                        <idno facs="MDA/001/" n="181">EAP336/2/1</idno>
+                        <altIdentifier>
+                            <collection>EAP 336</collection>
+                            <idno>MDA-001</idno>
+                        </altIdentifier>
                         <altIdentifier>
                                 <idno>C4-IV-160</idno>
                             </altIdentifier>
@@ -51,7 +59,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <measure unit="leaf" type="blank">6</measure>
                                     <locus from="1" to="4"/>
                                     <locus from="167" to="168"/>
-                                   <note>Measurements of the manuscript's dimensions were not provided in the manuscript's metadata and images.</note>
+                                   <dimensions type="outer">
+                                       <height unit="mm">310</height>
+                                       <width unit="mm">260</width>
+                                       <depth unit="mm">80</depth>
+                                   </dimensions>
                                 </extent>
                                 <foliation> The manuscript is not foliated. The folio numbers used in this description were added digitally 
                                     to the manuscript's images. <locus target="#103"/> has been photographed twice.</foliation>
@@ -173,7 +185,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="30">
+                                <layout columns="2" writtenLines="28 30">
                                     <ab type="pricking">Pricking and ruling are visible.</ab>
                                     <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
                                              <ab type="ruling">The upper line is written above the ruling,
@@ -255,6 +267,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change who="MA" when="2010-11-10">Photographed the manuscript for the BL EAP336 project</change>
             <change who="DR" when="2022-09-22">Created entity</change>
             <change who="AY" when="2022-09-22">shelf mark added began description of content</change>
             <change who="AY" when="2022-09-26">ending folio number</change>
@@ -265,11 +278,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change  when="2022-10-21" who="AY">added quire and leaf number</change>
             <change  when="2022-10-26" who="AY">added hand notes</change>
             <change  when="2022-11-04" who="AY">personal records</change>
+            <change when="2023-05-11" who="ES">added EAP shelfmarks and metadata</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography"/><!---->
+            <listRelation><relation name="betmas:formerlyAlsoListedAs" active="MDA001" passive="MDDL001"></relation></listRelation>
         </body>
     </text>
 </TEI>
