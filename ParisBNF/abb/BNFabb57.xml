@@ -131,11 +131,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
               <layoutDesc>
                 <layout columns="2" writtenLines="28 30"/>
                 <layout>
-                  <ab type="ruling">Ruling is visible; pricking is visible.</ab>
+                  <ab type="ruling">Ruling is visible.</ab>
+                  <ab type="ruling">Pricking is visible.</ab>
                   <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>
                   <ab type="pricking">Primary pricks are visible. </ab>
                   <ab type="ruling">The upper line is written mostly above the upper ruled line,
-                    sometimes under it (ff. 8-15, 17v-24v, 114-119).</ab>
+                    sometimes under it (<locus from="8" to="15"/>, <locus from="17v" to="24v"/>, <locus from="114" to="119"/>).</ab>
                   <ab type="ruling">The bottom line is written above the bottom ruled line.</ab>
                 </layout>
               </layoutDesc>
@@ -150,7 +151,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   written in the upper margin of the folia, elements of the punctuation signs.</seg>
                 <date>15th century.</date>
                 <desc>Very irregular, with the size, slant and inclination of the letters changing
-                  (cp. f. 45v).</desc>
+                  (cp. <locus target="45"/>).</desc>
               </handNote>
             </handDesc>
 
@@ -189,124 +190,136 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <additions>
               <list>
                 <item xml:id="a1">
-                  <locus target="#1r"/>
-                  <desc type="OwnershipNote" xml:lang="gez"/>
+                  <locus target="#31rb"/>
+                  <desc type="OwnershipNote" xml:lang="gez">An extended ownership note, mentioning the
+                    monastery Dāgā ʾƎsṭifānos</desc>
                   <q xml:lang="gez"/>
-                  <note>The note is written in a crude hand mentions. It seems to mention the
-                    monastery of <placeName ref="ETH1348Daga">Dāgā ʾƎsṭifānos</placeName> of the
-                    owner of the manuscript. </note>
+                  <note>The note is written in a crude hand.</note>
                 </item>
 
                 <item xml:id="a2">
                   <locus target="#31rb"/>
-                  <desc type="PoemQene" xml:lang="gez">Qǝne-poem of ʿǝṭana mogar type.</desc>
-                  <q xml:lang="gez"> ዕጣነ᎓ ሞገር᎓ ዘሠርፀ᎓ ማርያም᎓ አኮ᎓ ዘመራሂ᎓ ጔታ። አማኅፀንክ᎓ ጉርዔ᎓ ወአፍ። ወአንቀጸ᎓
-                    ልሳን᎓ ነቢብ። ከመ᎓ ይትወለድ᎓ ንባብ። እምንሱግ᎓ ኆኅተ᎓ ከርሣ᎓ ለማርያም᎓ ተድባብ። ተወልደ᎓ ቃለ᎓ አብ። በዘዚአሁ᎓
-                    ኬነት᎓ ወበዘዚአሁ᎓ ጥበብ። እንበለ᎓ ሩካቤ᎓ ወሥሩዕ᎓ ሰብሳብ። ለሠርፀ᎓ ድንግል᎓ ክርስቶስ᎓ ባሕቱ᎓ በጎለ᎓ ምልክና᎓ ስኩብ።
-                    እንዘ᎓ ይትመራኍ᎓ ፍና᎓ በፀዳለ᎓ ንጉሡ᎓ ኮከብ። ነገሥታተ᎓ ምሥራቅ᎓ አሕዛብ። ይትጋነዩ᎓ ሎቱ᎓ በብረከ᎓ አልባብ። ምስለ᎓
-                    ከርቤ᎓ ወቀይኅ᎓ ኖብ። </q>
-                  <q xml:lang="en">ʾƎṭana mogar of Śarḍa Māryām, not a <foreign xml:lang="am">marāhi gwetā</foreign>. I entrust (my) throat and mouth, and the gate of (my)
-                    praising tongue, so that the reading would be brought forth. From the closed
-                    threshold of the belly of Mary,the canopy, God the Word was born, With his each
-                    and every skill and wisdom, Without an intercouse and arranged matrimony. For
+                  <desc type="PoemQene" xml:lang="gez">A qǝne-poem of ʿǝṭana mogar type, by Śarḍa Māryām.</desc>
+                  <q xml:lang="gez"> ዕጣነ፡ ሞገር፡ ዘሠርፀ፡ ማርያም፡ አኮ፡ ዘመራሂ፡ ጔታ። እማኅፀነ፡ ጉርዔ፡ ወአፍ። ወአንቀጸ፡ 
+                    ልሳን፡ ጸቢብ። ከመ፡ ይትወለድ፡ ንባብ። እምንሱግ፡ ኆኅተ፡ ከርሣ፡ ለማርያም፡ ተድባብ። ተወልደ፡ ቃለ፡ አብ። በዘዚአሁ፡ ᎓
+                    ኬነት፡ ወበዘዚአሁ፡ ጥበብ። እንበለ፡ ሩካቤ፡ ወሥሩዕ፡ ሰብሳብ። ለሠርፀ፡ ድንግል፡ ክርስቶስ፡ ባሕቱ፡ በጎለ፡ ምልክና፡ ስኩብ።
+                    እንዘ፡ ይትመርኍ፡ ፍና፡ በጸዳለ፡ ንጉሡ፡ ኮከብ። ነገሥታተ፡ ምሥራቅ፡ አሕዛብ። ይትጋነዩ፡ ሎቱ፡ በብረከ፡ አልባብ። ምስለ፡ ᎓
+                    ከርቤ፡ ወቀይኅ፡ ኖብ። </q>
+                  <q xml:lang="en">ʾƎṭana mogar of <persName ref="PRS14052SardaMaryam">Śarḍa Māryām</persName>, 
+                    not from a <foreign xml:lang="am">marāhi gʷetā</foreign>, 
+                    but from the inside of the throat and the mouth, and the narrow gate of 
+                   the tongue, that the reading would be brought forth, 
+                   from the closed threshold of the belly of Mary, the canopy, God the Word was born, with his each
+                    and every skill and wisdom, without an intercourse and arranged matrimony. For
                       <persName ref="PRS8550sardaDe">Śarḍa Dǝngǝl</persName>, Christ, (when he was
-                    still) in the the craddle of his dominion, Being led along the way through the
+                    still) in the cradle of his dominion, Being led along the way through the
                     shining of his King, the star, Kings of the Orient, peoples, Pay homage to him
                     (kneeling) on the knee(s) of their hearts, With myrrh and red gold. </q>
-                  <note>The poem is written in a late 16th- or an early 17th-century hand. According
-                    to <persName ref="PRS3182ContiRo">Conti Rossini</persName>, the poem could be
-                    written after the the war of <persName ref="PRS8550sardaDe">Śarḍa
+                  
+                  <note><persName ref="PRS14052SardaMaryam">Śarḍa Māryām</persName> is indicated as 
+                    the author of the poem, written in a late 16th- or an early 17th-century hand. Translated into French and commented upon by 
+                    <persName ref="PRS3182ContiRo">Conti Rossini</persName>. According to him, the poem could be
+                    composed after the war of <persName ref="PRS8550sardaDe">Śarḍa
                       Dǝngǝl</persName> with <persName ref="PRS6476Mahammad">Maḥámmad</persName>,
                     the king of <placeName ref="ETH1064Adal">Adal</placeName>.</note>
                 </item>
 
                 <item xml:id="a3">
                   <locus target="#31rb"/>
-                  <desc type="PoemQene" xml:lang="gez"/>
-                  <q xml:lang="gez">እምነ᎓ መለኮት᎓</q>
-                  <note>The poem is written a hand very similar to that of <ref target="#a1"/>.</note>
+                  <desc type="PoemQene" xml:lang="gez">A qǝne-poem of Śarḍa Māryām</desc>
+                  <q xml:lang="gez">እምነ፡ መለኮት፡<gap reason="ellipsis" resp="DN"/></q>
+                  <note>Composed probably by the same author, 
+                    <persName ref="PRS14052SardaMaryam">Śarḍa Māryām</persName>, 
+                    as <ref target="#a1"/>, written in the same or very similar hand.</note>
                 </item>
 
                 <item xml:id="a4">
                   <locus target="#31rb"/>
-                  <desc type="PoemQene" xml:lang="gez"/>
-                  <q xml:lang="gez">ታረምምኑ᎓ እስፋኖስ᎓ ሐኪም᎓ አምሳለ᎓ ብእሲ᎓ ንውም᎓ </q>
-                  <note>The poem is written in a late 16th- or an early 17th-century hand, seems to
+                  <desc type="PoemQene" xml:lang="gez">A qǝne-poem</desc>
+                  <q xml:lang="gez">ታረምምኑ፡ እስፋኖስ፡ ሐኪም፡ አምሳለ፡ ብእሲ፡ ንውም፡<gap reason="ellipsis" resp="DN"/></q>
+                  <note>The poem is written in a late 16th- or an early 17th-century hand, similar to 
+                    the hand of the notes above. It seems to
                     mention <persName ref="PRS8550sardaDe">King Śarḍa Dǝngǝl</persName>.</note>
                 </item>
 
                 <item xml:id="a5">
                   <locus target="#31rb"/>
-                  <desc type="Unclear" xml:lang="gez"/>
-                  <q xml:lang="gez">ጸሎተ᎓ ብጹዕ᎓ አባ᎓ መጥራ᎓ እንተ᎓ ተወክፈ᎓ መከራ᎒ ለስርጸ᎓ ድንግል᎓ ያሕይዎ᎓ ግሙረ፨ ዘሱታፌ᎓ </q>
-                  <note>Written in a crude hand, the same as <ref target="#a1"/>.</note>
+                  <desc type="Unclear" xml:lang="gez">Beginning of a prayer</desc>
+                  <q xml:lang="gez">ጸሎተ፡ ብጹዕ፡ አባ፡ መጥ፡ እንተ፡ ተወክፈ፡ መከሬ፡  ለ<persName ref="PRS8550sardaDe">ሰርጸ፡ ድንግል፡</persName> ያሕይዎ፡ ግሙረ፨ 
+                    ዘሱታፌ፡<gap reason="ellipsis" resp="DN"/></q>
+                  <note>Written in a crude hand, of the same age as that of <ref target="#a1"/>, mentioning
+                    <persName ref="PRS8550sardaDe">King Śarḍa Dǝngǝl</persName>.</note>
                 </item>
 
                 <item xml:id="a6">
                   <locus target="#31va"/>
-                  <desc type="PoemQene" xml:lang="gez"/>
-                  <q xml:lang="gez">ዘለእከ᎓ ማርያም᎓ <del rend="erasure"/>ለሥቅለተ᎓ ክርስቶስ᎓ ወልድ᎓ ዘልቦ᎓ ወላዲ᎓
-                    ዓቀባ᎓ ለማየ᎓ </q>
-                  <note>Written in a crude hand, the same as <ref target="#a1"/>.</note>
+                  <desc type="PoemQene" xml:lang="gez">A qǝne-poem by Lāʾǝka Māryām</desc>
+                  <q xml:lang="gez">ዘለእከ፡ ማርያም፡  <del rend="erasure"/>ለሥቅለተ፡ ክርስቶስ፡ ወልድ፡ ዘልቦ፡  ወላዲ፡ ዓቀባ፡ ለማየ፡</q>
+                  <note>In the upper margin, <persName ref="PRS14051LaekaMaryam">Lāʾǝka Māryām</persName> is indicated as the author. 
+                    Written in the same or similar hand as <ref target="#a1"/>.</note>
                 </item>
 
+                
                 <item xml:id="a7">
                   <locus target="#31va"/>
-                  <desc type="PoemQene" xml:lang="gez"/>
-                  <q xml:lang="gez">ዘላእከ᎓ ማርያም᎓ <del rend="erasure"/>ለሥቅለተ᎓ ክርስቶስ᎓ ወልድ᎓ ዘልቦ᎓ ወላዲ᎓
-                    ዓቀባ᎓ ለማየ᎓ ሐጢአት᎓ ሰይጣን᎓ ዘአቅረባ᎓</q>
-                  <note>Written in a crude hand, the same as <ref target="#a1"/>.</note>
+                  <desc type="Unclear">Praise to Lāʾǝka Māryām, by a monk called Bet Tāwres</desc>
+                  <q xml:lang="gez">ይቤ፡ ፩እኍ፡ ፡ዘ፡ ስሙ፡ ቤት፡ ታውሬስ፡ ይቤ፡ ዘሳን፡ ላሜድ፡ ሴ። ነዳይ፡ አነ፡ በዓለም፡ አልቦ᎓
+                    ዘአጥረይኩ፡ እምብዙሕ፡ ብዕል፡ ወእምትሩፍ፡ መዝገብ፡ እን፡ ተ፡ ዘተውህቦ፡ ለአዳም፡ እንበሌከ፡ እኊ፡ ላእከ፡ ማርያም፡ ጠቢብ፡᎓
+                    በሀበ፡ ኵሉ፡ ዘትትረከብ፡ በውስተ፡ መጽሐፍ፡ ወቃለ፡ ንባብ፡ ወበፍቅር፡ ዘጣእማ፡ ዕጹብ።</q>
+                  <q xml:lang="en"/>
+                  <note>Written in an unskilled hand.</note>
                 </item>
 
                 <item xml:id="a8">
                   <locus target="#31va"/>
-                  <desc type="Unclear"/>
-                  <q xml:lang="gez">ይቤ᎓ ፩እኍ᎓ ዘ᎓ ስሙ᎓ ቤት᎓ ታውሬስ᎓ ይቤ᎓ ዘሳን᎓ ላሜድ᎓ ሴ። ነዳይ᎓ አነ᎓ በዓለም᎓ አልቦ᎓
-                    ዘአጥረይኩ᎓ እምብዙሕ᎓ ብዕል᎓ ወእምትሩፍ᎓ መዝገብ᎓ እንተ᎓ ዘተወህቦ᎓ ለአዳም᎓ እንበሌከ᎓ እኊ᎓ ላእከ᎓ ማርያም᎓ ጠቢብ᎓
-                    በሀበ᎓ ኵሉ᎓ ዘትትረከብ᎓ በውስተ᎓ መጽሐፍ᎓ ወቃለ᎓ ንባብ᎓ ወበፍቅር᎓ ዘጣእማ᎓ ዕጹብ። </q>
-                  <q xml:lang="en"/>
-                  <note>Written in a less carefull, unskilled hand. </note>
+                  <desc type="PoemQene">A qǝne-poem, possibly by Lāʾǝka Māryām</desc>
+                  <q xml:lang="gez">ሊቀ፡ ካህናት፡ አሮን፡ በደመ፡ ላህም፡ እንስሳ፡ ለደብተራሁ፡ ቀደሳ፡ በከመ፡ ህጎሙ፡ ቀዳሚት፡ ከመ፡᎓
+                    ትንጻህ፡ እምነ፡ ርኩሳ፡<gap reason="ellipsis" resp="DN"/></q>
+                  <note>Written in a fine hand similar or identical to that of <ref target="#a1"/>
+                    and <ref target="#a6"/>. The name of the author (or the poem type) above is erased. The words 
+                    <foreign xml:lang="gez">ሊቀ፡ ካህናት፡ አሮን፡ በደመ፡ ላህም፡</foreign> are written above again, in
+                    the same or a similar hand, followed by a lacuna.</note>
                 </item>
 
                 <item xml:id="a9">
                   <locus target="#31va"/>
-                  <desc type="PoemQene"/>
-                  <q xml:lang="gez">ሊቀ᎓ ካህናት᎓ አሮን᎓ በደመ᎓ ላህም᎓ እንስሳ᎓ ለደብተራሁ᎓ ቀደሳ᎓ በከመ᎓ ህጎሙ᎓ ቀዳሚት᎓ ከመ᎓
-                    ትንጻህ᎓ እምነ᎓ ርኩሳ᎓ </q>
+                  <desc type="PoemQene">A qǝne-poem by Lāʾǝka Māryām</desc>
+                  <q xml:lang="gez">ዝኒ፡ ዘ<persName ref="PRS14051LaekaMaryam">ላእከ፡  ማርያም።</persName>
+                    እግዚአብሔር፡ አብ፡ ፈጣሬ፡ ዓለማት፡<gap reason="ellipsis" resp="DN"/></q>
+                  <q xml:lang="en"/>
                   <note>Written in a fine hand similar or identical to that of <ref target="#a1"/>
-                    and <ref target="#a6"/>. The title above is erased; the words <foreign xml:lang="gez">ሊቀ᎓ ካህናት᎓ አሮን᎓ በደመ᎓ ላህም᎓</foreign> are written above again, in
-                    the same hand, followed by a lacuna.</note>
+                    and <ref target="#a6"/>.</note>
                 </item>
-
+                
                 <item xml:id="a10">
                   <locus target="#31va"/>
-                  <desc type="PoemQene"/>
-                  <q xml:lang="gez">ዝኒ᎓ ዘላእከ᎓ ማርያም። እግዚአብሔር᎓ አብ᎓ ፈጣሬ᎓ ዓለማት᎓ </q>
-                  <q xml:lang="en"/>
+                  <desc type="PoemQene">A qǝne-poem of the type za-yǝʾǝze type, by Lāʾǝka Māryām</desc>
+                  <q xml:lang="gez">በሐገረ፡ ፊልጶስ፡ ቂሳርያ፡ ድኅረ፡ ስርሮታ፡ ፈጸመ፡ የማነ፡ ወልድኪ፡
+                    <gap reason="ellipsis" resp="DN"/></q>             
                   <note>Written in a fine hand similar or identical to that of <ref target="#a1"/>
                     and <ref target="#a6"/>.</note>
                 </item>
 
                 <item xml:id="a11">
                   <locus target="#31vb"/>
-                  <desc type="Unclear"/>
-                  <q xml:lang="gez">ሕብደ᎓ እነግር᎓ እንዘ᎓ እከሥት᎓ አፈ᎓ </q>
-                  <note>Possibly a <foreign xml:lang="gez">qǝne-poem</foreign>; written in a fine
+                  <desc type="Unclear">Possibly a qǝne-poem</desc>
+                  <q xml:lang="gez">ሕብደ፡ እነግር፡ እንዘ፡ እከሥት፡ አፈ፡<gap reason="ellipsis" resp="DN"/></q>
+                  <note>Written in a fine
                     hand similar or identical to that of <ref target="#a1"/> and <ref target="#a6"/>.</note>
                 </item>
 
                 <item xml:id="a12">
                   <locus target="#31vb"/>
-                  <desc type="Unclear"/>
-                  <q xml:lang="gez">ተውሳጤ᎓ አማብ᎓ እሙቅ᎓ እስከ᎓ አስተርአየ᎓ </q>
+                  <desc type="Unclear">Excerpt from a hymn or malkǝʾ-hymn to St Mary</desc>
+                  <q xml:lang="gez">ተውሳጤ፡᎓አማብ፡᎓እሙቅ፡ እስከ፡ አስተርአየ፡ </q>
                   <note>Written in a crude hand, poorly readable.</note>
                 </item>
 
                 <item xml:id="a13">
                   <locus target="#31vb"/>
                   <desc type="OwnershipNote"/>
-                  <q xml:lang="gez">ዝ᎓ መጽሐፍ᎓ ዘዳጋ᎓ ዘሠረቆ᎓ ወዘሔዶ᎓ በሥልጣነ᎓ እግዚአብሔር᎓ ዕጉዘ᎓ ይኩን። </q>
-                  <note>Written in a crude hand, poorly readable, mentioning <placeName ref="ETH1348Daga">Dāgā ʾƎsṭifānos</placeName> of the owner of the
+                  <q xml:lang="gez">ዝ፡ መጽሐፍ፡ ዘዳጋ፡ ዘሠረቆ፡ ወዘሔዶ፡ በሥልጣነ፡ እግዚአብሔር፡ ዕጉዘ፡ ይኩን።</q>
+                  <note>Written in a crude hand, poorly readable, mentioning <placeName ref="ETH1348Daga">Dāgā ʾƎsṭifānos</placeName> as the owner of the
                     manuscript.</note>
                 </item>
 
@@ -330,7 +343,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </item>
 
                 <item xml:id="e3">
-                  <locus target="#9v #15v #16r #16v #20r #21v #23v #32r #33r #33v #34r #36v                           #37r #37v #39v #48v #49r #50v #51v #52r"> </locus>
+                  <locus target="#9v #15v #16r #16v #20r #21v #23v #32r #33r #33v #34r #36v #37r #37v #39v #48v #49r #50v #51v #52r"> </locus>
                   <desc>Cues for the rubricator, on this and other folios.</desc>
                 </item>
 
@@ -340,7 +353,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                 </item>
 
                 <item xml:id="e5">
-                  <locus target="#32rb">ታቦተ᎓ አ</locus>
+                  <locus target="#32rb">ታቦተ፡ አ</locus>
                   <desc>Possibly pen trial or writing exercise in the upper margin, in crude
                     hand.</desc>
                 </item>
@@ -364,13 +377,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <locus target="#89v"/>
                   <desc type="Unclear" xml:lang="gez">Mention of King <persName ref="PRS4428Galawdew">ʾAṣnāf Sagad</persName> in an unclear note, in a fine
                     late 16th-century hand.</desc>
-                  <q xml:lang="gez">ነገሥት᎓ እምአመ᎓ ተወለድኩ᎓ ፫፩አጽናፍ᎓ ሰገድ᎓ ንጉሥ᎓ አ᎓ ስር᎓</q>
+                  <q xml:lang="gez">ነገሥት፡ እምአመ፡ ተወለድኩ፡  ፫፩አጽናፍ፡  ሰገድ፡ ንጉሥ፡ አስር</q>
                 </item>
 
                 <item xml:id="e10">
                   <locus target="#89v"/>
-                  <desc>Several poorly readable notes written in crude hands, in the blank space of
-                    the folium.</desc>
+                  <desc>Several poorly readable notes written in crude hands, in the blank space of the folium.</desc>
                 </item>
 
                 <item xml:id="e11">
@@ -390,9 +402,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
           <history>
             <origin>
               <origDate notBefore="1400" notAfter="1499"/>
+              The manuscript was owned by the monastery <placeName ref="ETH1348Daga">Dāgā ʾƎsṭifānos</placeName>.
             </origin>
-            <provenance>This manuscript is a part of the collection gathered by <persName ref="PRS1071dAbbadi"/> during his stay in Ethiopia and neigbouring regions in
-              1837-48.</provenance>
+            <provenance> It was acquired by <persName ref="PRS1071dAbbadi" role="owner">Antoine d'Abbadie</persName>
+              sometime between <date>1840</date> and <date>1848</date>.
+            </provenance>
+            <acquisition>The manuscript entered <placeName ref="INS0303BNF"/> in
+              <date>1902</date>.
+            </acquisition>
           </history>
           <additional>
             <adminInfo>
@@ -453,6 +470,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         <keywords>
           <term key="OldTestament"/>
           <term key="HistoryAndHistoriography"/>
+          <term key="Qene"/>
           <term key="Bible"/>
           <term key="Paks2"/>
         </keywords>
@@ -465,6 +483,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <change when="2018-06-18" who="DE">Added bibliography, dating, physical description,
         provenance</change>
       <change who="DR" when="2019-12-16">Added link to images</change>
+      <change who="DN" when="2023-08-03">Further revisions</change>
     </revisionDesc>
   </teiHeader>
   <text xml:base="https://betamasaheft.eu/">
