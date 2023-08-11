@@ -74,6 +74,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </support>
                           <extent>
                             <measure unit="leaf">56</measure>
+                            <measure unit="leaf" type="blank">5</measure>
+                            <locus from="1r" to="4v"/>
+                            <locus target="#56"/>
                             <measure unit="quire">8</measure>
                             <dimensions type="outer" unit="mm">
                                 <width>135</width>
@@ -121,10 +124,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <layout writtenLines="17"/>
                         </layoutDesc>
                       </objectDesc>
+                      
+                      <handDesc>
+                        <handNote xml:id="h1" script="Ethiopic">
+                          <date notBefore="1800" notAfter="1935"/>
+                          <seg type="rubrication">The first word of each stanza; two pairs of three lines on <locus target="#1r"/>
+                            and groups of two and three lines on <locus target="#42v"/>.
+                            divine names.</seg>
+                        </handNote>
+                      </handDesc>
+                      
+                      <decoDesc>
+                        <decoNote xml:id="d1" type="headpiece">
+                          <locus target="#1r"/>
+                          <desc>A purple, red, yellow and green ornament marks the beginning of <ref target="#ms_i1"/>.</desc>
+                        </decoNote>
+                        <decoNote xml:id="d2" type="headpiece">
+                          <locus target="#42v"/>
+                          <desc>A purple, red, yellow and green ornament marks the beginning of <ref target="#ms_i2"/>.</desc>
+                        </decoNote>
+                      </decoDesc>
+                      
                       <additions>
                         <list>
                           <item xml:id="a1">
-                            <desc type="Supplication">
+                            <desc type="Supplication">The catalogue description does not allow to ascertain whether this supplication is part of the main text or
+                              a later addition.
                               <locus target="#55v"/>
                               <q xml:lang="gez">
                                 ኦእግዝእትየ፡<lb/>
@@ -132,8 +157,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 ብኒ፡ እመከራ፡<lb/>
                                 ሥጋ፡ ወነፍስ፡<lb/>
                                 ሊተ፤ ለገብር<lb/>
-                                ኪ፨ ወልደ፡ አ<lb/>
-                                ምላክ፡ ለዓለ<lb/>
+                                ኪ፨ <persName ref="PRS14054WaldaA">ወልደ፡ አ<lb/>
+                                ምላክ፡</persName> ለዓለ<lb/>
                                 መ፨ አለም፡ አ<lb/>
                                 ሜን፨
                               </q>
@@ -141,11 +166,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </item>
                         </list>
                       </additions>
+                      
+                      <bindingDesc>
+                        <binding>
+                          <decoNote xml:id="b1">Wooden boards.</decoNote>
+                          <decoNote xml:id="b2" type="bindingMaterial">
+                            <material key="wood"/>
+                          </decoNote>
+                        </binding>
+                      </bindingDesc>
+                      
                     </physDesc>
                     <history>
+                     <!-- provenance to be added-->
                      <origin>
                       <origDate>
-                        <date notBefore="1800" notAfter="2000"/>
+                        <date notBefore="1800" notAfter="1925"/>
                       </origDate>
                      </origin>
                    <provenance/>
@@ -188,11 +224,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="AD" when="2020-10-21">Created entity</change>
+          <change who="DR" when="2023-08-11"> Added person ID, hand description, binding.</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
         </body>
     </text>
 </TEI>
