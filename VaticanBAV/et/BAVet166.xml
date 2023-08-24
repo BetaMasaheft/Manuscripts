@@ -27,6 +27,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <collection>Aethiopici</collection>
                         <idno>Aeth. 166</idno>
                     </msIdentifier>
+                  
+                 <!-- To do library: identify codicological units, identify text without IDs, identify main and secondary hands-->
                     
                     <msContents><summary/></msContents>
                     <physDesc>
@@ -54,15 +56,56 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           <seg type="rubrication">Titles, holy names, and elements of punctuation signs are rubricated.</seg>
                         </handNote>
                       </handDesc>
+                      
+                      <additions>
+                        <list>
+                          <item xml:id="e3">
+                            <locus target="#12v #24v #32v #33r #69v #112r #128 #132r"/>
+                            <desc>The of <persName ref="PRS14062Zayohannes" role="owner"/>
+                              has been added in a secondary hand, partly over erasure of the original owner(s)' name(s).</desc>
+                          </item>
+                          
+                          <item xml:id="e4">
+                            <locus from="4" to="8"/>
+                            <locus from="65" to="77"/>
+                            <locus target="#128"/>
+                            <desc>Small notes in the margin, including the name of <persName ref="PRS14062Zayohannes" role="owner"/>.
+                              The catalogue description does not allow to ascertain whether these form part of a common secondary act of production 
+                            or of the original production of each codicological unit.</desc>
+                          </item>
+                        </list>
+                      </additions>
+                      
+                      <bindingDesc>
+                        <binding contemporary="partly">
+                          <decoNote xml:id="b1">Wooden boards covered with black leather. According to the catalogue, the binding had been recently restored (probably at
+                            the time of the catalogue description), as the leaves had been sewn in the wrong order.</decoNote>
+                          <decoNote xml:id="b2" type="bindingMaterial">
+                            <material key="wood"/>
+                            <material key="leather"/>
+                          </decoNote>
+                        </binding>
+                      </bindingDesc>
                
                     </physDesc>
                     <history>
                      <origin>
+                         <origPlace ref="LOC3010Ethiop"/>
                       <origDate>
-                        <date notBefore="1625" notAfter="1675"/><!-- Saec. XVII med. -->
+                        <date notAfter="1925"/>
                       </origDate>
+                       According to the catalogue, it is not easy to ascertain whether the manuscript is composed of codicological units of different origins or of parts of the same codicological unit.
+                       This description follows the catalogue, assigning one codicological unit to each unit of description in the catalogue.
+                       <ref target="#p1"/> can be dated to <date notBefore="1646" notAfter="1657"/> by mention of historical figures.
                      </origin>
-                   <provenance/>
+                      <provenance>According to the account on the manuscripts' provenance given by Tisserant, this manuscript is among those
+                        acquired by <persName ref="PRS4805Grebaut"/> in <placeName ref="LOC1216AddisA">ʾAddis ʾAbabā</placeName> 
+                        in <date when="1925"/> with funds of
+                        <persName ref="PRS14055SaintJ">Jean Saint</persName>. 
+                        The manuscripts originated from Šawā (ʾAddis ʾAbabā, Dabra Libānos, Dabra Bǝrhan),
+                        Goǧǧām (Dimā Giyorgis, Marṭula Māryām, Dabra Warq) and Bagemdǝr (Gondar, ʾAzazo Takla Hāymānot) and very few from Tǝgrāy.
+                      </provenance>
+                      <acquisition when="1928">The manuscript entered the library on <date>18 April 1928</date>.</acquisition>
                   </history>
                     <additional>
                       <adminInfo>
@@ -72,6 +115,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <bibl>
                                 <ptr target="bm:GrebTiss1935Codices"/>
                                 <citedRange unit="page">615-621</citedRange>
+                              </bibl>
+                            </listBibl>
+                            <listBibl type="secondary">
+                              <bibl>
+                                <ptr target="bm:GrebTiss1936Codices"/>
+                                <citedRange unit="page">20</citedRange>
                               </bibl>
                             </listBibl>
                           </source>
@@ -167,6 +216,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </list>
                         </additions>
                       </physDesc>
+                      
+                      <history>
+                        <origin>
+                          <origDate>
+                            <date notBefore="1646" notAfter="1657" evidence="internal"/>
+                          </origDate>
+                        </origin>
+                        <provenance/>
+                      </history>
                     </msPart>
                     
                     <msPart xml:id="p2">
@@ -209,6 +267,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </collation>
                           </supportDesc>
                         </objectDesc>
+                        
+                        <additions>
+                          <list>
+                            <item xml:id="e5">
+                              <locus target="#43va"/>
+                              <desc>Small note in the lower part the column, but a different hand from the other notes in the manuscript.</desc>
+                            </item>
+                          </list>
+                        </additions>
                       </physDesc>
                     </msPart>
                     
@@ -416,6 +483,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </collation>
                           </supportDesc>
                         </objectDesc>
+                        
+                        <additions>
+                          <list>
+                            <item xml:id="a1">
+                             <locus target="#112r"/>
+                              <desc type="OwnershipNote">Ownership and excommunication note.</desc>
+                              <q xml:lang="gez">ዝመጽሐፍ <del rend="erasure"/> ዘሰረቆ፡ ወዘፈሐቆ ው<gap reason="lost"/></q>
+                            </item>
+                            
+                            <item xml:id="a2">
+                              <locus target="#112r"/>
+                              <desc type="OwnershipNote">Partly Amharic ownership note written in pencil, by a different hand than the preceding <ref  target="#a1"/>.</desc>
+                              <q xml:lang="gez">ዝመጽሐፍ፡ <persName ref="PRS14063WaldaG"><foreign xml:lang="am"><roleName type="title">የደብተራ፡ </roleName>
+                                <lb/> ወልደ፡ ጊዮርጊስ፡</foreign></persName></q>
+                            </item>
+                          </list>
+                        </additions>
                       </physDesc>
                     </msPart>
                     
@@ -643,8 +727,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </msItem>
                           
                           <msItem xml:id="p7_i1.11">
-                            <locus target="#141v" /><!-- Not given explicitly, but clear from context -->
-                            <title type="complete" />
+                            <locus target="#141v" />
+                            <title type="complete" ref="LIT6867SalApostles"/>
                             <incipit xml:lang="gez">
                               ሰ<supplied reason="omitted">ላም</supplied>፡ ለክሙ፡ ሐዋርያት፡ ለለ፩፡
                               ሰ<supplied reason="omitted">ላም</supplied>፡ መራሑተ፡ ጽድቅ፡ ለልዑል፡ ጸማዱ፡
@@ -653,8 +737,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </msItem>
                           
                           <msItem xml:id="p7_i1.12">
-                            <locus target="#141v" /><!-- Not given explicitly, but clear from context -->
-                            <title type="incomplete">Concluding praise for Takla Hāymānot</title>
+                            <locus target="#141v" />
+                            <title type="incomplete" ref="LIT6868SalTaklaHaym"/>
                             <incipit xml:lang="gez">
                               ትርከበነ፡ <choice><sic>ሰላመከ፡</sic><corr>ሰላምከ፡</corr></choice> እምኀበ፡ ፯ መንፈስ፡ ወሪዳ፡ እምላዕሉ፡ <gap reason="ellipsis"/>
                               ለተክለ፡ ሃይማኖትንብለከ፡ ሰርከ፡ ወነግሃ፡ ሰላመ፡
@@ -689,15 +773,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+              <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="AD" when="2020-10-21">Created entity</change>
+          <change who="DR" when="2023-08-24">Completed description</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
         </body>
     </text>
 </TEI>
