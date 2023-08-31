@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethf24"
@@ -10,10 +10,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Psalms, Prayers</title>
+                <title>Psalms, Protective Prayer, Mastabqʷǝʿān, Fǝtḥat za-wald</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -33,26 +36,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 6</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>A large hole, presumably resulting from the parchment making process, is found on <locus target="#2"/>.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">41</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
                                     <dimensions type="outer" unit="mm">
                                         <height>117</height>
                                         <width>91</width>
@@ -65,14 +63,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#29r"/>.</note>
                                     <measure type="weight" unit="g">118</measure>
                                 </extent>
-                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay 
+
+                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library 
+
                                     in January 2020.</foliation>
-                                 <collation>
+                                <collation>
                                     <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">2</dim>
                                             <locus from="1r" to="2v"/>
                                         </item>
+                                        <!-- EDS: 06.12.2022 A note on the fact that this is a reused bifolium should be placed here? -->
                                         <item xml:id="q2" n="1">
                                             <dim unit="leaf">10</dim>
                                             <locus from="3r" to="12v"/>
@@ -100,8 +101,134 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="deficient">
+
+                                    The manuscript is in bad condition. The front board is broken in two halves and the outer is missing, together with the back board.
+                                    A large loss is present in the central area of <locus target="#1"/>. Most folia are stained and darkened along the margins but the most severe damage is caused by insects.
+                                    Apart from the presence of insect droppings, insects have eaten the upper part of the quires also damaging the sewing. Therefore, the leaves became loose.
+                                    The damage 
+                                    increases towards the end of the manuscript, with loss of text on <locus from="38" to="41"/>.
+                                    The damage also extends to the satchel.
+                                </condition>
                             </supportDesc>
+                        </objectDesc>
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="e7">
+                                    <desc>Scribbles and pen trials in the margins of nearly all folia (e.g. <locus target="#12v #29r #36v"/>.)</desc>
+                                </item>
+                                
+                                <item xml:id="e8">
+                                    <desc>A white sticker is glued to the inner side of the front board. The name of <persName ref="PRS5782JuelJen"/> 
+                                        is printed on it
+                                        (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>) and the signature ‘MS. Aeth. f. 24 MS Et 6’ is written in pencil.
+                                        An additional sticker, with the signature ‘Ms 6’ on it, is glued below it.</desc>
+                                </item>
+                            </list>
+                        </additions>
+                        
+                        <bindingDesc>
+                            <binding contemporary="Ethiopian">
+                                <decoNote xml:id="b1" type="bindingMaterial">
+                                    The book is bound in <material key="wood">wooden</material> boards.
+                                </decoNote>
+                                <decoNote xml:id="b2" type="Boards">
+                                    The upper board broke and only the inner half of the upper board is preserved. The preserved fragment of the upper board is flush with the bookblock and has shallow external bevels.
+                                    The grain runs vertically. The external surface and the edges of the board fragment are polished and a finishing layer of dark colour has been added.
+                                </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">2</decoNote>
+                                <decoNote xml:id="b4">
+                                    Chainstitch sewing on two sewing stations (one pair); Z-plied thread.
+                                    The sewing broke because of the insect damage and the <ref target="#q6">sixth quire</ref> has been connected with the rest of
+                                        the bookblock by stitching it with simple loops of thread to the chain on the spine.
+                                </decoNote>
+                                <decoNote xml:id="b5" type="Spine">
+                                    The small pairs of holes close to the tail of the quires might be what remains of endbands or quire tackets.
+                                </decoNote>
+                                <decoNote xml:id="b6" type="SlipCase">
+                                    The manuscript is provided with a leather one-piece single-walled slip case with a cord hinging strap.
+                                    The case is equipped with two flaps extending from the side panels and a main pointed flap extending from the back to the front
+                                    panel to cover the opening of the book compartment.
+                                    The cord hanging strap passes through two flaps extending from the bottom panel of the case.
+                                </decoNote>
+                            </binding>
+                        </bindingDesc>
+                        
+                    </physDesc>
+                    
+                    <history>
+                        <origin>
+                            <origDate notBefore="1800" notAfter="1949" evidence="lettering"/>
+                            The manuscript probably consists of three distinct units of production: <ref target="#p1"/> and <ref target="#p2"/>, 
+                            and <ref target="#p3"/>. <ref target="#p3"/>
+                            consists of the addition of content on the material support of <ref target="#p1"/> and <ref target="#p2"/>
+                            and of the addition of one more quire, <ref target="#q6"/> (corresponding to the 
+                            transformation model A3 according to <bibl><ptr target="bm:Andrist2013Syntaxe"/><citedRange unit="page">65</citedRange></bibl>). 
+                            It is possible that <ref target="#p1"/> and <ref target="#p2"/>
+                            had been distinct units of circulation before being joined in the current unit of circulation.  <ref target="#p3"/> 
+                            might have been added at the moment of joining of the two other units or at a later date.
+                            The handwriting suggests a date of production between the nineteenth and mid-twentieth century for all 
+                            units of production. 
+                        </origin>
+                    </history>
+                    
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <!--  <listBibl type="secondary">
+                                        <bibl></bibl>
+                                    </listBibl>-->
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                    </additional>
+                    
+                    <msPart xml:id="p1">
+                        <msIdentifier>
+                        </msIdentifier>
+                        
+                        <msContents>
+                            <summary/>
                             
+                        <msItem xml:id="p1_i1">
+                      <locus from="3r" to="26r"/>
+                            <title type="incomplete" ref="LIT2000Mazmur">Psalms 1–20</title>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez"><locus target="#3r"/><hi rend="rubric">ነዓ፡ ኀቤየ፡ ዳዊት፡ ንጉሠ፡ <sic resp="DR">ኤ፳ኤል፡</sic>
+                                በዓለ፡ መዝሙር፡ አመ፡ እወድሳ<supplied reason="omitted">፡</supplied> 
+                                ለ<add place="interlinear">ማርያም፡</add></hi> ፩፡ ብፁዕ፡ ብእሲ፡ ዘኢሖረ፡ በምክረ፡ ረሲአን<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                ወዘኢቆመ፡ ውስተ፡ ፍኖተ፡ 
+                                ኃጥአን<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                ወዘኢነበረ፡ ውስተ፡ መንበረ፡ መስተሣልቃን። ዘዳእሙ፡ ሕገ፡ እግዚአብሔር፡ ሥምረቱ።</incipit>
+                            <explicit xml:lang="gez">
+                                <locus from="25v" to="26r"/>
+                                እስመ፡ ሜጥዋ፡ ለዓመፃ፡ ላዕሌየ፡ ወሀለዩ፡ ምክረ፡ እንተ፡ ኢይክሉ፡ ዓቅሞ። ወታገብዖሙ፡ ድኅሬሆሙ። ወታስተዴሉ፡ ገጾሙ፡ ለጊዜ<supplied reason="omitted">፡</supplied>
+                                መዓትከ። ተለዓልከ፡ እግዚኦ፡ በኃ<pb n="26r"/>ይልከ። ንሴብሕ፡  ወንዜምር፡ ለጸን<gap reason="illegible"/>
+                            </explicit>
+                        </msItem>
+                    </msContents>
+                    
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                    <p>Holes, presumably resulting from parchment making, are found on <locus target="#2 #28"/>.</p>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf">28</measure>
+                                    <locus from="1" to="28"/>
+                          <!--          <dimensions type="folio" unit="mm">
+                                        <height></height>
+                                        <width></width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#"/>.</note>-->
+                                </extent>
+                                 </supportDesc>
+                            
+
                             <layoutDesc>
                                 <layout columns="1" writtenLines="17">
                                     <locus from="3r" to="28v"/>
@@ -116,8 +243,277 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">10</dim>
                                         <dim type="left">19</dim>
                                     </dimensions>
+                                    <note>The characters per line are 17–18.</note>
+                                    <ab type="pricking">Ruling is visible; pricking is partly visible. Primary pricks are visible, horizontal pricks are not visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/J.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <note>Both ruling patterns are used. Horizontal ruled lines are often ruled through until the outer margin.</note>
+                                    <ab type="ruling">The upper line is written above the
+                                        ruling. The bottom line is written above the
+                                        ruling.</ab>
                                 </layout>
+
+                            </layoutDesc>
+                            
+                        </objectDesc>
+                        
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                           <locus from="3r" to="26r"/>
+                                <date notBefore="1800" notAfter="1949"/>
+                                <desc>Irregular and untrained hand, cursive script. The scribe often omits the word separator at the end of a line.</desc>
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Incipits (single or double red lines); holy names;
+                                    elements of punctuation signs and numerals.</seg>
+                                <ab type="punctuation" subtype="Dividers">A chain of red and black small semicircles after the first group of ten psalms
+                                    (<locus target="#13r"/>). </ab>
+                            </handNote>
+                            
+                            <handNote xml:id="h2" script="Ethiopic">
+                                <locus from="26r" to="26v"/>
+                                <desc>Hand of <ref target="#a1"/>. More regular hand. Large and very round script, broadly spaced characters.</desc>
+                                <date when="1911" evidence="internal"/>
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Incipit (double red lines); elements of numerals.</seg>
+                            </handNote>
+                        </handDesc>
+                        
+                       <!-- <decoDesc>
+                         <decoNote xml:id="d1" type="band">
+                             <locus target="#3r"/>
+                             <desc></desc>
+                         </decoNote>
+                            
+                            <decoNote xml:id="d2" type="band">
+                                <locus target="#4r"/>
+                                <desc></desc>
+                            </decoNote>
+                        </decoDesc>-->
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="a1" corresp="#h2">
+                                    <locus from="26r" to="26v"/>
+                                    <desc type="CalendaricNote">Calendaric note in Gǝʿǝz and Amharic.</desc>
+                                    <q xml:lang="gez"><seg part="I"><hi rend="rubric"><sic>በዘንከር፡</sic> ሀሳበ፡ ሕጉ፡ ወትእዛዙ፡ ለእ<hi rend="ligature">ግዚ</hi>እነ፡ ወአምላክነ፡ ወመድ</hi>ኃኒነ፡ 
+                                        ኢየሱስ፡ ክርስቶስ፡ እንዘ፡ ሀሎነ፡ በዘመነ፡ ቅዱስ፡ ዮሐንስ፡
+                                        ወንጌላዊ፡ ያብጽሐነ፡ እስከ፡ ዘመነ፡ ማቴዎስ፡ ዜናዊ፡ በ<date calendar="world" when-custom="5500"><hi rend="rubric" rendition="#partialRubric">፶፻</hi>ወበ<hi rend="rubric" rendition="#partialRubric">፭፻</hi> ዓመተ፡ ዓለም፡</date>
+                                        በ<date calendar="ethiopian" when-custom="1904" when="1912"><hi rend="rubric" rendition="#partialRubric">፲፻</hi>ወ<hi rend="rubric" rendition="#partialRubric">፱፻</hi>ወ<hi rend="rubric" rendition="#partialRubric">፬</hi> ኮነ፡ ዓመተ፡ ምሕረት፡</date> በዝ፡ ሠረቀ፡ ለነ፡ ወርኃ፡ ነሐሴ፡
+                                        <sic>ብሩክ፡</sic> ያብጽሐነ፡ እስከ፡
+                                        ወርኃ፡ ጳጕሜን፡</seg></q>
+                                    <q xml:lang="am"><seg part="F">የዓቢይ፡ ጾም፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፲፬</hi> የደብረ፡ ዘይት፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፲፩</hi>
+                                        የሆሳና፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፪</hi> የስቅለት፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፯</hi>
+                                        የትንሣኤ፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፱</hi> የፍሥሐ፡ ኦሪት፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፲</hi>
+                                        የዕርገት፡ ተውሳክ፡
+                                        <hi rend="rubric" rendition="#partialRubric">፲፰</hi> የጰራቅሊጦስ፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፳፰</hi>
+                                        የጾመ፡ ድኅነት፡ ተውሳክ፡ <hi rend="rubric" rendition="#partialRubric">፩</hi><hi rend="rubric">።</hi> 
+                                    </seg></q>
+                                </item>
                                 
+                                <item xml:id="a2">
+                                        <locus target="#27r"/>
+                                    <desc type="GuestText"><title type="incomplete" ref="LIT5690MagicPrayer"/>.
+                                        The text breaks off after the beginning. The following is the entire text.</desc>
+                                        <q xml:lang="gez">
+                                            በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩ አምላክ፡ ጸሎት፡ በእንተ<supplied reason="omitted">፡</supplied>
+                                            ሕማመ፡ ዓይነ፡ ወርቅ፡ ወኵሎን፡ ሕማማት። 
+                                            ጸሎተ፡ ነድራ፡ ወእንዘ፡ የሐውር፡ እግዚአነ፡ ኢየሱስ፡ ክርስቶስ፡ ውስተ፡ ባሕረ፡ ጥብርያዶስ፡ ምስለ፡ 
+                                            <hi rend="rubric" rendition="#partialRubric">፲ወ፪</hi> አርዳኢሁ<hi rend="rubric" rendition="#partialRubric">፨</hi> ወርእዩ፡
+                                        </q>
+                                </item>
+                                
+                                <item xml:id="e1">
+                                    <desc>The titles of the psalms are written crudely by a secondary hand in the spaces left for them.</desc>
+                                </item>
+                                
+                                <item xml:id="e2">
+                                    <desc>Scribal corrections by the main hand are relatively rare. 
+                                        Occasionally, omitted words and characters are written interlineally (e.g. <locus target="#3r #20v"/>)
+                                        and erroneous characters are marked for deletion with surrounding dashes (e.g. <locus target="#8v #11r #18v"/>).  </desc>
+                                </item>
+                                
+                                <item xml:id="e3">
+                                    <locus target="#1r #2v"/>
+                                    <desc>Hardly legible scribbles.</desc>
+                                </item>
+                                
+                                <item xml:id="e4">
+                                    <locus from="1v" to="2r"/>
+                                    <desc>Outlines of ornamental bands and text, <!--is there a better formulation for this? -->
+                                        written on a page turned by 45 degrees, probably pen trials.</desc>
+                                </item>
+                            </list>
+                        </additions>
+                    </physDesc>
+                    
+                    <history>
+                        <origin>
+                            <origDate notBefore="1800" notAfter="1949" evidence="lettering"/>
+                            The 
+                            calendaric note <ref target="#a1"/>  (<locus from="26r" to="26v"/>), an addition 
+                            to <ref target="#p1"/>, is dated to <date>1911</date>. This date might also be close to the date of production of this
+                            unit of production, and possibly of the entire manuscript.
+                        </origin>
+                    </history>
+                    
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                  <!--  <listBibl type="secondary">
+                                        <bibl></bibl>
+                                    </listBibl>-->
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                    </additional>
+                    </msPart>
+                    
+                                    <msPart xml:id="p2">
+                        <msIdentifier>
+                        </msIdentifier>
+                        
+                                        <msContents>
+                                            <summary/>
+                        
+                        <msItem xml:id="p2_i1">
+                            <locus from="29r" to="37v"/>
+                            <title type="incomplete" ref="LIT4711Mastabqwe"/>
+                            <textLang mainLang="gez"/>
+                            
+                            <msItem xml:id="p2_i1.1">
+                                <locus from="29r" to="30v"/>
+                                <title type="complete" ref="LIT4711Mastabqwe#SupplicationNight"/>
+                                <textLang mainLang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus target="#29r"/>
+                                    <hi rend="rubric">ወካዕበ፡ ናስተበቍዕ፡ ዘኵሎ፡ ይእኅዝ፡ እግዚአብሔር<supplied reason="omitted">፡</supplied></hi> አብ፡ 
+                                    ለእግዚእ፡ ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ እንዘ፡ ነአኵቶ፡ በኵሉ፡ 
+                                    ወበውስተ፡ ኵሉ፡ እስመ፡ ከደነነ፡ ወረድአነ፡ ሶቀነ፡ ወአብጽሐነ፡ እስከ<supplied reason="omitted">፡</supplied> ዛቲ፡ ሰዓት፡
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="30r" to="30v"/>
+                                    ወአምሳለ፡ ኵሉ፡ ሕዝብከ፡ ወተረፈ፡ ሌሊትኒ<supplied reason="omitted">፡</supplied> በኵሉ፡ ሰላም፡ ወዳኅና፡ 
+                                    ይሬስየነ፡ ነሃሉ፡
+                                    በ<pb n="30v"/>ክርስቶስ፡ ዘቦቱ፡ ለከ፡ ምስሌሁ፡ ወምስለ፡ ቅዱስ<supplied reason="omitted">፡</supplied> መንፈስ፡ ስብሐት፡ ወእኂዝ፡
+                                    ይእዜኒ፡ ወዘልፈኒ፡
+                                </explicit>
+                            </msItem>
+                            
+                            <msItem xml:id="p2_i1.2">
+                                <locus from="30v" to="32v"/>
+                                <title type="complete" ref="LIT4711Mastabqwe#SupplicationSick"/>
+                                <textLang mainLang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus from="30v" to="31r"/>
+                                    <hi rend="rubric">ወካዕበ፡ ናስተበቍዕ፡ ለዘኵሎ፡ ይእኅዝ፡ እግዚአብሔ</hi>ር፡ አብ፡ <sic>ለእሰግዚእ፡</sic> ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ በእንተ፡
+                                    ዱያን፡ 
+                                    አ<pb n="31r"/>ኃዊነ፡ ከመ፡ ኵሎ፡ ደዌ<supplied reason="omitted">፡</supplied> ወኵሎ፡ ሕማመ፡ ያሰስል፡ እምኔሆሙ፡
+                                    መንፈሰ፡ ደዌ፡ ሥዒሮ፡ ሕይወተ፡ የሐቦሙ፡
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="32r" to="32v"/>
+                                    ሀብ፡ ሳሕተ፡ ወሀብ፡ ዕረፍተ፡ ኵሎ፡ ደዌ፡ ስደ<pb n="32v"/>ድ፡ እምዝንቱ፡ ቤት፡ ወእምእለ፡ ይፄውዑ፡ ቅዱሰ፡ ወቡሩከ፡ ስመከ፡ ወስእለ፡ ኈልቈ፡ ነፍሳቲነ፡ እንከ፡ 
+                                    ደዌ፡ ፈዊሰከ፡
+                                    ፍጽመ፡ መድኃኒተ፡ ጻጕ፡ በ፩ ወልድከ፡ ዘቦቱ<supplied reason="omitted">፡</supplied>
+                                </explicit>
+                            </msItem>
+                            
+                            <msItem xml:id="p2_i1.3">
+                                <locus from="32v" to="34v"/>
+                                <title type="complete" ref="LIT4711Mastabqwe#SupplicationTraders"/>
+                                <textLang mainLang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus from="32v" to="33r"/>
+                                    <hi rend="rubric">ወካዕበ፡ ናስተበቍዕ፡</hi> በእንተ<supplied reason="omitted">፡</supplied> እለ፡ ይነግዱ፡ አኃዊነ፡
+                                    <pb n="33r"/> ወበእንተሂ፡ እለሃለው<supplied reason="omitted">፡</supplied> ይንግዱ፡ እመሂ፡ በባሕር፡ ወእመሂ፡ 
+                                    በአፍላግ<supplied reason="omitted">፡</supplied>
+                                    ወእመሂ፡ በቀላያት፡ ወእመሂ፡ በፍኖት፡ በዘኮነ፡ መን<add place="above">ገ</add>ድ፡ ይገብሩ፡ ከመ፡ ኵሎ፡ 
+                                    ያብጽሕ<supplied reason="omitted">፡</supplied> ውስተ፡ መርሶ፡
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="34r" to="34v"/>
+                                    ፍጡነ፡ ይርከበነ፡ ሣህልከ፡ እግዚኦ። ንበል፡ ኵልነ። እግዚኦ፡ ተሣሃለነ።
+                                    አብጽሖሙ፡ ውስተ፡ ዘመድኅን፡ መርሶ፡ አውፊ፡ ለሰብኦሙ፡ በፍሥሐ፡ ወበሀሤት፡ እንዘ፡ ይትፌሥሑ፡ 
+                                    ወ<pb n="34v"/>ያስተፌሥሑ፡ በ፩ ወልድከ።
+                                </explicit>
+                            </msItem>
+                            
+                            <msItem xml:id="p2_i1.4">
+                                <locus from="34v" to="36r"/>
+                                <title type="complete" ref="LIT4711Mastabqwe#SupplicationRain"/>
+                                <textLang mainLang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus from="34v" to="35r"/>
+                                    <hi rend="rubric">ወካዕበ፡ ናስተበቍዕ፡</hi> በእንተ፡ ዝናማት፡ ከመ<supplied reason="omitted">፡</supplied> ዝናም፡ ይፌኑ፡ 
+                                    ውስተ<supplied reason="omitted">፡</supplied>
+                                    ኀበ፡ ይትፈቀድ፡ መካን<supplied reason="omitted">፡</supplied> ዘኵሎ፡ ይእኅዝ፡ እግዚአብሔር፡ አምላክነ። ጸልዩ፡ በእንተ፡
+ዝናማት። እግዚአብሔር፡ <pb n="35r"/> ዘኵሎ፡ ትእኅዝ፡ ንስእለከ፡ <sic>ወናስተበቍዓ፡ ከ፡</sic> ዝናማቲከ፡ ፈኑ፡
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="35v" to="36r"/>
+                                    እግዚኦ፡ ተሣሀለነ፡ በእንተ፡ <sic>ነዳን፡</sic> ሕዝብከ፡ ወበእንተ፡ ኵሎሙ፡ 
+                                    እለ<supplied reason="omitted">፡</supplied> ይሴፈውከ፡ ግበር፡ 
+                                    ምስሌነ፡ በከመ፡ ምሕረትከ፡ ግበር፡ ወሴሲ፡ ልበነ፡ <sic>በመለኮ፡ ተ፡</sic> ትምህርት<supplied reason="omitted">፡</supplied>
+                                    <pb n="36r"/> ወበለብዎ፡ ዘእምኀከ፡ በ<hi rend="rubric" rendition="#partialRubric">፩</hi> ወልድከ፡ ዘቦቱ፡
+                                </explicit>
+                            </msItem>
+                            
+                            <msItem xml:id="p2_i1.5">
+                                <locus from="36r" to="37r"/>
+                                <title type="complete" ref="LIT4711Mastabqwe#SupplicationFruit"/>
+                                <textLang mainLang="gez"/>
+                                <incipit xml:lang="gez">
+                                    <locus from="36r" to="36v"/>
+                                    <hi rend="rubric">ወካዕበ፡</hi> ናስተበቍዕ፡ በእንተ፡ ፍሬ፡ ምድር፡ ከመ፡ ፍሬሃ፡ ለምድር፡ ያልሕቅ፡ ወያሥምር፡ ያብጽሕ፡ ለዘርዕ፡ 
+                                    ወለማዕረር፡ ዘብዑለ፡
+                                    ጸጋ፡ ይጸጉ፡ እግዚአብሔር፡ አምላክነ፡ <hi rend="rubric">ጸልዩ፡</hi> <sic>በእን</sic><pb n="36v"/> ፍሬ፡ ምድር።
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="36v" to="37r"/>
+                                    ፍጡነ፡ ይርከበነ፡ ሣህልከ፡ 
+                                    እግዚኦ፡ ንበል፡ ኵልነ፡ እግዚ<pb n="37r"/>ኦ፡ ተሣሃለነ፡ በእንተ፡ ነዳያን፡ ሕዝብከ፡ ወበእንተ<supplied reason="omitted">፡</supplied>
+                                    ኵሎሙ፡ እለ፡ ይፄውዑ<supplied reason="omitted">፡</supplied> ቅዱሰ፡ ወቡሩከ፡ ስመከ፡ 
+                                    በ፩ ወልድከ፡ በል።
+                                </explicit>
+                            </msItem>
+                            
+                            <msItem xml:id="p2_i1.6">
+                                <locus from="37r" to="37v"/>
+                                <title type="incomplete" ref="LIT4711Mastabqwe#SupplicationRivers"/>
+                                <textLang mainLang="gez"/>
+                                <note>The text breaks off at the end.</note>
+                                <incipit xml:lang="gez">
+                                    <locus from="37r" to="37v"/>
+                                    <hi rend="rubric">ወካዕ</hi>በ፡ ናስተበቍዕ፡ በእንተ፡ ማያተ፡ አፍላግ፡ ከመ፡ ያዕርግ፡ እስከ፡ ምሥራርቶሙ፡ ያስተፍሥሕ፡
+                                    <pb n="37v"/> ገጻ፡ ለምድር፡ ወያርዌ<supplied reason="omitted">፡</supplied> ትላሚሃ፡ ያብጽሕ፡ 
+                                    ለ<gap reason="illegible" unit="chars" quantity="1"/>ርሶ፡ ወለመሳረር፡ 
+                                    ዘብ<gap reason="illegible" unit="chars" quantity="1"/>ለ
+                                </incipit>
+                            </msItem>
+                        </msItem>
+                    </msContents>
+                    
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf">9</measure>
+                                    <locus from="29r" to="37v"/>
+                                    <dimensions type="folio" unit="mm">
+                                        <height>116</height>
+                                        <width>88</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#29r"/>.</note>
+                                </extent>
+                            </supportDesc>
+                            
+                            <layoutDesc>
+                      
+
                                 <layout columns="1" writtenLines="9">
                                     <locus from="29r" to="37v"/>
                                     <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#29r"/>.</note>
@@ -131,47 +527,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">17</dim>
                                         <dim type="left">10</dim>
                                     </dimensions>
+                                    <note>The characters per line are 12–13.</note>
+                                    <ab type="pricking">Ruling is visible; pricking is partly visible. Primary pricks are visible, horizontal pricks are not visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/J.</ab>
+                                    <ab type="ruling">The upper line is written above the
+                                        ruling. The bottom line is written above the
+                                        ruling.</ab>
+                                    <ab type="punctuation" subtype="Dividers">Several supplications are divided by crudely drawn text dividers consisting 
+                                        of black and red grids, lines, and dots
+                                        (e.g. on <locus target="#30v #34v #37v"/>).</ab>
                                 </layout>
-                                
-                                <layout columns="1" writtenLines="14 15">
-                                    <locus from="37v" to="41r"/>
-                                    <note corresp="#textarea3 #margin3">Data on text area and margin dimensions taken from <locus target="#40r"/>.</note>
-                                    <dimensions unit="mm" xml:id="textarea3">
-                                        <height>85</height>
-                                        <width>75</width>
-                                    </dimensions>
-                                </layout>
+
                             </layoutDesc>
                             
                         </objectDesc>
                         
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic">
-                           
+                            <handNote xml:id="h3" script="Ethiopic">
+                                     <locus from="29r" to="37v"/>
+                                <date notBefore="1800" notAfter="1949"/>
+                                <desc>Irregular and untrained hand, broad and rectangular script.
+                                The scribe often omits the word separator at the end of a line. It is possible that the hand is identical
+                                with <ref target="#h1"/>, though the script differs.</desc>
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Incipits (double red lines, single words or groups of words); 
+                                    the word <foreign xml:lang="gez">ጸልዩ፡</foreign>;
+                                    elements of numerals.</seg>
                             </handNote>
                         </handDesc>
                         
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
-                        
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
-                            </binding>
-                        </bindingDesc>-->
-                        
+                        <additions>
+                            <list>
+                                <item xml:id="e5">
+                                    <desc>Scribal corrections by the main hand are relatively rare. 
+                                        Occasionally, omitted words and characters are written interlineally (e.g. <locus target="#31v #33r"/>)
+                                        and erroneous characters are marked for delation by means of horizontal dashes (e.g. <locus target="#32r #33v"/>).  </desc>
+                                </item>
+                            </list>
+                        </additions>
                     </physDesc>
                     
-                <!--    <history>
+                    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1800" notAfter="1949" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                    </history>
                     
                     <additional>
                         <adminInfo>
@@ -184,7 +584,185 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
+                    </msPart>
                     
+                                    <msPart xml:id="p3">
+                        <msIdentifier>
+                        </msIdentifier>
+                                        
+                                        <msContents>
+                                            <summary/>
+               
+                                            <msItem xml:id="p3_i1">
+                            <locus target="#26v"/>
+                            <locus from="27r" to="27v"/>
+                            <title type="incomplete" ref="LIT4711Mastabqwe#SupplicationEntering"/>
+                            <note>Beginning of the supplication for the offerers. The text is interrupted on 
+                            <locus target="#27r"/> by another prayer.</note>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                                <locus target="#26v"/>
+                                <hi rend="rubric">ወእምዝ፡</hi> ጸሎተ፡ መባዓ፡ ወካዕበ፡ ናስተበቍዕ፡ ዘኵሎ፡ ይእኅዝ፡ እግዚአብሔር፡ አብ፡ ለዕግዚእ፡ 
+                                ወመድኃኒነ፡ ኢየሱስ፡ ክርስቶስ፡ በእንተ፡ እለ፡ ይበውዑ፡ መባዓ፡ በውስተ፡ ቅድስት፡ አኃቲ<supplied reason="omitted">፡</supplied> እንተ፡ ላዕለ፡ ኵሉ፡
+                                ቤተክርስቲያን፡ መሥዋዕተ፡
+                                ቀደምያተ፡ አሥራተ፡ ቀደምተ፡ አኰቴት፡ ተዝካር<supplied reason="omitted">፡</supplied> ዘብዙኅ፡ ወዘኅዳጥ፡ 
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#27v"/>
+                                ምሥዋዕተ፡ ቀዳምያተ፡ አሥራተ<supplied reason="omitted">፡</supplied> ወአኰቴተ፡ ተዝካርየ፡ 
+                                ዘብዙኅ<supplied reason="omitted">፡</supplied> ወዘኅዳጥ፡ ዘኅቡዕ፡ ወዘገሃድ፡ ወለዕለሂ፡ ይፈቅዱ፡ የሀቡ፡ አስቦሙ<supplied reason="omitted">፡</supplied>
+                                ዘይሁቡ፡ ተወከፍ፡ ፍትወቶሙ<supplied reason="omitted">፡</supplied> ሀብ፡ ለኵሎሙ፡ ዓስበ፡ በረከት፡ ክፍለ፡ ትኵን፡ ለዓለመ፡ ዓለም።
+                            </explicit>
+                        </msItem>
+                        
+                        <msItem xml:id="p3_i2">
+                            <locus from="28r" to="28v"/>
+                            <locus from="37v" to="39r"/>
+                            <locus target="#41r"/>
+                            <title type="complete" ref="LIT1398Fethat"/>
+                            <note>The text is spread through three places of the manuscript, without textual breaks.</note>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                                <locus target="#28r"/>
+                                <hi rend="rubric"><gap reason="illegible"/></hi> ዘወልድ፡ እግዚእ፡ እግዚኦ፡ ኢየሱስ፡ ክርስቶስ፡ ወልድ፡ አብ፡ 
+                                ዋህድ፡ እግዚአብሔር፡ አብ፡ ዘበተከ፡ እምኔነ፡ <sic>ኵ</sic> ማእሠረ፡ ኃጣውኢነ፡ በሕማማቲከ፡ ማኅየዊት፡ ዘነፋሕከ፡ ላዕለ<supplied reason="omitted">፡</supplied>
+                                ገጸ፡ አርዳኢከ፡ ቅዱሳን፡ ወላዕካኒከ፡
+                                ንጹሐን፡
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#39r"/>
+                                <locus target="#41r"/>
+                                ወእምአፈ፡ ዚአየኒ፡ አነ፡ ገብርከ፡ ሀጥእ<supplied reason="omitted">፡</supplied> ወይኩኑ፡ ፍቱሐነ፡ ወግዑዛነ፡ ወእምአፉሀ፡ ለእግዝእትነ፡ 
+                                <hi rend="rubric">ማርያም፡</hi> 
+                                ወላ<pb n="41r"/>ዲተ፡ አምላክ፡ ሐዳስ፡ ምእናም፡ ግሩም፡ ሙዳየ፡ ስእለታት። እስመ፡ ቡሩክ፡ ስብሐተ፡ ስምከ፡ <add place="top">ኦሥሉስ፡ </add>
+                                ቅዱስ፡ አብ<supplied reason="omitted">፡</supplied> ወልድ፡ ወመንፈስ፡ ቅዱስ፡ ይእዜኒ፡ ወዘልፈኒ፡ 
+                                ወለአለመ<supplied reason="omitted">፡</supplied> አለም፡ አሜን።
+                            </explicit>
+                        </msItem>
+                        
+                        <msItem xml:id="p3_i3">
+                            <locus from="39v" to="41r"/>
+                            <title type="complete" ref="LIT3064RepCh344"/>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez">
+                                <locus target="#39v"/>
+                                ዕሴብሕ፡ <gap reason="lost"/>ዕትጋነይ፡ ለኪ፡ ኦምልዕተ፡ ውዳሴ፡ ዘከርኩ፡ በሌሊት፡ ንጽሐ፡ 
+                                ድንግ<gap reason="lost" unit="chars" quantity="1"/>ናኪ፡ ዘኢረስሐ፡ በፀኒስ፡ ወኢማሰነ፡ 
+                                <gap reason="lost" unit="chars" quantity="1"/>ወሊድ፡ እስመ፡ ቅድስተ፡ 
+                                ቅዱሳን፡ <gap reason="lost" quantity="2" unit="chars"/>ቲ፡ እስመ፡ ናሁ፡ ይፈልሕ፡ ሞገደ፡ ፍቅ<gap reason="lost" unit="chars" quantity="1"/>ኪ፡
+                                በውስተ፡ ልብየ፡
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus from="40v" to="41r"/>
+                                ከመ፡ ታድኅንኒ<hi rend="rubric" rendition="#partialRubric">፤</hi> በዝ፡ ዓለም<hi rend="rubric" rendition="#partialRubric">፤</hi>
+                                እምእደ፡ ሰብእ<hi rend="rubric" rendition="#partialRubric">፤</hi> እኩያን፡ 
+                                ወበ<gap reason="lost" unit="chars" quantity="1"/>ይመጽእ፡ ዓለም፡ እምእደ፡ ሰይጣን<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                <pb n="41r"/><gap reason="lost"/>ክዩ፡ <gap reason="lost"/>ፍሳተ፡ ወይስሕቡ፡ ውስተ፡ 
+                                አ<gap reason="lost" quantity="1" unit="chars"/>ቀጸ<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                <gap reason="lost"/>ን፡ ሰፍሒ፡ እዴኪ<hi rend="rubric" rendition="#partialRubric">፤</hi> ወባርክኒ፡ 
+                                ለገብ<gap reason="lost" unit="chars" quantity="1"/>ኪ፡ በረከተ<hi rend="rubric" rendition="#partialRubric">፤</hi>
+                                ዘአኪ፡ የሀሉ፡ ወፀጋ፡ ወ<gap reason="lost" quantity="1" unit="chars"/>ድኪ፡
+                                ላዕለ<hi rend="rubric" rendition="#partialRubric">፤</hi> ኵልነ፡ አግብርትኪ<gap reason="lost"/>አዕማትኪ፡ ለዓለመ፡ 
+                                ዓለም<hi rend="rubric" rendition="#partialRubric">፨</hi> <hi rend="rubric" rendition="#partialRubric">፨</hi> <hi rend="rubric" rendition="#partialRubric">፨</hi>
+                            </explicit>
+                        </msItem>
+                        
+                    </msContents>
+                    
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf">4</measure>
+                                    <locus from="38r" to="41v"/>
+                                    <note>This unit of production consists of content added to the first two units on <locus target="#26v"/>, 
+                                        <locus from="27r" to="27v"/>,  <locus from="28r" to="28v"/> and
+                                        <locus from="37v" to="39r"/>, as well as of the quire
+                                        <ref target="#q6"/> (<locus from="38r" to="41v"/>) and its content.</note>
+                         <!--           <dimensions type="folio" unit="mm">
+                                        <height></height>
+                                        <width></width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#"/>.</note>-->
+                                </extent>
+                        </supportDesc>
+                            
+                            <layoutDesc>
+
+                                <layout columns="1" writtenLines="14 15">
+                                    <locus from="37v" to="41r"/>
+                                    <note corresp="#textarea3 #margin3">Data on text area and margin dimensions taken from <locus target="#40r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea3">
+                                        <height>85</height>
+                                        <width>75</width>
+                                    </dimensions>
+                                    <note>The characters per line are 17–19.</note>
+                                    <ab type="pricking">Ruling is visible; pricking is not visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling">The upper line is written above the
+                                        ruling. The bottom line is written above the
+                                        ruling.</ab>
+                                </layout>
+                            </layoutDesc>
+
+                        </objectDesc>
+
+                        <handDesc>
+
+                            <handNote xml:id="h4" corresp="#h1" script="Ethiopic">
+                                <locus target="#26v"/>,
+                                <locus from="27r" to="27v"/>
+                                <locus from="28r" to="28v"/> and
+                                <locus from="37v" to="41v"/>
+                                <date notBefore="1800" notAfter="1949"/>
+                                <desc>Same hand as <ref target="#h1"/>, see the description in <ref target="#p1"/>.</desc>
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Holy names; elements of numerals and punctuation signs.</seg>
+                            </handNote>
+                        </handDesc>
+                        
+                        <additions>
+                            <list>
+                                <item xml:id="e6">
+                                    <desc>Scribal corrections by the main hand are very rare. 
+                                        Occasionally, erroneous characters are marked for deletion with surrounding dashes 
+                                        (e.g. <locus target="#37v #38r"/>).  </desc>
+                                </item>
+                            </list>
+                        </additions>
+                    </physDesc>
+                    
+                    <history>
+
+                        <origin>
+                            <origDate notBefore="1800" notAfter="1949" evidence="lettering"/>
+                            <ref target="#p3_i2"/> mentions <roleName type="title">liqa ṗāṗāsǝna ʾAbbā</roleName> Mārqos and
+                            <roleName type="title">ṗāṗāsǝna ʾAbbā</roleName> Yoḥannǝs in a supplication (<locus target="#39r"/>). These might refer to 
+                            <persName ref="PRS13830MarkVII"/> and <persName ref="PRS10393Yohanne"/>, simultaneously active in <date>1747–1761</date>.
+                            As this timespan seems early for the 
+                            production of the manuscript, the names might have been copied from the <!--italics--> Vorlage.
+                        </origin>
+
+                    </history>
+                    
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                  <!--  <listBibl type="secondary">
+                                        <bibl></bibl>
+                                    </listBibl>-->
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                    </additional>
+
+                    </msPart>
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -196,6 +774,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
          </xi:include>
+            <tagsDecl>
+                <rendition xml:id="partialRubric">Red ink is used partially in the rubrication of
+                    punctuation and numerals.</rendition>
+            </tagsDecl>
       </encodingDesc>
         <profileDesc>
             <creation/>
@@ -205,17 +787,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Magic"/>
+                    <term key="Liturgy"/>
+                    <term key="Bible"/>
+                    <term key="OldTestament"/>
+                    <term key="Chronography"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-01-15">Created record</change>
             <change who="DR" when="2020-02-11">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="EDS" when="2022-12-06">Added binding description, condition</change>
+            <change who="JG" when="2023-04-25">Added deco description</change>
+          </revisionDesc>
+
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>

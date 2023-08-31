@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLaethd16"
@@ -10,10 +10,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Saqoqāwa nafs, Ṭabiba ṭabibān, Malkǝʾa Walatta Ṗeṭros</title>
+                <title xml:lang="gez" xml:id="title1">ሰቆቃወ፡ ነፍስ፡, ጠቢበ፡ ጠቢባን፡, መልክአ፡ ወለተ፡ ጴጥሮስ፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Saqoqāwa nafs, Ṭabiba ṭabibān, Malkǝʾa Walatta Ṗeṭros</title>
+                <title xml:lang="en" corresp="#title1">Lamentation of the soul, The Wisest among the Wise, <foreign xml:lang="gez">Malkǝʾ</foreign>-hymn to Walatta Ṗeṭros</title>             
                 <editor key="DR"/>
                 <editor key="JG"/>
-                <editor key="MV"/><editor key="SH"/><funder>Akademie der Wissenschaften in Hamburg</funder>
+                <editor key="MV"/>
+                <editor key="SH"/>
+                <editor key="EDS"/>
+                <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -25,27 +30,103 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </availability>
             </publicationStmt>
             <sourceDesc>
+           
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS0312BDL"/>
-                        <idno>Bodleian Aeth. d. 16</idno>
+                        <idno>Bodleian Aeth. d. 16</idno><!-- facs="EMIP/Codices/3459/" n="70" -->
                         <altIdentifier>
-                            <idno>Juel-Jensen 16</idno>
+                            <idno>Juel-Jensen 36</idno>
                         </altIdentifier>
                         <altIdentifier>
                             <idno>H. Kevorkian collection 623</idno>
                         </altIdentifier>
+                        <altIdentifier>
+                            <repository ref="INS0447EMIP"/>
+                            <collection>EMIP</collection>
+                            <idno>EMIP03459</idno>
+                            <note> photographed by EMIP as 03459</note>
+                        </altIdentifier>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
+
+                        <msItem xml:id="ms_i1">
+                            <locus from="1ra" to="1va"/>
+                            <title type="incomplete" ref="LIT6192Saqoqa"/>
+                            <textLang mainLang="gez"/>    
+                            <incipit xml:lang="gez">
+                                <locus target="#1ra"/>
+                                <space reason="rubrication" unit="chars" quantity="14"/>ፈስ፡ ቅዱስ፡ ዘነበበ። በነቢያት፡  <space reason="rubrication" unit="chars" quantity="14"/>
+                                እወጥን፡ አንሰ፡ ሰቆቃወ፡ ነፍስ፡ ዕፁበ። ኵሎ፡ ሌሊተ፡ በአንብዕ፡ እንዘ፡ አርሕስ፡ ምስካበ። ከመ፡ በአንብዑ፡ ዳዊት፡ ዓራቶ፡ ሐፀበ።
+                                <space reason="rubrication" unit="chars" quantity="4"/> ለነፍስ፡ ወናዛዚሃ፡ በሕቁ።
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#1va"/>
+                                <space reason="rubrication" unit="chars" quantity="4"/> ተመየጢ፡ ለፍትወተ፡ ሥጋ፡ እምዕበዱ። መንገለ፡ ንስሐ፡ ነፍስየ፡ እምቅድመ፡ ትፃኢ፡ 
+                                እምዓፀዱ። አመ፡ ዕለተ፡ ደይንሰ፡ እምኵነኔ፡ አምላ<supplied reason="omitted">ክ፡</supplied> አሐዱ። ኢይትመየጥ፡ አብ፡ ለአድኅኖ፡ ኀበ፡ ነፍሰ፡ 
+                                ኃጥእ፡ ወልዱ። እስመ፡ ኵሉ፡ ይትፈደይ፡ በዘገብረ፡ እዱ፡ <space reason="rubrication" unit="chars" quantity="4"/> አኃውየ፡ በእንተ፡ ጌጋይየ፡ 
+                                እብኪ። ኀበ፡ እግዚአብሔር፡ መላኪ። እስመ፡ መሐሪ፡ ውእቱ፡ ወመፍቀሬ፡ ሰብእ፡ መሐኪ።
+                            </explicit>
+                        </msItem>
                         
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
+                        <msItem xml:id="ms_i2">
+                            <locus from="2ra" to="7rb"/>
+                            <title type="incomplete" ref="LIT6192Saqoqa"/>
+                            <textLang mainLang="gez"/>    
+                            <incipit xml:lang="gez" type="inscriptio">
+                                <locus target="#2ra"/>
+                                <hi rend="rubric">በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅ</hi> ዱስ፡ ዘነበበ። በነቢያት፡ ቅድመ፡ ወበ<hi rend="rubric">ሐዋርያት፡ ካዕበ። እዌጥን፡ 
+                                    አንሰ፡ ሰቆ</hi> ቃወ፡ ነፍስ፡ ዕፁበ። ኵሎ፡ ሌሊተ፡ በአ<hi rend="rubric">ንብዕ፡ እንዘ፡ አርሕስ፡ ምስካበ። ከመ፡</hi> በአንብዑ፡ ዳዊት፡ ዓራቶ፡
+                                ሐፀበ። <hi rend="rubric">ሐዋፂሃ፡</hi> ለነፍስ፡ ወናዛዚሃ፡ በሕቁ። እምነ፡ ኀዘናት፡ አእላፍ፡ ዘኢይትኌለቁ።
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#7rb"/>
+                                ስብሐት፡ ለከ፡ አምላኪየ፡ ወበጸጋ፡ ጥምቀት፡ አቡየ። እመ፡ አድኀንከ፡ እምሲኦል፡ ለኃጥእት፡ ነፍስየ። <hi rend="rubric">በኍልቈ፡</hi> ደቂቁ፡
+                                ለያዕቆብ፡ እለ፡ ወረዱ፡ ምድረ፡ ግብጽ። ሰቆቃወ፡ ነፍስ፡ ስብኪ፡ በውስተ፡ ኵሉ፡ አንቀጽ። ወኢትፃኢ፡ ነፍስየ፡ እምቤተ፡ ንስሐ፡ ሕንጹ።
+                                ራትዕ፡ መልአከ፡ ሞት፡ ዘኢያደሉ፡ ለገጽ። እስመ፡ ይነሥአኪ፡ ግብተ፡ በዘመን፡ ሕፁፅ።
+                            </explicit>
+                        </msItem>
                         
+                        <msItem xml:id="ms_i3">
+                            <locus from="8ra" to="56vb"/>
+                            <title type="complete" ref="LIT2393tabiba"/>
+                            <textLang mainLang="gez"/>    
+                            <incipit xml:lang="gez">
+                                <locus from="8ra" to="8rb"/>
+                                <hi rend="rubric">ኦእግዚአብሔር፡ ጠቢበ፡ ጠቢባ</hi>ን፡ ከሀሊ። እስከ፡ ለዓለም፡ እምጥ<hi rend="rubric">ንት፡ እንተ፡ ኢትበሊ። ድኩመ፡</hi> 
+                                ሕሊና፡ ለገብርከ፡ ወፈራሀ፡ ልብ፡ <cb n="b"/> <hi rend="rubric">ኢተሐባሊ። እስመ፡ ኀቤከ፡ እ</hi>ግዚኦ፡ ጸሎተ፡ አድኅኖ፡ 
+                                እጼ<hi rend="rubric">ሊ። አድኅነኒ፡ አድኅነኒ፡ እም</hi>ኵሉ፡ ቀታሊ። 
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus from="56rb" to="56vb"/>
+                                ዘገደፍኮሙ፡ ለሰማዕታት፡ በብዝኃ፡ ሥቃያት፡ ይሕምሙ። <hi rend="rubric">እግ<add place="below">ዚአብሔር</add>፡</hi> ተባረክ፡ ለኂሩት፡ 
+                                ማኅተሙ። <pb n="56v"/><cb n="a"/> <hi rend="rubric">አኮ፡</hi> በዝንቱ፡ በልሳነ፡ ሥጋ፡ ተናጋሪ። ወኢበዝ፡ ቃል፡ ሕንፃ፡ መሬት፡ ተመዝባሪ። 
+                                አላ፡ <cb n="b"/> በዝኩ፡ ቃለ፡ መንፈስ፡ ቅዱስ፡ ነባሪ። በዝ፡ ዓለም፡ አአኵተከ፡ ፈጣሪ። በዘይመጽእኒ፡ በዓለም፡ ደኃሪ።
+                            </explicit>
+                        </msItem>
+                        
+                        <msItem xml:id="ms_i4">
+                            <locus from="57ra" to="60rb"/>
+                            <title type="complete" ref="LIT3001RepCh281"/>
+                            <textLang mainLang="gez"/>    
+                            <incipit xml:lang="gez">
+                                <locus target="#57ra"/>
+                                <hi rend="rubric">በስመ፡ እግዚአብሔር፡ ዘሀሎ፡</hi> ወአመ፡ ኢሀሎ፡ ዘመን። ወኢቀደ<hi rend="rubric">ሞ፡ ሰአት፡ መጠነ፡ ቅጽበታ፡ ለዓይ</hi>ን። 
+                                እሰንቁ፡ ለኪ፡ አውታረ፡ ነባቢ፡ ድርሳን። ያበርህ፡ ውስተ፡ ልብየ፡ <hi rend="rubric">ወለተ፡ ጴጥሮስ፡ ምእመን፡ ፀዳለ፡</hi> አእምሮ፡ ንስቲተ፡ 
+                                ሲኖዳ፡ ካህን። <hi rend="rubric">ሰላም፡</hi> ለዝክረ፡ ስምኪ፡ ዘቀጸላ፡ ሞገስ፡ ትርሲቱ። ወለሥዕርትኪ፡ ስውጥ፡ ዘቅብዓ፡ ቅዳሴ፡ ውስቴቱ፡
+                            </incipit>
+                            <explicit xml:lang="gez">
+                                <locus target="#60rb"/>
+                               <hi rend="rubric">ወለተ፡ ጴጥሮስ፡</hi> አኮኑ፡ በእንተ፡ ዝንቱ፡ ነገር። ይትፌሣሕ፡ ሰማይ፡ ወትትሐሠይ፡ ምድር። ወይወውዑ፡ አድባር፡ ወአውግር። 
+                                <hi rend="rubric">ሰላም፡</hi> ለፍልሰተ፡ ሥጋኪ፡ እንተ፡ አርአየ፡ መንክረ። እምፍልሰተ፡ ጻድቃን፡ አዕላፍ፡ እለ፡ ከሠቱ፡ ምስጢረ። 
+                                <hi rend="rubric">ወለተ፡ ጴጥሮስ፡</hi> ሐመር፡ እንተ፡ ታነጽሒ፡ ነውረ። ሰውርኒ፡ ውስተ፡ ሕፅንኪ፡ ከመ፡ ኢይርአየኒ፡ ምዕረ። ዓይነ፡ መልአከ፡ ሞት፡ ጽኑዕ፡ ዘያየብስ፡ ባሕር።
+                            </explicit>
+                        </msItem>
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
@@ -54,8 +135,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">60</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
+                                    <measure unit="leaf" type="blank">2</measure>
+                                    <locus target="#7v #60v"/>
                                     <measure type="weight" unit="g">1665</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>280</height>
@@ -68,7 +149,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#28r"/>.</note>
                                 </extent>
-                                
+
+                                <foliation>Pencil foliation in the upper right corner.</foliation>
+
                                 <collation>
                                     <list>
                                         <item xml:id="q1">
@@ -111,8 +194,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+
+                                <condition key="deficient">
+                                  The manuscript is in a poor state of preservation.
+                                  The bookblock has been damaged by humidity, especially in the lower outer margins,
+                                  causing the deformation of the parchment support and the formation of dark spots, possibly mould (e.g. <locus target="#37 #104v"/>)
+                                  Stains of various origins are present both on the leather cover and the bookblock.
+                                  The sewing is broken and so are the headband tiedowns. <locus target="#1"/> is becoming detached from the bookblock.
+                                  The leather cover is abraded in several points.
+                                </condition>
                             </supportDesc>
-                            
+
                             <layoutDesc>
                                 <layout columns="2" writtenLines="21">
                                     <locus from="2ra" to="7rb"/>
@@ -128,11 +220,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">15</dim>
                                         <dim type="intercolumn">15</dim>
                                     </dimensions>
+                                    <note>The characters per line are 16–17</note>
+                                    <ab type="punctuation" subtype="Dividers">The explicit of <ref target="#ms_i2">the ‘Saqoqāwa nafs’</ref> on <locus target="#7rb"/>
+                                        terminates with a chain of red and black dots.</ab>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling">The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
-                                
+
                                 <layout columns="2" writtenLines="4">
                                     <locus from="8ra" to="56vb"/>
-                                    <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus target="#28r"/>.</note>
+                                    <note corresp="#textarea2 #margin2">
+                                        Each page accommodates 3 or 4 written lines per column, starting from the top.
+                                        The rest of the page invariably contains a miniature, each depicting a biblical scene. All miniatures reach the bottom of the page.
+                                        Data on text area and margin dimensions taken from <locus target="#28r"/>.</note>
                                     <dimensions unit="mm" xml:id="textarea2">
                                         <height>32</height>
                                         <width>193</width>
@@ -143,8 +244,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">21</dim>
                                         <dim type="intercolumn">12</dim>
                                     </dimensions>
+                                    <note>The characters per line are 11–14</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling">The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
-                                
+
                                 <layout columns="2" writtenLines="21 22">
                                     <locus from="57ra" to="60rb"/>
                                     <note corresp="#textarea3 #margin3">Data on text area and margin dimensions taken from <locus target="#59r"/>.</note>
@@ -159,40 +264,190 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">22</dim>
                                         <dim type="intercolumn">14</dim>
                                     </dimensions>
-                                    <note>The end of lines is very irregular.</note>
+                                    <note>The characters per line are 12–15. The end of lines is very irregular.</note>
+                                    <ab type="punctuation" subtype="Dividers">The text of the <ref target="#ms_i4">‘<foreign xml:lang="gez">Malkǝʾ</foreign>-hymn to Walatta Ṗeṭros’</ref> 
+                                        accommodates a chain of red and black dots on <locus target="#60ra"/>.</ab>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/C.</ab>
+                                    <ab type="ruling">The upper line is written above the ruling. The bottom line is written above the ruling.</ab>
                                 </layout>
                             </layoutDesc>
-                            
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
+                                <locus from="1ra" to="1va"/>
+                              <seg type="ink">Black, red</seg>
+                                <date notBefore="1700" notAfter="1799">18th century</date>
+                                <desc>Decent handwriting.</desc>
+                                <seg type="rubrication">
+                                    Rubrication has not been executed, leading to textual lacunas.
+                                </seg>
+                            </handNote>
+                            <handNote xml:id="h2" script="Ethiopic">
+                                <locus from="1vb" to="56vb"/>
+                              <seg type="ink">Black, red</seg>
+                                <date notBefore="1700" notAfter="1750">First half of the 18th century</date>
+                                <desc>
+                                    Elegant and uniform handwriting. Characters are slanted and regularly spaced.
+                                </desc>
+                                <seg type="rubrication">
+                                    Few lines on the incipit pages on <locus target="#2ra #8r"/>, alternating with black lines; holy names; the name of the owner or patron;
+                                    the first word of each stanza of the <ref target="#ms_i2">‘Saqoqāwa nafs’</ref> and of the <ref target="#ms_i3">‘Ṭabiba ṭabibān’</ref>;       
+                                    captions of the miniatures on the upper margin of <locus from="8r" to="56v"/> and next to the characters of each miniature;
+                                   elements of the punctuation signs, of the numerals, and of the text dividers.
+                                </seg>
+                            </handNote>
+                            <handNote xml:id="h3" script="Ethiopic">
+                                <locus from="57ra" to="60rb"/>
+                              <seg type="ink">Black, red</seg>
+                                <date notBefore="1700" notAfter="1799">18th century</date>
+                                <desc>
+                                    Decent handwriting. Characters are executed with a thin nib and are uniformly spaced.
+                                </desc>
+                                <seg type="rubrication">
+                                    Few lines on the incipit page, alternating with black lines; holy names, included that of Walatta Ṗeṭros;
+                                    the word <foreign xml:lang="gez">salām</foreign>; elements of the punctuation signs, of the numerals, and of the text dividers.
+                                </seg>
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+ The sentence "Captions of the miniatures are added in the main hand in red ink on the upper margin of each folio" 
+                    might be inserted either in decoDesc or under "extra" below. (MV 09.12.2022)
+
                         </decoDesc>-->
+
+                        <additions>
+                            <list>
+                                <item xml:id="a1">
+                                    <desc type="OwnershipNote">                                    
+                                        <locus target="#2r"/>
+                                        Note written in brownish ink on the upper margin of the incipit page of <ref target="#ms_i2"/>.
+                                        It states that the book belongs to manuscript collection of <placeName ref="INS0101MadhaneAlam"/>
+                                    </desc>  
+                                    <q xml:lang="gez">ጠቢበ፡ ጠቢባን፡ ዘቅዱስ፡ መድኃኔ፡ ዓለም።</q>
+                                </item>
+                                <item xml:id="e1">
+                                    <desc>Several white stickers are glued on the inner side of the front cover. 
+                                        On the rightmost is printed ‘H. Kevorkian collection’, with the number ‘623’ added in pencil.
+                                        On the following sticker are written in blue pen the numbers ‘1977’ and ‘18’, above a previous signature ‘MS Et 16’ in black ink.
+                                        On the leftmost is printed the name of <persName ref="PRS5782JuelJen"/> (<foreign xml:lang="gez">ቤንት፡ ዩውል፡ የንሰን።</foreign>),
+                                        with the signature ‘MS. Aeth. d. 16’ added in pencil. Below, a further sticker is glued with the shelfmark ‘Ms 36’ printed on it.
+                                        The inner side of the front cover and of the front board also bear three barely legible black stamps.
+                                    </desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <desc>Two white stickers are glued on the inner side of the back board.
+                                        On the right one is written ‘489’ in black pen, on the left one is printed the number ‘1067’.
+                                    </desc>
+                                </item>
+                                <item xml:id="e3">
+                                    <desc>
+                                        The name of the original owner or patron, <persName ref="PRS13954TaklaMa"/>, is inserted 
+                                        in the main hand on <locus target="#29rb #54vb"/> as well as in the supplication formula on the upper margin of <locus target="#8r"/>, here 
+                                        indicated as <foreign xml:lang="gez">ገብርከ፡</foreign>, ‘your servant’.
+                                        The name of a secondary owner, <persName ref="PRS13955WalattaS"/>, is indicated on <locus target="#2ra"/> on a previously erased name.
+                                    </desc>
+                                </item>
+                                <item xml:id="e4">
+                                    <desc>
+                                        The incipits of stanzas 8 and 9 of the <ref target="#ms_i2">‘Saqoqāwa nafs’</ref> are indicated with Ethiopic numbers on the left margin
+                                        of <locus target="#1va"/>. Cues for the rubricator are found on the left margin of <locus from="2ra" to="4ra"/>.
+                                        Corrections are scarce. They mostly consist of interlineal additions (e.g. <locus target="#12va #12vb #14va"/>), erasures (e.g. <locus target="#11ra"/>),
+                                        or are made by encircling the word (<locus target="#26rb"/>).
+                                        Pen trial in red and black ink on <locus target="#1vb"/>.                                    
+                                    </desc>
+                                </item>
+                            </list>
+                        </additions>
                         
-                     <!--   <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
+                        <bindingDesc>
+                            <binding contemporary="true" xml:id="binding">
+                              <p>The sewing has been repaired. However, most of the binding is likely contemporary to the manuscript content.</p>
+                              <decoNote xml:id="b1" type="bindingMaterial">
+                                The book is bound in <material key="wood">wooden</material> boards, fully covered with reddish-brown blind-tooled <material
+                                key="leather">leather</material>.
+                              </decoNote>
+                              <decoNote xml:id="b2" type="Boards">
+                                The boards are slightly larger than the bookblock.
+                              </decoNote>
+                              <decoNote xml:id="b3" type="Cover" color="reddish-brown">
+                                Full reddish-brown blind-tooled leather cover. The turn-ins have been trimmed out, and they form butt mitres at the corners.
+                                The external surfaces of the cover show a fine blind-tooled decoration.
+                                The decoration consists of seven concentric frames surrounding a central rectangular panel featuring a Latin cross.
+                                Frames composed by the repetition of single tools, enclosed between <term key="tripleStraightLine">triple straight lines</term>,
+                                alternate with empty ones.
+                                Proceeding from the outer to the inner frame, the repeating decoration motifs are <term key="crissCross">criss-crosses</term>, <term key="XForm">double X-forms</term>,
+                                <term key="wavyLine">wavy lines</term>, and <term key="curveStrapwork">curve strapwork</term> elements.
+                                <term key="straightStrapwork">straight strapwork</term> elements.
+                                The cross is formed by <term key="XForm">X-form</term> motifs between triple straight lines.
+                                At the ends of the arms of the cross there are pairs of <term key="crescent">crescents</term> disposed to resemble a corniform motif
+                                and three <term key="doubleCircle">double circles</term>. Triple straight lines divide the area around the cross in four panels,
+                                outlining the shape of the cross.
+                                Double circles are also stamped at the intersection of the triple straight lines.
+                                On the spine, triple straight lines intersect, forming a diamond pattern.
+                              </decoNote>
+                              <decoNote xml:id="b4" type="Endbands" color="brown">
+                                Brown <term type="slit-braid">slit-braid</term> endbands.
+                              </decoNote>
+                              <decoNote xml:id="b5" type="SewingStations">4</decoNote>
+                              <decoNote xml:id="b6">
+                                Chainstitch sewing on four sewing stations (two pairs); periodic fold pattern; Z-plied threads.
+                                Between each pair of sewing stations, there are two thread lengths.
+                              </decoNote>
+                              <decoNote xml:id="b7" type="Spine">
+                                The spine is formed by two overlapping layers of leather. The endbands are sewn through the first layer so that
+                                the tiedowns are hidden under the second layer.
+                              </decoNote>
+                            </binding>
+                        </bindingDesc>
+
+                        <!--         <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Two <material key="wood">wooden</material> boards covered with reddish-brown tooled <material key="leather"/>.
+                                </decoNote>
                                 <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+                                    <material key="wood"/>       
+                                    <material key="leather"/>    
+                                </decoNote>
+                                <decoNote xml:id="b3" type="Cover" color="reddish-brown">The leather is decorated with blind tooled ornament (<!-\- Add tools  -\->).</decoNote>
+                                <decoNote xml:id="b4" type="SewingStations">4</decoNote>
                             </binding>
                         </bindingDesc>-->
                         
                     </physDesc>
+
+                        
                     
-                <!--    <history>
+                            
+
+            
+                    
+                       <history>
+
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1700" notAfter="1750" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+
+                           <provenance>
+                               The manuscript was primarily owned or commissioned by a certain <persName ref="PRS13954TaklaMa"/>, whose name is inserted 
+                               in the main hand on <locus target="#8r #29rb #54vb"/>. It was then owned by a certain <persName ref="PRS13955WalattaS"/>, whose name 
+                               is written on <locus target="#2ra"/> on a previously erased name.
+                               The manuscript comes from the area of <placeName ref="wd:Q218861">Gondar</placeName>. It was taken by <roleName type="title">ʾAṣe</roleName> 
+                               <persName ref="PRS9430Tewodros"/> and entered the <placeName ref="INS0101MadhaneAlam"/> collection in <placeName ref="LOC4547Maqdal"/> (cp. <ref target="#a1"/>).
+                               The manuscript was then brought to <placeName ref="wd:Q21">England</placeName> after the 1868 expedition by <persName ref="PRS7484Napier"/>. 
+                               The subsequent owners are unknown in detail.
+                               At some time the book entered <persName ref="PRS13956Kevork"/>'s private collection, as indicated on one of the white stickers glued 
+                               on the inner side of the front cover ("H. Kevorkian collection 623"). The book was sold to the <placeName ref="INS0525Quaritch"/> and
+                               eventually purchased by <persName ref="PRS5782JuelJen"/> at an auction at Sotheby's on 20 March 1983, according to the auction catalogue.
+                           </provenance>
+                    </history>
                     
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -204,7 +459,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -225,6 +480,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="ChristianLiterature"/>
+                    <term key="Poetry"/>
+                    <term key="Hagiography"/>
                 </keywords>
             </textClass>
             <langUsage>
@@ -235,7 +492,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-01-20">Created record</change>
             <change who="DR" when="2020-02-24">Added dimensions and layout</change>
-        <change who="SH" when="2020-04-22">Added editors</change></revisionDesc>
+            <change who="SH" when="2020-04-22">Added editors</change>
+            <change who="MV" when="2022-12-08">Added textual content</change>
+            <change who="MV" when="2022-12-10">HandDesc, layout, extra</change>
+            <change who="EDS" when="2023-01-24">Added condition, foliation, and binding description</change>
+        </revisionDesc>
+
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
         <body>
