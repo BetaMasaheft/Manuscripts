@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLeu3"
@@ -10,9 +10,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Hymns to Mary</title>
+                <title xml:lang="gez" xml:id="title1">መጽሐፈ፡ ሰዓታት፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Maṣḥafa saʿātāt</title>
+                <title xml:lang="en" corresp="#title1">Book of the Hours</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
+                <editor key="MV"/>
+                <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -30,42 +35,116 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <repository ref="INS0312BDL"/>
                         <idno>Bodleian Ullendorff 3</idno>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
-                        <!--<msItem xml:id="ms_i1">
-                      
-                        </msItem>-->
-                        
+
+                        <msItem xml:id="ms_i1">
+                            <locus from="3ra" to="50vb"/>
+                            <title type="incomplete" ref="LIT3575Mashaf"/>
+                            <note> The text includes numerous prayers and hymns, among which the following:</note>
+                            <msItem xml:id="ms_i1.1">
+                                <locus from="3ra" to="3rb"/>
+                                <title type="complete" ref="LIT3994Hymn"/>
+                                <incipit xml:lang="gez">
+                                    <locus from="3ra" to="3rb"/>
+                                    ሃሌ፡ ሃሌ፡ ሉያ፡ አአትብ፡ ወእትነሣእ፡ በስመ<supplied reason="omitted">፡</supplied> አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ። አስማተ፡ ነሢእየ፡
+                                    እትመረጐዝ፡ እመኒ፡ ወደቁ፡ እት<gap reason="illegible" unit="chars" quantity="1"/>ሣእ። ወእመኒ፡ <gap reason="illegible" unit="chars" quantity="1"/>ርኩ፡
+                                    ውስተ፡ ጽልመት፡ እግዚአብ<gap reason="illegible" unit="chars" quantity="3"/> ያበርህ፡ ሊተ፡
+                                </incipit>
+                                <note>Cp. <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">5–6</citedRange></bibl></note>
+                            </msItem>
+
+                            <msItem xml:id="ms_i1.2">
+                                <locus from="3rb" to="6ra"/>
+                                <title type="complete">Praises in the form of trisagion</title>
+                                <incipit xml:lang="gez">
+                                    <locus from="3rb" to="3va"/>
+                                    ቅዱስ፡ ቅዱስ፡ ቅዱስ፡ እግዚአብሔር፡ ጸባኦት፡ ፍጹም፡ ምሉዕ፡ ሰማያተ፡ ወምድረ፡ ቅድ<pb n="3v"/><cb n="a"/>ሳተ፡ ስብሐቲከ፡ ቅ፡ ቅ፡ ቅ፡ እግ፡ ዘእምቅድመ፡ ዓለም፡
+                                </incipit>
+                                <note>Cp. <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">6–8</citedRange></bibl></note>
+                            </msItem>
+
+                            <msItem xml:id="ms_i1.3">
+                                <locus from="6ra" to="6va"/>
+                                <title type="complete">Praises to Our Lady Mary</title>
+                                <incipit xml:lang="gez">
+                                    <locus target="#6ra"/>
+                                    <hi rend="rubric">እዌ<supplied reason="omitted">ድሰኪ፡</supplied> </hi> ለኪ፡ ኦድንግል፡ ምልዕተ፡ ውዳሴ፡ መጠነ፡ ይክል፡ አፉየ፡ ያስተበፅዕ፡ ዕበየኪ። ልሳነ፡ ኪሩቤል፡
+                                    ኢይክል፡ አብጽሖ፡ ውዳሴኬ፡ ወአፈ፡ ሱራፌል፡ ኢይፌጽም፡ ነጊረ፡ እበየኪ፡ ማርያም።
+                                </incipit>
+                                <note>Cp. <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">8–9</citedRange></bibl></note>
+                            </msItem>
+
+                            <msItem xml:id="ms_i1.4">
+                                <locus from="6va" to="7va"/>
+                                <title type="complete">Praises to Our Lady Mary</title>
+                                <incipit xml:lang="gez">
+                                    <locus from="6va" to="6vb"/>
+                                    <hi rend="rubric">ተዘከ<supplied reason="omitted">ር፡</supplied></hi>  እግዚኦ፡ ኪዳነ፡ አግብ<add place="inline">ርቲ</add>ኪ፡ ቅዱሳን፡ ኪዳነ፡
+                                    አ<add place="inline">ብር</add>ሃም፡ ይስሐቅ፡ ወያዕ<cb n="b"/>ቆብ፡ ምእመናኒከ፡</incipit>
+                                <note>Cp. <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">11–12</citedRange></bibl></note>
+                            </msItem>
+
+                            <msItem xml:id="ms_i1.5">
+                                <locus from="7va" to="8vb"/>
+                                <title type="complete">Praises to Our Lady Mary</title>
+                                <incipit xml:lang="gez">
+                                    <locus from="7va" to="7vb"/>
+                                    ንዒ፡ ኀቤየ፡ ኦድንግል፡ ምስለ፡ ወልድኪ፡ ፍቁርኪ፡ ኢየሱስ<supplied reason="omitted">፡ </supplied>ክርስቶስ፡ ከመ፡ ትባርኪ፡ ላዕሌነ፡
+                                    <hi rend="rubric">ንዒ<supplied reason="omitted">፡</supplied></hi> ኀቤየ፡ ኦድን<cb n="b"/>ግል፡ ምስለ፡ አዳም፡</incipit>
+                                <note>Cp. <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">12–13</citedRange></bibl></note>
+                            </msItem>
+
+                            <msItem xml:id="ms_i1.7">
+                                <locus from="11ra" to="12rb"/>
+                                <title type="complete">Supplication to Our Lady Mary, to the saints, the martyr, the righteous, etc.</title>
+                                <incipit xml:lang="gez">
+                                    <locus target="#11ra"/>
+                                    ሰ<add place="inline">አ</add>ሊ፡ ለነ፡ <hi rend="rubric">ማ<supplied reason="omitted">ርያም፡</supplied></hi> እምነ፡ ወእመ፡ ለእግዚእነ፡
+                                    ሞገስነ፡ አንቲ፡ ወክብርነ፡ ሰአሊ፡ ለነ፡ አስተምሐሪ፡ ለነ። <hi rend="rubric">ሰ</hi>አሉ፡ ለነ፡ ነቢያት፡ ስኩራነ፡
+                                    መንፈስ<supplied reason="omitted">፡ </supplied>ምሉአነ፡</incipit>
+                                <note>Cp. <bibl><ptr target="bm:Tasfa1955Saatat"/><citedRange unit="page">15–16</citedRange></bibl></note>
+                            </msItem>
+                            <!-- The other subsections are not easily recognizable -->
+
+                                 <explicit xml:lang="gez">
+                                    <locus target="#50vb"/>
+                                     ዘመሐርነ፡ ወልድከ፡ ጸሎተ፡ ቅዱሳን፡ እንግልጋ፡ ሶበ፡ ንጼሊ፡ እንበለ፡ ንትጋ፡ እግዚኦ፡ ሀበነ፡ መንፈሰ፡ ወጸጋ፡
+                                     ዘይሴ<gap reason="illegible" unit="chars" quantity="1"/>፡ ላዕለ፡ ንፈስ፡ ወሥጋ፡ ሰብ። ሰብ፡
+                                     <gap reason="illegible" unit="chars" quantity="1"/>ት፡ ለእግዚአብሔር፡ ኪዳነ፡ ዘፈጠረ<gap reason="illegible" unit="chars" quantity="1"/>፡
+                                </explicit>
+                            </msItem>
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>Holes, presumably resulting from parchment making, are found on e.g. <locus target="#23 #39 #85"/>.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">52</measure>
+                                    <note>Holes from the parchment making process, e.g. on <locus target="#23 #39 #47"/>.</note>
                                     <dimensions type="outer" unit="mm">
                                         <height>101</height>
                                         <width>90</width>
                                         <depth>38</depth>
                                     </dimensions>
-                                    <!--<dimensions type="leaf" unit="mm" xml:id="leafdim">
-                                        <height></height>
-                                        <width></width>
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                        <height>70</height>
+                                        <width>71</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#13r"/>.</note>-->
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#13r"/>.</note>
                                     <measure type="weight" unit="g">199</measure>
-                                </extent> 
+                                </extent>
                                 <foliation>Foliated in pencil in the upper right corner.</foliation>
                            <!--     <collation>
                                     <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">2</dim>
-                                            <locus from="1r" to="2v"/>  
+                                            <locus from="1r" to="2v"/>
                                         </item>
                                         <item xml:id="q" n="">
                                             <dim unit="leaf"></dim>
@@ -97,8 +176,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>-->
+                                <condition key="deficient">
+                                    The manuscript is in poor condition. Some leaves present tears and losses, some likely caused by rodents (e.g. <locus from="10" to="12"/>).
+                                    The edges of most leaves are darkened by use and humidity.
+                                    Some leaves are stained, others are torn (e.g. <locus from="10" to="13"/>). Some leaves are probably partly detached or missing,
+                                    e.g. <locus from="31" to="33"/>, <locus target="#43"/> and <locus target="#50"/>.
+                                    The ink is partly faded away, making some portions of text nearly illegible (e.g. on <locus target="#3ra #22va"/>).
+                                      The sewing is broken in several points.
+                                      The back cover is split vertically in half. The two parts are held together by threads passing through pairs of holes drilled through the covers.
+                                      Large tunnels formed by insects are carved into the covers.
+                                      The hinging strap of the satchel is torn into two pieces.
+
+                                    </condition>
                             </supportDesc>
-                           
+
                             <layoutDesc>
                                 <layout columns="2" writtenLines="13 15">
                                     <locus from="3ra" to="50vb"/>
@@ -116,37 +207,134 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                            
+
                         </objectDesc>
-                        
+
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic">
-                           
+                            <handNote xml:id="h1" script="Ethiopic">/
+                                <locus from="3ra" to="50vb"/>
+                                <seg type="ink">Black, red</seg>
+                                <date notBefore="1750" notAfter="1900">18th- or 19th-century handwriting</date>
+                                <desc>Mediocre handwriting.
+                                    Characters were occasionally carelessly executed. Spacing between characters is also irregular.
+                                </desc>
+                                <note>
+                                    The graphemes <foreign xml:lang="gez">ግ</foreign> and <foreign xml:lang="gez">ዚ</foreign> in the word <foreign xml:lang="gez">እግዚአብሔር፡</foreign> are often written with ligature.
+                                </note>
+                                <seg type="rubrication">
+                                    The name of Mary and some words, in full or in abbreviated form;
+                                    elements of the numerals and of the punctuation signs, including the text dividers.
+                                    The rubrication has not been executed on some leaves (e.g. on <locus target="#20va #34rb #35va"/>) and <locus from="36vb" to="50vb"/>), with lacunae in the body of the text.
+                                </seg>
+                                <list type="abbreviations">
+                                    <item>
+                                        <abbr>ቅ፡ እ፡</abbr> for <expan>ቅዱስ፡ እግዚአብሔር፡</expan> (e.g. on <locus target="#3va #4ra"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ግ</abbr> or <abbr>ግነ</abbr> for <expan>ግነይ፡</expan> (e.g. on <locus target="#4vb #5ra #5rb"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>እዌ</abbr> for <expan>እዌድሰኪ፡</expan> (e.g. on <locus target="#6ra #8vb"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ማ</abbr> or <abbr>ማር</abbr> for <expan>ማርያም፡</expan> (e.g. on <locus target="#6rb #11ra #19ra"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ተ</abbr> for <expan>ተዘከር፡</expan> (e.g. on <locus target="#7ra"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ሰ</abbr> or <abbr>ሰአ</abbr> for <expan>ሰአሊ፡</expan> (e.g. on <locus target="#11ra #12rb #34va"/>)
+                                    </item>
+                                    <item>
+                                        <abbr>ቅ</abbr> for <expan>ቅዱስ፡</expan> (e.g. on <locus target="#19va"/>)
+                                    </item>
+                                </list>
                             </handNote>
                         </handDesc>
-                        
-                       <!-- <decoDesc>
-                         
-                        </decoDesc>-->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
-                            </binding>
-                        </bindingDesc>-->
-                        
+
+                        <additions>
+                            <list>
+                                 <item xml:id="a1">
+                                     <desc type="GuestText">
+                                         <locus target="#1r"/>
+                                        Beginning of a text in honour of the archangel <persName ref="PRS8065Raguel">Rāguʾel</persName> containing <foreign xml:lang="gez">ʾasmāt</foreign>.
+                                        The text ends up abruptly. The first line is preceded by an almost completely illegible line in red ink.
+                                        Some letters are illegible due to the ink, the handwriting and the state of preservation of the leaf.
+                                        The entire text is the following:
+                                    <q xml:lang="gez">
+                                        ድርሳን፡ ዘቅዱስ፡ ራጉኤል፡ ብሃ<gap reason="illegible" unit="chars" quantity="2"/>መብሕኤል፡
+                                        በዕትናኤል፡ <add place="above">በ</add>ሃድናኤል፡ <gap reason="illegible" unit="chars" quantity="1"/>ጽሐድኤል፡ እሎንተ፡ ቃላት፡
+                                        ዘነገሮ፡ እግዚአብሔር፡ ዘቅዱስ፡ ራጉኤል፡ ብሑር፡ ዘቅዱስ።
+                                    </q>
+                                     </desc>
+                                </item>
+
+                                <item xml:id="a2">
+                                    <desc type="GuestText">
+                                        <title type="incomplete" ref="LIT5086MagicPrayer"/>
+                                        <locus from="1v" to="2v"/>
+                                        Protective prayer against the hail, written in the same hand of <ref target="#a1">the previous note</ref>.
+                                        The text begins on  <locus target="#2r"/> (<q><seg part="I">ጸሎተ፡ በረድ፡ <gap reason="illegible" unit="chars" quantity="1"/>ብርድ፡ አስተባርድ፡ ድኵል፡ ተከልከል፡ ሽር፡
+                                            <gap reason="illegible" unit="chars" quantity="1"/>እሰ<gap reason="illegible" unit="chars" quantity="2"/>ታለ፡
+                                            እግዚአብሔር፡ ዘገብረ፡ ሰማየ፡ ወመድረ፡ ኢታውርድ፡ <sic>በርድ፡</sic>
+                                        </seg></q>), then continues on <locus target="#2v"/>, and terminates possibly abruptly on <locus target="#1v"/>
+                                        (<q><seg part="F">ተማኅፀንኩ፡ በሚካኤል፡ ወገብርኤል፡ በማርያም፡ ድንግል፡ ወላዲተ፡ አምላክ፡ ቀዳሚሁ፡ ቃል፡ <gap reason="illegible" unit="chars" quantity="10"/>ንያ፡</seg></q>).
+                                    </desc>
+                                </item>
+
+
+                                <item xml:id="e1">
+                                    <desc>A white sticker is glued to the inner side of the front board.
+                                    The signature and the content of the manuscript are indicated in blue pen on the sticker:
+                                    "MS. Eth. EU III Hymns to B.V. Mary"
+                                    </desc>
+                                </item>
+                                <item xml:id="e2">
+                                    <desc>Scribal corrections or interventions are not uncommon. They consist of interlineal additions (e.g. on <locus target="#8rb #11va #38vb"/>),
+                                        additions in the upper margins (e.g. on <locus from="41va" to="43vb"/>), and erasures (e.g. on <locus target="#45vb"/>).
+                                    <!-- Add which ones --></desc>
+                                </item>
+                            </list>
+                        </additions>
+
+
+                        <bindingDesc>
+                             <binding contemporary="Ethiopian true">
+                               <p>The manuscript is bound according to the traditional Ethiopian technique. The present binding is the first binding received by the manuscript.</p>
+                                 <decoNote xml:id="b1" type="bindingMaterial">
+                                   The book is bound in <material key="wood">wooden</material> boards.
+                                 </decoNote>
+                                 <decoNote xml:id="b2" type="Boards">
+                                   The boards are flush with the bookblock and have shallow external bevels. The grain runs vertically.
+                                   The external surface of the boards is polished and presents a finishing layer of dark colour. The inner surface and the edges are rough.
+                                 </decoNote>
+                                 <decoNote xml:id="b4" type="SewingStations">3</decoNote>
+                                 <decoNote xml:id="b5">
+                                   Chainstitch sewing on three sewing stations; Z-plied thread.
+                                   The sewing is closed in the last quire, by knotting the ends of the thread to each other.
+                                 </decoNote>
+                                 <decoNote xml:id="b6" type="Spine">
+                                   The small holes close to the head and tail of the quires are probably what remains of quire tackets.
+                                 </decoNote>
+                                 <decoNote xml:id="b7" type="SlipCase">
+                                   The manuscript is provided with a leather one-piece single-walled slip case with the remnant of a hinging strap.
+                                   The case is equipped with a main tapered flap extending from the back to the front panel to cover the opening of the book compartment.
+                                   The fragment of a narrow leather hanging strap passes through two flaps extending from the bottom panel of the case.
+                                 </decoNote>
+                             </binding>
+                         </bindingDesc>
+
+
                     </physDesc>
-                    
-                <!--    <history>
+
+                    <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1750" to="1899" evidence="lettering"/>
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
-                    
+                        <provenance>The manuscript provides no clues concerning its provenance and original owner.
+                            It was purchased at some time by <persName ref="PRS9622Ullendor" role="owner"/>.</provenance>
+                    </history>
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -158,7 +346,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -179,7 +367,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords scheme="#ethioauthlist">
                     <term key="Poetry"/>
-                    <term key="Hagiography"/>
+                    <term key="Liturgy"/>
                     <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
@@ -190,6 +378,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-03-02">Created record</change>
+            <change who="MV" when="2020-05-16">Added handDesc</change>
+            <change who="MV" when="2020-06-01">Added text content, extra, physical desc, editors</change>
+            <change who="EDS" when="2023-05-01">Added binding description, modified condition, description of writing support</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
