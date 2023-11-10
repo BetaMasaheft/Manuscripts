@@ -376,7 +376,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                <!--standardise to Pencil foliation in the upper right corner?-->
 
                                 <collation>
-                                    <signatures>Quire marks are written in the upper inner corner of
+                                    <signatures>
+                                        <!-- 
+                                            Quire marks are written in the upper inner margin of the first leaf of most quires.
+                                            Quire mark on <locus target="#72"/> was added later, still by the maind hand.
+                                        -->
+                                        
+                                        Quire marks are written in the upper inner corner of
                                         the recto of the first leaf of each quire with black ink.
                                         Quires 1 (<ref target="#q2"/>), 11 (<ref target="#q12"/>)
                                         and 12 (<ref target="#q13"/>) have no marking. Number
@@ -386,9 +392,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">3</dim>
-                                            <locus from="1r" to="3v"/> 3, stub before 3 <note>The
+                                            <locus from="1r" to="3v"/> 3, stub before 3 
+                                            <note>The
                                                 leaves of quire A (<ref target="#q1"/>) are
                                                 loose.</note>
+                                            <!-- Q1 is described incorrectly: I see two bifolia fols 1r-2v and fol. 3rv, which is preceded by a stub. Shouldn't this q1 be described as two 
+                                            separate quires? More in general, should we describe what we see or what the quire looked like?-->
                                         </item>
                                         <item xml:id="q2" n="1">
                                             <dim unit="leaf">10</dim>
@@ -445,8 +454,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                         <item xml:id="q13" n="12">
                                             <dim unit="leaf">8</dim>
-                                            <locus from="112r" to="119v"/> 1, stub after 8 2, stub
-                                            after 8 </item>
+                                            <locus from="112r" to="119v"/>
+                                            1, stub after 8
+                                            2, stub after 8
+                                        </item>
                                         <item xml:id="q14" n="B">
                                             <dim unit="leaf">4</dim>
                                             <locus from="120r" to="123v"/>
