@@ -9,15 +9,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
-            <titleStmt>
+            <titleStmt> 
+                <!-- 
                 <title xml:lang="gez" xml:id="title1">አርባዑቱ፡ ወንጌል፡</title>
-                <title xml:lang="gez" corresp="#title1" type="normalized">ʾArbāʿǝttu wangel</title>
-                <title xml:lang="en" corresp="#title1">Four Gospels</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">ʾArbāʿtu wangel</title> 
+                 -->
+                <title xml:lang="en" xml:id="title1">Four Gospels</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -43,19 +46,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <extent>
-                                    <measure unit="leaf">130</measure>
+                                    <measure unit="leaf" quantity="130">130</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>313</height>
                                         <width>265</width>
                                         <depth>95</depth>
                                     </dimensions>
-                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
-                                        <height>316</height>
-                                        <width>267</width>
-                                    </dimensions>
-                                    <note corresp="#leafdim1">Data on leaves dimensions taken from <locus target="#45r"/>.</note>
                                     <measure type="weight" unit="g">3858</measure>
                                  </extent>
+                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library in January 2020 (1–130).</foliation>
                                 <condition key="deficient">
                                     The manuscript is wrapped in a modern textile embroidered with two lions and probably purchased by <persName ref="PRS5782JuelJen"/>.
                                     The turn-ins and fragments of leather along the board edges are all that remains of the former leather cover.
@@ -85,7 +84,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               Threads of various colours are inserted in the outer margins for navigating the text.
                               More specifically, a red <term key="leafStringMark">leaf string marker</term> is inserted in the lower margin of <locus target="#86"/> and a
                               uncoloured <term key="leafStringMark">leaf string marker</term> is inserted in the upper margin of <locus target="#104"/>.
-                              Disjoint bifolia have been repaired with overcasting, e.g. <locus from="51" to="53"></locus> or by sewing parchment <term key="guard">guards</term> with <term key="sidestitches">side stitches</term>
+                              Disjoint bifolios have been repaired with overcasting, e.g. <locus from="51" to="53"></locus> or by sewing parchment <term key="guard">guards</term> with <term key="sidestitches">side stitches</term>
                               along the <term key="spinefold">spine fold</term> of the quires, e.g. <ref target="#q18">quire 18</ref>.
                           </decoNote>
                           </binding>
@@ -323,12 +322,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <supportDesc>
                                     <support>
                                         <material key="parchment"/>
-                                        <p>Holes, presumably resulting from parchment making, are found on e.g. <locus target="#1 #40 #85"/>.
-
-                                           Tears on several leaves have been repaired both at the moment of parchment production, e.g. on <locus target="#106 #118"/>, and at a later stage, e.g. <locus target="#2"/></p>
-
-                                    </support>
-                                    <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.</foliation>
+                                        <p>Holes resulting from parchment making are found on e.g. <locus target="#1 #40 #85"/>. Tears on several folios have 
+                                            been repaired both at the moment of parchment production, e.g. on <locus target="#106 #118"/>,
+                                            and at a later stage, e.g. <locus target="#2"/>.</p></support>
+                                    <extent>
+                                        <measure unit="leaf" quantity="123">123</measure>
+                                        <locus from="1" to="123"/>
+                                        <measure unit="quire" quantity="18">18</measure>
+                                        <dimensions type="leaf" unit="mm" xml:id="leafdim">
+                                            <height>316</height>
+                                            <width>267</width>
+                                        </dimensions>
+                                        <note corresp="#leafdim1">Data on the dimensions of folios taken from <locus target="#45r"/>.</note>
+                                    </extent>
+                                    
                                     <collation>
                                         <signatures>
                                             ፫ in the upper left corner of <locus target="#18r"/> and upper right corner of <locus target="#25v"/>;
@@ -340,10 +347,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             ፭ in the upper left corner of <locus target="#93r"/>;
                                             ፩ in the upper right corner of <locus target="#108v"/>;
                                             ፪ in the upper left corner of <locus target="#109r"/> and the upper right corner of <locus target="#115v"/>;
-                                            ፫ in the upper left corner of <locus target="#116r"/>.</signatures>
+                                            ፫ in the upper left corner of <locus target="#116r"/>.
+                                        <!-- These pieces of information can be summarized in one line --></signatures>
                                         <note>All quires have been subsequently reinforced with parchment guards. The original quire structure cannot be reconstructed anymore.</note>
                                         <list>
-                                            <item xml:id="q1" n="1">
+                                            <item xml:id="q1" n="1">                                                
                                                 <dim unit="leaf">2</dim>
                                                 <locus from="1r" to="2v"/>
                                             </item>
@@ -354,7 +362,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <item xml:id="q3" n="3">
                                                 <dim unit="leaf">6</dim>
                                                 <locus from="11r" to="16v"/>
-                                                <note>The leaves have been sewn together at a later stage.</note>
+                                                <note>The folios have been sewn together at a later stage.</note>
                                             </item>
                                             <item xml:id="q4" n="4">
                                                 <dim unit="leaf">8</dim>
@@ -381,7 +389,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <item xml:id="q9" n="9">
                                                 <dim unit="leaf">3</dim>
                                                 <locus from="51r" to="53v"/>
-                                                <note>The leaves have been stitched together at a later stage unto <ref target="#q10"/>.</note>
+                                                <note>The folios have been stitched together at a later stage unto <ref target="#q10"/>.</note>
                                             </item>
                                             <item xml:id="q10" n="10">
                                                 <dim unit="leaf">9</dim>
@@ -482,7 +490,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         the letter መ has the loops not completely separated; the letters ፅ and ዕ and numeral ፬ show "cone-forms";
                                         the word <foreign xml:lang="gez">እግዚአ፡ ብሔር፡</foreign> is sometimes written as two separate words.
                                         The graphemes ግ and ዚ are occasionally written with a ligature in the word <foreign xml:lang="gez">እግዚእነ፡</foreign>, e.g. on <locus target="#35va #100vb"/>.
-                                        One bottom ruled line has been left unwritten on leaves <locus from="24va" to="25vb"/>.
+                                        One bottom ruled line has been left unwritten on <locus from="24va" to="25vb"/>.
                                     </note>
                                     <seg type="rubrication">
                                         Several groups of lines on the incipit page of each Gospel, alternating with black lines;
@@ -550,7 +558,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <additions>
                                 <list>
                                     <item xml:id="a1">
-                                        <desc type="Supplication">Note crudely written in deep vermilion in the upper margin of the leaf.</desc>
+                                        <desc type="Supplication">Note crudely written in deep vermilion in the upper margin of the folio.</desc>
                                         <locus target="#4v"/>
                                         <q xml:lang="gez"><seg part="I">ተዘከርነ፡ እ<hi rend="ligature">ግዚ</hi>ኦ፡ በሣህልከ፡ ሕዝብከ፡ ወተሰሀለነ፡ በአድህኖትከ፡</seg></q>
                                     </item>
@@ -687,7 +695,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <support>
                                     <material key="parchment"/>
                                 </support>
-                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.</foliation>
+                                <extent>
+                                    <measure unit="leaf" quantity="7">7</measure>
+                                    <locus from="124" to="130"/>
+                                    <measure unit="quire" quantity="1">1</measure>
+                                <!--    <dimensions type="leaf" unit="mm" xml:id="leafdim2">
+                                        <height></height>
+                                        <width></width>
+                                    </dimensions>
+                                    <note corresp="#leafdim1">Data on leaves dimensions taken from <locus target="#124r"/>.</note>-->
+                                </extent>
                                 <collation>
                                     <list>
                                         <item xml:id="q19" n="19">
@@ -718,7 +735,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">13</dim>
                                         <dim type="intercolumn">16</dim>
                                     </dimensions>
-                                    <note> There are 12-13 characters per line.</note>
+                                    <note> There are 12–13 characters per line.</note>
                                     <ab type="punctuation" subtype="Dividers">
                                         The word <foreign xml:lang="gez">ቁም፡</foreign> is written at the end of the line on <locus target="#127vb"/>.
                                     </ab>

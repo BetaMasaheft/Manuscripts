@@ -10,12 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Dāwit</title>
+                <!-- 
+                <title xml:lang="gez" xml:id="title1">ዳዊት፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Dāwit</title>
+                 -->
+                <title xml:lang="en" xml:id="title1">Psalter</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -483,11 +488,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <p>Holes on several folia, presumably from the parchment making process (e.g. <locus target="#48 #51 #61"/>).</p>
+                                    <p>Holes on several folios from the parchment making process (e.g. <locus target="#48 #51 #61"/>).</p>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">122</measure>
-                                    <measure unit="leaf" type="blank">1</measure>
+                                    <measure unit="leaf" quantity="122">122</measure>
+                                    <measure unit="quire" quantity="13">13</measure>
+                                    <measure unit="page" type="blank">1</measure>
                                     <locus target="#122v"/>
                                     <measure unit="g" type="weight">1801</measure>
                                     <dimensions type="outer" unit="mm">
@@ -499,12 +505,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>218</height>
                                         <width>190</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#23r"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#23r"/>.</note>
                                 </extent>
-                                <foliation>Foliation in pencil in the upper outer corner of each folium.</foliation>
+                                <foliation>Pencil foliation in the upper right corner (1–122).</foliation>
                                 <collation>
                                     <list>
                                         <item xml:id="q1">
+                                            <!-- n="num" is missing everywhere -->
                                             <dim unit="leaf">2</dim>
                                             <locus from="1r" to="2v"/>
                                         </item>
@@ -535,7 +542,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q8">
                                             <dim unit="leaf">10</dim>
                                             <locus from="63r" to="72v"/>
-                                            <note>Protective strip of parchment, on which writing can be seen, placed around the lower end of the quire.</note>
+                                            <note>A protective strip of parchment, on which writing can be seen, has been placed around the lower end of the quire.</note>
+                                            <!-- The following information must be moved elsewhere, not into collation -->
                                            <!-- Visible on the left, between f. 62 and f. 63: four lines, on which two characters each can be read:
                                             ፍር
                                             ላም
@@ -563,9 +571,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q12">
                                             <dim unit="leaf">11</dim>
                                             <locus from="103r" to="113v"/>
-                                            <note><locus target="#113"/> is detached. A protective strip of parchment, on which writing is visible,
-                                            has been placed around the upper part of the quire. It is sewn to <locus target="#133"/>, and on this side, no text can be
-                                                read anymore.  </note>
+                                            <note><locus target="#113"/> is detached. <!-- This must go under "Condition" -->
+                                               A protective strip of parchment, on which writing is visible,
+                                            has been placed around the upper part of the quire. It is sewn to <locus target="#133"/> and, on this side, no text can be
+                                                read anymore. </note>
+                                            <!-- The following information must be moved elsewhere, not into collation -->
                                            <!-- On the left side, 15 complete lines with 2-4 characters each can be seen, the 16th line is cut off in its half:
                                             ሮ፡ ዳ
                                             ኵ
@@ -582,7 +592,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             እመ
                                             ኡ፡ ነገ
                                             ሐት፡-->
-
                                         </item>
                                         <item xml:id="q13">
                                             <dim unit="leaf">9</dim>
@@ -593,7 +602,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </collation>
                                 <condition key="good">
                                   The manuscript shows traces of intensive use. It is damaged by humidity
-                                  throughout, in particular at the beginning and end, so that most folia present uneven distortions and
+                                  throughout, in particular at the beginning and end, so that most folios present uneven distortions and
                                   their bottom margin is stained. Protective strips of parchment, which were probably recycled from
                                   another manuscript and on whose inner sides letters can still be read, have been placed around <locus target="#q8 #q12"/>.
                                   All edges have been re-trimmed.

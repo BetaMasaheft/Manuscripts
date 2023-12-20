@@ -10,15 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="title1">ዜና፡ ሐና፡, ተአምረ፡ ሐና፡, ተአምረ፡ ሐና፡ ወኢያቄም፡</title>
-                <title xml:lang="gez" corresp="#title1" type="normalized">Zenā Ḥannā, Taʾammǝra Ḥannā, Taʾammǝra Ḥannā wa-ʾIyāqem</title>
-                <title xml:lang="en" corresp="#title1">History of Anne, Miracles of Anne,
-                    <foreign xml:lang="gez">salām</foreign>-hymns, Miracles of Anne and Joachim</title>
+                <!-- 
+                <title xml:lang="gez" xml:id="title1">ዜና፡ ሐና፡, ተአምረ፡ ሐና፡, መልክአ፡ ሐና፡, ተአምረ፡ ሐና፡ ወኢያቄም፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Zenā Ḥannā, Taʾammǝra Ḥannā, Malkǝʾa Ḥannā, Taʾammǝra Ḥannā wa-ʾIyāqem</title>
+                 -->
+                <title xml:lang="en" xml:id="title1">History of Anne, Miracles of Anne, <hi rendition="simple:italic">Malkǝʾ</hi>-hymns to Anne, Miracles of Anne and Joachim</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -36,13 +38,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <repository ref="INS0312BDL"/>
                         <idno>Bodleian Aeth. e. 38</idno>
                         <altIdentifier>
-                            <idno>Arch. O. e.13</idno>
+                            <idno>Arch. O. e. 13</idno>
                         </altIdentifier>
                         <altIdentifier>
                             <idno>Juel-Jensen 41</idno>
                         </altIdentifier>
                         <altIdentifier>
-                            <idno>Lady Meux MS. 4</idno>
+                            <idno>Lady Meux 4</idno>
                         </altIdentifier>
                     </msIdentifier>
 
@@ -321,11 +323,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <p>Few holes, presumably from parchment making, are present in <locus target="#47 #59"/>.</p>
+                                    <p>Few holes from parchment making are present in <locus target="#47 #59"/>.</p>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">81+2</measure>
-                                    <measure unit="leaf" type="blank">5</measure>
+                                    <measure unit="leaf" quantity="83">83</measure>
+                                    <measure unit="quire" quantity="10">10</measure>
+                                    <measure unit="page" type="blank">5</measure>
                                     <locus target="#2v #3v #4r #9v #81v"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>183</height>
@@ -336,21 +339,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>180</height>
                                         <width>127</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#31r"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#31r"/>.</note>
                                     <measure unit="g" type="weight">785</measure>
                                 </extent>
                                 <foliation>
-                                  <locus from="1" to="9"/> and <locus from="80" to="81"/> are not foliated. A protective bifolium has been glued to
-                                  the front and back cover and has not been considered in the foliation. The rest of the leaves are foliated in pencil in the upper outer corner.
+                                    Pencil foliation in the upper right corner (10–79). 
+                                    The first nine and last two folios are not foliated; the foliation begins with the number 10
+                                    on <locus target="#10"/>. The unfoliated folios are referred to as <locus from="1" to="9"/> and <locus from="80" to="81"/>
+                                    in this description. 
+                                    A protective bifolio has been glued to the front and back cover and has not been considered in the foliation.
                                 </foliation>
+                               
                                 <collation>
                                     <signatures>
                                         <note>
-                                            Decorated quire marks are written in the upper inner margin of the first leaf of some quires.
+                                            Decorated quire marks are written in the upper inner margin of the first folio of some quires.
+                                            <!-- Perhaps you might add which ones -->
                                         </note>
                                     </signatures>
                                     <list>
                                         <item xml:id="q1" n="1">
+                                            <!-- This is n="A" | The following quires are to be re-numbered accordingly -->
                                             <dim unit="leaf">3</dim>
                                             <locus from="1r" to="3v"/>
                                             3, stub before 1
@@ -394,6 +403,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="70r" to="79v"/>
                                         </item>
                                         <item xml:id="q10" n="10">
+                                            <!-- This is n="B" -->
                                             <dim unit="leaf">2</dim>
                                             <locus from="80r" to="81v"/>
                                         </item>
@@ -678,7 +688,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         pencil. Below is glued an additional sticker with the signature "Ms 41" on it.</desc>
                                 </item>
                                 <item xml:id="e2">
-                                    <desc>Writings in pencil are drawn up on the recto side of the protective bifolium glued to the front cover.
+                                    <desc>Writings in pencil are drawn up on the recto side of the protective bifolio glued to the front cover.
                                         <q xml:lang="en">81 folios. 10 full page paintings. 2 sketches. size 7" x 5"</q>.</desc>
                                 </item>
                                 <item xml:id="e3">

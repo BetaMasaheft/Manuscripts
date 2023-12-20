@@ -10,14 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez">ተአምረ፡ ማርያም፡, ተአምረ፡ ኢየሱስ፡, ድርሳን፡ ቃሉ፡ ዘቅዱስ፡ ወብጹዕ፡ ያዕቆብ፡ ኤጲስ፡ ቆጶስ፡ ዘሥሩግ፡ በእንተ፡ መልአክ፡ ወፈያታዊ፡</title>
-                <title xml:lang="gez" type="normalized">Taʾammǝra Māryām, Taʾammǝra ʾIyasus, Dǝrsān qālu za-bǝṣuʿ Yāʿqob ʾeṗis qoṗos za-Śǝrug baʾǝnta malʾak wa-fayyātāwi</title>
-                <title xml:lang="en">Hymns, New Testament excerpts, Miracles of Mary, Miracles of Jesus, Homily by the blessed Yāʿqob, bishop of Śǝrug on the Angel and the Thief</title>
+                <!--  
+                <title xml:lang="gez" xml:id="title1">ተአምረ፡ ማርያም፡, ተአምረ፡ ኢየሱስ፡, ድርሳን፡ ቃሉ፡ ዘቅዱስ፡ ወብጹዕ፡ ያዕቆብ፡ ኤጲስ፡ ቆጶስ፡ ዘሥሩግ፡ በእንተ፡ መልአክ፡ ወፈያታዊ፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Taʾammǝra Māryām, Taʾammǝra ʾIyasus, Dǝrsān qālu za-bǝṣuʿ Yāʿqob ʾeṗis qoṗos za-Śǝrug baʾǝnta malʾak wa-fayyātāwi</title>
+             -->
+                <title xml:lang="en" xml:id="title1"><hi rendition="simple:italic">Malkǝʾ</hi>-hymns, Excerpts from the New Testament, Miracles of Mary, Miracles of Jesus, Homily by Jacob of Serug on the Angel and the Thief</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -3434,10 +3437,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </p>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">123</measure>
-                                    <measure unit="leaf" type="blank">9</measure>
+                                    <measure unit="leaf" quantity="123">123</measure>
+                                    <measure unit="page" type="blank">9</measure>
                                     <locus target="#1r #2v #3r #4v #6v #83v #122v #123r #123v"/>
-                                    <measure unit="quire">17</measure>
+                                    <measure unit="quire" quantity="17">17</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>277</height>
                                         <width>225</width>
@@ -3447,12 +3450,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>278</height>
                                         <width>228</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#46r"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#46r"/>.</note>
                                     <measure type="weight" unit="g">2545</measure><!-- without modern documents, variation between results-->
                                 </extent>
-                                <foliation>Foliation in pencil in the upper outer corner of the recto. 100 has been skipped and 101 has been used twice,
-                                    corrected by the <placeName ref="INS0312BDL"/> in January 2020 to <locus target="#101a"/> and <locus target="#101b"/>.</foliation>
-                                <collation>
+                                <foliation>Pencil foliation in the upper right corner (1–123). Originally, the number 100 had been skipped and 101 instead been used twice,
+                                    corrected by the Bodleian Library in January 2020 to <locus target="#101a"/> and <locus target="#101b"/>.</foliation>
+                               <collation>
                                     <list>
                                         <item xml:id="q1" n="1">
                                             <dim unit="leaf">6</dim>
@@ -3509,7 +3512,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                         <item xml:id="q14" n="14">
                                             <dim unit="leaf">8</dim>
-                                            <locus from="101a" to="107v"/>
+                                            <locus from="101ar" to="107v"/>
                                         </item>
                                         <item xml:id="q15" n="15">
                                             <dim unit="leaf">8</dim>
@@ -3519,9 +3522,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <dim unit="leaf">6</dim>
                                             <locus from="116r" to="121v"/>
                                         </item>
-                                        <item xml:id="q17" n="18">
+                                        <item xml:id="q17" n="17">
                                             <dim unit="leaf">2</dim>
                                             <locus from="122r" to="123v"/>
+                                            <!-- n="B" -->
                                         </item>
                                     </list>
                                 </collation>
@@ -3553,7 +3557,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <note>The characters per column are 8–9.</note>
                                     <ab type="pricking">Ruling is visible; pricking is visible.</ab>
                                     <ab type="ruling" subtype="pattern">
-                                        <!--several, but not all folia containing exclusively miniatures are pricked, but not ruled-->
+                                        <!--several, but not all folios containing exclusively miniatures are pricked, but not ruled-->
                                         <locus from="1" to="2v"/>
                                         <locus from="7" to="19"/>
                                         <locus from="21" to="121"/>Ruling pattern: 1A-1A-1A1A/0-0/0-0/C.</ab>

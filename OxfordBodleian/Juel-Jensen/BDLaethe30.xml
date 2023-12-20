@@ -10,14 +10,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
+                <!--  
                 <title xml:lang="gez" xml:id="title1">ዳዊት፡</title>
                 <title xml:lang="gez" corresp="#title1" type="normalized">Dāwit</title>
-                <title xml:lang="en" corresp="#title1">Psalter</title>
+                -->
+                <title xml:lang="en" xml:id="title1">Psalter</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -462,8 +465,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">iii + 137</measure>
-                                    <measure unit="leaf" type="blank">1</measure>
+                                    <measure unit="leaf" quantity="140">140</measure>
+                                    <measure unit="quire" quantity="18">18</measure>
+                                    <measure unit="page" type="blank">1</measure>
                                     <locus target="#iiiv"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>174</height>
@@ -474,16 +478,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>173</height>
                                         <width>110</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#33r"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#33r"/>.</note>
                                     <measure type="weight" unit="g">804</measure><!--with cloth cover-->
                                 </extent>
-                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library during our stay in January 2020.
-                                    </foliation>
+                                <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library in January 2020 (i–iii+1–137).</foliation> 
                                  <collation>
                                      <signatures>
-                                         <note>
-                                             Quire marks are written in the upper inner margin of the first leaf of each quire. Some of them are nearly illegible.
-                                         </note>
+                                         Undecorated quire marks are written in the upper inner margin of the first folio of each quire. Some of them are nearly illegible.
                                      </signatures>
                                     <list>
                                         <item xml:id="q1" n="A">
@@ -573,16 +574,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="127r" to="136v"/>
                                         </item>
                                         <item xml:id="q18" n="17">
+                                            <!-- Should q18 be indicated as n="B"? -->
                                             <dim unit="leaf">1</dim>
                                             <locus from="137r" to="137v"/>
                                             1, stub before 1
-                                            <note>Two stubs are found between the first folio, which is cut out, and <locus target="#137r"/></note> <!--see back of metadata-->
+                                            <note>Two stubs are found between the first folio, which is cut out, and <locus target="#137r"/></note> 
+                                            <!-- It is not clear what has happened here: the previous comment said "see back of metadata", but no information is provided there.
+                                                This was perhaps originally a binion with two inner stubs. How to describe a quire in which a folio has been cut out? -->
                                         </item>
                                     </list>
                                 </collation>
                                 <condition key="good">
                                   Humidity appears to have damaged the parchment, especially towards the end of the manuscript.
-                                    Some leaves are slightly stained with dirt, e.g. on <locus target="#25v #36v #93v"/>, or wax, e.g. on <locus target="#108r #114r #117v"/>. 
+                                  Some folios are slightly stained with dirt, e.g. on <locus target="#25v #36v #93v"/>, or wax, e.g. on <locus target="#108r #114r #117v"/>. 
                                     The text is occasionally barely legible, e.g. on <locus target="#13v #14r #96r"/>.
                                     Some letters have been washed away and poorly rewritten in a secondary hand on <locus target="#24v"/>.
                                     Traces of intensive use. One folio after <locus target="#136"/> has been cut out at some time after the completion of the writing.

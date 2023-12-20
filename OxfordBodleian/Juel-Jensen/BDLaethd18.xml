@@ -9,15 +9,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
-            <titleStmt>
-                <title xml:lang="gez" xml:id="title1">ሄኖክ፡</title>
-                <title xml:lang="gez" corresp="#title1" type="normalized">Henok</title>
-                <title xml:lang="en" corresp="#title1">Book of Enoch</title>
+            <titleStmt> 
+                <!-- 
+                <title xml:lang="gez" xml:id="title1">መጽሐፈ፡ ሄኖክ፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Maṣḥafa Henok</title> 
+                -->
+                <title xml:lang="en" xml:id="title1">Book of Enoch</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -38,8 +41,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 16</idno>
                         </altIdentifier>
                     </msIdentifier>      
+                  
                     <history>
                         <provenance>
+                            The manuscript consists of two codicological units: <ref target="#p1"/> is a codex with its own binding, while
+                            <ref target="#p2"/> consists of one loose bifolio having a different origin and placed between <locus target="#2"/> and
+                            <locus target="#3"/>. 
                             <ref target="#p1"/> was faithfully copied from another manuscript, bound together with the book of Job 
                             and coming from <placeName ref="LOC3549Gojjam">Goǧǧām</placeName>, 
                             belonging to the deacon <persName ref="PRS12948MalakaMe">Malʿaka Mǝḥrat Yāred Gǝrmāye</persName>
@@ -50,10 +57,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <citedRange>189</citedRange>
                             </bibl>), <ref target="#p1"/> was commissioned in <placeName ref="LOC4545Maqala"/>
                             by <persName ref="PRS5782JuelJen"/> and his wife <persName ref="PRS12946MaryamMary"/> in September 1974, in the house of 
-                            <persName ref="PRS12949YohannesA">Abuna Yoḥannǝs</persName>, Archbishop of <placeName ref="LOC1310Aksum"/>. 
+                            <persName ref="PRS12949YohannesA">ʾAbuna Yoḥannǝs</persName>, Archbishop of <placeName ref="LOC1310Aksum"/>. 
                             <ref target="#p1"/> was copied by the deacon <persName ref="PRS12944AmhaSe">ʾAmmǝḫā Śǝllāse</persName> in his monastery of <placeName ref="LOC4505Manawe">Manāwe</placeName> 
                             in <placeName ref="LOC5882Tamben">Tamben</placeName>, and was completed in the month of January 1975.
-                            It costed 100 Ethiopian birr, and the binding costed 5 birr extra.
+                            It costed 100 Ethiopian birr, and the binding costed 5 birr extra. 
                             As far as <ref target="#p2"/> is concerned, a connection to <placeName ref="LOC3659GurAmb">Gʷǝrāmbā</placeName> can be established on the basis of some of the 
                             documents contained therein.
                         </provenance>
@@ -190,9 +197,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <p>Tears repaired on <locus target="#1 #16 #43 #53"/>.</p>.
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">59</measure>
-                                    <measure unit="leaf" type="blank">6</measure>
+                                    <measure unit="leaf" quantity="59">59</measure>
+                              <locus from="1" to="59"/>
+                                    <measure unit="page" type="blank">6</measure>
                                  <locus target="#1r #1v #2r #2v #59r #59v"/>
+                                    <measure unit="quire" quantity="8">8</measure>
                                     <measure unit="g" type="weight">1382</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>263</height>
@@ -203,16 +212,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>257</height>
                                         <width>203</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#35r"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#35r"/>.</note>
                                 </extent>
+                                <foliation>Pencil foliation in the upper right corner (1–59).</foliation>
                                 <collation>
                                     <signatures>
-                                        <note>
-                                            Decorated quire marks are written in the upper margin of the first leaf of each quire.
-                                        </note>
+                                        Decorated quire marks are written in the upper margin of the first folio of each quire.
                                     </signatures>
                                     <list>
-                                        <item xml:id="q1">
+                                        <item xml:id="q1" n="A">
                                             <dim unit="leaf">2</dim>
                                             <locus from="1r" to="2v"/>
                                         </item>
@@ -254,6 +262,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                            3, stub after 5
                                            9, stub before 1
                                            6, stub after 2
+                                           <!-- Order to be corrected according our decision -->
                                         </item>
                                     </list>
                                 </collation>
@@ -508,22 +517,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <material key="parchment"/>
                                     </support>
                                     <extent>
-                                        <measure unit="leaf">4</measure>
-                                        <measure unit="leaf" type="blank">1</measure>
+                                        <measure unit="leaf" quantity="2">2</measure>
+                                        <locus from="i" to="ii"/>
+                                        <measure unit="page" type="blank">1</measure>
                                         <locus target="#ivv"/>
-                                        <measure unit="quire">1</measure>
+                                        <measure unit="quire" quantity="1">1</measure>
                                     </extent>
+                                    <foliation>The bifolio is not foliated. Its folios are referred to in this description as <locus from="i" to="ii"/>.</foliation>
                                     <collation>
                                         <list>
                                             <item xml:id="q9">
-                                                <dim unit="leaf">4</dim>
+                                                <dim unit="leaf">2</dim>
                                                 <locus from="ir" to="iiv"/>
                                             </item>
                                         </list>
                                     </collation>
-                                    <condition key="deficient">The codicological unit consists of one loose bifolium having a different origin and placed between <locus target="#2"/> and
-                                        <locus target="#3"/>. The lower margin of <locus target="#ii"/> is cut.
-                                    </condition>
+                                    <condition key="deficient">The lower margin of <locus target="#ii"/> is cut.
+                                    </condition> 
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="36">

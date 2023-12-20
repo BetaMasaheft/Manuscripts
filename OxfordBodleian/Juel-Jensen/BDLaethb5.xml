@@ -3,16 +3,24 @@
 schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BDLaethb5" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+    xml:id="BDLaethb5"
+    xml:lang="en"
+    type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
-            <titleStmt>
-                <title>Synaxarion (Maskaram-Yakkātit)</title>
+            <titleStmt> 
+                <!-- 
+                <title xml:lang="gez" xml:id="title1">ስንክሳር፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Sənkəssār</title> 
+                 -->
+                <title xml:lang="en" xml:id="title1">Synaxarion (Maskaram–Yakkātit)</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -8988,20 +8996,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <p>Frequent holes, presumably resulting from parchment making, have been repaired by sewing, e.g. <locus
+                                    <p>Frequent holes resulting from parchment making have been repaired by sewing, e.g. <locus
                                        target="#30 #73 #162"/>. Smaller holes have not been repaired, e.g. <locus
                                        target="#50 #61 #208"/>.
-                                       The larger part of an empty <!--blank?-->leaf between <locus target="#212"/> and <locus target="#213"/> has been cut off.
+                                        The larger part of an empty <!--blank?-->folio between <locus target="#212"/> and <locus target="#213"/> has been cut off.
                                     </p>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">216</measure>
-                                    <note>Two leaves, one after <locus target="#141"/> and one after
-                                            <locus target="#142"/>, have been skipped in the
-                                        foliation, which goes up to <locus target="#214"/>. An empty
-                                        leaf between <locus target="#212"/> and <locus target="#213"/>, of which two thirds are cut off, has not been foliated.
-                                    </note>
-                                    <measure unit="leaf" type="blank">8</measure>
+                                    <measure unit="leaf" quantity="216">216</measure>
+                                    <measure unit="quire" quantity="24">24</measure>
+                                    <measure unit="page" type="blank">8</measure>
                                     <locus target="#1r #2v #3r #212v #213 #214"/>
                                     <dimensions type="outer" unit="mm">
                                         <height>379</height>
@@ -9012,24 +9016,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>378</height>
                                         <width>327</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from
                                             <locus target="#44r"/>.</note>
-                                    <measure type="weight" unit="g"/>
+                                  <note>The manuscript could not be weighed due to its great size.</note>
                                 </extent>
-                                <foliation>The manuscript is foliated in pencil in the upper right
-                                    corner. One leaf each after <locus target="#141"/> and <locus
-                                        target="#142"/> has been skipped in the original foliation.
-                                    The sequence has been corrected to <locus target="#141a"/>,
-                                        <locus target="#141b"/>, <locus target="#142a"/>, <locus
-                                        target="#142b"/>.</foliation>
-                                <collation>
+                                <foliation>Pencil foliation in the upper right corner (1–214). One folio each after <locus target="#141"/> and <locus
+                                        target="#142"/> had been skipped in the original foliation.
+                                    The sequence has been corrected to <locus target="#141a #141b #142a #142b"/>.
+                                    An empty
+                                    folio between <locus target="#212"/> and <locus target="#213"/>, of which two thirds are cut off, has not been foliated.</foliation>
+                  <collation>
                                     <signatures>Decorated quire marks are written in red and black
                                         at the inner corners of the upper and lower margin of the
-                                        first and at the beginning the last folio of the quire
+                                        first folio and at the beginning the last folio of the quire
                                             <locus
                                             target="#4r #13v #14r #23v #24r #33v #34r #44r #56r #68r #78r #79r #88r #96r #104r #109r
                                             #119r #129r #139r #147r #157r #167r #175r #184r #194r #204r"
-                                        />. </signatures><!--see also e2-->
+                                        />. </signatures>)<!--see also e2-->
                                     <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">3</dim>
@@ -9055,32 +9058,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q5" n="4">
                                             <num value="4">፬</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="34r" to="43v"/> 3, stub after 8 8, stub
-                                            after 3 </item>
+                                            <locus from="34r" to="43v"/>
+                                            3, stub after 8
+                                            8, stub after 3 
+                                        </item>
                                         <item xml:id="q6" n="5">
                                             <num value="5">፭</num>
                                             <dim unit="leaf">12</dim>
-                                            <locus from="44r" to="55r"/> 4, stub after 8 9, stub
-                                            after 3 </item>
+                                            <locus from="44r" to="55r"/>
+                                            4, stub after 8
+                                            9, stub after 3 
+                                        </item>
                                         <item xml:id="q7" n="6">
                                             <num value="6">፮</num>
                                             <dim unit="leaf">12</dim>
-                                            <locus from="56r" to="67v"/> 3, stub after 9 10, stub
-                                            after 2 </item>
+                                            <locus from="56r" to="67v"/>
+                                            3, stub after 9
+                                            10, stub after 2 </item>
                                         <item xml:id="q8" n="7">
                                             <num value="7">፯</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="68r" to="77v"/> 4, stub after 6 7, stub
-                                            after 3 </item>
+                                            <locus from="68r" to="77v"/>
+                                            4, stub after 6
+                                            7, stub after 3 </item>
                                         <item xml:id="q9" n="8">
                                             <num value="8">፰</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="78r" to="87v"/> 3, stub after 9 8, stub
-                                            after 3 </item>
+                                            <locus from="78r" to="87v"/>
+                                            3, stub after 9
+                                            8, stub after 3 </item>
                                         <item xml:id="q10" n="9">
                                             <num value="9">፱</num>
                                             <dim unit="leaf">8</dim>
-                                            <locus from="88r" to="95r"/> 3, stub after 5 6, stub
+                                            <locus from="88r" to="95r"/>
+                                            3, stub after 5 6, stub
                                             after 2 </item>
                                         <item xml:id="q11" n="10">
                                             <num value="10">፲</num>
@@ -9090,7 +9101,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q12" n="11">
                                             <num value="11">፲፩</num>
                                             <dim unit="leaf">5</dim>
-                                            <locus from="104r" to="108v"/> 2, stub after 4 </item>
+                                            <locus from="104r" to="108v"/>
+                                            2, stub after 4
+                                        </item>
                                         <item xml:id="q13" n="12">
                                             <num value="12">፲፪</num>
                                             <dim unit="leaf">10</dim>
@@ -9104,25 +9117,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q15" n="14">
                                             <num value="14">፲፬</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="129r" to="138v"/> 3, stub after 7 8, stub
-                                            after 2 </item>
+                                            <locus from="129r" to="138v"/>
+                                            3, stub after 7
+                                            8, stub after 2 
+                                        </item>
                                         <item xml:id="q16" n="15">
                                             <num value="15">፲፭</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="139r" to="146v"/> 3, stub after 8 8, stub
-                                            after 3 <note><locus target="#141a"/> and <locus
+                                            <locus from="139r" to="146v"/>
+                                            3, stub after 8
+                                            8, stub after 3 
+                                            <note><locus target="#141a"/> and <locus
                                                   target="#142a"/> are not foliated.</note>
+                                            <!-- This information is to be given in foliation and removed here -->
                                         </item>
                                         <item xml:id="q17" n="16">
                                             <num value="16">፲፮</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="147r" to="156v"/> 3, stub after 7 8, stub
-                                            after 2 </item>
+                                            <locus from="147r" to="156v"/>
+                                            3, stub after 7
+                                            8, stub after 2 
+                                            </item>
                                         <item xml:id="q18" n="17">
                                             <num value="17">፲፯</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="157r" to="166v"/> 3, stub after 7 8, stub
-                                            after 2 </item>
+                                            <locus from="157r" to="166v"/>
+                                            3, stub after 7
+                                            8, stub after 2 
+                                        </item>
                                         <item xml:id="q19" n="18">
                                             <num value="18">፲፰</num>
                                             <dim unit="leaf">8</dim>
@@ -9131,7 +9153,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q20" n="19">
                                             <num value="19">፲፱</num>
                                             <dim unit="leaf">9</dim>
-                                            <locus from="175r" to="183v"/> 8, stub after 1 </item>
+                                            <locus from="175r" to="183v"/>
+                                            8, stub after 1 
+                                        </item>
                                         <item xml:id="q21" n="20">
                                             <num value="20">፳</num>
                                             <dim unit="leaf">10</dim>
@@ -9140,12 +9164,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <item xml:id="q22" n="21">
                                             <num value="21">፳፩</num>
                                             <dim unit="leaf">10</dim>
-                                            <locus from="194r" to="203v"/> 2, stub after 9 9, stub
-                                            after 2 </item>
+                                            <locus from="194r" to="203v"/>
+                                            2, stub after 9
+                                            9, stub after 2 
+                                        </item>
                                         <item xml:id="q23" n="22">
                                             <num value="22">፳፪</num>
                                             <dim unit="leaf">9</dim>
-                                            <locus from="204r" to="212v"/> 1, stub after 9 </item>
+                                            <locus from="204r" to="212v"/>
+                                            1, stub after 9 
+                                        </item>
                                         <item xml:id="q24" n="B">
                                             <dim unit="leaf">2</dim>
                                             <locus from="213r" to="214v"/>

@@ -10,17 +10,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="title1">አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ህርያቆስ፡ ዘሀገረ፡ ብህንሳ፡, አኰቴተ፡ ቍርባን፡ ዘእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡, አኰቴተ፡ ቍርባን፡
+                <!-- 
+                  <title xml:lang="gez" xml:id="title1">አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ህርያቆስ፡ ዘሀገረ፡ ብህንሳ፡, አኰቴተ፡ ቍርባን፡ ዘእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡, አኰቴተ፡ ቍርባን፡
                     ዘሐዋርያት፡, አኰቴተ፡ ቍርባን፡ ዘቅዱስ፡ ዲዮስቆሮስ፡, ተፈሥሒ፡ ኦዘንስእለኪ፡ ዳኅና፡</title>
                 <title xml:lang="gez" corresp="#title1" type="normalized">ʾAkkʷateta qʷǝrbān za-qǝddus Hǝryāqos za-hagara Bǝhnǝsā, ʾAkkʷateta qʷǝrbān za-ʾǝgziʾǝna ʾIyasus Krǝstos,
                     ʾAkkʷateta qʷǝrbān za-ḥawāryāt,  ʾAkkʷateta qʷǝrbān za-qǝddus Diyosqoros, Tafaśśǝḥi ʾo-za-nǝsǝʾǝlaki dāḫnā</title>
-                <title xml:lang="en" corresp="#title1">Anaphora by St Cyriacus of Behnesa, Anaphora of Our Lord Jesus Christ, Anaphora of the Apostles, Anaphora by St Dioscorus of
-                    Alexandria, "Rejoice you whom we beseech", New Testament readings</title>
+                -->
+                <title xml:lang="en" xml:id="title1">Anaphora by St Cyriacus of Behnesa, Anaphora of Our Lord Jesus Christ, Anaphora of the Apostles, Anaphora by St Dioscorus of
+                    Alexandria, ‘Rejoice you whom we beseech’, Excerpts from the New Testament</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -282,11 +285,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
-                                    <p>A large hole, presumably from the parchment making, is found on the lower margin of <locus target="#2 #3"/>.
+                                    <p>Large holes from the parchment making are found on <locus target="#2 #3"/>.
                                     Another hole is on <locus target="#75"/>.</p>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">84</measure>
+                                    <measure unit="leaf" quantity="84">84</measure>
+                                    <measure unit="quire" quantity="10">10</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>96</height>
                                         <width>80</width>
@@ -297,15 +301,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <height>93</height>
                                         <width>77</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#59r"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#59r"/>.</note>
                                 </extent>
                                 <foliation>Pencil foliation in the upper right corner carried out by the Bodleian Library
-                                    in January 2020.</foliation>
+                                    in January 2020 (1–84).</foliation>
                                 <collation>
-                                    <signatures><foreign xml:lang="gez">፪</foreign> in the upper left margin on
-                                    <locus target="#59r"/> at the beginning of <ref target="#q8"/>. No other quire marks.</signatures>
+                                    <signatures>
+                                        <!-- 
+                                             An undecorated quire mark is written in the upper inner margin of <locus target="#59r"/>. There are no other quire marks.
+                                        -->
+                                        <foreign xml:lang="gez">፪</foreign> in the upper left margin on
+                                    <locus target="#59r"/> at the beginning of <ref target="#q8"/>. No other quire marks.
+                                    </signatures>
                                     <list>
                                         <item xml:id="q1">
+                                            <!-- n="1" is missing (also below with progressive numbers) -->
                                             <dim unit="leaf">4</dim>
                                             <locus from="1r" to="4v"/>
                                         </item>
@@ -334,6 +344,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <locus from="49r" to="58v"/>
                                         </item>
                                         <item xml:id="q8">
+                                           <!--   <num value="2">፪</num>-->
                                             <dim unit="leaf">10</dim>
                                             <locus from="59r" to="68v"/>
                                         </item>
@@ -351,7 +362,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     The manuscript is in a poor state of preservation. The sewing has been repaired but the textblock is still unstable and the single quires are somewhat loose.
                                     The textile chemise has been crudely sewn to the boards
                                     and to the board attachments. The outer margin of the textblock has been damaged probably by rodents, with loss of text on <locus from="1r" to="4r"/> and <locus target="#29v"/>.
-                                    The lower margins of many leaves are slightly stained with dirt, e.g. on <locus from="4v" to="12r"/> and <locus target="#36r"/>.
+                                    The lower margins of many folios are slightly stained with dirt, e.g. on <locus from="4v" to="12r"/> and <locus target="#36r"/>.
                                     The parchment is wrinkled on <locus target="#17"/> and folded on <locus target="#34"/>.
                                     The text is occasionally barely legible due to faded ink, e.g. on <locus target="#4r #18r"/>.
                                 </condition>
@@ -513,7 +524,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                   <decoNote xml:id="b5">
                                     Chainstitch sewing on two sewing stations (one pair); Z-plied threads are used.
                                     The sewing starts from the first quire where between the pair of sewing stations there is one length of thread,
-                                    while in the rest of the quires there are two. To prevent the bifolia from detaching from the bookblock,
+                                    while in the rest of the quires there are two. To prevent the bifolios from detaching from the bookblock,
                                     they were sewn with thread loops passing through their inner margin, e.g. <locus from="44" to="58"/>.
                                     Unused sewing holes may indicate that the bookblock has been resewn or repaired more than once, e.g. <locus from="44" to="58"/>.
                                   </decoNote>
