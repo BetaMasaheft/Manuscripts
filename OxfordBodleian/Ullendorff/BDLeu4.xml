@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
     xml:id="BDLeu4"
@@ -13,6 +13,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <title>ʾArgānona wǝddāse</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
+                <editor key="EDS"/>
+                <editor key="MV"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -30,21 +33,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <repository ref="INS0312BDL"/>
                         <idno>Bodleian Ullendorff 4</idno>
                     </msIdentifier>
-                    
+
                     <msContents>
                         <summary/>
-                        
+
                         <!--<msItem xml:id="ms_i1">
-                      
+
                         </msItem>-->
-                        
+
                     </msContents>
-                    
+
                     <physDesc>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
                                     <material key="parchment"/>
+                                    <p>Some holes from parchment making repaired by sewing are present, e.g. on <locus target="#107 #138"/>.
+                                    Small holes from parchment making are present on <locus target="#2"/>.</p>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">154</measure>
@@ -59,13 +64,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#15r"/>.</note>
                                     <measure type="weight" unit="g">1774</measure>
-                                </extent> 
+                                </extent>
                                 <foliation>Foliated in pencil in the upper right corner.</foliation>
                                 <collation>
                                     <list>
                                         <item xml:id="q1" n="1">
                                             <dim unit="leaf">6</dim>
-                                            <locus from="1r" to="6v"/>  
+                                            <locus from="1r" to="6v"/>
                                             1, stub after 6
                                             2, stub after 6
                                         </item>
@@ -154,8 +159,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </item>
                                     </list>
                                 </collation>
+                                <condition key="deficient">
+                                  The codex is in precarious conservation conditions. The ink is smudged on <locus target="#108"/>. Creases, tears, stains (for example on <locus target="#150v #151r"/>),
+                                  and insects droppings are present. Humidity infiltrated from the top margin of <locus target="#1"/> has washed off the ink at the top of the text.
+                                  The leather cover shows abrasions, tears, and losses so that the corners of the wooden boards are exposed. The spine is torn.
+                                  The sewing is broken and thread lengths are lost. The headband is broken and lacks some fragments.
+                                  The tailband is missing.
+                                </condition>
                             </supportDesc>
-                           
+
                             <layoutDesc>
                                 <layout columns="2" writtenLines="17">
                                     <locus from="3ra" to="153vb"/>
@@ -173,37 +185,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
-                            
+
+
                         </objectDesc>
-                        
+
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-                           
+
                             </handNote>
                         </handDesc>
-                        
+
                        <!-- <decoDesc>
-                         
+
                         </decoDesc>-->
-                        
-                   <!--     <bindingDesc>
-                            <binding xml:id="binding">
-                                <decoNote xml:id="b1"></decoNote>
-                                <decoNote xml:id="b2" type="bindingMaterial">
-                           <material key="wood"/>
-                        </decoNote>
+
+                        <bindingDesc>
+                            <binding xml:id="binding" contemporary="true Ethiopian">
+                              <p>
+                                The binding belongs to the Ethiopian binding tradition and it is possibly contemporary with the main texts.</p>
+                              <decoNote xml:id="b1" type="bindingMaterial">
+                                The book is bound in <material key="wood">wooden</material> boards covered with dark brown blind-tooled <material
+                                key="leather">leather</material>. The inner sides of both boards are decorated with <material key="textile">textile</material> <term key="textileInlay">inlays</term>
+                                featuring a floral motif outlined in yellow, white and green on a blue background.
+                              </decoNote>
+                              <decoNote xml:id="b2" type="Boards">
+                                The boards are flush with the bookblock and present external shallow bevels.
+                              </decoNote>
+                              <decoNote xml:id="b3" type="Cover" color="dark brown">
+                                Full dark-brown leather cover.
+                                The turn-ins have been trimmed out and at the corners they form butt mitres.
+                                <term key="additionalLeatherPatch">Additional leather patches</term> fill the gap between the turn-ins.
+                                The cover shows a blind-tooled decoration, identical on both sides of the cover. The turn-ins and the edges are decorated as well.
+                                The decoration consists of five concentric frames surrounding a central rectangular panel featuring a Latin cross.
+                                Frames composed by the repetition of single tools, enclosed between <term key="tripleStraightLine">triple straight lines</term>,
+                                alternate with empty ones.
+                                Proceeding from the outer to the inner frame, the repeating decoration motifs are <term key="crissCross">criss-crosses</term>,
+                                <term key="wavyLine">wavy lines</term>, and <term key="straightStrapwork">straight strapwork</term> elements.
+                                The cross is formed by <term key="XForm">X-form</term> motifs between <term key="tripleStraightLine">triple straight lines</term>.
+                                At the ends of the arms of the cross there are <term key="corniForm">corniform</term> motifs and six <term key="doubleCircle">double circles</term>.
+                                Triple straight lines outline the shape of the cross, dividing the surrounding area in four panels in which are stamped four <term key="doubleCircle">double circles</term>
+                                <term key="doubleCircle">Double circles</term> are stamped at the intersections of the straight lines and at the corners of the empty frames as well.
+                                A <term key="singleStraightLine">single straight line</term> runs along the edges of the boards.
+                                Turn-ins are decorated with concentric frames formed by <term key="tripleStraightLine">triple straight lines</term>.
+                              </decoNote>
+                              <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                              <decoNote xml:id="b5">
+                                Chainstitch sewing on four sewing stations (two pairs); periodic fold pattern; Z-plied threads.
+                                Between each pair of sewing stations there are two lengths of thread.
+                              </decoNote>
                             </binding>
-                        </bindingDesc>-->
-                        
+                        </bindingDesc>
+
                     </physDesc>
-                    
+
                 <!--    <history>
                         <origin>
                             <origDate when="" evidence=""/>
                         </origin>
                         <provenance>  </provenance>
                     </history>-->
-                    
+
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -215,7 +256,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </recordHist>
                         </adminInfo>
                     </additional>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -247,6 +288,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-03-04">Created record</change>
+            <change who="EDS" when="2023-12-17">Added binding description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
