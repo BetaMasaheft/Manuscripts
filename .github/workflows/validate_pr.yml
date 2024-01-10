@@ -12,13 +12,13 @@ jobs:
     steps:
       # checkout code
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: project
           fetch-depth: 2
       # checkout schema as xmllint can't https 
       - name: Checkout schema repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: BetaMasaheft/Schema
           path: schema
@@ -30,26 +30,39 @@ jobs:
       - name: Check for changed source files
         id: changed
         run: |
-          echo "::set-output name=files::$( \
-            git diff --name-only --diff-filter=ACMRT \
+          {
+            echo "FILES=$(git diff --name-only --diff-filter=ACMRT \
             ${{ github.event.pull_request.base.sha }} \
-            ${{ github.sha }} -- ':./**/*.xml' ':!./**/transkribus*.xml' ':!./**/facsimile*.xml' ':!./**/edition.xml'  ':!./**/msDesc.xml' ':!./**/*text.xml' | xargs)"
+            ${{ github.sha }} \
+            -- ':./**/*.xml' ':!*/transkribus*.xml' ':!*/facsimile*.xml' \
+            ':!./**/edition.xml' ':!./**/msDesc.xml' ':!./**/*text.xml' \
+            ':!./**/taxonomy.xml' ':*.xml' ':!build.xml' ':!expath-pkg.xml' ':!repo.xml' | xargs)"     
+          } >> "$GITHUB_OUTPUT"
+      # If no xml files were modified ...
+      - name: No source files changed
+        if: ${{ steps.changed.outputs.FILES == '' }}
+        run: |
+          echo "All good"
+      # ... otherwise
+      - name: List modified documents
+        env:
+          FILES: ${{ steps.changed.outputs.FILES }}
+        if: ${{ steps.changed.outputs.FILES != '' }}  
+        run: |
+          echo "modified: $FILES"
       # Validate changed files against latest schema
       - name: Validate changed source files
-        if: ${{ steps.changed.outputs.files != '' }}
+        env:
+          FILES: ${{ steps.changed.outputs.FILES }}
+        if: ${{ steps.changed.outputs.FILES != '' }}
         run: |
           xmllint \
             --noout --xinclude --nowarning \
             --relaxng ../schema/tei-betamesaheft.rng \
-            ${{ steps.changed.outputs.files }} \
+            $FILES \
             2>&1 | \
             { grep -vE 'RNG|validates' || :; }
-      # If no xml files were modified
-      - name: No source files changed
-        if: ${{ steps.changed.outputs.files == '' }}
-        run: |
-          echo "All good"
-      # ensure branch conaints only well-formed xml files 
+      # ensure branch contains only well-formed xml files 
       - name: Ensure all XML files are well formed
         run: |
           xmllint --noout \
