@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Ṣoma dǝggwa, salām to Mary</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Ṣoma dǝggʷā, Salām laki dāgmit samāy</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
@@ -36,10 +36,207 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <idno>Juel-Jensen 11</idno>
                         </altIdentifier>
                     </msIdentifier>
+                    
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                    <p>Holes, from the parchment making process, are present in the leaves, e.g. <locus target="#77 #83 #84 #92"/>. Others have been repaired by sewing, e.g.
+                                        <locus target="#2 #9 #58 #60 #61 #72 #95"/>.</p>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf">96</measure>
+                                    <measure unit="leaf" type="blank"></measure>
+                                    <!--<locus target=""/>-->
+                                    <measure type="weight" unit="g">326</measure>
+                                    <!-- without māḫdar and modern notes placed inside taken out
+                                    <note>The codex together with the slip case weights 544 g</note> -->
+                                    <dimensions type="outer" unit="mm">
+                                        <height>147</height>
+                                        <width>101</width>
+                                        <depth>34</depth>
+                                    </dimensions>
+                                    <dimensions type="folio" unit="mm">
+                                        <height>143</height>
+                                        <width>98</width>
+                                    </dimensions>
+                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#24r"/>.</note>
+                                </extent>
+                                
+                                <collation>
+                                    <list>
+                                        <!--<item xml:id="q1">
+                                            <dim unit="leaf">2</dim>
+                                            <locus from="1r" to="96v"/>
+                                            these should probably belong to the binding.
+                                            EDS (10.02.2022): I am not sure wether these leaves can be considered as part of a quire
+                                            to me they seems to be single leaves and I would not put them in the bindingDesc....in the case they do belong to a quire,
+                                            they should be considered as the outer bifolium, with all the other quires nested inside. Does the present encoding rapresent this structure?
+                                            EDS (02.03.2022): Moved to bindingDesc
 
+                                        </item>
+                                        -->
+                                        <item xml:id="q1">
+                                            <dim unit="leaf">2</dim>
+                                            <locus from="2r" to="3v"/>
+                                        </item>
+                                        <item xml:id="q2">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="4r" to="13v"/>
+                                        </item>
+                                        <item xml:id="q3">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="14r" to="23v"/>
+                                        </item>
+                                        <item xml:id="q4">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="24r" to="33v"/>
+                                        </item>
+                                        <item xml:id="q5">
+                                            <dim unit="leaf">12</dim>
+                                            <locus from="34r" to="45v"/>
+                                        </item>
+                                        <item xml:id="q6">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="46r" to="55v"/>
+                                            3, stub after 7
+                                            8, stub after 2
+                                        </item>
+                                        <item xml:id="q7">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="56r" to="65v"/>
+                                        </item>
+                                        <item xml:id="q8">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="66r" to="75v"/>
+                                        </item>
+                                        <item xml:id="q9">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="76r" to="85v"/>
+                                        </item>
+                                        <item xml:id="q10">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="86r" to="93v"/>
+                                        </item>
+                                        <item xml:id="q11">
+                                            <dim unit="leaf">2</dim>
+                                            <locus from="94r" to="95v"/>
+                                        </item>
+                                    </list>
+                                </collation>
+                                <condition key="deficient">
+                                    The sewing is broken and the quires are loose.
+                                    The parchment has been damaged by humidity and some leaves are stained with water, e.g. <locus target="#94rv #95rv #96rv"/>.
+                                    The parchment is occasionally wrinkled, e.g. <locus target="#46"/>.
+                                    The margins of some leaves have been damaged probably by rodents, e.g. <locus from="40" to="42"/>.
+                                    Some lower outer corners are slightly stained with dirt, e.g. on <locus from="16v" to="21r"/>.
+                                </condition>
+                            </supportDesc>
+                            
+                            <layoutDesc>
+                                <layout columns="2" writtenLines="21 23">
+                                    <locus from="4ra" to="93vb"/>
+                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#24r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea">
+                                        <height>107</height>
+                                        <width>87</width>
+                                    </dimensions>
+                                    <dimensions type="margin" unit="mm" xml:id="margin">
+                                        <dim type="top">12</dim>
+                                        <dim type="bottom">23</dim>
+                                        <dim type="right">6</dim>
+                                        <dim type="left">7</dim>
+                                        <dim type="intercolumn">6</dim>
+                                    </dimensions>
+                                </layout>
+                                
+                                <layout columns="2" writtenLines="20">
+                                    <locus from="94ra" to="95rb"/>
+                                    <note corresp="#textarea2 #margin2">Data on margin dimensions taken from <locus target="#94r"/>.</note>
+                                    <!--text area dimensions missing!-->
+                                    <!-- <dimensions unit="mm" xml:id="textarea2">
+                                        <height></height>
+                                        <width></width>
+                                    </dimensions>-->
+                                    <dimensions type="margin" unit="mm" xml:id="margin2">
+                                        <dim type="top">11</dim>
+                                        <dim type="bottom">18</dim>
+                                        <dim type="right">14</dim>
+                                        <dim type="left">5</dim>
+                                        <dim type="intercolumn">4</dim>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                            
+                        </objectDesc>
+                        
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                
+                            </handNote>
+                        </handDesc>
+                        
+                        <decoDesc>
+                            <summary>Headbands appear to be contemporary with the making of the manuscript and to have been executed by the same hand.</summary>
+                            
+                            <decoNote type="ornamentation" xml:id="d1">
+                                <locus target="#4r"></locus>
+                                <desc>Frame with uneven lines filled with a pattern of thin strings knotted by loops at its centre.
+                                </desc>
+                            </decoNote>
+                            
+                            <decoNote type="ornamentation" xml:id="d2">
+                                <locus target="#19va #29rb #40ra #49va #64ra #74rb"></locus>
+                                <desc>Smaller bands, marking incipits, present small variations on the pattern found on <locus target="#4r"></locus>.
+                                </desc>
+                            </decoNote>
+                            
+                        </decoDesc>
+                        
+                        <bindingDesc>
+                            <binding contemporary="true Ethiopian" xml:id="binding">
+                                <decoNote xml:id="b1" type="bindingMaterial">
+                                    The manuscript is bound in <material key="wood">wooden</material> boards and covered with <material key="leather"/> on the spine.
+                                </decoNote>
+                                <decoNote xml:id="b2" type="Boards">
+                                    The boards are cut to the same size as the bookblock and have shallow external bevels. The grain runs vertically.
+                                    The external surface of the boards is polished, while the inner surface exhibits signs of the working tool.
+                                </decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                                <decoNote xml:id="b4">
+                                    The sewing is a chainstitch on four sewing stations, broken and repaired with a different kind of thread. Both threads are Z-plied.
+                                </decoNote>
+                                <decoNote xml:id="b5" type="Spine">
+                                    The small holes close to the head and tail of the quires probably indicate that quire tackets were originally present.
+                                    A sheet of parchment is folded around and sewn with the bookblock. <locus target="#1"/> and <locus target="#96"/> are the extensions
+                                    of this sort of spine lining. A piece of brown leather has been sewn over it as an additional protection.
+                                </decoNote>
+                                <decoNote xml:id="b6" type="SlipCase">
+                                    The original leather slip case is preserved. It is a one-piece, double-walled satchel where the back panel overlaps over the front.
+                                    The satchel is equipped with long flaps extending from the side panels and a main rounded flap extending from the back to the front
+                                    panel to cover the opening of the book compartment.
+                                    The hanging strap is formed by two strips of leather whose ends are overlapped and stitched together. The strap passes through two flaps
+                                    extending from the bottom panel and slides under a leather belt wrapped around all the sides that also keeps the main flap closed.
+                                </decoNote>
+                            </binding>
+                        </bindingDesc>
+                        
+                    </physDesc>
+                    
+                    <!--    <history>
+                        <origin>
+                            <origDate when="" evidence=""/>
+                        </origin>
+                        <provenance>  </provenance>
+                    </history>-->
+
+                    <msPart xml:id="p1">
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
                     <msContents>
                         <summary/>
-
                         <msItem xml:id="ms_i1">
                             <locus from="4ra" to="93vb"/>
                             <title type="complete" ref="LIT2361somade"/>
@@ -1217,7 +1414,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <locus from="84rb" to="84va"/>
                                     <hi rend="rubric">ሰላ፡</hi> በ<hi rend="rubric">፪፡</hi>
                                     ውእተ፡ ኣሚረ፡ አመ፡ ይገብር፡ እግዚእነ፡ ሆሣዕና፡ በአርያም፡ ተሐውከ፡ ሰማይ፡ 
-                                    ወተፈሥሑ፡ መላእክት፡ በሰማያት፡ እለኒ፡ ሀለዉ፡ ዲበ፡ ምድር፡ 
+                                    ወተፈሥሑ፡ መላእክት፡ በሰማያት፡ እለኒ፡ ሀለዉ፡ ዲበ፡ ምድር፡<pb n="84v"/><cb n="a"/> 
                                     ይብሉ፡ ሆሣዕና፡ በአርያም፡ አዕሩግ፡ ወሕፃናት፡ ይብሉ፡ ሆሣዕና፡ 
                                     ቡሩክ፡ ዘይመጽእ፡ ወተቀበልዎ፡ ሕዝብ፡ ብዙኃን፡ ቦአ፡ ሀገሮ፡ 
                                     በሰላም፡ ኢየሩሳለም፡ 
@@ -1442,214 +1639,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </msContents>
 
                     <physDesc>
-                        <objectDesc form="Codex">
-                            <supportDesc>
-                                <support>
-                                    <material key="parchment"/>
-                                    <p>Holes, from the parchment making process, are present in the leaves, e.g. <locus target="#77 #83 #84 #92"/>. Others have been repaired by sewing, e.g.
-                                    <locus target="#2 #9 #58 #60 #61 #72 #95"/>.</p>
-                                </support>
-                                <extent>
-                                    <measure unit="leaf">96</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
-                                    <measure type="weight" unit="g">326</measure>
-                                    <!-- without māḫdar and modern notes placed inside taken out
-                                    <note>The codex together with the slip case weights 544 g</note> -->
-                                    <dimensions type="outer" unit="mm">
-                                        <height>147</height>
-                                        <width>101</width>
-                                        <depth>34</depth>
-                                    </dimensions>
-                                    <dimensions type="folio" unit="mm">
-                                        <height>143</height>
-                                        <width>98</width>
-                                    </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#24r"/>.</note>
-                                </extent>
-
-                                <collation>
-                                    <list>
-                                        <!--<item xml:id="q1">
-                                            <dim unit="leaf">2</dim>
-                                            <locus from="1r" to="96v"/>
-                                            these should probably belong to the binding.
-                                            EDS (10.02.2022): I am not sure wether these leaves can be considered as part of a quire
-                                            to me they seems to be single leaves and I would not put them in the bindingDesc....in the case they do belong to a quire,
-                                            they should be considered as the outer bifolium, with all the other quires nested inside. Does the present encoding rapresent this structure?
-                                            EDS (02.03.2022): Moved to bindingDesc
-
-                                        </item>
-                                        -->
-                                        <item xml:id="q1">
-                                            <dim unit="leaf">2</dim>
-                                            <locus from="2r" to="3v"/>
-                                        </item>
-                                        <item xml:id="q2">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="4r" to="13v"/>
-                                        </item>
-                                        <item xml:id="q3">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="14r" to="23v"/>
-                                        </item>
-                                        <item xml:id="q4">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="24r" to="33v"/>
-                                        </item>
-                                        <item xml:id="q5">
-                                            <dim unit="leaf">12</dim>
-                                            <locus from="34r" to="45v"/>
-                                        </item>
-                                        <item xml:id="q6">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="46r" to="55v"/>
-                                            3, stub after 7
-                                            8, stub after 2
-                                        </item>
-                                        <item xml:id="q7">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="56r" to="65v"/>
-                                        </item>
-                                        <item xml:id="q8">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="66r" to="75v"/>
-                                        </item>
-                                        <item xml:id="q9">
-                                            <dim unit="leaf">10</dim>
-                                            <locus from="76r" to="85v"/>
-                                        </item>
-                                        <item xml:id="q10">
-                                            <dim unit="leaf">8</dim>
-                                            <locus from="86r" to="93v"/>
-                                        </item>
-                                        <item xml:id="q11">
-                                            <dim unit="leaf">2</dim>
-                                            <locus from="94r" to="95v"/>
-                                        </item>
-                                    </list>
-                                </collation>
-                                <condition key="deficient">
-                                    The sewing is broken and the quires are loose.
-                                    The parchment has been damaged by humidity and some leaves are stained with water, e.g. <locus target="#94rv #95rv #96rv"/>.
-                                    The parchment is occasionally wrinkled, e.g. <locus target="#46"/>.
-                                    The margins of some leaves have been damaged probably by rodents, e.g. <locus from="40" to="42"/>.
-                                    Some lower outer corners are slightly stained with dirt, e.g. on <locus from="16v" to="21r"/>.
-                                </condition>
-                            </supportDesc>
-
-                            <layoutDesc>
-                                <layout columns="2" writtenLines="21 23">
-                                    <locus from="4ra" to="93vb"/>
-                                    <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#24r"/>.</note>
-                                    <dimensions unit="mm" xml:id="textarea">
-                                        <height>107</height>
-                                        <width>87</width>
-                                    </dimensions>
-                                    <dimensions type="margin" unit="mm" xml:id="margin">
-                                        <dim type="top">12</dim>
-                                        <dim type="bottom">23</dim>
-                                        <dim type="right">6</dim>
-                                        <dim type="left">7</dim>
-                                        <dim type="intercolumn">6</dim>
-                                    </dimensions>
-                                </layout>
-
-                                <layout columns="2" writtenLines="20">
-                                    <locus from="94ra" to="95rb"/>
-                                    <note corresp="#textarea2 #margin2">Data on margin dimensions taken from <locus target="#94r"/>.</note>
-                                    <!--text area dimensions missing!-->
-                                   <!-- <dimensions unit="mm" xml:id="textarea2">
-                                        <height></height>
-                                        <width></width>
-                                    </dimensions>-->
-                                    <dimensions type="margin" unit="mm" xml:id="margin2">
-                                        <dim type="top">11</dim>
-                                        <dim type="bottom">18</dim>
-                                        <dim type="right">14</dim>
-                                        <dim type="left">5</dim>
-                                        <dim type="intercolumn">4</dim>
-                                    </dimensions>
-                                </layout>
-                            </layoutDesc>
-
-                        </objectDesc>
-
-                        <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic">
-
-                            </handNote>
-                        </handDesc>
-
-                        <decoDesc>
-                          <summary>Headbands appear to be contemporary with the making of the manuscript and to have been executed by the same hand.</summary>
-
-                          <decoNote type="ornamentation" xml:id="d1">
-                              <locus target="#4r"></locus>
-                              <desc>Frame with uneven lines filled with a pattern of thin strings knotted by loops at its centre.
-                               </desc>
-                          </decoNote>
-
-                          <decoNote type="ornamentation" xml:id="d2">
-                              <locus target="#19va #29rb #40ra #49va #64ra #74rb"></locus>
-                              <desc>Smaller bands, marking incipits, present small variations on the pattern found on <locus target="#4r"></locus>.
-                               </desc>
-                          </decoNote>
-
-                         </decoDesc>
-
-                       <bindingDesc>
-                         <binding contemporary="true Ethiopian" xml:id="binding">
-                             <decoNote xml:id="b1" type="bindingMaterial">
-                               The manuscript is bound in <material key="wood">wooden</material> boards and covered with <material key="leather"/> on the spine.
-                             </decoNote>
-                             <decoNote xml:id="b2" type="Boards">
-                               The boards are cut to the same size as the bookblock and have shallow external bevels. The grain runs vertically.
-                               The external surface of the boards is polished, while the inner surface exhibits signs of the working tool.
-                             </decoNote>
-                             <decoNote xml:id="b3" type="SewingStations">4</decoNote>
-                             <decoNote xml:id="b4">
-                               The sewing is a chainstitch on four sewing stations, broken and repaired with a different kind of thread. Both threads are Z-plied.
-                              </decoNote>
-                             <decoNote xml:id="b5" type="Spine">
-                               The small holes close to the head and tail of the quires probably indicate that quire tackets were originally present.
-                               A sheet of parchment is folded around and sewn with the bookblock. <locus target="#1"/> and <locus target="#96"/> are the extensions
-                               of this sort of spine lining. A piece of brown leather has been sewn over it as an additional protection.
-                             </decoNote>
-                             <decoNote xml:id="b6" type="SlipCase">
-                               The original leather slip case is preserved. It is a one-piece, double-walled satchel where the back panel overlaps over the front.
-                               The satchel is equipped with long flaps extending from the side panels and a main rounded flap extending from the back to the front
-                               panel to cover the opening of the book compartment.
-                               The hanging strap is formed by two strips of leather whose ends are overlapped and stitched together. The strap passes through two flaps
-                               extending from the bottom panel and slides under a leather belt wrapped around all the sides that also keeps the main flap closed.
-                             </decoNote>
-                         </binding>
-                     </bindingDesc>
-
+                        
                     </physDesc>
+                        
+                    <history>
+                        
+                    </history>
 
-                <!--    <history>
-                        <origin>
-                            <origDate when="" evidence=""/>
-                        </origin>
-                        <provenance>  </provenance>
-                    </history>-->
 
-                    <additional>
-                        <adminInfo>
-                            <recordHist>
-                                <source>
-                                  <!--  <listBibl type="secondary">
-                                        <bibl></bibl>
-                                    </listBibl>-->
-                                </source>
-                            </recordHist>
-                        </adminInfo>
-                    </additional>
 
-                <msPart xml:id="p1">
-                    <msIdentifier></msIdentifier>
-                </msPart>
+                    </msPart>  
                     
                     <msPart xml:id="p2">
                         <msIdentifier></msIdentifier>
@@ -1664,50 +1663,82 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <title type="complete"></title>
                                 <incipit xml:lang="gez">
                                     <locus target="#94ra"/>
-                                    
-                                    <hi rend="rubric">ዋዜማ፡ ዘኒቆዲሞስ፡</hi> በ<hi rend="rubric">፩</hi>፡ 
-                                    ወሀሎ፡ <hi rend="rubric">፩፡</hi> ብእሲ፡ እምፈረሳው
-                                    <hi rend="rubric">ያን፡ ዘስሙ፡ 
-                                        ኒቆዲሞስ፡ ዘ</hi>ሖረ፡ ኀቤሁ፡ ቀዲሙ፡ ሌሊተ፡ ወይቤሎ፡ 
-                                    ለኢየሱስ፡ ዕጓለ፡ አንበሳ፡ ሰከብከ፡ ወኖምከ፡ 
-                                    አንሥአኒ፡ 
-                                    በት<choice><orig>እ</orig><corr>ን</corr></choice><choice><orig>ዛ</orig><corr>ሣ</corr></choice>ዝከ<hi rend="rubric" rendition="#partialRubric">፨</hi>
-                                
-                                ሰላም፡ ለኪ፡ ዳግሚት፡ ሰማይ፡ ሰ፡ <hi rend="rubric">ለኪ</hi>፡ ሙፃዓ፡ ፀሐይ፡ ሰ፡ 
-                                    አንቀጸ፡ መድኃኒት፡ ሰ፡ ገነተ<supplied reason="subaudible">፡</supplied> 
-                                    ትፍሥሕት፡ ሰ፡ እመ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡ ፀ[ባ]ዖት፡ ሰ፡ ዘምስለ፡ ሰጊድ፡ ንኤምኃኪ፡ ለባርኮትነ፡ 
-                                ስፍሒ፡ እዴኪ። መንግሥተ፡ ንጉሥ፡ [] ባርኪ፡ ወኪያነኒ፡ እሞተ፡ ሙስና፡ 
-                                
+                                    ሰላም፡ ለኪ፡ ዳግሚት፡ ሰማይ፡ ሰ፡ <hi rend="rubric">ለኪ</hi>፡ ሙፃዓ፡ ፀሐይ፡ ሰ፡ 
+                                    አንቀጸ፡ መድኃኒት፡ ሰ፡ ሙዳየ፡ እፍረት፡ ሰ፡ ገነተ<supplied reason="subaudible">፡</supplied> 
+                                    ትፍሥሕት፡ <choice><orig>ሰ</orig><corr>እ</corr></choice>መ፡ እ<hi rend="ligature">ግዚ</hi>አብሔር፡
+                                    ፀ<add place="above">ባ</add>ዖት፡ ሰ፡ ዘምስለ፡ ሰጊድ፡ ንኤምኃኪ፡ ለባርኮትነ፡ 
+                                    ስፍሒ፡ እዴኪ። መንግሥተ፡ ንጉሥ፡ <space reason="rubrication" unit="chars" quantity="2"></space> ባርኪ፡ 
+                                        ወኪያነኒ፡ እሞተ፡ ሙስና፡
                                 </incipit>
                                 
                                 <explicit xml:lang="gez">
                                     <locus target="94va"/>
-                                    
-                                    <hi rend="rubric">ሰላ፡</hi> በ<hi rend="rubric">፪፡</hi>
-                                    ውእተ፡ ኣሚረ፡ አመ፡ ይገብር፡ እግዚእነ፡ ሆሣዕና፡ በአርያም፡ ተሐውከ፡ ሰማይ፡ 
-                                    ወተፈሥሑ፡ መላእክት፡ በሰማያት፡ እለኒ፡ ሀለዉ፡ ዲበ፡ ምድር፡ 
-                                    ይብሉ፡ ሆሣዕና፡ በአርያም፡ አዕሩግ፡ ወሕፃናት፡ ይብሉ፡ ሆሣዕና፡ 
-                                    ቡሩክ፡ ዘይመጽእ፡ ወተቀበልዎ፡ ሕዝብ፡ ብዙኃን፡ ቦአ፡ ሀገሮ፡ 
-                                    በሰላም፡ ኢየሩሳለም፡ 
-                                    በስብሐት<hi rend="rubric" rendition="#partialRubric">፨ ፨ ፨</hi>
-                                    
+                                    ሰ፡ በከመ፡ ልማ<add place="above">ድ</add>ኪ፡ በሊ፡ ኀበ፡ ወልድኪ፡ ከሃሊ፡ ኦርኅሩኅ፡ 
+                                    ኢተበቃሊ፡ ያጠፍኦኑ፡ ለስዕል፡ ሠዓሊ፡ ኪነተከ፡ ዘትካት፡ ሀሊ።
                                 </explicit>
                             </msItem>
                             
                             <msItem xml:id="ms_i2.2">
                                 <locus from="94va" to="95ra"/>
                                 <title type="complete"></title>
+                                <incipit xml:lang="gez">
+                                    <locus target="#94va"/>
+                                    ስብሐት፡ ለከ፡ ንንግር፡ ኵሎ፡ ስብሐቲከ፡ በአናቅጺሃ፡ ለጽዮን፡ ማኅደረ፡ ብዙኅ፡ ሰላም፡
+                                    ዘአንቃሕከነ፡ እምነ፡ ንዋም፡ ኢየሱስ፡ ወልደ፡ ማ<space unit="chars" quantity="3"></space>። 
+                                    ሰ፡ ላዕለ፡ ጻድቃን፡ ወኃጥአን፡ ብርሃነ፡ ጸጋ፡ ምውቅ፡ ዘታሠርቅ፡ ለነ፡ እምነ፡ ምስራቅ፡ ኢየሱስ፡ ፀሐየ፡ ጽድቅ።
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="94vb" to="95ra"/>
+                                    ሰ፡ አኰቴተ፡ ስብሐት፡ ወትረ፡ ለመንግሥትከ፡ ስቡሕ፡ ጊዜ፡ እምንዋ<pb n="95r"/><cb n="a"/>ምነ፡
+                                    ንነቅሕ፡ ወናቄርብ፡ ለከ፡ በቃለ፡ ክላህ፡ ወንፌኑ፡ ስብሐተ፡ በነግህ።
+                                </explicit>
                             </msItem>
                             
                             <msItem xml:id="ms_i2.3">
                                 <locus from="95ra" to="95rv"/>
                                 <title type="complete"></title>
+                                <incipit xml:lang="gez">
+                                    <locus target="#95ra"/>
+                                    ዘስላሤ፡ ስብሐት፡ ለክሙ፡ ስሉስ፡ ቅዱስ፡ ማዕምራነ፡ ክልኤ፡ አእምሮ፡ ለብሃን፡
+                                    ዓቢይ፡ ዘፈጠሮ፡ ቃልክሙ፡ በተናግሮ። ስብ፡ ሰዓተ፡ ሌሊት፡ ስላሤ፡ ዘወሰንክሙ፡
+                                    በጎህ፡ ወዘአ<unclear>ክ</unclear>በርክሙ፡ በጸዳል፡ ብሩህ፡ ፀሐየ፡ እምነ፡ ወርኅ።
+                                </incipit>
+                                <explicit xml:lang="gez">
+                                    <locus from="95ra" to="95rv"/>
+                                    ስ፡ ከመ፡ ኀብረ፡ ሰደ፡ ሥጋየ፡ አመ፡ በኃጢአት፡<pb n="95r"/><cb n="b"/> <unclear>ቄ</unclear>ሐ፡ ኀዘን፡
+                                    ብየ፡ <add place="above">አምጣነ፡</add> በዝሐ፡ ሥላሴ፡ ዘዮም፡ ወዘአሜሃ፡ በጽባሕ፡ ሀቡኒ፡ 
+                                    ፍሥሐ<hi rend="rubric" rendition="#partialRubric">።።።።</hi> ስብሐት፡ በል፡
+                                </explicit>
                             </msItem>
 
                         </msItem>
                         </msContents>
                         
+                        <physDesc>
+                            
+                        </physDesc>
+                        
+                        <history>
+                            
+                        </history>
+                        
+                        <additional>
+                            <adminInfo>
+                                <recordHist>
+                                    <source>
+                                        <!--  <listBibl type="secondary">
+                                        <bibl></bibl>
+                                    </listBibl>-->
+                                    </source>
+                                </recordHist>
+                            </adminInfo>
+                        </additional>
+                        
+                        
+                        
                     </msPart>   
+                    
+                    
                     
                 </msDesc>
             </sourceDesc>
