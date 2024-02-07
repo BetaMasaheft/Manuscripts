@@ -4,13 +4,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">EMML 651</title>
+            <title xml:id="t1">EMML 651 (UNESCO Collection 1, Patriarch's Library 9)</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library. Digitized also by EMIP.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202487">https://w3id.org/vhmml/readingRoom/view/202487.</ref>
             </p>
             <p>Fol. 21b-22a, 49b-50a, 105b-106a and 106b-107a filmed twice</p>
@@ -22,21 +23,63 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 651</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2754/" n="149">EMML 651</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 651</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-9</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 9</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2754</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="1r" to="48v"/>
+                     <title type="complete" ref="LIT2358Sirach"/>
+                     <textLang mainLang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="50r" to="88r"/>
+                     <title type="complete" ref="LIT1688Job"/>
+                     <textLang mainLang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="88r" to="126v"/>
+                     <title type="complete" ref="LIT2195Prover"/>
+                     <textLang mainLang="gez"/>
+                     <msItem xml:id="ms_i3.1">
+                        <locus from="88r" to="112v"/>
+                        <title>Part I <foreign xml:lang="gez">መጽሐፈ፡ ምሳሌ፡</foreign></title>
+                     </msItem>
+                     <msItem xml:id="ms_i3.2">
+                        <locus from="112v" to="126v"/>
+                        <title>Part II, <foreign xml:lang="gez">መጽሐፈ፡ ተግሣጽ፡</foreign></title>
+                     </msItem>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="126v" to="148v"/>
+                     <title type="complete" ref="LIT2516Wisdom"/>
+                     <textLang mainLang="gez"/>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,11 +88,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 145+1</measure>
-                           <dimensions>
-                              <dim>24.5 x 18.5 cm</dim>
+                           <measure unit="leaf">145+1</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>245</height>
+                              <width>185</width>
                            </dimensions>
-                        </extent>
+                        </extent>                        
                         <foliation/>
                         <condition key="good"/>
                      </supportDesc>
@@ -89,11 +134,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-15">Created EMIP 2754</change>
+         <change when="2023-01-11" who="ES">merged EMML651 and EMIP02754</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -102,6 +152,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML651" passive="EMIP02754"></relation></listRelation>
       </body>
    </text>
 </TEI>

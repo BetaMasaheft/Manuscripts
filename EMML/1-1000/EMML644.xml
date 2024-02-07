@@ -6,14 +6,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 644</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+                                provided by Hill Museum &amp; Manuscript Library. Digitized also by EMIP.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202481">https://w3id.org/vhmml/readingRoom/view/202481.</ref>
             </p>
-            <p>Fol. 13b-14a filmed twice</p>
+            <p>HMML: Fol. 13b-14a filmed twice. EMIP: Folios before image 1 and after image 140 were not shot</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -22,21 +23,41 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 644</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2771/" n="143">EMML 644</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 644</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-26</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 26</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2771</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="1r" to="140v"/>
+                     <title type="complete" ref="LIT2382Taamme"/>
+                     <note>68 Miracles of Jesus</note>
+                     <textLang mainLang="gez"></textLang>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,13 +66,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 134+3</measure>
-                           <dimensions>
-                              <dim>26.5 x 19.5 cm</dim>
+                           <measure unit="leaf">ii + 140</measure>
+                           <measure unit="quire"></measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>265</height>
+                              <width>200</width>
+                              <depth/>
                            </dimensions>
                         </extent>
                         <foliation/>
-                        <condition key="good">Stamp of the Patrarchate Library, ff. 1a, 24a, 29a, 37a, 70a, 73a, 77a, 80a, 114a, 115a, 132b, and 134b.</condition>
+                        <condition key="good"></condition>
                      </supportDesc>
                   </objectDesc>
                   <decoDesc>
@@ -59,6 +83,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <desc>Ornamental designs, ff. 1a and 10a.</desc>
                      </decoNote>
                   </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus target="#138r"/>
+                           <desc type="RecordTransaction">
+                              <date calendar="ethiopian" when-custom="1953">195[3]
+                                 EC</date>, the book was sold to the Patriarchate</desc>
+                        </item>
+                        <item xml:id="e1"><desc>Stamp of the Patrarchate Library, ff. 1a, 24a, 29a, 37a, 70a, 73a, 77a, 80a, 114a, 115a, 132b, and 134b.</desc></item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                     <binding xml:id="binding" contemporary="true">
+                        <decoNote xml:id="b1"/>
+                        
+                     </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
@@ -94,11 +135,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-07-23">Created EMIP02771</change>
+         <change when="2023-04-24" who="ES">merged EMML644  and EMIP02771</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -106,7 +153,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <ab/><listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML644" passive="EMIP02771"></relation></listRelation>
       </body>
    </text>
 </TEI>

@@ -4,34 +4,123 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">
-		EMML677
-	</title>
+            <title xml:id="t1">EMML 677</title>
+            <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
+            <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
+         <editionStmt>
+            <p>The initial version of this file was created from data kindly
+               provided by Hill Museum &amp; Manuscript Library. Digitized also by EMIP</p>
+            <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202511">https://w3id.org/vhmml/readingRoom/view/202511.</ref>
+            </p>
+            <p>EMIP: Folios before image 1 and after image 228 were not shot</p>
+         </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine
+               multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>
-                                            This file is licensed under the Creative Commons
-                                            Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                  Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository/>
-                  
-                  <collection>EMML</collection>
-                  <idno>EMML 677</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2774/" n="230">EMML 677</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 677</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-29</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 29</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2774</idno>
+                  </altIdentifier>
                </msIdentifier>
+               <msContents>
+                  <summary></summary>
+                  <msItem xml:id="ms_i1">
+                     <locus from="1r" to="226r"/>
+                     <title type="complete" ref="LIT2317Senodo"/>
+                     <textLang mainLang="gez">Gǝʿǝz</textLang>
+                     <colophon xml:id="coloph1">
+                        <locus target="#226r"/> Colophon with date, mention of <persName
+                           ref="PRS5226haylase">Haile Selassie</persName>, <persName
+                              ref="PRS2533Baselyos">Basiliyos</persName>, scribe's name, etc.
+                     </colophon>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                        </support>
+                        <extent>
+                           <measure unit="leaf">228</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>320</height>
+                              <width>230</width>
+                              <depth/>
+                           </dimensions>
+                        </extent>
+                        <foliation/>
+                        <condition key="good"></condition>
+                     </supportDesc>
+                  </objectDesc>
+                  <decoDesc>
+                     <decoNote xml:id="d1">
+                        <desc>Ornamental design, f. 5a.</desc>
+                     </decoNote>
+                  </decoDesc>
+                  
+                  <bindingDesc>
+                     <binding xml:id="binding" contemporary="true">
+                        <decoNote xml:id="b1"/>
+                     </binding>
+                  </bindingDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate when="1962" calendar="ethiopian" when-custom="1956" evidence="internal-date">1956 EC, recorded in
+                        the colophon <ref target="#coloph1"/></origDate>
+                  </origin>
+                  <provenance>In Patriarchate Library when filmed.</provenance>
+               </history>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
+                                 <ptr target="bm:EMML2"/>
+                              </bibl>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
+         <projectDesc>
+            <p>Encoded according to TEI P5 Guidelines.</p>
+         </projectDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
@@ -39,15 +128,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2016-11-17">Created XML record from Ethio authority google spreadsheet</change>
+         <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
+            project.</change>
+         <change who="RL" when="2021-07-28">Created EMIP02774</change>
+         <change when="2023-04-24" who="ES">merged EMML677  and EMIP02774</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <graphic url="https://w3id.org/vhmml/readingRoom/view/202511"/>
+   </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <ab/><listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML677" passive="EMIP02774"></relation></listRelation>
       </body>
    </text>
 </TEI>

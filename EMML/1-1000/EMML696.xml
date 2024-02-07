@@ -5,15 +5,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">EMML 696</title>
-            <editor role="generalEditor" key="AB"/>
+            <editor role="generalEditor" key="AB"/>            
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library. Digitized also by EMIP</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202530">https://w3id.org/vhmml/readingRoom/view/202530.</ref>
             </p>
-            <p>Fol. 3b-4a, 16b-17a, and 100b filmed twice</p>
+            <p>EMML: Fol. 3b-4a, 16b-17a, and 100b filmed twice. EMIP: Folios after image 129 were not shot</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -22,21 +22,38 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 696</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2777/" n="132">EMML 696</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 696</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-32</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 32</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2777</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary></summary>
+                  <msItem xml:id="ms_i1">
+                     <title>Zǝmmare Chants, ዝማሬ፡</title>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,13 +62,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 129+1</measure>
-                           <dimensions>
-                              <dim>23.5 x 18 cm</dim>
+                           <measure unit="leaf">i + 130</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>235</height>
+                              <width>180</width>
+                              <depth/>
                            </dimensions>
                         </extent>
                         <foliation/>
-                        <condition key="good">F. 1a: Discarded leaf of chant used as a guard leaf.</condition>
+                        <condition key="good"></condition>
                      </supportDesc>
                   </objectDesc>
                   <handDesc>
@@ -64,6 +83,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <desc>Ornamental designs, ff. 3a, 30b, 44b, and 89a.</desc>
                      </decoNote>
                   </decoDesc>
+                  <additions><list><item xml:id="a1"><desc>F. 1a: Discarded leaf of chant used as a guard leaf.</desc></item></list></additions>
                </physDesc>
                <history>
                   <origin>
@@ -103,6 +123,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="PL" when="2018-01-18">Created
+            XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2023-04-24" who="ES">merged EMML696  and EMIP02777</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -110,7 +133,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
-         <ab/>
+         <ab/><listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML696" passive="EMIP02777"></relation></listRelation>
       </body>
    </text>
 </TEI>
