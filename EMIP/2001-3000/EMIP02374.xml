@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02374">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 339</title>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -32,8 +34,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msContents>
                   <summary>General Epistles, F<locus target="#1r"/>-16v: 1 Peter. F<locus target="#16v"/>-18r: 2 Peter.  Several folios are missing between f<locus target="#12"/> and 13, including most of 1 John. 18rv: 2 John. F<locus target="#18v"/>-19v: 3 John. F<locus target="#19v"/>-25v: James: l18-e19th. F<locus target="#25v"/>-27r: Jude. Ff. i rv: pen trials, including the copying of a section from 1 Peter. The manuscript has been foliated with stamped, blue numbers. <locus target="#27v"/>: alphebet exercises.</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                    <locus from="1r" to="27r" facs="002"/>
+                    <title type="complete" ref="LIT3506CatholicEpis"/>
+                    <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                      <msItem xml:id="ms_i1.1">
+                        <locus from="1r" to="1v" facs="002"/>
+                        <locus from="11r" to="16v" facs="012"/>
+                        <title type="complete" ref="LIT3507Epistle"/>
+                      </msItem>
+                      <msItem xml:id="ms_i1.2">
+                        <locus from="16v" facs="018"/>
+                        <locus from="2r" to="5v" facs="003"/>
+                        <title type="complete" ref="LIT3508Epistle"/>
+                      </msItem>
+                      <msItem xml:id="ms_i1.3">
+                        <locus from="5v" to="10v" facs="007"/>
+                        <locus from="17r" to="18r" facs="018"/>
+                        <title type="complete" ref="LIT3509Epistle"/>
+                      </msItem>
+                      <msItem xml:id="ms_i1.4">
+                        <locus from="18r" to="18v" facs="019"/>
+                        <title type="complete" ref="LIT3510Epistle"/>
+                      </msItem>
+                      <msItem xml:id="ms_i1.5">
+                        <locus from="18v" to="19v" facs="020"/>
+                        <title type="complete" ref="LIT3511Epistle"/>
+                      </msItem>
+                      <msItem xml:id="ms_i1.6">
+                        <locus from="19v" to="25v" facs="021"/>
+                        <title type="complete" ref="LIT3512Epistle"/>
+                      </msItem>
+                      <msItem xml:id="ms_i1.7">
+                        <locus from="25v" to="27r" facs="027"/>
+                        <title type="complete" ref="LIT3513Epistle"/>
+                      </msItem>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -42,19 +77,96 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">i + 27</measure>
+                           <measure unit="quire">Protection sheet + 4</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>192</height>
+                              <width>150</width>
+                              <depth>32</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–3 balanced; protection sheet and quire 4 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#i" facs="001"></locus>
+                              <note>A folium stub appears before <locus target="#i" facs="001"/>.</note>
+                              Protection Sheet:
+                              1, stub before 1
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="002"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="010"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="018"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">3</dim>
+                              <locus from="25" to="27" facs="026"></locus>
+                              <note><locus target="#25" facs="026"/> has broken from the quire. It is possible that f. 25 was part of a sheet with a now lost f. 28. It is also possible that there was a folium stub attached to f. 25 that is now lost.</note>
+                              Quire 4:
+                              1 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">22</dim>
+                           <dim type="bottom">39-41</dim>
+                           <dim type="right">15-18</dim>
+                           <dim type="left">9</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="21 22"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                    <decoNote xml:id="d1" type="miniature">
+                      <locus target="#ir #iv" facs="001 002"/>
+                      <desc>Croses</desc>
+                    </decoNote>
+                    <decoNote type="frame" xml:id="d2">
+                      Decorative designs:
+                      <locus target="#16v #18r #19v #25v" facs="018 019 020 027"/>, multiple full stops;
+                      <locus target="#27r" facs="028"/>, multiple full stops and lines of alternating red and black dots</decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e1"><desc>The manuscript has been foliated with stamped, blue numbers. </desc></item>
+                      <item xml:id="e2"><desc>The manuscript has been rebound. Quires 1 and 2 have been bound in the wrong order. Folio 2 belongs at the end of the first quire in the original binding, which is currently the second quire as the codex is now bound (see quire map for a reconstruction of the original form of the codex).</desc></item>
+                      <item xml:id="e3"><desc><locus target="#ir #iv" facs="001 002"/> pen trials, including the copying of a section from 1 Peter.</desc></item>
+                      <item xml:id="e4"><desc><locus target="#27v" facs="029"/> alphabet exercises.</desc></item>
+                      <item xml:id="e5"><desc>
+                        Scribal intervention:
+                        words of text are written interlinearly <locus target="#7v #12v #13r #14v #16r" facs="009 014 016 017"/>, etc.;
+                        text has been removed <locus target="#1v #9v #10r #16r #17v" facs="003 011 017 019"/>, etc.</desc></item>
+                    </list></additions>
+
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood, rebound in some disorder, both covers have broken and been repaired.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1800">l18-e19th</origDate>
+                     <origDate notBefore="1750" notAfter="1850">Late-eighteenth/early-nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +183,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2021-01-21" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-03-11" who="RL">Added ms item 1, sub items 1.1-1.7, decorations d1, d2, additions e1-25</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

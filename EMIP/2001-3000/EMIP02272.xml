@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02272">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 273</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2272/">Weiner Codex 273</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-17r: Bandlet of Righteousness, Lǝfafä Ṣǝdǝq, ልፋፈ፡ ጽድቅ፡. Bandlet, EurBinde. Notes.  <locus target="#6r"/> (and passim) mentions the owner, ኃይለ ሚካኤል. Miniature book. </summary>
+                  <summary></summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="34r" facs="003"/>
+                  <title type="complete" ref="LIT1758Lefafa"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
                   </msItem>
-               </msContents>
+                  </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +46,79 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 35 panels</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>50</height>
+                              <width>39</width>
+                              <depth>21</depth>
                            </dimensions>
                         </extent>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">4</dim>
+                           <dim type="bottom">8</dim>
+                           <dim type="right">4</dim>
+                           <dim type="left">4</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="12"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">ሚካኤል፡</foreign>
+                  <foreign xml:lang="gez">ገብርኤል፡</foreign>
+                  </seg>
+                  <desc>The words Mary, Michael, and Gabriel are rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#34v" facs="037"/><desc>An ornate <ref type ="authFile" corresp="AT1071Cross"/> in red and black ink</desc></decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto) #18r #18v #35r #35v" facs="001 020 021 037 038"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="e2">
+                    <desc>
+                    <locus target="#iv(erso) #iir(ecto) #iiv(erso)" facs="002 003"/>
+                    faint, illegible text
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <desc type="OwnershipNote">
+                    <locus target="#6r" facs="008"> f. 6r (and passim)</locus>
+                    mentions the owner Ḫaylä Mikaʾel (<foreign xml:lang="gez">ኃይለ፡ ሚካኤል፡</foreign>)
+                    </desc>
+                    </item>
+                    <item xml:id="e3">
+                    <desc>
+                      erasure markings are visible (<locus target="#15r #22v" facs="017 025"/>)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Accordion-fold codex attached to rough-hewn boards of the traditional wood, front and back covers are broken, two strips of parchment.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="wood"></material>
+                        <material key="parchment"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +137,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-12-16" who="JS">Added ms dims, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2021-01-20" who="ABe">Added ms_1, mini 1, a1, and e1-3</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

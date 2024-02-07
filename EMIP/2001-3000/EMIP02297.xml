@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02297">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 291</title>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,9 +33,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </msIdentifier>
                <msContents>
                   <summary>Asmat prayer for protection from evil based on Luke 8:43ff, the story of the healing of the woman with the hemorrhage who touched the hem of Jesus’ garment.Amulet accordion fold book, prepared for the tourist industry.</summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                <msItem xml:id="ms_i1">
+                  <locus from="1r1" to="1r48" facs="001">First side of manuscript lines 1-48</locus>
+                  <title type="complete" ref="LIT5888AsmatPrayer"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -42,19 +46,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>78</height>
+                              <width>77</width>
+                              <depth>26</depth>
                            </dimensions>
                         </extent>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout columns="1" writtenLines="48"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                    <handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ኢየሱስ፡</foreign></seg></handNote>
+                  </handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#1r" facs="001"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#1r" facs="002"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with two figures</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d3"><locus target="#1r" facs="003"/><desc><ref type="authFile" corresp="AT1082Angel"/></desc></decoNote>
+                    <decoNote type="miniature" xml:id="d4"><locus target="#1r" facs="004"/><desc><ref type="authFile" corresp="AT1082Angel"/> seated on a cloud</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d5"><locus target="#1r" facs="005"/><desc><ref type="authFile" corresp ="AT1084JesusChrist"/> before four figures, two of which are shown in profile. Perhaps the Resurrection of Jesus Christ, raising Adam and Eve from the dead?</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d6"><locus target="#1r" facs="006"/><desc><ref type="authFile" corresp="AT1005Crucifixion"/> with two figures shown in profile</desc></decoNote>
+                  </decoDesc>
+                  <additions>
+                    <list>
+                      <item xml:id="e1">
+                        <desc>This is an accordion-fold codex oriented as a wall hanging and prepared for the tourist industry.
+                          A braided rope is bound into the top cover. This rope can be used both to hold the codex closed as well as to hang the codex</desc>
+                      </item>
+                    </list>
+                  </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Accordion-fold codex attached to covers covered with tooled leather, two strips of parchment.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="leather"></material>
+                        <material key="parchment"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>late-twentieth century</origDate>
+                     <origDate notBefore="1950" notAfter="1999">Late-twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +105,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2020-12-29" who="JS">Added ms dims, columns/lines, binding desc, dating info.</change>
+         <change when="2020-03-01" who="RL">Added ms i1, d1-d6, handnote and addition e1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

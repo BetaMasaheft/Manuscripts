@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02199">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 245</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
+            <editor key="RL"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,10 +33,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2199/">Weiner Codex 245</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/> and 27r mention the owner Walda Hana and the scribe Gebre Maryam. F. i r: Prayer of supplication, incomplete, written in pen by an untrained hand. Ff. ii rv: Prayer to Jesus Christ, incomplete at the beginning. F<locus target="#1r"/>-27r: Prayer of Our Lady Mary at Golgotha, Säne Golǝgota, ጸሎተ፡ እግዝእትነ፡ ማርያም፡ ዘሰኔ፡ ጎልጎታ፡. F<locus target="#27v"/>-45v: Image of Mary, Mälk‘a Maryam, መልክአ፡ ማርያም፡, Répertoire 220; MG 735ff.; Incipit: ሰላም ሰላም ለዝክረ ስምኪ ሐዋዝ። F<locus target="#45v"/>-62r: Image of Jesus Christ, Mälk‘a Iyyäsus, መልክአ፡  ኢየሱስ፡. Répertoire 123. Illuminations painted recently over text. </summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                  <summary>Prayer to Jesus Christ, Prayer of Our Lady Mary at Golgotha, Image of Mary, Image of Jesus Christ</summary>
+                <msItem xml:id="ms_i1">
+                  <locus from="1r" to="27r" facs="003"/>
+                  <title type="complete" ref="LIT2246salotz"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                </msItem>
+
+                <msItem xml:id="ms_i2">
+                  <locus from="27v" to="45v" facs="030"/>
+                  <title type="complete" ref="LIT2891RepCh172"/>
+                  <incipit xml:lang="gez">ሰላም፡ ሰላም፡ ለዝክረ፡ ስምኪ፡ ሐዋዝ።</incipit>
+                </msItem>
+
+                <msItem xml:id="ms_i3">
+                  <locus from="45v" to="62r" facs="048"/>
+                  <title type="complete" ref="LIT2839RepCh123"/>
+                  <incipit xml:lang="gez">ሰላም፡ ለዝክረ፡ ስምከ፡ ሰ<supplied reason="omitted">ላ</supplied>መ፡ መሐላ፡ ዘኢይኄሱ።</incipit>
+                </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -42,19 +59,139 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 62</measure>
+                           <measure unit="quire">Protection sheet + 7</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>96</height>
+                              <width>76</width>
+                              <depth>29</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–7 balanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="011"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="019"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="25" to="34" facs="027"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="35" to="44" facs="037"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="45" to="52" facs="047"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">10</dim>
+                              <locus from="53" to="62" facs="055"></locus>
+                              Quire 7
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">5-9</dim>
+                           <dim type="bottom">18</dim>
+                           <dim type="right">5-8</dim>
+                           <dim type="left">3-5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="13"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  <foreign xml:lang="gez">ኢየሱስ፡</foreign>
+                  </seg>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#iv(erso)" facs="002"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with two <term key="angel"/>s. This miniature is painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#62v" facs="065"/><desc><ref type="authFile" corresp="AT1066DavidHarp"/> with an <term key="angel"/> behind him</desc></decoNote>
+                  <decoNote type="frame" xml:id="d3">
+                  Decorative designs:
+                  <locus target="#1r #27v" facs="003 030"/> ornamental band;
+                  <locus target="#iiv(erso) #62r" facs="003 064"/> line of full stops;
+                  <locus target="#27r #45v" facs="029 048"/> lines of alternating red and black dots
+                  </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#ir(ecto) #iiv(erso)" facs="001 003"/>
+                    Prayer of supplication, incomplete, written in pen by an untrained hand
+                    </desc>
+                    </item>
+                    <item xml:id="a2">
+                    <desc>
+                    <locus target="#iir(ecto #iiv(erso)" facs="002 003"/>
+                    Prayer to Jesus Christ, incomplete at the beginning
+                    </desc>
+                    </item>
+                    <item xml:id="a3">
+                    <desc type="OwnershipNote">
+                    <locus target="#1r" facs="003"> f. 1r and passim</locus>
+                    mention the owner Gäbrä Ḥäna (<foreign xml:lang="gez">ገብረ፡ ሐና፡</foreign>) and the scribe Gäbrä Maryam (<foreign xml:lang="gez">ገብረ፡ ማርያም፡</foreign>)
+                    </desc>
+                    </item>
+                    <item xml:id="a4">
+                    <desc>
+                    <locus target="#27r" facs="029"/>
+                    owner’s name has been erased
+                    </desc>
+                    </item>
+                    <item xml:id="e1">
+                    <desc>
+                      words of text are written interlinearly (<locus target="#8r #12v #13r #14v #15v" facs="010 015 017 018"/>, etc.);
+                      erasure markings are visible (<locus target="#3r #8r #27r #40v #43v" facs="005 010 029 043 046"/>, etc.);
+                      text has been removed (<locus target="#25v #27r" facs="028 029"/>)
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to boards covered with tooled leather.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>20th</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +208,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+          <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+          <change when="2020-12-09" who="JS">Added ms dimensions, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+          <change when="2021-01-19" who="ABe">Added ms_1-3, minis 1-2, a1-4, and e1</change>
+          <change when="2021-01-25" who="RL">Replaced square brackets with @supplied code in ms_i3 incipit</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

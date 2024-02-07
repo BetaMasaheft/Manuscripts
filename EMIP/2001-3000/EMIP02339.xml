@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02339">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 307</title>
+            <editor key="JS"></editor>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,9 +32,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2339/">Weiner Codex 307</idno>
                </msIdentifier>
                <msContents>
-                  <summary>Ff. i v-iii r: excerpt On the Faith of the Orthodox Church, in Amharic. F<locus target="#1r"/>-43r: On the Passion of the Cross, Ḥǝmamatä Mäsqäl,  በእንተ፡ ሕማማተ፡ መስቀል፡, in Amharic. <locus target="#43r"/> mentions the owner, ወልደ ጊዮርጊስ. <locus target="#44r"/>. has a note in the Tigreñña language.</summary>
+                  <summary></summary>
                   <msItem xml:id="ms_i1">
-                     <textLang>Amharic</textLang>
+                    <locus from="1r" to="43r" facs="004"/>
+                    <textLang mainLang="am" otherLangs="gez">Amharic commentary on Gǝ'ǝz text</textLang>
+                    <title type="complete" ref="LIT6376Suffering"/>
                   </msItem>
                </msContents>
                <physDesc>
@@ -42,19 +46,111 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">iii + 44</measure>
+                           <measure unit="quire">Protection quire + 6</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>180</height>
+                              <width>135</width>
+                              <depth>23</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection quire and quires 1 and 4–5 balanced; quires 2–3 and 6 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">4</dim>
+                              <locus from="i" to="iv" facs="001"></locus>
+                              Protection Quire
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">6</dim>
+                              <locus from="1" to="6" facs="005"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">5</dim>
+                              <locus from="7" to="11" facs="011"></locus>
+                              <note>A folium stub appears between <locus target="#6 #7" facs="011"/>.</note>
+                              Quire 2:
+                              5, stub before 1
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">7</dim>
+                              <locus from="12" to="18" facs="016"></locus>
+                              <note>A folium stub appears between <locus target="#11 #12" facs="016"/>.</note>
+                              Quire 3:
+                              7, stub before 1
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="19" to="26" facs="023"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="27" to="34" facs="031"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="35" to="44" facs="039"></locus>
+                              <note>A sheet of parchment is stitched between <locus target="#41 #44" facs="048"/>.</note>
+                              Quire 6:
+                              8 added
+                              9 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">10-18</dim>
+                           <dim type="bottom">27-31</dim>
+                           <dim type="right">10-12</dim>
+                           <dim type="left">5</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="20"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ማርያም፡</foreign><foreign xml:lang="gez">ኢየሱስ፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#ir" facs="001"/><desc><ref type="authFile" corresp="AT1035HolyMan"/>,<persName ref="PRS4585Georgeo"/> and the <term key="dragon"/>, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#iiiv" facs="004"/><desc><ref type="authFile" corresp="AT1031VirginAndChild"/> with two <term key="angel"/>, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d3"><locus target="#24r" facs="027"/><desc><ref type="authFile" corresp="AT1005Crucifixion"/> with <persName ref="PRS6819Mary"/> and <persName ref="PRS5695John"/> standing beside the cross, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d4"><locus target="#43v" facs="047"/><desc><ref type="authFile" corresp ="AT1049Resurrection"/>, painted over text</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d5"><locus target="#44v" facs="048"/><desc>Geometric patterns <ref type="authFile" corresp ="AT1109GeometricPatterns"/>, reminiscent of the evil eye, painted over text</desc></decoNote>
+                  <decoNote type="frame" xml:id="d6">
+                    Decorative designs: <locus target="#1r" facs="004"/>, ornamental band;
+                    <locus target="#28r" facs="031"/>, lines of black dots;
+                    <locus target="#43r" facs="046"/>, multiple full stops and a line of black dots;
+                    <locus target="#44r" facs="047"/>, multiple full stops</decoNote>
+                </decoDesc>
+                <additions><list>
+                  <item xml:id="a1"><desc type="GuestText" xml:lang="am"><locus target="#iv #iir #iiv #iiir" facs="002 003"/> excerpt <q>On the Faith of the Orthodox Church</q>, in Amharic. Possibly related to <ref type="work" corresp="LIT1584Hayman"/>. The first folio and last folios of text have been painted over.</desc></item>
+                  <item xml:id="a2"><desc type="OwnershipNote"><locus target="#43r" facs="046"/>Mentions the owner, Wäldä Giyorgis (<foreign xml:lang="gez">ወልደ፡ ጊዮርጊስ፡</foreign>)</desc></item>
+                  <item xml:id="a3"><desc type="GuestText" xml:lang="gez"><locus target="#44r" facs="047"/>Unidentified text in Amharic. Incomplete at the beginning</desc></item>
+                  <item xml:id="a4"><desc xml:lang="ti"><locus target="#44r" facs="047"/> note in Tigreñña </desc></item>
+                  <item xml:id="e1"><desc>Scribal intervention: words of text are written interlinearly <locus target="#4v #7r #10r #10v #12r" facs="008 010 013 014 015"/>, etc.;
+                    and in the upper margin with a symbol (+) marking the location where the text is to be inserted <locus target="#36r" facs="039"/>;
+                    text has been removed <locus target="#2r #2v #3r #3v #4r" facs="005 005 007"/>, etc.</desc></item>
+</list></additions>
+
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to boards covered with tooled leather, boards may be planed wood rather than rough-hewn.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>twentieth century</origDate>
+                     <origDate notBefore="1900" notAfter="1999">Twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -71,8 +167,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2020-12-30" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-02-09" who="RL">Added ms i1, decorations d1-d6, addition items a1-14, e1, handnote</change>
+         <change when="2021-02-26" who="RL">Added work ref for ms i1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

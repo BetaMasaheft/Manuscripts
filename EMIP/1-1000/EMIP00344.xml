@@ -5,6 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Ian Mac Lennan Codex 3</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -44,18 +45,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                            <measure unit="leaf">44</measure>
+                           <measure unit="quire">5</measure>
                            <dimensions type="outer" unit="mm">
                               <height>75</height>
                               <width>43</width>
                               <depth>17</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">4</dim>
+                              <locus from="1" to="4" facs="001"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="5" to="14" facs="005"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="15" to="24" facs="015"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="25" to="34" facs="025"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="35" to="44" facs="035"></locus>
+                              <note><locus target="#37" facs="037"/> has a hole in the upper centre.</note>
+                              Quire 5
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">4</dim>
+                           <dim type="bottom">13</dim>
+                           <dim type="right">7</dim>
+                           <dim type="left">3-4</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached to two rough-hewn boards (front broken and repaired with three stitches), a leather protection strap passes down the spine and continues around the fore edge of the codex.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">nineteenth  century</origDate>
+                     <origDate notBefore="1800" notAfter="1899">Nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -75,6 +128,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
                                     <change when="2020-04-18" who="RL">Corrected ǝ character</change>
+                                    <change when="2021-04-27" who="JS">Added quire maps, margin dims, columns, binding desc, dating info.</change>
     </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

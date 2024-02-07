@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02382">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 347</title>
+            <editor key="JS"/>
+            <editor key="RL"/>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -31,9 +33,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </msIdentifier>
                <msContents>
                   <summary>F<locus target="#14"/>-173r: Deluxe Psalter of the Virgin. In the upper margin of several folios, notes have been written instructing the use of the Psalm to protect against various threats, or to bring healing, or for help in a circumstance. The midpoint (<locus target="#70v"/>) is unmarked. Psalm 151 is the short version. <locus target="#150v"/>, between the end of the Canticles and the Song of Songs, there is an asmat prayer, in another hand. Song of Songs is the common version. The Praises of Mary begins on Monday and culminates on Sunday. F<locus target="#173r"/>, lower margins and continued through 174v: Asmat Prayer against head ache and against poison. Ff. i r-ii v: Excerpt from the Psalms, written in a different hand. Red paper strip with number 7 inside. The illuminations appear to be authentic. </summary>
-                  <msItem xml:id="ms_i1">
-                     <textLang/>
-                  </msItem>
+                    <msItem xml:id="ms_i1">
+                      <locus from="1r" to="172r" facs="003"/>
+                      <title type="complete" ref="LIT3985Mazmura"/>
+                      <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                        <msItem xml:id="ms_i1.1"><locus from="1r" to="135v" facs="003"/><title type="complete" ref="LIT3985Mazmura#Psalms"/>
+                        <note><ref type="work" corresp="LIT2000Mazmur#Ps118"/> does not contain the spiritual meanings of the Hebrew letters</note>
+
+                      </msItem>
+                        <msItem xml:id="ms_i1.2"><locus from="136r" to="149v" facs="138"/><title type="complete" ref="LIT3985Mazmura#Canticles"/></msItem>
+                        <msItem xml:id="ms_i1.3"><locus from="150r" to="156v" facs="152"/><title type="complete" ref="LIT3985Mazmura#SongOfSongs"/></msItem>
+                        <msItem xml:id="ms_i1.4">
+                          <locus from="157r" to="166v" facs="159"/>
+                          <title type="complete" ref="LIT2509Weddas"/>
+                            <msItem xml:id="ms_i1.4.1"><locus from="157r" facs="159"/><title>Monday</title></msItem>
+                            <msItem xml:id="ms_i1.4.2"><locus from="157v" facs="160"/><title>Tuesday</title></msItem>
+                            <msItem xml:id="ms_i1.4.3"><locus from="159r" facs="161"/><title>Wednesday</title></msItem>
+                            <msItem xml:id="ms_i1.4.4"><locus from="160v" facs="163"/><title>Thursday</title></msItem>
+                            <msItem xml:id="ms_i1.4.5"><locus from="162v" facs="165"/><title>Friday</title></msItem>
+                            <msItem xml:id="ms_i1.4.6"><locus from="164r" facs="166"/><title>Saturday</title></msItem>
+                            <msItem xml:id="ms_i1.4.7"><locus from="165r" facs="167"/><title>Sunday</title></msItem>
+                          </msItem>
+                        <msItem xml:id="ms_i1.5"><locus from="166v" to="172r" facs="169"/><title type="complete" ref="LIT1113Anqasa"/></msItem>
+                      </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -42,23 +64,212 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 174</measure>
+                           <measure unit="quire">Protection sheet + 22</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>195</height>
+                              <width>163</width>
+                              <depth>72</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–21 balanced; quire 22 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">8</dim>
+                              <locus from="1" to="8" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">8</dim>
+                              <locus from="9" to="16" facs="011"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">8</dim>
+                              <locus from="17" to="24" facs="019"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">8</dim>
+                              <locus from="25" to="32" facs="027"></locus>
+                              Quire 4
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">8</dim>
+                              <locus from="33" to="40" facs="035"></locus>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">8</dim>
+                              <locus from="41" to="48" facs="043"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">8</dim>
+                              <locus from="49" to="56" facs="051"></locus>
+                              Quire 7
+                            </item>
+                            <item xml:id="q9" n="8">
+                              <dim unit="leaf">8</dim>
+                              <locus from="57" to="64" facs="059"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q10" n="9">
+                              <dim unit="leaf">8</dim>
+                              <locus from="65" to="72" facs="067"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q11" n="10">
+                              <dim unit="leaf">8</dim>
+                              <locus from="73" to="80" facs="075"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q12" n="11">
+                              <dim unit="leaf">8</dim>
+                              <locus from="81" to="88" facs="083"></locus>
+                              Quire 11
+                            </item>
+                            <item xml:id="q13" n="12">
+                              <dim unit="leaf">8</dim>
+                              <locus from="89" to="96" facs="091"></locus>
+                              Quire 12
+                            </item>
+                            <item xml:id="q14" n="13">
+                              <dim unit="leaf">8</dim>
+                              <locus from="97" to="104" facs="099"></locus>
+                              Quire 13
+                            </item>
+                            <item xml:id="q15" n="14">
+                              <dim unit="leaf">8</dim>
+                              <locus from="105" to="112" facs="107"></locus>
+                              Quire 14
+                            </item>
+                            <item xml:id="q16" n="15">
+                              <dim unit="leaf">8</dim>
+                              <locus from="113" to="120" facs="115"></locus>
+                              Quire 15
+                            </item>
+                            <item xml:id="q17" n="16">
+                              <dim unit="leaf">8</dim>
+                              <locus from="121" to="128" facs="123"></locus>
+                              Quire 16
+                            </item>
+                            <item xml:id="q18" n="17">
+                              <dim unit="leaf">8</dim>
+                              <locus from="129" to="136" facs="131"></locus>
+                              Quire 17
+                            </item>
+                            <item xml:id="q19" n="18">
+                              <dim unit="leaf">8</dim>
+                              <locus from="137" to="144" facs="139"></locus>
+                              Quire 18
+                            </item>
+                            <item xml:id="q20" n="19">
+                              <dim unit="leaf">8</dim>
+                              <locus from="145" to="152" facs="147"></locus>
+                              Quire 19
+                            </item>
+                            <item xml:id="q21" n="20">
+                              <dim unit="leaf">8</dim>
+                              <locus from="153" to="160" facs="155"></locus>
+                              Quire 20
+                            </item>
+                            <item xml:id="q22" n="21">
+                              <dim unit="leaf">8</dim>
+                              <locus from="161" to="168" facs="163"></locus>
+                              Quire 21
+                            </item>
+                            <item xml:id="q23" n="22">
+                              <dim unit="leaf">5</dim>
+                              <locus from="169" to="173" facs="171"></locus>
+                              <note><locus target="#170" facs="172"/> is a loose folio stitched to <locus target="#169" facs="171"/>. Two folium stubs appear between <locus target="#172 #173" facs="175"/>.</note>
+                              Quire 22:
+                              2 added
+                              3, stub after 4
+                              4, stub after 4
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">24-27</dim>
+                           <dim type="bottom">43-51</dim>
+                           <dim type="right">14-20</dim>
+                           <dim type="left">12</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="21 22">
+                         <locus from="1r" to="157v" facs="003"></locus>
+                       </layout>
+                       <layout columns="2" writtenLines="21 22">
+                         <locus from="158r" to="173r" facs="160"></locus>
+                       </layout>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc><handNote xml:id="h1" script="Ethiopic"><seg type="rubrication"><foreign xml:lang="gez">ኢግዚአብሔር፡</foreign><foreign xml:lang="gez">ማርያም፡</foreign></seg></handNote></handDesc>
+                  <decoDesc>
+                    <decoNote type="miniature" xml:id="d1"><locus target="#iiv" facs="003"/><desc>simple drawing of a figure</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d2"><locus target="#170r" facs="172"/><desc><ref type="authFile" corresp="AT1082Angel"/>, <persName ref="PRS7049Michael"/> and <persName ref="PRS4377Gabriel"/> holding swords and scabbards</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d3"><locus target="#170v" facs="173"/><desc><ref type="authFile" corresp="AT1082Angel"/>, <persName ref="PRS9032Surafel"/> and Kirubel holding swords and scabbards</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d4"><locus target="#174r" facs="176"/><desc><ref type="authFile" corresp="AT1082Angel"/>, <persName ref="PRS1461Afnin"/> and <persName ref="PRS8065Raguel"/> holding swords and scabbards</desc></decoNote>
+                    <decoNote type="miniature" xml:id="d5"><locus target="#174v" facs="177"/><desc><ref type="authFile" corresp="AT1082Angel"/>, Safʾel and <persName ref="PRS9684Uriel"/> and a patron lays prostrate before them holding a necklace and a handkerchief. The name of the patron has been partially erased
+                      <q>"<gap reason="lost"/>  Maryam</q>,  <q><foreign xml:lang="gez"><gap reason="lost"/> ማርያም፡</foreign></q></desc></decoNote>
+                    <decoNote type="frame" xml:id="d6">
+                      Decorative designs:
+                      <locus target="#1r" facs="003"/>, ornamental band;
+                      <locus target="#25v #37r #46r #63r #104v #119r #151r" facs="028 039 048 065 107 121 153"/>, secondary ornamental band;
+                      <locus target="#109v #110r #110v #111r #111v #112r #112v #113r #113v #114r #114v #115r #115v #116r #116v #117r #117v #136v #150v #157v #173r" facs="112 113 114 115 116 117 118 119 120 139 153 160 175"/>, line of alternating red and black dots;
+                      <locus target="#166r" facs="168"/>, multiple full stops</decoNote>
+                    </decoDesc>
+                    <additions>
+                      <list>
+                        <item xml:id="a1"><desc type="GuestText"><locus target="#ir #iv #iir" facs="001 002"/> Excerpt from the <ref type="work" corresp="LIT2000Mazmur"/>, written in a different hand</desc></item>
+                        <item xml:id="a2"><desc type="GuestText"><locus target="#150v" facs="153"/><title type="complete" ref="LIT5888AsmatPrayer"/>, written in a different hand, with incipit: <foreign xml:lang="gez">አኪር፡ አኪር፡ አኪር፡ አኪር፡ አኪር፡ ሙኪር፡ አኪር፡ ሙኪር፡</foreign></desc></item>
+                        <item xml:id="a3"><desc type="GuestText"><locus target="#173r #173v" facs="175 186"/> <title type="complete" ref="LIT5888AsmatPrayer"/> against headache and against poison with incipit: <foreign xml:lang="gez">እግዚአብሔር፡ ቅዳማዊ፡ ሮቅ፡ ቅንዋት፡ ትምህርት፡ ኅቡአት፡</foreign></desc></item>
+                        <item xml:id="e1"><desc><locus target="#69v" facs="072"/>The midpoint of the Psalm is not marked</desc></item>
+                        <item xml:id="e2"><desc>
+                          Navigation system:
+                          <locus target="#8 #16" facs="010 018"/>, green string stitched into top edge;
+                          <locus target="#25" facs="027"/>, purple string stitched into corner;
+                          <locus target="#63 #104 #129" facs="065 106 131"/>, red string stitched into fore edge</desc></item>
+                        <item xml:id="e3"><desc>Numbered quires 2–21.</desc></item>
+                        <item xml:id="e4">
+                          <desc>
+                            Scribal intervention:
+                            words of text are written interlinearly <locus target="#1r #8v #10v #12v #14v" facs="003 011 013 015 017"/>, etc.;
+                            and lines of text are written interlinearly <locus target="#5v #56v #70r #72r #81v" facs="008 059 072 084"/>, etc.;
+                            and in the upper margin with a symbol (┴) marking the location where the text is to be inserted <locus target="#9r" facs="011"/>;
+                            text has been removed <locus target="#7r #8v #13v #15r #18r" facs="009 011 016 020"/>, etc.</desc></item>
+                      </list>
+                    </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of the traditional wood covered with tooled leather, fabric visible between the turn-ins.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                        <material key="textile"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1850">19th</origDate>
+                     <origDate notBefore="1800" notAfter="1899">Nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
          </sourceDesc>
+
       </fileDesc>
       <encodingDesc>
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
@@ -71,8 +282,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="PL" when="2018-01-18">Created XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2021-01-29" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+         <change when="2021-03-16" who="RL">Added ms i 1, 1.1-1.5, miniatures d1-d5, additions a1-a3, e1-e4</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02648">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 383</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,19 +43,98 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 62</measure>
+                           <measure unit="quire">Protection sheet + 7</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>145</height>
+                              <width>144</width>
+                              <depth>40</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–3 and 5–6 balanced; quires 4 and 7 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">10</dim>
+                              <locus from="1" to="10" facs="003"></locus>
+                              <note>Reinforcement strips appear on the outside and middle of the quire.</note>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">10</dim>
+                              <locus from="11" to="20" facs="013"></locus>
+                              <note>Reinforcement strips appear on the outside and middle of the quire.</note>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="21" to="30" facs="023"></locus>
+                              <note>Reinforcement strips appear on the outside and middle of the quire.</note>
+                              Quire 3
+                            </item>
+                            <item xml:id="q5" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="31" to="40" facs="033"></locus>
+                              <note>Reinforcement strips appear on the outside and middle of the quire. A folium stub appears between <locus target="#38 #39" facs="041"/>. <locus target="#40" facs="042"/> is a loose folio stitched to the end of the quire.</note>
+                              Quire 4:
+                              2, stub after 8
+                              10 added
+                            </item>
+                            <item xml:id="q6" n="5">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50" facs="043"></locus>
+                              <note>Reinforcement strips appear on the outside of the quire.</note>
+                              Quire 5
+                            </item>
+                            <item xml:id="q7" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="51" to="60" facs="053"></locus>
+                              <note>Reinforcement strips appear on the outside of the quire.</note>
+                              Quire 6
+                            </item>
+                            <item xml:id="q8" n="7">
+                              <dim unit="leaf">2</dim>
+                              <locus from="61" to="62" facs="063"></locus>
+                              <note>Reinforcement strips appear on the outside of the quire. Five folium stubs appear between <locus target="#61 #62" facs="064"/>. The folio stubs are the remnants of broken folios. Folio 62 is a loose folio stitched to the end of the quire.</note>
+                              Quire 7:
+                              1, stub before 2
+                              2 added
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">10-17</dim>
+                           <dim type="bottom">21-39</dim>
+                           <dim type="right">15-16</dim>
+                           <dim type="left">6-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="14"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="partly">
+                      <decoNote xml:id="b1">Parchment, four Coptic chain stitches attached with bridle attachments to rough-hewn boards of traditional wood, once covered with leather, rebound, front cover has broken and been repaired, back cover and spine wrapped in fabric.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                        <material key="textile"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>l17 century</origDate>
+                     <origDate notBefore="1650" notAfter="1699">Late-seventeenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +153,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2021-03-18" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

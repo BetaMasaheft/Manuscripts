@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02268">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 269</title>
+            <editor key="JS"></editor>
+            <editor key="ABe"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -30,11 +32,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                   <idno facs="EMIP/Codices/2268/">Weiner Codex 269</idno>
                </msIdentifier>
                <msContents>
-                  <summary>F<locus target="#1r"/>-16r: Bandlet of Righteousness, Lǝfafä  Ṣǝdǝq, ልፋፈ፡ ጽድቅ፡. Bandlet, EurBinde, fashioned for the tourist industry.</summary>
+                  <summary>Bandlet of Righteousness</summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                    <locus from="1r" to="16r" facs="003"/>
+                  <title type="complete" ref="LIT1758Lefafa"/>
+                  <textLang mainLang="gez">Gǝ'ǝz</textLang>
                   </msItem>
-               </msContents>
+                  </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -42,19 +46,103 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">ii + 17</measure>
+                           <measure unit="quire">Protection sheet + 3</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>80</height>
+                              <width>69</width>
+                              <depth>25</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: protection sheet and quires 1–2 balanced; quire 3 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="a">
+                              <dim unit="leaf">2</dim>
+                              <locus from="i" to="ii" facs="001"></locus>
+                              Protection Sheet
+                            </item>
+                            <item xml:id="q2" n="1">
+                              <dim unit="leaf">6</dim>
+                              <locus from="1" to="6" facs="003"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q3" n="2">
+                              <dim unit="leaf">6</dim>
+                              <locus from="7" to="12" facs="009"></locus>
+                              Quire 2
+                            </item>
+                            <item xml:id="q4" n="3">
+                              <dim unit="leaf">5</dim>
+                              <locus from="13" to="17" facs="015"></locus>
+                              <note>A folium stub appears between <locus target="#16 #17" facs="019"/>.</note>
+                              Quire 3:
+                              2, stub after 4
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">7</dim>
+                           <dim type="bottom">9-15</dim>
+                           <dim type="right">2-5</dim>
+                           <dim type="left">1-4</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="1" writtenLines="10"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                  <handNote xml:id="h1" script="Ethiopic">
+                  <seg type="rubrication">
+                  <foreign xml:lang="gez">ማርያም፡</foreign>
+                  </seg>
+                  <desc>The word Mary is rubricated</desc>
+                  </handNote>
+                  </handDesc>
+                  <decoDesc>
+                  <decoNote type="miniature" xml:id="d1"><locus target="#iv(erso)" facs="002"/><desc><ref type="authFile" corresp="AT1082Angel"/></desc></decoNote>
+                  <decoNote type="miniature" xml:id="d2"><locus target="#iir(ecto)" facs="002"/><desc><ref type="authFile" corresp="AT1082Angel"/></desc></decoNote>
+                  <decoNote type="miniature" xml:id="d3"><locus target="#iiv(erso)" facs="003"/><desc><ref type="authFile" corresp="AT1082Angel"/>A woman, holding a handkerchief, before a crowd</desc></decoNote>
+                  <decoNote type="miniature" xml:id="d4"><locus target="#16v" facs="019"/><desc><ref type="authFile" corresp="AT1082Angel"/> with a <term key="sword"/></desc></decoNote>
+                  <decoNote type="miniature" xml:id="d5"><locus target="#17r" facs="019"/><desc><ref type ="authFile" corresp="AT1035HolyMan"/> <name ref="PRS4306GabraMa"/> with a crow pecking his eye</desc></decoNote>
+                  <decoNote type="frame" xml:id="d6">
+                  Decorative designs:
+                  <locus target="#16r" facs="018"/> (multiple full stops)
+                </decoNote>
+                  </decoDesc>
+                  <additions>
+                  <list>
+                    <item xml:id="e1">
+                    <desc>
+                    <locus target="#ir(ecto) #17v" facs="001 020"/>
+                    blank
+                    </desc>
+                    </item>
+                    <item xml:id="a1">
+                    <desc>
+                    <locus target="#5v" facs="008"> f. 5v and passim</locus>
+                    space for the name of the owner has been left blank
+                    </desc>
+                    </item>
+                  </list>
+                </additions>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="true">
+                      <decoNote xml:id="b1">Parchment, two binding stations attached to plywood boards covered with tooled leather.</decoNote>
+                      <decoNote xml:id="b2" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                        <material key="leather"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1975">late twentieth century</origDate>
+                     <origDate notBefore="1950" notAfter="1999">Late twentieth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +161,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2020-12-16" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
+                                    <change when="2021-01-20" who="ABe">Added ms_i1, minis 1-5, a1, and e1</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">

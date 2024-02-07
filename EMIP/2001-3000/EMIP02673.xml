@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP02673">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title xml:id="t1">Weiner Codex 408</title>
+            <editor key="JS"></editor>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
@@ -42,19 +43,111 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <watermark/>
                         </support>
                         <extent>
-                           <measure unit="leaf"/>
+                           <measure unit="leaf">69</measure>
+                           <measure unit="quire">11</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
-                              <depth/>
+                              <height>140</height>
+                              <width>123</width>
+                              <depth>47</depth>
                            </dimensions>
                         </extent>
+                        <collation>
+                          <note>Quire descriptions: quires 1–3, 5–6, and 8–10 balanced; quires 4, 7, and 11 unbalanced.</note>
+                          <list>
+                            <item xml:id="q1" n="1">
+                              <dim unit="leaf">2</dim>
+                              <locus from="1" to="2" facs="001"></locus>
+                              Quire 1
+                            </item>
+                            <item xml:id="q2" n="2">
+                              <dim unit="leaf">9</dim>
+                              <locus from="3" to="11" facs="003"></locus>
+                              <note>Broken folio between <locus target="#2 #3" facs="003"/>.</note>
+                              Quire 2:
+                              9, stub before 1
+                            </item>
+                            <item xml:id="q3" n="3">
+                              <dim unit="leaf">10</dim>
+                              <locus from="12" to="21" facs="012"></locus>
+                              Quire 3
+                            </item>
+                            <item xml:id="q4" n="4">
+                              <dim unit="leaf">10</dim>
+                              <locus from="22" to="31" facs="022"></locus>
+                              <note><locus target="#30 #31" facs="030 031"/> are loose folios stitched between quires 4 and 5.</note>
+                              Quire 4:
+                              9 added
+                              10 added
+                            </item>
+                            <item xml:id="q5" n="5">
+                              <dim unit="leaf">9</dim>
+                              <locus from="32" to="40" facs="032"></locus>
+                              <note>Broken folio between <locus target="#31 #32" facs="032"/>.</note>
+                              Quire 5:
+                              9, no stub
+                            </item>
+                            <item xml:id="q6" n="6">
+                              <dim unit="leaf">10</dim>
+                              <locus from="41" to="50" facs="041"></locus>
+                              Quire 6
+                            </item>
+                            <item xml:id="q7" n="7">
+                              <dim unit="leaf">6</dim>
+                              <locus from="51" to="56" facs="051"></locus>
+                              <note>A folium stub appears between <locus target="#51 #52" facs="052"/>. <locus target="#56" facs="056"/> is a loose folio stitched onto the end of Quire 8.</note>
+                              Quire 7:
+                              4, stub after 1
+                              6 added
+                            </item>
+                            <item xml:id="q8" n="8">
+                              <dim unit="leaf">2</dim>
+                              <locus from="57" to="58" facs="057"></locus>
+                              Quire 8
+                            </item>
+                            <item xml:id="q9" n="9">
+                              <dim unit="leaf">6</dim>
+                              <locus from="59" to="64" facs="059"></locus>
+                              Quire 9
+                            </item>
+                            <item xml:id="q10" n="10">
+                              <dim unit="leaf">4</dim>
+                              <locus from="65" to="68" facs="065"></locus>
+                              Quire 10
+                            </item>
+                            <item xml:id="q11" n="11">
+                              <dim unit="leaf">1</dim>
+                              <locus target="#69" facs="069"></locus>
+                              <note>A folium stub appears between <locus target="#68 #69" facs="069"/>.</note>
+                              Quire 11:
+                              1, stub before 1
+                            </item>
+                          </list>
+                        </collation>
                      </supportDesc>
+                     <layoutDesc>
+                       <layout>
+                         <dimensions type="margin" unit="mm">
+                           <dim type="top">11-13</dim>
+                           <dim type="bottom">25-32</dim>
+                           <dim type="right">13-26</dim>
+                           <dim type="left">8-10</dim>
+                         </dimensions>
+                       </layout>
+                       <layout columns="2" writtenLines="10 14"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <bindingDesc>
+                    <binding xml:id="binding" contemporary="false">
+                      <decoNote xml:id="b1" type="bindingMaterial">
+                        <material key="parchment"></material>
+                        <material key="wood"></material>
+                      </decoNote>
+                    </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate>18th and 19th</origDate>
+                     <origDate notBefore="1700" notAfter="1899">Eighteenth and nineteenth century</origDate>
                   </origin>
                </history>
             </msDesc>
@@ -73,6 +166,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
       <revisionDesc>
          <change who="PL" when="2018-01-18">Created
                                     XML record from EMIP Collection Metadata.xsls</change>
+                                    <change when="2021-04-09" who="JS">Added ms dims, quire maps, margin dims, columns/lines, binding desc, dating info.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
