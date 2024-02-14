@@ -10,13 +10,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Fǝtḥata śǝrāy, Amharic theological treatise, list of commemorations of saints, hymns</title>
+                <!-- 
+                <title xml:lang="gez" xml:id="title1">ፍትሐተ፡ ሥራይ፡, ነገረ፡ ስሕተቶሙ፡ ለመናፍቃን፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Fǝtḥata śǝrāy, Nagara sǝḥtatomu la-manāfǝqān</title>
+                -->
+                <title xml:lang="en" xml:id="title1">Dissolution of the Spell (<hi rendition="simple:italic">Fǝtḥata śǝrāy</hi>), Amharic theological treatise, Discourse 
+                    on the Errors of the Heretics, List of commemorations of saints, <hi rendition="simple:italic">Malkǝʾ</hi>-hymns</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
                 <editor key="SH"/>
                 <editor key="EDS"/>
                 <editor key="SG"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -45,7 +51,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">74</measure>
+                                    <measure unit="leaf" quantity="74">74</measure>
+                                    <measure unit="quire" quantity="8">8</measure>
                                     <measure type="weight" unit="g">228</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>91</height>
@@ -53,38 +60,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <depth>46</depth>
                                     </dimensions>
                                 </extent>
+                                
+                                <foliation>Pencil foliation in the upper right corner (1–74).</foliation>
 
                                 <collation>
                                     <list>
-                                        <item xml:id="q1">
+                                        <item xml:id="q1" n="1">
                                             <dim unit="leaf">8</dim>
                                             <locus from="1r" to="8v"/>
                                         </item>
-                                        <item xml:id="q2">
+                                        <item xml:id="q2" n="2">
                                             <dim unit="leaf">10</dim>
                                             <locus from="9r" to="18v"/>
                                         </item>
-                                        <item xml:id="q3">
+                                        <item xml:id="q3" n="3">
                                             <dim unit="leaf">10</dim>
                                             <locus from="19r" to="28v"/>
                                         </item>
-                                        <item xml:id="q4">
+                                        <item xml:id="q4" n="4">
                                             <dim unit="leaf">8</dim>
                                             <locus from="29r" to="36v"/>
                                         </item>
-                                        <item xml:id="q5">
+                                        <item xml:id="q5" n="5">
                                             <dim unit="leaf">10</dim>
                                             <locus from="37r" to="46v"/>
                                         </item>
-                                        <item xml:id="q6">
+                                        <item xml:id="q6" n="6">
                                             <dim unit="leaf">10</dim>
                                             <locus from="47r" to="56v"/>
                                         </item>
-                                        <item xml:id="q7">
+                                        <item xml:id="q7" n="7">
                                             <dim unit="leaf">10</dim>
                                             <locus from="57r" to="66v"/>
                                         </item>
-                                        <item xml:id="q8">
+                                        <item xml:id="q8" n="8">
                                             <dim unit="leaf">8</dim>
                                             <locus from="67r" to="74v"/>
                                         </item>
@@ -94,7 +103,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <condition key="good">
                                   All three units of production are in good condition and show only slight
                                   traces of use and darkened margins. However, the sewing broke at the second sewing station between the upper board and the fourth quire, becoming loose.
-                                  Therefore, the upper board is nearly detached from the textblock.
+                                  Therefore, the upper board is detached from the textblock.
                                 </condition>
                             </supportDesc>
                         </objectDesc>
@@ -194,9 +203,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <material key="parchment"/>
                                     </support>
                                     <extent>
-                                        <measure unit="leaf">8</measure>
+                                        <measure unit="leaf" quantity="8">8</measure>
                                         <locus from="1r" to="8v"/>
-                                        <!--leaf dimensions missing-->
+                                        <dimensions type="folio" unit="mm" xml:id="leafdim1">
+                                            <height>91</height>
+                                            <width>85</width>
+                                        </dimensions>
+                                        <note corresp="#leafdim1">Data on the dimensions of folios taken from <locus target="#1r"/>.</note>
                                     </extent>
                                 </supportDesc>
 
@@ -295,13 +308,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <material key="parchment"/>
                                     </support>
                                     <extent>
-                                        <measure unit="leaf">28</measure>
+                                        <measure unit="leaf" quantity="28">28</measure>
                                         <locus from="9r" to="36v"/>
-                                              <dimensions type="folio" unit="mm">
+                                              <dimensions type="folio" unit="mm" xml:id="leafdim2">
                                         <height>92</height>
                                         <width>87</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from <locus target="#30r"/>.</note>
+                                    <note corresp="#leafdim2">Data on the dimensions of folios taken from <locus target="#30r"/>.</note>
                                     </extent>
                                 </supportDesc>
 
@@ -694,16 +707,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <material key="parchment"/>
                                     </support>
                                     <extent>
-                                        <measure unit="leaf">38</measure>
+                                        <measure unit="leaf" quantity="38">38</measure>
                                         <locus from="37r" to="74v"/>
-                                     <!--leaf dimensions missing-->
+                                        <dimensions type="folio" unit="mm" xml:id="leafdim3">
+                                            <height>91</height>
+                                            <width>85</width>
+                                        </dimensions>
+                                        <note corresp="#leafdim3">Data on the dimensions of folios taken from <locus target="#37r"/>.</note>
                                     </extent>
                                 </supportDesc>
 
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="13">
                                         <locus from="37r" to="74v"/>
-                                     <!--dimensions missing-->
+                                        <note corresp="#textarea3 #margin3">Data on text area and margin dimensions taken from <locus target="#37r"/>.</note>
+                                        <dimensions unit="mm" xml:id="textarea3">
+                                            <height>64</height>
+                                            <width>64</width>
+                                        </dimensions>
+                                        <dimensions type="margin" unit="mm" xml:id="margin3">
+                                            <dim type="top">8</dim>
+                                            <dim type="bottom">19</dim>
+                                            <dim type="right">11</dim>
+                                            <dim type="left">10</dim>
+                                        </dimensions>
                                         <note>The characters per line are 14–18.</note>
                                         <ab type="pricking">Ruling is visible; pricking is visible.</ab>
                                         <ab type="ruling" subtype="pattern">
