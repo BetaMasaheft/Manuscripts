@@ -42,14 +42,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <supportDesc>
                                 <extent>
                                     <measure unit="leaf">96</measure>
-                                    <measure unit="leaf" type="blank"></measure>
-                                    <!--<locus target=""/>-->
                                     <dimensions type="outer" unit="mm">
                                         <height>147</height>
                                         <width>101</width>
                                         <depth>34</depth>
                                     </dimensions>
-                                    <dimensions type="folio" unit="mm">
+                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
                                         <height>143</height>
                                         <width>98</width>
                                     </dimensions>
@@ -60,7 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </extent>
                                 <foliation>European pencil foliation in the upper right corner.
                                 </foliation>
-                                <condition key="deficient">
+                                <condition key="good">
                                     The sewing is broken and the quires are loose.
                                     The parchment has been damaged by humidity and some leaves are stained with water, e.g. <locus target="#94rv #95rv #96rv"/>.
                                     The parchment is occasionally wrinkled, e.g. <locus target="#46"/>.
@@ -110,7 +108,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </physDesc>
                     
                     <history>
-                        <provenance>XXX</provenance>
+                        <provenance> The provenance of the manuscript is unknown. Possibly, <ref target="#p2">unit 2</ref> was reused as flyleaves
+                            at the production of <ref target="#p1">unit 1</ref></provenance>, although it is also possible that the text XXX.
                     </history>
 
                     <msPart xml:id="p1">
@@ -1592,7 +1591,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </supportDesc>
                             
                             <layoutDesc>
-                                <layout columns="2" writtenLines="21 23">
+                                <layout columns="2" writtenLines="21 24">
                                     <locus from="4ra" to="93vb"/>
                                     <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#24r"/>.</note>
                                     <dimensions unit="mm" xml:id="textarea">
@@ -1606,6 +1605,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="left">7</dim>
                                         <dim type="intercolumn">6</dim>
                                     </dimensions>
+                                    <note>There are 12–15 characters per line.</note>
+                                    <ab type="punctuation" subtype="Dividers">
+                                        One-column headbands within the textblock separate the weeks (e.g. on <locus target="#19va #29rb #40ra"/>).
+                                        Chains of red and black dots occasionally separate days (e.g. on <locus target="#17va #19rb #29ra"/>) 
+                                        or services (e.g. on <locus target="#16ra #16rb #16va #24rb"/>).
+                                    </ab>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are often visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Several different ruling patterns are attested in the manuscript:
+                                        1E!-1E!-1E!1E!/0-0/0-0/B (e.g. <locus target="#5r 89r"/>),
+                                        1E!-1E!-1E!1E!/0-0/1B-1B/J (e.g. <locus target="#88r"/>).</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling. The bottom line is written above the ruling.
+                                    </ab>
                                 </layout>
                             </layoutDesc>
                             
@@ -1613,7 +1624,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             
                         </objectDesc>
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic"></handNote>
+                            <handNote xml:id="h1" script="Ethiopic">
+                            <locus from="4ra" to="93vb"/>
+                            <seg type="script"/>
+                            <seg type="ink">Black and red</seg>
+                            <date notBefore="1700" notAfter="1950"></date>
+                            <desc>
+                                Fine hand. Characters are regularly spaced.
+                            </desc>
+                            <note>
+                                The graphemes ግ and ዚ are occasionally written with a ligature, e.g. on <locus target="#20ra #25ra"/>.
+                            </note>
+                            <seg type="rubrication">
+                                Several groups of lines on the incipit page, alternating with black lines; 
+                                two lines at the beginning of a new week (e.g. <locus target="#19va #29rb #40ra"/>; on <locus target="#64r"/>, the rubrication has partly been extended to
+                                the column b); 
+                                metatextual elements pertaining to the categorization of antiphons
+                                (antiphon-type designations, melodic-family designations, hallelujah numbers, incipits of antiphons lacking metatextual elements), in part or completely; 
+                                occasionally, elements of numerals, punctuation signs, and marginal metatextual elements (<foreign xml:lang="gez">bet</foreign> designations).
+                            </seg>
+                            </handNote>
                         </handDesc>
                         
                         <decoDesc>
@@ -1776,7 +1806,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </physDesc>
                         
                         <history>
-                            
+                            <origin>
+                                <origDate from="1500" to="1600" evidence="lettering"/>
+                            </origin>
                         </history>
                         
                         
