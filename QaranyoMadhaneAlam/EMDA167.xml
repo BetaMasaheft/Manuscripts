@@ -1,7 +1,7 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="QM022" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EMDA167" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -10,7 +10,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <editor key="MA"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
-            <editionStmt><p>Digitized within the framework of the project Endangered Archives Programme, EAP432 "Documenting the written heritage of East Goğğam: a rich culture in jeopardy", 2011 as <ref type="mss" target="https://eap.bl.uk/archive-file/EAP432-1-22">https://eap.bl.uk/archive-file/EAP432-1-22</ref></p></editionStmt>
+            <editionStmt><p>Digitized within the framework of the project Endangered Archives Programme, EAP432 "Documenting the written heritage of East Goğğam: a rich culture in jeopardy", 2011 as <ref type="mss" target="https://eap.bl.uk/archive-file/EAP432-1-22">https://eap.bl.uk/archive-file/EAP432-1-22</ref> and for EMDA at HMML as <ref target="https://w3id.org/vhmml/readingRoom/view/500207">https://w3id.org/vhmml/readingRoom/view/500207</ref>. Initial metadata by Ted Erho</p></editionStmt>
             
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -24,23 +24,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </publicationStmt>
             <sourceDesc>
                 <msDesc xml:id="ms">
+                    
                     <msIdentifier>
                         <repository ref="INS0725DQM"/>
-                        <collection>EAP 432</collection>
-                        <idno facs="https://eap.bl.uk/archive-file/EAP432-1-22/manifest">EAP432/1/22</idno>
+                        <idno facs="https://eap.bl.uk/archive-file/EAP432-1-22/manifest"
+                            >G1-IV-326</idno>
                         <altIdentifier>
-                            <idno>QM-022</idno>
+                            <repository ref="INS0004HMML"/>
+                            <collection>EMDA</collection>
+                            <idno>EMDA 167</idno>
                         </altIdentifier>
-                      <altIdentifier>
-                         <idno>Inventory number: AW 003</idno>
-                      </altIdentifier>
                         <altIdentifier>
-                      <idno>Inventory number:G1-IV-326</idno>
-                   </altIdentifier>
-                   <altIdentifier>
-                 <idno>Inventory number:HE-IV-1</idno>
-              </altIdentifier>
-                    </msIdentifier>
+                            <repository>British Library</repository>
+                            <collection>EAP 432</collection>
+                            <idno>EAP432/1/22</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno>Inventory number: AW 003</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno>Inventory number:HE-IV-1</idno>
+                        </altIdentifier>
+                    </msIdentifier>               
                     <msContents>
                        <summary/>
                            <msItem xml:id="ms_i1">
@@ -155,6 +160,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                          </binding>
                                    </bindingDesc>
                                </physDesc>
+                    <history>
+                        <origin>
+                            <origDate notBefore="1750" notAfter="1850">18th-19th century</origDate>
+                        </origin>
+                    </history>
                     </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -174,12 +184,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-11-19">Created entity</change>
               <change who="MA" when="2020-12-08">manuscript description continued</change>
-            <change when="2023-05-11" who="ES">changed shelfmark to align to EAP432</change>
+            <change when="2023-05-11" who="ES">changed shelfmark to QM022 align to EAP432</change>
+            <change when="2024-03-12" who="ES">merged QM022 with EMDA 167</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="bibliography"/><!---->
+            <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMDA167" passive="QM022"></relation></listRelation>
         </body>
     </text>
 </TEI>
