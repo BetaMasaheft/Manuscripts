@@ -1,11 +1,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MALZ001" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MALZ002" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Miracles of Mary</title>
+                <title>Lectionary for the Holy Week</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,15 +25,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS1012AddiLaqmaMaryam"/>
-                        <idno>MALZ-001</idno>
+                        <idno>MALZ-002</idno>
                         </msIdentifier>
                     <msContents>
                        <summary/>
                        <msItem xml:id="ms_i1">                        
-                           <title type="complete" ref="LIT3585Taamme">Miracles of Mary (136 stories)</title>
+                           <title type="complete" ref="LIT1544Gebrah">Lectionary for the Holy Week</title>
                          <textLang mainLang="gez"/>
                          </msItem>                       
                         
+                        <msItem xml:id="ms_i2">                        
+                            <title type="complete" ref="LIT1931Mashaf#PrayerBlessing">Prayer of blessing</title>
+                            <textLang mainLang="gez"/>
+                            <incipit xml:lang="gez"><hi rend="rubric">ጸሎተ፡ ቡራኬ፡ ኦሥሉስ፡ ቅዱስ፡ አብ፡ ወወል</hi>ድ፡ ወመንፈስ፡ ቅዱስ፡ 
+                                አብርክ፡ ዲበ፡ ሕዝብከ፡ ፍቁራን፡ ክርስቶሳዊያን፨ በበረከተ፡ ሰማያውን። ወፈኑ፡ 
+                                ላዕሌነ፡ ጸጋ፡ ወመንፈስ፡ ቅዱስ፡</incipit>
+                        </msItem>
                         </msContents>
                    <physDesc>
                      <objectDesc form="Codex">
@@ -44,9 +51,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        <extent>
                                            <measure unit="leaf"></measure>                                            
                                            <dimensions type="outer">
-                                               <height unit="mm">370</height>
-                                               <width unit="mm">330</width>
-                                               <depth unit="mm">80</depth>
+                                               <height unit="mm">340</height>
+                                               <width unit="mm">260</width>
+                                               <depth unit="mm">100</depth>
                                            </dimensions>
                                        </extent>
                             <foliation>Unfoliated.</foliation>
@@ -55,37 +62,50 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </objectDesc>
                        
                        <decoDesc>
-                       <decoNote type="miniature" xml:id="d1">
-                           <locus from="1r" to="4v" cert="low"/>
-                           <desc>Four miniatures protected by textile curtains</desc>                           
-                       </decoNote>      
+                                                  
+                           <decoNote type="headpiece" xml:id="d1">
+                               <locus target="#3r" cert="low"/>
+                               <desc>Elaborate coloured ornamental band (vegetal motifs)</desc>
+                           </decoNote>   
                            
-                           <decoNote type="headpiece" xml:id="d2">
-                               <locus target="#5r" cert="low"/>
-                               <desc>Coloured ornamental band</desc>
-                           </decoNote>                 
-                                                                             
+                           <decoNote type="drawing" xml:id="d2">                            
+                               <desc>A small protective design on the penultimate page (face)</desc>
+                           </decoNote>   
+                           
+                           <decoNote type="drawing" xml:id="d3">
+                               <desc>Crude recent drawing of an angel, in modern pen</desc>
+                           </decoNote>   
+                           
+                                                     
                        </decoDesc>
                        
                        <additions>
                            <list>
                                <item xml:id="a1">                                
-                                   <desc type="OwnershipNote">The note mentions Śarḍa ʾAragāwi, the 
-                                       mamhǝr of <placeName ref="INS0105DD">Dabra Dāmmo</placeName>, 
-                                       as commissioner and donor of the manuscript</desc>
-                                   <q xml:lang="gez">ዛቲ፡ መጽሐፍ፡ ዘአቡነ፡ ሠርፀ፡ <hi rend="rubric">አረጋዊ፡</hi> መምህር፡ ዘደብረ፡ ዳሞ፡ ዘአጽሐፋ፡ በንዋዩ፡ ወወሀባ፡ 
-                                       ለመቅደሰ፡ እግዝእትነ፡ <hi rend="rubric">ማርያም፡</hi> ዘአለቅማ፡ ወዘዲበ፡ ኰኵሕ፡ ከመ፡ ትኩኖ፡ መርሐ፡ በመንግሥተ፡ ሰማያት፡ </q>
+                                   <desc type="DonationNote">The note mentions the donor and commissioner Tasfā Māryām and his relatives</desc>
+                                   <q xml:lang="gez">ዝመጽኀፍ፡ ዘወሀባ፡ ተስፋ፡ ማርያም፡ አቡሁ፡ ገብረ፡ ዋህድ፡ እሙ፡ ወለተ። 
+                                       ኪዳን፡ ዘአጽሐፋ፡ በንዋዩ፡ </q>
+                               </item>
+                               
+                               <item xml:id="a2">                                
+                                   <desc type="DonationNote">A lengthy donation note on the penultimate folium, 
+                                       mentioning in part the same persons as <ref type="item" target="#a1">Additional note 1</ref>, written in red, 
+                                   referring to the date 1904 (= 1911/1912 EC)</desc>
+                                   </item>
+                               
+                               <item xml:id="a3">                                
+                                   <desc type="Directive">A note containing directives to the Ritual of the Holy Week, 
+                                   and a small protective design (face)</desc>
                                </item>
                            </list>
                        </additions>
                        
                          <bindingDesc>
                              <binding contemporary="true">
-                                 <decoNote xml:id="b1">Two wooden boards; blind-tooled leather cover; textile inlays.</decoNote>
+                                 <decoNote xml:id="b1">Two wooden boards; blind-tooled leather cover.</decoNote>
                                  <decoNote xml:id="b2" type="bindingMaterial">
                                      <material key="wood"/>
-                                     <material key="leather"/>
-                                     <material key="textile"/>
+                                     <material key="leather"/>                                  
                                  </decoNote>
                                  
                              </binding>
