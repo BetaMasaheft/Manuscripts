@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP03129">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="YaleMs1">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">Yale Collection, Ethiopic 01</title>
+            <title>Yale Collection, Ethiopic 01</title>
             <editor key="ABe"/>
             <editor key="RL"/>
             <editor key="JS"/>
@@ -20,8 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p> This file is licensed under the Creative Commons
-                                                Attribution-ShareAlike 4.0. </p>
+                  This file is licensed under the Creative Commons
+                                                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <msIdentifier>
                  <repository ref="INS0831NBY"></repository>
                  <collection>Ethiopic</collection>
-                  <idno facs="EMIP/Codices/3129/" n="151">Ethiopic 1</idno>
+                 <idno>Ethiopic 1</idno><!-- facs="EMIP/Codices/3129/" n="151" -->
                  <altIdentifier>
                    <repository ref="INS0447EMIP">EMIP</repository>
                    <idno>EMIP 3129</idno>
@@ -104,8 +104,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <extent>
                            <measure unit="leaf">ii + 130</measure>
                            <dimensions type="outer" unit="mm">
-                              <height/>
-                              <width/>
+                              <height>153</height>
+                              <width>126</width>
                               <depth/>
                            </dimensions>
                         </extent>
@@ -119,6 +119,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                 <handDesc><handNote xml:id="h1" script="Ethiopic">Takla Giyorgis</handNote></handDesc>
                   <decoDesc>
                     <decoNote type="miniature" xml:id="d1"><locus target="#1r" facs="001"/><desc>crude drawing of <ref type="authFile" corresp="AT1066DavidHarp"/></desc></decoNote>
                     <decoNote type="miniature" xml:id="d2"><locus target="#130r" facs="130"/><desc>crude drawing of <ref type="authFile" corresp="AT1031VirginAndChild"/></desc></decoNote>
@@ -159,17 +160,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     Missed shot
                     </desc>
                     </item>
+                    
                     <item xml:id="e3">
-                    <desc>
-                    The book is accompanied by a letter dated November 22, 1930, from Richard Gottheil of Columbia University in which he describes the contents and date of the manuscript, though the report is marred by several errors
-                    </desc>
-                    </item>
-                    <item xml:id="e4">
                       <locus target="#54v" facs="55"/>:
                       <desc>Marks the midpoint of the Psalms with a marginal symbol</desc>
                     </item>
                   </list>
                 </additions>
+                 
                 <bindingDesc>
                   <binding xml:id="binding" contemporary="true">
                     <decoNote xml:id="b1" type="bindingMaterial">
@@ -178,11 +176,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                     </decoNote>
                   </binding>
                 </bindingDesc>
+                 <accMat>
+                   <desc>
+                     The book is accompanied by a letter dated November 22, 1930, from Richard Gottheil of Columbia University in which he describes the contents and date of the manuscript, though the report is marred by several errors
+                   </desc>
+                 </accMat>
                </physDesc>
                <history>
                   <origin>
                      <origDate when="1924-12-10">1917 EC, Tahsas 1 = December 10, 1924 (<locus target="#130v" facs="133"/>).</origDate>
                   </origin>
+                 <provenance>F. 1v, 59v contain notes of ownership: "This psalter belongs to Memher Qaṣalā ʼAlāmenah (ቀጸላ አላምነህ) and “This psalter belongs to Lij Qaṣalā (ቀጸላ).”
+                   Gift of Henry Fletcher, 1947.
+                 </provenance>
                </history>
             </msDesc>
          </sourceDesc>
@@ -203,11 +209,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change when="2020-06-15" who="RL">Corrected colophon code, and other format edits</change>
          <change when="2020-09-03" who="RL">Minor formatting edits, and corrections to comments on contents</change>
          <change when="2021-05-19" who="JS">Added columns/lines, binding desc, dating info.</change>
+        <change when="2024-04-08" who="ES">renamed, partially aligned to Yale catalogue at https://search.library.yale.edu/catalog/13173154</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+        <listRelation><relation name="betmas:formerlyAlsoListedAs" active="YaleMs1" passive="EMIP03129"></relation></listRelation>
       </body>
    </text>
 </TEI>
