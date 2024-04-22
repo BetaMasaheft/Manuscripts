@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng" 
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="EMIP03092">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" type="mss" xml:lang="en" xml:id="Unesco1101">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -9,7 +9,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <editionStmt>
             <p>The initial version of this file was created from data kindly
                                         provided by the Ethiopic Manuscript Imaging Project directed
-                                        by Steve Delamarter.</p>
+                                        by Steve Delamarter. Minimal data provided by Ted Erho at <ref target="https://w3id.org/vhmml/readingRoom/view/609125"></ref></p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -17,22 +17,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p> This file is licensed under the Creative Commons
-                                                Attribution-ShareAlike 4.0. </p>
+                  This file is licensed under the Creative Commons
+                                                Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0447EMIP">UNESCOCollection</repository>
-                  <collection>EMIP</collection>
-                  <idno facs="EMIP/Codices/3092/" n="184">UNESCOCollection11_WoynamKidaneHeheretDimmaGojjam_01</idno>
-               </msIdentifier>
+                  <repository ref="INS0066Woynam"/>
+                  <idno facs="EMIP/Codices/3092/" n="184">UNESCO 11-01</idno>                  
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <collection>UNESCO</collection>
+                     <idno>UNESCO 11-01</idno>
+                  </altIdentifier>
+                  <altIdentifier><repository ref="INS0447EMIP"/><collection>EMIP</collection>
+                     <idno>EMIP 3092</idno>
+                  </altIdentifier>
+                  
+               </msIdentifier>               
+               
                <msContents>
-                  <summary>Miracles of Jesus, ተአምረ፡ ኢየሱስ፡, Miracles of Mary, ተአምረ፡ ማርያም፡</summary>
+                  <summary></summary>
                   <msItem xml:id="ms_i1">
-                     <textLang/>
+                     <title>Miracles of Mary</title>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <title>Miracles of Jesus</title>
                   </msItem>
                </msContents>
                <physDesc>
@@ -44,18 +56,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <extent>
                            <measure unit="leaf">182</measure>
                            <dimensions type="outer" unit="mm">
-                              <height>365</height>
-                              <width>320</width>
+                              <height>363</height>
+                              <width>322</width>
                               <depth/>
                            </dimensions>
                         </extent>
+                        
                      </supportDesc>
+                     <layoutDesc><layout writtenLines="22" columns="3"></layout></layoutDesc>
                   </objectDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate/>
+                     <origDate notBefore="1721" notAfter="1730">18th cent</origDate>
                   </origin>
+                  <provenance>Copied by ዮሐንስ for ተስፋ ፡ ኢየሱስ and ምስለ ፡ እንትያ</provenance>
                </history>
             </msDesc>
          </sourceDesc>
@@ -71,12 +86,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <langUsage><language ident="en">English</language></langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="PL" when="2018-01-18">Created
-                                    XML record from EMIP Collection Metadata.xsls</change>
+         <change who="ES" when="2024-04-18">Created stub</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile><graphic url="https://w3id.org/vhmml/readingRoom/view/609125"></graphic></facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="Unesco1101" passive="EMIP03092"></relation></listRelation>
          <ab/>
       </body>
    </text>
