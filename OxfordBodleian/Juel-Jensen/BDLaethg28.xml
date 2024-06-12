@@ -7,14 +7,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title xml:lang="gez" xml:id="title1">መልክአ፡ ሚካኤል፡</title>
+               <!--
+               <title xml:lang="gez" xml:id="title1">መልክአ፡ ሚካኤል፡</title>
                 <title xml:lang="gez" corresp="#title1" type="normalized">Malkǝʾa Mikāʾel</title>
-                <title xml:lang="en">Malkǝʾ-hymn to St Michael</title>
+               -->
+                <title xml:lang="en" xml:id="title1"><hi rendition="simple:italic">Malkǝʾ</hi>-hymn to St Michael</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="MV"/>
-                <editor key="SH"/>
                 <editor key="EDS"/>
+                <editor key="SH"/>
+                <editor key="JK"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
@@ -81,31 +84,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">16</measure>
+                                    <measure unit="leaf" quantity="16">16</measure>
+                                    <measure unit="quire" quantity="3">3</measure>
                                     <dimensions type="outer" unit="mm">
                                         <height>105</height>
-
                                         <width>75</width>
                                         <depth>23</depth>
-
                                     </dimensions>
                                     <dimensions type="folio" unit="mm">
                                         <height>103</height>
                                         <width>72</width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on leaves dimensions taken from
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from
                                             <locus target="#9r"/>.</note>
                                     <measure type="weight" unit="g">84</measure>
                                 </extent>
-                                <foliation>Pencil foliation in the upper right corner.</foliation>
+                                <foliation>Pencil foliation in the upper right corner (1–16).</foliation>
                                 <collation>
                                     <list>
                                         <item xml:id="q1" n="A">
                                             <dim unit="leaf">1</dim>
-                                            <locus from="1r" to="1v"/> 1, stub before 1 </item>
+                                            <locus from="1r" to="1v"/> 1, stub before 1
+                                        </item>
                                         <item xml:id="q2" n="1">
                                             <dim unit="leaf">7</dim>
-                                            <locus from="2r" to="8v"/> 6, stub after 1 </item>
+                                            <locus from="2r" to="8v"/> 6, stub after 1
+                                        </item>
                                         <item xml:id="q3" n="2">
                                             <dim unit="leaf">8</dim>
                                             <locus from="9r" to="16v"/>
@@ -113,13 +117,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </list>
                                 </collation>
 
-                                <condition key="deficient">The original sewing is broken and it has been repaired by using a different kind of thread. <!--A brown liquid
+                                <condition key="deficient"><!--A brown liquid
                                      was spilled on the manuscript, see especially on <locus
                                         from="15r" to="16v"/> I think that a different kind of ink, a brownish one, has been used to draw
                                       the figures on f. 15v and f. 16v later damaged by humidity. The same ink is on f. 1v, 2r, 9r, 9v, 10r, 10v, 11r, 11v.-->
-                                        Smudged ink on many folia see especially on <locus
-                                           from="15r" to="16v"/>.</condition>
-
+                                        Smudged ink on many folios, see especially on <locus from="15r" to="16v"/>. Insect droppings and humidity stains
+                                        on most folios. The original sewing is broken with the risk
+                                        of leaf displacement. </condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="13">
@@ -138,8 +142,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <note>The characters per line are 10–12.</note>
                                     <ab type="pricking">Ruling and pricking are barely visible.</ab>
-                                    <ab type="ruling">Horizontal lines are visible at the bottom of <locus target="3v"/> and
-                                    <locus target="6r"/>, but most folia seem to have no ruled lines.</ab>
+                                    <ab type="ruling">Horizontal lines are visible at the bottom of <locus target="#3v"/> and
+                                    <locus target="#6r"/>, but most folios seem to have no ruled lines.</ab>
                                     <!--SH: <ab type="ruling" subtype="pattern">
                                         <locus from="2r" to="15v"/>Ruling pattern:
                                         1A-1A/0-0/0-0/C.</ab> EDS: I don't see the the horizontal ruled lines, do you?
@@ -154,15 +158,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <handNote xml:id="h1" script="Ethiopic">
                                 <locus from="2r" to="15v"/>
                                 <seg type="ink">Black, red</seg>
+                                <!-- Add dot -->
                                 <date notBefore="1800" notAfter="1950">19th or 20th century</date>
+                                <!-- Discuss how to give this info: 19th or 20th / 19th–20th /omit simply -->
                                 <desc>Mediocre hand with angular script. Word dividers are also
                                     placed at the beginning of a line (e.g. <locus
                                         target="#5v #6r #10v"/>.</desc>
+                                <!-- add comma after e.g. -->
                                 <seg type="rubrication">Initial two lines on the incipit page of
                                         <ref target="#ms_i1"/>; the first word of each stanza; the name
                                     of St Michael, erased names of individuals related
                                     to the production or ownership of the manuscript; elements of
                                     the punctuation marks, and numerals.</seg>
+                                <!-- Open <ref target="#ms_i1"/> adding <hi rendition="simple:italic">Malkǝʾ</hi>-hymn to St Michael -->
+                                <!-- punctuation signs -->
                             </handNote>
                         </handDesc>
 
@@ -184,16 +193,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </item>
 
                                 <item xml:id="e3">
-                                    <desc> A white sticker with the name of <persName
+                                    <desc>A white sticker with the name of <persName
                                             ref="PRS5782JuelJen"/> printed (<foreign xml:lang="gez"
-                                            >ቤንት፡ ዩውል፡ የንሰን።</foreign>), and the signatures Ms.
-                                        Aeth. g. 28 and Ms. Et 1 written in pencil is glued onto
+                                            >ቤንት፡ ዩውል፡ የንሰን።</foreign>), and the signatures ‘Ms.
+                                        Aeth. g. 28’ and ‘Ms. Et 1’ written in pencil is glued onto
                                         the inner side of the front board. Another sticker
-                                        with the signature ‘Ms 1’ is glued below it. A note is
-                                        written in pencil in the inner side of the front and back
-                                        bord respectively with the shelf mark 'Ethiopian Ms 1' and
-                                        the remarks 'Hymn to Yared' and 'Salutation to Mikael'.</desc>
-                                    <!--<desc>to be checked: for correctnes and for completion of the note</desc>-->
+                                        with the signature ‘Ms 1’ is glued below it. 
+                                        The shelfmark, textual content and dating of the book (‘Ethiopian MS 1’, ‘Hymn to Yared’,  ‘Salutation to Mikael’, and  ‘C 20’) 
+                                        are indicated in pencil in the inner side of the front and back board.</desc>
                                 </item>
                             </list>
                         </additions>
@@ -235,7 +242,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                     <history>
                         <origin>
-                            <origDate from="1800" to="1950" evidence="lettering"> </origDate> The
+                            <origDate notBefore="1800" notAfter="1950" evidence="lettering"> </origDate> The
                             earliest date of production—taking into account the handwriting—can
                             be set to the nineteenth century. Several lines with names of
                             individuals who were probably related to the production or ownership of the
@@ -289,8 +296,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-02-11">Added dimensions and layout</change>
             <change who="DR" when="2020-03-09">Added incipit and explicit</change>
             <change who="SH" when="2020-04-22">Added editors</change>
-            <change who="SH" when="2020-11-16">Full textual and preliminary physical description of
-                the Ms</change>
+            <change who="SH" when="2020-11-16">Full textual and preliminary physical description of the Ms</change>
+            <change who="EDS" when="2024-03-10">Revision condition</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
