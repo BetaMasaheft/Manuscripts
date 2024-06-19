@@ -495,8 +495,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <!-- Want to reconsider this in light of comment about images? -->
                            <seg type="ink">Black, red.</seg>
                                 <seg type="rubrication">The title and numeral at the beginning of each canticle; elements of punctuation signs.</seg>
+                                <!-- Order is ink, date, desc, rubr -->
                                 <desc>Fine and regular handwriting. The letters are slightly slanted towards the right, broad spaces between characters. ፮ and ጵ have
                                     the modern form (e.g. <locus target="#23ra #36vb"/>).</desc>
+                                <!-- All numerals must be marked up with <foreign xml:lang="gez">...</foreign> -->
                             </handNote>
 
                             <handNote xml:id="h2" script="Ethiopic" corresp="#a1">
@@ -504,12 +506,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <date notBefore="1800" notAfter="2006"/>
                                 <seg type="ink">Black.</seg>
                             </handNote>
+                            <!-- This is quite normal: all additional notes are written in a different hand (moslty untrained, like here h4, h5) and could be omitted for the sake of space. If needed,
+                                a comment might be added to the respective additional notes, without redoubling the information.
+                                If so, add a remind in the respective additional notes to delete corresp="#h2", corresp="#h3" etc.
+                              -->
 
                             <handNote xml:id="h3" script="Ethiopic" corresp="#a2">
                                 <locus from="3r" to="4r"/>
                                 <date notBefore="1800" notAfter="2006"/>
                                 <seg type="ink">Black.</seg>
                             </handNote>
+                            <!-- To remove -->
 
                             <handNote xml:id="h4" script="Ethiopic" corresp="#a3">
                                 <locus target="#4v"/>
@@ -517,6 +524,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <seg type="ink">Black.</seg>
                                 <desc>An untrained hand.</desc>
                             </handNote>
+                            <!-- To remove -->
 
                             <handNote xml:id="h5" script="Ethiopic" corresp="#a6">
                                 <locus from="47r" to="51v"/>
@@ -525,6 +533,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <desc>An untrained, irregular hand.</desc>
                             </handNote>
                         </handDesc>
+                        <!-- To remove -->
 
                         <decoDesc>
                           <summary>The prayers in the manuscript are prefaced by a portrait of
