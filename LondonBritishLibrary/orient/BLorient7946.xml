@@ -31,12 +31,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
                         <msItem xml:id="ms_i1">
-                            <locus from="3r" to="124r"/>
+                            <locus from="2v" to="124r"/>
                             <title ref="NAR0184ForeignWords">Amharic-English Vocabulary</title>
-                            <note>The transcription (without gemination) of the Amharic words is given systematically as far as <locus target="#84v"/>.
-                                Vocables are illustrated with examples. The total number of vocables is 5632 (cf. <locus target="#2v"/> with a list of letters
-                                giving the number of entries corresponding to each of them, similar to <ref target="#a1"/>).</note>
-                            <textLang xml:lang="en" otherLangs="am"/>
+                            <msItem xml:id="ms_i1.1">
+                                <locus target="#2v"/>
+                                <title>Summary</title>
+                                <note>The number of entries corresponding to each letter.</note>
+                            </msItem>
+                            <msItem xml:id="ms_i1.2">
+                                <locus from="3r" to="124r"/>
+                                <title>The Vocabulary</title>
+                                <note>The transcription (without gemination) of the Amharic words is given systematically as far as <locus target="#84v"/>.
+                                    Vocables are illustrated with examples. The total number of vocables is 5632 (cf. <locus target="#2v"/> with a list of letters
+                                    giving the number of entries corresponding to each of them, similar to <ref target="#a1"/>).</note>
+                                <textLang xml:lang="en" otherLangs="am"/>
+                            </msItem>    
                         </msItem>
                         <msItem xml:id="ms_i2">
                             <locus target="#124v"/>
@@ -69,13 +78,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf">1+123+4</measure>
-                                    <measure type="blank" unit="page">3</measure><locus target="#1r #1v #127v"/>
+                                    <measure type="blank" unit="leaf">3</measure><locus target="#1r #1v #127v"/>
                                     <dimensions type="leaf" unit="mm" xml:id="leafdim">
                                         <height>224</height>
                                         <width>176</width>
                                     </dimensions>
                                 </extent>
-                                <foliation>Original pagination by the author from 1 to 246.</foliation>
+                                <foliation>Original pagination by the author from 1 to 246; foliation from 1 to 128.</foliation>
+                                <collation><locus target="#3">Fol. 3</locus> has been torn out and incorrectly inserted between 
+                                    <locus target="#4">fol. 4</locus> and <locus target="#5">fol. 5</locus>.</collation>
                             </supportDesc>
                             <layoutDesc>
                                 <layout writtenLines="23"/>
@@ -106,18 +117,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <date when="1913-12-13">December 13, 1913</date>.</q>
                                 </item>
                                 <item xml:id="a1">
-                                    <locus target="#128r"/>
-                                    <desc type="findingAid">A piece of paper has been attached with the number of entries given corresponding to each 
-                                        letter as given in <locus target="#2v"/> (cf. <ref target="#ms_i1"/>) and the pages corresponding to the beginning 
-                                        of each letter as given in <locus from="125r" to="126r"/> (cf. <ref target="#ms_i3"/>). The same information is also
-                                        noted in <ref target="#a2"/>.</desc>
-                                </item>
-                                <item xml:id="a2">
                                     <locus target="#I"/>
                                     <desc type="findingAid">A piece of paper has been stuck onto the recto of the unnumbered front endleaf with the 
                                         number of entries given corresponding to each letter as given in <locus target="#2v"/> (cf. <ref target="#ms_i1"/>)
                                         and the pages corresponding to the beginning of each letter as given in <locus from="125r" to="126r"/> 
-                                        (cf. <ref target="#ms_i3"/>). The same information is also noted in <ref target="#a1"/>.</desc>
+                                        (cf. <ref target="#ms_i3"/>). The same information is also noted in <ref target="#accMat1"/>.</desc>
                                 </item>
                             </list>
                         </additions>
@@ -128,6 +132,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <decoNote xml:id="b2" type="Cover"><material key="leather">Half leather.</material></decoNote>
                             </binding>
                         </bindingDesc>
+                        <accMat xml:id="accMat1">
+                            A loose piece of paper has been attached after <locus target="#127"/> containing the number of entries corresponding to 
+                            each Amharic letter. This information is repeated here as given in <locus target="#2v"/> (cf. <ref target="#ms_i1"/>) and 
+                            in <locus from="125r" to="126r"/> (cf. <ref target="#ms_i3"/>). The same information is also noted in another piece of 
+                            paper, that was glued onto the recto of the unnumbered front endleaf (<ref target="#a1"/>).
+                        </accMat>
                     </physDesc>
                     <history>
                         <origin>
