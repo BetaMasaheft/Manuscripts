@@ -24,13 +24,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <repository ref="INS0303BNF"/>
                      <collection>Manuscrits orientaux</collection>
                      <collection>Fonds éthiopien</collection>
-                     <collection>d'Abbadie</collection>
-                       <idno>BnF Éthiopien d'Abbadie 39</idno>
-                       <altIdentifier>
+                     <collection>d'Abbadie</collection>                                         
                          <idno facs="https://gallica.bnf.fr/ark:/12148/btv1b10093217s">BnF Éthiopien d'Abbadie 39</idno>
-                       </altIdentifier>
              </msIdentifier>
-<msContents><summary/></msContents>
+               
+<msContents>
+  <summary/>
+</msContents>
 
               <physDesc>
                  <objectDesc form="Codex">
@@ -86,17 +86,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                  (reigned in several periods between <date>1779 and 1800</date>).
                  <ref target="p2">Unit 2</ref> was produced around the same time (it cannot be excluded
                  that the scribe was the same).
-           <persName ref="PRS13621Habtu" role="owner"/> was an owner (possible also the scribe).
+                   <persName ref="PRS13621Habtu" role="owner">Ḥabtu</persName> was an owner (possible also the scribe).
                    </origin>
                    <provenance>The manuscript was bought by
                      <persName ref="PRS1071dAbbadi" role="owner">Antoine d'Abbadie</persName>
                      sometime between <date>1840</date> and <date>1848</date>.
                    </provenance>
-                   <acquisition>The manuscript entered the Bibliothèque nationale in
+                <acquisition>The manuscript entered <placeName ref="INS0303BNF"/> in
                      <date>1902</date>.
                      </acquisition>
                  </history>
-
+               
+               
+               <additional>
+                 <adminInfo>
+                   <recordHist>
+                     <source>
+                       <listBibl type="catalogue">
+                      
+                 <bibl>
+                   <ptr target="bm:ContiRossini1914Notice"/>
+                   <citedRange unit="page">220</citedRange>
+                   <citedRange unit="number">226</citedRange>
+                 </bibl>
+                 <bibl>
+                   <ptr target="bm:Chaine1912Catalogue"/>
+                   <citedRange unit="page">27-29</citedRange>
+                   <citedRange unit="number">39</citedRange>
+                 </bibl>
+                 
+                 <bibl>
+                   <ptr target="bm:Abbadie1859Cat"/>
+                   <citedRange unit="page">39</citedRange>
+                   <citedRange unit="number">46-48</citedRange>
+                 </bibl>
+               </listBibl>
+               <listBibl type="secondary">
+                 <bibl>
+                   <ptr target="bm:Cowley1988Exeget"/>
+                 </bibl>
+               </listBibl>              
+                     </source>
+                   </recordHist>
+                 </adminInfo>
+               </additional>
+               
               <msPart xml:id="p1">
                  <msIdentifier/>
                  <msContents>
@@ -393,7 +427,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                       <msItem xml:id="p1_i3">
                                          <locus from="63rb" to="65vb"/>
                                          <locus from="1va" to="3vb"/>
-                                         <title type="complete" ref="LIT2598Yosipp" cert="medium"/>
+                                        <title type="incomplete" ref="LIT2598Yosipp" cert="medium">An excerpt from Josippon</title>
                                          <textLang mainLang="gez"/>
                                            <incipit xml:lang="gez">እጽሕፍ፡ ዜና፡ መንግሥተ፡ መታትያ፡ ወልደ፡ ዮሐናዓ፡</incipit>
                                            <explicit xml:lang="gez">ወነግሠ፡ አግሪጳስ፡ ወልዱ፡ <gap reason="lost" extent="1" unit="character"/>ግሚዊ፡
@@ -401,10 +435,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                          ተሰስተት፡ መቅደስ። ተፈጸመ፡ ታሪከ፡ ነገሥት፡</explicit>
                                   <note>According to
                                     <bibl><ptr target="bm:Chaine1912Catalogue"/>
-                                    <citedRange unit="page">28</citedRange></bibl> the text is an exceprt from Josippon,
-                                    indeed it appears to correspond to the story of Metitan, son of Judah after the edition <bibl><ptr target="bm:Murad1938ZenaAyhud"/>
-                                    <citedRange unit="page">63</citedRange></bibl>,
-                                    but both are similar only in the beginning. The continuation seems to be only a summary based on <ref type="work" corresp="LIT2598Yosipp">Josipppon</ref>
+                                    <citedRange unit="page">28</citedRange></bibl> the text is an exceprt from Josippon.
+                                    Indeed, it appears to correspond to the story of Metitan, son of Judah after the edition <bibl><ptr target="bm:Murad1938ZenaAyhud"/>
+                                    <citedRange unit="page">63</citedRange></bibl>, but both are similar only in the beginning. 
+                                    The continuation seems to be only a summary based on <ref type="work" corresp="LIT2598Yosipp">Josipppon</ref>
                                   ending with <foreign xml:lang="gez">ወነበረ፡ በፋርስ፡ እስከ፡ ጸውዖ፡ ሄሮድስ፡ ተመ(ለ<supplied reason="lost">ስ)፡</supplied></foreign>,
                                   the last word possibly referring to the text on <locus target="#1v"/>.
                                 </note>
@@ -764,7 +798,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                                              <note>The number of characters per line: 10-11
                                                                 on <locus target="#20ra"/>.</note>
                                                                 <note>In some of the text parts, a few lines of
-                                                                  the heading may be written in one column, as well as a few lines of the explicit ().</note>
+                                                                  the heading may be written in one column, as well as a few lines of the explicit.</note>
                                                             <ab type="pricking">Pricking is not visible.</ab>
                                                             <ab type="ruling">Ruling is not visible.</ab>
                                                              <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
@@ -813,7 +847,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <desc type="OwnershipNote"></desc>
                              <q xml:lang="gez">ዝ፡ ሰዋስው፡ ዘሐብቱ፡</q>
                              <note>Written in a think pen, carelessly, but possibly still in
-                              the main <ref target="#h1"/>, mentioning <persName ref="PRS13621Habtu" role="owner"/>.
+                               the main <ref target="#h1"/>, mentioning <persName ref="PRS13621Habtu" role="owner">Ḥabtu</persName>.
                               </note>
                         </item>
 
@@ -821,14 +855,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <locus target="#155ra"></locus>
                            <desc>A note of private or biographical character</desc>
                            <quote xml:lang="gez">
-                              በ፶፫ወ፭፻ዓመተ፡ ዓለም፡ <date calendar="ethiopian" when="1796"
-                              when-custom="1788"
-                              evidence="internal">በ፲፻ወ፯፻፹ወ፰፡ ዓመተ፡ ምሕረት፡ በዘመነ፡ ዮሐንስ፡</date><gap reason="lost"
-                              unit="chars" quantity="2"></gap> አመ፡ ፲ወ፬ወ፭ለነሐሴ፡ ኮነ፡ ልማዱ፡
+                             <add place="above">ሐሙስ፡ ዐርብ፡ ቅዳሜ፡ ፲</add> በ፶፫ወ፭፻ዓመተ፡ ዓለም፡ <date calendar="ethiopian" when="1796"
+                               when-custom="1788" evidence="internal">በ፲፻ወ፯፻፹ወ፰፡ ዓመተ፡ ምሕረት፡ በዘመነ፡ ዮሐንስ፡</date><gap reason="lost"
+                              unit="chars" quantity="2"></gap> አመ፡ ፲ወ፬ወ፭ለነሐሴ፡ ኮነ፡ ልማድ።
                               <add place="above">ዘዚአየ፡</add><gap reason="omitted" resp="DN"></gap>
-                            ዝኒ፡ ተጽሕፈ፡ አመ፡ ተፈነወ፡ ጦመር፡ ውስተ፡ ቤተ፡ ንጉሥ፡ በለየካቲት፡ በዕለተ፡ ሐሙስ፡፡፡፡፡</quote>
-                           <note>A note is difficult to understand; one date correctly refers to the year <date>
-                             1788, the year of John </date> which is <date>1796 CE</date>. Other dates are unclear.
+                            ዝኒ፡ ተጽሕፈ፡ አመ፡ ተፈነወ፡ ጦመር፡ ውስተ፡ ቤተ፡ ንጉሥ፡ በለየካቲት፡ በዕለተ፡ ሐሙስ፡</quote>
+                           <note>A note is difficult to understand; one date refers to <date>
+                             1788, the year of John </date> which is <date>1796 CE</date> but the reference to 
+                             day is unclear. Other dates mentioned are also unclear.
                            An addition below the note made in a very similar or the same
                          hand mentions <date>the year of the mercy 90</date>,
                           and the king <persName ref="PRS9142TaklaGi">Takla Giyorgis I</persName>.</note>
@@ -836,7 +870,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
                         <item xml:id="a4">
                            <locus from="204ra" to="205vb"></locus>
-                           <desc type="PoemQene"></desc>
+                          <desc type="PoemQene">Unidentified collection of hymns, possibly <foreign xml:lang="gez">qǝne</foreign>-<term key="Qene">poems</term></desc>
                              <note>Written in a thin pen, carelessly, in a hand similar to the main <ref target="#h1"/>
                            </note>
                         </item>
@@ -911,7 +945,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
 
                         <layoutDesc>
                            <layout columns="1" writtenLines="13">
-                      <ab type="pricking">Pricking and ruling are partly visible.</ab>
+                      <ab type="pricking">Pricking is partly visible.</ab>
+                             <ab type="ruling">Ruling is partly visible.</ab>
                               <ab type="ruling" subtype="pattern">1A-1A/0-0/0-0/C</ab>
                            </layout>
                         </layoutDesc>
@@ -926,37 +961,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                              Written in big letters.</desc>
                         </handNote>
                      </handDesc>
-                     <additions>
-                     </additions>
+                   
                   </physDesc>
 
                </msPart>
                </msDesc>
 
-
-                           <listBibl type="catalogue">
-             <bibl>
-              <ptr target="bm:ContiRossini1914Notice"/>
-                                 <citedRange unit="page">220</citedRange>
-                                 <citedRange unit="number">226</citedRange>
-                              </bibl>
-                              <bibl>
-                                 <ptr target="bm:Chaine1912Catalogue"/>
-                                 <citedRange unit="page">27-29</citedRange>
-                                 <citedRange unit="number">39</citedRange>
-                              </bibl>
-
-                              <bibl>
-                                 <ptr target="bm:Abbadie1859Cat"/>
-                                 <citedRange unit="page">39</citedRange>
-                                 <citedRange unit="number">46-48</citedRange>
-                              </bibl>
-                            </listBibl>
-                            <listBibl type="secondary">
-                              <bibl>
-                                <ptr target="bm:Cowley1988Exeget"/>
-                               </bibl>
-                             </listBibl>
                            </sourceDesc>
                    </fileDesc>
        <encodingDesc>
@@ -1006,6 +1016,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
        <revisionDesc>
           <change who="DN" when="2021-11-11">created the description on the basis of BNF images</change>
          <change who="DN" when="2023-05-30">restructured the content</change>
+         <change who="DN" when="2024-08-26">corrected the date 1778</change>
        </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">

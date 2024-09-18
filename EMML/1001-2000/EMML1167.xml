@@ -22,21 +22,44 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Holy Trinity Cathedral, Addis Ababa</collection>
-                  <idno>MS EMML no. 1167</idno>
+                  <repository ref="INS0588AHT"/>                   
+                  <idno facs="EMIP/Codices/2909/" n="186">MS 13</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <collection>EMML</collection>
+                     <idno>MS EMML no. 1167</idno>
+                  </altIdentifier>
+                  
+                  <altIdentifier>
+                     <idno>UNESCO 5-8</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 5, Holy Trinity 8</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2909</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary/>
+                  <summary>Maṣḥafa geṣṣawe, Volume 3 of 3</summary>
+                  <msItem xml:id="ms_i1">
+                     <title>Maṣḥafa geṣṣawe</title>
+                     
+                     <note>Volume 3 of 3 arranged for the months of the year and major feasts: Sanē, fol. 1v-90v; Ḥamlē, fol. 90v-146r; Naḫasē, fol. 146r-177v; Pāgwmēn, fol. 177v-185v. See also <ref type="mss" corresp="EMML1165">Vol. 1 = EMML 1165</ref> and <ref type="mss" corresp="EMML1166">Vol. 2 = EMML 1166</ref>
+                        
+                     </note>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,21 +68,32 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf">185 + 7 </measure>
-                           <dimensions>
-                              <dim>34 x 25.6 cm.</dim>
+                           <measure unit="leaf">185</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>340</height>
+                              <width>260</width>
+                              <depth/>
                            </dimensions>
                         </extent>
-                        <foliation/>
-                        <condition key="good">Stamp of Naggādrās Segē, ff. 1b, 2a, 43a, 107a and 185b. Stamp of the Holy Trinity Cathedral, ff. 2a and 185b.</condition>
+                        <foliation>Stamped modern foliation in Arabic numerals</foliation>
+                        <condition key="good"></condition>
                      </supportDesc>
+                     <layoutDesc><layout columns="3" writtenLines="26"></layout></layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                     </handNote>
+                  </handDesc>
+                  
+                  <additions><list><item xml:id="e1">Copied for ጽጌ፡ ማርያም and his wife እሤተ፡ ማርያም, col. 185v. Colophon with date information, fol. 185. Stamp of Naggādrās Segē, ff. 1b, 2a, 43a, 107a and 185b. Stamp of the Holy Trinity Cathedral, ff. 2a and 185b.</item></list></additions>
+                  <bindingDesc><binding><decoNote xml:id="b1">Stamped leather over wood boards</decoNote></binding></bindingDesc>
+                  
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1926"/>
+                     <origDate when="1926">Ṭeqemt 1919 EC</origDate>
                   </origin>
-                  <provenance>Copied for (Naggādrās) Segē Māryām and his wife 'Eśśēta who gabe it to Makāna Śellāsē (colophon, f. 185b).  In Holy Trinity Cathedral when filmed.</provenance>
+                  <provenance>Copied for (Naggādrās) Segē Māryām ጽጌ፡ ማርያም and his wife 'Eśśēta Maryam እሤተ፡ ማርያም who gave it to Makāna Śellāsē Church, fol. 185v</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -93,6 +127,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change when="2024-05-28" who="ES">updated repository, added link and facs, aligned metadata produced by Jeremy Brown for vHMML</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -101,6 +136,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML1167" passive="EMIP02909"></relation>
+            <relation name="dcterms:relation" active="EMML1167" passive="EMML1165"></relation><relation name="dcterms:relation" active="EMML1167" passive="EMML1166"></relation></listRelation>
       </body>
    </text>
 </TEI>
