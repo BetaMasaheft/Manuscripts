@@ -6,6 +6,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 656</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
@@ -13,7 +14,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 provided by Hill Museum &amp; Manuscript Library.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202491">https://w3id.org/vhmml/readingRoom/view/202491.</ref>
             </p>
-            <p>Fol. 41b-45a filmed twice</p>
+            <p>Fol. 41b-45a filmed twice</p><p>Digitized as EMIP 2750</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +27,66 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 656</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2750/" n="134">EMML 656</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 656</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-5</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2750</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="1r" to="4v"/>
+                     <title ref="LIT2314senafe"> Beauty of Creation</title>
+                     <textLang xml:lang="am"/>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="4v" to="98v"/>
+                     <title type="complete" ref="LIT3505PaulineEpis"/>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="99r" to="102r"/>
+                     <title>The Occasion of the Writing of the Epistles of Paul, <foreign
+                        xml:lang="gez">ምክንያተ፡ ጽሕፈት፡</foreign></title>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="102v" to="112r"/>
+                     <title type="incomplete" ref="LIT1019Actsof"/>
+                     <note>missing after chapter 9</note>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i5">
+                     <locus from="112v" to="130r"/>
+                     <title type="complete" ref="LIT3506CatholicEpis"/>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i6">
+                     <locus from="130r" to="131v"/>
+                     <title type="complete" ref="LIT1548Gessaw">Harmony of the four
+                        Gospels</title>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
+                  <msItem xml:id="ms_i7">
+                     <locus from="132v" to="133v"/>
+                     <title>On the Occasion of the writing of the book of Revelation</title>
+                     <textLang xml:lang="gez"/>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,22 +95,53 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 178</measure>
-                           <dimensions>
-                              <dim>22.2 x 17.4 cm</dim>
+                           <measure unit="leaf">178</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>220</height>
+                              <width>174</width>
                            </dimensions>
                         </extent>
+                        <!-- EMIP:
+                        <extent>
+                                    <measure unit="leaf">134</measure>
+                                    <measure unit="quire"/>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>360</height>
+                                        <width>280</width>
+                                    </dimensions>
+                                </extent>
+                        -->
                         <foliation/>
-                        <condition key="good">Numerous marginal notes in Amharic. The sections of the text (much shorter than chapters, but longer than verses) are numbered in the margin.</condition>
+                        <condition key="good"></condition>
                      </supportDesc>
+                     <layoutDesc>
+                        <layout columns="2"/>
+                     </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <locus from="1r" to="130r"/>
+                        <locus from="132v" to="133v"/>
+                     </handNote>
+                     <handNote xml:id="h2" script="Ethiopic">
+                        <locus from="130r" to="131v"/>
+                     </handNote>
+                  </handDesc>
+                  <additions>
+                     <list><item xml:id="a1">Numerous marginal notes in Amharic. </item>
+                       <item xml:id="e1"> The sections of the text (much shorter than chapters, but longer than verses) are numbered in the margin.</item>
+                        <item xml:id="e2">Stamp of the Patriarchate Library, ff. 1a, 17a, 24a, 36a, 77a, 86a, 93b, 126a, 139a, 152a, 156a, 164a, 175b, 176a, and 177b.  </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate when="1659"/>
+                     <origDate notBefore="1849" notAfter="1750">18-19th century</origDate>
                   </origin>
-                  <provenance>Copied for Eda Krestos of Ma---(illegible), son of Amha Giyorgis (colophon, f. 14b). Stamp of the Patriarchate Library, ff. 1a, 17a, 24a, 36a, 77a, 86a, 93b, 126a, 139a, 152a, 156a, 164a, 175b, 176a, and 177b.  In Patriarchate Library when filmed.</provenance>
+                  <provenance>Copied for Eda Krestos of Ma---(illegible), son of Amha Giyorgis (colophon, f. 14b). In Patriarchate Library when filmed.</provenance>
                </history>
+               
                <additional>
                   <adminInfo>
                      <recordHist>
@@ -88,11 +169,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="am">Amharic</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-08">Created entity EMIP 2750</change>
+         <change when="2021-06-09" who="RL">Added textlang statement to ms items 1-7</change>
+         <change when="2023-01-11" who="ES">merged EMML656and EMIP02750</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -100,6 +184,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML656" passive="EMIP02750"></relation></listRelation>
          <ab/>
       </body>
    </text>

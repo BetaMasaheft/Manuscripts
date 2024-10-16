@@ -6,6 +6,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 695</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
@@ -26,14 +27,25 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 695</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2776/" n="79">EMML 695</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 695</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-31</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2776</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
@@ -45,9 +57,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 78+5</measure>
-                           <dimensions>
-                              <dim>23 x 18 cm</dim>
+                           <measure unit="leaf">77</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm">
+                              <height>235</height>
+                              <width>180</width>
+                              <depth/>
                            </dimensions>
                         </extent>
                         <foliation/>
@@ -55,10 +70,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                      </supportDesc>
                   </objectDesc>
                   <decoDesc>
-                     <decoNote xml:id="d1">
-                        <desc>Miniature, f. 1b: The entrance of a church. Illumination, f. 2a.</desc>
+                     <decoNote xml:id="d1" type="miniature"><locus target="#1v"></locus>
+                        <desc>The entrance of a church</desc>
+                     </decoNote>
+                     <decoNote xml:id="d2" type="frame"><locus target="#2r"></locus>
+                        <desc>Ornamental frame.</desc>
                      </decoNote>
                   </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <desc><locus target="#1r"/> mentions <persName
+                              ref="PRS5226haylase">Ḫayla Sǝlasse</persName> and Patriarch <persName
+                                 ref="PRS2533Baselyos">Basǝlyos</persName></desc>
+                        </item>
+                        <item xml:id="e1">Stamp of the Patriarchate Library, ff. 2a, 46a, 62a, and 77b</item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
@@ -98,6 +126,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-09-06">Created entity for EMIP 2776</change>
+         <change when="2023-01-11" who="ES">merged EMML695 and EMIP02776</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -105,6 +135,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML695" passive="EMIP02776"></relation></listRelation>
          <ab/>
       </body>
    </text>

@@ -6,14 +6,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <titleStmt>
             <title xml:id="t1">EMML 686</title>
             <editor role="generalEditor" key="AB"/>
+            <editor key="RL"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <editionStmt>
             <p>The initial version of this file was created from data kindly
-                                provided by Hill Museum &amp; Manuscript Library.</p>
+               provided by Hill Museum &amp; Manuscript Library. Digitized also by EMIP. </p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/202520">https://w3id.org/vhmml/readingRoom/view/202520.</ref>
             </p>
-            <p>Fol. 53a and 89a filmed twice</p>
+            <p>EMML: Fol. 53a and 89a filmed twice. EMIP: Folios after image 123 were not shot.</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -22,21 +23,45 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Library of the Patriarchate, Addis Ababa</collection>
-                  <idno>MS EMML no. 686</idno>
+                  <repository ref="INS0353EOCP"/>                   
+                  <idno facs="EMIP/Codices/2758/" n="124">EMML 686</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 686</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>UNESCO 1-13</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 1, Patriarch's Library 13</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2758</idno>
+                  </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary/>
+                  <msItem xml:id="ms_i1">
+                     <title type="complete" ref="LIT1560Gospel"/>
+                     <textLang mainLang="gez"></textLang>
+                     <colophon xml:id="coloph1">
+                        <locus target="#121r"/> Colophon gives the <date calendar="ethiopian"
+                           when-custom="1957">1957 EC</date> and mentions <persName
+                              ref="PRS5226haylase"/> and <persName
+                                 ref="PRS2533Baselyos"/>, and scribe Alaqa 'Enqwa Bahrey Tasfaye of Yagawara Qwesqwam
+                     </colophon>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -45,10 +70,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 122+2</measure>
-                           <dimensions>
-                              <dim>35.5 x 27.5 cm</dim>
-                           </dimensions>
+                           <measure unit="leaf">2+ 122</measure>
+                           <measure unit="quire"/>
+                           <dimensions type="outer" unit="mm"/>
+                           <height>355</height>
+                           <width>280</width>
                         </extent>
                         <foliation/>
                         <condition key="good"/>
@@ -59,13 +85,20 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         <persName role="scribe" ref="PRS0000"> Alaqa 'Enqwa Bahrey Tasfaye of Yagawara Qwesqwam/Dabra Tebab</persName>
                      </handNote>
                   </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <desc>Stamp of the Patriarchate Library, ff. 1a, 15a, 39a, 82a, 98a, 112a, 119a, and 121b. </desc>
+                        </item>
+                     </list>
+                  </additions>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1964" notAfter="1965">20th century,
+                     <origDate notBefore="1964" notAfter="1965" evidence="internal-date">20th century,
                                                         1964-65 A.D</origDate>
                   </origin>
-                  <provenance>Copied for Patriarch Baslyos I (colophon, f. 122a). Stamp of the Patriarchate Library, ff. 1a, 15a, 39a, 82a, 98a, 112a, 119a, and 121b.  In Patriarchate Library when filmed.</provenance>
+                  <provenance>Copied for Patriarch Baslyos I (colophon, f. 122a). In Patriarchate Library when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -94,11 +127,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="RL" when="2021-06-16">Created EMIP 2757</change>
+         <change when="2023-04-11" who="ES">merged EMML686 and EMIP02758</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -107,6 +145,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    <text xml:base="https://betamasaheft.eu/">
       <body>
          <ab/>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML686" passive="EMIP02758"></relation></listRelation>
       </body>
    </text>
 </TEI>
