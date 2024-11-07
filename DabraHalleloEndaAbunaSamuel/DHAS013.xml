@@ -1,7 +1,7 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DHAS009" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DHAS013" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -25,12 +25,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS1019DabraHalleloEndaSamuel"/>
-                        <idno>DHAS-009</idno>                    
+                        <idno>DHAS-013</idno>                    
                         </msIdentifier>
                     <msContents>
                        <summary/>
-                       <msItem xml:id="ms_i1">                        
-                           <title type="complete" ref="LIT2384Taamme">Miracles of Mary</title>
+                       <msItem xml:id="ms_i1">
+                           
+                           <title type="complete" ref="LIT3505PaulineEpis">Pauline Epistles</title>
                          <textLang mainLang="gez"/>
                          </msItem>                       
                         
@@ -41,14 +42,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <support>                          
                                            <material key="parchment"/>
                                        </support>
-                                       <extent>
-                                           <measure unit="leaf"/>                                            
-                                           <dimensions type="outer">
-                                               <height unit="mm" cert="medium">300</height>
-                                               <width unit="mm" cert="medium">250</width>
-                                               <depth unit="mm" cert="medium">70</depth>
+                                       <extent>                                          
+                                                       <measure unit="leaf" quantity="171">171</measure>                                  
+                                                       <dimensions type="outer" unit="mm">
+                                                           <height cert="low">250</height>
+                                                           <width cert="low">220</width>
+                                                           <depth cert="low">90</depth>
+                                                           
                                            </dimensions>
-                                       </extent>                     
+                                       </extent>   
+                            <foliation>Foliated; the last leaves after <locus target="#170v"/> are paginated, by mistake.</foliation>
+                            <condition key="deficient">The manuscript is worn. The back board is broken. 
+                                The leather cover is preserved only on the inner sides of the boards. 
+                                Strong discolouration along the margins on <locus target="#3v"/> and <locus target="#172v"/>.
+                            </condition>
+                            
                          </supportDesc>
             
                          <layoutDesc>
@@ -59,8 +67,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </objectDesc>
                        <handDesc>
                            <handNote xml:id="h1" script="Ethiopic">
-                               <seg type="script">18th/19th-century script.</seg>
-                               <seg type="ink">Black; red.</seg>                                                                                  
+                               <seg type="script">18th-century script.</seg>
+                               <seg type="ink">Black; red.</seg> 
+                               <desc> Careful, regular; by a well-trained scribe (similar to the hand of 
+                                   <persName ref="PRS12076ZawaldaMaryam">Zawalda Māryām</persName>).</desc>
                            </handNote>                           
                        </handDesc>                       
                        
@@ -68,13 +78,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          <bindingDesc>
                              <binding contemporary="false">
                                  <decoNote xml:id="b1" type="Boards">Wooden boards.</decoNote>
-                                 <decoNote xml:id="b2" type="Cover">Blind-tooled leather cover; 
-                                     <term key="textileInlay">textile inlays</term>.</decoNote>
-                                 <decoNote xml:id="b3" type="Other">Textile chemise.</decoNote>
+                                 <decoNote xml:id="b2" type="Cover">Blind-tooled leather cover.</decoNote>
+                                 <decoNote xml:id="b3" type="SewingStations">Two pairs of sewing stations.</decoNote>
                                  <decoNote xml:id="b4" type="bindingMaterial">
                                      <material key="wood"/>
-                                     <material key="leather"/>
-                                     <material key="textile"/>
+                                     <material key="leather"/>                                  
                                  </decoNote>
                                  
                              </binding>
@@ -84,8 +92,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                       <history>
                          <origin>
-                           <origDate notBefore="1700" notAfter="1899" source="lettering">18th/19th century</origDate>. 
-                             
+                           <origDate notBefore="1700" notAfter="1799" source="lettering">18th</origDate>. 
+                             The manuscript was bought by ʾabbā Gabra Dǝngǝl (<locus target="#167vb"/>).
                             </origin>
                       </history>
                 </msDesc>
@@ -104,9 +112,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <term key="ChristianLiterature"/>
                                   <term key="ZaMa"/>
                     
-                    <term key="Miracle"/>
-                    <term key="Apocrypha"/>
-                    <term key="Gon"/>
+                    <term key="Bible"/>
+                    <term key="NewTestament"/>                    
                
                               </keywords>
             </textClass>
@@ -116,8 +123,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>              
-            <change who="DN" when="2024-05-06">recorded in situ.</change>
-            <change who="DN" when="2024-10-17">created entity with rudimentary description.</change>
+            <change who="DN" when="2024-05-07">Digitized in situ</change>
+            <change who="DN" when="2024-10-29">Created entity with rudimentary description.</change>
         </revisionDesc>
     </teiHeader>
     <text>
