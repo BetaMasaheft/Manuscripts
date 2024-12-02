@@ -43,14 +43,35 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">128</measure>
+                                    <measure unit="leaf" quantity="129">128+1</measure>
                                     <dimensions type="outer" unit="in">
                                         <height>10.25</height>
                                         <width>9</width>
                                     </dimensions>
                                 </extent>
+                                <foliation>Foliation by the library in the upper right corner. One unnumbered blank leaf at the end, referred to
+                                as <locus target="#i"/> in the library's digitization.</foliation>
+                                <condition key="good"/>
                             </supportDesc>
                         </objectDesc>
+                        
+                        <bindingDesc>
+                            <binding contemporary="false" xml:id="binding">
+                                <decoNote xml:id="b1" type="Boards">Two wooden boards. Both inner boards are darkened around the edges, 
+                                    possibly showing traces of a former cover.</decoNote> 
+                                <decoNote xml:id="b2" type="Cover">Blind-tooled leather <term key="quarterCover">quarter cover</term>
+                                    (with the gilded title and shelfmark on the spine).</decoNote> 
+                                <decoNote xml:id="b3" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                </decoNote>
+                                <decoNote xml:id="b4" type="SewingStations">4</decoNote> 
+                                <decoNote xml:id="b5" type="SewingStations">Sewing stations are used in an irregular way.</decoNote> 
+                                <decoNote xml:id="b6">The manuscript has been rebound in the library. Possibly both wooden boards have been replaced, 
+                                    and a blind-tooled quarter cover added.</decoNote>
+                            </binding>
+                        </bindingDesc>
+                        
                     </physDesc>
                     <history>
                         <origin>
@@ -76,6 +97,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 
                                 </source>
                             </recordHist>
+                            <custodialHist>
+                                <custEvent type="restorations" subtype="modern"/>
+                            </custodialHist>
                         </adminInfo>
                     </additional>
                     <msPart xml:id="p1">
@@ -520,11 +544,21 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">127</measure>
+                                    <measure unit="leaf" quantity="128">127+1</measure>
+                                    <locus from="1" to="127"/>
+                                    <locus target="#i"/>
                                 </extent>
                             </supportDesc>
                             <layoutDesc>
-                                <layout columns="2" writtenLines="23 25"/>
+                                <layout columns="2" writtenLines="23 25">
+                                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                                    <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/J</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                    <note>Both ruling patterns are used in the manuscript.</note>
+                                    <ab type="ruling"> The upper line is written above the ruling,
+                                        the lower line is written above the ruling.</ab>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -587,10 +621,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     </support>
                                     <extent>
                                         <measure unit="leaf">1</measure>
+                                        <locus target="#128"/>
                                     </extent>
                                 </supportDesc>
                                 <layoutDesc>
-                                    <layout columns="2" writtenLines="24"/>
+                                    <layout columns="2" writtenLines="24">
+                                        <ab type="pricking">Pricking and ruling are visible.</ab>
+                                        <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
+                                        <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                        <ab type="ruling">The upper line is written above the ruling,
+                                            the lower line is written above the ruling.</ab>
+                                    </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
@@ -640,6 +681,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2019-10-30">Added link to images</change>
             <change who="DR" when="2019-11-08">Updated Tertag ID</change>
             <change when="2021-01-22" who="DE">Completed the description.</change>
+            <change when="2022-06-24" who="DR">Added layout</change>
+            <change when="2022-07-05" who="DR">Added binding</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
