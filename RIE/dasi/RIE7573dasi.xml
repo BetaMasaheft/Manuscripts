@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
         type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="RIE7573dasi" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -13,6 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                             <resp>Editor</resp>
                         </respStmt>
             <editor key="AB"/>
+            <editor key="AS"/>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -34,15 +35,34 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier/>
+               <msIdentifier>
+                 <settlement>Hawlti</settlement>
+                 <collection>RIÉ</collection>
+                   <idno>RIÉ 6</idno>
+                 <idno type="invNo">JE 1384</idno>
+             </msIdentifier>
                <physDesc>
                   <objectDesc form="Inscription">
                      <supportDesc>
                         <support>
-                           <material key="stone"/>
+                           <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/57"/>
+                            <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/189" xml:lang="fr">Bloc</objectType>
                         </support>
+                        <extent>
+                            <dimensions unit="cm">
+                                <height>20</height>
+                                <width atLeast="22.5" atMost="26">22.5—26</width>
+                            </dimensions>
+                            </extent>
                         <foliation/>
                      </supportDesc>
+                     <layoutDesc>
+                         <layout>
+                         <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1"/>
+                     </layout>
+                         <layout writtenLines="2"/>
+                         <!-- bustrophedon Inscription -->
+                         </layoutDesc>
                   </objectDesc>
                </physDesc>
                <additional>
@@ -52,6 +72,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <listBibl type="catalogue">
                               <bibl>
                                  <ptr target="bm:RIE1"/>
+                                 <citedRange unit="page">74</citedRange>
                               </bibl>
                            </listBibl>
                         </source>
@@ -77,15 +98,73 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <term key="Paks1"/>
             </keywords>
          </textClass>
-         <langUsage/>
+         <langUsage><language ident="en">English</language>
+            <language ident="fr">French</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-29">Created minimal record with link from data sent from DASI project.</change>
+         <change who="AS" when="2021-05-13">added information, text, translation and bibliographic records</change>
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <body>
-         <ab/>
-      </body>
-   </text>
+       <body>
+     <div type="bibliography">
+       <listBibl type="secondary">
+         <bibl xml:id="rie1">
+           <ptr target="bm:RIE1"/>
+           <citedRange unit="page">74</citedRange>
+        </bibl>
+        <bibl>
+          <ptr target="bm:RIE2"/>
+          <citedRange unit="plate">3(6)</citedRange>
+       </bibl>
+         <bibl xml:id="rie3">
+           <ptr target="bm:RIE3B"/>
+           <citedRange unit="page">39</citedRange>
+        </bibl>
+      </listBibl>
+     </div>
+     <div type="edition" source="#rie1">
+     <ab>
+       <!-- text keyed in with Keyman and Diacritics configuration-->
+ <lb n="1" style="text-direction:l-to-r"/>/><gap reason="lost" extent="unknown" unit="character"/> <milestone unit="word"/>ʾd <damage>m</damage>
+  hy <milestone unit="word"/> wṣl <damage> m </damage> hy <milestone unit="word"/> <gap reason="lost" extent="unknown" unit="character"/>
+<lb n="2" style="text-direction:r-to-l"/><gap reason="lost"/><w part="F"><supplied reason="lost"><milestone unit="word"/> w </supplied></w>
+<gap reason="lost"/> hwbs <milestone unit="word"/> wʾl <damage> m </damage>
+qh <milestone unit="word"/> <gap reason="lost" extent="unknown" unit="character"/>
+</ab>
+</div>
+
+    <!-- restoration proposed by the editors basing on the formule used in RIÉ 5 -->
+    <div type="edition" source="#rie1">
+      <ab>
+        <lb n="1"/><w part="F"><supplied reason="lost"><milestone unit="word"/> ywm <milestone unit="word"/></supplied></w><gap reason="lost"/>
+          <lb n="2"/><supplied reason="lost"> mlkw <milestone unit="word"/>dʿmt <milestone unit="word"/> ms̆rqhy <milestone unit="word"/>
+        wmʿrbhy <milestone unit="word"/> ʼd<damage>m</damage>hy wṣl<damage> m </damage> hy <milestone unit="word"/> bnẖ</supplied>
+        <lb n="3"/><supplied reason="lost"> ʿstr <milestone unit="word"/> w </supplied> hws <milestone unit="word"/> wʾl <damage>m</damage>qh
+        <milestone unit="word"/> wḏtḥmym <milestone unit="word"/> wḏtbʿdn <milestone unit="word"/> wʾbk <milestone unit="word"/> wdm <supplied reason="lost"/>
+        </ab>
+        </div>
+
+
+<!-- text copied from PDF and marked up-->
+        <div type="translation" xml:lang="fr" source="#rie3">
+          <ab>
+<lb n="1"/><w part="F"><supplied reason="lost">des rou</supplied></w><gap reason="lost"/>ges aussi bien que des
+<damage>n</damage>oirs<gap reason="lost"/>
+<lb n="2"/><w part="F"><supplied reason="lost">et</supplied></w>
+<gap reason="lost"/>HBS et ʾL <damage> M </damage> QH<gap reason="lost"/>
+</ab>
+</div>
+
+<!-- translation of the plausible restored text copied from PDF and marked up-->
+<div type="translation" xml:lang="fr" source="#rie3">
+  <ab>
+<lb n="1"/><w part="F"><supplied reason="lost">lorsqu’il</supplied></w><gap reason="lost"/>
+<l n="2"/><supplied reason="lost">devint roi de DʿMT, de l’est aussi bien que de l’ouest, des rou</supplied>ges aussi bien que des <damage>n</damage>oirs. Par<supplied reason="lost"/>
+<l n="3"/><supplied reason="lost">ʿAstar et</supplied>HBS et ʾL <damage>M</damage>QH et ḎT ḤMYM et ḎT BʿDN. Ton père est Wadd<supplied reason="lost"/>
+</ab>
+</div>
+</body>
+ </text>
 </TEI>

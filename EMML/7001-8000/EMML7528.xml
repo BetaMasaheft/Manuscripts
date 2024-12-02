@@ -4,7 +4,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title xml:id="t1">EMML 7528</title>
+            <title>EMML 7528</title>
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,16 +31,45 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>, </collection>
-                  <idno>MS EMML no. 7528</idno>
+                  <repository ref="INS0500NALA"/>                   
+                  <idno facs="EMIP/Codices/2889/" n="62">NALE 96</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <collection>National Library of Ethiopia, Addis Ababa</collection>
+                     <idno>MS EMML no. 7528</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO 2-96</idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <idno>UNESCO Collection 2, NALA 96</idno>
+                  </altIdentifier>          
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 2889</idno>
+                  </altIdentifier>
                </msIdentifier>
+               <msContents>
+                  <summary>Hasura Masqal</summary>
+                  <msItem xml:id="ms_i1">
+                     <textLang/>
+                  </msItem>
+               </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
                         <support>
                            <material key="parchment"/>
                         </support>
+                        <extent>
+                           <measure unit="leaf">60</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>190</height>
+                              <width>145</width>
+                              <depth/>
+                           </dimensions>
+                        </extent>
                         <foliation/>
                         <condition key="good"/>
                      </supportDesc>
@@ -52,7 +81,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                <additional>
                   <adminInfo>
                      <recordHist>
-                        <source/>
+                        <source><listBibl type="catalogue"><bibl><ptr target="bm:Unesco1970Manuscripts"/></bibl></listBibl></source>
                      </recordHist>
                   </adminInfo>
                </additional>
@@ -75,6 +104,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change who="PL" when="2018-01-18">Created
+            XML record from EMIP Collection Metadata.xsls</change>
+         <change when="2024-01-31" who="ES">merged EMML 7528 and EMIP 2889</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -82,6 +114,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML7528" passive="EMIP02889"></relation></listRelation>
          <ab/>
       </body>
    </text>
