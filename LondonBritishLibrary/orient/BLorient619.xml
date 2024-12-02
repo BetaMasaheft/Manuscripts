@@ -24,7 +24,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS00001BL"/>
-                        <idno>BLorient619</idno>
+                        <collection>Oriental</collection>
+                        <idno>BL Oriental 619</idno>
                         <altIdentifier><idno>Wright 229</idno></altIdentifier>
                         <altIdentifier><idno>Wright cat. CCXXIX</idno></altIdentifier>
                     </msIdentifier>
@@ -43,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <msItem xml:id="ms_i1.1.1">
 <locus from="1r"/>
-<title type="complete" xml:lang="en" ref="LIT1297Dersan#HomilyChrysostom">Homily of John Chrysostom</title>
+<title type="complete" xml:lang="en" ref="LIT1297Dersan#HomilyJC">Homily of John Chrysostom</title>
 <textLang mainLang="gez"></textLang>
 </msItem>
 
@@ -86,18 +87,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <material key="parchment"/>
           </support>
           <extent>
-              <measure unit="leaf">128</measure>
+              <measure unit="leaf" quantity="129">1+128</measure>
               <measure unit="leaf" type="blank">1</measure>
 <dimensions type="outer" unit="in">
 <height>14.25</height>
 <width>12.5</width>
 </dimensions>
             </extent>
-<foliation>One unnumbered blank leaf at the beginning.</foliation>
+          <foliation>Foliation in the upper right corner by the library. One unnumbered blank leaf at the beginning,
+              referred to as <locus target="#i"/> in the library's digitzation.</foliation>
+          <condition key="good"/>
           </supportDesc>
 
             <layoutDesc>
-                <layout columns="2" writtenLines="16 17"></layout>
+                <layout columns="2" writtenLines="16 17">
+                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                    <ab type="pricking">Primary pricks are mostly visible, horizontal pricks are visible.</ab>
+                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                    <ab type="ruling"> The upper line is written above the ruling,
+                        the lower line is written above the ruling.</ab>
+                </layout>
           </layoutDesc>
           </objectDesc>
           <handDesc>
@@ -140,6 +149,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               </binding>
         </bindingDesc>
 </physDesc>
+                    <history>
+                        <origin>
+                            <origDate notBefore="1700" notAfter="1749" evidence="lettering"/>
+                        </origin>
+                        <provenance>The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area, 
+                            from where it was taken by
+                            <persName ref="PRS9430Tewodros"/> and brought to <placeName ref="INS0101MadhaneAlam"/>. It was then looted 
+                            by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date>.
+                        </provenance>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <listBibl type="catalogue">
+                                        <bibl>
+                                            <ptr target="bm:Wright1877BM"/>
+                                            <citedRange unit="page">151b</citedRange>
+                                        </bibl>
+                                    </listBibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                    </additional>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -164,6 +197,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2020-12-09">Created entity</change>
+            <change who="DR" when="2022-06-09">Added layout</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -171,7 +205,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </facsimile>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
         </body>
     </text>
 </TEI>
