@@ -232,51 +232,73 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"/></support>
+                                    <material key="parchment"/>
+                                </support>
                                 <extent>
                                     <measure unit="leaf">110</measure>
-                                    
+                                    <measure unit="leaf" type="blank">5</measure>
+                                    <locus from="1r" to="2v"/>
+                                    <locus from="108r" to="110v"/>
                                     <dimensions type="outer" unit="mm">
                                         <height unit="mm"> 160</height>
                                         <width unit="mm">105</width>
                                     </dimensions>
                                 </extent>
-                                <collation>12 numbered quires and 1 unnumbered quire (ff. 1-6)</collation>
-                                <condition key="good"/>
                             </supportDesc>
-                            <layoutDesc><layout columns="2" writtenLines="14"></layout></layoutDesc>
+                            <layoutDesc>
+                                <layout columns="2" writtenLines="14"/>
+                            </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic"><seg type="script">large neat letters</seg></handNote>                            
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <desc>Large and careful hand.</desc>
+                            </handNote>                            
                         </handDesc>
                         
                         <additions>
                             <list>
                                 
                                 <item xml:id="e1">
-                                    
-                                    <desc>pages 1r-2v and 108r-110v are blank</desc>
+                                    <desc>The manuscript was copied for a large family, composed of the following members (see also the helpful family tree in 
+                                        <bibl>
+                                            <ptr target="bm:Strelcyn1976Catalogue"/>
+                                            <citedRange unit="page">16</citedRange>
+                                        </bibl>):
+                                        of Fesseha Giyorgis and his wife Walatta Hawaryat; 
+                                        their children Marta, Walda Madhen, Sebhat La-Ab, Eqba Giyorgis, Kefla Mikael, and Eleni; the latter's husband Salomon,
+                                        their son Walda Mikael, and his children Mikael, Gabra Maryam and Hayla Malakot</desc>
                                 </item>
                                 
                                 <item xml:id="e2">
-                                    <locus target="#2v"></locus>
-                                    <desc type="StampExlibris">ex libris Carlo Conti Rossini</desc>
+                                    <locus target="#2v"/>
+                                    <desc type="StampExlibris">Ex libris <persName ref="PRS3182ContiRo">CCR</persName></desc>
                                 </item>
                             </list>
                         </additions>
+                        
                         <bindingDesc>
                             <binding>
-                                <decoNote xml:id="b1"> wooden boards covered in stamped leather, kept in leather bag</decoNote>
-                                <decoNote xml:id="b2">A brown leather lace and a piece of brocade in green, red, gold
-                                    and purple serve as bookmarks</decoNote>
+                                <decoNote xml:id="b1"> Wooden boards covered in blind-tooled leather.</decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                <material key="leather"/>
+                                </decoNote>
+                                <decoNote type="SlipCase" xml:id="b3">Kept in a two-piece leather case (<foreign xml:lang="gez">māḫdar</foreign>).</decoNote>
+                                <decoNote xml:id="b4">A brown leather strap and a piece of brocade in green, red, gold
+                                    and purple serve as bookmarks, maybe as <term key="leafTabMark">leaf tab marks</term>.</decoNote> 
                             </binding>
                         </bindingDesc>
                     </physDesc>
+                    
                     <history>
                         <origin>
-                            <origDate notBefore="1850" notAfter="1950">19th-20th century</origDate>
+                            <origDate notBefore="1800" notAfter="1949">19th century–1949</origDate>
                         </origin>
-                        <provenance>The manuscript was copied for a large family of Fesseha Giyorgis and his wife Walatta Hawaryat; their children Marta, Walda Madhen, Sebhat La-Ab, Eqba Giyorgis, Kefla Mikael, and Eleni; the latter's husband Salomon, their son Walda Mikael, and his children Mikael, Gabra Maryam and Hayla Malakot</provenance>
+                        <provenance>The manuscript was either acquired by <persName ref="PRS3182ContiRo" role="owner">Carlo Conti Rossini</persName> 
+                            during his stay in <placeName ref="LOC2991Eritre">Eritrea</placeName>
+                            (<date notBefore="1899" notAfter="1903">1899–1903</date>) or sent to him after his return to Europe.</provenance>
+                        <acquisition>The manuscript passed into the possession of the Biblioteca dell’Accademia Nazionale dei Lincei in <date when="1950">1950</date>, following Conti Rossini’s death in <date when="1949">1949</date> 
+                            (see <ref target="https://www.menestrel.fr/?-Roma-&amp;lang=fr#845">Menestrel</ref>).</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
