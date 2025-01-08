@@ -60,17 +60,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">256</measure>
+                                    <measure unit="leaf" quantity="258">2+256</measure>
                                     <measure unit="leaf" type="blank">2</measure>
-                                    <note>Two unnumbered blank leaves at the beginning.</note>
                                     <dimensions type="outer" unit="in">
                                         <height>15</height>
                                         <width>13.25</width>
                                     </dimensions>
                                 </extent>
+                                <foliation>Foliation in the upper right corner by the library. Two unnumbered blank leaves at the beginning,
+                                referred to as <locus from="i" to="ii"/> in the library's digitization.</foliation>
+                                <condition key="good"/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout columns="2" writtenLines="20"/>
+                                <layout columns="2" writtenLines="20">
+                                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                                    <ab type="pricking">Primary pricks and horizontal pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A-1A1A/0-0/0-0/J</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A-1A1A/0-0/0-0/C</ab>
+                                    <note>The ruled horizontal lines are mostly confined between the vertical lines (pattern J), but occasionally ruling
+                                    is continuous.</note>
+                                    <ab type="ruling"> The upper line is written above the ruling,
+                                        the lower line is written above the ruling.</ab>
+                                </layout>
                             </layoutDesc>
 
                         </objectDesc>
@@ -135,6 +146,22 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             </list>
                         </additions>
                         
+                        <bindingDesc>
+                            <binding contemporary="false" xml:id="binding">
+                                <decoNote xml:id="b1" type="Boards">Two wooden boards.</decoNote> 
+                                <decoNote xml:id="b2" type="Cover">Blind-tooled leather <term key="quarterCover">quarter cover</term>
+                                    (with the gilded title and shelfmark on the spine).</decoNote> 
+                                <decoNote xml:id="b3" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                </decoNote>
+                                <decoNote xml:id="b4" type="SewingStations">4</decoNote> 
+                                <decoNote xml:id="b5" type="SewingStations">Sewing stations are used in an irregular way.</decoNote> 
+                                <decoNote xml:id="b6">The manuscript has been rebound in the library. Possibly both wooden boards have been replaced, 
+                                    and a blind-tooled quarter cover added.</decoNote>
+                            </binding>
+                        </bindingDesc>
+                        
                     </physDesc>
 
                     <history>
@@ -159,6 +186,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     </listBibl>
                                 </source>
                             </recordHist>
+                            <custodialHist>
+                                <custEvent type="restorations" subtype="modern"/>
+                            </custodialHist>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -192,6 +222,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="DR" when="2018-09-11">Created record</change>
             <change who="DR" when="2019-06-04">Added link to images</change>
             <change who="DR" when="2019-04-06">Added decoration reference</change>
+            <change when="2022-06-09" who="DR">Added layout</change>
+            <change when="2022-07-04" who="DR">Added binding</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KopCodEtiopAdd4" xml:lang="en" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
@@ -33,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <!--Alternative titles: I-5) Wǝddase wä-gǝnay lä-ˀǝmmä ˀAdonay “Praise and Exaltation to the Mother of Adonai”-->
                      <!--Author: I-1) Traditionally attributed to Kind David I-2) Traditionally attributed to King Solomon-->
                   </summary>
-                  <msItem xml:id="ms_i1">
+              <!--     <msItem xml:id="ms_i1">
                      <listBibl type="editions">
                         <bibl>
                            <ptr target="I-3) Cleave 1951"/>
@@ -56,14 +56,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <ptr target=" cp. Grohmann 1919:383-394."/>
                         </bibl>
                      </listBibl>
-                  </msItem>
+                  </msItem>  -->
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
-                        <support>
-                           <material key=""/>
-                        </support>
                         <extent>209 (number 130 has been skipped) in 21 quires<dimensions type="outer">
                               <height unit="cm">19.5</height>
                               <width unit="cm">19</width>
@@ -167,14 +164,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
+                        <layout xml:id="l1">
+                          <locus from="4r" to="191v">fols. 4r-191v</locus>
                            <dimensions unit="mm">
                               <height unit="cm">130</height>
-                              <width unit="cm">120</width>: fols. 4r-191v</dimensions>
+                              <width unit="cm">120</width>
+                            </dimensions>
+                            <ab type="ruling" subtype="pattern">1A-1A/0-0/0-0/C</ab>
+                            </layout>
+                            <layout xml:id="l2">
+                              <locus from="192r" to="208v">fols. 192r-208v</locus>
                            <dimensions unit="mm">
                               <height unit="cm">130</height>
-                              <width unit="cm">140</width>: fols. 192r-208v</dimensions>
-                           <ab type="ruling">1A-1A/0-0/0-0/C: fols. 4r-191v 1A-1A-1A1A/0-0/0-0/C: fols. 192r-208v</ab>
+                              <width unit="cm">140</width></dimensions>
+                           <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
                         </layout>
                         <layout><!--Layout One column: fols. 4r-191v Two columns: fols. 192r-208v-->
                            <p>One column: fols. <locus from="4r" to="191v"/>
@@ -183,7 +186,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            </p>
                            <!--lines to folio 14 lines on fols. 4r-33v  17 lines on fols. 34r-208v-->
                            <p>
-                              <locus target="#14"/>lines on fols. <locus from="4r" to="33v"/> 
+                              <locus target="#14"/>lines on fols. <locus from="4r" to="33v"/>
                            </p>
                            <p>
                               <locus target="#17"/>lines on fols. <locus from="34r" to="208v"/>
@@ -203,14 +206,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <p>- The Ethiopic word for “king” is consequently spelled nǝgwǝś, ንጕሥ (e.g., fols. <locus target="#23r #25r #53v #54r #100v #173r"/>etc.), not as the standard form nǝguś (ንጉሥ). </p>
                         </note>
                         <seg type="rubrication">
-                           <p>Executed mostly in the main hand. On fols. <locus from="184r" to="191v"/>, the first rubricated lines of the Song of Songs’ sections were written in a much hand. Lacunas for the rubricated elements have not been filled on fols. <locus target="#192ra"/>(the first text line) and fols. <locus from="203" to="208"/>.</p>
+                           Executed mostly in the main hand. On fols. <locus from="184r" to="191v"/>, the first rubricated lines of the Song of Songs’ sections were written in a much hand. Lacunas for the rubricated elements have not been filled on fols. <locus target="#192ra"/>(the first text line) and fols. <locus from="203" to="208"/>.
                            <!--Executed mostly in the main hand. On fols. 184r-191v, the first rubricated lines of the Song of Songs’ sections were written in a much hand. Lacunas for the rubricated elements have not been filled on fols. 192ra (the first text line) and fols. 203-208.-->
                         </seg>
                      </handNote>
                   </handDesc>
                   <decoDesc>
-                     
-                     <decoNote type="ordering" xml:id="d2">
+
+                     <decoNote type="other" xml:id="d2">
+                       ]<!-- ordering -->
                         <p>None.</p>
                         <!--None.-->
                      </decoNote>
