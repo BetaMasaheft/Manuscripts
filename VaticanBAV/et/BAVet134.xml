@@ -29,7 +29,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <msContents>
                         <msItem xml:id="ms_i1">
-                            <title type="complete" ref="LIT2361somade"></title>
+                            <title type="complete" ref="LIT2361somade"/>
+                            
+                            
+                            
+                            
+                            
+                            
                         </msItem>
                     </msContents>
                     
@@ -37,20 +43,72 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <objectDesc form="Codex">
                             <supportDesc>
                                 <support>
-                                    <material key="parchment"/></support>
-                                
-                                
-                                
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf">72</measure>
+                                    <measure unit="leaf" type="blank">11</measure>
+                                    <locus from="1v" to="4v"/>
+                                    <locus from="71r" to="72v"/>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>188</height>
+                                        <width>140</width>
+                                    </dimensions>
+                                </extent>
+                                <foliation/>
+                                <collation>
+                                    <signatures>
+                                        Quires are unmarked.
+                                    </signatures>
+                                    <note>According to the catalogue, the manuscript consists of 5 quinions, preceded by one binion and followed by one quaternion.
+                                        This description only adds up to 72 folios assuming that ‘5 quinions’ is a typo for ‘6 quinions’.</note>
+                                </collation>
                             </supportDesc>
-                            
+                            <layoutDesc>
+                                <layout writtenLines="20"/>
+                            </layoutDesc>
                         </objectDesc>
+                        
                         <handDesc>
-                            <handNote xml:id="h1" script="Ethiopic"></handNote>                            
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <seg type="script">19th- or early 20th-century script</seg>
+                                <date notBefore="1800" notAfter="1925"/>                                
+                                <seg type="rubrication">Headings.</seg>
+                            </handNote>
                         </handDesc>
                         
+                        <additions>
+                            <list>
+                                <item xml:id="a1">
+                                    <locus target="#1r"/>
+                                    <desc type="">Title of the book</desc> <!-- There is no value for the "title" of the book -->
+                                    <q xml:lang="gez">ጾመ፡ ድጓ፡</q>
+                                </item>
+                            </list>
+                        </additions>
                         
-                        
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <decoNote xml:id="b1">Two wooden boards.</decoNote>
+                                <decoNote xml:id="b2" type="bindingMaterial">
+                                    <material key="wood"/>
+                                </decoNote>                                
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    
+                    <history>
+                        <origin>
+                            <origDate notBefore="1800" notAfter="1899"/>                            
+                        </origin>
+                        <provenance>According to the account on the manuscripts’ provenance given by Eugène Tisserant, this manuscript is among those
+                            acquired by <persName ref="PRS4805Grebaut" role="owner"/> in <date when="1925"/> with funds of
+                            <persName ref="PRS14055SaintJ">Jean Saint</persName>. 
+                            The manuscripts originated from Šawā (ʾAddis ʾAbabā, Dabra Libānos, Dabra Bǝrhān),
+                            Goǧǧām (Dimā Giyorgis, Marṭula Māryām, Dabra Warq) and Bagemdǝr (Gondar, ʾAzazo Takla Hāymānot) and very few from Tǝgrāy.
+                        </provenance>
+                        <acquisition when="1928">The manuscript entered the library on <date>18 April 1928</date>.</acquisition>
+                    </history>
                     
                     <additional>
                         <adminInfo>
@@ -62,11 +120,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                             <citedRange unit="page">537–540</citedRange>
                                         </bibl>
                                     </listBibl>
+                                    <listBibl type="secondary">
+                                        <bibl>
+                                            <ptr target="bm:GrebTiss1936Codices"/>
+                                            <citedRange unit="page">20</citedRange>
+                                        </bibl>
+                                    </listBibl>
                                 </source>
                             </recordHist>
                         </adminInfo>
-                        
-                        
                     </additional>
                 </msDesc>
             </sourceDesc>
@@ -94,11 +156,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
-                
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="JK" when="2024-09-11">Created stub</change>
+            <change who="MV" when="2025-01-15">Added physical description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
