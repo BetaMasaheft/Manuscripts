@@ -126,7 +126,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 have been intentionally erased, but can according to <bibl><ptr target="bm:Marrassini1987manoscrittietiopici"/>
                                 <citedRange unit="page">77</citedRange></bibl> be reconstructed to the year 23 of the reign of Lǝbna Dǝngǝl and the year 183,
                                 the two dates that both give the year <date cert="medium" calendar="gregorian">1530</date> as date of production of the manuscript. 
-                                Whether the agency of the scribe <persName ref="PRS11227ZaraLe" role="scribe" cert="low">ዘርአ፡ ልዑል።</persName> 
+                                Whether the agency of the scribe <persName ref="PRS11227ZaraLe" role="scribe" cert="low">Zarʾa Lǝʿul</persName> 
                                 on the other hand relates to the entire manuscript or yet alone to the last three folios is not clear as well. Since the last bifolium 
                                 <locus target="#q20"/> is written with less care and with another pen, it may have been written by another hand and represent 
                                 a later addition.</note>
@@ -273,13 +273,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        <handDesc><handNote xml:id="h1" script="Ethiopic"><date notBefore="1500" notAfter="1599"/>
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                            <locus from="1r" to="142v"/>
+                            <date notBefore="1500" notAfter="1599"/>                            
                             <seg type="ink">Black, red.</seg>
                             <seg type="rubrication">Numbers of chapters and incipits.</seg>
                             <desc>Script of the 16th century with relatively angular letters, triangular eyelets and the characteristic shape of <foreign xml:lang="gez">ሎ</foreign>.</desc>
-                            <note>Contrary to <bibl><ptr target="bm:Marrassini1987manoscrittietiopici"/><citedRange unit="page">75</citedRange></bibl>, 
-                                who considers <locus from="143r" to="145r"/> to be of a different, more recent hand with a smaller pen, less care and without any rubrication 
-                                on a bifolium, that was attached later to the codex.</note>
+                        </handNote>                            
+                                                      
+                            <handNote xml:id="h2" script="Ethiopic">
+                                <locus from="143r" to="145"/>
+                                <date notBefore="1500" notAfter="1599"/>
+                                <seg type="ink">Black.</seg>
+                                <desc>Of the same period as <ref target="#h1">Hand 1</ref>. The name of the scribe 
+                                    <persName ref="PRS11227ZaraLe" role="scribe" cert="low">priest Zarʾa Lǝʿul</persName> is mentioned
+                                    on <locus target="#143r"/>. 
+                                    <bibl><ptr target="bm:Marrassini1987manoscrittietiopici"/><citedRange unit="page">75</citedRange></bibl>, 
+                                considers <locus from="143r" to="145r"/> to have beeen written  in a different, more recent hand with (with less care, without any rubrication, using
+                                    a pen with narrow nib, on a bifolium that was attached later to the codex). However, both hands are very similar; it cannot be excluded that both 
+                                    belong to the same scribe.
+               
+                                </desc>
                         </handNote>
                         </handDesc>
                         <decoDesc>
@@ -394,7 +409,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 </item>
                                 <item xml:id="e15">
                                     <locus target="#2r, #5v, #8r, #10v, #11v, #23v, #36r, #46r, #84v, #91r, #98r, #110r, #114v, #117r"/>
-                                    <desc type="Correction">Erasures, corrections and rewrites for example apparently by <ref type="hand" corresp="h2"/></desc>
+                                    <desc type="Correction">Erasures, corrections and rewrites, also by <ref type="hand" corresp="h2"/></desc>
                                 </item>
                             </list>
                         </additions>
@@ -411,7 +426,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             <origDate notBefore="1530" notAfter="1531" cert="medium"/>
                             <note>According to a note on <locus target="143r"/> the manuscript was produced in the 23rd year of <persName ref="PRS6229LebnaDe"/>
                                 and the "183rd year of Mercy" (= cycle 3 of the Era of the martyrs), that agree with each other correspond to the year 1530 to 1531 
-                                which is also in agreement with the palaeography. Since this note was written most likely by another hand on a bifolium, that was 
+                                which is also in agreement with the palaeography. Since this note was written most on a bifolium, that was 
                                 probably attached later, it is nevertheless not certain, whether it is precisely correct.</note>
                         </origin>
                     </history>
@@ -443,12 +458,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </xi:include>
       </encodingDesc>
         <profileDesc>
+            <textClass><keywords><term key="Chronography"></term></keywords></textClass>
             <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language><language ident="it">Italian</language>
                 <language ident="la">Latin</language></langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="PL" when="2019-02-21">Created catalogue entry</change>
             <change when="2023-04-12" who="CH">Updated physical description</change>
+            <change who="DN" when="2024-06-22">SOme revisions concerning the scribal hands</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
