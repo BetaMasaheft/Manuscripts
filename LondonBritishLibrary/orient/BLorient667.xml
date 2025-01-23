@@ -91,16 +91,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">1+198+1</measure>
+                                    <measure unit="leaf" quantity="200">1+198+1</measure>
                                     <measure unit="leaf" type="blank">2</measure>
-                                      <locus target="#i  #ii"/>
-                                    <note>One blank leaf each at the beginning and end.</note>
                                     <dimensions type="outer" unit="in">
                                         <height>15.75</height>
                                         <width>14.25</width>
                                     </dimensions>
                                 </extent>
-                                
+                                <foliation>Foliation in the upper right corner by the library. One blank leaf each at the beginning and end,
+                                    both referred to as <locus target="#i"/> in the library's digitization.</foliation>
                                 <collation>
                                     <list> 
                                         <item xml:id="q1" n="A">
@@ -253,6 +252,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                 <layout columns="2" writtenLines="28 31">
                                     <note>All subdivisions of the text (commemorations and salām-hymns) begin in a new line, the end of the line
                                     after the end of the previous text is thus empty.</note>
+                                    <ab type="pricking">Pricking and ruling are visible.</ab>
+                                    <ab type="pricking">Primary pricks are visible, horizontal pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                    <note>It is not well visible on all leaves whether horizontal ruling is continuous or contained between the vertical lines.</note>
+                                    <ab type="ruling"> The upper line is written above the ruling,
+                                        the lower line is written above the ruling.</ab>
                                 </layout>
                             </layoutDesc>
                             
@@ -349,13 +354,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </additions>
                         
                         <bindingDesc>
-                        <binding contemporary="non-Ethiopian" xml:id="binding">
-                            <decoNote xml:id="b1">European binding.</decoNote>
-                            <decoNote xml:id="b2" type="bindingMaterial">
-                                <material key="wood"/>
-                                <material key="leather"/>
-                            </decoNote>
-                        </binding>
+                            <binding contemporary="false" xml:id="binding">
+                                <decoNote xml:id="b1" type="Boards">Two wooden boards.</decoNote> 
+                                <decoNote xml:id="b2" type="Cover">Blind-tooled leather <term key="quarterCover">quarter cover</term>
+                                    (with the gilded title and shelfmark on the spine).</decoNote> 
+                                <decoNote xml:id="b3" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                </decoNote>
+                                <decoNote xml:id="b4" type="SewingStations">4</decoNote> 
+                                <decoNote xml:id="b5" type="SewingStations">Sewing stations are used in an irregular way.</decoNote> 
+                                <decoNote xml:id="b6">The manuscript has been rebound in the library. Possibly both wooden boards have been replaced, 
+                                    and a blind-tooled quarter cover added.</decoNote>
+                            </binding>
                         </bindingDesc>
                     </physDesc>
                     
@@ -364,8 +375,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                             
                             <origDate notBefore="1607" notAfter="1632" evidence="lettering"/>
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName> 
-                            expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
+                        <provenance>The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area, 
+                            from where it was taken by
+                            <persName ref="PRS9430Tewodros"/> and brought to <placeName ref="INS0101MadhaneAlam"/>. It was then looted 
+                            by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date>.
                         </provenance>
                         
                     </history>
@@ -383,6 +396,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     
                                 </source>
                             </recordHist>
+                            <custodialHist>
+                                <custEvent type="restorations" subtype="modern"/>
+                            </custodialHist>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -414,6 +430,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2021-10-18">Created catalogue entry</change>
+            <change who="DR" when="2022-06-14">Added layout</change>
+            <change when="2022-07-04" who="DR">Added binding</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>

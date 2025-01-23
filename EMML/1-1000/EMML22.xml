@@ -13,7 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 provided by Hill Museum &amp; Manuscript Library.</p>
             <p>Permalink: <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/201864">https://w3id.org/vhmml/readingRoom/view/201864.</ref>
             </p>
-            <p>Fol. 92a not filmed; fol. 70a and 128b filmed twice</p>
+            <p>Fol. 92a not filmed; fol. 70a and 128b microfilmed twice</p>
          </editionStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -26,17 +26,33 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                         Attribution-ShareAlike 4.0. </p>
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
                <msIdentifier>
-                  <repository ref="INS0004HMML"/>
-                  <collection>Parish Church, Addis Ababa</collection>
-                  <idno>MS EMML no. 22</idno>
-               </msIdentifier>
+                  <repository ref="INS0646ASM"/>                   
+                  <idno facs="EMIP/Codices/1288/" n="188">EMML 22</idno>
+                  <altIdentifier>
+                     <repository ref="INS0004HMML"/>
+                     <idno>EMML no. 22</idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno>EMIP Mārqos Addis 3 </idno>
+                  </altIdentifier>                  
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"></repository>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 1288</idno>
+                  </altIdentifier>
+               </msIdentifier>              
+               
                <msContents>
-                  <summary/>
+                  <summary>Miracles of Mary, Ta’āmmǝra Māryām, ተአምረ፡ ማርያም፡</summary>
+                  <msItem xml:id="ms_i1">
+                     <title ref="LIT2384Taamme"></title>
+                     <textLang mainLang="gez">Gǝ‘ǝz</textLang>
+                  </msItem>
                </msContents>
                <physDesc>
                   <objectDesc form="Codex">
@@ -46,8 +62,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                         </support>
                         <extent>
                            <measure unit="leaf"> 178</measure>
+                           <!-- EMIP metadata: <measure unit="leaf">v + 175</measure> -->
                            <dimensions>
-                              <dim>50 x 44 cm.</dim>
+                              <dim>50 x 44 cm</dim>
                            </dimensions>
                         </extent>
                         <foliation/>
@@ -89,11 +106,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
+         <change when="2020-04-17" who="RL">corrected ǝ character in the record EMIP01288</change>
+         <change when="2023-01-11" who="ES">merged EMML22 and EMIP01288</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -101,6 +120,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
+         <listRelation><relation name="betmas:formerlyAlsoListedAs" active="EMML22" passive="EMIP01288"></relation></listRelation>
          <ab/>
       </body>
    </text>

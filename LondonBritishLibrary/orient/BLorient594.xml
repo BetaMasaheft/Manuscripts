@@ -3,6 +3,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BLorient594" xml:lang="en" type="mss">
     <teiHeader>
+
         <fileDesc>
             <titleStmt>
                 <title>ʾArganona wǝddāse, Wǝddāse Māryām, Wǝddāse ʾAmlāk</title>
@@ -321,17 +322,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <p>The last folio is mutilated.</p>
                                 </support>
                                 <extent>
-                                    <measure unit="leaf">198</measure>
+                                    <measure unit="leaf" quantity="198">198</measure>
                                     <dimensions type="outer" unit="in">
                                         <height>10.5</height>
                                         <width>9.125</width>
                                     </dimensions>
                                 </extent>
-
+                                <foliation>Foliation in the upper right corner by the library.</foliation>
+                                <condition key="good"/>
                             </supportDesc>
 
                             <layoutDesc>
-                                <layout columns="2" writtenLines="20 21"/>
+                                <layout columns="2" writtenLines="20 21">
+                                    <ab type="pricking">Pricking and ruling are partly visible.</ab>
+                                    <ab type="pricking">Primary pricks are partly visible, horizontal pricks are partly visible.</ab>
+                                    <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                                    <ab type="ruling"> The upper line is written above the ruling,
+                                        the lower line is written above the ruling.</ab>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
 
@@ -339,7 +347,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                             <handNote script="Ethiopic" xml:id="h1">
                                 <desc>The manuscript is written in a fine hand, of the <date>17th century.</date></desc>
-                              <date notBefore="1700" notAfter="1800" resp="PRS10171Wright"/>
+                              <date notBefore="1600" notAfter="1700" resp="PRS10171Wright"/>
                             </handNote>
 
                         </handDesc>
@@ -366,7 +374,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                                 <item xml:id="a2">
                                 <locus target="#197r"/>
-                                <desc type="GuestText"><title ref="LIT3984basamay">Hymn to the blessed Virgin Mary</title></desc>
+                                <desc type="GuestText"><title ref="LIT2967RepCh248">Hymn to the blessed Virgin Mary</title></desc>
                                 <q xml:lang="gez"><seg part="I">በሰማይ፡ ወምድር፡ አልብየ፡ ባዕደ፡ አበ፡ ወእመ፡ እኅተ፡ ወውሉደ፡ ማርያም፡ ድንግል፡ እትአመነኪ፡ ገሃደ፡</seg></q>
                                 </item>
 
@@ -425,8 +433,18 @@ see <locus target="#2v">f. 2v</locus>, <locus target="#19r">19r</locus> et al.</
                             <origDate notBefore="1600" notAfter="1700"></origDate>
 
                         </origin>
-                        <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName>
-                            expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
+                        <provenance>The manuscript had very probably belonged to a church in the <placeName ref="LOC3577Gondar"/> area,
+                            from where it was taken by
+                            <persName ref="PRS9430Tewodros"/> and brought to <placeName ref="INS0101MadhaneAlam"/>. It was then looted
+                            by the British <persName ref="PRS7484Napier">Napier</persName> expedition in <date>1868</date>.
+                            The manuscript was then sent to the Royal Library at Windsor and
+                            presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
+                            <listBibl type="secondary">
+                                <bibl>
+                                    <ptr target="bm:Wright1877BM"/>
+                                    <citedRange unit="page">iv</citedRange>
+                                </bibl>
+                            </listBibl>
                         </provenance>
 
                     </history>
@@ -466,11 +484,17 @@ see <locus target="#2v">f. 2v</locus>, <locus target="#19r">19r</locus> et al.</
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2020-11-17">Created entity</change>
+            <change when="2022-03-05" who="DR">Added link to images</change>
+            <change when="2022-06-08" who="DR">Added layout</change>
+            <change when="2022-09-14" who="MKr">Corrected date</change>
         </revisionDesc>
     </teiHeader>
+    <facsimile>
+        <graphic url="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_594_f001r"/>
+    </facsimile>
     <text>
         <body>
-            <div type="bibliography"/><!---->
+            <div type="bibliography"/>
         </body>
     </text>
 </TEI>
