@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BNFabb94" xml:lang="en" type="mss">
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BNFabb94" xml:lang="en" type="mss">
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
@@ -14,8 +15,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </editionStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas:  Eine multimediale
-                    Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -29,257 +30,355 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <collection>Manuscrits orientaux</collection>
                         <collection>Fonds éthiopien</collection>
                         <collection>d'Abbadie</collection>
-                        <idno facs="https://gallica.bnf.fr/ark:/12148/btv1b52520186b">BnF Éthiopien d'Abbadie 94</idno>
-                          </msIdentifier>
+                        <idno facs="https://gallica.bnf.fr/ark:/12148/btv1b52520186b">BnF Éthiopien
+                            d'Abbadie 94</idno>
+                    </msIdentifier>
 
-                          <physDesc>
-                              <objectDesc form="Codex">
-                                  <supportDesc>
-                                      <support>
-                                 <material key="parchment">Parchment</material>
-                                         </support>
-                                      <extent>
-                                          <measure unit="leaf">62</measure>
-                                          <measure unit="leaf" type="blank"/>
-                                          <locus target="#1r #1v #32v #33r #33v #55v #56r #63r #63v"/>
-                                          <dimensions type="outer" unit="mm">
-                                            <height>210</height>
-                                            <width>150</width>
-                                          </dimensions>
-                                      </extent>
+                    <physDesc>
+                        <objectDesc form="Codex">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment">Parchment</material>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf" quantity="64">i+62+ii</measure>
+                                    <note>63 folia, according to <bibl><ptr
+                                                target="bm:Fiaccadori1997Ripristino"/></bibl></note>
+                                    <measure unit="leaf" type="blank"/>
+                                    <locus target="#i #1r #32v #33r #33v #55v #56r #56v #ii"/>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>200/210</height>
+                                        <width>150</width>
+                                    </dimensions>
+                                </extent>
+                                <foliation>European foliation in the upper right corner of the
+                                    folia. The initial unfoliated parchment folium is assigned the
+                                    number <locus target="#i">i</locus>. The last unfoliated
+                                    parchment folium assigned the number <locus target="#ii"
+                                        >ii</locus>. </foliation>
+                                <collation>
+                                    <note> According to <bibl><ptr
+                                                target="bm:Fiaccadori1997Ripristino"/></bibl>,
+                                        folios 1 to 63 are blindly ruled (<foreign xml:lang="it"
+                                            >rigatura a secco</foreign>). However, observations of
+                                        the manuscript and its reproductions suggest that only
+                                        folios 2 to 62 are ruled. This discrepancy might indicate
+                                        that two folios—one at the beginning and one at the end—have
+                                        been lost, or that Fiaccadori mistakenly counted unruled
+                                        folios as ruled. Due to these uncertainties, the below
+                                        reconstruction of the first and last quires may be imprecise
+                                        and should therefore be considered with caution. Fiaccadori
+                                        proposed a slightly different collation, excluding the first
+                                        unnumbered folio (which may have been missing at the time)
+                                        and considering folio 1 recto as part of the first quire,
+                                        describing it as 1+8. He also described the last quire as
+                                        consisting of folios 56 to 63, f. 63 being either lost or
+                                        current ii. </note>
+                                    <list>
+                                        <item xml:id="q1" n="A" cert="low">
+                                            <dim unit="leaf">2</dim>
+                                            <locus from="i" to="1"/>
+                                        </item>
+                                        <item xml:id="q2" n="1">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="2r" to="9v" cert="low"/>
+                                        </item>
+                                        <item xml:id="q3" n="2">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="10r" to="17v"/>
+                                        </item>
+                                        <item xml:id="q4" n="3">
+                                            <dim unit="leaf">4</dim>
+                                            <locus from="18r" to="21v"/>
+                                        </item>
+                                        <item xml:id="q5" n="4">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="22r" to="29v"/>
+                                        </item>
+                                        <item xml:id="q6" n="5">
+                                            <dim unit="leaf">4</dim>
+                                            <locus from="30r" to="33v"/>
+                                        </item>
+                                        <item xml:id="q7" n="6">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="34r" to="41v"/>
+                                        </item>
+                                        <item xml:id="q8" n="7">
+                                            <dim unit="leaf">7</dim>
+                                            <locus from="42r" to="48v"/>
+                                        </item>
+                                        <item xml:id="q9" n="8">
+                                            <dim unit="leaf">7</dim>
+                                            <locus from="49r" to="55v"/>
+                                        </item>
+                                        <item xml:id="q10" n="9">
+                                            <dim unit="leaf">8</dim>
+                                            <locus from="56r" to="ii" cert="low"/>
+                                        </item>
+                                    </list>
+                                </collation>
+                                <condition key="good"/>
 
-                                      <foliation>European foliation in the upper right corner of the folia.
-                                        </foliation>
-
-<collation>
-    <note>The quire structure cannot be ascertained on
-        the basis of the available images.</note>
-</collation>
-
-                                      <condition key="good"></condition>
-
-                                      </supportDesc>
+                            </supportDesc>
 
 
-                              </objectDesc>
+                        </objectDesc>
 
-<decoDesc>
-  <decoNote type="ornamentation" xml:id="d1">
-        <locus target="#2r #22r #34r #42r #47r #53r"/>
-        <desc>Simple ornamental bands.</desc>
-    </decoNote>
+                        <decoDesc>
+                            <decoNote type="ornamentation" xml:id="d1">
+                                <locus target="#2r #22r #34r #42r #47r #53r"/>
+                                <desc>Simple ornamental bands.</desc>
+                            </decoNote>
 
-    <decoNote type="ornamentation" xml:id="d2">
-          <locus target="#57r"/>
-          <desc>Ḥarag.</desc>
-      </decoNote>
-    
-    <decoNote type="ornamentation" xml:id="d3">
-        <locus target="#57v #58r"/>
-        <desc>Crux ansata.</desc>
-    </decoNote>
+                            <decoNote type="ornamentation" xml:id="d2">
+                                <locus target="#57r"/>
+                                <desc>Ḥarag.</desc>
+                            </decoNote>
 
-</decoDesc>
+                            <decoNote type="ornamentation" xml:id="d3">
+                                <locus target="#57v #58r"/>
+                                <desc>Crux ansata.</desc>
+                            </decoNote>
+
+                        </decoDesc>
 
 
-                              <additions>
-                                <list>
+                        <additions>
+                            <list>
                                 <item xml:id="a1">
-                                   <desc type="OwnershipNote"/>
-                                   <locus target="#1v"/>
-                                   <q xml:lang="gez">ዝመጽሐፍ፡ ገድሎሙ፡ ለቅዱሳን፡ አባ፡ አቡናፍር፡ ወአባ፡ ኪሮስ፡ ወመልከ፡ ጼዴቅ፡ ወድርሳነ፡ አፍኒን፡ ዘመካነ፡ <placeName ref="INS0329DE">ዳጋ።</placeName></q>
+                                    <desc type="OwnershipNote"/>
+                                    <locus target="#1v"/>
+                                    <q xml:lang="gez">ዝመጽሐፍ፡ ገድሎሙ፡ ለቅዱሳን፡ አባ፡ አቡናፍር፡ ወአባ፡ ኪሮስ፡ ወመልከ፡
+                                        ጼዴቅ፡ ወድርሳነ፡ አፍኒን፡ ዘመካነ፡ <placeName ref="INS0329DE"
+                                            >ዳጋ።</placeName></q>
                                 </item>
-                             </list>
-                            </additions>
-
-                          </physDesc>
-                          <history>
-                              <origin>
-                                <origDate notBefore="1300" notAfter="1500"/>
-                                </origin>
-                                <provenance>The manuscript was bought by
-                                  <persName ref="PRS1071dAbbadi" role="owner">Antoine d'Abbadie</persName>
-                                  sometime between <date>1840</date> and <date>1848</date>.
-                                </provenance>
+                            </list>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="partly">
+                                <decoNote xml:id="b1">Two wooden boards.</decoNote>
+                                <decoNote xml:id="b2">Leather quarter cover</decoNote>
+                                <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                                <decoNote xml:id="b4" type="bindingMaterial">
+                                    <material key="wood"/>
+                                    <material key="leather"/>
+                                </decoNote>
+                            </binding>
+                        </bindingDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origDate notBefore="1300" notAfter="1500"/>
+                        </origin>
+                        <provenance>The manuscript was bought by <persName ref="PRS1071dAbbadi"
+                                role="owner">Antoine d'Abbadie</persName> sometime between
+                                <date>1840</date> and <date>1848</date>. </provenance>
                         <acquisition/>
-                          </history>
+                    </history>
 
-                          <additional>
-                             <adminInfo>
-                                <recordHist>
-                                   <source>
-                                      <listBibl type="catalogue">
-                                         <bibl>
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <listBibl type="catalogue">
+                                        <bibl>
                                             <ptr target="bm:ContiRossini1914Notice"/>
                                             <citedRange unit="page">182</citedRange>
                                             <citedRange unit="number">170</citedRange>
-                                         </bibl>
-                                         <bibl>
+                                        </bibl>
+                                        <bibl>
                                             <ptr target="bm:Chaine1912Catalogue"/>
                                             <citedRange unit="page">60-61</citedRange>
                                             <citedRange unit="number">94</citedRange>
-                                         </bibl>
-                                         <bibl>
+                                        </bibl>
+                                        <bibl>
                                             <ptr target="bm:Abbadie1859Cat"/>
                                             <citedRange unit="page">104-105</citedRange>
                                             <citedRange unit="number">94</citedRange>
-                                         </bibl>
-                                           </listBibl>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:BmWebsite"/>
+                                        </bibl>
+                                    </listBibl>
+                                    <listBibl type="secondary">
+                                        <bibl>
+                                            <ptr target="bm:ContiRossini1950Afnin"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Fiaccadori1997Ripristino"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Marrassini2007EAEKiros"/>
+                                        </bibl>
+                                        <bibl>
+                                            <ptr target="bm:Bausi2007Melchizedek"/>
+                                        </bibl>
+                                    </listBibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+                    </additional>
 
-                                   </source>
-                                </recordHist>
-                             </adminInfo>
-                          </additional>
-
-                          <msPart xml:id="p1">
-                          <msIdentifier></msIdentifier>
-                          <msContents>
+                    <msPart xml:id="p1">
+                        <msIdentifier/>
+                        <msContents>
                             <msItem xml:id="p1_i1">
-                                 <locus from="2r" to="20v"/>
-                                  <title type="complete" xml:lang="gez" ref="LIT1414GadlaA"/>
-                                  <textLang xml:lang="gez"></textLang>
-                                </msItem>
+                                <locus from="2r" to="20v"/>
+                                <title type="complete" xml:lang="gez" ref="LIT1414GadlaA"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
 
-                                <msItem xml:id="p1_i2">
-                                     <locus from="22r" to="32r"/>
-                                      <title type="complete" xml:lang="gez" ref="LIT5134KirosGeneral"/>
-                                      <textLang xml:lang="gez"></textLang>
-                                    </msItem>
-                                    </msContents>
+                            <msItem xml:id="p1_i2">
+                                <locus from="22r" to="32r"/>
+                                <title type="complete" xml:lang="gez" ref="LIT4073GadlaKi2"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
+                        </msContents>
 
-<physDesc>
-    
-    <objectDesc>
-        
-        <layoutDesc>
-            <layout columns="2" writtenLines="19 24">
-                <locus from="2r" to="32r"/>
-            </layout>
-        </layoutDesc>
-        
-        
-        
-    </objectDesc>
-    
-    
-  <handDesc>
-     <handNote xml:id="h1" script="Ethiopic">
-        <seg type="script">15th century.</seg>
-        <seg type="ink">Black</seg>
-      </handNote>
-  </handDesc>
+                        <physDesc>
 
-</physDesc>
+                            <objectDesc>
+
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="19 24">
+                                        <locus from="2r" to="32r"/>
+                                    </layout>
+                                </layoutDesc>
 
 
-                          </msPart>
 
-            <msPart xml:id="p2">
-              <msIdentifier></msIdentifier>
-              <msContents>
-
-                              <msItem xml:id="p2_i1">
-                                   <locus from="34r" to="41v"/>
-                                    <title type="complete" xml:lang="gez" ref="LIT2365Storyo"/>
-                                    <textLang xml:lang="gez"></textLang>
-                                  </msItem>
-
-                                  <msItem xml:id="p2_i2">
-                                       <locus from="41v" to="47r"/>
-                                        <title type="complete" xml:lang="gez" ref="LIT3326Melchiz1"/>
-                                        <textLang xml:lang="gez"></textLang>
-                                      </msItem>
-
-                                      <msItem xml:id="p2_i3">
-                                           <locus from="47r" to="53r"/>
-                                            <title type="complete" xml:lang="gez" ref="LIT3327Melchiz2"/>
-                                            <textLang xml:lang="gez"></textLang>
-                                          </msItem>
-
-                                          <msItem xml:id="p2_i4">
-                                               <locus from="53r" to="55r"/>
-                                                <title type="complete" xml:lang="gez" ref="LIT3332Melchiz"/>
-                                                <textLang xml:lang="gez"></textLang>
-                                              </msItem>
-</msContents>
-
-<physDesc>
-    
-    <objectDesc>
-    <layoutDesc>
-        <layout columns="2" writtenLines="19 21">
-           <locus from="34r" to="55r"/> 
-        </layout>
-    </layoutDesc>
-    </objectDesc>
-    
-  <handDesc>
-     <handNote xml:id="h2" script="Ethiopic">
-        <seg type="script">15th century.</seg>
-        <seg type="ink">Black</seg>
-      </handNote>
-  </handDesc>
-
-<additions>
-<list>
-  <item xml:id="a2">
-    <desc type="ScribalSupplication"/>
-    <locus from="41r" to="41v"/>
-      <q xml:lang="gez">ዘንተ፡ መጽሐፈ፡ አጥረዩ፡ አባ፡ <persName role="patron" ref="PRS14418Nob">ኖብ፡</persName> ወ<persName role="scribe" ref="PRS14573HaraKrestos" >ሐራ፡ ክርስቶስ፡ </persName> ይኩኖሙ፡ ተዝካረ፡ እስከ፡ ለዓለም፡ ወመርሐ፡ ለመንግሥተ፡ ሰማያት፡ አሜን። ዘንተ፡
-    መጽሐፈ፡ ዘጸሐፎ፡ ወዘአጽሐፎ፡ ወለ፡ ዘአንበቦ፡ ወለዘተርጐሞ፡ ወዘሰምዐ፡ ቃላቲሁ፡ ይምሐሮሙ፡ እግዚአብሔር፡ ወይስረይ፡ ኃጢአቶሙ፡ በጸሎታ፡ ለማርያም፡ እመ፡ ብርሃን።
-  ወበጸሎቶሙ፡ ለሩፋኤል፡ ወመልከጼዴቅ፡ ወይክፍለነ፡ ምቅዋመ፡ በሐዳስ፡ ንድቅ፡ እግዚአብሔር፡ እግዚእ፡ መኰንነ፡ ጽድቅ፡ ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን።</q>
-  </item>
-
-  <item xml:id="a3">
-    <desc type="ScribalSupplication"/>
-    <locus target="#55r"/>
-      <q xml:lang="gez">ዛቲ፡ መጽሐፍ፡ ዘጸሐውክዋ፡ አነ፡ <persName role="scribe" ref="PRS14573HaraKrestos" >ሐራ፡ ክርስቶስ፡</persName> ወዘአጽሐፈኒ፡ አባ፡ <persName role="patron" ref="PRS14418Nob">ኖብ፡</persName> ከመ፡ ይኩነነ፡ ተዝካረ፡ በጸሎታ፡ ለእግዝእትነ፡ ለእመ፡ ብርሃን፡
-    ወበጸሎቱ፡ ለመልከጼዴቅ፡ ካህን፡ ወበጸሎተ፡ ጻድቃን፡ ወሰማዕታት፡ መዋዕያን፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
-  </item>
+                            </objectDesc>
 
 
-</list>
-</additions>
+                            <handDesc>
+                                <handNote xml:id="h1" script="Ethiopic">
+                                    <seg type="script">15th century.</seg>
+                                    <seg type="ink">Black</seg>
+                                </handNote>
+                            </handDesc>
 
-</physDesc>
-
-</msPart>
-
-
-<msPart xml:id="p3">
-  <msIdentifier></msIdentifier>
-  <msContents>
-
-                                              <msItem xml:id="p3_i1">
-                                                   <locus from="57r" to="62v"/>
-                                                    <title type="complete" xml:lang="gez" ref="LIT1282Dersan"/>
-                                                    <textLang xml:lang="gez"></textLang>
-                                                  </msItem>
-
-                         </msContents>
-
-<physDesc>
-
-<objectDesc>
-  <layoutDesc>
-     <layout columns="2" writtenLines="17 19">
-         <locus from="57r" to="62v"/>
- </layout>
-</layoutDesc>
+                        </physDesc>
 
 
-</objectDesc>
+                    </msPart>
 
-<handDesc>
-   <handNote xml:id="h3" script="Ethiopic">
-      <seg type="script">14th century according to <bibl><ptr target="bm:Fiaccadori1997Ripristino"/></bibl>.</seg>
-      <seg type="ink">Black</seg>
-    </handNote>
-</handDesc>
+                    <msPart xml:id="p2">
+                        <msIdentifier/>
+                        <msContents>
 
-</physDesc>
+                            <msItem xml:id="p2_i1">
+                                <locus from="34r" to="41v"/>
+                                <title type="complete" xml:lang="gez" ref="LIT2365Storyo"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
 
-</msPart>
+                            <msItem xml:id="p2_i2">
+                                <locus from="41v" to="47r"/>
+                                <title type="complete" xml:lang="gez" ref="LIT3326Melchiz1"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
+
+                            <msItem xml:id="p2_i3">
+                                <locus from="47r" to="53r"/>
+                                <title type="complete" xml:lang="gez" ref="LIT3327Melchiz2"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
+
+                            <msItem xml:id="p2_i4">
+                                <locus from="53r" to="55r"/>
+                                <title type="complete" xml:lang="gez" ref="LIT3332Melchiz"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
+                        </msContents>
+
+                        <physDesc>
+
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="19 21">
+                                        <locus from="34r" to="55r"/>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+
+                            <handDesc>
+                                <handNote xml:id="h2" script="Ethiopic">
+                                    <seg type="script">15th century.</seg>
+                                    <seg type="ink">Black</seg>
+                                </handNote>
+                            </handDesc>
+
+                            <additions>
+                                <list>
+                                    <item xml:id="a2">
+                                        <desc type="ScribalSupplication"/>
+                                        <locus from="41r" to="41v"/>
+                                        <q xml:lang="gez">ዘንተ፡ መጽሐፈ፡ አጥረዩ፡ አባ፡ <persName
+                                                role="patron" ref="PRS14418Nob">ኖብ፡</persName>
+                                                ወ<persName role="scribe" ref="PRS14573HaraKrestos"
+                                                >ሐራ፡ ክርስቶስ፡ </persName> ይኩኖሙ፡ ተዝካረ፡ እስከ፡ ለዓለም፡ ወመርሐ፡
+                                            ለመንግሥተ፡ ሰማያት፡ አሜን። ዘንተ፡ መጽሐፈ፡ ዘጸሐፎ፡ ወዘአጽሐፎ፡ ወለ፡ ዘአንበቦ፡
+                                            ወለዘተርጐሞ፡ ወዘሰምዐ፡ ቃላቲሁ፡ ይምሐሮሙ፡ እግዚአብሔር፡ ወይስረይ፡ ኃጢአቶሙ፡
+                                            በጸሎታ፡ ለማርያም፡ እመ፡ ብርሃን። ወበጸሎቶሙ፡ ለሩፋኤል፡ ወመልከጼዴቅ፡ ወይክፍለነ፡
+                                            ምቅዋመ፡ በሐዳስ፡ ንድቅ፡ እግዚአብሔር፡ እግዚእ፡ መኰንነ፡ ጽድቅ፡ ለዓለመ፡ ዓለም፡
+                                            አሜን፡ ወአሜን።</q>
+                                    </item>
+
+                                    <item xml:id="a3">
+                                        <desc type="ScribalSupplication"/>
+                                        <locus target="#55r"/>
+                                        <q xml:lang="gez">ዛቲ፡ መጽሐፍ፡ ዘጸሐውክዋ፡ አነ፡ <persName
+                                                role="scribe" ref="PRS14573HaraKrestos">ሐራ፡
+                                                ክርስቶስ፡</persName> ወዘአጽሐፈኒ፡ አባ፡ <persName
+                                                role="patron" ref="PRS14418Nob">ኖብ፡</persName> ከመ፡
+                                            ይኩነነ፡ ተዝካረ፡ በጸሎታ፡ ለእግዝእትነ፡ ለእመ፡ ብርሃን፡ ወበጸሎቱ፡ ለመልከጼዴቅ፡
+                                            ካህን፡ ወበጸሎተ፡ ጻድቃን፡ ወሰማዕታት፡ መዋዕያን፡ ለዓለመ፡ ዓለም፡ አሜን።</q>
+                                    </item>
+
+
+                                </list>
+                            </additions>
+
+                        </physDesc>
+
+                    </msPart>
+
+
+                    <msPart xml:id="p3">
+                        <msIdentifier/>
+                        <msContents>
+
+                            <msItem xml:id="p3_i1">
+                                <locus from="57r" to="62v"/>
+                                <title type="complete" xml:lang="gez" ref="LIT1282Dersan"/>
+                                <textLang xml:lang="gez"/>
+                            </msItem>
+
+                        </msContents>
+
+                        <physDesc>
+
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="17 19">
+                                        <locus from="57r" to="62v"/>
+                                    </layout>
+                                </layoutDesc>
+
+
+                            </objectDesc>
+
+                            <handDesc>
+                                <handNote xml:id="h3" script="Ethiopic">
+                                    <seg type="script">14th century according to <bibl><ptr
+                                                target="bm:Fiaccadori1997Ripristino"/></bibl>.</seg>
+                                    <seg type="ink">Black</seg>
+                                </handNote>
+                            </handDesc>
+
+                        </physDesc>
+
+                    </msPart>
 
 
 
@@ -288,35 +387,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
         </fileDesc>
         <encodingDesc>
             <p>A digital born TEI file</p>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
-            <xi:fallback>
-          </xi:fallback>
-         </xi:include>
-      </encodingDesc>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+                <xi:fallback> </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <creation/>
             <abstract>
                 <p/>
             </abstract>
-             <textClass>
+            <textClass>
                 <keywords>
                     <term key="Hagiography"/>
                     <term key="Homily"/>
-                    </keywords>
+                </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
+                <language ident="it">Italian</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
             <change who="MKr" when="2024-09-19">Created entity</change>
             <change who="MKr" when="2024-10-22">Corrected a typo</change>
+            <change who="NV" when="2024-10-29">Added description of collation and binding
+                description, corrected the total number of folia, assigned numbers for endleaves,
+                added bibl, added language (Italian), changed LIT id for Kiros from more general to
+                more specific.</change>
+
         </revisionDesc>
-      </teiHeader>
-      <text xml:base="https://betamasaheft.eu/">
-          <body>
-             <ab/>
-          </body>
-      </text>
-    </TEI>
+    </teiHeader>
+    <text xml:base="https://betamasaheft.eu/">
+        <body>
+            <ab/>
+        </body>
+    </text>
+</TEI>
