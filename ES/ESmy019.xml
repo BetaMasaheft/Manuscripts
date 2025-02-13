@@ -41,8 +41,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                           <measure unit="leaf">48</measure>
-                              <measure unit="leaf" type="blank">3</measure>
-                              <locus target="#1ra #20v #48v"/>
+                              <measure unit="leaf" type="blank">3<locus target="#1ra #20v #48v"/></measure>
+                              
                                  <measure unit="quire">A + 6</measure>
                            <dimensions type="outer">
                               <height unit="mm">175</height>
@@ -86,7 +86,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                  <locus from="31r" to="40v"/>
                                   </item>
 
-                              <item xml:id="q7">
+                              <item xml:id="q7" n="6">
                                 <dim unit="leaf">8</dim>
                                  <locus from="41r" to="48v"/>
                                 </item>
@@ -316,10 +316,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                                irregular shape.</material>
                                           </support>
                                           <extent>
-                                             <measure unit="leaf">20</measure>
-                                             <locus from="1r" to="20v"/>
-                                             <measure unit="leaf" type="blank">2</measure>
-                                             <locus target="#1ra #20v"/>
+                                             <measure unit="leaf">20</measure>           
+                                            <locus from="1r" to="20v"/>             
                                           </extent>
                                        </supportDesc>
 
@@ -327,14 +325,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <layoutDesc>
                         <layout columns="2" writtenLines="17">
                           <locus from="2r" to="20v"/>
-                          <note>All data are for <locus target="#3r"/>.</note>
-                          <note>9-10 characters per line.</note>
-                          <dimensions unit="mm">
+                          <note corresp="#dim1 #dim2">All data are for <locus target="#3r"/>. 9-10 characters per line.</note>
+                          <dimensions unit="mm" xml:id="dim1">
                               <height>125</height>
                               <width>100</width>
-                              <dim type="intercolumn">10</dim>
+                              
                            </dimensions>
-                           <dimensions type="margin">
+                           <dimensions type="margin" xml:id="dim2">
                               <dim type="top">15</dim>
                               <dim type="bottom">34</dim>
                               <dim type="right">20</dim>
@@ -646,10 +643,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                                   irregular shapes.</material>
                              </support>
                              <extent>
-                                <measure unit="leaf">27</measure>
-                                <measure unit="leaf" type="blank">1</measure>
-                                <locus target="#48v"/>
-                                <locus from="21r" to="48v"/>
+                                <measure unit="leaf">27</measure><locus from="21r" to="48v"/>        
                              </extent>
                           </supportDesc>
 
