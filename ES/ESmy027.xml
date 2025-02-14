@@ -61,8 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            <material key="parchment"/>
                         </support>
                         <extent><measure unit="leaf">6</measure>
-                        <measure unit="leaf" type="blank">8</measure>
-                        <locus target="#1r #1v #4r #4v #5r #5v #6r #6v"/>
+                        <measure unit="leaf" type="blank">4<locus target="#1 #4 #5 #6"/></measure>
+                        
                         <measure unit="quire">1</measure>
                         <dimensions type="outer">
                               <height unit="mm">112</height>
@@ -85,17 +85,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="1" writtenLines="14">
-                          <note>All data are for <locus target="#2r">2r</locus>.</note>
+                          <note corresp="#dim1 #dim2">All data are for <locus target="#2r">2r</locus>. </note>
                           <note>The number of the written lines varies,
-                            15 lines on <locus target="#2r"/>; 13 on <locus from="3r" to="3v"/>.
-                          </note>
-                          <note>11-17 characters per line (<locus target="#2r"/>).</note>
-                           <dimensions unit="mm">
+                            15 lines on <locus target="#2r"/>; 13 on <locus from="3r" to="3v"/>. 11-17 characters per line (<locus target="#2r"/>).</note>
+                           <dimensions unit="mm" xml:id="dim1">
                               <height>80</height>
                               <width>86</width>
-                              <dim type="intercolumn"/>
+                              
                            </dimensions>
-                           <dimensions type="margin">
+                           <dimensions type="margin" xml:id="dim2">
                               <dim type="top">7</dim>
                               <dim type="bottom">22</dim>
                               <dim type="right">14</dim>
@@ -103,7 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                               <dim type="intercolumn"/>
                            </dimensions>
 
-                           <ab type="ruling"/>
+                           
                            <ab type="pricking">Ruling and pricking are partly visible.</ab>
                            <ab type="ruling" subtype="pattern">1A-1A/0-0/0-0/C.</ab>
                            <ab type="pricking">Primary pricks are partly visible.</ab>
