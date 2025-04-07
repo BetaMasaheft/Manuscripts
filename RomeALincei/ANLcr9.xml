@@ -85,12 +85,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <history>
                         <origin>
-                            Both units of the manuscript were copied from the same manuscript, Gunda
-                            Gunde 40.
-                            According to <ref target="#e3"/>, <ref target="#p2"/> originates from 
-                            Talamonto, <placeName ref=""/>, <origDate when="1925-03-11" evidence="internal-date">11. 3.
-                                1925</origDate>. A close origin may be assumed for <ref
-                                    target="#p1"/>.
+                            Both units of the manuscript were copied from the same manuscript, <ref
+                                type="mss" corresp="GG00041"/> from <placeName ref="INS0005Gund">Gunda Gunde</placeName>. Another <foreign
+                                    xml:lang="gez">gadl</foreign> contained in <ref
+                                        type="mss" corresp="GG00041"/> was copied in <ref
+                                            type="mss" corresp="ANLcr89"/>.
+                            According to <ref target="#e3"/>, <ref target="#p2"/> was received by <persName
+                                ref="PRS3182ContiRo">Carlo Conti Rossini</persName>
+                            from  
+                            ‘<persName ref="">Talamonto</persName>, <placeName ref=""/>’ in <origDate when="1925-03-11" evidence="internal-date">11. 3.
+                                1925</origDate>. A similar origin may be assumed for <ref
+                                    target="#p1"/>, but is not specified in the catalogue.
                         </origin>
                         <acquisition>The manuscript passed into the possession of the library in <date when="1950">1950</date>, following Conti Rossini’s death in <date when="1949">1949</date> 
                             (see <ref target="https://www.menestrel.fr/?-Roma-&amp;lang=fr#845">Menestrel</ref>).</acquisition>
@@ -120,6 +125,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <locus from="1r" to="24v"/>
                                 <title ref="LIT1439Gadlae" type="complete"/>
                             <textLang mainLang="gez"/>
+                                <filiation>
+                                    <listRelation>
+                                        <relation name="saws:isDirectCopyOf" active="ANLcr9" passive="GG00041">
+                                            <desc>The text in this manuscript is a direct copy of the last two
+                                                <foreign xml:lang="gez">gadlāt</foreign> of <ref type="mss" corresp="GG00041"/>.</desc>
+                                        </relation>
+                                    </listRelation>
+                                </filiation>
                                 <incipit xml:lang="ti" type="inscriptio">
                                     <locus target="#1r"/>
                                     ገድሊ፡ ናይ፡ አቡነ፡ ዕዝራ፡ ሞገሳዊ፡ ዘገዳመ፡ ጉንዴ፡ ጉንዴ፡
@@ -174,7 +187,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
                                 <locus from="4r" to="24v"/>
-                                <desc>Careful hand.</desc>
+                                <desc>Careful hand. According to the catalogue, the hand of <ref
+                                    type="mss" corresp="ANLcr89"/> seems identical to that of this
+                                    manuscript, but it is not clear whether <ref target="#h1"/> or
+                                    <ref target="#h2"/> is meant.</desc>
                                 <seg type="ink">Black, blue-black.</seg>
                             </handNote>                  
                         </handDesc>
@@ -209,6 +225,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <locus from="33r" to="48v"/>
                                 <title ref="LIT4760GadlaHS" type="complete"/>
                                 <textLang mainLang="gez"/>
+                                <listRelation>
+                                    <relation name="saws:isDirectCopyOf" active="ANLcr9" passive="GG00041">
+                                        <desc>The text in this manuscript is a direct copy of the last two
+                                            <foreign xml:lang="gez">gadlāt</foreign> of <ref type="mss" corresp="GG00041"/>.</desc>
+                                    </relation>
+                                </listRelation>
                                 <incipit xml:lang="gez">
                                     <locus target="#35r"/>
                                     በስመ፡ ስሉስ፡ ቅዱስ፡ እለ፡ ስንእዋን፡ በስንእ። እምቅድመ፡ ዓለም፡ ይጠአጣእ። እግዚአብሔራውያን፡
@@ -265,6 +287,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <handDesc>
                                 <handNote xml:id="h2" script="Ethiopic">
                                     <locus from="35r" to="38v"/>
+                                    <desc>According to the catalogue, the hand of <ref
+                                        type="mss" corresp="ANLcr89"/> seems identical to that of this
+                                        manuscript, but it is not clear whether <ref target="#h1"/> or
+                                        <ref target="#h2"/> is meant.</desc>
                                     <seg type="ink">Black.</seg>
                                 </handNote>                  
                             </handDesc>
@@ -294,7 +320,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <desc>Note on the provenance written by <persName ref="PRS3182ContiRo"/>
                                           above <ref target="#e1"/> (the catalogue does not
                                             clearly describe the location).</desc>
-                                        <q xml:lang="it">da Talamonto, Asmara, 11. 3. 1925</q>                                  
+                                        <q xml:lang="it">da <persName ref="">Talamonto</persName>, <persName ref="">Asmara</persName>, 11. 3. 1925</q>
+                                    <!--    create person https://www.jstor.org/stable/217347?seq=30,
+                                        https://www.jstor.org/stable/41465358?seq=5, https://www.jstor.org/stable/41465363?seq=2-->
                                     </item>
                                 </list>
                             </additions>
@@ -327,7 +355,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
-                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
