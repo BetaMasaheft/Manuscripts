@@ -70,14 +70,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 </support>
                                 <extent>
                                     <measure unit="leaf" quantity="92">92</measure>
-                                   <!-- <measure unit="leaf" quantity="4" type="blank">4</measure>
-                                    <locus from="1r" to="3v"/>
-                                    <locus from="113r" to="113v"/>-->
+                                    <measure unit="quire" quantity="11">11</measure>
+                                    <measure unit="leaf" quantity="6" type="blank">6</measure>
+                                    <locus from="1r" to="4v"/>
+                                    <locus from="91r" to="92v"/>
                                     <dimensions type="outer" unit="mm">
                                         <height unit="mm">245</height>
                                         <width unit="mm">180</width>
                                     </dimensions>
                                 </extent>
+                                
+                                <collation>
+                                    <note>The manuscript is composed of eleven quires of 
+                                        uneven size. <locus from="1r" to="4v"/> and
+                                        <locus from="91r" to="92v"/> constitute guard leaves.</note>
+                                    <signatures>The quires are partly numbered: 
+                                    <foreign xml:lang="gez">፬</foreign> on <locus target="#29r"/>;
+                                        <foreign xml:lang="gez">፭</foreign> on <locus target="#37r"/>;
+                                        <foreign xml:lang="gez">፮</foreign> on <locus target="#45r"/>;
+                                        <foreign xml:lang="gez">፱</foreign> on <locus target="#69r"/>.</signatures>
+                                </collation>
                             </supportDesc>
                             
                             <layoutDesc>
@@ -97,12 +109,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </handNote>                  
                         </handDesc>
                  
+                 <decoDesc>
+                     <decoNote xml:id="d1" type="band">
+                         <desc>Black and red ornamental bands divide the chapters of <ref
+                             target="#ms_i1"/> according to the days of the week (see also <ref
+                                 target="#e1"/>).</desc>
+                     </decoNote>
+                 </decoDesc>
+                 
                         <additions>
                             <list>
                                 <item xml:id="e1">
                                     <desc type="findingAid"/>
                                     <desc><ref target="#ms_i1"/> is divided according to the days of
-                                        the week: <foreign xml:lang="gez">ዘነግህ፡</foreign> (<locus
+                                        the week (see also <ref target="#d1"/>): <foreign xml:lang="gez">ዘነግህ፡</foreign> (<locus
                                             target="#79va"/>);
                                         <foreign xml:lang="gez">፩ ሰዓት፡</foreign> (<locus
                                             target="#81ra"/>);
@@ -151,6 +171,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </desc>
                                 </item>
                                 
+                                <item xml:id="e4">
+                                    <locus target="#1r"/>
+                                    <desc>A leaf with a note stating that the manuscript was
+                                        given to <persName ref="PRS3182ContiRo"/> by <persName ref="PRS7165Mordini"/> on 
+                                        <date></date> is glued to the page</desc>
+                                    <q xml:lang="it">A <persName ref="PRS3182ContiRo">S.E. Carlo
+                                        Conti Rossini</persName> in affettuoso ricordo da suo
+                                        <persName ref="PRS7165Mordini">A. Mordini</persName>. <date
+                                            when="1946-03-28">28.
+                                        3. 46</date></q>
+                                </item>
+                                
                                 <item xml:id="a1">
                                     <locus target="#90v"/>
                                     <desc type="RecordTransaction">Amharic sales note stating that
@@ -180,9 +212,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <origin>
                             <origDate notBefore="1900" notAfter="1934" evidence="internal-date"/>
                         </origin>
-                        <provenance>The manuscript was either acquired by <persName ref="PRS3182ContiRo" role="owner">Carlo Conti Rossini</persName> 
-                            during his stay in <placeName ref="LOC2991Eritre">Eritrea</placeName>
-                            (<date notBefore="1899" notAfter="1903">1899–1903</date>) or sent to him after his return to Europe.</provenance>
+                        <provenance>The manuscript given by  <persName ref="PRS7165Mordini">Antonio
+                            Mordini</persName> to
+                            <persName ref="PRS3182ContiRo" role="owner">Carlo Conti Rossini</persName> 
+                         om 1946 (see <ref target="#e4"/>).</provenance>
                         <acquisition>The manuscript passed into the possession of the library in <date when="1950">1950</date>, following Conti Rossini’s death in <date when="1949">1949</date> 
                             (see <ref target="https://www.menestrel.fr/?-Roma-&amp;lang=fr#845">Menestrel</ref>).</acquisition>
                     </history>
