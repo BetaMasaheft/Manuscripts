@@ -245,8 +245,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         </support>
                         <extent>
                           <measure unit="leaf" quantity="44">44</measure>
-                        <measure unit="leaf" type="blank">10</measure>
-                        <locus target="#1r #1v #2v #3r #3v #4r #4v #33r #44r #44v"/>
+                        <measure unit="page" type="blank">10<locus target="#1r #1v #2v #3r #3v #4r #4v #33r #44r #44v"/></measure>
+                        
                         <measure unit="quire" quantity="6">A+4+B</measure>
                         <dimensions type="outer">
                               <height unit="mm">175</height>
@@ -297,30 +297,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <layoutDesc>
                         <layout columns="2" writtenLines="19">
                           <locus from="5r" to="43r"/>
-                          <note>All data are for <locus target="#8r"/>.</note>
-                           <dimensions unit="mm">
+                          <note corresp="#textarea #margin">All data are for <locus target="#8r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea">
                               <height>125</height>
                               <width>120</width>
                            </dimensions>
-                           <dimensions type="margin">
+                           <dimensions type="margin" xml:id="margin">
                               <dim type="top">20</dim>
                               <dim type="bottom">35</dim>
                               <dim type="right">27</dim>
                               <dim type="left">12</dim>
                               <dim type="intercolumn">12</dim>
                            </dimensions>
-                           <note>All data are for <locus target="#8r"/>.</note>
-                           <ab type="ruling"/>
+                           
+                           
                            <ab type="pricking">Pricking and ruling are visible.</ab>
                            <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/</ab>
                            <ab type="pricking">Primary pricks are visible.</ab>
                            <ab type="pricking">Ruling pricks are visible.</ab>
                            <ab type="ruling">The upper line is written above the ruling.</ab>
                            <ab type="ruling">The bottom line is written above the ruling.</ab>
-                            <note>The leaves <locus target="#1 #2 #3 #4"/> are not ruled.</note>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation" subtype="dividers">
+                            <ab type="ruling">The leaves <locus target="#1 #2 #3 #4"/> are not ruled.</ab>
+                        
+                           <ab type="punctuation" subtype="Dividers">
                               <list>
                                  <item xml:id="div1">Colon (word divider)</item>
                                  <item xml:id="div2">Colon of two black dots
