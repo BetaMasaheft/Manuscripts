@@ -76,10 +76,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>-->
                                 </extent>
                                 <collation>
-                                    <note>The manuscript is composed of three quires numbered with
-                                        Ethiopic numerals on <locus
+                                    <signatures>The quires are numbered with Ethiopic numerals on <locus
                                         target="#1r"/>, <locus
-                                            target="#11r"/> and <locus target="#23r"/>.</note>
+                                            target="#11r"/> and <locus target="#23r"/>.</signatures>
+                                    <list>
+                                        <item xml:id="q1">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="1r" to="10v"/>
+                                        </item>
+                                        <item xml:id="q2">
+                                            <dim unit="leaf">12</dim>
+                                            <locus from="11r" to="22v"/>
+                                        </item>
+                                        <item xml:id="q3">
+                                            <dim unit="leaf">10</dim>
+                                            <locus from="23r" to="32v"/>
+                                        </item>
+                                    </list>
                                 </collation>
                             </supportDesc>
                             
@@ -92,6 +105,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
                                 <desc>Beautiful hand. European pen.</desc>
+                                <date notBefore="1900" notAfter="1950"/>
                             </handNote>                  
                         </handDesc>
                  
@@ -99,8 +113,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <list>
                                 <item xml:id="e1">
                                     <locus target="#1r"/>
-                                    <desc>The title of the work in the hand of <persName ref=""/>.</desc>
-                                    <q xml:lang="it">Gadla Esṭifānos (copiato da un ms. di Gundegundé)</q>
+                                    <desc>The title of the work in the hand of <persName ref="PRS3182ContiRo"/>.</desc>
+                                    <q xml:lang="it">Gadla Esṭifānos (copiato da un ms. di
+                                        <placeName ref="INS0005Gund">Gundegundé</placeName>)</q>
                                 </item>
                             </list>
                         </additions>
@@ -115,9 +130,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                     <history>
                         <origin>
-                            <origDate when="" evidence="context"/>
+                            <origDate notBefore="1900" notAfter="1950" evidence="context"/>
                         </origin>
-                        <provenance></provenance>
+                        <provenance>The manuscript was copied from an exemplar in <placeName
+                            ref="INS0005Gund"/>. The catalogue refers to <bibl><ptr
+                                target="bm:Mordini1953GG"/><citedRange unit="50"></citedRange></bibl> and proposes
+                            the two manuscripts Mordini no. 103 or Mordini no. 146 (<ref
+                                type="mss" corresp="GG00002"/>) as potential
+                           examplars. A cursory comparison with the latter supports this hypothesis.                        
+                        </provenance>
                         <acquisition>The manuscript passed into the possession of the library in <date when="1950">1950</date>, following Conti Rossini’s death in <date when="1949">1949</date> 
                             (see <ref target="https://www.menestrel.fr/?-Roma-&amp;lang=fr#845">Menestrel</ref>).</acquisition>
                     </history>
