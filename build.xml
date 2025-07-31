@@ -1,10 +1,82 @@
-<project default="xar">
-    <xmlproperty file="expath-pkg.xml"/>
-    <property name="project.version" value="${package(version)}"/>
-    <property name="project.app" value="manuscripts"/>
-    <property name="build.dir" value="build"/>
-    <target name="xar">
-        <mkdir dir="${build.dir}"/>
-        <zip basedir="." destfile="${build.dir}/${project.app}-${project.version}.xar" excludes="${build.dir}/* .github/** .gitignore schema/**"/>
-    </target>
+<project default="xar" name="manuscripts" basedir=".">
+  <xmlproperty file="expath-pkg.xml"/>
+
+  <property name="app.name" value="manuscripts"/>
+  <property name="build.dir" value="build"/>
+  <property name="app.version" value="1.0.0"/>
+  <property name="app.version" value="${app.version}"/>
+
+  <property name="git.repo.path" value="${basedir}/.git" />
+  <available file="${git.repo.path}" type="dir" property="git.present" />
+
+  <target name="clean">
+    <echo message="Deleting xar files..." />
+    <delete dir="${build.dir}" failonerror="false" />
+  </target>
+
+  <target name="templates" description="process template files"  depends="clean,git.revision">
+    <echo message="Creating build folder..." />
+    <mkdir dir="${build.dir}" />
+    <echo>Update Version with: ${app.version}</echo>
+    <copy todir="${build.dir}" verbose="true">
+      <fileset file="repo.xml" />
+      <fileset file="expath-pkg.xml" />
+      <filterchain>
+        <replacetokens>
+          <token key="version" value="${app.version}" />
+          <token key="commit-id" value="${git.revision}" />
+          <token key="commit-time" value="${git.time}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+  </target>
+
+  <target name="xar" depends="clean,templates" description="create xar file">
+    <echo message="------------------------------------------------------------" />
+    <echo message="Creating xar file..." />
+    <echo message="------------------------------------------------------------" />
+    <!-- Create the xar archive -->
+    <echo>Creating xar file...</echo>
+    <zip destfile="${build.dir}/${app.name}.xar">
+      <fileset dir=".">
+        <exclude name="${build.dir}/**" />
+        <exclude name=".github/**" />
+        <exclude name="node_modules/**" />
+        <exclude name=".gitignore" />
+        <exclude name=".vscode/**" />
+        <exclude name="expath-pkg.xml" />
+        <exclude name="repo.xml" />
+		<exclude name="schema/**" />
+      </fileset>
+      <zipfileset dir="${build.dir}" includes="expath-pkg.xml" fullpath="expath-pkg.xml" />
+      <zipfileset dir="${build.dir}" includes="repo.xml" fullpath="repo.xml" />
+    </zip>
+  </target>
+
+  <target name="git.revision" description="Store git revision in ${repository.version}">
+    <exec executable="git" outputproperty="git.revision" failifexecutionfails="false"
+          errorproperty="">
+      <arg value="--git-dir=${git.repo.path}" />
+      <arg value="rev-parse" />
+      <arg value="HEAD" />
+    </exec>
+    <condition property="repository.version" value="${git.revision}" else="unknown">
+      <and>
+        <isset property="git.revision" />
+        <length string="${git.revision}" trim="yes" length="0" when="greater" />
+      </and>
+    </condition>
+    <echo>Git repo: ${repository.version}</echo>
+
+    <exec executable="git" outputproperty="git.time" failifexecutionfails="false"
+          errorproperty="">
+      <arg value="--git-dir=${git.repo.path}" />
+      <arg value="show" />
+      <arg value="-s" />
+      <arg value="--format=%ct" />
+      <arg value="${git.revision}" />
+    </exec>
+    <echo>Git time: ${git.time}</echo>
+
+  </target>
 </project>
