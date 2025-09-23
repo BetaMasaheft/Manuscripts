@@ -49,9 +49,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                   <summary/>
                   <msItem xml:id="ms_i1">
                      <title>Qǝddāse Bālamǝlkkǝt</title>
-                     <textLang xml:lang="gez"></textLang>
-                     
-                     <colophon xml:id="coloph1" xml:lang="gez">ዝንቱ መጽሐፍ ተጽሕፈ በትእዛዙ ለዳግማዊ ምኒልክ ንጉሠ ነገሥት ዘኢትዮጵያ፡፡ ወዘአጽሐፎ አለቃ ገብረ ሥላሴ ዘውእቱ ጸሐፌ ትእዛዝ ፡፡ በ1903 ዓመተ ምሕረት፡፡ (f.164)</colophon>
+                     <textLang xml:lang="gez"></textLang> 
+                     <colophon xml:id="coloph1" xml:lang="gez">
+                        <locus target="#164"/>
+                        <q>ዝንቱ፡ መጽሐፍ፡ ተጽሕፈ፡ በትእዛዙ፡ ለ<persName ref="PRS7006Menilek">ዳግማዊ፡ ምኒልክ፡</persName> ንጉሠ፡ ነገሥት፡ ዘኢትዮጵያ።
+                        ወዘአጽሐፎ፡ አለቃ፡ <persName ref="PRS4359Gabrase">ገብረ፡ ሥላሴ፡</persName> ዘውእቱ፡ ጸሐፌ፡ ትእዛዝ። 
+                        በ<date when-custom="1903" calendar="ethiopian" when="1911">፲፱፻ወ፫</date> ዓመተ፡ ምሕረት።</q>
+                     </colophon>
                      <note>Used in the school of Zema (Qǝdasse)</note></msItem>
                </msContents>
                <physDesc>
@@ -61,7 +65,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 163+7</measure>
+                           <measure unit="leaf" quantity="170"> 163+7</measure>
                            <dimensions type="outer">
                               <height unit="mm">260</height>
                               <width unit="mm">180</width>
@@ -76,10 +80,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                   </objectDesc>
                   <handDesc>
                      <handNote xml:id="h1" script="Ethiopic">
-                        Scribe: Abba Yerdaw at Dabra Madhanit (called 'Abbeye Gadam)(colophon, f. 153b),. 
+                        Scribe: Abba Yerdaw at Dabra Madhanit (called 'Abbeye Gadam)(colophon, <locus target="#153v"/>). 
                      </handNote>
                   </handDesc>
-                  <additions><list><item xml:id="e1">Stamp of the Church of the Savior, f. 154b.</item></list></additions>
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <locus target="#154v"/>
+                           <desc type="StampExlibris">Stamp of the Church of the Savior</desc>
+                        </item>
+                     </list>
+                  </additions>
                   <bindingDesc>
                      <binding>
                         <decoNote xml:id="b1">Two wooden boards</decoNote>
@@ -87,10 +98,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                   </bindingDesc>
                </physDesc>
                <history>
-                  <origin>
+                  <origin>According to <ref target="#coloph1"/>: 
                      <origDate when="1911"/>
                   </origin>
-                  <provenance>Copied at the command of Emperor Menelik II (1889-1913), under the direction of the Imperial Secretary [sahafe te'zaz], Gabra Śellāsē (final note, f. 163b). In Church of the Savior of the World [Madḥānē Ālam] when filmed.</provenance>
+                  <provenance>Copied at the command of Emperor <persName ref="PRS7006Menilek"/>, under the direction of the Imperial 
+                     Secretary, <persName ref="PRS4359Gabrase">Gabra Śellāsē</persName> (cf. <locus target="#163v"/>). 
+                     In Church of the Savior of the World [Madḥānē Ālam] when filmed.</provenance>
                </history>
                <additional>
                   <adminInfo>
@@ -119,13 +132,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
          </xi:include>
       </encodingDesc>
       <profileDesc>
-         <langUsage><language ident="en">English</language></langUsage>
+         <langUsage><language ident="en">English</language><language ident="gez">Gǝʿǝz</language></langUsage>
       </profileDesc>
       <revisionDesc>
          <change who="PL" when="2017-11-30">Created minimal record with link from data sent from Daniel Gullo, HMML
                             project.</change>
          <change who="MA" when="2023-03-24">ʾAbǝnnat team (Senkoris Ayalew and Tsehay Ademe) photographed the manuscript</change>
          <change who="ES" when="2023-05-04">Added metadata for QDSM004 from project spreadsheet</change>
+         <change when="2025-09-23" who="CH">Added PRS IDs for king and imperial secretary, updated according to TEI</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
