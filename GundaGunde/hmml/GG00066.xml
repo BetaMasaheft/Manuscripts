@@ -22,25 +22,37 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                                 multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <p>This XML file is licensed under the Creative Commons
-                                        Attribution-ShareAlike 4.0. </p>
+                  This XML file is licensed under the Creative Commons
+                                        Attribution-ShareAlike 4.0. 
                </licence>
             </availability>
-            <date>2017-11-30+01:00</date>
+            
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
+               <!-- Manuscript Identifier -->
                <msIdentifier>
                   <repository ref="INS0005Gund"/>
-                  <collection>Gundä Gunde, Woräda Irop; Qäbäle Ara</collection>
-                  <idno>MS GG no. 00066</idno>
+                  <idno facs="https://gundagunde.digital.utsc.utoronto.ca/node/32176/book-manifest">C3-IV-27</idno>
                   <altIdentifier>
-                     <idno>204</idno>
+                     <repository ref="INS0004HMML"/>
+                     <idno facs="https://www.vhmml.org/image/manifest/138158">MS GG no. 000066</idno>
                   </altIdentifier>
+                  
                </msIdentifier>
+               
+               <!-- Content -->
                <msContents>
-                  <summary/>
+                  <summary></summary>
+                  <msItem xml:id="ms_i1">
+                     <locus from="1r" to="56v" />
+                     <title>Genesis</title>
+                     <note>Incomplete: Genesis 11:31-12:16, 13:13-50:26 only</note>
+                     <note>Folios inserted into codex: fol. 57r-58v are leaves from another manuscript containing 1 Ezra 13:27-14:14                       
+                     </note>
+                  </msItem>
                </msContents>
+               
                <physDesc>
                   <objectDesc form="Codex">
                      <supportDesc>
@@ -48,34 +60,52 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
                            <material key="parchment"/>
                         </support>
                         <extent>
-                           <measure unit="leaf"> 58</measure>
-                           <dimensions>
-                              <dim>22 x 17 x 4cm</dim>
+                           <measure unit="leaf">58</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>220</height>
+                              <width>170</width>
+                              <depth>40</depth>
                            </dimensions>
                         </extent>
-                        <foliation/>
-                        <condition key="good">Minor water damage; alternate shelfmark no. 116</condition>
+                        <condition key="deficient">Imperfect: wanting leaves at beginning and after fol. 23; water damage</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>2 cols.; 22-30 lines</layout>
+                        <layout columns="2" writtenLines="22 30"/>
                      </layoutDesc>
                   </objectDesc>
+                  <decoDesc>
+                     <decoNote xml:id="d1">
+                        <desc>Ḥarag on fol. 1r, 52r, 123v, 151r</desc>
+                     </decoNote>
+                  </decoDesc>
+                  <bindingDesc>
+                     <decoNote xml:id="b1">Boards missing. Misbound: order of text is fol. 23, 1-7, 55, 8-13, 24, 14-19, etc.</decoNote>
+                  </bindingDesc>
                </physDesc>
+               
+               <!-- Manuscript history -->
                <history>
                   <origin>
-                     <origDate notBefore="1400" notAfter="1600">15th-16th century,
-                                                        </origDate>
+                     <origDate notBefore="1450" notAfter="1550">15th–16th century (ambiguous)</origDate>
                   </origin>
-                  <provenance/>
                </history>
+               
+               <!-- Additional info -->
                <additional>
                   <adminInfo>
                      <recordHist>
-                        <source/>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
+                                 <ptr target="bm:vHMML"/>
+                              </bibl>
+                           </listBibl>
+                        </source>
                      </recordHist>
                   </adminInfo>
                </additional>
             </msDesc>
+            
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -98,6 +128,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://ra
    </teiHeader>
    <facsimile>
       <graphic url="https://w3id.org/vhmml/readingRoom/view/138158"/>
+   </facsimile>
+   <facsimile>
+      <graphic url="https://ark.digital.utsc.utoronto.ca/ark:61220/utsc35465"></graphic>
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
       <body>
