@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <locus from="1r1" to="1r63"/>
                                 <title ref="LIT1763Legend" type="complete"/>
                                 <textLang mainLang="gez"/>
-                            <incipit xml:lang="gez">
+                            <incipit type="inscriptio" xml:lang="gez">
                                 <hi rend="rubric">በስመ፡ አብ፡ ወወልድ፡ ወመንፈ</hi>ስ፡ ቅዱስ፡ ፩ አምላክ። ጸሎት፡ 
                                 በእ<hi rend="rubric">ንተ፡ ቅዱስ፡ ሱስንዮስ፡ አሰስሎ<supplied reason="omitted">፡</supplied></hi>
                                 ደዌ፡ እምሕፃናት፡ እለ፡ ይጠብዉ<supplied reason="omitted">፡</supplied> 
@@ -178,7 +178,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
-                                    <note>Consists of <measure unit="strips">2</measure> strips sewn together.</note>
+                                    <note>Consists of <measure unit="strips">3</measure> strips sewn together.</note>
                                     <dimensions type="outer" unit="mm">
                                         <height>c. 1943</height>
                                         <width>82–84</width>
@@ -189,7 +189,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </dimensions>
                                     <dimensions type="outer" unit="mm" xml:id="strip2">
                                         <height>1220</height>
-                                        <width>82</width>
+                                        <width>c. 82</width>
+                                    </dimensions>
+                                    <dimensions type="outer" unit="" xml:id="strip3">
+                                        <height></height>
+                                        <width>c. 82</width>
                                     </dimensions>
                                     <measure type="weight" unit="g">35</measure>
                                 </extent>
@@ -217,7 +221,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <desc>Modern script, somewhat irregular. Word separator is occasionally omitted when the end of a word
                                     coincides with the end of the line.</desc>                              
                                 <seg type="rubrication">Beginnings of prayers; holy names; every second letter in the angelic names 
-                                    in <ref target="#ms_i1"/>; elements of punctuation marks.
+                                    in <ref target="#ms_i1">the first text</ref>; elements of punctuation marks.
                                     </seg>
                             </handNote>
                         </handDesc>
@@ -229,9 +233,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <additions>
                             <list>
                                 <item xml:id="e1">
+                                    <desc>The verso is blank.</desc>
+                                </item>
+                                
+                                <item xml:id="e2">
                                     <desc>At least on one occasion, an erroneous character has been marked for deletion by dashes or lines above and below.</desc>
                                 </item>
-                                <item xml:id="e2">
+                                
+                                <item xml:id="e3">
+                                    <desc>The name of the owners <persName ref="PRS15041HaylaMaryam" role="owner">Ḫayla Māryām</persName> and
+                                        <persName ref="PRS15042WalattaDengel" role="owner">Walatta Dǝngǝl</persName> are mentioned in supplications.
+                                    </desc>
+                                </item>
+                                
+                                <item xml:id="e4">
                                     <desc>On several of the miniatures, the words <foreign xml:lang="gez">ንግሥት፡ አዜብ፡</foreign> 
                                         (<hi rend="italics">Nǝgǝśt ʾAzeb</hi>, "The Queen of (?) the South") have been written.
                                     It is possible that this is the name of a secondary owner.</desc>
@@ -241,7 +256,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         
                         <bindingDesc>
                             <binding xml:id="binding">
-                                <decoNote xml:id="b1">The two parchment strips are sewn together with a narrow parchment strip.</decoNote>
+                                <decoNote xml:id="b1">The three parchment strips are sewn together with narrow parchment strips.
+                                    The strip connecting <ref type="" corresp="strip2">Strip 2</ref> and <ref type="" corresp="strip3">Strip 3</ref>
+                                    is alternately in blue and red.</decoNote>
                                 <decoNote xml:id="b2">A narrow parchment strip is attached through a hole in the middle of the upper part of the scroll.</decoNote>
                                 <decoNote xml:id="b3" type="SlipCase">
                                     The manuscript is provided with a small slipcase of the kind typically used for codices.
@@ -257,7 +274,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             The manuscript can be dated palaeographically to the period between the
                             nineteenth and the twenty-first century.
                             The names <persName ref="PRS15041HaylaMaryam">Ḫayla Māryām</persName> and
-                            <persName ref="PRS15042WalattaDengel">Walatta Dǝngǝl</persName>and are mentioned in supplications.
+                            <persName ref="PRS15042WalattaDengel">Walatta Dǝngǝl</persName> are mentioned in supplications.
                         </origin>
                     <acquisition>The manuscript entered the Bodleian Libraries as part of the bequest of <persName
                         ref="PRS9622Ullendor"/> after his death in 2011.</acquisition>
@@ -306,7 +323,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </profileDesc>
         <revisionDesc>
             <change who="DR" when="2020-03-06">Created record</change>
-            <change who="JK" when="2020-03-06">Updated record</change>
+            <change who="JK" when="2025-10-16">Updated record</change>
+            <change who="JK" when="2025-10-21">Updates based on comments by DR, MV, and EDS</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
