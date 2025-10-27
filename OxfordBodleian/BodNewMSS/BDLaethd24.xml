@@ -10,7 +10,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Dāwit</title>
+                <!--
+                <title xml:lang="gez" xml:id="title1">ዳዊት፡</title>
+                <title xml:lang="gez" corresp="#title1" type="normalized">Dāwit</title>
+                 -->
+                <title xml:lang="en" xml:id="title1">Psalter (Amharic)</title>
                 <editor key="DR"/>
                 <editor key="JG"/>
                 <editor key="EDS"/>
@@ -37,9 +41,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <msContents>
                         <summary/>
 
-                        <!--<msItem xml:id="ms_i1">
-
-                        </msItem>-->
+                        <msItem xml:id="ms_i1">
+                            <title type="complete" ref="LIT7743PsalterAmh"/>
+                            <note>It is not known whether the work extends beyond the Book of Psalms.</note>
+                                <incipit xml:lang="am">
+                                    <locus target="#3r"/>
+                                    <lb/><hi rend="rubric">የሁሉ፡ ተግሣጽ፡ ነው።
+                                        <lb/>የኃጥአን፡ የጻድቃን፡ ምሳሌ። የዳዊት፡ ምስጋና፡ ሃሌ፡ ሉያ።
+                                        <lb/>ስብሐት፡ ለእግዚአብሔር፡ ማለት፡ ነው።</hi>
+                                    <lb/>በዝንጎች፡ ምክር፡ ያልሄደ፡ ክቡር፡ ሰው፡ ነው<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    <lb/>በኃጢአተኞችም፡ መንገድ፡ ያልቆመ፡ ክቡር፡ ሰው፡ ነው<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                    <lb/>በዋዘኞችም፡ መቀመጫ፡ ያልተቀመጠ፡ ክቡር፡ ሰው፡ ነው<hi rend="rubric" rendition="#partialRubric">፨</hi>
+                                </incipit>
+                        </msItem>
 
                     </msContents>
 
@@ -50,6 +64,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <material key="parchment"/>
                                 </support>
                                 <extent>
+                                    <note>The number of folios is unknown.</note>
                                     <measure unit="leaf" type="blank"></measure>
                                     <!--<locus target=""/>-->
                                     <dimensions type="outer" unit="mm">
@@ -57,19 +72,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <width>196</width>
                                         <depth>52</depth>
                                     </dimensions>
-                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
+<!--                                    <dimensions type="leaf" unit="mm" xml:id="leafdim">
                                         <height></height>
                                         <width></width>
                                     </dimensions>
-                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#"/>.</note>
+                                    <note corresp="#leafdim">Data on the dimensions of folios taken from <locus target="#"/>.</note>-->
                                     <measure unit="g" type="weight">1872</measure>
                                 </extent>
                                 <foliation>The manuscript is not foliated.</foliation>
                             </supportDesc>
 
-                <!--            <layoutDesc>
-                                <layout columns="" writtenLines="">
-                                    <locus from="" to=""/>
+                <layoutDesc>
+                                <layout columns="1" writtenLines="25">
+<!--                                    <locus from="" to=""/>-->
                                     <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus target="#6r"/>.</note>
                                     <dimensions unit="mm" xml:id="textarea">
                                         <height>179</height>
@@ -81,15 +96,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         <dim type="right">35</dim>
                                         <dim type="left">15</dim>
                                     </dimensions>
+                                    <note>The characters per line are 9–25.</note>
+                                    <ab type="pricking">Ruling and pricking are visible. Both primary and ruling pricks are visible.</ab>
+                                    <ab type="ruling" subtype="pattern">Ruling pattern: 1E-1E/0-0/0-0/C.</ab>
+                                    <note>The second front flyleaf (<locus target="#2"/>) is ruled according to the following pattern: 1E*-1E*/0/3J-3J-4J/0.
+                                    </note>
                                 </layout>
 
-                            </layoutDesc>-->
+                            </layoutDesc>
 
                         </objectDesc>
 
                         <handDesc>
                             <handNote xml:id="h1" script="Ethiopic">
-
+                                <date notBefore="1900" notAfter="1999">Twentieth century.</date>
+                                <seg type="ink">Black, red.</seg>
+                                <desc>Trained hand. Characters are regularly spaced.</desc>
+                                <seg type="rubrication">
+                                    Several groups of lines on the incipit pages, alternating with black lines;                               
+                                    elements of the punctuation signs and numerals.
+                                </seg>
                             </handNote>
                         </handDesc>
 
@@ -124,12 +150,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                     </physDesc>
 
-                <!--    <history>
+                <history>
                         <origin>
-                            <origDate when="" evidence=""/>
+                            <origDate notBefore="1900" notAfter="1999" evidence="lettering">twentieth century</origDate>
+                            The manuscript can be dated palaeographically to the twentieth century.
                         </origin>
-                        <provenance>  </provenance>
-                    </history>-->
+                    <provenance>The provenance of the manuscript is unknown.</provenance>
+                    </history>
 
                     <additional>
                         <adminInfo>
@@ -175,6 +202,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="DR" when="2020-03-06">Created record from metadata provided by Jacopo Gnisci</change>
             <change who="EDS" when="2023-10-09">Added binding description</change>
+            <change who="JK" when="2025-10-27">Updated description</change>
         </revisionDesc>
     </teiHeader>
     <text xml:base="https://betamasaheft.eu/">
