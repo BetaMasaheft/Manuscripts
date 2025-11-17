@@ -1,11 +1,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MASE003" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MASE002" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Prayer of Incense</title>
+                <title>Miracles of St Mary</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,14 +25,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS1028MearigoSellase"/>
-                        <idno>MASE-003</idno>      
+                        <idno>MASE-002</idno>      
                     </msIdentifier>
                     <msContents>
                        <summary/>
                        <msItem xml:id="ms_i1">                       
-                           <title type="complete" ref="LIT2252salota">Prayer of Incense</title>
+                           <title type="complete" ref="LIT2384Taamme" cert="medium">Miracles of Mary</title>
                          <textLang mainLang="gez"/>
+                           
+                           <msItem xml:id="ms_i1.1">
+                               <locus from="104ra" to="110va"/>
+                               <title type="complete" ref="LIT1968Mashaf">
+                               </title>
+                               <textLang mainLang="gez"/>
+                               <incipit xml:lang="gez">
+                                   <locus from="1ra"/>
+                                   በስመ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ፩አምልላክ፡
+                                   ዝንቱ፡ መጽሐፈ፡ ሥርዓት፡ ዘወጽአ፡ መንበረ፡ ማርቆስ፡ <gap reason="illegible"/> ዘአንበሩ፡ መምሕራን፡ መጋብያነ፡ ምሥጢር፡ ርቱዓነ፡ 
+                                   ሃይማኖት፡ ዘልፈ፡ ዘትትናገሮሙ፡ እግዝእትነ፡ ማርያም፡ ማርያም፡ ላዲተ፡ አምላክ፡ ወቦ፡ አመ፡
+                                </incipit>
+                               
+                           </msItem>
+                           <msItem xml:id="ms_i1.2">
+                               <locus from="5r" cert="low"/>
+                               <title type="incomplete">Miracles of Mary</title>
+                               <textLang mainLang="gez"/>
+                               <note>The collection of Miracles is possibly followed by another text.</note>
+                               
                          </msItem>
+                       </msItem>
                         </msContents>
                    <physDesc>
                      <objectDesc form="Codex">
@@ -42,13 +63,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        </support>
                                        <extent>                                                                       
                                            <dimensions type="outer">
-                                               <height unit="mm" cert="low">200</height>
-                                               <width unit="mm" cert="low">170</width>
+                                               <height unit="mm" cert="low">210</height>
+                                               <width unit="mm" cert="low">175</width>
                                           
                                            </dimensions>
                                        </extent>
                             
-                            <condition key="deficient"/>
+                            <condition key="deficient">The manuscript is worn.</condition>
                          </supportDesc>
                          <layoutDesc>
                              <layout columns="2">
@@ -64,7 +85,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                <seg type="ink">Black, red.</seg>
                                <desc>Not very careful, somewhat regular; by a mediocre scribe.</desc>
                            </handNote>
-                       </handDesc>    
+                       </handDesc>
+                       <decoDesc>
+                    
+                               <decoNote type="headpiece" xml:id="d1">
+                                   <locus target="#1r"/>
+                                   <desc>Crude monochrom ornamental band</desc>                            
+                               </decoNote>
+                       </decoDesc>
                        
                        
                        <bindingDesc>
@@ -82,13 +110,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       <history>
                          <origin>
                            <origDate notBefore="1850" notAfter="1949" source="lettering">second half of the 19th/first half of the 20th century.</origDate>
-                             The text was copied by the scribe Tawalda Madḫǝn; the manuscript was commissioned by Ḫayla Māryām, both are mentioned on the last page 
-                             (together with other relatives of the latter).
+                           
                          </origin>
-                          <acquisition>
-                              
-                          </acquisition>
-                      </history>
+                          </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -103,8 +127,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Liturgy"/>  
-                    <term key="Prayers"/> 
+                    <term key="Apocrypha"/>  
+                    <term key="Miracle"/> 
                               <term key="MoPe"/>
                 </keywords>
             </textClass>
@@ -114,7 +138,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </langUsage>
         </profileDesc>
         <revisionDesc>          
-            <change who="DN" when="2023-12-01">Created entity with rudimentary
+            <change who="DN" when="2023-11-17">Created entity with rudimentary
                 description on the basis of an examination in situ.</change>
         </revisionDesc>
     </teiHeader>
