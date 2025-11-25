@@ -32,15 +32,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       <summary/>                      
                       <msItem xml:id="ms_i1">
                         <locus from="1r" to="55r"/>
-                        <title type="complete" ref=""/>
-                        <textLang mainLang="gez"/>
-                        
-                        <msItem xml:id="ms_i1.1">
-                          <locus from="1r" to=""/>
-                          <title type="complete" ref=""/>
-                          <note></note>                    
-                        </msItem>
-                      
+                        <title type="complete" ref="LIT2715John"/>
+                        <textLang mainLang="gez"/>        
+                        <incipit type="inscriptio" xml:lang="gez">
+                          <locus target="#1r"/>
+                          ብስራተ፡ አብ፡ ትሩፍ፡ ረድእ፡ ተናጋሪ፡ በመለኮት፡ ዮሐንስ፡ ወልደ፡ ዘብዴዎስ፡ ፍቁረ፡ እግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ 
+                        </incipit>
+                        <explicit xml:lang="gez">
+                          <locus target="#55r"/>
+                          ወኵሉ፡ ቃሉ፡ ለወንጌለ፡ ጽድቅ፡ እምጥንቱ<supplied reason="omitted">፡</supplied> እስከ፡ ተፍጻሜቱ፡ ለሊሁ፡ ወልድ፡ ተናገረ፨ አሜን፨
+                        </explicit>
+                        <explicit type="expanded" xml:lang="gez">
+                          <locus target="#55r"/>
+                          መልአ፡ ብስራተ፡ ዮሐ<add place="interlinear">ን</add>ስ፡ ወልደ፡ ዘብዴዎስ<supplied reason="omitted">፡</supplied> ሐዋርያ፡ 
+                          ፩እም፲ወ፪<supplied reason="omitted">፡</supplied> እንተ፡ ጸሐፎ፡ በዮናኒ፡ ለሰብእ፡ ሀገረ፡ ኤፌሶን፨ እምድኅረ፡ ዕርገቱ<supplied reason="omitted">፡</supplied>
+                          ለእግዚእነ፡ ኢየሱስ፡ ክርስቶስ፡ በሥጋ፡ ውስተ<supplied reason="omitted">፡</supplied> ሰማይ፡ በ፴ዓመት፡ ወበ፰ዓ<surplus>ዓ</surplus>መተ፡ መንግሥቱ፡ 
+                          ለኔሮን፡ ወልደ፡ ቀላውዴዎስ፨ ወስብሐት፡ ለእግዚአብሔር፡ ለአለመ፡ አለም፡ አሜን፨ ወአሜን፤ ለይኩን፤ ለይኩ<supplied reason="omitted">ን</supplied>፨
+                        </explicit>
                       </msItem>
                     </msContents>
                   
@@ -53,6 +61,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                           </support>
                           <extent>
                             <measure unit="leaf" n="56">56</measure>
+                            <measure unit="leaf" type="blank">1</measure>                           
+                            <locus target="#56v"/>
+                            <measure unit="quire">7</measure>
                             <dimensions type="outer" unit="mm">
                               <height>145</height>
                               <width>97</width>
@@ -60,6 +71,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </extent>
                           
                             <collation>
+                              <signatures>
+                                Quires marks are indicated on the inner upper corner of the first folio of quires 1–5.
+                              </signatures>
                               <list>
                                 <item xml:id="q1" n="1">
                                   <dim unit="leaf">8</dim>
@@ -101,7 +115,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       
                         <handDesc>
                           <handNote script="Ethiopic" xml:id="h1">
-                            <desc>Mediocre handwriting.</desc>
+                            <desc>Mediocre handwriting. Most of <locus target="#17v"/> has been left blank, but no text is missing.</desc>
                             <seg type="ink">Black, red.</seg>
                             <seg type="rubrication">Titles.</seg>
                             <date notBefore="1800" notAfter="1899"/>
@@ -110,25 +124,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       
                       <additions>
                         <list>
-                          <item xml:id="a1">
-                            <locus target="#128r"/>
-                            <desc type="ScribalNoteCompleting">
-                              The note contains a supplication on behalf of <persName ref="PRS15113TaklaSe" role="owner">Takla Śǝllāse</persName>, who apparently was the owner
-                              of the book. The note also mentions his father <persName ref="PRS15114HaylaSe">Ḫāyla Śǝllāse</persName>, his mother 
-                              <persName ref="PRS15115WalattaIy">Walatta ʾIyasus</persName>, his son <persName ref="PRS15116MannaSe">Mannā Śǝllāse</persName>, his brother
-                              <persName ref="PRS15117SaggaSe">Ṣaggā Śǝllāse</persName>, and their place of residence, Sāšohā. 
-                              According to the note, the book was completed on the 17th of Tāḫśāś in an unspecified year.
+                          <item xml:id="a1">                            
+                            <desc type="OwnershipNote">
+                              The name of the owner, <persName ref="PRS15121WaldaIy" role="owner"><roleName type="title">lǝǧ</roleName> Walda ʾIyasus</persName>, 
+                              is mentioned among the scribbles on <locus from="55v" to="56r"/>.
                             </desc>
-                            <q xml:lang="gez">ዕቀበኒ፡ እም<lb/>ኵሉ፡ ዕኩይ፡ ለገብርኪ፡ <persName ref="PRS15113TaklaSe" role="owner">ተክለ፡ ሥላሴ።</persName> <lb/> ተፈጸመ፡
-                              ዝመጽሐፍ፡ ዘተክለ፡ ሥላሴ፡ በወ<lb/>ርኃ፡ ታኅሣሥ፡ በ፲ወ፯መዓልት፡ በ፳ወ፭<lb/>ሌሊት። አቡሁ፡ <persName ref="PRS15114HaylaSe">ኃይለ፡
-                                ሥላሴ፡</persName> ወእሙ፡ <persName ref="PRS15115WalattaIy">ወ<lb/>ለተ፡ ኢየሱስ፡</persName> ወውሉዱ፡ 
-                              <persName ref="PRS15116MannaSe">መና፡ ሥላሴ።</persName> ወእሁ<lb/>ሁ፡ <persName ref="PRS15117SaggaSe">ጸጋ፡ ሥላሴ፡</persName> ሀገሩ፡
-                              ሳሾሃ፡</q>
+                            <q xml:lang="gez">ዝመጽሐፍ፡ <sic>የልጀ፡</sic> <persName ref="PRS15121WaldaIy" role="owner">ወልደ፡ <lb/> ኢየሱስ፡</persName></q>
                           </item>
                           
                           <item xml:id="e1">
                             <locus from="55v" to="56r"/>
                             <desc>Scribbles.</desc>
+                          </item>
+                          <item xml:id="e2">
+                            <desc>The readings for each weekday are indicated as follows:
+                              <locus target="#1r"/> for Monday (in correspondence of John 1:1), 
+                              <locus target="#12v"/> for Saturday (in correspondence of John 5:1), 
+                              <locus target="#15v"/> for Tuesday (in correspondence of John 6:1), 
+                              <locus target="#26v"/> for Saturday (in correspondence of John 9:1),  
+                              <locus target="#31r"/> for Wednesday (in correspondence of John 11:1),
+                              <locus target="#37v"/> for Thurdsay (in correspondence of John 13:1), 
+                              <locus target="#45v"/> for Friday (in correspondence of John 18:1),
+                              <locus target="#51r"/> for Sunday (in correspondence of John 19:38),
+                              <locus target="#53r"/> for each day (in correspondence of John 21:15).</desc>
                           </item>
                         </list>
                       </additions>
@@ -147,7 +165,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                       <origin>
                         <origDate notBefore="1800" notAfter="1899" evidence="lettering"/>
                       </origin>
-                      <provenance>According to the account on the manuscripts’ provenance given by Tisserant, this manuscript is among those
+                      <provenance>
+                        The name of the first owner, <persName ref="PRS15120GabraTH" role="owner">Gabra Takla Hāymānot</persName>, is mentioned on <locus target="#1r"/>.
+                        The name of a later owner, <persName ref="PRS15121WaldaIy" role="owner"><roleName type="title">lǝǧ</roleName> Walda ʾIyasus</persName>, is 
+                        mentioned on <locus from="55v" to="56r"/>.                        
+                        According to the account on the manuscripts’ provenance given by Tisserant, this manuscript is among those
                         acquired by <persName ref="PRS4805Grebaut" role="owner"/> in <placeName ref="LOC1216AddisA">ʾAddis ʾAbabā</placeName> 
                         in <date when="1925"/> with funds of
                         <persName ref="PRS14055SaintJ">Jean Saint</persName>. 
