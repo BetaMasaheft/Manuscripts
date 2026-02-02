@@ -1,11 +1,11 @@
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/schema/master/tei-betamesaheft.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AEDT008" xml:lang="en" type="mss">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AEDT038" xml:lang="en" type="mss">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Missal</title>
+                <title>Miracles of Jesus</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -25,18 +25,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <msDesc xml:id="ms">
                     <msIdentifier>
                         <repository ref="INS1030EndaEntones"/>
-                        <idno>AEDT-008</idno>
+                        <idno>AEDT-038</idno>
                         </msIdentifier>
                     <msContents>
                        <summary/>
-                       <msItem xml:id="ms_i1">                        
-                           <title type="complete" ref="LIT1960Mashaf" cert="medium">Missal</title>                           
+                       <msItem xml:id="ms_i1">    
+                           <locus from="5ra"/>
+                           <title type="complete" ref="LIT2382Taamme">Miracles of Jesus</title>                           
                          <textLang mainLang="gez"/>
-                           <notatedMusic>
-                               <desc>Musical notation in black throughout the text.</desc>
-                           </notatedMusic>                              
-                       
-                       </msItem>
+                        </msItem>
                                                                      
                         </msContents>
                    <physDesc>
@@ -48,21 +45,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        <extent>
                                            <measure unit="leaf"/>                                            
                                            <dimensions type="outer">
-                                               <height unit="mm">210</height>
-                                               <width unit="mm" cert="low">180</width>
+                                               <height unit="mm">310</height>
+                                               <width unit="mm" cert="low">270</width>
                                                <depth unit="mm">70</depth>
                                            </dimensions>
                                        </extent>
                             <foliation>Unfoliated.</foliation>
-                            <condition key="deficient">The leather cover damaged, missing on the outer sides of the front and back boards; 
-                                textile inlays are missing.</condition>
+                            <condition key="intact"/>
                             
                          </supportDesc>
                          <layoutDesc>
                              <layout columns="2">
                                  
                                  <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
-                                 <note>The first one or two folia are pricked and ruled in part only.</note>
+                                <note>The initial four leaves are pricked and ruled only in part</note>                                 
                              </layout>
                              
                          </layoutDesc>
@@ -71,21 +67,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        
                        <handDesc>
                            <handNote xml:id="h1" script="Ethiopic">
-                               <seg type="script">18th-century script.</seg>
+                               <seg type="script" cert="medium">17th-century script.</seg>
                                <seg type="ink">Black, red.</seg>
-                               <desc>Careful, regular; by a well-trained scribe. </desc>
+                               <desc>Careful, regular; by a well-trained scribe. The name of the scribe is Walda Kidān.</desc>
                            </handNote>
                        </handDesc>
-                         
+                       <decoDesc>
+                           <decoNote xml:id="d1" type="miniature">
+                               <desc>A fine drawing of the Virgin Mary with Child, with two Archangels behind, 
+                                   and a figure of priest</desc>
+                           </decoNote>
+                       </decoDesc>
+                       <additions>
+                          
+                           <list>
+                               <item xml:id="a1">
+                                   <desc type="Unclear">A portion of the text written in the main hand, possibly
+                                       an excerpt from the main work</desc>
+                                   
+                               </item>
+                               
+                               <item xml:id="a2">
+                                   <desc type="DonationNote">A donation note mentioning the donor
+                                       ʾato Yonāʾel. The note tells that the book was stolen and remained hidden 32 year</desc>
+                                   
+                               </item>                         
+                               <item xml:id="e1">
+                                   <locus target="#1v"/>
+                                   <desc type="Unclear">A pen trial</desc>                               
+                               </item>
+                               
+                           <item xml:id="e2">
+                               <desc type="Unclear">An introductory formula, written in the same hand</desc>                               
+                           </item>
+                           </list>
+                       </additions>
+                       
                      
                        
                          <bindingDesc>
                              <binding contemporary="true">
-                                 <decoNote xml:id="b1">Two wooden boards; blind-tooled leather cover; textile inlays (now missing); 
+                                 <decoNote xml:id="b1">Two wooden boards; blind-tooled leather cover; 
+                                     textile inlays are missing; 
                                      endbands</decoNote>
                                  <decoNote xml:id="b2" type="bindingMaterial">                                     
                                      <material key="wood"/>
-                                     <material key="leather"/>                       
+                                     <material key="leather"/>
+                                     <material key="textile"/>
                                      </decoNote>
                                  
                              </binding>
@@ -95,7 +123,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                      
                       <history>
                          <origin>
-                             <origDate notBefore="1700" notAfter="1799" source= "lettering">18th century.</origDate>                             
+                             <origDate notBefore="1997" notAfter="1998">1997/1998 CE (1990 EC).</origDate>
+                             The donor and commissioner is Tasfāy Gabra Kidān Gabra Yāred; according to 
+                             <ref target="#coloph1">Colophon 1</ref>, the manuscript was written in 1997/1998 EC.                           
                             </origin>                          
                       </history>
                 </msDesc>
@@ -113,13 +143,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <keywords>
                     <term key="ChristianLiterature"/>
                     <term key="Liturgy"/> 
-                                
+                    <term key="Homily"/>
                 </keywords>
             </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="gez">Gǝʿǝz</language>
-             
+                <language ident="am">Amharic</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
@@ -127,7 +157,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 description on the basis of an examination in situ.</change>
             <change who="AA" when="2024-12-15">made a rudimentary
                 description on the basis of an examination in situ.</change>
-            <change who="DN" when="2026-01-01">created entity with rudimentary
+            <change who="DN" when="2026-01-18">created entity with rudimentary
                 description.</change>
         </revisionDesc>
     </teiHeader>
