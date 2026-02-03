@@ -8,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <editor role="cataloguer" key="SA"/>
             <editor key="DN"/>
             <editor role="generalEditor" key="AB"/>
+            <editor key="ESh"/>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -37,9 +38,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      the Gospel of Mark, 27 titles (fol. 69v)&#xD; - Bǝsrāta Mārqos "Gospel of Mark"
                      (fols. 70r-109v)&#xD; - Short postscript (fol. 109vb).</summary>
                   <msItem xml:id="ms_i1">
-                     <locus from="1" to="17">1-17</locus>
-                     <title type="incomplete">I.
-                        Bǝsrāta Luqās “Gospel of Luke”</title>
+                     <locus from="1" to="17"/>
+                     <title type="incomplete" ref="LIT1812GospelLuke"/>
                      <note>traditional introduction texts are missing</note>
                      <note>
                         <p>
@@ -69,8 +69,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </note>
                   </msItem>
                   <msItem xml:id="ms_i2">
-                     <locus from="17v" to="31v">17v-31v</locus>
-                     <title type="incomplete">II. Bǝsrāta Yoḥannǝs “Gospel of John”</title>
+                     <locus from="17v" to="31v"/>
+                     <title type="incomplete" ref="LIT1693John"/>
 
                      <incipit>
                         <foreign xml:lang="en"/>
@@ -89,7 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </note>
                   </msItem>
                   <msItem xml:id="ms_i3">
-                     <title type="incomplete">III. Bǝsrāta Mātewos "Gospel of Matthew"</title>
+                     <title type="incomplete" ref="LIT1558Matthew"/>
 
                      <incipit>
                         <foreign xml:lang="en"/>
@@ -122,8 +122,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </note>
                   </msItem>
                   <msItem xml:id="ms_i4">
-                     <locus from="69v" to="109v">69v-109v</locus>
-                     <title type="complete">IV. Bǝsrāta Mārqos "Gospel of Marqos"</title>
+                     <locus from="69v" to="109v"/>
+                     <title type="complete" ref="LIT1882MarkGo"/>
 
                      <incipit>
                         <foreign xml:lang="en"/>
@@ -166,14 +166,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         <support>
                            <material key="parchment"/>
                         </support>
-                        <extent>Made of <measure unit="leaf">242.0</measure> folios, of which
-                              <measure unit="leaf" type="blank"/> blank 242r, 242v, in <measure unit="quire"/> quires . <dimensions type="outer">
+                        <extent>
+                           <measure unit="leaf">242</measure> 
+                              <measure unit="leaf" type="blank">1</measure> <locus target="#242"/>
+                           <dimensions type="outer">
                               <height unit="mm">310</height>
                               <width unit="mm">205</width>
                               <depth unit="mm">90</depth>
                            </dimensions>
                         </extent>
-                        <foliation><!--2016-10-18+02:00 Updated DZ-001 from DomLib--></foliation>
+                        <foliation>Foliation provided by Ethio-Spare.</foliation>
                         <collation>
                            <note>
                                 The quire structure cannot be
@@ -183,13 +185,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            </note>
                         </collation>
                         <condition key="deficient">The front board is missing; the sewing is for the
-                           most part missing. Many fols. are lost, many are misplaced. <locus target="#178">178</locus> is a fragment of a lectionary (datable to
+                           most part missing. Many folios are lost, many are misplaced. <locus target="#178">178</locus> is a fragment of a lectionary (datable to
                            the same time?). <locus from="241" to="245">241-245</locus> are a
                            fragment of another, older Four Gospels book. Both are of smaller
                            size.</condition>
                      </supportDesc>
                      <layoutDesc>
                         <layout columns="2" writtenLines="25">
+                           <note corresp
                            <dimensions unit="mm">
                               <height>220</height>
                               <width>135</width>
@@ -270,7 +273,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <history>
                   <origin>
                      <origPlace>
-                        <placeName ref="INS0034DZ">Dabra Zäyt / DZ</placeName>
+                        <placeName ref="INS0034DZ"/>
                      </origPlace>
                      <origDate notBefore="1350" notAfter="1450">Mid-14th to early or mid-15th cent.
                            <locus target="#178">178</locus> originates from a lectionary (?),
