@@ -23,10 +23,18 @@
       <fileset file="expath-pkg.xml" />
       <filterchain>
         <replacetokens>
-          <token key="version" value="${app.version}" />
-          <token key="commit-id" value="${git.revision}" />
+          <token key="ocommit-id" value="${git.revision}" />
           <token key="commit-time" value="${git.time}" />
         </replacetokens>
+
+		<!--
+			Replace the 'version="1.0"' string in the expath-pkg.xml with the correct version. Do
+			not use normal token replacement for this since the regular token approach (%version%)
+			is forbidden in expath-pkg.xml. Instead, replace version=".*", but not in the XML header
+		-->
+		<replaceregex
+			pattern="(?&lt;!xml )version=&quot;.*&quot;"
+			replace="version=&quot;${app.version}&quot;" />
       </filterchain>
     </copy>
   </target>
