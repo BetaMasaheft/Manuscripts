@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD911" type="mss">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD911" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Psalter</title>
             <editor key="ES"/>
             <editor key="AB" role="generalEditor"/>
+            <editor key="ESh"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -21,65 +24,311 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
-                  <msIdentifier>
-                     <repository ref="INS0422Chester_Beatty_Library"/>
-                     <collection>Ethiopian</collection>
-                     <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_911/manifest/">CBD W 911</idno> <!-- facs="EMIP/Codices/3165/" n="199" -->
-                     <altIdentifier>
-                        <repository ref="INS0447EMIP"/>
-                        <collection>EMIP</collection>
-                        <idno>EMIP 3165</idno>
-                     </altIdentifier>
-                  </msIdentifier>
-               <msContents><summary>Zena Sellase, Sayfa Malakot, Gospel of Mark, ወንጌል፡ ዘማርቆስ፡, Image of Saint George, መልክአ፡ ጊዮርጊስ፡, Gospel of John, ወንጌል፡ ዘዮሐንስ፡, with many miniatures</summary></msContents>
+               <msIdentifier>
+                  <repository ref="INS0422Chester_Beatty_Library"/>
+                  <collection>Ethiopian</collection>
+                  <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_911/manifest/">CBD W 911</idno>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"/>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 3165</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="6r"/>
+                     <title type="complete" ref="LIT2296Sayfas"/>
+                     <msItem xml:id="ms_i1.1">
+                        <locus from="11r"/>
+                        <title type="complete" ref="LIT2296Sayfas#Monday"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.2">
+                        <locus from="15v"/>
+                        <title type="complete" ref="LIT2296Sayfas#Tuesday"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.3">
+                        <locus from="20v"/>
+                        <title type="complete" ref="LIT2296Sayfas#Wednesday"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.4">
+                        <locus from="24v"/>
+                        <title type="complete" ref="LIT2296Sayfas#Thursday"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.5">
+                        <locus from="29v"/>
+                        <title type="complete" ref="LIT2296Sayfas#Friday"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.6">
+                        <locus from="36r"/>
+                        <title type="complete" ref="LIT2296Sayfas#Saturday"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.7">
+                        <locus from="40r"/>
+                        <title type="complete" ref="LIT2296Sayfas#Sunday"/>
+                     </msItem>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="43v"/>
+                     <title type="complete" ref="LIT2295Sayfam"/>
+                  </msItem>
+                  <msItem xml:id="ms_i3">
+                     <locus from="47r"/>
+                     <title type="complete" ref="LIT2711Mark"/>
+                  </msItem>
+                  <msItem xml:id="ms_i4">
+                     <locus from="101rb"/>
+                     <title type="complete" ref="LIT2866RepCh147"/>
+                  </msItem>
+                  <msItem xml:id="ms_i5">
+                     <locus from="109vb"/>
+                     <title type="complete" ref="LIT3100RepCh380"/>
+                  </msItem>
+                  <msItem xml:id="ms_i6">
+                     <locus from="113v"/>
+                     <title type="complete" ref="LIT2715John"/>
+                  </msItem>
+
+               </msContents>
                <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                        </support>
+                        <extent>
+                           <measure unit="leaf" quantity="189">189</measure>
+                           <measure unit="page" type="blank">2</measure>
+                           <locus target="#1r #189v"/>
+                           <dimensions type="outer" unit="mm">
+                              <height unit="mm">232</height>
+                              <width unit="mm">167</width>
+                           </dimensions>
+                        </extent>
+                        <foliation>Foliation is provided by the library and is marked on the right
+                           upper edge of the recto folia in pencil.</foliation>
+                        <condition key="good">Despite a few stains (e.g., <locus
+                              target="#9v #31v #38r #77v"/>), exposure to humidity, dirtiness of the
+                           parchment and the fact that the red ink has faded over time, the
+                           condition is good and the text is fully readable.</condition>
+                     </supportDesc>
+
+                     <layoutDesc>
+                        <layout columns="2">
+                           <locus from="1r" to="46v"/>, <locus from="48r" to="113r"/>, <locus
+                              from="114r" to="186r"/>
+                           <ab type="ruling">Ruling is visible.</ab>
+                           <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                           <ab type="pricking">Pricking is visible.</ab>
+                           <ab type="pricking">Primary pricks are visible.</ab>
+                           <ab type="pricking">Ruling pricks are visible.</ab>
+                           <ab type="ruling">The upper line is written above the ruling.</ab>
+                           <ab type="ruling">The bottom line is written above the ruling.</ab>
+                        </layout>
+                        <layout columns="1"><locus target="#47r #47v #113v"/>
+                           <ab type="ruling">Ruling is partly visible.</ab>
+                           <ab type="ruling" subtype="pattern">1A-1A-0A/0-0/0-0/C</ab>
+                           <ab type="pricking">Pricking is visible.</ab>
+                           <ab type="pricking">Primary pricks are visible.</ab>
+                           <ab type="pricking">Ruling pricks are slightly visible.</ab>
+                           <ab type="ruling">The upper line is written above the ruling.</ab>
+                           <ab type="ruling">The bottom line is written above the ruling.</ab>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="script" cert="medium">Nineteenth-century script.</seg>
+                        <seg type="ink">Black, red.</seg>
+                        <seg type="rubrication">Divine names, chapter titles and numbers, some
+                           incipits, some punctuation marks, some Ethiopic numerals as well as
+                           occasionally the word <foreign xml:lang="gez">ሰላም፡</foreign>.</seg>
+                        <desc>Regular, neat, careful.</desc>
+                     </handNote>
+                  </handDesc>
+
+
                   <decoDesc>
-                     <decoNote xml:id="d1" type="miniature"><desc>f. 1v L'Angelo Urael dà al Profeta Ezra la coppa della sapienza</desc></decoNote>
-                     <decoNote xml:id="d2" type="miniature"><desc>f. 2 r: Due santi monaci dell'Etiopia: abba Sehma  ed abuna Akala Krestos
-                        (un serpente inghiotte la barba di Akala Krestos, mentre il santo monaco è
-                        assorto in preghiera)</desc></decoNote>
-                     <decoNote xml:id="d3" type="miniature"><desc>f. 5 v: Nostra Signora Maria col Bambino e due Angeli</desc></decoNote>
-                     <decoNote xml:id="d4" type="miniature"><desc>f. 10 v; il santo abuna Aragawi del monastero etiopico di Dabra Dammo</desc></decoNote>
-                     <decoNote xml:id="d5" type="miniature"><desc>
-                        f. 29 v: il santo abuna Samuele, eremita etiopico del Waldebba</desc></decoNote>
-                     <decoNote xml:id="d6" type="miniature"><desc>f. 43 r: il miracolo di S. Ciro (Kiros)</desc></decoNote>
-                     <decoNote xml:id="d7" type="miniature"><desc>f. 46 v: S. Marco</desc></decoNote>
-                     <decoNote xml:id="d8" type="miniature"><desc>f. 101 r: S. Giorgio uccide il
-                        drago</desc></decoNote>
-                     <decoNote xml:id="d9" type="miniature"><desc>f. 112 r: due episodi del martirio di S. Giorgio</desc></decoNote>
-                     <decoNote xml:id="d10" type="miniature"><desc>f. 112 v: La Trinità
-                        con i quattro Evangelisti</desc></decoNote>
-                     <decoNote xml:id="d11" type="miniature"><desc>f. 113 r: S. Michele e S. Gabriele Arcangeli</desc></decoNote>
-                     <decoNote xml:id="d12" type="miniature"><desc>f. 186 v: il santo abbate etiopico Gabra Manfas Qeddus</desc></decoNote>
-                     <decoNote xml:id="d13" type="miniature"><desc>f. 187 r: il santo
-                        abbate etiopico Takla Haymanot</desc></decoNote>
-                     <decoNote xml:id="d14" type="miniature"><desc>f. 187 v: 'Gesù percosso' (Kwer'ata
-                        re'esu; il venerato quadro già nel castello reale di Gondar)</desc></decoNote>
-                     <decoNote xml:id="d15" type="miniature"><desc>f. 188 r: Gesù porta la croce</desc></decoNote>
-                     <decoNote xml:id="d16" type="miniature"><desc>f. 188 v: Mulier, ecce filius tuus</desc></decoNote>
-                     <decoNote xml:id="d17" type="miniature"><desc>f. 189 r: Giuseppe di
-                        Arimatea e Nicodemo preparano per la sepoltura il corpo di Gesù</desc></decoNote>
+                     <decoNote xml:id="d1" type="miniature">
+                        <locus target="#1v"/>
+                        <desc><persName ref="PRS9684Uriel"/> gives <persName ref="PRS3943Ezra"/> the
+                           cup of wisdom. <q xml:lang="am">ቅዱስ፡ ዑራኤል፡ ለነቢዩ፡ ለእዝራ፡ ጽዋዓ፡ ልቡና፡ እንዳጠጣው።
+                              እዝራ፡ ጽዋዓ፡ ልቡና፡ በዑራኤል፡ እጅ፡ እንዳጠጣ።</q></desc></decoNote>
+                     <decoNote xml:id="d2" type="miniature">
+                        <locus target="#2r"/>
+                        <desc>Two Ethiopian monks: <persName ref="PRS8711sehmas"/> and <persName
+                              ref="PRS14471AkalaKrestos"/>. A serpent is swallowing the beard of
+                              <persName ref="PRS14471AkalaKrestos"/>, while the holy monk is
+                           absorbed in prayer. <q xml:lang="am">አባ፡ ጽሕማ። አቡነ፡ አካለ፡ ክርስቶስ፡ ዘሀገረ፡ ነጋሳ፡
+                              ከሚጸልዩበት፡ ዘንድ፡ አፋቸውን፡ እንጎራሳቸው፡</q></desc></decoNote>
+                     <decoNote xml:id="d3" type="miniature">
+                        <locus target="#5v"/>
+                        <desc>A miniature of the <ref type="authFile" corresp="AT1031VirginAndChild"
+                           /> and two <term key="angel">Angels</term>. <q xml:lang="am">ቅዱስ፡ ሚካኤል፡
+                              ምስለ፡ ፍቁር፡ ወልዳ፡ እግዝእት፡ ማርያም፡ ቅዱስ፡ ገብርኤል፡</q></desc></decoNote>
+                     <decoNote xml:id="d4" type="miniature">
+                        <locus target="#10v"/>
+                        <desc>A miniature of St. <persName ref="PRS10581Zamika"/>. <q xml:lang="am"
+                              >አቡነ፡ አረጋዊ፡ ዘደብረ፡ ዳሞ<supplied reason="omitted"
+                        >።</supplied></q></desc></decoNote>
+                     <decoNote xml:id="d5" type="miniature">
+                        <locus target="#29v"/>
+                        <desc>A miniature of St. <persName ref="PRS8491Samuel"/>. <q xml:lang="am"
+                              >አቡነ፡ ሳሙኤል፡ ዘሀገረ፡ ዋልድባ።</q></desc></decoNote>
+                     <decoNote xml:id="d6" type="miniature">
+                        <locus target="#43r"/>
+                        <desc>The miracle of St. <persName ref="PRS6006Kiros"/>. <q xml:lang="am"
+                              >ክርስቶስም፡ ቃልኪዳን፡ እንደሰጣቸው፡ አቡነ፡ ኪሮስ፡ አርባ፡ ዓመት፡ ከመሬት፡ ውድቀው፡ እንደጸለዩና፡ ሰር፡
+                              እንደበቀለባቸው፡</q></desc></decoNote>
+                     <decoNote xml:id="d7" type="miniature">
+                        <locus target="#46v"/>
+                        <desc>A miniature of <persName ref="PRS6751Mark"/></desc></decoNote>
+                     <decoNote xml:id="d8" type="miniature">
+                        <locus target="#101r"/>
+                        <desc>A miniature of the <ref type="authFile" corresp="AT1012Equestrian"/>,
+                              <persName ref="PRS4585Georgeo"/> slaying the dragon. <q xml:lang="am"
+                              >ቅዱስ፡ ጊዮርጊስ፡ ድራጎንን፡ እንደገደለ፡ ቢራታዊትን፡ እንዳደነ፡</q></desc></decoNote>
+                     <decoNote xml:id="d9" type="miniature">
+                        <locus target="#112r"/>
+                        <desc>Two episodes of the martyrdom of <persName ref="PRS4585Georgeo"/>. <q
+                              xml:lang="am">ቅዱስ፡ ጊዮርጊስን፡ <sic>ከመለት፡</sic> ቤት፡ <choice>
+                                 <sic>አገብተ፡</sic>
+                                 <corr>አገቡት፡</corr>
+                              </choice> እንዳሰሩት፡ የቤቱን፡ ምሰሶ፡ ዘተሰራበት፡ እንዳለመለመው። ቅዱስ፡ ጊዮርጊስን፡ ሶስት፡ ልሳን፡
+                              ብረት፡ አግለው፡ በመቀመጨውና፡ በጅ፡ በግሩ፡ እንደቸንከሩት፡</q></desc></decoNote>
+                     <decoNote xml:id="d10" type="miniature">
+                        <locus target="#112v"/>
+                        <desc>A miniature of the <ref type="authFile" corresp="AT1030Trinity"/> with
+                           the <ref type="authFile" corresp="AT1014Evangelists"/>. <q xml:lang="am"
+                              >ገጸ፡ ስብእ፡ ገጸ፡ ንስር፡ ገጸ፡ አንበሳ፡ ገጸ፡ ላህም፡ ቅድስት፡ ሥላሴ፡ አብ፡ ወልድ፡ መንፈስ፡
+                              ቅዱስ፡</q></desc></decoNote>
+                     <decoNote xml:id="d11" type="miniature">
+                        <locus target="#113r"/>
+                        <desc><persName ref="PRS7049Michael"/> and <persName ref="PRS4377Gabriel"/>.
+                              <q xml:lang="am">ቅዱስ፡ ሚካኤልና፡ ቅዱስ፡ ገብርኤል፡ ከሥላሴ፡ ምሕረት፡
+                                 <choice><sic>እንዱለመኑ፡</sic><corr>እንደለመኑ፡</corr></choice></q></desc></decoNote>
+                     <decoNote xml:id="d12" type="miniature">
+                        <locus target="#186v"/>
+                        <desc><persName ref="PRS4306GabraMa"/> with <term key="animal">lions and
+                              leopards</term>. <q xml:lang="am">አቡነ፡ ገብረ፡ መንፈስ፡ ቅዱስ፡ ዘደብረ፡ ዝቋላ፡ ስሳ፡
+                              እናብስት፡ ስሳ፡ አናምርት፡ እንደተከተሏቸው።</q></desc></decoNote>
+                     <decoNote xml:id="d13" type="miniature">
+                        <locus target="#187r"/>
+                        <desc><persName ref="PRS9162TaklaHa"/>. <q xml:lang="am">አቡነ፡ ተክለሐይማኖት፡
+                              ዘደብረ፡ ሊባኖስ።</q></desc></decoNote>
+                     <decoNote xml:id="d14" type="miniature">
+                        <locus target="#187v"/>
+                        <desc>A miniature of the <ref type="authFile" corresp="AT1065RoadtoCalvary"
+                           />. <q xml:lang="am">ኵርአተ፡ ርእሱ፡ ለመድኃኔዓለም።</q></desc></decoNote>
+                     <decoNote xml:id="d15" type="miniature">
+                        <locus target="#188r"/>
+                        <desc><persName ref="PRS5684JesusCh"/> carrying the <term key="cross"/>. <q
+                              xml:lang="am">ማርቆስ፡ ምዕራፍ፡ ፲፭ቁጥር፡ ፳፩።</q></desc></decoNote>
+                     <decoNote xml:id="d16" type="miniature">
+                        <locus target="#188v"/>
+                        <desc><q xml:lang="en">Woman, behold your son</q>. <q xml:lang="am">ሕያው፡
+                              መድኃኔዓለም። እምቤታችን፡ እግረ፡ መስቀል፡ እንዳለቀሰች<supplied reason="lost"
+                                 >።</supplied> ዮሐንስ፡ <choice>
+                                 <sic>ፍቁራ</sic>
+                                 <corr>ፍቁሩ</corr>
+                              </choice>፡ እግዚ<supplied reason="lost"
+                        >አብሔር</supplied></q></desc></decoNote>
+                     <decoNote xml:id="d17" type="miniature">
+                        <locus target="#189r"/>
+                        <desc><persName ref="PRS13687JosephArim"/> and <persName
+                              ref="PRS13688Nicodemus"/> prepare the <term key="deadjesus">body of
+                                 <persName ref="PRS5684JesusCh"/></term> for burial. <q
+                              xml:lang="am">ዮሴፍና፡ ኒቆዲሞስ፡ እንደገነዙት፡ እምቤታችን፡ እንዳለቀሰች፡ ክርስቶ<supplied
+                                 reason="lost">ስ</supplied>፡ እንደሩቅ፡ ብእሲ፡ ዝም፡ በላችሁ፡ አትገንዙኝ፡ ቅዱስ፡
+                              እግዚአብሔር፡ ቅዱስ፡ ኃይል፡ ቅዱስ፡ ሕያው፡ ዘኢይመውት፡ እያላችሁ፡ ነውጅ፡
+                        እንዳል፡</q></desc></decoNote>
+                     <decoNote xml:id="d18">
+                        <locus target="#6r #11r #20v #24v #29vb #36r #40r #43v #48r #101rb #114r"/>
+                        <desc>Elaborate, coloured (blue, red, yellow and occasionally also green and
+                           violet), horizontal ornamental bands (ḥarags) over columns a–b (or over
+                           column b only), with three lateral extensions reaching halfway across the
+                           page, featuring interlaces and floral motifs.</desc>
+                     </decoNote>
+                     <decoNote xml:id="d19">
+                        <locus target="#109vb"/>
+                        <desc>A line of blue, black and red dots for separating parts of the
+                           text.</desc>
+                     </decoNote>
+                     <decoNote xml:id="d20">
+                        <locus target="#183vb"/>
+                        <desc>A line of black and red dots for separating parts of the text.</desc>
+                     </decoNote>
                   </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus from="2v"/>
+                           <desc type="GuestText"><title ref="LIT2940RepCh221"/>, written in the
+                              same hand as <ref type="item" target="#a2"/>.</desc>
+                        </item>
+                        <item xml:id="a2">
+                           <locus from="183v"/>
+                           <desc type="GuestText"><title ref="LIT2932RepCh213"/>, written in the
+                              same hand as <ref type="item" target="#a1"/>.</desc>
+                        </item>
+                        <item xml:id="a3">
+                           <locus target="#5r"/>
+                           <desc type="MagicText"><title type="incomplete" ref="LIT5696MagicPrayer"
+                              />, written at the bottom margin in a different red ink.</desc>
+                        </item>
+                        <item xml:id="e1">
+                           <locus target="#3r #28r #50v #83v"/>
+                           <desc type="Correction">Missing letters and words are written above the
+                              line at various spots (e.g., on the folia mentioned above).</desc>
+                        </item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                     <binding contemporary="true">
+                        <decoNote xml:id="b1">Two wooden boards.</decoNote>
+                        <decoNote xml:id="b2" type="Cover">Dark-red tooled leather cover with <term
+                              key="inlay">black textile inlays</term>, the <term key="tooling">blind
+                              tooled ornament</term> includes <term key="cross">crosses</term>,
+                              <term key="curveStrapwork">strapworks</term>, <term
+                              key="tripleStraightLine">triple line fillet</term>, <term
+                              key="doubleCircle">double circles</term>, <term key="corniForm"
+                              >corni-form</term>, and other ornamental elements.</decoNote>
+                        <decoNote xml:id="b3" type="Sewing">Two pairs of sewing stations.</decoNote>
+                        <decoNote xml:id="b4" type="SewingStations">4</decoNote>
+                        <decoNote xml:id="b5" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="textile"/>
+                           <material key="leather"/>
+                        </decoNote>
+                        <decoNote xml:id="b6" type="Endbands">Both endbands are present.</decoNote>
+
+                        <decoNote xml:id="b7" type="Other">Blue <term key="leafStringMark"
+                              >threads</term> are inserted in the the upper text prick of <locus
+                              target="#6 #11 #15 #20 #24 #29 #36 #40 #43 #46 #48 #101 #112 #113 #186 #188"
+                           />. </decoNote>
+                     </binding>
+                  </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1800" notAfter="1900"></origDate>                     
+                     <origDate notBefore="1800" notAfter="1899">19th century</origDate>
                   </origin>
                </history>
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>
-                              <listBibl type="catalogue">
-                                 <bibl>
-                                    <ptr target="bm:Cerulli1965ChesterBeatty"/>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
+                                 <ptr target="bm:Cerulli1965ChesterBeatty"/>
                                  <citedRange unit="page">285-287</citedRange>
                               </bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                        </adminInfo>
-                  </additional>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -87,7 +336,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -96,23 +346,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="ChristianLiterature"/>    
-               <term key="Bible"></term>
-               <term key="Poetry"></term>
+               <term key="ChristianLiterature"/>
+               <term key="Bible"/>
+               <term key="Poetry"/>
             </keywords>
          </textClass>
-         <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+         <langUsage>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="en">English</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="ES" when="2022-04-30">Created stub</change>
+         <change who="ES" when="2022-04-30">Created record</change>
          <change when="2022-05-04" who="ES">added EMIP</change>
+         <change when="2026-03-16" who="ESh">Updated content according to the catalogue, added
+            binding, additions and decorations according to the frames</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_911"></graphic>
+      <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_911"/>
    </facsimile>
    <text xml:base="https://betamasaheft.eu/">
-      <listRelation><relation name="betmas:formerlyAlsoListedAs" active="CBD911" passive="EMIP03165"></relation></listRelation>
+      <listRelation>
+         <relation name="betmas:formerlyAlsoListedAs" active="CBD911" passive="EMIP03165"/>
+      </listRelation>
       <body>
          <ab/>
       </body>
