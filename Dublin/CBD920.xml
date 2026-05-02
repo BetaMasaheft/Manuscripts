@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD920" type="mss">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD920" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Māḥleta ṣǝge</title>
             <editor key="ES"/>
             <editor key="AB" role="generalEditor"/>
+            <editor key="ESh"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -21,38 +24,85 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
-                  <msIdentifier>
-                     <repository ref="INS0422Chester_Beatty_Library"/>
-                     <collection>Ethiopian</collection>
-                     <idno facs="EMIP/Codices/3174/" n="53">CBD W 920</idno>                     
-                     <altIdentifier>
-                        <repository ref="INS0447EMIP"/>
-                        <collection>EMIP</collection>
-                        <idno>EMIP 3174</idno>
-                     </altIdentifier>
-                  </msIdentifier>
-               <msContents><summary>Canticle of the Flower, ማሕሌተ፡ ጽጌ፡</summary>
-                  </msContents>
-               <physDesc></physDesc>
+               <msIdentifier>
+                  <repository ref="INS0422Chester_Beatty_Library"/>
+                  <collection>Ethiopian</collection>
+                  <idno facs="EMIP/Codices/3174/" n="53">CBD W 920</idno>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"/>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 3174</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="3r"/>
+                     <title type="complete" ref="LIT1834Mahlet"/>
+                     <textLang mainLang="gez">Gǝ'ǝz</textLang>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                        </support>
+                        <extent>
+                           <measure unit="leaf" quantity="41">41</measure>
+                           <measure unit="leaf" type="blank">3</measure>
+                           <locus target="#1 #2 #41"/>
+                           <dimensions type="outer" unit="mm">
+                              <height unit="mm">950</height>
+                              <width unit="mm">148</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1"/>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">copied by <persName role="scribe"
+                           ref="PRS15364WKirub"/>. </handNote>
+                  </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="e1">
+                           <locus target="40r"/>
+                           <desc>A note in Amharic. <q xml:lang="am">ደብረ፡ ሊባኖስ፡ በሐምሌ፡ በ፯፡ ቀን፡
+                                 የተጫወትነው፡ ነገር፡ እግዚአብሔር፡ ይፈጽምልነ፡ ወላዲተ፡ አምላክ፡ በፍቅራ፡ ተደምረን፡ አቡነ፡ ተክለ፡ <choice>
+                                    <sic>ሃይሚኖት፡</sic>
+                                    <corr>ሃይማኖት፡</corr>
+                                 </choice> ይርዱነ፡ አቡነ፡ ዘበሰማያት፡</q>
+                           </desc>
+                        </item>
+                     </list>
+                  </additions>
+               </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="1800" notAfter="1900"></origDate>                     
-                  </origin>                  
+                     <origDate notBefore="1800" notAfter="1899" cert="medium">Likely 19th
+                        century</origDate>
+                  </origin>
+                  <provenance>
+                     <persName ref="PRS15363HailaMik"/> is mentioned in a supplication.
+                  </provenance>
                </history>
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>                              
-                              <listBibl type="catalogue">
-                                 <bibl>
-                                    <ptr target="bm:Cerulli1965ChesterBeatty"/>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
+                                 <ptr target="bm:Cerulli1965ChesterBeatty"/>
                                  <citedRange unit="page">294</citedRange>
                               </bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                        </adminInfo>
-                  </additional>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -60,7 +110,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -69,20 +120,27 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="ChristianLiterature"/>   
-               
-               <term key="Poetry"></term>
+               <term key="ChristianLiterature"/>
+
+               <term key="Poetry"/>
             </keywords>
          </textClass>
-         <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+         <langUsage>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="en">English</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="ES" when="2022-04-30">Created stub</change>
+         <change who="ES" when="2022-04-30">Created record</change>
          <change when="2022-05-04" who="ES">added EMIP</change>
+         <change when="2026-05-03" who="ESh">added content and physical description</change>
       </revisionDesc>
-   </teiHeader>   
+   </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <listRelation><relation name="betmas:formerlyAlsoListedAs" active="CBD920" passive="EMIP03174"></relation></listRelation>
+      <listRelation>
+         <relation name="betmas:formerlyAlsoListedAs" active="CBD920" passive="EMIP03174"/>
+      </listRelation>
       <body>
          <ab/>
       </body>
