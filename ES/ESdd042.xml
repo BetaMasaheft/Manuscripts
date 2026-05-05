@@ -153,7 +153,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                            </list>
                         </collation>
                         <condition key="good">The manuscript has been resewn. The spine cover has been cut off. The endbands are missing.
-                           <locus target="#1 #3 #4 #173 #174 #175 #176 #177"/> are slightly damaged by insects.</condition>
+                           <locus target="#1 #3 #4 #173 #174 #175 #176 #177"/> are slightly damaged by insects. <locus target="#2 #4 #174"/> have been trimmed with some loss of the text.</condition>
                      </supportDesc>
                   </objectDesc>
                   
@@ -202,7 +202,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      <origPlace>
                         <placeName ref="INS0105DD"/>
                      </origPlace>
-                     <origDate notBefore="1700" notAfter="1800" evidence="lettering" cert="medium">18th century (?)</origDate>
+                     <origDate notAfter="1799" evidence="lettering" cert="medium">The manuscript consists of two codicological units. <ref target="#p1"/> can be dated to the 18th century. 
+                        <ref target="#p2"/> was added during the production of the manuscript to serve as part of the endleaves. It originates from an older manuscript, most likely from before the 15th century. 
+                        The text (or texts) has been washed out from its surface, allowing for the possibility of a palimpsest.</origDate>
                   </origin>
                </history>
                <additional>
@@ -314,19 +316,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                         
                      <layoutDesc>
                         <layout columns="2" writtenLines="22">
-                           <dimensions unit="mm">
+                           <note corresp="#textarea1 #margin1">All data are for <locus target="#6r"/>.</note>
+                           <dimensions unit="mm" xml:id="textarea1">
                               <height>135</height>
                               <width>140</width>
                            </dimensions>
                            
-                           <dimensions type="margin">
+                           <dimensions type="margin" xml:id="margin1">
                               <dim type="top">27</dim>
                               <dim type="bottom">53</dim>
                               <dim type="right">45</dim>
                               <dim type="left">10</dim>
                               <dim type="intercolumn">15</dim>
                            </dimensions>
-                           <note>All data for <locus target="#6r"/>.</note>
                            
                            <ab type="ruling">Ruling is visible.</ab>
                            <ab type="pricking">Pricking  is visible.</ab>
@@ -376,17 +378,81 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                      </list>
                   </additions>
                   </physDesc>
+                  
+                     <history>
+                        <origin>
+                           <origPlace>
+                              <placeName ref="INS0105DD"/>
+                           </origPlace>
+                           <origDate notBefore="1700" notAfter="1799" evidence="lettering" cert="medium">Most likely 18th century.</origDate>
+                        </origin>
+                     </history>
                </msPart>
+               
                <msPart xml:id="p2">
                   <msIdentifier/>
                   <msContents>
                      <summary/>
                      <msItem xml:id="p2_i1">
                         <locus target="#2 #4 #174"/>
-              <note>, used as endleaves, originate from
-                 an older ms. The text has been washed out. </note>
+                        <title type="incomplete">Unidentified and hardly legible text or texts</title>
+                        <textLang mainLang="gez"/>    
+                        <note>The text (or texts) has been washed out and could therefore potentially be overwritten, becoming a palimpsest. The folia, taken from an older manuscript, were used as endleaves.</note>
                      </msItem>
                   </msContents>
+                  
+                        <physDesc>
+                           <objectDesc form="Other">
+                              <supportDesc>
+                                 <support>
+                                    <material key="parchment"/>
+                                  </support>
+                                 <extent>
+                                    <measure unit="leaf" quantity="3">3</measure> 
+                                    <dimensions type="outer">
+                                       <height unit="mm">210</height>
+                                       <width unit="mm">195</width>
+                                       <depth unit="mm">60</depth>
+                                    </dimensions>
+                                 </extent>
+                              </supportDesc>
+                              
+                              <layoutDesc>
+                                 <layout columns="2" writtenLines="36">
+                                    <note corresp="#textarea2 #margin2">All data are for <locus target="#2r"/>.</note>
+                                    <dimensions unit="mm" xml:id="textarea2">
+                                       <height>205</height>
+                                       <width>180</width>
+                                    </dimensions>
+                                    
+                                    <dimensions type="margin" xml:id="margin2">
+                                       <dim type="top">0</dim>
+                                       <dim type="bottom">0</dim>
+                                       <dim type="right">0</dim>
+                                       <dim type="left">15</dim>
+                                       <dim type="intercolumn">15</dim>
+                                    </dimensions>
+                                 </layout>
+                              </layoutDesc>
+                           </objectDesc>
+                        
+                           <handDesc>
+                              <handNote xml:id="h2" script="Ethiopic">
+                                 <seg type="script" cert="medium">Most likely a pre-fifteenth-century script.</seg>
+                                 <desc>Fine.</desc>
+                              </handNote>
+                           </handDesc>
+                        </physDesc>
+                  
+                  <history>
+                     <origin>
+                        <origPlace>
+                           <placeName ref="INS0105DD"/>
+                        </origPlace>
+                        <origDate notAfter="1499" evidence="lettering" cert="medium">Most likely from before the 15th century.</origDate>
+                     </origin>
+                  </history>
+                  
                </msPart>
             </msDesc>
          </sourceDesc>
@@ -419,7 +485,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <change who="DN" when="2015-09-11">last edited</change>
          <change who="PL" when="2016-05-10">transformed from mycore to TEI P5</change>
          <change when="2020-07-03" who="ES">started adjusting (no refs to texts introduced)</change>
-         <change when="2026-04-27" who="MK">further adjustment to TEI</change>
+         <change when="2026-05-05" who="MK">further adjustment to TEI</change>
+         
       </revisionDesc>
    </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
