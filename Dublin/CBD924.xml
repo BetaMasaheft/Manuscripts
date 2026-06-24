@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD924" type="mss">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD924" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Harp of the Virgin, Prayer of Our Lady Mary</title>
             <editor key="ES"/>
+            <editor key="ESh"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -21,36 +24,142 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
-                  <msIdentifier>
-                     <repository ref="INS0422Chester_Beatty_Library"/>
-                     <collection>Ethiopian</collection>
-                     <idno facs="EMIP/Codices/3177/" n="162">CBD W 924</idno>                     
-                     <altIdentifier>
-                        <repository ref="INS0447EMIP"/>
-                        <collection>EMIP</collection>
-                        <idno>EMIP 3177</idno>
-                     </altIdentifier>
-                  </msIdentifier>
-               <msContents><summary>Harp of the Virgin, Prayer of Our Lady Mary</summary>
-                  </msContents>
-               <physDesc></physDesc>
+               <msIdentifier>
+                  <repository ref="INS0422Chester_Beatty_Library"/>
+                  <collection>Ethiopian</collection>
+                  <idno facs="EMIP/Codices/3177/" n="162">CBD W 924</idno>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"/>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 3177</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="2r"/>
+                     <title ref="LIT3064RepCh344"/>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="3r" to="150ra7"/>
+                     <title ref="LIT1146Argano"/>
+                     
+                  </msItem>
+
+               </msContents>
+               <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                        </support>
+                        <extent>
+                           <measure unit="leaf" quantity="152">152</measure>
+                           <measure unit="leaf" type="blank">1</measure>
+                           <locus target="#152"/>
+                           <dimensions type="outer" unit="mm">
+                              <height unit="mm">71</height>
+                              <width unit="mm">67</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="2"/>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="script" cert="medium">Eighteenth-century script.</seg>
+                        <desc>Regular, neat, careful, small.</desc>
+                     </handNote>
+                  </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus target="#1v"/>
+                           <desc type="GuestText"><title ref="LIT7713FeastsApostles"/></desc>
+                        </item>
+                        <item xml:id="a2">
+                           <locus target="#1vb"/>
+                           <desc type="OwnershipNote">A short ownership note mentioning <persName
+                                 ref="PRS15416AbtaGabr"/>, <persName ref="PRS15414WaldaM"/>,
+                                 <persName ref="PRS15424WalattaTsion"/>, <persName
+                                 ref="PRS15425WalattaYoh"/>, and <persName
+                                 ref="PRS15426WalattaKidan"/>. The note was added later and is
+                              written in rough-and-ready fashion, probably by the same hand as <ref
+                                 target="#a3"/>. </desc>
+                        </item>
+                        <item xml:id="a3">
+                           <locus target="#51v #136r"/>
+                           <desc>Two supplications written in the gaps of <ref target="#ms_i2"/> in
+                              rough-and-ready fashion, probably by the same hand as <ref
+                                 target="#a2"/>. The first one mentions <persName
+                                 ref="PRS15413GabraHeywet"/>, <persName ref="PRS15415WalattaIya"/>,
+                                 <persName ref="PRS15416AbtaGabr"/> and <persName
+                                 ref="PRS15417WalattaWanas"/>. The second one mentions <persName
+                                 ref="PRS15413GabraHeywet"/> and his kins. </desc>
+                        </item>
+                        <item xml:id="a4">
+                           <locus target="#148rb"/>
+                           <desc type="ProtectivePrayer">Protective prayer mentioning names of <persName
+                                 ref="PRS6819Mary"/> in different languages including Arabic, Hebrew
+                              and Coptic. </desc>
+                           <q xml:lang="gez">ስማ፡ ለእዝእትነ፡ ማርያም፡ በዓረቢ፡ ዕድራ፡ በዕብራይስጢ፡ ማሪሃም፡ በቅብጢ፡ ሶልያና፡
+                              በሱርስት፡ ሳይዳ፡ በዕብራዉያን፡ በጊሮማ፡ በሮም፡ በር<gap reason="illegible"/>ማር፡ በዝንቱ፡
+                              ስምኪ፡ ተማኀፀንኩ፡</q>
+                        </item>
+                        <item xml:id="a5">
+                           <locus from="150ra8" to="151rb"/>
+                           <desc type="MagicText">Magic prayer against bad weather, containing <term key="Asmat">ʾasmāt</term>.</desc>
+                           <q xml:lang="gez">በስመ፡ <gap reason="ellipsis" resp="ESh"/> አርሞጽን፡ መላከ፡
+                              በረድ፡ ዘእንበላ፡ ጹሩ፡ ማይ። ውስተ፡ ሰብከትየ፡ እግሌ። ዘያስተጋብአ፡ ዝቅ፡ ለማየ፡ ባሕር፡ <gap
+                                 reason="ellipsis" resp="ESh"/></q>
+                        </item>
+                        <item xml:id="a6">
+                           <locus target="#151v"/>
+                           <desc type="MagicText">Magic prayer containing <term key="Asmat"
+                              />.</desc>
+                           <q xml:lang="gez">በስመ፡ አብ፡ በል፡ ወሶበ፡ <gap reason="illegible"/> ይዝልእ፡ ውስተ፡
+                              ልብየ፡ ቃል፡ እግዚአብሔር፡ ሥላሴ፡ ዋህድ፡ አፍአኪር፡ <gap reason="illegible"/> አዳታኤል፡
+                              በዝንቱ፡ አስማት፡</q>
+                        </item>
+                        <item xml:id="e1">
+                           <locus target="#1r #1v #151rb"/>
+                           <desc>Pen trial.</desc>
+                        </item>
+                     </list>
+                  </additions>
+               </physDesc>
                <history>
-                                    
+                  <origin>
+                     <origDate notBefore="1700" notAfter="1799">18th century</origDate>
+                  </origin>
+                  <provenance> The manuscript contains numerous supplications for a man, whose name
+                     was erased and replaced by <persName ref="PRS15414WaldaM"/>. The second part of
+                     the original supplicant’s name appears to be <foreign xml:lang="gez"
+                        >ክርስቶስ፡</foreign>. There is a short ownership note mentioning <persName
+                        ref="PRS15416AbtaGabr"/>, <persName ref="PRS15414WaldaM"/>, <persName
+                        ref="PRS15424WalattaTsion"/>, <persName ref="PRS15425WalattaYoh"/>, and
+                        <persName ref="PRS15426WalattaKidan"/> on <locus target="#1vb"/>, written by
+                     a secondary hand. Two supplications for <persName ref="PRS15413GabraHeywet"/>,
+                        <persName ref="PRS15415WalattaIya"/>, <persName ref="PRS15416AbtaGabr"/> and
+                        <persName ref="PRS15417WalattaWanas"/> were written by the same hand as the
+                     ownership note in <ref target="#a2"/>.</provenance>
                </history>
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>                              
-                              <listBibl type="catalogue">
-                                 <bibl>
-                                    <ptr target="bm:Cerulli1965ChesterBeatty"/>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
+                                 <ptr target="bm:Cerulli1965ChesterBeatty"/>
                                  <citedRange unit="page">295</citedRange>
                               </bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                        </adminInfo>
-                  </additional>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -58,7 +167,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -68,18 +178,29 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
-               <term key="Poetry"></term>
+               <term key="Poetry"/>
+               <term key="Asmat"/>
+               <term key="Magic"/>
             </keywords>
          </textClass>
-         <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+         <langUsage>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="en">English</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="ES" when="2022-04-30">Created stub</change>
+         <change who="ES" when="2022-04-30">Created record</change>
          <change when="2022-05-04" who="ES">added EMIP</change>
+         <change when="2026-05-27" who="ESh">Added info from the catalogue, added info on additions,
+            hand and supplications</change>
+         <change when="2026-06-22" who="ESh">Edited after the review of
+            Magdalena Krzyżanowska and Carsten Hoffmann</change>
       </revisionDesc>
-   </teiHeader>   
+   </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <listRelation><relation name="betmas:formerlyAlsoListedAs" active="CBD924" passive="EMIP03177"></relation></listRelation>
+      <listRelation>
+         <relation name="betmas:formerlyAlsoListedAs" active="CBD924" passive="EMIP03177"/>
+      </listRelation>
       <body>
          <ab/>
       </body>
