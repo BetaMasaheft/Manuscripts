@@ -6,14 +6,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Set of  miniatures</title>
+                <title>Set of miniatures</title>
                 <editor key="ES"/>
+                <editor key="ESh"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -25,22 +27,77 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msIdentifier>
                         <repository ref="INS0422Chester_Beatty_Library"/>
                         <collection>Ethiopian</collection>
-                        <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_942_1/manifest/">CBD W 942</idno>
+                        <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_942_1/manifest/"
+                            >CBD W 942</idno>
                     </msIdentifier>
-                    <msContents><summary></summary></msContents>
+                    <msContents>
+                        <summary/>
+                    </msContents>
                     <physDesc>
-                        <objectDesc form="Leaf">                            
+                        <objectDesc form="Leaf">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <measure unit="leaf" quantity="2">2</measure>
+                                    <dimensions type="outer" unit="mm">
+                                        <height unit="mm">267 –269</height>
+                                        <width unit="mm">176–179</width>
+                                    </dimensions>
+                                </extent>
+                            </supportDesc>
                         </objectDesc>
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <seg type="script">Late-seventeenth- or early-eighteenth-century
+                                    script.</seg>
+                                <seg type="ink">Black, red.</seg>
+                                <desc>Regular, neat, careful, with small letter heads.</desc>
+                            </handNote>
+                        </handDesc>
                         <decoDesc>
-                            <decoNote xml:id="d1" type="miniature"><desc>Simeon and Infant Jesus</desc>
-                                <note>Digitized at <ref target="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_1">Chester Beatty Library</ref>.</note>
+                            <decoNote xml:id="d1" type="miniature">
+                                <locus target="#1r"/>
+                                <desc>A miniature in a red frame portraying the circumsion of
+                                        <persName ref="PRS5684JesusCh">Infant Jesus</persName>.
+                                        <persName ref="PRS6819Mary"/> holds a <term key="animal"
+                                        >dove</term> in her hands.</desc>
+                                <note>Digitized at <ref
+                                        target="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_1"
+                                        >Chester Beatty Library</ref>.</note>
                             </decoNote>
-                            <decoNote xml:id="d2" type="miniature"><desc>Resurrection</desc>
-                                <note>Digitized at <ref target="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_2">Chester Beatty Library</ref>.</note>
+                            <decoNote xml:id="d2" type="miniature">
+                                <locus target="#1v"/>
+                                <desc>A miniature in a red frame portraying <persName
+                                        ref="PRS8854Simeon"/> and <persName ref="PRS5684JesusCh"
+                                        >Infant Jesus</persName>.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d3" type="miniature">
+                                <locus target="#2r"/>
+                                <desc>A miniature in a red frame of the <ref type="authFile"
+                                        corresp="AT1005Crucifixion"/>. Instead of <foreign
+                                        xml:lang="la">INRI</foreign>, RMI is written on a <term
+                                        key="cross">crucifix</term>.</desc>
+                                <note>Digitized at <ref
+                                        target="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_2"
+                                        >Chester Beatty Library</ref>.</note>
+                            </decoNote>
+                            <decoNote xml:id="d4" type="miniature">
+                                <locus target="#2v"/>
+                                <desc>A miniature in a red frame of the <ref type="authFile"
+                                    corresp="AT1049Resurrection"/>.</desc>
                             </decoNote>
                         </decoDesc>
                     </physDesc>
-                    <history><origin><origDate notBefore="1600" notAfter="1725"></origDate></origin></history>
+                    <history>
+                        <origin><origDate notBefore="1600" notAfter="1725">17th til early 18th
+                                century</origDate>
+                        </origin>
+                        <provenance>There is a supplication on <locus target="#1r"/> above <ref
+                                target="#d1"/> for <persName ref="PRS15493WalattaTaklaH"/>, written
+                            by the main hand.</provenance>
+                    </history>
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -62,7 +119,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
                 <xi:fallback>
                     <p>Definitions of prefixes used.</p>
                 </xi:fallback>
@@ -71,18 +129,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="ChristianLiterature"/>               
+                    <term key="ChristianLiterature"/>
+                    <term key="miniatureCollection"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+            <langUsage>
+                <language ident="gez">Gǝʿǝz</language>
+                <language ident="en">English</language>
+                <language ident="ar">Arabic</language>
+                <language ident="la">Latin</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2022-04-30">Created stub</change>
+            <change who="ES" when="2022-04-30">Created record</change>
+            <change who="ESh" when="2026-07-09">Adjusted the decription to TEI, added two other
+                miniatures and their description</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_1"></graphic>
-        <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_2"></graphic>
+        <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_1"/>
+        <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_942_2"/>
     </facsimile>
     <text xml:base="https://betamasaheft.eu/">
         <body>
@@ -90,4 +156,3 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </body>
     </text>
 </TEI>
-
