@@ -7,6 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <titleStmt>
             <title>Malkǝʾa gubāʿe</title>
             <editor key="ES"/>
+            <editor key="ESh"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -26,7 +27,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <collection>Ethiopian</collection>
                      <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_949/manifest/">CBD W 949</idno>
                   </msIdentifier>
-               <msContents><summary>Malkǝʾa gubāʿe</summary>
+               <msContents><summary/>
                   <msItem xml:id="ms_i1">                     
                      <title type="complete" ref="LIT1850Malkea"/>  
                      
@@ -94,7 +95,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <msItem xml:id="ms_i1.16">
                         <locus from="67a" to="76b">67a-76b</locus>
                         <title ref="LIT2909RepCh190"/>
-                        <note>here possibly the second part of the codex starts</note>
+                   
                      </msItem>
                      <msItem xml:id="ms_i1.17">
                         <locus from="77a" to="82a">77a-82a</locus>
@@ -119,17 +120,83 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </support>
                         <extent>
                            <measure unit="leaf">47</measure>
+                           <measure unit="page" type="blank">1</measure>
+                           <locus target="#93"/>
                            <dimensions type="outer" unit="mm">
-                              <height>220</height>
-                              <width>162</width>
+                              <height>224</height>
+                              <width>174</width>
                            </dimensions>
                         </extent>
+                        <foliation>Pagination is marked in the middle of the bottom margin
+                           of each page in ink, by the same hand as <ref target="#e1"/>.</foliation>
+                        <condition key="good">Despite the overall dirtiness of the parchment, the text is fully readable. The front board is slightly broken.
+                           Most of the back board is missing. Both endbands are missing.</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout columns="2" writtenLines="22"/>
+                        <layout columns="2" writtenLines="22">
+                        <ab type="ruling">Ruling is visible.</ab>
+                        <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>
+                        <ab type="pricking">Pricking is visible.</ab>
+                        <ab type="pricking">Primary pricks are visible.</ab>
+                        <ab type="pricking">Ruling pricks are visible.</ab>
+                        <ab type="ruling">The upper line is written above the ruling.</ab>
+                        <ab type="ruling">The bottom line is written above the ruling.</ab>
+                        </layout>
                      </layoutDesc>
                   </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="script" cert="medium">Eighteenth-century script.</seg>
+                        <seg type="ink">Black, red.</seg>
+                        <seg type="rubrication">Divine names, names of saints, most
+                           incipits, elements of punctuation marks and Ethiopic numerals as well as
+                      the word <foreign xml:lang="gez">ሰላም፡</foreign>.</seg>
+                        <desc>Regular, neat, careful; loops are generally not closed.</desc>
+                     </handNote>
+                                 </handDesc>
+                  <decoDesc>
+                     <decoNote xml:id="d1" type="band">
+                        <locus target="#10a #14a #22a #25b #28b #35a #38b #42a #50a #54a #58a #62a #66b #82a #85a #92"/>
+                        <desc>Double and single lines of black and red dots to mark the ending of a text.</desc>
+                     </decoNote>
+                     <decoNote xml:id="d2" type="drawing">
+                        <locus target="#94"/>
+                        <desc>An ink drawing of a male figure.</desc>
+                     </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus target="#92"/>
+                           <desc type="OwnershipNote">An ownership mentioning <persName ref="PRS15495ThomasEadon"/>. The note is note written in black ink .</desc>
+                           <q xml:lang="en">Tho. Eadon. 10th Company, Royal Engineers.</q>
+                        </item>
+                        <item xml:id="e1">
+                           <locus target="#94"/>
+                           <desc>Pen trial.</desc>
+                        </item>
+                     </list>
+                  </additions>
+                  <bindingDesc>
+                     <binding contemporary="true">
+                        <decoNote xml:id="b1">Two wooden boards. The front board is slightly broken. Most of the back board is missing. A narrow strip of brown leather is wrapped around the front board vertically.</decoNote>
+                        <decoNote xml:id="b2" type="Sewing">Two pairs of sewing stations.</decoNote>
+                        <decoNote xml:id="b3" type="SewingStations">4</decoNote>
+                        <decoNote xml:id="b4" type="bindingMaterial">
+                           <material key="wood"/>
+                           <material key="leather"/>
+                        </decoNote>
+                        <decoNote xml:id="b5" type="Endbands">Both endbands are missing.</decoNote>
+                     </binding>
+                  </bindingDesc>
                </physDesc>
+               <history>
+                  <origin>
+                     <origDate notBefore="1700" notAfter="1799">18th century</origDate>
+                  </origin>
+                  <provenance>The manuscript was obtained or looted during Napierʼs expedition in <date notBefore="1867" notAfter="1868">1867–1868</date>, as is evident from the
+                     <ref target="#a1">ownership note</ref> on <locus target="#92"/> naming British soldier <persName ref="PRS15495ThomasEadon"/> as the new owner of the manuscript.</provenance>
+               </history>
                
                   <additional>
                      <adminInfo>
@@ -164,15 +231,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <textClass>
             <keywords scheme="#ethioauthlist">
-               <term key="ChristianLiterature"/>               
+               <term key="ChristianLiterature"/>       
+               <term key="Poetry"/>
             </keywords>
          </textClass>
          <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
       </profileDesc>
       <revisionDesc>
-         <change who="ES" when="2022-04-30">Created stub</change>
+         <change who="ES" when="2022-04-30">Created record</change>
          <change when="2025-10-06" who="AD">described the content at https://malkeagubae.com/manuscripts/CBLw949</change>
          <change when="2025-10-06" who="ES">adjusted IDs to https://malkeagubae.com/manuscripts/CBLw949</change>
+         <change when="2026-07-13" who="ESh">added binding and decoration descriptions as well as extras and provenance</change>
+         <change when="2026-07-14" who="ESh">Edited after the reviews of Carsten Hoffmann and
+            Magdalena Krzyżanowska</change>
          </revisionDesc>
    </teiHeader>
    <text>
