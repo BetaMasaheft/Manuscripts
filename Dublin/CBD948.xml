@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/Schema/master/tei-betamesaheft.rng" 
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD948" type="mss">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="CBD948" type="mss">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
             <title>Gospel of John and Liturgical texts</title>
             <editor key="ES"/>
+            <editor key="ESh"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale
+               Forschungsumgebung / Beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -21,36 +24,119 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
-                  <msIdentifier>
-                     <repository ref="INS0422Chester_Beatty_Library"/>
-                     <collection>Ethiopian</collection>
-                     <idno facs="EMIP/Codices/3183/" n="150">CBD W 948</idno>                     
-                     <altIdentifier>
-                        <repository ref="INS0447EMIP"/>
-                        <collection>EMIP</collection>
-                        <idno>EMIP 3183</idno>
-                     </altIdentifier>
-                  </msIdentifier>
-               <msContents><summary>Prayer over the Tomb of Takla Haymanot, Gospel of John, ወንጌል፡ ዘዮሐንስ፡, Litany of Jesus Christ, Kidan za-nagh</summary>
-                  </msContents>
-               <physDesc></physDesc>
+               <msIdentifier>
+                  <repository ref="INS0422Chester_Beatty_Library"/>
+                  <collection>Ethiopian</collection>
+                  <idno facs="EMIP/Codices/3183/" n="150">CBD W 948</idno>
+                  <altIdentifier>
+                     <repository ref="INS0447EMIP"/>
+                     <collection>EMIP</collection>
+                     <idno>EMIP 3183</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="2r" to="5v"/>
+                     <title ref="LIT2999RepCh279"/>
+                     <explicit type="supplication">A supplication for the comissioner <persName
+                           role="donor" ref="PRS15497ZawaldaMar">Zawalda
+                        Māryām</persName>.</explicit>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="6v" to="133r"/>
+                     <title ref="LIT2715John"/>
+                     <explicit type="supplication">A supplication for the comissioner <persName
+                           role="donor" ref="PRS15497ZawaldaMar">Zawalda Māryām</persName>, his
+                        father <persName ref="PRS15507BaedaMaryam"/>, his mother <persName
+                           ref="PRS15508Magdalawit"/>, his sisters <persName
+                           ref="PRS15509WalattaIyasus"/> and <persName ref="PRS15510WalattaMar"/> as
+                        well as the scribe <persName role="scribe" ref="PRS15505Ewostatewos"
+                        />.</explicit>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                        </support>
+                        <extent>
+                           <measure unit="leaf" quantity="140">140</measure>
+                           <measure unit="page" type="blank">5</measure>
+                           <locus target="#1r #1v #135r #135v #140v"/>
+                           <dimensions type="outer" unit="mm">
+                              <height unit="mm">155</height>
+                              <width unit="mm">105</width>
+                           </dimensions>
+                           <note><locus from="135" to="140"/> are slightly smaller than the rest of
+                              folia and were probably bound to the manuscript later.</note>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1"/>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <desc>Regular, neat handwriting; big semisquare letters with square serifs; copied by <persName
+                              role="scribe" ref="PRS15505Ewostatewos"/>.</desc>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote type="band" xml:id="d1">
+                        <locus target="#6v #7r #133r"/>
+                        <note>Elaborate horizontal ornamental bands (ḥarags) featuring interlaces
+                           and geometrical motifs.</note>
+                     </decoNote>
+                  </decoDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus target="#133r"/>
+                           <desc type="OwnershipNote">A short ownership note pronouncing <persName
+                                 role="owner" ref="PRS15498GabraMasqal"><roleName type="title"
+                                    >ʾabbā</roleName> Gabra Masqal</persName> as the owner, written
+                              possibly by the same hand as <ref target="#a2"/>.</desc>
+                        </item>
+                        <item xml:id="a2">
+                           <locus from="133v" to="134r"/>
+                           <desc type="GuestText"><title ref="LIT7766JesusChristWhoseName"/></desc>
+                        </item>
+                        <item xml:id="a3">
+                           <locus target="#134v"/>
+                           <desc>Pen trial</desc>
+                        </item>
+                        <item xml:id="a4">
+                           <locus from="136r" to="140r"/>
+                           <desc type="GuestText"><title ref="LIT1716Kidanz"/></desc>
+                        </item>
+                        <item xml:id="e1">
+                           <locus target="#6v"/>
+                           <desc>Pen trial</desc>
+                        </item>
+                     </list>
+                  </additions>
+               </physDesc>
                <history>
-                                    
+                  <origin>
+                     <origDate notBefore="1700" notAfter="1799">18th century</origDate>
+                  </origin>
                </history>
-                  <additional>
-                     <adminInfo>
-                        <recordHist>
-                           <source>                              
-                              <listBibl type="catalogue">
-                                 <bibl>
-                                    <ptr target="bm:Cerulli1965ChesterBeatty"/>
+               <additional>
+                  <adminInfo>
+                     <recordHist>
+                        <source>
+                           <listBibl type="catalogue">
+                              <bibl>
+                                 <ptr target="bm:Cerulli1965ChesterBeatty"/>
                                  <citedRange unit="page">310</citedRange>
                               </bibl>
-                              </listBibl>
-                           </source>
-                        </recordHist>
-                        </adminInfo>
-                  </additional>
+                           </listBibl>
+                        </source>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -58,7 +144,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <projectDesc>
             <p>Encoded according to TEI P5 Guidelines.</p>
          </projectDesc>
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+            href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
             <xi:fallback>
                <p>Definitions of prefixes used.</p>
             </xi:fallback>
@@ -68,18 +155,28 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <textClass>
             <keywords scheme="#ethioauthlist">
                <term key="ChristianLiterature"/>
-               <term key="Liturgy"></term>
+               <term key="Liturgy"/>
+               <term key="NewTestament"/>
+               <term key="Prayers"/>
             </keywords>
          </textClass>
-         <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+         <langUsage>
+            <language ident="gez">Gǝʿǝz</language>
+            <language ident="en">English</language>
+            <language ident="am">Amharic</language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="ES" when="2022-04-30">Created stub</change>
+         <change who="ES" when="2022-04-30">created stub</change>
          <change when="2022-05-04" who="ES">added EMIP</change>
+         <change when="2026-07-16" who="ESh">added information from the catalogue as well as hand
+            and decoration descriptions</change>
       </revisionDesc>
-   </teiHeader>   
+   </teiHeader>
    <text xml:base="https://betamasaheft.eu/">
-      <listRelation><relation name="betmas:formerlyAlsoListedAs" active="CBD948" passive="EMIP03183"></relation></listRelation>
+      <listRelation>
+         <relation name="betmas:formerlyAlsoListedAs" active="CBD948" passive="EMIP03183"/>
+      </listRelation>
       <body>
          <ab/>
       </body>
