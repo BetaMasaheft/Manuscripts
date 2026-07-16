@@ -7,6 +7,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <titleStmt>
             <title>Missal</title>
             <editor key="ES"/>
+            <editor key="ESh"/>
             <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -31,11 +32,74 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <idno>EMIP 3182</idno>
                      </altIdentifier>
                   </msIdentifier>
-               <msContents><summary>Missal, መጽሐፍ፡ ቅዳሴ፡</summary>
+               <msContents><summary/>
+                  <msItem xml:id="ms_i1">
+                     <locus from="3r" to="47r"/>
+                     <title ref="LIT1960Mashaf"/>
+                     <textLang mainLang="gez"/>
+                     <msItem xml:id="ms_i1.1">
+                        <locus from="3r" to="11v9"/>
+                     <title ref="LIT1716Kidanz"/>
+                     </msItem>
+                     <msItem xml:id="ms_i1.2">
+                        <locus from="11v10" to="21v1"/>
+                        <title type="incomplete" ref="LIT1938Mashaf">The first chapter of the Book of the Covenant</title>
+                     </msItem>
+                     <msItem xml:id="ms_i1.3">
+                        <locus from="21v2" to="47r"/>
+                        <title ref="LIT1099Anapho"/>
+                     </msItem>
+                  </msItem>
+                  <msItem xml:id="ms_i2">
+                     <locus from="47r" to="50r"/>
+                     <title ref="LIT3108RepCh388"/>
+                  </msItem>
                   </msContents>
-               <physDesc></physDesc>
+               <physDesc>
+                  <objectDesc form="Codex">
+                     <supportDesc>
+                        <support>
+                           <material key="parchment"/>
+                          
+                        </support>
+                        <extent>
+                           <measure unit="leaf" quantity="50">50</measure>
+                           <measure unit="page" type="blank">2</measure> <locus target="#1r #50v"/>
+                           <dimensions type="outer" unit="mm">
+                              <height unit="mm">140</height>
+                              <width unit="mm">90</width>
+                           </dimensions>
+                        </extent>   
+                        <condition key="good">Despite the overall parchment dirtiness, several big stains (e.g., on <locus target="#8r #33v"/>), and the ink fading, the text is mostly readable.</condition>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1"/>                       
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" script="Ethiopic">
+                        <seg type="script" cert="medium">Eighteenth-century script.</seg>
+                        
+                        <desc>Regular, careful, big square letters.</desc>
+                     </handNote>
+                  </handDesc>
+                  <additions>
+                     <list>
+                        <item xml:id="a1">
+                           <locus from="1v" to="2v"/>                             
+                           <desc type="GuestText"><title ref="LIT3063RepCh343"/>
+                           </desc>               
+                        </item>
+                     </list>
+                  </additions>
+               </physDesc>
                <history>
-                                    
+                  <origin>
+                     <origDate notBefore="1700" notAfter="1799">18th century</origDate>                     
+                  </origin>
+                  <provenance>    
+                     <persName ref="PRS15496KeflaGiyorgis"/> is mentioned in several supplications throughout the whole text, e.g., on <locus target="#11v #21v #47r #50r"/>.
+                  </provenance>
                </history>
                   <additional>
                      <adminInfo>
@@ -44,7 +108,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                               <listBibl type="catalogue">
                                  <bibl>
                                     <ptr target="bm:Cerulli1965ChesterBeatty"/>
-                                 <citedRange unit="page">307-308</citedRange>
+                                    <citedRange unit="page">307–308</citedRange>
                               </bibl>
                               </listBibl>
                            </source>
@@ -74,8 +138,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
       </profileDesc>
       <revisionDesc>
-         <change who="ES" when="2022-04-30">Created stub</change>
+         <change who="ES" when="2022-04-30">Created record</change>
          <change when="2022-05-04" who="ES">added EMIP</change>
+         <change when="2026-07-15" who="ESh">Added information from the catalogue as well as hand description</change>
       </revisionDesc>
    </teiHeader>   
    <text xml:base="https://betamasaheft.eu/">
