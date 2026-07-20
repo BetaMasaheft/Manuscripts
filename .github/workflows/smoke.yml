@@ -1,0 +1,44 @@
+name: Install smoke
+
+on: [push, pull_request]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install bats
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bats
+
+      - name: Install Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: 8
+
+      - run: ant
+
+      - name: Install package and start exist instance
+        run: |
+          docker run -dit -p 8080:8080 -v ${{ github.workspace }}/build:/exist/autodeploy \
+            --name exist --rm --health-interval=2s --health-start-period=2s \
+            duncdrum/existdb:release-slim
+
+      - name: Wait for server to start
+        timeout-minutes: 2
+        run: |
+          echo "Waiting for server to start..."
+          until docker logs exist 2>&1 | grep -q "Server has started"; do
+            echo "Still waiting..."
+            sleep 4
+          done
+
+      - name: Run smoke test
+        run: bats --tap test/*.bats
+
+      - name: Show logs on failure
+        if: failure()
+        run: docker logs exist
