@@ -16,7 +16,7 @@
 }
 
 @test "container reports healthy to docker" {
-  result=$(docker ps | grep -c 'healthy')
+  result=$(docker ps | grep -c '(healthy)')
   [ "$result" -eq 1 ]
 }
 
