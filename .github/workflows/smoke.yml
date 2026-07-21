@@ -1,0 +1,14 @@
+name: Install smoke
+
+# Scoped so a push to a PR branch doesn't also fire the push event -
+# push+pull_request both matching the same branch double-triggers this
+# workflow for the same commit.
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  smoke:
+    uses: BetaMasaheft/.github/.github/workflows/install-smoke.yml@main
