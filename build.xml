@@ -33,7 +33,7 @@
 			is forbidden in expath-pkg.xml. Instead, replace version=".*", but not in the XML header
 		-->
 		<replaceregex
-			pattern="(?&lt;!xml )version=&quot;.*&quot;"
+			pattern="(?&lt;!xml )version=&quot;[^&quot;]*&quot;"
 			replace="version=&quot;${app.version}&quot;" />
       </filterchain>
     </copy>
@@ -49,6 +49,7 @@
       <fileset dir=".">
         <exclude name="${build.dir}/**" />
         <exclude name=".github/**" />
+        <exclude name="test/**" />
         <exclude name="node_modules/**" />
         <exclude name=".gitignore" />
         <exclude name=".vscode/**" />
