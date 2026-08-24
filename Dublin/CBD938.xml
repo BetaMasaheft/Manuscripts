@@ -6,14 +6,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Magical texts</title>
+                <title>Magic texts</title>
                 <editor key="ES"/>
+                <editor key="ESh"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -27,12 +29,57 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <collection>Ethiopian</collection>
                         <idno>CBD W 938</idno>
                     </msIdentifier>
-                    <msContents><summary></summary></msContents>
+                    <msContents>
+                        <summary/>
+                    </msContents>
                     <physDesc>
-                        <objectDesc form="Scroll">                            
+                        <objectDesc form="Scroll">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                    <note>There are eight small holes at the top of the scroll, probably for its hanging up.</note>
+                                </support>
+                                <condition key="good">The scroll is slightly damaged by fungus.
+                                    Despite the overall dirtiness of the parchment and fading of
+                                    both black and red inks, the text is mostly readable. The
+                                    coloration of miniatures is not well-preserved.</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="1"/>
+                            </layoutDesc>
                         </objectDesc>
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">The owner’s name.</seg>
+                                <desc>Regular, careful handwriting, big square letters with curved
+                                    serifs.</desc>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:id="d1" type="miniature">
+                                <desc>A geometrical <term key="MagicDrawing">magic
+                                    drawing</term> featuring two faces.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d2" type="miniature">
+                                <desc>A geometrical <term key="MagicDrawing">magic drawing</term>,
+                                    probably featuring wings.</desc>
+                            </decoNote>
+
+                            <decoNote xml:id="d3" type="miniature">
+                                <desc>A drawing of a <term key="cross">hand cross</term> surrounded
+                                    by four rhombi and framed with a geometrical ornamental band at
+                                    the top.</desc>
+                            </decoNote>
+                        </decoDesc>
                     </physDesc>
-                    
+                    <history>
+                    <origin>
+                        <origDate notBefore="1800" notAfter="1899" cert="unknown">19th
+                            century(?)</origDate>
+                    </origin>
+                        <provenance></provenance>
+                    </history>
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -54,7 +101,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
                 <xi:fallback>
                     <p>Definitions of prefixes used.</p>
                 </xi:fallback>
@@ -63,20 +111,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="ChristianLiterature"/>               
+                    <term key="ChristianLiterature"/>
+                    <term key="Magic"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+            <langUsage>
+                <language ident="gez">Gǝʿǝz</language>
+                <language ident="en">English</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2022-04-30">Created stub</change>
+            <change who="ES" when="2022-04-30">Created record</change>
         </revisionDesc>
     </teiHeader>
-    
+
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
