@@ -1,6 +1,6 @@
 <collection xmlns="http://exist-db.org/collection-config/1.0">
     <index xmlns:t="http://www.tei-c.org/ns/1.0">
-        
+
         <!-- Range indexes -->
         <range>
             <create qname="t:TEI">
@@ -32,61 +32,61 @@
                 <field name="TEIwrittenLines" match="//t:layout/@writtenLines" type="xs:string"/>
                 <field name="TEIquireDim" match="//t:dim" type="xs:string"/>
             </create>
-            
-           
+
+
             <create qname="t:l">
                 <field name="ltext" type="xs:string"/>
                 <field name="lnum" match="@n" type="xs:string"/>
             </create>
-            
+
             <create qname="t:ref">
                 <field name="reftext" type="xs:string"/>
                 <field name="reftype" match="@type" type="xs:string"/>
                 <field name="refcorresp" match="@corresp" type="xs:string"/>
                 <field name="reftarget" match="@target" type="xs:string"/>
             </create>
-            
+
             <create qname="t:seg">
                 <field name="segtext" type="xs:string"/>
                 <field name="segana" match="@ana" type="xs:string"/>
                 <field name="segtype" match="@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:custEvent">
                 <field name="custeventtext" type="xs:string"/>
                 <field name="custEventtype" match="@type" type="xs:string"/>
                 <field name="custEventsubtype" match="@subtype" type="xs:string"/>
             </create>
-            
+
             <create qname="t:lem">
                 <field name="lemtext" type="xs:string"/>
                 <field name="lemwit" match="@wit" type="xs:string"/>
             </create>
-            
+
             <create qname="t:rdg">
                 <field name="rdgtext" type="xs:string"/>
                 <field name="rdgwit" match="@wit" type="xs:string"/>
             </create>
-            
+
             <create qname="t:app">
                 <field name="AppLem" match="t:lem" type="xs:string"/>
                 <field name="AppRdg" match="t:rdg" type="xs:string"/>
             </create>
-            
+
             <create qname="t:state">
                 <field name="stateType" match="@type" type="xs:string"/>
                 <field name="stateRef" match="@ref" type="xs:string"/>
                 <field name="statefrom" match="@from" type="xs:string"/>
                 <field name="stateto" match="@to" type="xs:string"/>
             </create>
-            
+
             <create qname="t:event">
                 <field name="eventSource" match="@source" type="xs:string"/>
                 <field name="eventwhen" match="@when" type="xs:date"/>
                 <field name="eventfrom" match="@from" type="xs:date"/>
                 <field name="eventto" match="@to" type="xs:date"/>
             </create>
-            
+
             <create qname="t:title">
                 <field name="titletext" type="xs:string"/>
                 <field name="title-ref" match="@ref" type="xs:string"/>
@@ -114,55 +114,55 @@
                 <field name="explicit-lang" match="@xml:lang" type="xs:string"/>
                 <field name="explicit-type" match="@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:msPart">
                 <field name="msPartID" match="@xml:id" type="xs:string"/>
                 <field name="msParttype" match="@type" type="xs:string"/>
                 <field name="msPartcorresp" match="@corresp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:msItem">
                 <field name="msItemID" match="@xml:id" type="xs:string"/>
                 <field name="msItemtype" match="@type" type="xs:string"/>
                 <field name="msItemcorresp" match="@corresp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:item">
                 <field name="itemtext" type="xs:string"/>
                 <field name="itemID" match="@xml:id" type="xs:string"/>
                 <field name="itemtype" match="t:desc/@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:ab">
                 <field name="abtype" match="@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:q">
                 <field name="qtext" type="xs:string"/>
                 <field name="qLang" match="@xml:lang" type="xs:string"/>
             </create>
-            
-            
+
+
             <create qname="t:language">
                 <field name="languagetext" type="xs:string"/>
                 <field name="ident" match="@ident" type="xs:string"/>
             </create>
-            
+
             <create qname="t:desc">
                 <field name="desctext" type="xs:string"/>
                 <field name="desctype" match="@type" type="xs:string"/>
             </create>
-           
+
             <create qname="t:term">
                 <field name="termtext" type="xs:string"/>
                 <field name="termkey" match="@key" type="xs:string"/>
             </create>
-            
+
             <create qname="t:material">
                 <field name="materialtext" type="xs:string"/>
                 <field name="materialkey" match="@key" type="xs:string"/>
             </create>
-            
+
             <create qname="t:div">
                 <field name="divID" match="@xml:id" type="xs:string"/>
                 <field name="divLANG" match="@xml:lang" type="xs:string"/>
@@ -171,18 +171,18 @@
                 <field name="divcorresp" match="@corresp" type="xs:string"/>
                 <field name="divn" match="@n" type="xs:string"/>
             </create>
-           
+
             <create qname="t:witness">
                 <field name="witnesstext" type="xs:string"/>
                 <field name="wittcorr" match="@corresp" type="xs:string"/>
                 <field name="witttype" match="@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:locus">
                 <field name="locustext" type="xs:string"/>
                 <field name="locuscorr" match="@corresp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:decoNote">
                 <field name="decoNid" match="@xml:id" type="xs:string"/>
                 <field name="decoNtype" match="@type" type="xs:string"/>
@@ -192,23 +192,23 @@
                 <field name="decoNtitle" match="t:desc/t:title/@ref" type="xs:string"/>
                 <field name="decoNloc" match="t:locus/@target" type="xs:string"/>
             </create>
-            
+
             <create qname="t:change">
                 <field name="changetext" type="xs:string"/>
                 <field name="changewhen" match="@when" type="xs:date"/>
                 <field name="changewho" match="@who" type="xs:string"/>
             </create>
-            
+
             <create qname="t:repository">
                 <field name="repositorytext" type="xs:string"/>
                 <field name="reporef" match="@ref" type="xs:string"/>
             </create>
-            
+
             <create qname="t:region">
                 <field name="regiontext" type="xs:string"/>
                 <field name="regioref" match="@ref" type="xs:string"/>
             </create>
-            
+
             <create qname="t:settlement">
                 <field name="settlementtext" type="xs:string"/>
                 <field name="settlref" match="@ref" type="xs:string"/>
@@ -223,47 +223,47 @@
                 <field name="occupationtext" type="xs:string"/>
                 <field name="occtype" match="@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:faith">
                 <field name="faithtext" type="xs:string"/>
                 <field name="faithtype" match="@type" type="xs:string"/>
             </create>
-            
-            
+
+
             <create qname="t:roleName" type="xs:string"/>
             <create qname="t:height" type="xs:string"/>
             <create qname="t:depth" type="xs:string"/>
             <create qname="t:width" type="xs:string"/>
-           
-           
+
+
             <create qname="t:dimension">
                 <field name="dimensionstext" type="xs:string"/>
                 <field name="dimensiontype" match="@type" type="xs:string"/>
                 <field name="dimensionunit" match="@unit" type="xs:string"/>
             </create>
-            
+
             <create qname="t:dim">
                 <field name="dimtext" type="xs:string"/>
                 <field name="dimtype" match="@type" type="xs:string"/>
                 <field name="dimunit" match="@unit" type="xs:string"/>
-            </create>  
-            
+            </create>
+
             <create qname="t:measure">
                 <field name="measuretext" type="xs:string"/>
                 <field name="measuretype" match="@type" type="xs:string"/>
                 <field name="measureunit" match="@unit" type="xs:string"/>
             </create>
-            
+
             <create qname="t:place">
                 <field name="placetext" type="xs:string"/>
                 <field name="placetype" match="@type" type="xs:string"/>
                 <field name="placeSameAs" match="@sameAs" type="xs:string"/>
                 <field name="placeGeo" match="//t:geo" type="xs:string"/>
             </create>
-            
-            
-            <create qname="t:rs" type="xs:string"/>      
-                 
+
+
+            <create qname="t:rs" type="xs:string"/>
+
             <create qname="t:persName">
                 <field name="persNametext" type="xs:string"/>
                 <field name="forename" match="t:forename" type="xs:string"/>
@@ -276,7 +276,7 @@
                 <field name="persType" match="@type" type="xs:string"/>
                 <field name="persLANG" match="@xml:lang" type="xs:string"/>
             </create>
-            
+
             <create qname="t:date">
                 <field name="datetext" type="xs:string"/>
                 <field name="datewhen" match="@when" type="xs:date"/>
@@ -289,7 +289,7 @@
                 <field name="dateevidence" match="@evidence" type="xs:string"/>
                 <field name="dateresp" match="@resp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:birth">
                 <field name="birthtext" type="xs:string"/>
                 <field name="birthwhen" match="@when" type="xs:date"/>
@@ -302,7 +302,7 @@
                 <field name="birthevidence" match="@evidence" type="xs:string"/>
                 <field name="birthresp" match="@resp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:death">
                 <field name="deathtext" type="xs:string"/>
                 <field name="deathwhen" match="@when" type="xs:date"/>
@@ -315,7 +315,7 @@
                 <field name="deathevidence" match="@evidence" type="xs:string"/>
                 <field name="deathresp" match="@resp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:floruit">
                 <field name="floruittext" type="xs:string"/>
                 <field name="floruitwhen" match="@when" type="xs:date"/>
@@ -328,8 +328,8 @@
                 <field name="floruitevidence" match="@evidence" type="xs:string"/>
                 <field name="floruitresp" match="@resp" type="xs:string"/>
             </create>
-            
-            
+
+
             <create qname="t:origDate">
                 <field name="origDatetext" type="xs:string"/>
                 <field name="Odatewhen" match="@when" type="xs:date"/>
@@ -342,7 +342,7 @@
                 <field name="Odateevidence" match="@evidence" type="xs:string"/>
                 <field name="Odateresp" match="@resp" type="xs:string"/>
             </create>
-            
+
             <create qname="t:placeName">
                 <field name="placeNametext" type="xs:string"/>
                 <field name="placeref" match="@ref" type="xs:string"/>
@@ -350,7 +350,7 @@
                 <field name="placeID" match="@xml:id" type="xs:string"/>
                 <field name="placeLANG" match="@xml:lang" type="xs:string"/>
             </create>
-            
+
             <create qname="t:origPlace">
                 <field name="origPlacePlaceNametext" match="//t:placeName/@ref" type="xs:string"/>
                 <field name="origPlaceNametext" type="xs:string"/>
@@ -359,18 +359,18 @@
                 <field name="origPlaceID" match="@xml:id" type="xs:string"/>
                 <field name="origPlaceLANG" match="@xml:lang" type="xs:string"/>
             </create>
-            
-            
+
+
             <create qname="t:objectDesc">
                 <field name="form" match="@form" type="xs:string"/>
             </create>
-            
-            
+
+
             <create qname="t:listBibl">
                 <field name="listBiblType" match="@type" type="xs:string"/>
             </create>
-            
-           
+
+
             <create qname="t:relation">
                 <field name="relationtext" match="t:desc" type="xs:string"/>
                 <field name="relname" match="@name" type="xs:string"/>
@@ -378,25 +378,22 @@
                 <field name="relpassive" match="@passive" type="xs:string"/>
                 <field name="relmutual" match="@mutual" type="xs:string"/>
             </create>
-            
+
             <create qname="t:ptr">
                 <field name="ptrtarget" match="@target" type="xs:string"/>
             </create>
-            
+
             <create qname="t:bibl">
                 <field name="bibltext" type="xs:string"/>
                 <field name="biblptrtg" match="t:ptr/@target" type="xs:string"/>
                 <field name="biblrange" match="t:citedRange" type="xs:string"/>
                 <field name="bibltype" match="@type" type="xs:string"/>
             </create>
-            
+
             <create qname="t:layout">
                 <field name="writtenLines" match="@writtenLines" type="xs:string"/>
             </create>
-            
+
         </range>
     </index>
-    <triggers>
-        <trigger class="org.exist.extensions.exquery.restxq.impl.RestXqTrigger"/>
-    </triggers>
 </collection>
