@@ -6,14 +6,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Magical texts</title>
+                <title>Magical texts and excerpts from Gospel</title>
                 <editor key="ES"/>
+                <editor key="ESh"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -25,14 +27,70 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <msIdentifier>
                         <repository ref="INS0422Chester_Beatty_Library"/>
                         <collection>Ethiopian</collection>
-                        <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_941/manifest/">CBD W 941</idno>
+                        <idno facs="https://viewer.cbl.ie/viewer/api/v1/records/W_941/manifest/">CBD
+                            W 941</idno>
                     </msIdentifier>
-                    <msContents><summary></summary></msContents>
+                    <msContents>
+                        <summary/>
+                        <msItem xml:id="ms_i1">
+                            <title ref="LIT5888AsmatPrayer"/>
+                        </msItem>
+                        <msItem xml:id="ms_i2">
+                            <title type="incomplete" ref="LIT1693John#JohnGospel">J. 1:1-1:5</title>
+                        </msItem>
+                        <msItem xml:id="ms_i3">
+                            <title ref="LIT6492PPFanuel"/>
+                        </msItem>
+                        <msItem xml:id="ms_i4">
+                            <title ref="LIT5696MagicPrayer"/>
+                        </msItem>
+                    </msContents>
                     <physDesc>
-                        <objectDesc form="Scroll">                            
+                        <objectDesc form="Scroll">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>1031</height>
+                                        <width>66</width>
+                                    </dimensions>
+                                </extent>
+                                <condition key="good">The bottom strip is missing, but the condition
+                                    of the preserved part is good.</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="1"/>
+                            </layoutDesc>
                         </objectDesc>
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Incipits, the name of the owner as well as a
+                                    few elements of punctuation marks.</seg>
+                                <desc>Regular, careful; ligature of the letters <foreign
+                                        xml:lang="gez">ግዝ</foreign>.</desc>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:id="d1" type="miniature">
+                                <desc>A <term key="MagicDrawing">magic drawning</term> of a holy man
+                                    with a halo, probably of <persName ref="PRS7840Phanuel"
+                                    />.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d2" type="miniature">
+                                <desc>A <term key="MagicDrawing">magic drawning</term> of three
+                                        <term key="cross">ceremenoial crosses</term>.</desc>
+                            </decoNote>
+                        </decoDesc>
                     </physDesc>
-                    
+                    <history>
+                        <origin>
+                            <origDate notBefore="1800" notAfter="1899" cert="unknown">19th century</origDate>
+                        </origin>
+                        <provenance>The scroll was manufactured for <persName role="owner" ref="PRS15562Gamila"/>.</provenance>
+                    </history>
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -54,7 +112,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
                 <xi:fallback>
                     <p>Definitions of prefixes used.</p>
                 </xi:fallback>
@@ -63,17 +122,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="ChristianLiterature"/>               
+                    <term key="ChristianLiterature"/>
+                    <term key="NewTestament"/>
+                    <term key="Prayers"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+            <langUsage>
+                <language ident="gez">Gǝʿǝz</language>
+                <language ident="en">English</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2022-04-30">Created stub</change>
+            <change who="ES" when="2022-04-30">Created record</change>
+            <change who="ESh" when="2026-09-25">completed the record</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_941"></graphic>
+        <graphic url="https://viewer.cbl.ie/viewer/mirador/?pi=W_941"/>
     </facsimile>
     <text xml:base="https://betamasaheft.eu/">
         <body>
@@ -81,4 +146,3 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         </body>
     </text>
 </TEI>
-
