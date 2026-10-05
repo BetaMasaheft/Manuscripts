@@ -6,8 +6,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Magical texts</title>
+                <title>Magic texts</title>
                 <editor key="ES"/>
+                <editor key="ESh"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
@@ -27,12 +28,60 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <collection>Ethiopian</collection>
                         <idno>CBD W 940</idno>
                     </msIdentifier>
-                    <msContents><summary></summary></msContents>
+                    <msContents><summary></summary>
+                        <msItem xml:id="ms_i1">
+                            <title ref="LIT6609ProtectPrayer"/>
+                            <incipit xml:lang="gez">በስመ፡ <gap reason="ellipsis" resp="ESh"/> ጸሎተ፡ <unclear/> በኃይለ፡ ዝንቱ፡ አስማቲከ፡ እግዕ፡ ደማ፡ ለዓመትከ፡ <gap reason="ellipsis" resp="ESh"/>
+                                ሜሎስ፡ ኤልያያስ፡ በ፩መለኮትከ፡ ይቁም፡
+                                ኦእግዚእየ፡ ኢየሱስ፡ ክርስቶስ፡ ዓቢይ፡ ስሙ፡ ዘሀሎ፡</incipit>
+                            <explicit xml:lang="gez">በከመ፡ ሰማዕከ፡ ጸሎታ፡ ለሐና፡ እመ፡ ሳሙኤል፡ ወሐና፡ እመ፡ ማርያም፡ እምከ፡ ዘእስተኃደርከ፡ ዘርእ፡ ኂሩትከ፡ ሀቦ፡ ውልደ፡ ለዓመትከ፡ <gap reason="ellipsis" resp="ESh"/></explicit>
+                        </msItem>
+                        <msItem xml:id="ms_i2">
+                            <title ref="LIT7768PPLisAflis"/>
+                        </msItem>
+                        <msItem xml:id="ms_i3">
+                            <title type="incomplete" ref="LIT2715John">J 1:1-1:5</title>
+                        </msItem>
+                        <msItem xml:id="ms_i4">
+                            <title type="incomplete" ref="LIT2711Mark"/>
+                        
+                        <msItem xml:id="ms_i4.1">
+                            <title>Mk 8:28-8:32</title>
+                        </msItem>
+                            <msItem xml:id="ms_i4.2">
+                                <title ref="LIT7276MarkOne">Mk 1:23-1:27</title>
+                            </msItem>
+                        </msItem>
+                        <msItem xml:id="ms_i5">
+                            <title type="incomplete" ref="LIT2713Luke">Lk 4:33-4:37</title>
+                        </msItem>
+                    </msContents>
                     <physDesc>
                         <objectDesc form="Scroll">                            
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                               
+                                <condition key="deficient">At least one additional strip is missing at the bottom. Due to the dirtiness of the parchment and severe ink fading, the text on the second parchment strip is partially illegible.</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="1"/>
+                            </layoutDesc>
                         </objectDesc>
+                        <decoDesc>
+                            <decoNote xml:id="d1" type="miniature">
+                                <desc>A <term key="MagicDrawing">magic drawing</term> of an eight-pointed star with a face, most probably of a <term key="angel">cherub</term>.</desc>
+                            </decoNote>
+                        </decoDesc>
+                        
                     </physDesc>
-                    
+                    <history>
+                        <origin><origDate notBefore="1800" notAfter="1899" cert="unknown">19th
+                                century (?)</origDate></origin>
+                        <provenance>The name of <persName role="owner" ref="PRS15564NegestMar">Nǝgǝśt Māryām</persName>is written throughout the scoll, by a secondary hand, above the name of the previous owner
+                            <persName role="owner" ref="PRS15563WalattaGiy">Walatta Giyorgis</persName>.</provenance>
+                    </history>
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -40,7 +89,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <listBibl type="catalogue">
                                         <bibl>
                                             <ptr target="bm:Cerulli1965ChesterBeatty"/>
-                                            <citedRange unit="page">304-305</citedRange>
+                                            <citedRange unit="page">304–305</citedRange>
                                         </bibl>
                                     </listBibl>
                                 </source>
@@ -63,13 +112,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="ChristianLiterature"/>               
+                    <term key="ChristianLiterature"/>
+                    <term key="Magic"/>
+                    <term key="Prayers"/>
+                    <term key="NewTestament"></term>
                 </keywords>
             </textClass>
             <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2022-04-30">Created stub</change>
+            <change who="ES" when="2022-04-30">Created record</change>
+            <change when="2026-09-28" who="ESh">completed the record</change>
+            <change when="2026-10-05" who="ESh">updated after the review of Magdalena Krzyżanowska</change>
         </revisionDesc>
     </teiHeader>
     
