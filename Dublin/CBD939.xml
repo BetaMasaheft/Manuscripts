@@ -6,14 +6,16 @@ schematypens="http://relaxng.org/ns/structure/1.0"
     <teiHeader xml:base="https://betamasaheft.eu/">
         <fileDesc>
             <titleStmt>
-                <title>Magical texts</title>
+                <title>Magic texts</title>
                 <editor key="ES"/>
+                <editor key="ESh"/>
                 <editor key="AB" role="generalEditor"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -27,12 +29,90 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <collection>Ethiopian</collection>
                         <idno>CBD W 939</idno>
                     </msIdentifier>
-                    <msContents><summary></summary></msContents>
+                    <msContents>
+                        <summary/>
+                        <msItem xml:id="ms_i1">
+                            <title ref="LIT7893PrMaganga"/>
+                        </msItem>
+                        <msItem xml:id="ms_i2">
+                            <title ref="LIT1763Legend"/>
+                        </msItem>
+                        <msItem xml:id="ms_i3">
+                            <title ref="LIT5822MagicPrayer"/>
+                        </msItem>
+                        <msItem xml:id="ms_i4">
+                            <title ref="LIT7212PPTaosAzyos"/>
+                        </msItem>
+                        <msItem xml:id="ms_i5">
+                            <title ref="LIT7226AynatBarya"/>
+                        </msItem>
+                    </msContents>
                     <physDesc>
-                        <objectDesc form="Scroll">                            
+                        <objectDesc form="Scroll">
+                            <supportDesc>
+                                <support>
+                                    <material key="parchment"/>
+                                </support>
+                                <extent>
+                                    <dimensions type="outer" unit="mm">
+                                        <height>152.4</height>
+                                        <width>14</width>
+                                    </dimensions>
+                                </extent>
+                                <condition key="good">Despite the overall dirtiness of the parchment
+                                    and several stains, the text is almost fully
+                                    readable.</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="2"/>
+                            </layoutDesc>
                         </objectDesc>
+                        <handDesc>
+                            <handNote xml:id="h1" script="Ethiopic">
+                                <seg type="ink">Black, red.</seg>
+                                <seg type="rubrication">Some divine names, incipits, and the name of
+                                    owner.</seg>
+                                <desc>Regular handwriting, semi-square letters.</desc>
+                                <note>The script contains <term key="MagicSymbols"
+                                        >charaktêres</term> and the ligature in the word <foreign
+                                        xml:lang="gez">እ<hi rend="ligature"
+                                    >ግዚ</hi>አብሔር፡</foreign>.</note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:id="d1" type="miniature">
+                                <desc>A <term key="MagicDrawing">magic drawing</term> of a <term
+                                        key="angel">guardian angel</term> with a <term key="sword"
+                                        >sword</term>.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d2" type="miniature">
+                                <desc>A <term key="MagicDrawing">magic drawing</term> of the Net of
+                                    Solomon with a <term key="angel">cherub</term> inside it.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d3" type="miniature">
+                                <desc>A <term key="MagicDrawing">magic drawing</term> of a talisman
+                                    with a face inside, probably another Net of Solomon.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d4" type="diagram">
+                                <desc>A chart with the same sign, which looks similar to the Arabic
+                                    number <foreign xml:lang="ar">٩</foreign>, but with a vertical
+                                    serif at the top, written 42 times in black and red.</desc>
+                            </decoNote>
+                            <decoNote xml:id="d5" type="frame">
+                                <desc>The margins of the scroll are painted yellow.</desc>
+                            </decoNote>
+                        </decoDesc>
                     </physDesc>
-                    
+                    <history>
+                        <origin>
+                            <origDate notBefore="1700" notAfter="1850" cert="medium"
+                                evidence="lettering">Sometime between the 18th century and the first
+                                half of the 19th century</origDate>
+                        </origin>
+                        <provenance><persName ref="PRS15538EhetaMaryam" role="owner">ʾƎḫǝta Māryām
+                                (wayzaro Tǝrǝngo)</persName> appears as the owner of the
+                            manuscript.</provenance>
+                    </history>
                     <additional>
                         <adminInfo>
                             <recordHist>
@@ -40,7 +120,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                     <listBibl type="catalogue">
                                         <bibl>
                                             <ptr target="bm:Cerulli1965ChesterBeatty"/>
-                                            <citedRange unit="page">303-304</citedRange>
+                                            <citedRange unit="page">303–304</citedRange>
                                         </bibl>
                                     </listBibl>
                                 </source>
@@ -54,7 +134,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <projectDesc>
                 <p>Encoded according to TEI P5 Guidelines.</p>
             </projectDesc>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
                 <xi:fallback>
                     <p>Definitions of prefixes used.</p>
                 </xi:fallback>
@@ -63,20 +144,24 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <profileDesc>
             <textClass>
                 <keywords scheme="#ethioauthlist">
-                    <term key="ChristianLiterature"/>               
+                    <term key="ChristianLiterature"/>
                 </keywords>
             </textClass>
-            <langUsage><language ident="gez">Gǝʿǝz</language> <language ident="en">English</language></langUsage>         
+            <langUsage>
+                <language ident="gez">Gǝʿǝz</language>
+                <language ident="en">English</language>
+                <language ident="ar">Arabic</language>
+            </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="ES" when="2022-04-30">Created stub</change>
+            <change who="ES" when="2022-04-30">Created record</change>
+            <change when="2026-09-23" who="ESh">Completed the record</change>
         </revisionDesc>
     </teiHeader>
-    
+
     <text xml:base="https://betamasaheft.eu/">
         <body>
             <ab/>
         </body>
     </text>
 </TEI>
-
