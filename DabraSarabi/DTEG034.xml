@@ -5,7 +5,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Orit</title>
+                <title>Octateuch</title>
                 <editor role="generalEditor" key="AB"/>
                 <editor key="DN"/>
                 <funder>Akademie der Wissenschaften in Hamburg</funder>
@@ -29,11 +29,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </msIdentifier>
                     <msContents>
                        <summary/>
-                       <msItem xml:id="ms_i1">                        
-                           <title type="complete">Orit</title>
-                         <textLang mainLang="gez"/>
+                        
+                       <msItem xml:id="ms_i1">          
+                          <locus from="2r"/>
+                           <title type="complete" corresp="LIT2083Octate">Orit</title>
+                         <textLang mainLang="gez"/> 
                            </msItem>
-                                                                     
+                        
+                        <msItem xml:id="ms_i2">          
+                            <title type="complete" corresp="LIT1719Bookso" cert="medium">Books of Kings (with comments and 
+                                glosses in the margins)</title> 
+                            <textLang mainLang="gez"/> 
+                        </msItem>
+                        
+                        <msItem xml:id="ms_i3">          
+                            <title type="complete">Explanation of Hebrew words</title> 
+                            <textLang mainLang="gez"/> 
+                            <incipit xml:lang="gez">ኤሎሂ፡ ብሂል፡ እምላክ። አዶናይ፡ ብሂል፡ እግዚእ። ፀባኦት፡ ብ፡ ዘኃይላት። ኢየአ፡ ብ፡ ዘመልዕልተ፡ ታቦት። </incipit>
+                        </msItem>
+                        
+                            <msItem xml:id="ms_i4">          
+                                <title type="complete" corresp="LIT5798ListKingsIsrael">A list of kings who ruled over Israel</title> 
+                                <textLang mainLang="gez"/> 
+                        </msItem>
+                                                                    
                         </msContents>
                    <physDesc>
                      <objectDesc form="Codex">
@@ -42,22 +61,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                            <material key="parchment"/>
                                        </support>
                                        <extent>
-                                           <measure unit="leaf"></measure>                                            
+                                           <measure unit="leaf"/>                                            
                                            <dimensions type="outer">
                                                <height unit="mm">320</height>
                                                <width unit="mm">290</width>
                                                <depth unit="mm">90</depth>
                                            </dimensions>
                                        </extent>
-                            <foliation>Modern foliation in pencil, 1-135</foliation>
-                            <condition key="deficient">The leather cover and inflay on both sides intact. No textile inlay.One leaf is partially excised.</condition>
+                            <foliation>Unfoliated.</foliation>
+                            <condition key="good">Textile inlays are missing.</condition>
+                            
+                            
                          </supportDesc>
+                         <layoutDesc>
+                             <layout columns="2">                               
+                                 <ab type="ruling" subtype="pattern">1A-1A-1A1A/0-0/0-0/C</ab>                                  
+                             </layout>                           
+                         </layoutDesc>               
                      </objectDesc>
+                       
+                       <handDesc>
+                           <handNote xml:id="h1" script="Ethiopic">
+                               <seg type="script">Eighteenth-century script.</seg>
+                               <seg type="ink">Black, red.</seg>
+                               <desc>Very careful, regular; by a good scribe.</desc>
+                           </handNote>                              
+                       </handDesc>     
+                       
+                       <additions>
+                           <list>                            
+                               
+                               <item xml:id="a1">
+                                   <desc type="DonationNote">An extensive donation note tells that the manuscript was
+                                       bought in Gondar by abeto Madḫǝn, son of ʾabeto Yoḥannǝs and wayzāro ʾAqlesyā, in the time 
+                                       of king ʾIyoʾās and ras Mikael.</desc>
+                               </item>
+                               
+                            </list>
+                       </additions>
+                       
+                       
                        
                        
                          <bindingDesc>
                              <binding contemporary="true">
-                                 <decoNote xml:id="b1">Two wooden boards; Leather cover and inlay. No textile inlay.
+                                 <decoNote xml:id="b1">Two wooden boards; blind-tooled leather cover.
                                      </decoNote>
                                  <decoNote xml:id="b2" type="bindingMaterial">                                     
                                      <material key="wood"/>
@@ -72,8 +120,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     
                       <history>
                          <origin>
-                           <origDate notBefore="1700" notAfter="1799">18th century.</origDate>
-                             </origin>
+                           <origDate notBefore="1760" notAfter="1769" cert="medium">Ca. 1760 to 1760</origDate>.
+                             According to <ref target="#a1"/> the manuscript was bought by 
+                             in Gondar by ʾabeto Madḫǝn, son of ʾabeto Yoḥannǝs and wayzāro ʾAqlesyā, in the time 
+                             of <persName ref="PRS5636IyoasI">King ʾIyoʾās</persName> and 
+                             <persName ref="PRS7091Mikael">rās Mikāʾel Sǝḥul</persName>. It was 
+                             donated to the monastery in the time of ʾabuna mamhǝr Kǝfla Giyorgis</origin>
                           
                       </history>
                 </msDesc>
@@ -90,10 +142,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <textClass>
                 <keywords>
                     <term key="ChristianLiterature"/>
-                    <term key="Poetry"/>
+                    <term key="OldTestament"/>
                     <term key="Gon"/> 
-                      <term key="Liturgy"/>
-                                  
+                      <term key="ZaMa"/>
+                    <term key="SawaStyle"/>         
                 </keywords>
             </textClass>
             <langUsage>
@@ -106,6 +158,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 description on the basis of an examination in situ.</change>
             <change who="JF" when="2026-09-14">created entity with rudimentary
                 description.</change>
+            <change who="DN" when="2026-11-20">revised the description.</change>
         </revisionDesc>
     </teiHeader>
     <text>
